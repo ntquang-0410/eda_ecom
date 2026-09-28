@@ -1,0 +1,17 @@
+﻿van_de,so_dong,ti_le_%,y_nghia,de_xuat
+chu_han_trong_vi,7,0.04,title_vi còn chữ Hán,Dịch lại hoặc bỏ dòng
+chua_dich,2,0.01,title_vi trùng/không có chữ Việt,Bỏ dòng
+so_zh_mat_trong_vi,221,1.35,Số trong zh không xuất hiện ở vi,"Đọc lại: mất thông tin (năm, dung tích, số lượng)"
+so_vi_thua_so_voi_zh,1196,7.32,"vi có số zh không có (thường do 三→3, OK)",Chỉ xem nhanh
+cum_tieng_anh_dai,269,1.65,>=3 từ tiếng Anh liền nhau,"Dịch lại cụm đó sang tiếng Việt, giữ tên hãng"
+dich_sat_chu,562,3.44,Thuật ngữ 1688 bị dịch từng chữ,Thay hàng loạt bằng từ điển thuật ngữ (có sẵn cột đề xuất)
+lap_tu_lien_tiep,506,3.1,Từ/cụm lặp liền nhau (vd 'dưỡng ẩm dưỡng ẩm'),Xem: thường do 补水保湿 bị dịch cùng 1 từ -> mất nghĩa
+ngoac_ky_hieu,393,2.4,Có 【】[]~|* ...,"Chuẩn hoá: bỏ ký hiệu, giữ nội dung"
+ket_thuc_do_dang,13,0.08,Kết thúc bằng 'và/cho/của' hoặc dấu phẩy,Kiểm tra bị cắt cụt
+vi_qua_ngan,160,0.98,Tỉ lệ từ vi / chữ zh < p1=0.52,Đọc: thường là dịch THIẾU ý -> bỏ hoặc dịch lại
+vi_qua_dai,164,1.0,Tỉ lệ từ vi / chữ zh > p99=1.55,"Đọc: thường là dịch diễn giải dài, ít khi sai"
+viet_hoa_moi_tu,518,3.17,Viết Hoa Mỗi Từ (>=60% từ),Chuẩn hoá chữ thường (giữ tên riêng) cho nhất quán
+trung_cap,402,2.46,"Cặp (zh, vi) trùng hoàn toàn",Giữ 1
+cung_zh_khac_vi,583,3.57,Cùng zh nhưng vi khác nhau,Giữ 1 bản dịch tốt nhất
+cung_vi_khac_zh,13,0.08,Cùng vi nhưng zh khác nhau,"Xem, thường OK"
+quang_cao,3610,22.08,"Có chữ quảng cáo 1688 (bán buôn, xuyên biên giới, nhà máy...)","Dịch đúng, không phải lỗi; cân nhắc nếu muốn title giống sàn VN"

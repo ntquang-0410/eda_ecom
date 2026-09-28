@@ -1,0 +1,669 @@
+{
+  "n": 16348,
+  "seconds": 1169,
+  "sim": {
+    "count": 16348.0,
+    "mean": 0.7019,
+    "std": 0.0579,
+    "min": 0.4391,
+    "1%": 0.553,
+    "5%": 0.6006,
+    "25%": 0.6655,
+    "50%": 0.7052,
+    "75%": 0.7419,
+    "95%": 0.7903,
+    "99%": 0.8271,
+    "max": 1.0
+  },
+  "sim_samecat": {
+    "count": 16348.0,
+    "mean": 0.5057,
+    "std": 0.0782,
+    "min": 0.2314,
+    "1%": 0.3417,
+    "5%": 0.38,
+    "25%": 0.4471,
+    "50%": 0.5058,
+    "75%": 0.5611,
+    "95%": 0.6348,
+    "99%": 0.6811,
+    "max": 0.7799
+  },
+  "sim_rand": {
+    "count": 16348.0,
+    "mean": 0.4165,
+    "std": 0.071,
+    "min": 0.2036,
+    "1%": 0.2796,
+    "5%": 0.3157,
+    "25%": 0.3677,
+    "50%": 0.4083,
+    "75%": 0.4552,
+    "95%": 0.5509,
+    "99%": 0.6244,
+    "max": 0.7301
+  },
+  "thr_p99_samecat": 0.6811,
+  "thr_p95_samecat": 0.6348,
+  "true_below_p99_samecat": 5515,
+  "true_below_p95_samecat": 2052,
+  "true_below_0.5": 14,
+  "true_below_0.6": 807,
+  "auc_true_vs_samecat": 0.9769,
+  "auc_true_vs_rand": 0.9964,
+  "per_category": [
+    {
+      "category": "auto",
+      "n": 971,
+      "sim_mean": 0.7299000024795532,
+      "sim_p05": 0.6322000026702881,
+      "samecat_mean": 0.47920000553131104,
+      "samecat_p99": 0.6650000214576721,
+      "below_own_samecat_p99": 121
+    },
+    {
+      "category": "bags",
+      "n": 2878,
+      "sim_mean": 0.7245000004768372,
+      "sim_p05": 0.6416000127792358,
+      "samecat_mean": 0.5475000143051147,
+      "samecat_p99": 0.6883000135421753,
+      "below_own_samecat_p99": 623
+    },
+    {
+      "category": "beauty",
+      "n": 1318,
+      "sim_mean": 0.6615999937057495,
+      "sim_p05": 0.565500020980835,
+      "samecat_mean": 0.4846999943256378,
+      "samecat_p99": 0.6150000095367432,
+      "below_own_samecat_p99": 287
+    },
+    {
+      "category": "electronics",
+      "n": 1109,
+      "sim_mean": 0.7567999958992004,
+      "sim_p05": 0.6777999997138977,
+      "samecat_mean": 0.48489999771118164,
+      "samecat_p99": 0.6974999904632568,
+      "below_own_samecat_p99": 125
+    },
+    {
+      "category": "fashion",
+      "n": 1351,
+      "sim_mean": 0.6783999800682068,
+      "sim_p05": 0.6085000038146973,
+      "samecat_mean": 0.516700029373169,
+      "samecat_p99": 0.6473000049591064,
+      "below_own_samecat_p99": 333
+    },
+    {
+      "category": "food",
+      "n": 1421,
+      "sim_mean": 0.6298999786376953,
+      "sim_p05": 0.5436000227928162,
+      "samecat_mean": 0.46470001339912415,
+      "samecat_p99": 0.6079999804496765,
+      "below_own_samecat_p99": 470
+    },
+    {
+      "category": "home",
+      "n": 2493,
+      "sim_mean": 0.7063999772071838,
+      "sim_p05": 0.6305999755859375,
+      "samecat_mean": 0.49779999256134033,
+      "samecat_p99": 0.6880000233650208,
+      "below_own_samecat_p99": 804
+    },
+    {
+      "category": "mother_baby",
+      "n": 2496,
+      "sim_mean": 0.7063000202178955,
+      "sim_p05": 0.6279000043869019,
+      "samecat_mean": 0.4830999970436096,
+      "samecat_p99": 0.6773999929428101,
+      "below_own_samecat_p99": 643
+    },
+    {
+      "category": "shoes",
+      "n": 2311,
+      "sim_mean": 0.707099974155426,
+      "sim_p05": 0.6279000043869019,
+      "samecat_mean": 0.5382000207901001,
+      "samecat_p99": 0.6837999820709229,
+      "below_own_samecat_p99": 701
+    }
+  ],
+  "cjk_title_vi": 7,
+  "cjk_desc_vi": 2098,
+  "cjk_title_vi_rows": [
+    {
+      "product_id": "1043561115166",
+      "category": "bags",
+      "title_vi": "2026新款Polèn真皮马鞍包女高级感通勤单肩斜挎包小众设计感腋下",
+      "sim": 1.0,
+      "cjk_ratio_title_vi": 0.7353
+    },
+    {
+      "product_id": "1058721001412",
+      "category": "beauty",
+      "title_vi": "HEATÔR夕碧泉水杨酸栀子花控油洁面乳清洁面部洗面奶厂家代发",
+      "sim": 1.0,
+      "cjk_ratio_title_vi": 0.8065
+    },
+    {
+      "product_id": "872054230824",
+      "category": "food",
+      "title_vi": "Trà Gaba Dahongpao Trà Gaba 嘎巴大红袍乌龙茶",
+      "sim": 0.9233999848365784,
+      "cjk_ratio_title_vi": 0.2222
+    },
+    {
+      "product_id": "818980692803",
+      "category": "mother_baby",
+      "title_vi": "50 bình trữ sữa dùng một lần cho trẻ sơ sinh, bình sữa, bình sữa NICU, bình sữa vô trùng cho trẻ sơ sinh bị早产 gửi đến bệnh viện",
+      "sim": 0.776199996471405,
+      "cjk_ratio_title_vi": 0.0157
+    },
+    {
+      "product_id": "831394947500",
+      "category": "home",
+      "title_vi": "Xuất khẩu sang Nhật Bản 丨 Bộ chăn ga gối bốn mảnh 100% cotton mùa xuân và mùa thu",
+      "sim": 0.7508999705314636,
+      "cjk_ratio_title_vi": 0.0123
+    },
+    {
+      "product_id": "906656433533",
+      "category": "fashion",
+      "title_vi": "[Giảm giá 10%] Lựa chọn của Ole 丨 Áo phông nam hạng nặng 丨 Áo phông nam ngắn tay mùa hè 丨 Thương hiệu thời trang Mỹ",
+      "sim": 0.733299970626831,
+      "cjk_ratio_title_vi": 0.0261
+    },
+    {
+      "product_id": "956583248092",
+      "category": "fashion",
+      "title_vi": "Váy liền thân dệt kim jacquard镂空 màu trắng dây spaghetti, kiểu dáng ôm eo, thời trang hè 2026.",
+      "sim": 0.586899995803833,
+      "cjk_ratio_title_vi": 0.0213
+    }
+  ],
+  "cjk_desc_vi_by_category": {
+    "home": 400,
+    "beauty": 312,
+    "mother_baby": 286,
+    "bags": 273,
+    "food": 256,
+    "shoes": 174,
+    "electronics": 164,
+    "auto": 157,
+    "fashion": 76
+  },
+  "sim_mean_cjk_title": 0.8244,
+  "sim_mean_clean_title": 0.7018,
+  "lowest_30": [
+    {
+      "product_id": "735300087550",
+      "category": "food",
+      "title_zh": "严选凤凰单枞鸭屎香蜜兰香凤凰单从高山乌龙茶罐装茶叶礼盒装送礼",
+      "title_vi": "Phân vịt Phoenix Dancong được lựa chọn cẩn thận",
+      "sim": 0.4390999972820282
+    },
+    {
+      "product_id": "1067521189531",
+      "category": "food",
+      "title_zh": "源头工厂普洱熟茶云南勐海糯香熟普洱茶陈年发酵熟茶散装茶叶批发",
+      "title_vi": "Trà Phổ Nhĩ chín Vân Nam Mạnh Hải hương nếp, trà Phổ Nhĩ chín ủ lâu năm, trà rời bán sỉ từ nhà máy sản xuất.",
+      "sim": 0.4629000127315521
+    },
+    {
+      "product_id": "822969947362",
+      "category": "beauty",
+      "title_zh": "一枝春玻尿酸补水面膜美白保湿提亮肤色紧致滋润贴片面膜厂家批发",
+      "title_vi": "Yizhichun Hyaluronic Acid Hydrating Mask Làm trắng, dưỡng ẩm, làm sáng da, làm săn chắc và dưỡng ẩm Mặt nạ chuyên dụng Nhà sản xuất Bán buôn",
+      "sim": 0.47290000319480896
+    },
+    {
+      "product_id": "732578611329",
+      "category": "food",
+      "title_zh": "凤凰单枞鸭屎香茶叶高端罐装特级老丛地标认证潮州单丛茶散批代发",
+      "title_vi": "Trà Phượng Hoàng Đan Công Yashixiang, trà cao cấp đóng hộp, được chứng nhận là sản phẩm chỉ dẫn địa lý, trà Đan Công Triều Châu, bán buôn và giao hàng tận nơi.",
+      "sim": 0.47380000352859497
+    },
+    {
+      "product_id": "583691580014",
+      "category": "food",
+      "title_zh": "凤凰单枞蜜兰香茶叶散批潮州乌岽老枞单丛茶地标认证厂家批发代发",
+      "title_vi": "Trà Phượng Hoàng Đan Công hương hoa lan mật ong, trà lá rời từ Triều Châu, được chứng nhận là sản phẩm chỉ định vùng, bán buôn và giao hàng trực tiếp từ nhà sản xuất.",
+      "sim": 0.47440001368522644
+    },
+    {
+      "product_id": "850523709198",
+      "category": "food",
+      "title_zh": "怡口莲夹心太妃糖经典巧克力味混合独立小包散装糖果结婚喜糖奶糖",
+      "title_vi": "Kẹo bơ cứng bánh kẹo sô cô la cổ điển trộn kẹo gói nhỏ độc lập kẹo cưới kẹo bơ cứng",
+      "sim": 0.4747999906539917
+    },
+    {
+      "product_id": "785329535292",
+      "category": "fashion",
+      "title_zh": "轻熟风星空短袖满天星烫钻宽松微潮体恤Tee男上衣T恤2024年",
+      "title_vi": "Áo phông nam Áo Phông Nam 2024 năm",
+      "sim": 0.4869000017642975
+    },
+    {
+      "product_id": "943730263382",
+      "category": "food",
+      "title_zh": "【包邮】香辣鸭翅湖南特色酱麻辣板鸭鸭货翅尖追剧卤味零食小吃",
+      "title_vi": "[Miễn phí vận chuyển] Cánh vịt cay sốt đặc biệt Hồ Nam",
+      "sim": 0.4875999987125397
+    },
+    {
+      "product_id": "825704718320",
+      "category": "food",
+      "title_zh": "广东潮州凤凰单丛蜜兰香乌龙茶单枞茶蜜香单枞茶场乌叶散茶礼盒",
+      "title_vi": "Quảng Đông Triều Châu Phượng Hoàng Dancong Mật ong Trà ô long Trà ô long Dancong Mật ong Trang trại trà Dancong Hộp quà trà lỏng lá đen",
+      "sim": 0.4918000102043152
+    },
+    {
+      "product_id": "844137817646",
+      "category": "food",
+      "title_zh": "家城沙嗲素牛肉干怀旧辣条牛肉粒儿时经典校园素肉沙爹素小吃零食",
+      "title_vi": "Thịt bò khô sa tế Jiacheng, thịt bò cay hoài cổ, món ăn nhẹ sa tế",
+      "sim": 0.4943999946117401
+    },
+    {
+      "product_id": "924743979898",
+      "category": "food",
+      "title_zh": "香菇豆干混合重庆产麻辣香辣零食大全各种各样嫩豆腐干不辣小吃的",
+      "title_vi": "Đậu phụ khô nấm trộn với đồ ăn nhẹ cay và cay từ Trùng Khánh",
+      "sim": 0.49720001220703125
+    },
+    {
+      "product_id": "672137834057",
+      "category": "food",
+      "title_zh": "香脆小米锅巴薯片零食小吃网红膨化食品虎牙脆尖角脆整箱批发",
+      "title_vi": "Khoai tây chiên giòn kê, đồ ăn nhẹ, đồ ăn nhẹ, thực phẩm phồng nổi tiếng trên mạng, răng hổ, giòn, sừng nhọn, Bán Buôn FCL",
+      "sim": 0.49790000915527344
+    },
+    {
+      "product_id": "959363637796",
+      "category": "food",
+      "title_zh": "香烤面筋川香麻辣孜然味豆干面筋串辣条四川特色休闲小吃零食",
+      "title_vi": "Xương rồng nướng kiểu Tứ Xuyên cay với hương vị thì là",
+      "sim": 0.49810001254081726
+    },
+    {
+      "product_id": "626842869775",
+      "category": "food",
+      "title_zh": "邬辣妈辣条豆腐干休闲麻辣零食豆干制品素牛筋酒鬼鱼豆条",
+      "title_vi": "Wu Lama Spicy Bar Đậu phụ khô Món ăn nhẹ cay Thông thường Đậu phụ khô Sản phẩm gân bò chay",
+      "sim": 0.49900001287460327
+    },
+    {
+      "product_id": "995705017592",
+      "category": "food",
+      "title_zh": "去骨猪蹄黄豆即食酱香香辣卤味熟食休闲零食休闲小吃食品散装发批",
+      "title_vi": "Thịt heo chân không xương và đậu tương sốt ăn liền, món ăn chín mềm cay, đồ ăn nhẹ, đồ ăn vặt, bán buôn số lượng lớn",
+      "sim": 0.5009999871253967
+    },
+    {
+      "product_id": "674111993698",
+      "category": "beauty",
+      "title_zh": "碧素堂蜗牛面膜补水保湿美白滋润嫩肤面膜盈润养护厂家",
+      "title_vi": "Bisutang Snail Mask Hydrating, Dưỡng ẩm, Làm trắng, Dưỡng ẩm và Trẻ hóa Mặt nạ Nhà sản xuất Dưỡng ẩm và Chăm sóc",
+      "sim": 0.5011000037193298
+    },
+    {
+      "product_id": "655657203105",
+      "category": "beauty",
+      "title_zh": "施逅微晶胶原额头贴川字纹抬头纹抗皱紧致淡纹填充贴面膜正品批发",
+      "title_vi": "Mặt nạ làm đầy nếp nhăn làm săn chắc da trắng chống nhăn mặt nạ làm đầy nếp nhăn nhẹ nhàng",
+      "sim": 0.5038999915122986
+    },
+    {
+      "product_id": "857486110497",
+      "category": "food",
+      "title_zh": "宫廷金芽普洱茶熟茶七子饼茶云南临沧古树春茶熟普厂家茶叶批发",
+      "title_vi": "Cung điện Golden Bud Pu'er Trà nấu trà Qizi Bánh Trà Vân Nam Lincang Cây cổ thụ Trà mùa xuân Nhà máy nấu trà Nhà máy bán buôn",
+      "sim": 0.5051000118255615
+    },
+    {
+      "product_id": "876239150987",
+      "category": "food",
+      "title_zh": "龙岩泡鸭爪鸭掌熟食福建特产卤味鸭脚小零食小吃休闲食品批发辣味",
+      "title_vi": "Chân vịt ngâm Longyan, chân vịt, thực phẩm nấu chín, đặc sản Phúc Kiến, chân vịt om, đồ ăn nhẹ, đồ ăn nhẹ, bán buôn, cay",
+      "sim": 0.5054000020027161
+    },
+    {
+      "product_id": "796699186420",
+      "category": "beauty",
+      "title_zh": "韩伦美羽积雪草面膜高保湿补水紧致提靓修护老虎面膜贴片代发批发",
+      "title_vi": "Mặt Nạ Rau Má Han Lun Meiyu Dưỡng Ẩm Cao Cấp, Cấp Ẩm, Làm Săn Chắc, Làm Đẹp Và Chữa Lành - Bán Buôn Miếng Dán Mặt Nạ Hổ",
+      "sim": 0.5058000087738037
+    },
+    {
+      "product_id": "625667077461",
+      "category": "food",
+      "title_zh": "一件代发麦皇朝黑芝麻层层酥饼干休闲零食食品老式巧克力夹心饼干",
+      "title_vi": "Bánh mì ngắn từng lớp mè đen của Vương Triều lúa mì",
+      "sim": 0.5077999830245972
+    },
+    {
+      "product_id": "772027535026",
+      "category": "food",
+      "title_zh": "福鼎白茶寿眉白茶饼礼盒装送人送礼一件代发",
+      "title_vi": "Hộp quà Bánh trà Trắng trà trắng Fude",
+      "sim": 0.5080000162124634
+    },
+    {
+      "product_id": "800596889810",
+      "category": "food",
+      "title_zh": "黄山特产烧饼袋装梅干菜扣肉小饼浓郁新鲜酥脆黄山烧饼手工整箱",
+      "title_vi": "Bánh quy đặc sản Hoàng Sơn bao mận khô, rau củ, thịt, bánh quy Hoàng Sơn, bánh quy thủ công",
+      "sim": 0.508899986743927
+    },
+    {
+      "product_id": "834457793386",
+      "category": "shoes",
+      "title_zh": "2024新款时尚百搭博肯拖鞋女罗马凉拖女休闲平底一字防滑拖鞋批发",
+      "title_vi": "Dép Boken thời trang mới 2024",
+      "sim": 0.5099999904632568
+    },
+    {
+      "product_id": "871443653451",
+      "category": "beauty",
+      "title_zh": "施逅玻尿酸富勒烯冻干粉靓肤面膜补水保湿面膜温和代发单片",
+      "title_vi": "Mặt nạ dưỡng ẩm và dưỡng ẩm mặt nạ dưỡng ẩm da mặt mặt nạ dưỡng ẩm nhẹ nhàng miếng đơn",
+      "sim": 0.5117999911308289
+    },
+    {
+      "product_id": "903008572596",
+      "category": "beauty",
+      "title_zh": "施逅玻尿酸富勒烯冻干粉靓肤面膜补水保湿面膜温和代发单片",
+      "title_vi": "Mặt nạ dưỡng ẩm và dưỡng ẩm mặt nạ dưỡng ẩm da mặt mặt nạ dưỡng ẩm nhẹ nhàng miếng đơn",
+      "sim": 0.5117999911308289
+    },
+    {
+      "product_id": "971603837602",
+      "category": "food",
+      "title_zh": "黑芝麻无花果核桃派无花果夹心核桃仁立小包装软糯糕点休闲零食",
+      "title_vi": "Bánh mì nhân hạt óc chó, bánh mì nhân hạt sung, bánh mì nhân hạt óc chó, gói nhỏ bánh dẻo mềm, đồ ăn nhẹ",
+      "sim": 0.5128999948501587
+    },
+    {
+      "product_id": "998917208517",
+      "category": "food",
+      "title_zh": "蒙都内蒙古超干风干牛肉干牛肉零食即食牛肉批发源头厂家",
+      "title_vi": "Thịt bò khô siêu khô Nội Mông Mengdu, đồ ăn nhẹ bò khô, nguồn cung cấp bán buôn bò khô sẵn ăn, nhà sản xuất",
+      "sim": 0.5134000182151794
+    },
+    {
+      "product_id": "545858180371",
+      "category": "food",
+      "title_zh": "现货邬辣妈辣条素牛筋蒜蓉豆条香辣味豆干豆腐干休闲零食麻辣小吃",
+      "title_vi": "Mì cay Wu La Ma, gân bò chay, đậu tỏi, đậu que cay, đậu phụ khô, đồ ăn nhẹ thông thường, đồ ăn nhẹ cay",
+      "sim": 0.513700008392334
+    },
+    {
+      "product_id": "684623158828",
+      "category": "beauty",
+      "title_zh": "补水抗皱天丝面膜 致朵玻色因臻颜抗皱贴片面膜清透补水批发代发",
+      "title_vi": "Mặt nạ Tencel dưỡng ẩm và chống nhăn",
+      "sim": 0.5144000053405762
+    }
+  ],
+  "highest_10": [
+    {
+      "product_id": "1043561115166",
+      "category": "bags",
+      "title_zh": "2026新款Polèn真皮马鞍包女高级感通勤单肩斜挎包小众设计感腋下",
+      "title_vi": "2026新款Polèn真皮马鞍包女高级感通勤单肩斜挎包小众设计感腋下",
+      "sim": 1.0
+    },
+    {
+      "product_id": "1058721001412",
+      "category": "beauty",
+      "title_zh": "HEATÔR夕碧泉水杨酸栀子花控油洁面乳清洁面部洗面奶厂家代发",
+      "title_vi": "HEATÔR夕碧泉水杨酸栀子花控油洁面乳清洁面部洗面奶厂家代发",
+      "sim": 1.0
+    },
+    {
+      "product_id": "680454865764",
+      "category": "food",
+      "title_zh": "出口30day detox tea Peach flavor burn fat fit slim tea果味茶",
+      "title_vi": "Xuất Khẩu 30day detox tea Peach flavor burn fat fit slim tea hương trái cây",
+      "sim": 0.9336000084877014
+    },
+    {
+      "product_id": "872054230824",
+      "category": "food",
+      "title_zh": "Gaba Dahongpao tea Габа чай 嘎巴大红袍乌龙茶",
+      "title_vi": "Trà Gaba Dahongpao Trà Gaba 嘎巴大红袍乌龙茶",
+      "sim": 0.9233999848365784
+    },
+    {
+      "product_id": "892950568203",
+      "category": "auto",
+      "title_zh": "Adas DVR 安卓导航仪DVR HD 1080p USB行车记录仪Wifi手机互联",
+      "title_vi": "Adas DVR Android Navigator DVR HD 1080p USB lái xe kết nối điện thoại Wifi",
+      "sim": 0.9006999731063843
+    },
+    {
+      "product_id": "690189448706",
+      "category": "auto",
+      "title_zh": "适用于安卓大屏USB记录仪u16前后记录DVR带倒车影像AHD1080P 720P",
+      "title_vi": "Thích hợp cho Android màn hình lớn Máy ghi âm USB u16 trước và sau DVR với hình ảnh lùi HD1080 P 720P",
+      "sim": 0.8827000260353088
+    },
+    {
+      "product_id": "798155498081",
+      "category": "electronics",
+      "title_zh": "2026新款895B带数显蓝牙耳机S510无线耳机高音质低延迟游戏耳机",
+      "title_vi": "Tai nghe Bluetooth 895B mẫu mới 2026 với màn hình kỹ thuật số, tai nghe không dây S510, tai nghe chơi game chất lượng cao độ trễ thấp",
+      "sim": 0.8772000074386597
+    },
+    {
+      "product_id": "798069751431",
+      "category": "electronics",
+      "title_zh": "2026新款895B带数显蓝牙耳机S510无线耳机高音质低延迟游戏耳机",
+      "title_vi": "Tai nghe Bluetooth 895B mẫu mới 2026 với màn hình kỹ thuật số, tai nghe không dây S510, tai nghe chơi game chất lượng cao độ trễ thấp",
+      "sim": 0.8772000074386597
+    },
+    {
+      "product_id": "974382720522",
+      "category": "electronics",
+      "title_zh": "适用VIVOX300pro手机壳x200x100/x90/x80透明壳x70简约60软保护套",
+      "title_vi": "Thích hợp cho vỏ điện thoại di động VIVOX300pro x200x100/x90/x80 vỏ trong suốt x70 vỏ bảo vệ mềm đơn giản 60",
+      "sim": 0.8729000091552734
+    },
+    {
+      "product_id": "703488149597",
+      "category": "auto",
+      "title_zh": "4K超清广角V50V53V55wifi GPS夜视双镜头A800S监控行车记录仪",
+      "title_vi": "Máy ghi hình lái xe giám sát 4K siêu nét góc rộng V50V53V55wifi GPS tầm nhìn ban đêm ống kính kép A800S",
+      "sim": 0.8707000017166138
+    }
+  ],
+  "lowest_per_category": {
+    "auto": [
+      {
+        "product_id": "941372486078",
+        "title_zh": "龙旗车载手机支架汽车导航车用专用仪表台无痕防滑垫支架一件代发",
+        "title_vi": "Rồng Cờ Ô Tô Di Động Điện Thoại Ô Tô Ô Tô Đặc Biệt Bảng Điều Khiển Liền Mạch Chống Trơn Trượt Giá Đỡ Dropshipping",
+        "sim": 0.538100004196167
+      },
+      {
+        "product_id": "938233183886",
+        "title_zh": "包邮大灯翻新修复液车灯镀晶液发黄免打磨雾化清洁剂抛光套装代发",
+        "title_vi": "Dung dịch sửa chữa đèn pha Topbit, dung dịch phủ pha lê đèn xe hơi, bộ vệ sinh đánh bóng chống ố vàng.",
+        "sim": 0.541700005531311
+      },
+      {
+        "product_id": "801877533051",
+        "title_zh": "跨境新款美国国旗老鹰汽车内饰后视镜挂件异形钥匙链装饰挂件吊坠",
+        "title_vi": "Mặt dây chuyền trang trí chìa khóa hình đặc biệt",
+        "sim": 0.5544999837875366
+      }
+    ],
+    "bags": [
+      {
+        "product_id": "944466303906",
+        "title_zh": "亚马逊爆款双肩包 跨境贴标小单快反 48小时发货大容量电脑包",
+        "title_vi": "Túi du lịch thông thường phổ biến dành cho nữ, túi đựng máy tính dành cho sinh viên có sức chứa lớn, ba lô chống thấm nước dành cho nam đi công tác",
+        "sim": 0.5203999876976013
+      },
+      {
+        "product_id": "958976544237",
+        "title_zh": "【柜级品质】西太后新款鳄鱼纹腋下包压纹牛皮斜跨通勤链条单肩包",
+        "title_vi": "[Chất lượng cấp tủ] Túi đeo chéo họa tiết cá sấu mới của Hoàng hậu phương Tây Túi đeo chéo dây chuyền đi lại bằng da bò dập nổi",
+        "sim": 0.5511000156402588
+      },
+      {
+        "product_id": "673308007004",
+        "title_zh": "香港MackJhosel PU小众复古帆布法棍腋下包女秋夏新款单肩包",
+        "title_vi": "Túi Đeo Vai Nữ Mẫu Mới mùa thu hè",
+        "sim": 0.5575000047683716
+      }
+    ],
+    "beauty": [
+      {
+        "product_id": "822969947362",
+        "title_zh": "一枝春玻尿酸补水面膜美白保湿提亮肤色紧致滋润贴片面膜厂家批发",
+        "title_vi": "Yizhichun Hyaluronic Acid Hydrating Mask Làm trắng, dưỡng ẩm, làm sáng da, làm săn chắc và dưỡng ẩm Mặt nạ chuyên dụng Nhà sản xuất Bán buôn",
+        "sim": 0.47290000319480896
+      },
+      {
+        "product_id": "674111993698",
+        "title_zh": "碧素堂蜗牛面膜补水保湿美白滋润嫩肤面膜盈润养护厂家",
+        "title_vi": "Bisutang Snail Mask Hydrating, Dưỡng ẩm, Làm trắng, Dưỡng ẩm và Trẻ hóa Mặt nạ Nhà sản xuất Dưỡng ẩm và Chăm sóc",
+        "sim": 0.5011000037193298
+      },
+      {
+        "product_id": "655657203105",
+        "title_zh": "施逅微晶胶原额头贴川字纹抬头纹抗皱紧致淡纹填充贴面膜正品批发",
+        "title_vi": "Mặt nạ làm đầy nếp nhăn làm săn chắc da trắng chống nhăn mặt nạ làm đầy nếp nhăn nhẹ nhàng",
+        "sim": 0.5038999915122986
+      }
+    ],
+    "electronics": [
+      {
+        "product_id": "695479137501",
+        "title_zh": "影巨人气传导蓝牙耳机不入耳空气传导无线运动挂耳式跨境私模",
+        "title_vi": "Tai nghe Bluetooth dẫn không khí của người khổng lồ bóng tối",
+        "sim": 0.5719000101089478
+      },
+      {
+        "product_id": "836658819444",
+        "title_zh": "跨境爆款蓝牙耳机超长续航无线蓝牙私模降噪数显滑盖防水厂家批发",
+        "title_vi": "Tai nghe Bluetooth kiểu nổ xuyên biên giới, thời lượng pin cực dài, khuôn riêng Bluetooth không dây, giảm tiếng ồn, màn hình kỹ thuật số, nắp trượt, nhà sản xuất chống thấm nước, bán buôn",
+        "sim": 0.5920000076293945
+      },
+      {
+        "product_id": "900804455251",
+        "title_zh": "跨境私模入耳式声控运动无线蓝牙挂耳式无线运动蓝牙耳机超长续航",
+        "title_vi": "Tai nghe Bluetooth thể thao không dây không dây đeo tai, tai nghe Bluetooth thể thao không dây, thời lượng pin dài",
+        "sim": 0.59579998254776
+      }
+    ],
+    "fashion": [
+      {
+        "product_id": "785329535292",
+        "title_zh": "轻熟风星空短袖满天星烫钻宽松微潮体恤Tee男上衣T恤2024年",
+        "title_vi": "Áo phông nam Áo Phông Nam 2024 năm",
+        "sim": 0.4869000017642975
+      },
+      {
+        "product_id": "812958742310",
+        "title_zh": "新疆长绒棉纯棉短袖男士夏季新款男装宽松休闲纯色重磅上衣服T恤",
+        "title_vi": "Áo thun nam ngắn tay cotton cotton dài Tân Cương",
+        "sim": 0.5435000061988831
+      },
+      {
+        "product_id": "899451914466",
+        "title_zh": "液氨丝光棉新疆长绒棉凉感短袖男T恤宽松印花",
+        "title_vi": "Áo thun nam tay ngắn chất liệu cotton mercerized amoniac lỏng, cotton sợi dài Tân Cương, mát lạnh, dáng rộng, in họa tiết.",
+        "sim": 0.5529000163078308
+      }
+    ],
+    "food": [
+      {
+        "product_id": "735300087550",
+        "title_zh": "严选凤凰单枞鸭屎香蜜兰香凤凰单从高山乌龙茶罐装茶叶礼盒装送礼",
+        "title_vi": "Phân vịt Phoenix Dancong được lựa chọn cẩn thận",
+        "sim": 0.4390999972820282
+      },
+      {
+        "product_id": "1067521189531",
+        "title_zh": "源头工厂普洱熟茶云南勐海糯香熟普洱茶陈年发酵熟茶散装茶叶批发",
+        "title_vi": "Trà Phổ Nhĩ chín Vân Nam Mạnh Hải hương nếp, trà Phổ Nhĩ chín ủ lâu năm, trà rời bán sỉ từ nhà máy sản xuất.",
+        "sim": 0.4629000127315521
+      },
+      {
+        "product_id": "732578611329",
+        "title_zh": "凤凰单枞鸭屎香茶叶高端罐装特级老丛地标认证潮州单丛茶散批代发",
+        "title_vi": "Trà Phượng Hoàng Đan Công Yashixiang, trà cao cấp đóng hộp, được chứng nhận là sản phẩm chỉ dẫn địa lý, trà Đan Công Triều Châu, bán buôn và giao hàng tận nơi.",
+        "sim": 0.47380000352859497
+      }
+    ],
+    "home": [
+      {
+        "product_id": "904386495388",
+        "title_zh": "炮筒投影仪收纳包装盒防水收纳盒eva材质包装大疆pocket4收纳包",
+        "title_vi": "Túi đựng máy chiếu thùng xuyên biên giới, túi đựng máy chiếu thùng, túi xách tay, giá rẻ toàn mạng",
+        "sim": 0.5182999968528748
+      },
+      {
+        "product_id": "657074320814",
+        "title_zh": "丝瓜络 刷碗 丝瓜瓤洗碗 丝瓜烙 洗碗刷丝瓜络洗碗神器 丝瓜抹布",
+        "title_vi": "Bông tắm rửa chén, bột bông tắm rửa chén, miếng bọt biển rửa chén, dụng cụ rửa chén bằng bông tắm, khăn lau chùi bằng bông tắm",
+        "sim": 0.5206999778747559
+      },
+      {
+        "product_id": "915834715335",
+        "title_zh": "侘寂仿藤编织收纳箱收纳筐杂物衣柜橱柜客厅茶几整理收纳盒收纳框",
+        "title_vi": "Wabiji, hộp đựng đồ dệt mây, giỏ đựng đồ lặt vặt, tủ quần áo, phòng khách, bàn cà phê, hộp đựng đồ, hộp đựng đồ, hộp đựng đồ",
+        "sim": 0.5497000217437744
+      }
+    ],
+    "mother_baby": [
+      {
+        "product_id": "1017254198628",
+        "title_zh": "婴儿包屁衣长袖柔软打底婴童a类哈衣宝宝连体衣坑条兰精莫代尔",
+        "title_vi": "Bộ đồ liền thân dài tay mềm mại cho bé, chất liệu cao cấp, kiểu dáng ôm sát cơ thể, chất liệu vải gân, làm từ sợi Lenzing Modal.",
+        "sim": 0.5224999785423279
+      },
+      {
+        "product_id": "1041630604788",
+        "title_zh": "新品高颜值液态玻璃泥老头起泡胶高透水晶泥好拉伸不粘手解压有3c",
+        "title_vi": "Đất sét lỏng chất lượng cao mới, đất sét bong bóng, đất sét pha lê có độ trong suốt cao, dễ kéo giãn, không dính, giúp giảm căng thẳng, có chứng nhận 3C.",
+        "sim": 0.53329998254776
+      },
+      {
+        "product_id": "749883688825",
+        "title_zh": "地摊夜市爆款玩具发光手提水母灯笼儿童仿真网红同款七彩飘带灯",
+        "title_vi": "Đường Phố Gian Hàng Đêm Đồ Chơi Phổ Biến Dạ Quang Tất Sứa Đèn Lồng Trẻ Em Nhân Tạo Phổ Biến Cùng Nhiều Màu Sắc Streamer Đèn Lồng",
+        "sim": 0.5511999726295471
+      }
+    ],
+    "shoes": [
+      {
+        "product_id": "834457793386",
+        "title_zh": "2024新款时尚百搭博肯拖鞋女罗马凉拖女休闲平底一字防滑拖鞋批发",
+        "title_vi": "Dép Boken thời trang mới 2024",
+        "sim": 0.5099999904632568
+      },
+      {
+        "product_id": "1048723499026",
+        "title_zh": "魔术贴拖鞋女厚度网红一字拖松糕时尚情侣拖鞋平底舒适厚底",
+        "title_vi": "Dép nữ có quai dán, dép đôi thời trang với đế dày, dép đế bằng, êm chân và thoải mái.",
+        "sim": 0.5440000295639038
+      },
+      {
+        "product_id": "1063928447528",
+        "title_zh": "女拖鞋方头金属搭扣凉拖鞋坡跟防滑耐磨包头拖鞋夏季外穿工厂直供",
+        "title_vi": "Giày sandal nữ mũi vuông, có khóa kim loại, gót đế xuồng, đế chống trượt và thiết kế mũi kín, phù hợp để đi ngoài trời vào mùa hè; sản phẩm được cung cấp trực tiếp từ nhà máy.",
+        "sim": 0.5489000082015991
+      }
+    ]
+  }
+}
