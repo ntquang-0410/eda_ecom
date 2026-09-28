@@ -1,0 +1,10 @@
+# BAAI/bge-m3 multilingual embedding (Trung - Việt similarity)
+# Cách cài đặt:
+#   pip install -r requirements.txt
+#
+# Nếu chỉ cần dense embedding (đơn giản nhất cho cosine similarity):
+sentence-transformers>=2.6.0
+torch>=2.0.0
+
+# (Tùy chọn) Thư viện chính thức của BAAI - hỗ trợ dense/sparse/colbert:
+FlagEmbedding>=1.2.10
