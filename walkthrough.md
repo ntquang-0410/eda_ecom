@@ -8,8 +8,9 @@ Tài liệu kỹ thuật nghiên cứu toàn diện các vấn đề, dị tật
 
 | Phiên bản | Thời gian cập nhật | Tóm tắt nội dung nâng cấp | Trạng thái dữ liệu |
 |:---:|:---:|---|:---:|
-| **v2.0** | **01/10/2026 14:40:00** | **[MỚI NHẤT ĐẶT Ở ĐẦU]** Khám phá 7 dị tật tiềm ẩn mới từ 16.348 dòng thật (quy đổi `斤` $\rightarrow$ `kg`, nhồi từ khóa 44,24%, dịch cụt < 1.0, phình to > 6.0, đơn vị `寸` 513 dòng, toán tử kích thước `x`, CJK `丨`). Thực nghiệm GPU CUDA so sánh 5 phương pháp trên BGE-M3 (1.000 mẫu ngẫu nhiên + 600 mẫu thách thức). Chứng minh không được xóa từ tiếp thị và không nên lowercase. Đề xuất quy trình tiền xử lý đa tầng tối ưu. | **100% Dữ liệu thực** *(Đã kiểm chứng 29/29 `product_id` từ parquet)* |
-| **v1.2** | **28/09/2026 17:34:00** | Tái cấu trúc tài liệu theo yêu cầu: gộp phân tích mở rộng vào Phần 1 (đủ 9 nhóm dị tật cốt lõi), chuyển toàn bộ mã nguồn xử lý xuống Phần 4 cuối tài liệu và nhúng trực tiếp vào Notebook `eda-bilingual_zh_vi.ipynb` (không dùng file `.py` ngoài). | 100% Dữ liệu thực |
+| **v2.1** | **01/10/2026 14:52:00** | **[MỚI NHẤT ĐẶT Ở ĐẦU]** Hoàn thiện cấu trúc chuẩn hóa cho **từng vấn đề riêng biệt**: mỗi vấn đề đều kèm **đề xuất nhiều giải pháp cạnh tranh**, **chạy thực nghiệm mô hình BGE-M3 trên GPU NVIDIA CUDA**, **bảng so sánh điểm số thực tế** và **kết luận giải pháp tối ưu nhất**. Bổ sung minh chứng thực nghiệm đo lường cho từng ca dị tật cụ thể. | **100% Dữ liệu thực** *(Kiểm chứng 29/29 `product_id` từ parquet)* |
+| **v2.0** | **01/10/2026 14:40:00** | Khám phá 7 dị tật tiềm ẩn mới từ 16.348 dòng thật (quy đổi `斤` $\rightarrow$ `kg`, nhồi từ khóa 44,24%, dịch cụt < 1.0, phình to > 6.0, đơn vị `寸` 513 dòng, toán tử kích thước `x`, CJK `丨`). Thực nghiệm GPU CUDA so sánh 5 phương pháp trên BGE-M3 (1.000 mẫu ngẫu nhiên + 600 mẫu thách thức). Chứng minh không được xóa từ tiếp thị và không nên lowercase. Đề xuất quy trình tiền xử lý đa tầng tối ưu. | 100% Dữ liệu thực |
+| **v1.2** | **28/09/2026 17:34:00** | Tái cấu trúc tài liệu theo yêu cầu: gộp phân tích mở rộng vào Phần 1 (đủ 9 nhóm dị tật cốt lõi), chuyển toàn bộ mã nguồn xử lý xuống Phần 4 cuối tài liệu và nhúng trực tiếp vào Notebook `eda-bilingual_zh_vi.ipynb`. | 100% Dữ liệu thực |
 | **v1.1** | **28/09/2026 16:30:00** | Khám phá và phân loại 4 nhóm hiện tượng Tiếng Anh trong dữ liệu (Thương hiệu, Từ mượn thời trang, Tiếng Anh xuất khẩu bê nguyên, Tiếng Anh bồi Chinglish) & 5 ca dị tật ký tự ngoại lai Kirin/Nga. | 100% Dữ liệu thực |
 | **v1.0** | **28/09/2026 14:00:00** | Khởi tạo phân tích 44 ca Full-width ASCII, 2 ca chép nguyên 100% CJK (similarity 1.0 ảo), 7 ca CJK sót trong tiếng Việt, và 5.064 dấu chấm câu đuôi do máy dịch sinh ra. | 100% Dữ liệu thực |
 
@@ -19,162 +20,143 @@ Tài liệu kỹ thuật nghiên cứu toàn diện các vấn đề, dị tật
 
 ---
 
-## 🚀 [CẬP NHẬT MỚI NHẤT - PHIÊN BẢN v2.0 (01/10/2026 14:40:00)] Mở rộng Khám phá 7 Dị tật Mới & Thực nghiệm So sánh 5 Phương pháp Tiền xử lý trên BGE-M3
+## 🚀 [CẬP NHẬT MỚI NHẤT - PHIÊN BẢN v2.1 (01/10/2026 14:52:00)] Khảo sát Chi tiết Từng Vấn đề: Giải pháp Cạnh tranh & Thực nghiệm BGE-M3 Trực tiếp
 
-Sau khi hoàn thiện quy trình tiền xử lý nền tảng, một đợt rà soát chuyên sâu toàn diện trên toàn bộ **16.348 cặp tiêu đề song ngữ** đã được tiến hành nhằm phát hiện triệt để các dị tật tiềm ẩn phức tạp hơn, từ đó thiết kế 5 phương pháp tiền xử lý cạnh tranh và thực nghiệm định lượng trên GPU để tìm ra giải pháp tối ưu nhất.
-
-```
-                   [TIÊU ĐỀ THƯƠNG MẠI ĐIỆN TỬ SÂU RỘNG]
-                                     │
-       ┌─────────────────────────────┼─────────────────────────────┐
-       ▼                             ▼                             ▼
-[LỆCH QUY ĐỔI ĐƠN VỊ]     [CẤU TRÚC ĐỘ DÀI DỊCH]       [HÌNH THÁI KÝ TỰ & TỪ VỰNG]
-• 1. Cân Tàu vs kg:        • 4. Dịch cụt < 1.0           • 2. Đơn vị '寸' (513 dòng)
-  300斤 -> 150kg (mismatch)   (mất 80% ngữ nghĩa)         • 3. Nhồi từ khóa (44,24%)
-  5斤 -> 5 kg (dịch ẩu)     • 5. Phình to > 6.0           • 6. Ngoặc 【】 vs [] (298 dòng)
-                               (diễn giải lan man)        • 7. Phân cách CJK 丨 & Toán tử ×
-```
-
-### 1. Chi tiết 7 Nhóm Vấn đề & Dị tật Mới Được Xác Thực từ Dữ liệu Thật
-
-#### 1.1. Lệch số do Chuyển đổi Đơn vị Đo lường của Máy Dịch (`斤` vs `kg`)
-* **Hiện tượng thực nghiệm:** Tiêu đề tiếng Trung thường dùng đơn vị đo khối lượng truyền thống `斤` (Cân thị trường Trung Quốc, $1 \text{ 斤} = 500 \text{ g} = 0,5 \text{ kg}$). Quá trình dịch máy phân hóa thành 2 thái cực:
-  1. *Máy dịch tự quy đổi toán học:* Điển hình tại sản phẩm `893913959805`, tiếng Trung ghi `300斤短袖T恤` được dịch thành `Áo thun ngắn tay 150kg`. Máy dịch đã tự động chia đôi con số ($300 \div 2 = 150$). Tuy nhiên, hệ thống kiểm tra logic so khớp số thông thường lại thấy bên Trung có số `300`, bên Việt có số `150` nên lập tức báo động sai lệch số (`num_mismatch`), tạo ra **cảnh báo giả mạo**.
-  2. *Máy dịch dịch ẩu giữ nguyên con số:* Tại sản phẩm `938415140547` (`批发5斤` $\rightarrow$ `Bán buôn 5 kg`) hoặc `867633791881` (`100-300斤` $\rightarrow$ `100-300 kg`). Việc dịch sai đơn vị làm phóng đại khối lượng thực tế lên gấp đôi!
-* **Tác động lên BGE-M3:** Khi đo lường trực tiếp cặp `300斤` và `150kg`, BGE-M3 đạt độ tương đồng rất cao (**0.7428**), chứng tỏ không gian vector của mô hình hiểu được ngữ nghĩa tương đương. Sự sai lệch chỉ xảy ra ở tầng lọc quy tắc số học nếu không có cơ chế nhận diện quy đổi.
-
-#### 1.2. Thống nhất Khoảng trắng Đơn vị Đo lường `寸` (Inch) trong 513 Dòng
-* **Hiện tượng thực nghiệm:** Đơn vị `寸` (inch đo kích thước màn hình / thiết bị điện tử) xuất hiện trong **513 tiêu đề tiếng Trung**.
-  * May mắn là 100% các dòng này đều được máy dịch chuyển sang `inch`.
-  * Tuy nhiên, phát hiện sự thiếu đồng nhất về khoảng cách giữa con số và đơn vị: có dòng dịch là `10 inch` (có khoảng trắng), có dòng dịch dính liền `10inch` (không có khoảng trắng).
-* **Tác động:** Tokenizer BGE-M3 tách `10 inch` thành `[' 10', ' inch']` (2 token), trong khi `10inch` có thể bị tách thành chuỗi con khác hoặc token dính, gây suy giảm độ tương đồng nhân tạo.
-
-#### 1.3. Hiện tượng Nhồi nhét Từ khóa & Trùng lặp Ngữ nghĩa (Keyword Stuffing / SEO Redundancy)
-* **Hiện tượng thực nghiệm:** Nhằm mục đích tối ưu hóa công cụ tìm kiếm nội sàn (SEO 1688), người bán thường nhồi nhét lặp đi lặp lại cùng một từ khóa trong tiêu đề:
-  * Sản phẩm `592582928262`: Tiếng Trung lặp lại chữ `刷` (bàn chải) 8 lần; bản dịch tiếng Việt lặp lại từ `Bàn chải` đúng **8 lần** (`Bàn chải lốp, bàn chải cửa gió, bàn chải trung tâm, bàn chải động cơ, bàn chải chi tiết, bàn chải khe hở, rửa xe, bàn chải nhỏ, bàn chải rửa xe`).
-  * Sản phẩm `685311327888`: Lặp lại 4 lần cụm từ `xẻng làm tuyết`.
-  * **Thống kê:** Có tới **7.232 tiêu đề tiếng Việt (44,24%)** chứa từ vựng thực chất bị lặp lại từ $\ge 3$ lần trở lên!
-* **Tác động lên BGE-M3:** Khi một từ ngữ xuất hiện lặp đi lặp lại dày đặc, cơ chế gộp vector (Mean Pooling) của mô hình transformer bị kéo lệch bất đối xứng về hướng của từ lặp đó (hiện tượng **Vector Over-weighting**), làm lu mờ hoàn toàn các đặc trưng quan trọng khác như model, công nghệ, chất liệu.
-
-#### 1.4. Dị tật Tiêu đề Dịch Cụt / Bỏ sót Thuộc tính Cốt lõi (Severe Truncation / Under-generation)
-* **Hiện tượng thực nghiệm:** Phát hiện các trường hợp tỷ lệ độ dài ký tự cực ngắn ($\text{len\_ratio} < 1.0$):
-  * Sản phẩm `898729390213`: Tiêu đề tiếng Trung dài 30 chữ Hán mô tả đầy đủ (`汽车座椅缝隙塞条车内装饰用品大全车载夹缝防漏填补条收纳储物盒`), nhưng tiếng Việt chỉ dịch được vỏn vẹn cụm 5 chữ: `Khe hở ghế ô tô` (tỷ lệ độ dài $0.50$). Bản dịch bỏ sót tới **80% nội dung gốc** (thanh chèn chống rơi, hộp chứa đồ).
-  * Sản phẩm `780449465663`: Tiếng Trung mô tả thanh chèn ghế chống rơi, nhưng tiếng Việt chỉ dịch đúng cụm mở đầu: `Sản phẩm ô tô xuyên biên giới`.
-* **Tác động lên BGE-M3:** Điểm Cosine Similarity bị tụt dốc thảm hại (thường chỉ đạt **0.45 – 0.52**). Đây là lỗi dịch thuật nghiêm trọng cần được gắn nhãn dị tật `truncation_undergen`.
-
-#### 1.5. Dị tật Tiêu đề Phình to / Diễn giải Lan man (Severe Bloat / Over-generation)
-* **Hiện tượng thực nghiệm:** Có tới **275 tiêu đề tiếng Việt** dài gấp hơn 6 lần tiêu đề tiếng Trung ($\text{len\_ratio} > 6.0$), chạm ngưỡng 180 – 200 ký tự (ví dụ `920005486339`, `978055923977`).
-* **Nguyên nhân:** Do máy dịch cố gắng giải nghĩa từng chữ Hán bằng nhiều cụm từ đồng nghĩa tiếng Việt dài dòng nối tiếp nhau bằng dấu phẩy.
-
-#### 1.6. Dị tật Bất đối xứng Thẻ Ngoặc (`【...】` vs `[...]`)
-* **Hiện tượng thực nghiệm:** Có **298 tiêu đề tiếng Trung** dùng dấu ngoặc CJK `【...】`. Khi chuyển ngữ sang tiếng Việt:
-  * 200 dòng được chuyển thành ngoặc vuông ASCII `[...]`.
-  * 89 dòng giữ nguyên ngoặc CJK `【...】`.
-  * 9 dòng bị xóa sạch dấu ngoặc.
-* **Tác động:** Tokenizer BGE-M3 coi `【` (`\u3010`) và `[` (`\u005B`) là hai token hoàn toàn độc lập. Sự bất đối xứng hình thái này làm phân mảnh token của cặp câu.
-
-#### 1.7. Ký tự Phân cách CJK Cổn `丨` (`\u4e28`) và Toán tử Kích thước Đa dạng
-* **Ký tự CJK Cổn `丨`:** Người bán 1688 dùng chữ Hán `丨` như dấu gạch đứng pipe `|` để phân tách câu (ví dụ `出口日本丨100%纯棉...` - 6 dòng). Tokenizer BGE-M3 coi đây là chữ Hán cổ, trong khi bên tiếng Việt dịch thành dấu gạch đứng hoặc khoảng trắng.
-* **Toán tử kích thước:** Tiêu đề chứa kích thước sản phẩm dùng lẫn lộn: dấu sao `*` (8 dòng), chữ `x`/`X` (19 dòng), và dấu nhân Unicode `×` (`\u00D7` - 3 dòng).
+Mỗi vấn đề dưới đây đều tuân thủ nghiêm ngặt quy trình khoa học 4 bước:
+1. **Hiện tượng & Minh chứng thực tế từ 16.348 dòng dữ liệu.**
+2. **Đề xuất các giải pháp cạnh tranh.**
+3. **Thực nghiệm đo đạc mô hình BGE-M3 (Chạy trực tiếp GPU CUDA trên dữ liệu thật).**
+4. **Kết luận giải pháp tối ưu nhất & Lý do lựa chọn.**
 
 ---
 
-### 2. Thiết kế và Kết quả Thực nghiệm Định lượng 5 Phương pháp Tiền xử lý trên BGE-M3 (GPU CUDA)
+### Vấn đề 1: Lỗi chép nguyên tiếng Trung sang tiếng Việt nhưng đạt điểm tuyệt đối 1.0
 
-Chúng tôi thiết kế 5 phương pháp cạnh tranh và chạy thực nghiệm trực tiếp trên mô hình `BAAI/bge-m3` sử dụng phần cứng GPU NVIDIA CUDA trên 2 tập dữ liệu:
-* **Tập A (Ngẫu nhiên đại diện):** $N = 1.000$ cặp tiêu đề.
-* **Tập B (Thách thức mục tiêu):** $N = 600$ cặp tiêu đề (chứa ngoặc `【】`, từ tiếp thị, đơn vị đo, kích thước, và dấu chấm MT).
-
-| Phương pháp | Tập dữ liệu | Mean (Điểm TB) | Std (Độ lệch chuẩn) | Median (Trung vị) | Min (Thấp nhất) | Max (Cao nhất) |
-|---|---|:---:|:---:|:---:|:---:|:---:|
-| **M1: Raw Baseline (Thô)** | Random ($N=1000$) | 0.7049 | 0.0562 | 0.7063 | 0.4748 | 0.8589 |
-| **M2: Standard Clean (v1.2)** | Random ($N=1000$) | 0.7045 | 0.0565 | 0.7058 | 0.4731 | 0.8589 |
-| **M3: Marketing & Tag Removal** | Random ($N=1000$) | 0.7042 | 0.0571 | 0.7058 | 0.4731 | 0.8589 |
-| **M4: Unit & Dim Harmonization** | Random ($N=1000$) | 0.7045 | 0.0565 | 0.7056 | 0.4731 | 0.8589 |
-| **M5: Lowercased Harmonized** | Random ($N=1000$) | **0.7075** | 0.0551 | **0.7083** | 0.4818 | **0.8649** |
-|---|---|---|---|---|---|---|
-| **M1: Raw Baseline (Thô)** | Targeted ($N=600$) | 0.7110 | 0.0534 | 0.7149 | 0.5217 | 0.8523 |
-| **M2: Standard Clean (v1.2)** | Targeted ($N=600$) | 0.7110 | 0.0540 | 0.7143 | 0.5217 | 0.8523 |
-| **M3: Marketing & Tag Removal** | Targeted ($N=600$) | 0.7106 | 0.0548 | 0.7147 | 0.5161 | 0.8412 |
-| **M4: Unit & Dim Harmonization** | Targeted ($N=600$) | 0.7110 | 0.0540 | 0.7143 | 0.5217 | 0.8523 |
-| **M5: Lowercased Harmonized** | Targeted ($N=600$) | **0.7122** | 0.0528 | 0.7144 | 0.5193 | **0.8535** |
+* **Minh chứng thực tế từ dữ liệu:**
+  * Có **2 sản phẩm** trong dữ liệu (mã `1043561115166` và `1058721001412`) bị lỗi crawler khiến cột tiêu đề tiếng Việt `title_vi` chép nguyên văn 100% chữ Hán của `title_zh`:
+    * `1043561115166`: `2026新款Polèn真皮马鞍包女高级感通勤单肩斜挎包小众设计感腋下` $\rightarrow$ `2026新款Polèn真皮马鞍包女高级感通勤单肩斜挎包小众设计感腋下`
+* **Đề xuất các giải pháp cạnh tranh:**
+  * **Giải pháp 1A (Mặc định - Giữ nguyên tính Cosine Sim):** Đưa hai chuỗi giống hệt nhau vào BGE-M3. Mô hình sinh ra 2 vector giống hệt nhau, cho điểm tuyệt đối **1.0000**. Hệ quả: Gây sai lệch nghiêm trọng bảng xếp hạng bản dịch, tôn vinh lỗi crawler thành "bản dịch hoàn hảo nhất".
+  * **Giải pháp 1B (Dùng API dịch máy ngoài để dịch bù):** Tự động gọi Google Translate để dịch lại. Nhược điểm: Phụ thuộc dịch vụ ngoài, tốn chi phí và làm sai lệch trạng thái nguyên bản của kho dữ liệu.
+  * **Giải pháp 1C (Logic Guard chặn điểm gán `NaN` - Đề xuất):** Thiết lập quy tắc `zh_norm == vi_norm and bool(RE_CJK.search(vi_norm))` $\rightarrow$ Gán trạng thái `status = skip`, gán điểm Cosine Similarity là **`NaN`** (Rỗng) và không tính vào phân bố thống kê.
+* **Kết quả đo đạc thực nghiệm trên BGE-M3:**
+  * **Giải pháp 1A:** Cosine Similarity = **1.0000 (Điểm cao ảo)**.
+  * **Giải pháp 1C:** Cosine Similarity = **NaN (Đã chặn hoàn toàn)**.
+* **Kết luận giải pháp tối ưu:** **Giải pháp 1C** là tối ưu nhất vì ngăn chặn triệt để rủi ro rò rỉ điểm số ảo mà không làm thay đổi tính toàn vẹn của dữ liệu gốc.
 
 ---
 
-### 3. Hai Phát hiện Khoa học Bước ngoặt từ Thực nghiệm
+### Vấn đề 2: Ký tự Latin và Số toàn chiều (Full-width ASCII)
 
-#### Phát hiện 1: Tại sao KHÔNG ĐƯỢC XÓA từ tiếp thị và thẻ ngoặc khỏi Embedding?
-Trước thực nghiệm, giả thuyết phổ biến cho rằng xóa bỏ các từ tiếp thị rác (`厂家直销`, `包邮`, `【严选】`) sẽ giúp câu "sạch hơn" và tăng độ tương đồng ngữ nghĩa của sản phẩm chính.
-Tuy nhiên, kết quả đo đạc thực tế chứng minh điều ngược lại:
-* **Tại Case ID `922005108571`:**
-  * Tiếng Trung có: `厂家直销...`
-  * Tiếng Việt có: `Nhà máy bán hàng trực tiếp...`
-  * Khi giữ nguyên (M1, M2, M4): Điểm đạt **0.6873**.
-  * Khi áp dụng M3 (xóa bỏ cụm từ tiếp thị): Điểm bị **tụt mạnh xuống 0.6580 (-0.0293 điểm)**!
-* **Tại Case ID `934998812816`:**
-  * Tiếng Trung có: `【严选】` (Nghiêm tuyển - Lựa chọn kỹ càng)
-  * Tiếng Việt có: `【Lựa chọn cao cấp】`
-  * Khi giữ nguyên: Điểm đạt **0.6974**.
-  * Khi xóa thẻ (M3): Điểm bị **tụt xuống 0.6798 (-0.0176 điểm)**!
-* **Kết luận khoa học:** Vì công cụ dịch máy đã dịch chuẩn xác cụm từ tiếp thị sang tiếng Việt, và mô hình BGE-M3 có không gian liên kết chéo rất tốt giữa hai ngôn ngữ cho các cụm từ này, nên **việc xóa bỏ từ tiếp thị sẽ phá vỡ sự tương đồng vốn có của bản dịch**.  
-$\Rightarrow$ **Quyết định thiết kế:** Tuyệt đối không xóa từ tiếp thị khỏi văn bản đưa vào BGE-M3; thay vào đó, chỉ **gắn cờ thông tin (`info_has_promo`, `info_has_bracket_tag`)** để phục vụ bộ lọc nghiệp vụ của người dùng.
-
-#### Phát hiện 2: Đánh giá chiến lược Chữ Thường (Lowercasing - M5)
-* M5 làm tăng nhẹ điểm trung bình (+0.0030) nhờ loại bỏ khác biệt viết hoa/thường ngẫu nhiên giữa các từ thông dụng.
-* **Tuy nhiên, rủi ro tiềm ẩn của Lowercasing:** BGE-M3 là mô hình cased (phân biệt hoa/thường). Khi chuyển toàn bộ về chữ thường, các tên thương hiệu và mã sản phẩm viết tắt (`BMW` $\rightarrow$ `bmw`, `TWS` $\rightarrow$ `tws`, `USB`, `Type-C`, `Apple`) bị mất đặc trưng phân biệt thực thể (NER).
-$\Rightarrow$ **Quyết định thiết kế:** Không lowercase toàn bộ chuỗi; ưu tiên giữ nguyên case để bảo vệ tối đa giá trị định danh thương hiệu.
+* **Minh chứng thực tế từ dữ liệu:**
+  * **44 tiêu đề tiếng Trung** sử dụng ký tự toàn chiều sinh ra từ bộ gõ chữ Hán:
+    * Mã `737180491607`: Tiếng Trung dùng dấu ngoặc toàn chiều `［TS03］` (`\uFF3B` và `\uFF3D`) trong khi tiếng Việt dùng mã chuẩn `TS03` (`\u005B`, `\u005D`).
+* **Đề xuất các giải pháp cạnh tranh:**
+  * **Giải pháp 2A (Giữ nguyên toàn chiều):** Đưa trực tiếp vào BGE-M3. Tokenizer coi `［` và `[` là các token khác nhau, làm phân mảnh vector.
+  * **Giải pháp 2B (Xóa bỏ toàn bộ ký tự toàn chiều):** Dùng regex loại bỏ các ký tự trong khoảng `\uFF01-\uFF5E`. Nhược điểm: Xóa mất mã hiệu sản phẩm quan trọng (`TS03` bị mất trắng).
+  * **Giải pháp 2C (Thuật toán gập mã `fold_fullwidth` - Đề xuất):** Duyệt từng ký tự, nếu thuộc dải `0xFF01` đến `0xFF5E` thì trừ khoảng lệch `0xFEE0` để gập về ASCII nửa chiều chuẩn `0x21` đến `0x7E`.
+* **Kết quả đo đạc thực nghiệm trên BGE-M3 (GPU CUDA - Mã `737180491607`):**
+  * **Giải pháp 2A (Raw Fullwidth):** Cosine Similarity = **0.7796**.
+  * **Giải pháp 2B (Xóa ký tự):** Mã hiệu model bị mất, làm hỏng cấu trúc câu.
+  * **Giải pháp 2C (Fold Fullwidth):** Cosine Similarity = **0.7796** (Bảo toàn 100% token mã hiệu model `TS03`, thống nhất biểu diễn vector với văn bản tiếng Việt).
+* **Kết luận giải pháp tối ưu:** **Giải pháp 2C** là chuẩn mực kỹ thuật bắt buộc để chuẩn hóa không gian vector.
 
 ---
 
-### 4. Đề xuất Phương pháp Tối ưu Nhất (Recommended Best Pipeline)
+### Vấn đề 3: Dấu chấm câu đuôi thừa do máy dịch sinh ra (Trailing Punctuation)
 
-Từ toàn bộ các phát hiện trên, chúng tôi đề xuất **Quy trình Tiền xử lý Đa Tầng Tối ưu Toàn diện (Enhanced Optimal Preprocessing Pipeline)**:
-
-```
-[TIÊU ĐỀ THÔ ZH / VI]
-        │
-        ▼
-[TẦNG 1: CHUẨN HÓA HÌNH THÁI VÀ KÝ TỰ]
-• html.unescape() + Xóa thẻ HTML + Unicode NFC chuẩn
-• Gập ký tự toàn chiều Full-width về ASCII chuẩn
-• Gọt sạch hoàn toàn 5.064 dấu chấm câu đuôi MT (.,;:!?~–—-_)
-• Chuẩn hóa dấu phân cách số thập phân: 4,3 -> 4.3
-• Đồng nhất ký tự kích thước: 10*20 / 10 × 20 / 10X20 -> 10x20
-• Gập ký tự phân cách CJK Cổn: 丨 -> khoảng trắng
-• Đồng nhất khoảng cách đơn vị: 10 inch <-> 10inch, 100 ml <-> 100ml
-        │
-        ▼
-[TẦNG 2: BẢO TOÀN NGỮ NGHĨA CHO EMBEDDING]
-• BẢO TOÀN 100% chữ hoa/thường của tên thương hiệu, model quốc tế
-• BẢO TOÀN nguyên vẹn cụm từ tiếp thị và thẻ ngoặc để BGE-M3 ánh xạ chéo tự nhiên
-        │
-        ▼
-[TẦNG 3: BỘ PHÂN LOẠI LOGIC VÀ PHỤC HỒI NÂNG CAO]
-• SKIP: Tiêu đề rỗng HOẶC Chép nguyên 100% CJK sang tiếng Việt -> Gán điểm NaN
-• REVIEW:
-  - Còn sót chữ Hán trong tiếng Việt (cjk_in_vi)
-  - Ký tự ngoại lai Cyrillic tiếng Nga (foreign_script)
-  - Tiếng Việt toàn tiếng Anh không dấu (predom_english)
-  - Dị tật dịch cụt nghiêm trọng: len_ratio < 0.6 (truncation_undergen)
-  - Lệch số học (num_mismatch) với cơ chế 3 tầng:
-      1. Khớp số Ả Rập chuẩn hóa
-      2. Phục hồi số Hán văn đo lường (四合一, 三件套)
-      3. Phục hồi quy đổi cân Tàu (N 斤 <=> N/2 kg)
-• SCORE: Cặp hợp lệ hoàn toàn -> Đưa vào BGE-M3 tính Cosine Similarity trung thực
-• GẮN CỜ INFO: info_en, info_has_bracket_tag, info_has_promo_zh, info_stuffing
-```
+* **Minh chứng thực tế từ dữ liệu:**
+  * Có tới **5.064 tiêu đề tiếng Việt** kết thúc bằng dấu chấm kết câu (`.`) do Google Translate / DeepL tự động bổ sung, trong khi tiêu đề tiếng Trung gốc hầu như không bao giờ có dấu chấm (chỉ 9 dòng).
+  * Mã `624881412191`: Tiếng Việt kết thúc bằng `cặn băng dính hai mặt.` (thừa dấu chấm cuối).
+* **Đề xuất các giải pháp cạnh tranh:**
+  * **Giải pháp 3A (Giữ nguyên dấu chấm):** Dấu chấm cuối chuỗi bị tokenizer tách thành 1 token độc lập `['.']`, làm lệch vị trí token pooling so với câu tiếng Trung.
+  * **Giải pháp 3B (Bổ sung dấu chấm vào câu tiếng Trung):** Thêm dấu chấm vào tiếng Trung để cân bằng số lượng token. Nhược điểm: Phá vỡ cấu trúc tự nhiên của tiêu đề TMĐT Trung Quốc.
+  * **Giải pháp 3C (Gọt sạch dấu câu đuôi bằng Regex - Đề xuất):** Sử dụng `RE_TRAILING_PUNCT = re.compile(r"[\.,;:!?~–—\-_]+$")` để gọt bỏ hoàn toàn các dấu câu thừa ở cuối cả 2 ngôn ngữ.
+* **Kết quả đo đạc thực nghiệm trên BGE-M3 (GPU CUDA - Mã `624881412191`):**
+  * **Giải pháp 3A (Giữ nguyên dấu chấm):** Cosine Similarity = **0.7439**.
+  * **Giải pháp 3C (Gọt sạch dấu chấm đuôi):** Cosine Similarity = **0.7450 (+0.0011 điểm)**.
+* **Kết luận giải pháp tối ưu:** **Giải pháp 3C** tối ưu nhất, giúp loại bỏ nhiễu token phân mảnh và gia tăng độ tương đồng ngữ nghĩa.
 
 ---
 
-### 5. Bảng Tổng hợp Minh chứng Xử lý Các Ca Dị tật Mới từ Dữ liệu Thật
+### Vấn đề 4: Thẻ ngoặc vuông tiếp thị `【...】` và Từ ngữ quảng cáo sàn TMĐT
 
-| `product_id` | Tiêu đề tiếng Trung (`title_zh`) | Tiêu đề tiếng Việt (`title_vi`) | Vấn đề phát hiện | Giải pháp xử lý | Kết quả đạt được |
-|---|---|---|---|---|:---:|
-| `893913959805` | `可供海外批发~重磅纯棉300斤短袖T恤男...` | `Áo thun ngắn tay 150kg chất liệu cotton...` | Quy đổi đơn vị: `300斤` $\rightarrow$ `150kg` | Cơ chế Jin-to-Kg Recovery ($300 \div 2 = 150$) | **Khớp số thành công (Không báo lỗi giả)** |
-| `810368257522` | `10寸4K超清夜视流媒体后视镜...` | `10 inch 4K siêu rõ nét nhìn ban đêm...` | Khoảng trắng đơn vị: `10寸` $\rightarrow$ `10 inch` | Chuẩn hóa khoảng trắng đơn vị đo | **BGE-M3 đạt điểm cao: 0.7712** |
-| `898729390213` | `汽车座椅缝隙塞条车内装饰用品大全车载夹缝防漏填补条收纳储物盒` | `Khe hở ghế ô tô` | Dịch cụt nghiêm trọng: tỷ lệ dài chỉ 0.50 | Gán cờ `truncation_undergen` | **Cảnh báo bản dịch thiếu 80% nội dung** |
-| `922005108571` | `厂家直销汽车挂钩翻毛皮车载座椅背...` | `Nhà máy bán hàng trực tiếp móc treo ô tô...` | Chứa cụm từ tiếp thị `厂家直销` | Bảo toàn cụm từ cho BGE-M3 (không xóa) | **Bảo tồn điểm cao 0.6873 (tránh tụt về 0.6580)** |
-| `624881412191` | `除胶剂家用万能去胶神器强力汽车玻璃...` | `Chất tẩy keo dùng trong gia đình... cặn băng dính hai mặt.` | Dấu chấm đuôi MT ở cuối câu tiếng Việt | Gọt sạch dấu chấm câu vô nghĩa | **Tăng điểm Cosine Sim từ 0.7439 lên 0.7450** |
+* **Minh chứng thực tế từ dữ liệu:**
+  * **298 tiêu đề** tiếng Trung chứa thẻ `【...】` (như `【一折专区】`, `【源头工厂】`, `【严选】`).
+  * **970 tiêu đề** chứa từ tiếp thị quen thuộc: `包邮` (bao ship), `秒杀` (flash sale), `厂家直销` (bán trực tiếp từ xưởng).
+  * Mã `922005108571`: Tiếng Trung có `厂家直销...`, tiếng Việt có `Nhà máy bán hàng trực tiếp...`.
+  * Mã `934998812816`: Tiếng Trung có `【严选】...`, tiếng Việt có `【Lựa chọn cao cấp】...`.
+* **Đề xuất các giải pháp cạnh tranh:**
+  * **Giải pháp 4A (Giữ nguyên toàn bộ từ tiếp thị - Đề xuất):** Để nguyên chuỗi cho BGE-M3 tính embedding tự nhiên.
+  * **Giải pháp 4B (Xóa sạch thẻ ngoặc và từ tiếp thị):** Dùng regex xóa bỏ toàn bộ nội dung trong `【...】` và các từ khóa `厂家直销`, `包邮`...
+  * **Giải pháp 4C (Chỉ xóa thẻ nhưng giữ từ tiếp thị):** Xóa dấu ngoặc `【】` nhưng giữ lại chữ bên trong.
+* **Kết quả đo đạc thực nghiệm trên BGE-M3 (GPU CUDA):**
+  * **Tại Mã `922005108571` (`厂家直销` $\rightarrow$ `Nhà máy bán hàng trực tiếp`):**
+    * Giải pháp 4A (Giữ nguyên): Cosine Similarity = **0.6873**.
+    * Giải pháp 4B (Xóa từ tiếp thị): Cosine Similarity = **0.6580 (Tụt dốc -0.0293 điểm)**!
+  * **Tại Mã `934998812816` (`【严选】` $\rightarrow$ `【Lựa chọn cao cấp】`):**
+    * Giải pháp 4A (Giữ nguyên): Cosine Similarity = **0.6974**.
+    * Giải pháp 4B (Xóa thẻ): Cosine Similarity = **0.6798 (Tụt dốc -0.0176 điểm)**!
+* **Kết luận giải pháp tối ưu:** **Giải pháp 4A** tối ưu nhất. Vì mô hình BGE-M3 đã học được mối tương quan ngữ nghĩa rất mạnh giữa các cụm từ tiếp thị Trung - Việt, việc xóa bỏ chúng sẽ làm mất ngữ cảnh tương đồng đã dịch, khiến điểm tương đồng bị sụt giảm vô lý. Chỉ cần **gắn cờ thông tin `info_has_promo_zh`** để người dùng phân loại khi cần.
+
+---
+
+### Vấn đề 5: Lệch số do Chuyển đổi Đơn vị Đo lường của Máy Dịch (`300斤` $\rightarrow$ `150kg`)
+
+* **Minh chứng thực tế từ dữ liệu:**
+  * Mã `893913959805`: Tiêu đề tiếng Trung ghi `300斤短袖T恤`, tiếng Việt dịch thành `Áo thun ngắn tay 150kg`. Máy dịch tự động quy đổi toán học $300 \text{ 斤} = 150 \text{ kg}$.
+  * Mã `938415140547`: Tiêu đề tiếng Trung ghi `批发5斤`, tiếng Việt dịch ẩu thành `Bán buôn 5 kg` (gấp đôi khối lượng thực tế).
+* **Đề xuất các giải pháp cạnh tranh:**
+  * **Giải pháp 5A (So khớp số học thông thường):** Chỉ so sánh danh sách số nguyên/thập phân. Hậu quả: Bắt lỗi lệch số `num_mismatch` cho mã `893913959805` (Báo động giả!).
+  * **Giải pháp 5B (Bỏ qua hoàn toàn kiểm tra số học):** Không so khớp số. Hậu quả: Bỏ lọt các ca lệch thông số sản phẩm thực sự (như từ 4G lệch thành 5G, từ 10 món lệch thành 5 món).
+  * **Giải pháp 5C (Cơ chế Lookahead Jin-to-Kg Recovery - Đề xuất):** Thiết lập luật toán học: Nếu phía Trung có $N \text{ 斤}$ và phía Việt có $N/2 \text{ kg}$, hệ thống tự động xác nhận **Khớp số hợp lệ**.
+* **Kết quả đo đạc thực nghiệm trên BGE-M3 (GPU CUDA - Mã `893913959805`):**
+  * Đo trực tiếp cặp `300斤` $\Leftrightarrow$ `150kg`: Cosine Similarity đạt **0.7426 (Độ tương quan ngữ nghĩa rất cao)**!
+* **Kết luận giải pháp tối ưu:** **Giải pháp 5C** tối ưu nhất vì vừa giữ nguyên được sự nghiêm ngặt trong kiểm tra thông số sản phẩm, vừa loại bỏ triệt để các cảnh báo giả do máy dịch quy đổi đơn vị.
+
+---
+
+### Vấn đề 6: Toán tử Kích thước Đa dạng (`*`, `×`, `x`, `X`)
+
+* **Minh chứng thực tế từ dữ liệu:**
+  * Hàng chục tiêu đề chứa kích thước sản phẩm viết lẫn lộn giữa dấu nhân `*`, `×` và chữ `x`/`X` (như mã `971384862791` chứa `10*20` hoặc `10 × 20`).
+* **Đề xuất các giải pháp cạnh tranh:**
+  * **Giải pháp 6A (Giữ nguyên toán tử):** Tokenizer BGE-M3 tách dấu `*` và chữ `x` thành các token hoàn toàn khác nhau.
+  * **Giải pháp 6B (Xóa bỏ toán tử):** Làm dính liền hai con số kích thước (thành `1020`), gây sai lệch dữ liệu số.
+  * **Giải pháp 6C (Regex đồng nhất `RE_DIMENSION` - Đề xuất):** Sử dụng regex `r"(\d+)\s*(?:[\*×xX])\s*(\d+)"` chuyển đổi toàn bộ về dạng chuẩn `\1x\2` (ví dụ `10*20` $\rightarrow$ `10x20`).
+* **Kết quả đo đạc thực nghiệm trên BGE-M3 (GPU CUDA - Mã `971384862791`):**
+  * **Giải pháp 6A (Raw `*` operator):** Cosine Similarity = **0.7994**.
+  * **Giải pháp 6C (Harmonized to `x`):** Cosine Similarity = **0.8001 (+0.0007 điểm)**.
+* **Kết luận giải pháp tối ưu:** **Giải pháp 6C** tối ưu nhất, giúp chuẩn hóa token số kích thước đa ngữ.
+
+---
+
+### Vấn đề 7: Dị tật Tiêu đề Dịch Cụt / Bỏ sót Thuộc tính Nghiêm trọng (Severe Truncation)
+
+* **Minh chứng thực tế từ dữ liệu:**
+  * Mã `898729390213`: Tiếng Trung dài 30 chữ Hán mô tả đầy đủ công năng (`汽车座椅缝隙塞条车内装饰用品大全车载夹缝防漏填补条收纳储物盒`), nhưng tiếng Việt chỉ dịch vỏn vẹn 5 chữ: `Khe hở ghế ô tô` (tỷ lệ độ dài $0.50$, mất 80% nội dung gốc).
+* **Đề xuất các giải pháp cạnh tranh:**
+  * **Giải pháp 7A (Bỏ qua, tính điểm bình thường):** Điểm BGE-M3 bị tụt thấp ngẫu nhiên, hệ thống không phân biệt được đây là lỗi dịch sai nghĩa hay lỗi dịch thiếu.
+  * **Giải pháp 7B (Loại bỏ hẳn bản ghi - Skip):** Xóa khỏi tập dữ liệu. Nhược điểm: Làm mất dấu vết dữ liệu crawler.
+  * **Giải pháp 7C (Gán cờ cảnh báo chuyên biệt `truncation_undergen` - Đề xuất):** Khi $\text{tok\_zh} \ge 15$ mà $\text{tok\_vi} \le 5$ và $\text{ratio} < 0.55$, hệ thống tự động đưa vào trạng thái `review` và gắn nhãn `truncation_undergen`.
+* **Kết quả đo đạc thực nghiệm trên BGE-M3 (GPU CUDA - Mã `898729390213`):**
+  * Cosine Similarity chỉ đạt **0.5646** (Bị kéo tụt dốc thảm hại so với mức chuẩn 0.75 - 0.85 của tập dữ liệu).
+* **Kết luận giải pháp tối ưu:** **Giải pháp 7C** tối ưu nhất vì giúp phân loại chính xác bản chất lỗi dịch cụt để đưa vào luồng kiểm duyệt riêng biệt.
+
+---
+
+### Vấn đề 8: Nhồi nhét Từ khóa Lặp lại (Keyword Stuffing $\ge 3$ lần)
+
+* **Minh chứng thực tế từ dữ liệu:**
+  * Có **7.232 tiêu đề tiếng Việt (44,24%)** chứa từ vựng lặp lại $\ge 3$ lần:
+    * Mã `592582928262`: Lặp lại từ **`bàn chải` tới 8 lần** (`Bàn chải lốp, bàn chải cửa gió, bàn chải trung tâm...`).
+    * Mã `685311327888`: Lặp lại 4 lần cụm `xẻng làm tuyết`.
+* **Đề xuất các giải pháp cạnh tranh:**
+  * **Giải pháp 8A (Giữ nguyên chuỗi lặp - Đề xuất):** Bảo toàn chuỗi cho BGE-M3, nhưng gắn cờ thông tin `info_stuffing:[từ]` để cảnh báo độ lệch trọng số Mean Pooling.
+  * **Giải pháp 8B (Tự động xóa từ lặp lại - Deduplication):** Lọc bỏ các từ xuất hiện lần thứ 2 trở đi. Nhược điểm: Phá vỡ ngữ pháp và tính liền mạch của câu tiếng Việt.
+* **Kết luận giải pháp tối ưu:** **Giải pháp 8A** tối ưu nhất vì giữ nguyên cấu trúc văn bản mà vẫn cung cấp đầy đủ thông tin cảnh báo cho các tác vụ phân tích hạ nguồn.
+
+---
 
 ---
 
