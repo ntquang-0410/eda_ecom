@@ -483,13 +483,61 @@ Bảng tổng hợp dưới đây tổng kết giải pháp chiến thắng cho 
 
 ---
 
-## 📊 THỰC NGHIỆM ĐỐI SÁNH 5 PHƯƠNG PHÁP TỔNG QUÁT TRÊN GPU
+## 📊 THỰC NGHIỆM ĐỐI SÁNH 5 PHƯƠNG PHÁP TỔNG QUÁT (PIPELINE) TRÊN GPU
 
-Để kiểm chứng hiệu quả tổng thể trên quy mô lớn, 5 phương pháp tiền xử lý đã được chạy song song qua mô hình BGE-M3 trên hai tập dữ liệu chuẩn:
-* **Tập Đại diện Ngẫu nhiên ($N = 1.000$ cặp):** Phản ánh phân bố tổng thể của toàn bộ kho dữ liệu sàn 1688.
-* **Tập Thách thức Mục tiêu ($N = 600$ cặp):** Tập hợp các dòng chứa nhiều dị tật phức tạp nhất (ngoặc CJK, từ tiếp thị, đơn vị đo, kích thước, dấu chấm MT).
+### 1. Mối quan hệ giữa "16 Vấn đề Dị tật" và "5 Phương pháp Tổng quát"
+Nhiều độc giả thường đặt câu hỏi: *Nếu đã có 16 vấn đề dị tật độc lập, vậy 5 phương pháp (M1 đến M5) ở phần này là gì và có vai trò như thế nào?*
 
-### Bảng Kết quả Thống kê Phân bố Điểm Cosine Similarity BGE-M3
+* **16 Vấn đề Dị tật (Phân tích Vi mô - Micro Level):**  
+  Là quá trình "mổ xẻ" từng lỗi dữ liệu cụ thể (như dấu phẩy thập phân `4,3`, ngoặc `【】`, ký tự toàn chiều `［`, đơn vị đo `斤`, toán tử `*`, v.v.). Ở từng vấn đề, chúng ta kiểm thử các giải pháp cục bộ trên mẫu đại diện để tìm ra **giải pháp chiến thắng tốt nhất cho riêng dị tật đó**.
+* **5 Phương pháp Tổng quát (Đánh giá Vĩ mô / Pipeline Level):**  
+  Trong thực tế triển khai hệ thống lớn, chúng ta không thể chạy 16 hàm rời rạc mà phải **đóng gói các giải pháp thành một Quy trình xử lý hoàn chỉnh (End-to-End Pipeline)** từ đầu vào đến đầu ra.  
+  Để xác định **chiến lược ghép nối pipeline nào là tối ưu nhất trên diện rộng**, chúng ta thiết kế 5 Pipeline cạnh tranh (M1 đến M5) và cho chạy đua trực tiếp trên GPU NVIDIA CUDA với hai tập dữ liệu lớn:
+  * **Tập Đại diện Ngẫu nhiên ($N = 1.000$ cặp):** Khảo sát phân bố tổng thể trên toàn bộ sàn 1688.
+  * **Tập Thách thức Mục tiêu ($N = 600$ cặp):** Tập trung vào các dòng hội tụ nhiều dị tật phức tạp nhất (ngoặc CJK, từ tiếp thị, kích thước, đơn vị đo, dấu chấm MT).
+
+---
+
+### 2. Định nghĩa & Thành phần Cụ thể của 5 Phương pháp (M1 – M5)
+
+1. **Phương pháp M1: Raw Baseline (Dữ liệu Thô Nguyên bản - Mốc Đối chứng)**
+   * **Thành phần:** Giữ nguyên 100% dữ liệu gốc crawler cào về, không xử lý bất kỳ ký tự nào, đưa thẳng vào BGE-M3.
+   * **Mục đích:** Thiết lập điểm chuẩn (Baseline) ban đầu của kho dữ liệu.
+   * **Hạn chế:** Bị dính điểm ảo 1.0 của các ca chép nguyên CJK, phân mảnh token do ký tự toàn chiều `［TS03］`, và chịu nhiễu từ 5.064 dấu chấm câu đuôi.
+
+2. **Phương pháp M2: Standard Clean (Chuẩn hóa Hình thái Cơ bản)**
+   * **Thành phần tích hợp:**
+     * Khử mã HTML entities và loại bỏ thẻ rác HTML.
+     * Chuẩn hóa bảng mã Unicode sang chuẩn NFC.
+     * Gập ký tự Latin và số toàn chiều về ASCII chuẩn (Giải quyết triệt để **Vấn đề 2**).
+     * Gọt sạch dấu chấm câu đuôi MT ở cuối câu tiếng Việt (Giải quyết triệt để **Vấn đề 4**).
+     * Chuẩn hóa dấu phẩy thập phân `4,3` $\rightarrow$ `4.3` (Giải quyết triệt để **Vấn đề 5**).
+     * Thiết lập Logic Guard chặn gán điểm `NaN` khi tiếng Việt chép nguyên chữ Hán (Giải quyết triệt để **Vấn đề 1**).
+   * **Hạn chế:** Chưa xử lý cấu trúc thương mại điện tử chuyên sâu (ngoặc, đơn vị đo, kích thước, từ tiếp thị).
+
+3. **Phương pháp M3: Marketing & Tag Removal (Cắt tỉa Thô bạo - Loại bỏ Tiếp thị & Ngoặc)**
+   * **Thành phần tích hợp:** Kế thừa toàn bộ M2, nhưng bổ sung thêm bộ lọc **xóa sạch từ tiếp thị TMĐT** (`厂家直销`, `包邮`, `giá xưởng`...) và **xóa sạch toàn bộ nội dung trong thẻ ngoặc** `【...】`.
+   * **Mục đích thử nghiệm:** Kiểm chứng giả thuyết phổ biến: *"Liệu xóa từ thừa quảng cáo có giúp BGE-M3 tập trung vào từ khóa sản phẩm hơn không?"*
+   * **Kết quả thực tế:** **Thất bại nặng nề!** Điểm tương đồng bị tụt dốc (từ 0.6873 xuống 0.6580 ở Vấn đề 9; từ 0.6974 xuống 0.6798 ở Vấn đề 10) do máy dịch đã dịch các từ này sang tiếng Việt, việc xóa đơn phương phía Trung làm mất cân xứng ngữ nghĩa của câu.
+
+4. **Phương pháp M4: Unit & Dimension Harmonization (Chuẩn hóa Cấu trúc & Đơn vị - PIPELINE TỐI ƯU TOÀN DIỆN)**
+   * **Thành phần tích hợp:** Đây chính là **Pipeline kết tinh toàn bộ các giải pháp chiến thắng từ 16 vấn đề thực nghiệm**:
+     * Kế thừa toàn bộ nền tảng chuẩn hóa sạch của M2 (NFC, Full-width, gọt dấu chấm, số thập phân).
+     * **BẢO TỒN NGUYÊN VẸN** bản dịch của từ tiếp thị và thẻ ngoặc (rút kinh nghiệm sâu sắc từ thất bại của M3).
+     * Thay thế ký tự CJK Cổn `丨` thành dấu gạch đứng chuẩn `|` (Giải quyết **Vấn đề 16**).
+     * Chuẩn hóa toán tử kích thước `10*20` hoặc `10×20` thành `10x20` (Giải quyết **Vấn đề 16**).
+     * Chuẩn hóa thống nhất khoảng trắng giữa số và đơn vị đo `10 inch` (Giải quyết **Vấn đề 13**).
+     * Tích hợp quy tắc logic quy đổi $1\text{ Cân (斤)} = 0.5\text{ kg}$ (Giải quyết **Vấn đề 12**).
+   * **Kết quả thực tế:** Là cấu hình **tối ưu nhất**, điểm số cao và ổn định nhất, vượt trội hoàn toàn trên tập thách thức 600 dòng khó.
+
+5. **Phương pháp M5: Aggressive Lowercase All (Chữ thường hóa Toàn bộ Chuỗi)**
+   * **Thành phần tích hợp:** Lấy toàn bộ Pipeline M4 nhưng áp dụng thêm hàm biến toàn bộ văn bản thành chữ thường (`.lower()`).
+   * **Mục đích thử nghiệm:** Kiểm tra xem chữ thường có giúp đồng nhất vector hay không.
+   * **Kết quả thực tế:** Điểm số không cải thiện mà còn làm giảm khả năng nhận diện các thực thể viết hoa (mã linh kiện, SKU, tên thương hiệu quốc tế như `TS03`, `Apple`, `Type-C` ở Vấn đề 8) vì BGE-M3 là mô hình cased (nhận biết chữ hoa - chữ thường).
+
+---
+
+### 3. Bảng Kết quả Thống kê Phân bố Điểm Cosine Similarity BGE-M3 trên GPU
 | Phương pháp Tiền xử lý | Tập thử nghiệm | Điểm Trung bình (Mean) | Độ lệch chuẩn (Std) | Trung vị (Median) | Giá trị Nhỏ nhất (Min) | Giá trị Lớn nhất (Max) | Nhận xét Khoa học |
 |---|---|:---:|:---:|:---:|:---:|:---:|---|
 | **M1: Raw Baseline (Thô)** | Random ($N=1000$) | 0.7049 | 0.0562 | 0.7063 | 0.4748 | 0.8589 | Bị dính lỗi điểm 1.0 ảo và phân mảnh token ký tự lạ. |
