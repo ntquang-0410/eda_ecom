@@ -2483,6 +2483,27 @@ cho thêm người ghi vào repo cá nhân → tài khoản trinhnhatanh trên t
 merge PR; (2) dùng token ghi của Quang như Huy (bộ crawl có HF_TOKEN trong .env; Claude bị chặn đọc .env, anh tự chạy);
 (3) chuyển repo sang Organization để mọi người ghi trực tiếp. (Các prompt về cách đẩy HF ngay trước đó anh dặn không ghi.)
 
+**Prompt 95:**
+> "Hãy commit và push lên nhánh https://github.com/ntquang-0410/eda_ecom/tree/nhatanh_updating"
+
+→ Đã làm:
+1. git: không có trên PATH; dùng git của GitHub Desktop (`%LOCALAPPDATA%\GitHubDesktop\app-3.4.19\resources\app\git\cmd\
+   git.exe`, 2.47.1); tài khoản git `nhatanh20022005 <bena20022005@gmail.com>`, credential manager. Nhánh từ xa:
+   `main`, `giahuy`, `nhatanh_updating` (095bb03, bản 28/09, 14 file).
+2. Thư mục làm việc vẫn KHÔNG là repo git (CLAUDE.md 01/10): clone riêng nhánh `nhatanh_updating` vào scratchpad, dùng
+   `--git-dir=<clone>/.git --work-tree="D:\nam4_ky1\e-commerce - EDA"` để `add -A` theo `.gitignore` (bỏ .venv, *.parquet,
+   data/interim, .env). `.gitignore` thêm `data/release/desc_v1_tai_len_hf/` (bản chép tạm) và
+   `data/eda/description/_thu_gia/` (số giả).
+3. Repo công khai → quét các file sắp commit: không có token; có số điện thoại thật trong ví dụ EDA/notebook/trang
+   pipeline, cột `shop` ở 2 CSV. Chỉ che trong BẢN COMMIT (git hash-object + update-index; file trên máy giữ nguyên, kể cả
+   file anh đã điền): số di động → `138****1990`, máy bàn, ID WeChat/QQ (bắt buộc có ":"/khoảng trắng sau từ khoá; lần
+   đầu che nhầm mã hàng `WXY-K262C` nên sửa luật và làm lại), bỏ cột `shop`; không đưa
+   `desc_thong_tin_ca_nhan_editted.csv`. 14 file được che; quét lại toàn bộ index (cả file cũ từ 28/09): 0 sót. 6 chỗ
+   "liên hệ" còn lại là mã hàng (VXL8414, VXY-1012), giữ nguyên.
+4. Commit `10095a7` trên `nhatanh_updating`: 111 file (thêm notebooks/, scripts/, src/, docs/, data/eda/description/,
+   data/processed/desc/duyet/, data/release/desc_v1 README+SHA, CLAUDE.md; chuyển eda-bilingual_zh_vi.ipynb vào
+   notebooks/). Commit thứ hai: WALKTHROUGH này. Đẩy lên `origin nhatanh_updating` (không đụng main, giahuy).
+
 **Việc còn nợ (cập nhật 01/10, sau khi chuyển folder):**
 - Anh thoát và mở lại Ollama từ khay → em chạy lại smoke test notebook (40 dòng)
   và `sim_full.py check`.
