@@ -1,0 +1,456 @@
+<title>EDA Corpus 1688-Tiki</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#F5F6F3; --surface:#FFFFFF; --surface-2:#EDEEE8; --surface-3:#E4E5DD;
+    --ink:#1D2420; --ink-muted:#5C665F; --ink-faint:#8A9289;
+    --border:#DEDFD6;
+    --accent:#B96A1A; --accent-ink:#7A4611;
+    --cat-bi:#2C6E8E; --cat-mono-zh:#8A6BAE; --cat-mono-vi:#C2761F; --cat-kaggle:#4C8C6B;
+    --good:#1F8A5C; --good-bg:#E4F3EB;
+    --critical:#C0392B; --critical-bg:#FBEAE8;
+    --warn:#B08A1E; --warn-bg:#FBF3DC;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14181A; --surface:#1B2023; --surface-2:#20262A; --surface-3:#262D30;
+      --ink:#E8EAE6; --ink-muted:#9AA39C; --ink-faint:#6E766F;
+      --border:#2C3336;
+      --accent:#E0A050; --accent-ink:#F0C089;
+      --cat-bi:#6FA8C9; --cat-mono-zh:#B79FD6; --cat-mono-vi:#E0A050; --cat-kaggle:#7CBE9C;
+      --good:#4FBE8D; --good-bg:#1B2E26;
+      --critical:#E0685A; --critical-bg:#2E1E1C;
+      --warn:#E0C060; --warn-bg:#332B14;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14181A; --surface:#1B2023; --surface-2:#20262A; --surface-3:#262D30;
+    --ink:#E8EAE6; --ink-muted:#9AA39C; --ink-faint:#6E766F;
+    --border:#2C3336;
+    --accent:#E0A050; --accent-ink:#F0C089;
+    --cat-bi:#6FA8C9; --cat-mono-zh:#B79FD6; --cat-mono-vi:#E0A050; --cat-kaggle:#7CBE9C;
+    --good:#4FBE8D; --good-bg:#1B2E26;
+    --critical:#E0685A; --critical-bg:#2E1E1C;
+    --warn:#E0C060; --warn-bg:#332B14;
+    color-scheme: dark;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'IBM Plex Sans', 'Be Vietnam Pro', sans-serif;
+    padding-inline:20px; padding-block:36px 64px;
+    max-width:980px; margin-inline:auto;
+    line-height:1.6;
+  }
+  h1,h2,h3{font-family:'Be Vietnam Pro', sans-serif; text-wrap:balance; margin:0;}
+  .zh{font-family:'Noto Sans SC','IBM Plex Sans',sans-serif;}
+  .mono{font-family:'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums;}
+
+  header{margin-bottom:32px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--accent-ink); margin-bottom:12px;
+  }
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);}
+  h1{font-size:clamp(28px,5vw,38px); font-weight:800; letter-spacing:-0.01em; margin-bottom:10px;}
+  header p{color:var(--ink-muted); font-size:15.5px; max-width:68ch; margin:0;}
+
+  nav.toc{display:flex; gap:8px; flex-wrap:wrap; margin-top:20px;}
+  nav.toc a{
+    font-size:12.5px; font-weight:600; padding:6px 12px; border-radius:99px;
+    background:var(--surface); border:1px solid var(--border); color:var(--ink-muted);
+    text-decoration:none;
+  }
+
+  .stats{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:2px; background:var(--border); border:1px solid var(--border); border-radius:12px;
+    overflow:hidden; margin-bottom:16px;
+  }
+  .stat{background:var(--surface); padding:14px 16px;}
+  .stat .num{font-family:'Be Vietnam Pro'; font-size:23px; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums;}
+  .stat .lbl{font-size:11.5px; color:var(--ink-muted); margin-top:2px;}
+
+  section.block{margin-bottom:48px; scroll-margin-top:16px;}
+  .block h2{font-size:21px; font-weight:700; margin-bottom:4px;}
+  .block > p.sub{color:var(--ink-muted); font-size:14px; margin:0 0 18px; max-width:70ch;}
+
+  .source-legend{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:18px; font-size:12.5px; color:var(--ink-muted);}
+  .source-legend span{display:inline-flex; align-items:center; gap:6px;}
+  .swatch{width:10px;height:10px;border-radius:2px;display:inline-block;}
+
+  .chart-card{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:20px 22px 16px; margin-bottom:20px;}
+  .bar-row{display:grid; grid-template-columns:96px 1fr 130px; align-items:center; gap:10px; padding:5px 0;}
+  .bar-row .cat-label{font-size:12.5px; font-weight:500; color:var(--ink);}
+  .bar-track{position:relative; height:20px; background:var(--surface-2); border-radius:5px; overflow:hidden; display:flex;}
+  .seg{height:100%; position:relative; cursor:pointer;}
+  .seg.bi{background:var(--cat-bi);}
+  .seg.mz{background:var(--cat-mono-zh); margin-left:2px;}
+  .seg.mv{background:var(--cat-mono-vi); margin-left:2px;}
+  .bar-row .pct{font-size:11.5px; color:var(--ink-muted); text-align:right;}
+  .tooltip{
+    position:fixed; pointer-events:none; background:var(--ink); color:var(--bg);
+    font-size:12.5px; padding:6px 10px; border-radius:6px; z-index:50;
+    opacity:0; transition:opacity .1s ease; font-family:'IBM Plex Mono',monospace; white-space:nowrap;
+  }
+  .tooltip.show{opacity:1;}
+
+  .finding-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px;}
+  .finding{background:var(--surface); border:1px solid var(--border); border-left:4px solid var(--critical); border-radius:10px; padding:14px 16px;}
+  .finding.warn{border-left-color:var(--warn);}
+  .finding.info{border-left-color:var(--cat-bi);}
+  .finding .num{font-family:'Be Vietnam Pro'; font-size:22px; font-weight:800; color:var(--critical);}
+  .finding.warn .num{color:var(--warn);}
+  .finding.info .num{color:var(--cat-bi);}
+  .finding .desc{font-size:13px; color:var(--ink-muted); margin-top:4px; line-height:1.5;}
+
+  .step{background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:24px 24px 22px; margin-bottom:20px;}
+  .step-head{display:flex; align-items:flex-start; gap:14px; margin-bottom:14px;}
+  .step-num{flex:none; width:34px; height:34px; border-radius:9px; background:var(--accent); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Be Vietnam Pro'; font-weight:700; font-size:15px;}
+  .step-title{font-size:18px; font-weight:700;}
+  .step-desc{color:var(--ink-muted); font-size:14px; margin-top:3px;}
+  .src-tags{display:flex; gap:6px; margin-top:8px; flex-wrap:wrap;}
+  .tag{font-size:11px; font-weight:600; padding:3px 9px; border-radius:99px; letter-spacing:.02em;}
+  .tag.bi{background:color-mix(in srgb, var(--cat-bi) 16%, transparent); color:var(--cat-bi);}
+  .tag.mz{background:color-mix(in srgb, var(--cat-mono-zh) 18%, transparent); color:var(--cat-mono-zh);}
+  .tag.mv{background:color-mix(in srgb, var(--cat-mono-vi) 18%, transparent); color:var(--cat-mono-vi);}
+  .tag.kg{background:color-mix(in srgb, var(--cat-kaggle) 18%, transparent); color:var(--cat-kaggle);}
+
+  .technique{background:var(--surface-2); border-radius:10px; padding:12px 14px; margin:14px 0; font-size:13.5px; color:var(--ink);}
+  .technique b{color:var(--accent-ink);}
+  .technique code{font-family:'IBM Plex Mono'; background:var(--surface-3); padding:1px 5px; border-radius:4px; font-size:12.5px;}
+
+  .io-flow{display:grid; grid-template-columns:1fr auto 1fr; gap:12px; align-items:stretch; margin-top:12px;}
+  @media (max-width:640px){ .io-flow{grid-template-columns:1fr;} .io-arrow{transform:rotate(90deg); margin:2px auto;} }
+  .io-arrow{align-self:center; color:var(--ink-faint); font-size:20px;}
+  .io-card{border:1px solid var(--border); border-radius:10px; padding:12px 14px; font-size:13px;}
+  .io-card .tagline{font-size:10.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; margin-bottom:8px;}
+  .io-card.input .tagline{color:var(--ink-muted);}
+  .io-card.output.fix{border-color:var(--good); background:var(--good-bg);}
+  .io-card.output.fix .tagline{color:var(--good);}
+  .io-card.output.flag{border-color:var(--warn); background:var(--warn-bg);}
+  .io-card.output.flag .tagline{color:var(--warn);}
+  .io-card.output.remove{border-color:var(--critical); background:var(--critical-bg);}
+  .io-card.output.remove .tagline{color:var(--critical);}
+  .io-card .row{margin-bottom:7px;}
+  .io-card .row:last-child{margin-bottom:0;}
+  .io-card .k{font-size:10.5px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.04em;}
+  .io-card .v{font-size:13px; line-height:1.5;}
+  .io-card .pid{font-size:11px; color:var(--ink-faint); margin-top:8px;}
+  mark{background:color-mix(in srgb, var(--critical) 28%, transparent); color:inherit; border-radius:3px; padding:0 2px;}
+  mark.good{background:color-mix(in srgb, var(--good) 28%, transparent);}
+
+  table.summary{width:100%; border-collapse:collapse; font-size:13.5px; margin-top:8px;}
+  table.summary th, table.summary td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--border);}
+  table.summary th{color:var(--ink-muted); font-weight:600; font-size:11.5px; text-transform:uppercase; letter-spacing:.04em;}
+  table.summary td.num{font-family:'IBM Plex Mono'; font-size:12.5px;}
+
+  .model-card{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:22px 24px;}
+  .verdict{display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:14px; padding:6px 14px; border-radius:99px; margin-bottom:14px;}
+  .verdict.partial{background:var(--warn-bg); color:var(--warn);}
+  .use-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; margin-top:16px;}
+  .use-card{border:1px solid var(--border); border-radius:10px; padding:14px 16px;}
+  .use-card.yes{border-left:4px solid var(--good);}
+  .use-card.no{border-left:4px solid var(--critical);}
+  .use-card .tag2{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.04em;}
+  .use-card.yes .tag2{color:var(--good);}
+  .use-card.no .tag2{color:var(--critical);}
+  .use-card p{font-size:13px; color:var(--ink-muted); margin:6px 0 0;}
+
+  footer{color:var(--ink-faint); font-size:12.5px; margin-top:40px; border-top:1px solid var(--border); padding-top:16px;}
+</style>
+
+<header>
+  <div class="eyebrow">Corpus Việt–Trung · TMĐT xuyên biên giới</div>
+  <h1>Khám phá dữ liệu &amp; pipeline làm sạch</h1>
+  <p>Phân tích trực tiếp trên toàn bộ 35.882 dòng đã crawl (1688 + Tiki), rồi dựng lại pipeline làm sạch theo đúng số liệu đo được — không suy đoán. Mỗi bước ghi rõ dùng nguồn nào trong 4 nguồn hiện có.</p>
+  <nav class="toc">
+    <a href="#eda">Khám phá dữ liệu</a>
+    <a href="#pipeline">Pipeline 6 bước</a>
+    <a href="#model">Đánh giá BGE-M3</a>
+  </nav>
+</header>
+
+<section class="block" id="eda">
+  <h2>1. Khám phá dữ liệu (EDA)</h2>
+  <p class="sub">4 nguồn dữ liệu hiện có, vai trò khác nhau trong bài toán dịch Trung→Việt.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="num">16.348</div><div class="lbl">Song ngữ (1688)</div></div>
+    <div class="stat"><div class="num">6.334</div><div class="lbl">Đơn ngữ Trung (1688)</div></div>
+    <div class="stat"><div class="num">13.200</div><div class="lbl">Đơn ngữ Việt (Tiki)</div></div>
+    <div class="stat"><div class="num">~5.360+</div><div class="lbl">Kaggle Tiki (fashion/bags/shoes)</div></div>
+  </div>
+  <p class="sub" style="margin-top:0">Cột Kaggle ước tính từ bảng cột đã xem qua giao diện Kaggle (name/description/price, 5.360 dòng riêng phần fashion) — chưa tải được file thật (cần tài khoản Kaggle), số liệu chính xác cần anh xác nhận lại khi có file.</p>
+
+  <h3 style="font-size:15px; margin:28px 0 4px;">Tỉ lệ song ngữ theo category (1688) — quyết định category nào cần Tiki bù</h3>
+  <p class="sub">Chỉ 1688 mới có khái niệm "song ngữ/đơn ngữ Trung"; Tiki vốn đã 100% tiếng Việt nên không xuất hiện ở biểu đồ này.</p>
+  <div class="chart-card">
+    <div class="source-legend">
+      <span><span class="swatch" style="background:var(--cat-bi)"></span>Song ngữ (có tiếng Việt do 1688 dịch)</span>
+      <span><span class="swatch" style="background:var(--cat-mono-zh)"></span>Chỉ tiếng Trung</span>
+    </div>
+    <div id="chart-1688"></div>
+  </div>
+
+  <h3 style="font-size:15px; margin:28px 0 4px;">Phát hiện chính (đo trực tiếp, không suy đoán)</h3>
+  <div class="finding-grid">
+    <div class="finding">
+      <div class="num">52% <span style="font-size:13px;font-weight:600;">(8.494/16.348)</span></div>
+      <div class="desc">Dòng song ngữ dính lỗi 1688 tự đánh số hậu tố khi dịch trùng chữ ("Khác1", "Khác2", "Là1", "Không.1"...) — nặng hơn nhiều so với ước tính ban đầu (chỉ mới biết "Không.1/2").</div>
+    </div>
+    <div class="finding warn">
+      <div class="num">99,99% <span style="font-size:13px;font-weight:600;">(13.199/13.200)</span></div>
+      <div class="desc">Mô tả văn xuôi Tiki kết thúc bằng đoạn thông báo thuế/VAT cố định của sàn — gần như toàn bộ, không phải hiện tượng lẻ tẻ như mẫu 100 dòng ban đầu tưởng (95%).</div>
+    </div>
+    <div class="finding info">
+      <div class="num">10% <span style="font-size:13px;font-weight:600;">(1.629/16.348)</span></div>
+      <div class="desc">Title tiếng Việt dài gấp &gt;5 lần title tiếng Trung — nghi 1688 dịch "phình" thành câu giải thích thay vì giữ dạng tiêu đề ngắn.</div>
+    </div>
+    <div class="finding">
+      <div class="num">876 + 95</div>
+      <div class="desc">876 dòng trùng title (khác mô tả — biến thể màu/size, giữ lại); 95 dòng trùng cả title lẫn mô tả (trùng crawl thật, nên loại).</div>
+    </div>
+    <div class="finding warn">
+      <div class="num">16,5% + 22,5%</div>
+      <div class="desc"><code class="mono" style="font-size:12px">biz_type</code> (1688) và <code class="mono" style="font-size:12px">sales</code> (Tiki) thiếu ở mức này — đã xác nhận là hợp lệ (không phải bug), không cần xử lý gì thêm ngoài để <code class="mono" style="font-size:12px">null</code>.</div>
+    </div>
+    <div class="finding info">
+      <div class="num">25 vs 7</div>
+      <div class="desc">Số thuộc tính trung bình/sản phẩm: 1688 = 24,9 thuộc tính (rất chi tiết), Tiki = 6,8 (thưa hơn nhiều) — 2 nguồn có mật độ thông tin khác hẳn nhau.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pipeline">
+  <h2>2. Pipeline làm sạch — 6 bước</h2>
+  <p class="sub">Cập nhật lại theo đúng phát hiện ở trên. Mỗi bước ghi rõ dùng nguồn nào.</p>
+
+  <!-- STEP 1 -->
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-title">Sửa lỗi đánh số trùng của 1688</div>
+        <div class="step-desc">Ưu tiên cao nhất — ảnh hưởng 52% dữ liệu song ngữ, nặng hơn hẳn các bước khác</div>
+        <div class="src-tags"><span class="tag bi">Song ngữ (1688)</span></div>
+      </div>
+    </div>
+    <div class="technique">
+      <b>Kỹ thuật:</b> regex <code>r'(Không|Có|Là|Khác)\.?(\d+)\b'</code> → xoá hậu tố số, giữ nguyên từ gốc. 1688 tự thêm số này khi 1 sản phẩm có nhiều thuộc tính dịch ra trùng chữ ("Khác", "Là"...), để phân biệt — nhưng số đó không mang nghĩa, chỉ gây nhiễu khi huấn luyện.
+    </div>
+    <div class="io-flow">
+      <div class="io-card input">
+        <div class="tagline">Input — description_vi thật</div>
+        <div class="v">Gia công tùy chỉnh: <mark>Là1</mark>; ...; Những Dịp tặng quà thích hợp: Lễ khai trương, ...; <mark>Khác1</mark>; ...; Nền tảng hạ lưu chính: <mark>Khác2</mark>; Khu vực bán hàng chính: <mark>Khác3</mark>; ...; Thương hiệu riêng được ủy quyền: <mark>Là2</mark></div>
+        <div class="pid mono">789617923790</div>
+      </div>
+      <div class="io-arrow">→</div>
+      <div class="io-card output fix">
+        <div class="tagline">Output — đã sửa</div>
+        <div class="v">Gia công tùy chỉnh: <mark class="good">Là</mark>; ...; <mark class="good">Khác</mark>; ...; Nền tảng hạ lưu chính: <mark class="good">Khác</mark>; Khu vực bán hàng chính: <mark class="good">Khác</mark>; ...; Thương hiệu riêng được ủy quyền: <mark class="good">Là</mark></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-title">Khử trùng lặp — chính xác rồi gần đúng (MinHash)</div>
+        <div class="step-desc">2 lớp: so khớp chuỗi trước, rồi băm MinHash để bắt phần trùng mà so khớp chuỗi bỏ sót</div>
+        <div class="src-tags"><span class="tag bi">Song ngữ (1688)</span><span class="tag mv">Đơn ngữ Việt (Tiki)</span></div>
+      </div>
+    </div>
+    <div class="technique">
+      <b>Kỹ thuật (lớp 1 — trùng chính xác):</b> so khớp theo <code>(title, description)</code>. Song ngữ: trùng cả 2 trường → loại (95 dòng); chỉ trùng title → giữ (876 dòng, là biến thể màu/size thật). Tiki: 186 dòng trùng title.
+      <br><br>
+      <b>Kỹ thuật (lớp 2 — trùng gần đúng, MinHash):</b> băm mỗi <code>description</code> thành tập shingle (n-gram từ), tính chữ ký MinHash, so độ giống nhau (Jaccard ước lượng) giữa các sản phẩm. Bắt được các mẫu <b>dùng chung template thuộc tính gần như y hệt</b> (nhiều người bán cùng copy "PVC", "拉链"... nhưng khác vài trường) mà so khớp chuỗi ở lớp 1 bỏ sót vì không giống <i>tuyệt đối</i> 100%. Rẻ, chạy CPU, không cần GPU — khác hẳn cách dùng BGE-M3 (xem mục 3).
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-title">Cắt bỏ đoạn thông báo thuế/VAT cố định của Tiki</div>
+        <div class="step-desc">Ảnh hưởng gần như toàn bộ (99,99%) mô tả văn xuôi Tiki</div>
+        <div class="src-tags"><span class="tag mv">Đơn ngữ Việt (Tiki) — meta.description_prose_vi</span></div>
+      </div>
+    </div>
+    <div class="technique">
+      <b>Kỹ thuật:</b> nhận diện 2 câu boilerplate cố định (đã biết chính xác nội dung), cắt phần đuôi khớp mẫu này, giữ nguyên phần mô tả sản phẩm thật phía trước.
+    </div>
+    <div class="io-flow">
+      <div class="io-card input">
+        <div class="tagline">Input</div>
+        <div class="v">...Sử dụng tia UVC, ống thủy tinh thạch cao truyền tải tia cực tím tốt... <mark>Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành... thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị trên 1 triệu đồng).....</mark></div>
+      </div>
+      <div class="io-arrow">→</div>
+      <div class="io-card output fix">
+        <div class="tagline">Output</div>
+        <div class="v">...Sử dụng tia UVC, ống thủy tinh thạch cao truyền tải tia cực tím tốt.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">4</div>
+      <div>
+        <div class="step-title">Gắn cờ title dịch phình bất thường</div>
+        <div class="step-desc">10% số dòng — không tự động xoá, để nhóm xem mẫu quyết định</div>
+        <div class="src-tags"><span class="tag bi">Song ngữ (1688)</span></div>
+      </div>
+    </div>
+    <div class="technique">
+      <b>Kỹ thuật:</b> tính <code>len(title_vi) / len(title_zh)</code>, ngưỡng &gt;5 → gắn cờ review.
+    </div>
+    <div class="io-flow">
+      <div class="io-card input">
+        <div class="tagline">Input — 26 ký tự</div>
+        <div class="v zh">舒康茶养生茶代用茶源头工厂代发现货独立小包装量大可谈</div>
+      </div>
+      <div class="io-arrow">→</div>
+      <div class="io-card output flag">
+        <div class="tagline">Output — gắn cờ, tỉ lệ 10,1x</div>
+        <div class="v">"Trà Shukang, một loại trà tốt cho sức khỏe, có thể thay thế các loại trà thông thường, được cung cấp trực tiếp từ nhà máy sản xuất..." (263 ký tự)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">5</div>
+      <div>
+        <div class="step-title">Chuẩn hoá category, chia train/val/test</div>
+        <div class="step-desc">Gộp cả 4 nguồn về cùng 9 bucket, stratify theo tỉ lệ song ngữ thật</div>
+        <div class="src-tags"><span class="tag bi">Song ngữ</span><span class="tag mz">Đơn ngữ Trung</span><span class="tag mv">Đơn ngữ Việt</span><span class="tag kg">Kaggle</span></div>
+      </div>
+    </div>
+    <div class="technique">
+      <b>Kỹ thuật:</b> map <code>category_1688</code>/<code>category_tiki</code>/category Kaggle về 9 bucket thống nhất. Chia train/val/test theo <code>product_id</code> trên phần <b>song ngữ</b> (nguồn duy nhất có cặp câu thật) — stratify theo tỉ lệ bilingual thật của từng category (electronics 44,6% → tập test electronics sẽ nhỏ hơn hẳn home 100%, cần biết trước để không hiểu lầm là lỗi chia tập).
+    </div>
+  </div>
+
+  <!-- STEP 6 -->
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">6</div>
+      <div>
+        <div class="step-title">Back-translation cho category thiếu song ngữ</div>
+        <div class="step-desc">Dùng đúng 2 nguồn đơn ngữ cho đúng chiều dịch cần bù</div>
+        <div class="src-tags"><span class="tag mz">Đơn ngữ Trung → dịch xuôi zh→vi</span><span class="tag mv">Đơn ngữ Việt → dịch ngược vi→zh</span><span class="tag kg">Kaggle → như đơn ngữ Việt</span></div>
+      </div>
+    </div>
+    <div class="technique">
+      <b>Kỹ thuật:</b> dùng model đã fine-tune vòng 1 (từ bước 5) dịch <code>mono_zh</code> → tiếng Việt giả định (bù câu target tự nhiên hơn 1688 tự dịch), và dịch ngược <code>tiki_vi</code>/Kaggle → tiếng Trung giả định (bù ngữ cảnh TMĐT Việt cho chiều model đang thiếu nhất: electronics, auto, fashion). Cặp giả định này gắn nhãn "silver", tách riêng khỏi cặp "gold" (1688 dịch thật) khi báo cáo kết quả.
+    </div>
+  </div>
+</section>
+
+<section class="block" id="model">
+  <h2>3. Đánh giá BGE-M3 cho giai đoạn EDA/làm sạch</h2>
+  <div class="model-card">
+    <div class="verdict partial">Phù hợp một phần — dùng đúng chỗ, không dùng cho vấn đề lớn nhất</div>
+    <p style="font-size:14px; color:var(--ink-muted); margin:0 0 8px; max-width:70ch;">
+      BGE-M3 (BAAI, dựa trên XLM-RoBERTa, 1024 chiều, hỗ trợ 100+ ngôn ngữ gồm Việt-Trung, xử lý được tới 8.192 token) là model embedding đa ngôn ngữ tốt, xử lý được cả câu ngắn lẫn văn bản dài — đúng loại phù hợp với dữ liệu lẫn cả câu ngắn (thuộc tính 1688) lẫn văn xuôi dài (mô tả Tiki, tối đa 19.672 ký tự).
+    </p>
+    <div class="use-grid">
+      <div class="use-card yes">
+        <div class="tag2">Nên dùng</div>
+        <p><b>Kiểm tra độ khớp nghĩa description_zh ↔ description_vi</b> — tính cosine similarity giữa 2 embedding, điểm thấp bất thường = nghi ngờ dịch sai/lệch ghép cặp fid, dùng làm lớp QA bổ sung cho Bước 1 và Bước 4. Đây là việc <b>xuyên ngôn ngữ</b> — MinHash (Bước 2) không làm được vì tiếng Trung và tiếng Việt không chung shingle/từ để băm so khớp.</p>
+      </div>
+      <div class="use-card no">
+        <div class="tag2">Không nên dùng</div>
+        <p><b>Dò trùng lặp gần đúng cùng ngôn ngữ (Bước 2)</b> — đây đúng là việc MinHash làm rẻ hơn nhiều (chạy CPU, giây) mà vẫn bắt được đúng loại trùng thực tế thấy trong dữ liệu (copy template thuộc tính). Dùng BGE-M3 cho việc này tốn kém không cần thiết.</p>
+      </div>
+      <div class="use-card no">
+        <div class="tag2">Không nên dùng</div>
+        <p><b>Sửa lỗi đánh số trùng (Bước 1, 52% dữ liệu)</b> — đây là lỗi cú pháp cố định (thêm hậu tố số), regex xử lý chính xác 100% và rẻ hơn nhiều; dùng model embedding cho việc này là dùng sai công cụ.</p>
+      </div>
+      <div class="use-card no">
+        <div class="tag2">Cân nhắc chi phí</div>
+        <p><b>Chạy trên toàn bộ 35.882 dòng</b> — model cỡ lớn (dựa trên RoBERTa-large), chạy full corpus trên GPU laptop (RTX 3050) sẽ chậm; nên chỉ áp dụng trên mẫu hoặc các dòng đã qua lọc rule-based trước, không chạy đại trà ngay từ đầu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Số liệu đo trực tiếp trên <span class="mono">data/snapshot/bilingual_zh_vi.parquet</span>, <span class="mono">mono_zh.parquet</span>, <span class="mono">tiki_vi.parquet</span> trên Hugging Face. Riêng số liệu Kaggle chưa xác thực bằng file thật, chỉ dựa trên thông tin đã xem qua giao diện.</footer>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+(function(){
+  var data = [
+    {cat:'home', bi:2493, mz:0},
+    {cat:'shoes', bi:2311, mz:0},
+    {cat:'mother_baby', bi:2496, mz:1},
+    {cat:'food', bi:1421, mz:368},
+    {cat:'beauty', bi:1318, mz:664},
+    {cat:'bags', bi:2878, mz:2048},
+    {cat:'auto', bi:971, mz:730},
+    {cat:'fashion', bi:1351, mz:1145},
+    {cat:'electronics', bi:1109, mz:1378}
+  ];
+  var chart = document.getElementById('chart-1688');
+  var tooltip = document.getElementById('tooltip');
+
+  data.forEach(function(d){
+    var total = d.bi + d.mz;
+    var biPct = total ? (d.bi/total*100) : 0;
+    var mzPct = 100 - biPct;
+    var row = document.createElement('div');
+    row.className = 'bar-row';
+
+    var label = document.createElement('div');
+    label.className = 'cat-label';
+    label.textContent = d.cat;
+    row.appendChild(label);
+
+    var track = document.createElement('div');
+    track.className = 'bar-track';
+
+    var segBi = document.createElement('div');
+    segBi.className = 'seg bi';
+    segBi.style.width = biPct + '%';
+    segBi.addEventListener('mousemove', function(e){ showTip(e, d.cat + ' · song ngữ: ' + d.bi.toLocaleString('vi-VN') + ' (' + biPct.toFixed(1) + '%)'); });
+    segBi.addEventListener('mouseleave', hideTip);
+    track.appendChild(segBi);
+
+    if (d.mz > 0) {
+      var segMz = document.createElement('div');
+      segMz.className = 'seg mz';
+      segMz.style.width = mzPct + '%';
+      segMz.addEventListener('mousemove', function(e){ showTip(e, d.cat + ' · chỉ Trung: ' + d.mz.toLocaleString('vi-VN') + ' (' + mzPct.toFixed(1) + '%)'); });
+      segMz.addEventListener('mouseleave', hideTip);
+      track.appendChild(segMz);
+    }
+    row.appendChild(track);
+
+    var pct = document.createElement('div');
+    pct.className = 'pct';
+    pct.textContent = biPct.toFixed(0) + '% · ' + total.toLocaleString('vi-VN');
+    row.appendChild(pct);
+
+    chart.appendChild(row);
+  });
+
+  function showTip(e, text){
+    tooltip.textContent = text;
+    tooltip.style.left = (e.clientX + 14) + 'px';
+    tooltip.style.top = (e.clientY - 10) + 'px';
+    tooltip.classList.add('show');
+  }
+  function hideTip(){ tooltip.classList.remove('show'); }
+})();
+</script>

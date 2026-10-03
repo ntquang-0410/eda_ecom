@@ -1,0 +1,915 @@
+﻿gia_tri_zh,so_lan,ten_thuoc_tinh_pho_bien,cach_dich_da_so,cac_cach_dich,loi_da_biet,gia_tri_chuan_tam,da_sua,goi_y_claude,ly_do_claude,anh_duyet,anh_ghi_chu
+否,30437,是否进口,Không,không: 30134; không1: 40; không2: 13; có phải tai nghe không dây không: 2; sản phẩm chỉ dẫn địa lý: 2,,Không,0,,,,
+是,19042,是否跨境出口专供货源,Là,là: 11652; đúng vậy: 4465; đúng: 2560; có: 278; là2: 8,sai nghĩa (đọc tay),Có,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+其他,10472,主要下游平台,Khác,khác: 10472,,Khác,0,,,,
+纯色,4901,图案,Màu trơn,màu trơn: 4606; màu rắn: 274; màu đặc: 10; màu trơn1: 1,,Màu trơn,0,,,,
+速卖通,4811,主要下游平台,AliExpress,aliexpress: 4794,,AliExpress,0,,,,
+东南亚,4688,主要销售地区,Đông Nam Á,đông nam á: 4668; đông nam ánh sáng: 2,,Đông Nam Á,0,,,,
+亚马逊,4566,主要下游平台,Amazon,amazon: 4532; đông hồ: 1,,Amazon,0,,,,
+现货,4525,货源类别,Hàng sẵn,hàng sẵn: 1957; hàng có sẵn: 1422; hàng giao ngay: 643; hàng sẵn có: 443; còn hàng: 56,,Hàng sẵn,0,,,,
+独立站,4385,主要下游平台,Trạm độc lập,trạm độc lập: 3400; trang web độc lập: 972; lazada: 1,,Trạm độc lập,0,Website độc lập,sai nghĩa: 独立站 = cửa hàng web riêng; 'trạm độc lập' dịch sát chữ,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+北美,4315,主要销售地区,Bắc Mỹ,bắc mỹ: 4301,,Bắc Mỹ,0,,,,
+中东,4209,主要销售地区,Trung Đông,trung đông: 4195,,Trung Đông,0,,,,
+东北亚,4117,主要销售地区,Đông Bắc Á,đông bắc á: 4102,,Đông Bắc Á,0,,,,
+南美,4106,主要销售地区,Nam Mỹ,nam mỹ: 4091,,Nam Mỹ,0,,,,
+欧洲,3969,主要销售地区,Châu Âu,châu âu: 3954,,Châu Âu,0,,,,
+通用,3700,适用运动,Thông dụng,thông dụng: 1577; đa năng: 833; phổ quát: 509; tổng quan: 321; mục đích chung: 290,,Thông dụng,0,,,,
+无,3651,有无夹层,Không có,không có: 3651,,Không có,0,,,,
+黑色,3382,颜色,Màu đen,màu đen: 2686; đen: 686; màu xám: 1; vàng: 1,,Màu đen,0,,,,
+棉,3300,主面料成分,Bông,bông: 3265; bông1: 8; bông2: 5,,Bông,0,,,,
+其它,3277,皮质特征,Khác,khác: 3277,,Khác,0,,,,
+非洲,3216,主要销售地区,Châu Phi,châu phi: 3198,,Châu Phi,0,,,,
+春季,2867,适合季节,Mùa xuân,mùa xuân: 2860,,Mùa xuân,0,,,,
+夏季,2847,适合季节,Mùa hè,mùa hè: 2844,,Mùa hè,0,,,,
+秋季,2777,适合季节,Mùa thu,mùa thu: 2773,,Mùa thu,0,,,,
+涤纶,2559,里料质地,Polyester,polyester: 2551; polyester1: 2; polyester2: 1,,Polyester,0,,,,
+休闲,2549,适用场景,Thường ngày,thường ngày: 1018; thư giãn: 818; giải trí: 674; bình thường: 33; thường ngày1: 1,,Thường ngày,0,,,,
+中性/男女均可,2345,适用性别,Trung tính/nam và nữ,trung tính/nam và nữ: 1143; trung tính/unisex: 474; unisex/cả nam và nữ đều được chào đón: 419; unisex/cả nam và nữ đều có thể: 262; trung tính/cả nam và nữ đều có thể: 33,,Trung tính/nam và nữ,0,,,,
+透气,2343,功能,Thoáng khí,thoáng khí: 2340; thoáng khí2: 1,,Thoáng khí,0,,,,
+整单,2254,库存类型,Toàn bộ đơn hàng,toàn bộ đơn hàng: 1021; nguyên đơn: 987; toàn bộ đơn đặt hàng: 243,,Toàn bộ đơn hàng,0,Nguyên lô,sai nghĩa: loại hàng tồn kho: nguyên lô (khác 杂款 hỗn hợp),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+车缝线,1963,流行元素,Chỉ khâu xe,chỉ khâu xe: 1007; chỉ khâu: 680; đường may: 259; chỉ may: 16,,Chỉ khâu xe,0,Đường chỉ may,sai nghĩa: 车缝 = may máy; 'chỉ khâu xe' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+圆头,1843,鞋头形状,Đầu tròn,đầu tròn: 1049; mũi tròn: 793,,Đầu tròn,0,,,,
+不连帽,1842,是否连帽,Không mũ liền,không mũ liền: 954; không có mũ trùm đầu: 493; không mũ: 367; không có mui xe: 28,,Không mũ liền,0,,,,
+白色,1738,颜色,Màu trắng,màu trắng: 1100; trắng: 634; hồng hoa hồng: 1,,Màu trắng,0,,,,
+正常规格,1714,规格,Thông số kỹ thuật bình thường,thông số kỹ thuật bình thường: 1570; kích thước tiêu chuẩn: 92; thông số kỹ thuật bình thường1: 9,,Thông số kỹ thuật bình thường,0,Quy cách thông thường,thống nhất: thống nhất 规格 = 'Quy cách',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+前系带,1670,穿着方式,Dây buộc phía trước,dây buộc phía trước: 1284; cà vạt phía trước: 366; thắt lưng phía trước: 18; phía trước ren lên: 1; phương pháp đóng cửa: 1,sai nghĩa (đọc tay),Buộc dây phía trước,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+2025年春季,1599,上市年份季节,Mùa xuân năm 2025,mùa xuân năm 2025: 1514; mùa xuân 2025: 85,,Mùa xuân năm 2025,0,,,,
+普通,1570,厚薄,Bình thường,bình thường: 871; thông thường: 681; thường: 17,,Bình thường,0,,,,
+耐磨,1557,功能,Chống mài mòn,chống mài mòn: 822; chịu mài mòn: 734,,Chống mài mòn,0,,,,
+冬季,1527,适合季节,Mùa đông,mùa đông: 1523,,Mùa đông,0,,,,
+有吊牌,1499,吊牌,Có thẻ,có thẻ: 696; có thẻ treo: 432; với thẻ: 302; có một thẻ: 59,,Có thẻ,0,Có thẻ treo,thống nhất: thống nhất tên 吊牌 'Thẻ treo',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+日常搭配,1476,适用场景,Kết hợp hàng ngày,kết hợp hàng ngày: 1133; đối sánh hàng ngày: 319; phù hợp hàng ngày: 23,sai nghĩa (đọc tay),Phối đồ hằng ngày,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+平跟,1448,鞋跟形状,Giày đế bằng,giày đế bằng: 579; gót bằng: 421; gót chân phẳng: 267; đế bệt: 85; căn hộ: 65,,Giày đế bằng,0,Gót bằng,"sai nghĩa: giá trị của hình dạng gót, không phải loại giày",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+源头工厂,1392,货源类型,Nhà máy nguồn,nhà máy nguồn: 513; nhà máy sản xuất trực tiếp: 404; nguồn gốc từ nhà máy: 334; xưởng sản xuất gốc: 131,,Nhà máy nguồn,0,Nhà máy gốc,thống nhất: thống nhất bảng từ chung tên hãng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+系带,1361,闭合方式,Dây buộc,dây buộc: 603; thắt dây: 447; cột dây: 175; buộc dây: 100; buộc: 29,,Dây buộc,0,,,,
+浅口（7cm以下）,1344,开口深度,Miệng nông (dưới 7cm),miệng nông (dưới 7cm): 782; giày cổ thấp (dưới 7cm): 561,,Miệng nông (dưới 7cm),0,,,,
+注塑鞋,1311,鞋底工艺,Giày ép nhựa,giày ép nhựa: 511; giày ép phun: 492; giày đúc phun: 307,,Giày ép nhựa,0,,,,
+2026年春季,1277,上市年份季节,Mùa xuân năm 2026,mùa xuân năm 2026: 1272,,Mùa xuân năm 2026,0,,,,
+低帮,1258,鞋帮高度,Giày cổ thấp,giày cổ thấp: 511; cổ thấp: 468; mũ thấp: 135; đỉnh thấp: 120; mắt cá chân thấp: 17,sai nghĩa (đọc tay),Cổ thấp,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+橡胶,1234,鞋底材质,Cao su,cao su: 1233,,Cao su,0,,,,
+可以,1231,加印LOGO,Có thể,có thể: 824; được: 382; có: 15; có thể1: 1,,Có thể,0,,,,
+纯棉,1230,面料名称,bông nguyên chất,bông nguyên chất: 290; 100% cotton: 273; 100% cotton1: 175; 100% cotton2: 173; 100% cotton3: 155,,bông nguyên chất,0,100% cotton,định dạng: cách gọi phổ biến của người bán Việt (biến thể có sẵn),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+拉链,1227,开盖方式,Khóa kéo,khóa kéo: 695; dây kéo: 531,,Khóa kéo,0,,,,
+休闲旅行,1217,适用场景,Du lịch giải trí,du lịch giải trí: 1216,,Du lịch giải trí,0,,,,
+长袖,1198,袖长,Dài tay,dài tay: 465; áo dài tay: 390; tay áo dài: 342,,Dài tay,0,,,,
+3年,1196,保质期,3 năm,3 năm: 1195,,3 năm,0,,,,
+女,1187,适用性别,Nữ,nữ: 1175; nữ tính: 10,,Nữ,0,,,,
+活性印染,1176,印染工艺,In nhuộm hoạt tính,in nhuộm hoạt tính: 654; in và nhuộm phản ứng: 284; in và nhuộm hoạt tính: 227; in nhuộm hoạt tính1: 5; in và nhuộm phản ứng1: 3,,In nhuộm hoạt tính,0,,,,
+男,1159,适用性别,Nam,nam: 917; nam giới: 186; người đàn ông: 56,,Nam,0,,,,
+日常,1145,适用场景,Hàng ngày,hàng ngày: 1141,,Hàng ngày,0,,,,
+套头,1114,款式,Chui đầu,chui đầu: 722; áo thun1: 175; mũ trùm đầu: 116; áo thun: 66; xe kéo: 18,,Chui đầu,0,,,,
+圆领,1112,领型,Cổ tròn,cổ tròn: 1108; hình dạng cổ áo: 2; kiểu cổ áo: 1,,Cổ tròn,0,,,,
+国货品牌,1095,品牌类型,Thương hiệu sản phẩm nội địa,thương hiệu sản phẩm nội địa: 540; thương hiệu nội địa: 511; thương hiệu trong nước: 21,,Thương hiệu sản phẩm nội địa,0,Thương hiệu nội địa,"định dạng: gọn, đúng nghĩa",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+A类,1083,安全等级,Loại A,loại a: 897; lớp a: 174; hạng a: 8,,Loại A,0,,,,
+成年,1076,适用年龄段,Người trưởng thành,người trưởng thành: 520; trưởng thành: 306; người lớn: 248,,Người trưởng thành,0,,,,
+广州,1033,产地,Quảng Châu,quảng châu: 1023,,Quảng Châu,0,,,,
+防水,1032,功能,Chống nước,chống nước: 557; không thấm nước: 421; chống thấm nước: 48; chống nước1: 4; chống nước2: 1,,Chống nước,0,,,,
+中,1030,箱包大小,Trong,trong: 448; giữa: 280; trung bình: 242; trung: 52; giữa3: 1,,Trong,0,Vừa,sai nghĩa: 中 ở kích cỡ là 'vừa'; 'trong' sai (luật ngữ cảnh 中 → Trung bình ở độ cứng vẫn giữ),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+印花,997,款式细节,In hoa,in hoa: 675; in: 192; in ấn: 129,,In hoa,0,Họa tiết in,sai nghĩa: 'in hoa' dễ hiểu thành chữ in hoa,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+短袖,989,袖长,Cộc tay,cộc tay: 701; tay áo ngắn: 270; áo tay ngắn: 18,,Cộc tay,0,,,,
+见包装,981,生产日期,Xem bao bì,xem bao bì: 981,,Xem bao bì,0,,,,
+有领标,973,领标,Có nhãn cổ áo,có nhãn cổ áo: 662; có nhãn mác: 201; có nhãn ở cổ áo: 65; với nhãn hiệu cổ áo: 37,sai nghĩa (đọc tay),Có nhãn cổ,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+四季通用,955,适用季节,Dùng được quanh năm,dùng được quanh năm: 608; thích hợp cho mọi mùa: 238; phù hợp cho mọi mùa: 61; thông dụng bốn mùa: 34; thích hợp cho tất cả các mùa: 10,,Dùng được quanh năm,0,,,,
+浙江,931,产地,Chiết Giang,chiết giang: 919,,Chiết Giang,0,,,,
+塑料,924,材质,Nhựa,nhựa: 920,,Nhựa,0,,,,
+卡通,902,图案,Hoạt hình,hoạt hình: 648; phim hoạt hình: 250; phim hoạt hình1: 3; hoạt hình1: 1,,Hoạt hình,0,,,,
+实拍无模特,890,图片实拍,Ảnh chụp thực tế không có mô hình,"ảnh chụp thực tế không có mô hình: 368; ảnh chụp thật, không có người mẫu: 308; ảnh thật không có người mẫu: 109; ảnh thật không có mẫu: 103; ảnh chụp thật không có người mẫu: 2",sai nghĩa (đọc tay),"Ảnh thật, không có người mẫu",1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+常规,887,袖型,Thông thường,thông thường: 673; thường xuyên: 131; thói quen: 76; thông thường1: 1,,Thông thường,0,,,,
+常温,886,储存条件,Nhiệt độ thường,nhiệt độ thường: 579; nhiệt độ bình thường: 306,,Nhiệt độ thường,0,,,,
+2天,884,最晚发货时间,2 ngày,2 ngày: 883,,2 ngày,0,,,,
+支持,873,支持订制,Hỗ trợ,hỗ trợ: 864; hỗ trợ1: 1,,Hỗ trợ,0,,,,
+不可以,870,加印LOGO,Không thể,không thể: 412; không được: 320; không: 108; không được phép: 8; in logo: 1,,Không thể,0,,,,
+运动,865,适用场景,Thể thao,thể thao: 718; tập thể dục: 91; bài tập thể dục: 56,,Thể thao,0,,,,
+蓝色,852,颜色,Màu xanh lam,màu xanh lam: 440; màu xanh: 327; màu xanh dương: 80; màu vàng: 1; màu xanh2: 1,,Màu xanh lam,0,,,,
+低跟（1-3CM）,841,鞋跟高度,Gót thấp (1-3CM),gót thấp (1-3cm): 830; gót chân thấp (1-3cm): 11,,Gót thấp (1-3CM),0,,,,
+涤纶（聚酯纤维）,836,主面料成分,Polyester (sợi polyester),polyester (sợi polyester): 750; sợi polyester: 62; polyester (sợi polyester)2: 2,,Polyester (sợi polyester),0,,,,
+2025年秋季,829,上市年份季节,Mùa thu năm 2025,mùa thu năm 2025: 826; mùa thu năm 20252: 1,,Mùa thu năm 2025,0,,,,
+有,812,有无夹层,Có,có: 634; đúng: 167,,Có,0,,,,
+无领标,812,领标,Không nhãn mác,không nhãn mác: 252; không có cổ áo: 195; không có dấu cổ áo: 195; không có nhãn cổ áo: 166,sai nghĩa (đọc tay),Không có nhãn cổ,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+单根,806,肩带根数,Một gốc,một gốc: 462; gốc đơn: 154; đơn: 120; đơn độc: 55; rễ đơn: 14,sai nghĩa (đọc tay),Một dây,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+广东,782,产地,Quảng Đông,quảng đông: 779,,Quảng Đông,0,,,,
+2025夏季,781,上市年份/季节,Mùa hè 2025,mùa hè 2025: 512; mùa hè năm 2025: 268,,Mùa hè 2025,0,,,,
+内贸+外贸,759,贸易属性,Bán hàng nội địa + ngoại thương,bán hàng nội địa + ngoại thương: 280; thương mại trong nước và ngoại thương: 226; thương mại nội địa + ngoại thương: 131; nội thương + ngoại thương: 81; thương mại trong nước ngoại thương: 26,,Bán hàng nội địa + ngoại thương,0,Nội địa + xuất khẩu,"định dạng: gọn, đúng nghĩa thuộc tính thương mại",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+粉色,754,颜色,Màu hồng,màu hồng: 635; hồng: 117; hồng2: 1; kaki: 1,,Màu hồng,0,,,,
+床单式,754,款式,Kiểu ga trải giường,kiểu ga trải giường: 457; kiểu ga giường: 166; loại tờ: 55; kiểu dáng ga trải giường: 28; ga trải giường: 26,,Kiểu ga trải giường,0,,,,
+基础包装,749,包装种类,Bao bì cơ bản,bao bì cơ bản: 702,,Bao bì cơ bản,0,,,,
+手机袋,745,包内部结构,Túi đựng điện thoại,túi đựng điện thoại: 417; túi đựng điện thoại di động: 250; túi điện thoại di động: 76; túi đựng điện thoại1: 1; túi ẩn khóa kéo: 1,,Túi đựng điện thoại,0,,,,
+拼色,744,图案,Phối màu,phối màu: 724; kết hợp màu sắc: 14; khối màu: 6,,Phối màu,0,,,,
+现代简约,735,风格,Đơn giản hiện đại,đơn giản hiện đại: 265; hiện đại tối giản: 255; sự đơn giản hiện đại: 203; hiện đại và tối giản: 11; tối giản hiện đại: 1,,Đơn giản hiện đại,0,,,,
+青年（18-40周岁）,735,适用年龄段,Thanh niên (18-40 tuổi),thanh niên (18-40 tuổi): 735,,Thanh niên (18-40 tuổi),0,,,,
+横款方型,732,箱包形状,Kiểu ngang hình vuông,kiểu ngang hình vuông: 409; hình vuông nằm ngang: 252; hình vuông ngang: 70; loại hình vuông ngang: 1,,Kiểu ngang hình vuông,0,,,,
+青年,731,适合人群,thanh niên,thanh niên: 670; tuổi trẻ: 50; nam giới: 1,,thanh niên,0,Thanh niên,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+灰色,719,颜色,Màu xám,màu xám: 625; xám: 91; màu trắng be: 1; màu đen: 1,,Màu xám,0,,,,
+字母,709,图案,Chữ cái,chữ cái: 589; thư: 119; thư2: 1,,Chữ cái,0,,,,
+粘胶鞋,701,鞋底工艺,Giày dán keo,giày dán keo: 358; giày dính: 171; giày viscose: 164; giày cao su dính: 8,,Giày dán keo,0,,,,
+宽松型,692,版型,Loại rời,loại rời: 444; loại lỏng lẻo: 164; kiểu lỏng lẻo: 55; kiểu dáng rộng rãi: 22; vừa vặn: 6,,Loại rời,0,Dáng rộng,sai nghĩa: 版型 宽松 = dáng rộng; 'loại rời' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+网纱,690,内里材质,Lưới,lưới: 444; vải lưới: 246,,Lưới,0,,,,
+韩版,688,风格,Kiểu Hàn,kiểu hàn: 354; phong cách hàn quốc: 194; phiên bản tiếng hàn: 140,,Kiểu Hàn,0,,,,
+补水保湿,677,化妆品功效,Dưỡng ẩm,dưỡng ẩm: 510; dưỡng ẩm và cấp nước: 82; dưỡng ẩm và dưỡng ẩm: 81; dưỡng ẩm1: 1,,Dưỡng ẩm,0,"Cấp nước, dưỡng ẩm",sai nghĩa: hai công dụng: 补水 cấp nước + 保湿 dưỡng ẩm,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+红色,676,颜色,Màu đỏ,màu đỏ: 649; đỏ: 24; màu đen: 1; màu xanh nhạt: 1; bầu trời xanh: 1,,Màu đỏ,0,,,,
+中国大陆,676,原产国/地区,Trung Quốc đại lục,trung quốc đại lục: 359; đại lục trung quốc: 281,,Trung Quốc đại lục,0,,,,
+绿色,674,颜色,Màu xanh lá,màu xanh lá: 321; màu xanh lá cây: 279; xanh lá cây: 73; màu hồng: 1,,Màu xanh lá,0,,,,
+全部修剪干净,673,毛头/杂余线头是否修剪,Cắt tỉa sạch sẽ,cắt tỉa sạch sẽ: 280; cắt tỉa tất cả: 232; cắt mọi thứ một cách sạch sẽ: 70; cắt sạch mọi thứ: 46; cắt mọi thứ sạch sẽ: 33,,Cắt tỉa sạch sẽ,0,,,,
+都市简约,663,风格,Đơn giản đô thị,đơn giản đô thị: 409; sự đơn giản của thành phố: 139; sự đơn giản của đô thị: 112; sự đơn giản của thành thị: 3,,Đơn giản đô thị,0,,,,
+预包装,650,售卖方式,Đóng gói sẵn,đóng gói sẵn: 480; đã đóng gói sẵn: 144; đóng gói trước: 1,,Đóng gói sẵn,0,,,,
+3天,649,最晚发货时间,3 ngày,3 ngày: 649,,3 ngày,0,,,,
+浙江温州,639,产地,"Ôn Châu, Chiết Giang","ôn châu, chiết giang: 319; vũ hán, chiết giang: 224; vũ châu, chiết giang: 69; nghĩa ô, chiết giang: 27",,"Ôn Châu, Chiết Giang",0,,,,
+运动休闲鞋,630,款式,Giày thể thao và giày thường ngày,giày thể thao và giày thường ngày: 346; giày thể thao và giày thông thường: 228; giày thể thao và giày thường: 22; giày thể thao thường ngày: 6; giày thể thao thông thường: 1,,Giày thể thao và giày thường ngày,0,,,,
+青春流行（18-24岁）,629,淘货类别,Thanh niên phổ biến (18-24 tuổi),thanh niên phổ biến (18-24 tuổi): 443; thời trang thanh niên (18-24 tuổi): 116; thời trang trẻ (18-24 tuổi): 63; thời trang trẻ trung (18-24 tuổi): 7,,Thanh niên phổ biến (18-24 tuổi),0,Trẻ trung thời trang (18-24 tuổi),sai nghĩa: 'thanh niên phổ biến' tối nghĩa,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+咨询客服,626,箱装数量,Liên hệ CSKH,liên hệ cskh: 626,,Liên hệ CSKH,0,,,,
+拉链暗袋,624,包内部结构,Túi ẩn khóa kéo,túi ẩn khóa kéo: 380; túi có khóa kéo: 189; túi ẩn có khóa kéo: 45; túi bí mật có khóa kéo: 8; túi khóa kéo: 1,,Túi ẩn khóa kéo,0,,,,
+内贴袋,623,外袋种类,Túi dán bên trong,túi dán bên trong: 315; túi vá bên trong: 308,,Túi dán bên trong,0,,,,
+条纹,609,图案,Sọc,sọc: 392; kẻ sọc: 215; kẻ sọc2: 1,,Sọc,0,,,,
+防滑,606,功能,Chống trượt,chống trượt: 603; chống rung: 1; chống trơn trượt: 1,,Chống trượt,0,,,,
+网布,605,内里材质,Vải lưới,vải lưới: 470; lưới: 131; vải lưới1: 1; lưới1: 1,,Vải lưới,0,,,,
+T恤背心,598,类别,Áo phông áo ba lỗ,áo phông áo ba lỗ: 328; áo thun vest: 134; áo thun ba lỗ: 77; áo phông và áo ba lỗ: 46; áo thun: 12,,Áo phông áo ba lỗ,0,"Áo phông, áo ba lỗ","định dạng: hai loại áo, cần dấu phẩy",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+2026年夏季,591,上市年份季节,Mùa hè năm 2026,mùa hè năm 2026: 585,,Mùa hè năm 2026,0,,,,
+青少年,589,适合人群,Thanh thiếu niên,thanh thiếu niên: 397; thiếu niên: 184; các bạn nữ: 1,,Thanh thiếu niên,0,,,,
+卧室,580,收纳场景,Phòng ngủ,phòng ngủ: 580,,Phòng ngủ,0,,,,
+柔软处理,580,面料工艺,Xử lý mềm,xử lý mềm: 247; xử lý mềm mại: 205; điều trị nhẹ nhàng: 86; điều trị mềm mại: 29; xử lý làm mềm: 13,,Xử lý mềm,0,,,,
+棕色,578,颜色,Màu nâu,màu nâu: 463; nâu: 113; tím: 1,,Màu nâu,0,,,,
+卡其色,573,颜色,Màu kaki,màu kaki: 350; kaki: 180; quần kaki: 43,,Màu kaki,0,,,,
+2026年秋季,565,上市年份季节,Mùa thu năm 2026,mùa thu năm 2026: 554,,Mùa thu năm 2026,0,,,,
+中偏软,564,硬度,Trung bình đến mềm,trung bình đến mềm: 289; mềm trung bình: 275,,Trung bình đến mềm,0,,,,
+薄款,554,厚薄,Mẫu mỏng,mẫu mỏng: 364; mỏng: 129; mỏng nhẹ: 31; phần mỏng: 27,,Mẫu mỏng,0,Mỏng,định dạng: giá trị của độ dày,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+滋润,549,化妆品功效,Dưỡng ẩm,dưỡng ẩm: 547; dưỡng ẩm1: 1,,Dưỡng ẩm,0,,,,
+循环录像,542,功能,Video vòng lặp,video vòng lặp: 326; ghi vòng lặp: 170; ghi âm vòng lặp: 46,,Video vòng lặp,0,Ghi hình vòng lặp,"sai nghĩa: camera hành trình: ghi hình, không phải 'video'",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+增高,542,功能,Tăng chiều cao,tăng chiều cao: 408; tăng: 134,,Tăng chiều cao,0,,,,
+河南,541,产地,Hà Nam,hà nam: 504; tỉnh hà nam: 32; henan: 5,,Hà Nam,0,,,,
+春秋,539,适合季节,Mùa xuân và mùa thu,mùa xuân và mùa thu: 328; xuân thu: 202; xuân và thu: 8,,Mùa xuân và mùa thu,0,,,,
+厚底,536,鞋跟形状,Đế dày,đế dày: 536,,Đế dày,0,,,,
+锁扣,529,流行元素,Móc khóa,móc khóa: 311; khóa: 215,,Móc khóa,0,Khóa cài,sai nghĩa: 锁扣 = khóa cài; 'móc khóa' là keychain,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+无盖,524,开合方式,Không nắp,không nắp: 336; không có bìa: 161; không có nắp: 19; không có bìa2: 1,,Không nắp,0,,,,
+新生儿(0~1岁，80cm及其以下),521,适合年龄段,"Trẻ sơ sinh (0 ~ 1 tuổi, 80cm trở xuống)","trẻ sơ sinh (0 ~ 1 tuổi, 80cm trở xuống): 219; trẻ sơ sinh (0~1 tuổi, 80cm và dưới): 178; trẻ sơ sinh (0~1 tuổi, 80cm trở xuống): 69; trẻ sơ sinh (0~1 tuổi, cao 80cm trở xuống): 53",,"Trẻ sơ sinh (0 ~ 1 tuổi, 80cm trở xuống)",0,,,,
+万向轮,513,滚轮样式,Bánh đa năng,bánh đa năng: 332; bánh xe vạn năng: 105; bánh xe đa năng: 56; bánh xe phổ quát: 18; bánh đa năng1: 1,,Bánh đa năng,0,Bánh xe xoay mọi hướng,"sai nghĩa: vali, bánh xoay mọi hướng (không thêm số 360 vì bản Trung không có số)",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+中跟（3-5CM）,506,鞋跟高度,Gót vừa (3-5CM),gót vừa (3-5cm): 297; gót giày vừa (3-5cm): 204; gót chân trung bình (3-5cm): 5,,Gót vừa (3-5CM),0,,,,
+2024年春季,503,上市年份季节,Mùa xuân năm 2024,mùa xuân năm 2024: 479; mùa xuân 2024: 24,,Mùa xuân năm 2024,0,,,,
+柔软,503,功能,Mềm mại,mềm mại: 445; mềm: 53,,Mềm mại,0,,,,
+软,502,硬度,Mềm,mềm: 343; mềm mại: 157,,Mềm,0,,,,
+双边立体声,498,是否单双耳,Âm thanh nổi song phương,âm thanh nổi song phương: 403; âm thanh nổi hai bên: 87; âm thanh nổi hai bên1: 2; âm thanh nổi hai bên2: 2; âm thanh nổi song phương2: 2,,Âm thanh nổi song phương,0,Âm thanh nổi hai bên,sai nghĩa: 'song phương' sai ngữ cảnh,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+明显部位已修剪,484,毛头/杂余线头是否修剪,Phần rõ ràng đã được cắt tỉa,phần rõ ràng đã được cắt tỉa: 205; các bộ phận lộ rõ đã được cắt tỉa: 173; những phần rõ ràng đã được cắt bớt: 50; những phần rõ ràng đã được cắt tỉa: 31; phần rõ ràng đã được cắt bớt: 25,,Phần rõ ràng đã được cắt tỉa,0,,,,
+吸湿排汗,483,材质功能,Hút ẩm thoát mồ hôi,hút ẩm thoát mồ hôi: 215; hút ẩm: 177; hút ẩm và thoát mồ hôi: 89,,Hút ẩm thoát mồ hôi,0,,,,
+TF卡,481,储存卡,Thẻ TF,thẻ tf: 481,,Thẻ TF,0,,,,
+几何图案,481,图案,Hoa văn hình học,hoa văn hình học: 274; họa tiết hình học: 112; mô hình hình học: 86; mẫu hình học: 8,,Hoa văn hình học,0,,,,
+客厅,479,收纳场景,Phòng khách,phòng khách: 478,,Phòng khách,0,,,,
+婴幼童(1~3岁，80~100cm),475,适合年龄段,"Trẻ sơ sinh và trẻ nhỏ (1~3 tuổi, 80~100cm)","trẻ sơ sinh và trẻ nhỏ (1~3 tuổi, 80~100cm): 251; trẻ sơ sinh (1 ~ 3 tuổi, 80 ~ 100cm): 178; trẻ sơ sinh và trẻ mới biết đi (1 ~ 3 tuổi, 80 ~ 100cm): 46",,"Trẻ sơ sinh và trẻ nhỏ (1~3 tuổi, 80~100cm)",0,,,,
+低帮(0-3cm),474,鞋帮高度,Cổ thấp (0-3cm),cổ thấp (0-3cm): 201; đế thấp (0-3cm): 121; đỉnh thấp (0-3cm): 64; thấp trên (0-3cm): 53; phần trên thấp (0-3cm): 34,,Cổ thấp (0-3cm),0,,,,
+中性,466,适用肤质,Trung tính,trung tính: 264; trung lập: 191,,Trung tính,0,,,,
+ins风,462,风格,phong cách ins,phong cách ins: 454; phong cách1: 8,,phong cách ins,0,Phong cách ins,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+合成革,459,鞋面材质,Da tổng hợp,da tổng hợp: 454,,Da tổng hợp,0,,,,
+简约风,456,风格,Phong cách tối giản,phong cách tối giản: 311; phong cách đơn giản: 141; sự sáng tạo: 1,,Phong cách tối giản,0,,,,
+福建,456,原产地,Phúc Kiến,phúc kiến: 456,,Phúc Kiến,0,,,,
+布,454,内里材质,Vải,vải: 451; vải2: 1,,Vải,0,,,,
+支持音乐,450,功能,Hỗ trợ âm nhạc,hỗ trợ âm nhạc: 449,,Hỗ trợ âm nhạc,0,,,,
+牛津布,446,材质,Vải Oxford,vải oxford: 439; vải oxford1: 1,,Vải Oxford,0,,,,
+桌上,443,收纳场景,Trên bàn,trên bàn: 399; bàn: 44,,Trên bàn,0,,,,
+杂物,440,适用范围,Đồ lặt vặt,đồ lặt vặt: 328; nhiều loại: 72; nhiều thứ: 34; khác: 4; linh tinh: 1,,Đồ lặt vặt,0,,,,
+尼龙,439,材质,Nylon,nylon: 436; nylon1: 1,,Nylon,0,,,,
+96%及以上,439,主面料成分的含量,96% trở lên,96% trở lên: 439,,96% trở lên,0,,,,
+书房,439,收纳场景,Phòng làm việc,phòng làm việc: 308; nghiên cứu: 131,,Phòng làm việc,0,,,,
+整理,437,功能,Sắp xếp,sắp xếp: 428; tổ chức: 8; sắp xếp1: 1,,Sắp xếp,0,,,,
+5-10元,437,价格段,5-10 nhân dân tệ,5-10 nhân dân tệ: 437,,5-10 nhân dân tệ,0,,,,
+基础大众,436,风格,Volkswagen cơ bản,volkswagen cơ bản: 342; khối lượng cơ bản: 58; cơ bản & phổ biến: 35; thị trường đại chúng cơ bản: 1,sai nghĩa (đọc tay),Phổ thông,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+宽口径,435,口径规格,Cỡ nòng rộng,cỡ nòng rộng: 181; miệng rộng: 159; đường kính rộng: 92,sai nghĩa (đọc tay),Miệng rộng,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+紫色,432,颜色,Màu tím,màu tím: 318; tím: 113; xanh quân đội: 1,,Màu tím,0,,,,
+散装,432,售卖方式,Số lượng lớn,số lượng lớn: 380; bán rời: 41; số lượng lớn1: 4; bao bì bên trong: 1,,Số lượng lớn,0,Bán rời,sai nghĩa: 售卖方式 散装 = hàng rời; 'số lượng lớn' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+证件袋,423,包内部结构,Túi đựng giấy tờ,túi đựng giấy tờ: 241; túi đựng tài liệu: 85; túi đựng giấy tờ tùy thân: 81; túi đựng id: 11; túi id: 3,,Túi đựng giấy tờ,0,,,,
+套装,422,元素,Bộ đồ,bộ đồ: 200; bộ: 121; bộ1: 45; bộ2: 40; đồ bộ: 9,,Bộ đồ,0,,,,
+夹层拉链袋,421,包内部结构,Túi khóa kéo xen kẽ,túi khóa kéo xen kẽ: 247; túi dây kéo nhiều lớp: 90; túi có khóa kéo nhiều lớp: 70; túi khóa kéo bánh sandwich: 7; túi khóa kéo nhiều lớp: 6,,Túi khóa kéo xen kẽ,0,Ngăn khóa kéo,sai nghĩa: 夹层 ở túi là ngăn; thống nhất với 'Số ngăn',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+防摔,420,功能,Chống rơi,chống rơi: 420,,Chống rơi,0,,,,
+商用,418,适用场景,Thương mại,thương mại: 355; dùng cho thương mại: 62,,Thương mại,0,,,,
+详见包装,415,制作工艺,Xem bao bì,xem bao bì: 415,,Xem bao bì,0,,,,
+亲肤,415,功能,Thân thiện với da,thân thiện với da: 273; thân thiện với làn da: 137,,Thân thiện với da,0,,,,
+长裤,414,裤长,Quần dài,quần dài: 216; quần: 197,,Quần dài,0,,,,
+2024年夏季,413,上市年份/季节,Mùa hè năm 2024,mùa hè năm 2024: 393; mùa hè 2024: 20,,Mùa hè năm 2024,0,,,,
+聚酯纤维,411,被面材质,Sợi polyester,sợi polyester: 398,,Sợi polyester,0,,,,
+跨境风潮,410,风格,Xu hướng xuyên biên giới,xu hướng xuyên biên giới: 409,,Xu hướng xuyên biên giới,0,,,,
+裤套装,407,套装类型,Bộ quần áo,bộ quần áo: 215; bộ quần: 192,,Bộ quần áo,0,Bộ quần,sai nghĩa: bộ có quần (khác 裙套装 bộ váy),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+化妆品,405,适用范围,Mỹ phẩm,mỹ phẩm: 405,,Mỹ phẩm,0,,,,
+文具,404,适用范围,Văn phòng phẩm,văn phòng phẩm: 404,,Văn phòng phẩm,0,,,,
+10米,402,传输范围,10 mét,10 mét: 202; 10m: 200,,10 mét,0,,,,
+黄色,400,颜色,màu vàng,màu vàng: 392; vàng: 6; mơ sâu: 1; màu đỏ: 1,,màu vàng,0,Màu vàng,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+米白色,397,颜色,Màu trắng be,màu trắng be: 182; màu trắng nhạt: 148; màu trắng ngà: 54; trắng nhạt: 12,,Màu trắng be,0,,,,
+普通密码锁,397,锁的类型,Khóa mật khẩu thông thường,khóa mật khẩu thông thường: 247; khóa kết hợp thông thường: 150,,Khóa mật khẩu thông thường,0,Khóa số thông thường,thống nhất: thống nhất thuật ngữ 'khóa số',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+通话功能,394,功能,Chức năng gọi,chức năng gọi: 388; chức năng gọi điện: 5,,Chức năng gọi,0,,,,
+弧形肩带,393,背负系统,Dây đeo vai hình vòng cung,dây đeo vai hình vòng cung: 218; dây đeo vai cong: 175,,Dây đeo vai hình vòng cung,0,,,,
+轻便,393,功能,Nhẹ nhàng,nhẹ nhàng: 206; nhẹ: 64; ánh sáng: 64; gọn nhẹ: 58,,Nhẹ nhàng,0,Gọn nhẹ,định dạng: 'nhẹ nhàng' là tính cách,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+180g(含)-250g(不含),392,克重,180g (bao gồm)-250g (không bao gồm),180g (bao gồm)-250g (không bao gồm): 263; 180g (đã bao gồm)-250g (độc quyền): 68; 180g (tính cả) - 250g (không tính): 26; 180g (đã bao gồm) -250g (độc quyền): 18; 180g (đã bao gồm)-250g (đã bao gồm): 9,,180g (bao gồm)-250g (không bao gồm),0,,,,
+植物花卉,391,图案,Thực vật và hoa,thực vật và hoa: 266; cây hoa: 112; cây và hoa: 12,,Thực vật và hoa,0,,,,
+出口,386,外贸类型,Xuất khẩu,xuất khẩu: 338; lối ra: 36; thoát: 12,,Xuất khẩu,0,,,,
+两件套,385,套装件数,Bộ hai món,bộ hai món: 181; bộ hai chiếc: 118; bộ hai mảnh: 54; bộ hai món1: 7; bộ hai món2: 7,,Bộ hai món,0,,,,
+简约,382,风格,Đơn giản,đơn giản: 378; tối giản: 3,,Đơn giản,0,,,,
+4-7天,381,最晚发货时间,4-7 ngày,4-7 ngày: 381,,4-7 ngày,0,,,,
+混合性,380,适用肤质,Hỗn hợp,hỗn hợp: 308; sự lai chung: 53; khả năng kết hợp: 14; phổ quát: 1,,Hỗn hợp,0,Da hỗn hợp,thống nhất: loại da,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+柔润肌肤,379,化妆品功效,Làm mềm da,làm mềm da: 257; da mềm mại: 121; chăm sóc sau khi tắm nắng: 1,,Làm mềm da,0,,,,
+超纤,378,内里材质,Siêu sợi,siêu sợi: 276; sợi nhỏ: 97; sợi siêu mịn: 1,,Siêu sợi,0,Sợi microfiber,sai nghĩa: 超纤 = vải sợi siêu mảnh (microfiber),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+街头潮流,377,风格,Sành điệu đường phố,sành điệu đường phố: 212; phong cách đường phố: 78; xu hướng đường phố: 51; thời trang đường phố: 36,,Sành điệu đường phố,0,Phong cách đường phố,định dạng: 'sành điệu đường phố' lạ,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+女士,375,适用人群,Nữ,nữ: 132; quý cô: 76; thưa bà: 66; bà: 52; quý bà: 18,,Nữ,0,,,,
+一级,373,级别,Cấp 1,cấp 1: 205; lớp một: 83; hạng nhất: 82,,Cấp 1,0,,,,
+1天,371,最快出货时间,1 ngày,1 ngày: 371,,1 ngày,0,,,,
+现代简约风,371,风格,Phong cách tối giản hiện đại,phong cách tối giản hiện đại: 187; phong cách hiện đại tối giản: 181,,Phong cách tối giản hiện đại,0,,,,
+纺织品类,370,鞋垫材质,Sản phẩm dệt may,sản phẩm dệt may: 178; loại dệt: 104; danh mục hàng dệt may: 49; danh mục dệt may: 22; dệt may: 17,,Sản phẩm dệt may,0,,,,
+拼接,367,流行元素,Nối,nối: 205; ghép nối: 158,,Nối,0,Phối ghép,định dạng: 'nối' thiếu nghĩa,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+玩具,364,适用范围,Đồ chơi,đồ chơi: 364,,Đồ chơi,0,,,,
+义乌,361,产地,Nghĩa Ô,nghĩa ô: 182; yiwu: 111; nhật bản: 43; yiwu (bằng tiếng trung: nghĩa ô): 1; yiwu (bằng tiếng việt: nghĩa ô): 1,,Nghĩa Ô,0,,,,
+超长续航,361,功能,Thời lượng pin siêu dài,thời lượng pin siêu dài: 180; tuổi thọ pin siêu dài: 108; tuổi thọ pin dài: 72,,Thời lượng pin siêu dài,0,,,,
+前后录像,360,功能,Video trước và sau,video trước và sau: 326; trước và sau khi ghi âm: 25; ghi trước và sau: 5; trước và sau video: 4,,Video trước và sau,0,Ghi hình trước sau,sai nghĩa: camera hành trình ghi hình hai đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+桌面收纳盒,357,产品类别,Hộp đựng đồ để bàn,hộp đựng đồ để bàn: 251; hộp lưu trữ máy tính để bàn: 105; hộp lưu trữ máy tính để bàn1: 1,,Hộp đựng đồ để bàn,0,,,,
+套头衫,356,闭合款式,Áo chui đầu,áo chui đầu: 297; áo thun: 57,,Áo chui đầu,0,,,,
+减负,354,功能,Giảm gánh nặng,giảm gánh nặng: 353; chống trộm: 1,,Giảm gánh nặng,0,Giảm tải,định dạng: ba lô giảm tải cho vai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+抗菌,354,功能,Kháng khuẩn,kháng khuẩn: 352; tản nhiệt: 1,,Kháng khuẩn,0,,,,
+泡沫洁面,352,起泡程度,Làm sạch bọt,làm sạch bọt: 227; sữa rửa mặt tạo bọt: 65; rửa mặt bằng bọt: 31; bọt làm sạch: 23; chất tẩy rửa bọt: 4,,Làm sạch bọt,0,Sữa rửa mặt tạo bọt,sai nghĩa: 'làm sạch bọt' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+5元以内,352,价格段,Trong vòng 5 nhân dân tệ,trong vòng 5 nhân dân tệ: 230; trong vòng 5 tệ: 122,,Trong vòng 5 nhân dân tệ,0,,,,
+阴凉干燥,350,储藏方法,Khô mát,"khô mát: 150; mát và khô: 78; mát mẻ, khô ráo: 73; mát mẻ và khô ráo: 40; thoáng mát và khô ráo: 8",,Khô mát,0,"Nơi khô ráo, thoáng mát",định dạng: cách ghi bảo quản thông dụng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+按键式,348,操作方式,Kiểu nút bấm,kiểu nút bấm: 195; loại nút: 153,,Kiểu nút bấm,0,,,,
+服装,346,礼盒内容,Quần áo,quần áo: 346,,Quần áo,0,,,,
+中国,343,产地,Trung Quốc,trung quốc: 292,,Trung Quốc,0,,,,
+家用,340,适用场景,Gia dụng,gia dụng: 174; dùng trong gia đình: 83; hộ gia đình: 74; sử dụng tại nhà: 7,,Gia dụng,0,,,,
+储物间,340,收纳场景,Phòng đựng đồ,phòng đựng đồ: 127; phòng kho: 119; phòng lưu trữ: 63; phòng chứa đồ: 31,,Phòng đựng đồ,0,,,,
+非智能,339,是否智能,không thông minh,không thông minh: 304,,không thông minh,0,Không thông minh,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+小,337,箱包大小,Nhỏ,nhỏ: 337,,Nhỏ,0,,,,
+干性,337,适用肤质,Khô,khô: 334,,Khô,0,Da khô,thống nhất: loại da,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+油性,336,适用肤质,Dầu,dầu: 332,,Dầu,0,Da dầu,thống nhất: loại da,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+套筒/套鞋,335,穿着方式,Tay áo/giày,tay áo/giày: 150; bọc giày: 141; tay áo/galoshes: 39; bộ tay áo/giày: 5,,Tay áo/giày,0,Kiểu xỏ chân,sai nghĩa: 穿着方式: xỏ chân; 'tay áo/giày' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+深层清洁,332,化妆品功效,Làm sạch sâu,làm sạch sâu: 329,,Làm sạch sâu,0,,,,
+单排扣,330,闭合款式,Một hàng cúc,một hàng cúc: 244; ngực đơn: 52; một bên ngực: 28; một ngực: 3; một hàng cúc1: 1,,Một hàng cúc,0,,,,
+免烫处理,328,工艺,Xử lý không cần ủi,xử lý không cần ủi: 240; không xử lý ủi: 34; không cần ủi: 34; lớp hoàn thiện chống nhăn: 18; xử lý chống nhăn: 2,,Xử lý không cần ủi,0,,,,
+全年,328,热卖月份,Quanh năm,quanh năm: 320; tất cả các năm: 5; cả năm: 1,,Quanh năm,0,,,,
+浅口,326,流行元素,Giày cổ thấp,giày cổ thấp: 162; miệng nông: 159; miệng nông1: 5,,Giày cổ thấp,0,Miệng nông,thống nhất: thống nhất với 浅口（7cm以下）,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+大,322,箱包大小,lớn,lớn: 322,,lớn,0,Lớn,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+时尚都市（24-35岁）,319,淘货类别,Thành phố thời trang (24-35 tuổi),thành phố thời trang (24-35 tuổi): 284; thời trang thành thị (24-35 tuổi): 29; thành thị thời trang (24-35 tuổi): 5; thời trang thành phố (24-35 tuổi): 1,,Thành phố thời trang (24-35 tuổi),0,Thời trang thành thị (24-35 tuổi),sai nghĩa: 'thành phố thời trang' sai trật tự,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+100%新料,319,塑料新料占比,100% vật liệu mới,100% vật liệu mới: 241; chất liệu mới 100%: 77,,100% vật liệu mới,0,,,,
+长爬,319,款式,Leo núi dài,leo núi dài: 181; leo dài: 132; leo dốc: 5; leo dốc dài: 1,sai nghĩa (đọc tay),Bộ liền thân,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+其他品牌,316,货源类型,Các thương hiệu khác,các thương hiệu khác: 189; thương hiệu khác: 125,,Các thương hiệu khác,0,,,,
+有盖,316,商品特性,Có nắp,có nắp: 215; được bảo hiểm: 48; được che phủ: 25; có nắp1: 1,,Có nắp,0,,,,
+气垫背带,310,背负系统,Dây đeo đệm khí,dây đeo đệm khí: 310,,Dây đeo đệm khí,0,,,,
+欧美,309,风格,Âu Mỹ,âu mỹ: 134; châu âu và châu mỹ: 91; châu âu và mỹ: 51; phong cách âu mỹ: 32,,Âu Mỹ,0,,,,
+带柄,309,是否带柄,Có tay cầm,có tay cầm: 165; tay cầm: 143; với tay cầm: 1,,Có tay cầm,0,,,,
+防盗,305,功能,Chống trộm,chống trộm: 304; giao diện usb: 1,,Chống trộm,0,,,,
+卡通动漫,305,图案,Hoạt hình,hoạt hình: 156; phim hoạt hình anime: 80; hoạt hình hoạt hình: 37; phim hoạt hình: 15; phim hoạt hình hoạt hình: 13,,Hoạt hình,0,,,,
+塑料/塑胶,305,材质,Nhựa/Nhựa,nhựa/nhựa: 219; nhựa: 86,,Nhựa/Nhựa,0,Nhựa,"định dạng: hai từ cùng nghĩa, bỏ lặp 'Nhựa/Nhựa'",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+皮革拼接,305,流行元素,Da ghép,da ghép: 138; phối da: 106; nối da: 32; khâu da: 26; đường khâu da: 3,,Da ghép,0,,,,
+硅胶,304,材质,Silicon,silicon: 173; silicone: 98; chất nén: 20; chất silicon: 12,,Silicon,0,Silicone,sai nghĩa: silicon là nguyên tố; vật liệu là silicone,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+动手动脑,303,能力培养,Tay động não,tay động não: 134; tự tay tự óc: 79; sử dụng bàn tay và trí não của bạn: 42; sử dụng bàn tay và bộ não của bạn: 42; sử dụng đôi tay và trí não của bạn: 2,,Tay động não,0,Vận động tay và trí não,sai nghĩa: 'tay động não' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+见详情,302,规格,Xem chi tiết,xem chi tiết: 302,,Xem chi tiết,0,,,,
+翻盖,302,开合方式,Lật nắp,lật nắp: 164; nắp gập: 116; bìa lật: 19,,Lật nắp,0,,,,
+交叉绑带,301,流行元素,Dây đai chéo,dây đai chéo: 126; dây buộc chéo: 92; dây đeo chéo: 83,,Dây đai chéo,0,,,,
+2024年秋季,298,上市年份季节,Mùa thu năm 2024,mùa thu năm 2024: 277; mùa thu 2024: 21,,Mùa thu năm 2024,0,,,,
+小方包,296,箱包潮流款式,Túi vuông nhỏ,túi vuông nhỏ: 296,,Túi vuông nhỏ,0,,,,
+药,296,适用范围,thuốc,thuốc: 295; y học: 1,,thuốc,0,Thuốc,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+咖啡色,295,颜色,Màu cà phê,màu cà phê: 172; nâu: 64; màu nâu: 58; màu xanh quân đội: 1,,Màu cà phê,0,,,,
+保暖,294,功能,Giữ ấm,giữ ấm: 290; ấm áp: 1,,Giữ ấm,0,,,,
+中口（7-11CM）,292,开口深度,Cổ trung (7-11CM),cổ trung (7-11cm): 156; miệng giữa (7-11cm): 124; miệng vừa (7-11cm): 12,,Cổ trung (7-11CM),0,Miệng vừa (7-11cm),thống nhất: thống nhất với 浅口 'Miệng nông',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+透明,290,颜色分类,Trong suốt,trong suốt: 229; minh bạch: 57; trong suốt1: 2; trong suốt2: 1,,Trong suốt,0,,,,
+厨房,289,收纳场景,Nhà bếp,nhà bếp: 274; bếp: 11; phòng bếp: 2,,Nhà bếp,0,,,,
+成年(18-59岁),287,适用对象,Người lớn (18-59 tuổi),người lớn (18-59 tuổi): 177; người trưởng thành (18-59 tuổi): 109,,Người lớn (18-59 tuổi),0,,,,
+20寸,285,尺寸,20 inch,20 inch: 193; 20inch: 92,,20 inch,0,,,,
+聚酯纤维（涤纶）,285,主面料成分,Sợi polyester (polyester),sợi polyester (polyester): 279; sợi polyester (polyester)2: 2; sợi polyester (polyester)1: 1,,Sợi polyester (polyester),0,,,,
+10-20元,285,价格段,10-20 nhân dân tệ,10-20 nhân dân tệ: 192; 10-20 tệ: 92,,10-20 nhân dân tệ,0,,,,
+银色,283,颜色,Màu bạc,màu bạc: 168; bạc: 114; xanh trái cây: 1,,Màu bạc,0,,,,
+广泛,283,适用范围,Rộng rãi,rộng rãi: 258; rộng: 25,,Rộng rãi,0,Đa dụng,định dạng: phạm vi dùng rộng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+普通人群,282,适用人群,người bình thường,người bình thường: 154; đám đông nói chung: 99; dân số nói chung: 22; những người bình thường: 1; người dân bình thường: 1,,người bình thường,0,Mọi đối tượng,định dạng: 'người bình thường' lạ trong ngữ cảnh,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+无吊牌,280,吊牌,Không có thẻ,không có thẻ: 257; không có thẻ bài: 19,,Không có thẻ,0,Không có thẻ treo,thống nhất: thống nhất tên 吊牌 'Thẻ treo',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+超轻,278,功能,Siêu nhẹ,siêu nhẹ: 278,,Siêu nhẹ,0,,,,
+24寸,278,尺寸,24 inch,24 inch: 198; 24inch: 80,,24 inch,0,,,,
+舒适,278,功能,Thoải mái,thoải mái: 277,,Thoải mái,0,,,,
+平底,278,鞋跟款式,Đế bằng,đế bằng: 181; đáy phẳng: 97,,Đế bằng,0,,,,
+中科蓝讯,277,芯片类型,Zhongke Lanxun,zhongke lanxun: 140; zhongke blue news: 127; trung kế lan xuân: 5; zhong kế lan tuyên: 3; trung kế lanxun: 1,,Zhongke Lanxun,0,,,,
+内贸,276,贸易属性,Thương mại nội địa,thương mại nội địa: 208; bán hàng nội địa: 68,,Thương mại nội địa,0,,,,
+酒红色,275,颜色,Màu đỏ rượu,màu đỏ rượu: 175; rượu vang đỏ: 74; màu đỏ tía: 25; màu đỏ: 1,,Màu đỏ rượu,0,,,,
+商务出行,274,适用场景,Đi công tác,đi công tác: 194; chuyến công tác: 74; du lịch kinh doanh: 6,,Đi công tác,0,,,,
+衣柜内,272,收纳场景,Bên trong tủ quần áo,bên trong tủ quần áo: 144; trong tủ quần áo: 128,,Bên trong tủ quần áo,0,,,,
+智力开发,272,能力培养,Phát triển trí tuệ,phát triển trí tuệ: 271,,Phát triển trí tuệ,0,,,,
+撞色,271,流行元素,Màu tương phản,màu tương phản: 254; màu sắc tương phản: 9; phối màu tương phản: 8,,Màu tương phản,0,,,,
+磁吸,271,功能,Hút từ tính,hút từ tính: 165; hút từ: 103; hút từ tính2: 1; từ tính: 1,,Hút từ tính,0,,,,
+袜子,271,适用范围,Tất,tất: 241; tất chân: 30,,Tất,0,,,,
+500g（不含）以下,271,克重,Dưới 500g (không bao gồm),dưới 500g (không bao gồm): 269; dưới 500g (độc quyền): 1,,Dưới 500g (không bao gồm),0,,,,
+互动玩具,271,能力培养,Đồ chơi tương tác,đồ chơi tương tác: 271,,Đồ chơi tương tác,0,,,,
+生活防水,270,防水性能,Cuộc sống không thấm nước,cuộc sống không thấm nước: 157; chống thấm nước trọn đời: 63; chống thấm hàng ngày: 35; chống thấm trọn đời: 10; chống nước sinh hoạt: 5,sai nghĩa (đọc tay),Chống nước sinh hoạt,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+语音控制,263,功能,Điều khiển bằng giọng nói,điều khiển bằng giọng nói: 262,,Điều khiển bằng giọng nói,0,,,,
+私模,263,模具类型,Khuôn riêng,khuôn riêng: 151; người mẫu riêng: 59; mô hình tư nhân: 40; mô hình riêng tư: 10; mô hình riêng: 3,,Khuôn riêng,0,,,,
+男士,262,适用人群,Nam giới,nam giới: 173; đàn ông: 51; người đàn ông: 23; nam: 10; các bạn nữ: 1,,Nam giới,0,,,,
+彩盒,260,包装方式,Hộp màu,hộp màu: 260,,Hộp màu,0,,,,
+实拍有模特,260,图片实拍,Ảnh thật có người mẫu,ảnh thật có người mẫu: 150; có mô hình thực tế: 65; ảnh thật với người mẫu: 42; ảnh thật với các mẫu: 2,sai nghĩa (đọc tay),"Ảnh thật, có người mẫu",1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+抽屉内,259,收纳场景,Bên trong ngăn kéo,bên trong ngăn kéo: 168; trong ngăn kéo: 88; ngăn kéo bên trong: 3,,Bên trong ngăn kéo,0,,,,
+抓握,258,能力培养,Kẹp nắm,kẹp nắm: 115; kẹp giữ: 74; tay cầm: 45; nắm bắt: 23,,Kẹp nắm,0,Cầm nắm,sai nghĩa: kỹ năng đồ chơi: cầm nắm,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+含糖,257,是否含糖,Có đường,có đường: 122; đường: 55; chứa đường: 51; có chứa đường: 29,,Có đường,0,,,,
+儿童（4-6岁）,257,适用年龄,Trẻ em (4-6 tuổi),trẻ em (4-6 tuổi): 257,,Trẻ em (4-6 tuổi),0,,,,
+磨毛,255,织造工艺,Lông mài,lông mài: 105; chải lông: 76; chải: 38; đánh răng: 20; đánh bóng: 10,sai nghĩa (đọc tay),Vải chải lông,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+深灰色,254,颜色,Màu xám đậm,màu xám đậm: 221; màu xám đen: 31; màu xanh nước hồ: 1; xám đậm: 1,,Màu xám đậm,0,,,,
+印花/印染,252,工艺,In/in và nhuộm,in/in và nhuộm: 178; in/nhuộm: 59; in ấn/nhuộm in: 9; in ấn/nhuộm: 3; in ấn/in và nhuộm: 2,,In/in và nhuộm,0,In/nhuộm,định dạng: bỏ lặp,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+遥控器,251,适用范围,Điều khiển từ xa,điều khiển từ xa: 251,,Điều khiển từ xa,0,,,,
+耳机线/电线,251,适用范围,Dây/dây tai nghe,dây/dây tai nghe: 111; cáp/dây tai nghe: 78; dây tai nghe/dây điện: 62,,Dây/dây tai nghe,0,Dây tai nghe/dây điện,"sai nghĩa: tên tạm đảo, lặp 'dây'",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+14岁以上的玩具,250,3C配置类别,Đồ chơi dành cho người trên 14 tuổi,đồ chơi dành cho người trên 14 tuổi: 89; đồ chơi dành cho lứa tuổi từ 14 trở lên: 77; đồ chơi trên 14 tuổi: 63; đồ chơi dành cho lứa tuổi 14+: 15; đồ chơi dành cho trẻ từ 14 tuổi trở lên: 3,,Đồ chơi dành cho người trên 14 tuổi,0,,,,
+不带柄,250,是否带柄,Không có tay cầm,không có tay cầm: 141; không có cán: 109,,Không có tay cầm,0,,,,
+青年（15-35岁）,249,适用年龄,Thanh niên (15-35 tuổi),thanh niên (15-35 tuổi): 246,,Thanh niên (15-35 tuổi),0,,,,
+停车监控,247,功能,Giám sát bãi đậu xe,giám sát bãi đậu xe: 242; giám sát đỗ xe: 5,,Giám sát bãi đậu xe,0,Giám sát khi đỗ xe,"sai nghĩa: camera giám sát lúc xe đỗ, không phải bãi đỗ",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+12个月,246,保质期,12 tháng,12 tháng: 245,,12 tháng,0,,,,
+可叠加,246,商品特性,Có thể xếp chồng lên nhau,có thể xếp chồng lên nhau: 158; có thể xếp chồng: 87,,Có thể xếp chồng lên nhau,0,,,,
+4-8小时,245,续航时间,4-8 giờ,4-8 giờ: 245,,4-8 giờ,0,,,,
+26寸,244,尺寸,26 inch,26 inch: 172; 26inch: 72,,26 inch,0,,,,
+衣物,244,适用范围,Quần áo,quần áo: 244,,Quần áo,0,,,,
+立体袋,243,外袋种类,Túi ba chiều,túi ba chiều: 242,,Túi ba chiều,0,Túi hộp,sai nghĩa: túi may nổi (túi hộp),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+公模,243,模具类型,Khuôn mẫu,khuôn mẫu: 106; mô hình công cộng: 78; mô hình công khai: 54; mô hình nam: 5,,Khuôn mẫu,0,Khuôn chung,sai nghĩa: khuôn dùng chung (đối lập 私模 khuôn riêng),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+亲子交流,243,能力培养,Giao tiếp cha mẹ-con cái,giao tiếp cha mẹ-con cái: 113; giao lưu cha mẹ và con cái: 66; giao tiếp giữa cha mẹ và con cái: 61; giao tiếp cha mẹ và con cái: 3,,Giao tiếp cha mẹ-con cái,0,,,,
+包装,242,售卖方式,Đóng gói,đóng gói: 196; gói: 23; bao bì: 19,,Đóng gói,0,,,,
+内衣,242,适用范围,Đồ lót,đồ lót: 242,,Đồ lót,0,,,,
+不限,241,适用人群,Không giới hạn,không giới hạn: 241,,Không giới hạn,0,,,,
+可爱,241,元素,Dễ thương,dễ thương: 234; đáng yêu: 7,,Dễ thương,0,,,,
+杂志,241,适用范围,Tạp chí,tạp chí: 241,,Tạp chí,0,,,,
+兴趣培养,240,能力培养,Nuôi dưỡng sở thích,nuôi dưỡng sở thích: 168; phát triển sở thích: 66; rèn luyện sở thích: 6,,Nuôi dưỡng sở thích,0,,,,
+大号,239,规格,Cỡ lớn,cỡ lớn: 88; cỡ to: 66; lớn: 63; kích thước lớn: 22,,Cỡ lớn,0,,,,
+纸巾,239,适用范围,Khăn giấy,khăn giấy: 233; mô: 6,,Khăn giấy,0,,,,
+提亮肤色,238,化妆品功效,Làm sáng màu da,làm sáng màu da: 156; làm sáng tông màu da: 81,,Làm sáng màu da,0,,,,
+防磨,238,功能,Chống mài mòn,chống mài mòn: 238,,Chống mài mòn,0,Chống cọ xát,sai nghĩa: phân biệt với 耐磨 chống mài mòn,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+无糖,238,是否含糖,Không đường,không đường: 237; không có đường: 1,,Không đường,0,,,,
+粉红色,237,颜色,Màu hồng,màu hồng: 194; hồng: 42; màu nâu đậm: 1,,Màu hồng,0,,,,
+少儿（0-14岁）,237,适用年龄,Trẻ em (0-14 tuổi),trẻ em (0-14 tuổi): 234,,Trẻ em (0-14 tuổi),0,,,,
+安徽,236,原产地,An Huy,an huy: 232; anhui: 4,,An Huy,0,,,,
+手眼协调,236,能力培养,Phối hợp tay mắt,phối hợp tay mắt: 236,,Phối hợp tay mắt,0,,,,
+单件,234,组合形式,Một chiếc,một chiếc: 133; mảnh đơn: 44; một mặt hàng: 27; mảnh duy nhất: 21; một mảnh: 9,,Một chiếc,0,,,,
+倒车影像,234,功能,Hình ảnh lùi xe,hình ảnh lùi xe: 140; đảo ngược hình ảnh: 66; hình ảnh ngược: 21; hình ảnh đảo ngược: 5; ảnh đảo ngược: 2,,Hình ảnh lùi xe,0,Camera lùi,sai nghĩa: 'hình ảnh lùi xe' dịch sát,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+视觉,234,能力培养,Tầm nhìn,tầm nhìn: 124; thị giác: 102; trực quan: 7,,Tầm nhìn,0,Thị giác,"sai nghĩa: kỹ năng giác quan, 'tầm nhìn' sai",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+卫生间,233,收纳场景,Phòng tắm,phòng tắm: 145; nhà vệ sinh: 88,,Phòng tắm,0,,,,
+40支,232,面料支数,40 sợi,40 sợi: 109; 40 que: 64; 40 miếng: 29; 40 chiếc: 28,,40 sợi,0,Chi số 40,sai nghĩa: 支 = chi số sợi; 'sợi/que/miếng' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+杏色,231,颜色,Màu mơ,màu mơ: 123; mơ: 54; quả mơ: 27; màu be: 27,,Màu mơ,0,,,,
+老爹鞋,230,产品类别,giày bố,giày bố: 77; giày dad shoes: 74; giày bố già: 73,,giày bố,0,Giày bố,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+运动鞋,228,款式,Giày thể thao,giày thể thao: 227,,Giày thể thao,0,,,,
+浴室,226,收纳场景,Phòng tắm,phòng tắm: 225,,Phòng tắm,0,,,,
+弧形,225,形状,Hình vòng cung,hình vòng cung: 178; cong: 45; con đường cong: 1,,Hình vòng cung,0,,,,
+运动风,224,风格,Phong cách thể thao,phong cách thể thao: 224,,Phong cách thể thao,0,,,,
+手机,224,适用范围,Điện thoại di động,điện thoại di động: 162; điện thoại: 62,,Điện thoại di động,0,,,,
+链条,224,流行元素,Dây xích,dây xích: 131; dây chuyền: 69; chuỗi: 24,,Dây xích,0,,,,
+2025年冬季,224,上市年份季节,Mùa đông năm 2025,mùa đông năm 2025: 222; mùa đông 2025: 2,,Mùa đông năm 2025,0,,,,
+简装系列,224,包装系列,Dòng đơn giản,dòng đơn giản: 114; loạt đơn giản: 55; dòng trang trí đơn giản: 48; dòng trang phục đơn giản: 4; dòng sản phẩm trang trí đơn giản: 3,,Dòng đơn giản,0,Dòng bao bì đơn giản,sai nghĩa: 包装系列 = dòng bao bì,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+餐厅,224,收纳场景,Nhà hàng,nhà hàng: 224,,Nhà hàng,0,Phòng ăn,sai nghĩa: 收纳场景 = vị trí trong nhà; 'nhà hàng' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+夜视加强,223,功能,Tăng cường tầm nhìn ban đêm,tăng cường tầm nhìn ban đêm: 149; tầm nhìn ban đêm nâng cao: 74,,Tăng cường tầm nhìn ban đêm,0,,,,
+塑胶,221,鞋底材质,Nhựa,nhựa: 220,,Nhựa,0,,,,
+咖色,218,颜色,Màu cà phê,màu cà phê: 139; màu nâu: 45; màu nâu cà phê: 27; nâu: 7,,Màu cà phê,0,,,,
+日常护理,217,使用场景,chăm sóc hàng ngày,chăm sóc hàng ngày: 174,,chăm sóc hàng ngày,0,Chăm sóc hàng ngày,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+修身型,214,版型,Ôm vừa vặn,ôm vừa vặn: 73; dáng thon thả: 67; vừa vặn: 38; dáng ôm: 24; mỏng vừa vặn: 9,,Ôm vừa vặn,0,Dáng ôm,định dạng: 版型,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+近期,214,生产日期,Gần đây,gần đây: 214,,Gần đây,0,,,,
+12个月以上,214,保质期,12 tháng trở lên,12 tháng trở lên: 194; hơn 12 tháng: 18; trên 12 tháng: 1,,12 tháng trở lên,0,,,,
+情感,213,能力培养,Cảm xúc,cảm xúc: 213,,Cảm xúc,0,,,,
+其他能力培养,213,能力培养,Đào tạo năng lực khác,đào tạo năng lực khác: 96; phát triển các năng lực khác: 63; phát triển khả năng khác: 54,,Đào tạo năng lực khác,0,Kỹ năng khác,định dạng: thống nhất tên 'Phát triển kỹ năng',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+小白鞋,213,款式,Giày trắng,giày trắng: 159; giày trắng nhỏ: 44; giày thể thao màu trắng: 10,,Giày trắng,0,,,,
+紧致,212,化妆品功效,Săn chắc,săn chắc: 123; chặt chẽ: 49; chặt: 28; công ty: 6; chắc chắn: 4,,Săn chắc,0,,,,
+浙江台州,211,产地,"Thái Châu, Chiết Giang","thái châu, chiết giang: 110; chợp châu, chiết giang: 77; tai châu, chiết giang: 22; taizhou, chiết giang: 2",,"Thái Châu, Chiết Giang",0,"Đài Châu, Chiết Giang",sai nghĩa: 台州 = Đài Châu (bảng địa danh),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+帆布,211,材质,Vải bố,vải bố: 107; vải: 42; vải bạt: 35; vải canvas: 27,,Vải bố,0,,,,
+双根,211,肩带根数,Rễ đôi,rễ đôi: 181; gốc kép: 28; rễ kép: 1; gốc đôi: 1,sai nghĩa (đọc tay),Hai dây,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+22寸,210,尺寸,22 inch,22 inch: 151; 22inch: 59,,22 inch,0,,,,
+轻奢风,209,风格,Phong cách sang trọng nhẹ nhàng,phong cách sang trọng nhẹ nhàng: 208; phong cách tối giản: 1,,Phong cách sang trọng nhẹ nhàng,0,,,,
+国产,208,是否进口,Trong nước,trong nước: 137; sản xuất trong nước: 68; nội địa: 3,,Trong nước,0,Hàng nội địa,định dạng: thống nhất bảng từ chung,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+文胸,208,适用范围,Áo ngực,áo ngực: 208,,Áo ngực,0,,,,
+入耳式,207,使用方式,Trong tai,trong tai: 109; kiểu nhét tai: 97,,Trong tai,0,Nhét tai,định dạng: kiểu tai nghe,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+感官,207,能力培养,cảm giác,cảm giác: 117; giác quan: 89,,cảm giác,0,Cảm giác,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+真皮,206,材质,Da thật,da thật: 205; da thật1: 1,,Da thật,0,,,,
+粗跟,206,鞋跟形状,Gót thô,gót thô: 137; gót chân dày: 53; gót vuông: 11; gót dày: 4; gót thô2: 1,,Gót thô,0,Gót to,sai nghĩa: 'gót thô' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+不支持,205,支持订制,không được hỗ trợ,không được hỗ trợ: 123; không hỗ trợ: 81,,không được hỗ trợ,0,Không được hỗ trợ,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+16英寸,205,容纳电脑尺寸,16 inch,16 inch: 127; 16inch: 78,,16 inch,0,,,,
+可登机,205,功能,Có thể lên máy,có thể lên máy: 99; có chỗ ở: 34; có thể lên tàu: 31; có chỗ lên máy bay: 19; có thể tham gia: 12,,Có thể lên máy,0,Mang lên máy bay được,sai nghĩa: vali xách tay lên máy bay,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+控油,204,化妆品功效,Kiểm soát dầu,kiểm soát dầu: 203,,Kiểm soát dầu,0,,,,
+春秋季,203,适合季节,Mùa xuân thu,mùa xuân thu: 121; mùa xuân mùa thu: 43; mùa xuân và mùa thu: 37; xuân và thu: 2,,Mùa xuân thu,0,,,,
+欧美复古,202,风格,Âu Mỹ cổ điển,âu mỹ cổ điển: 132; phong cách retro âu mỹ: 35; phong cách retro châu âu và mỹ: 33; retro châu âu và mỹ: 2,,Âu Mỹ cổ điển,0,,,,
+汽车,201,收纳场景,Xe ô tô,xe ô tô: 94; ô tô: 63; xe hơi: 44,,Xe ô tô,0,,,,
+休闲风,199,风格,Phong cách giản dị,phong cách giản dị: 110; phong cách thường ngày: 89,,Phong cách giản dị,0,,,,
+杰理,199,芯片类型,Jie Li,jie li: 120; jerry: 79,,Jie Li,0,Jieli,định dạng: tên hãng chip (pinyin),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+橙色,198,颜色,Màu cam,màu cam: 103; cam: 67; quả cam: 28,,Màu cam,0,,,,
+防震,198,功能,Chống sốc,chống sốc: 118; chống rung: 79,,Chống sốc,0,,,,
+合体型,198,版型,Loại vừa vặn,loại vừa vặn: 123; được trang bị: 32; loại trang bị: 21; loại kết hợp: 17; đã lắp: 5,,Loại vừa vặn,0,Dáng vừa,định dạng: 版型,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+单鞋,197,款式,Giày bệt,giày bệt: 67; giày một lớp: 64; giày đơn: 27; căn hộ: 22; giày bệt2: 8,,Giày bệt,0,,,,
+数显屏幕,196,功能,Màn hình hiển thị kỹ thuật số,màn hình hiển thị kỹ thuật số: 196,,Màn hình hiển thị kỹ thuật số,0,,,,
+板鞋,196,款式,Giày đế bằng1,giày đế bằng1: 79; giày ván: 41; giày đế bằng: 32; giày ván1: 15; giày thể thao1: 12,,Giày đế bằng1,0,Giày đế bằng,định dạng: bỏ số đuôi thừa 'Giày đế bằng1',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+防尘,195,功能,Chống bụi,chống bụi: 195,,Chống bụi,0,,,,
+毛衣,193,适用范围,Áo len,áo len: 193,,Áo len,0,,,,
+不限季节,193,适合季节,Không giới hạn mùa,không giới hạn mùa: 190; không có giới hạn mùa: 3,,Không giới hạn mùa,0,,,,
+28寸,191,尺寸,28 inch,28 inch: 135; 28inch: 56,,28 inch,0,,,,
+包盖式,190,开盖方式,Kiểu bao bọc,kiểu bao bọc: 102; loại bìa: 40; được bảo hiểm: 36; được che phủ: 12,,Kiểu bao bọc,0,Kiểu nắp phủ,sai nghĩa: 'kiểu bao bọc' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+托特包,190,箱包潮流款式,Túi tote,túi tote: 150; túi đựng đồ: 39,,Túi tote,0,,,,
+抗指纹,188,功能,Chống dấu vân tay,chống dấu vân tay: 115; chống vân tay: 73,,Chống dấu vân tay,0,,,,
+特级,186,级别,Đặc biệt,đặc biệt: 86; cao cấp: 40; hạng đặc biệt: 29; lớp đặc biệt: 23; cấp đặc biệt: 6,,Đặc biệt,0,,,,
+中小童(3~8岁，100~140cm),186,适合年龄段,"Trẻ em (3~8 tuổi, 100~140cm)","trẻ em (3~8 tuổi, 100~140cm): 112; trẻ em vừa và nhỏ (3 ~ 8 tuổi, 100 ~ 140cm): 71; trẻ em (3 ~ 8 tuổi, 100 ~ 140cm): 3",,"Trẻ em (3~8 tuổi, 100~140cm)",0,,,,
+动物,185,图案,Động vật,động vật: 185,,Động vật,0,,,,
+多用途,185,功能,Đa năng,đa năng: 182; đa mục đích: 3,,Đa năng,0,,,,
+18个月,185,保质期,18 tháng,18 tháng: 185,,18 tháng,0,,,,
+移动侦测,184,功能,Phát hiện chuyển động,phát hiện chuyển động: 181; phát hiện di động: 3,,Phát hiện chuyển động,0,,,,
+色牢度高,184,材质功能,Độ bền màu cao,độ bền màu cao: 184,,Độ bền màu cao,0,,,,
+密封,184,储藏方法,con dấu,con dấu: 60; kín: 60; niêm phong: 55; bị niêm phong: 6; bịt kín: 3,,con dấu,0,Đậy kín,sai nghĩa: 'con dấu' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+日常保湿,183,使用场景,Dưỡng ẩm hàng ngày,dưỡng ẩm hàng ngày: 159,,Dưỡng ẩm hàng ngày,0,,,,
+化纤类混纺,183,面料名称,Sợi hóa học pha trộn,sợi hóa học pha trộn: 121; hỗn hợp sợi hóa học: 62,,Sợi hóa học pha trộn,0,Sợi tổng hợp pha trộn,định dạng: thống nhất 化纤 = sợi tổng hợp,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+免安装,183,功能,Không cần cài đặt,không cần cài đặt: 181,,Không cần cài đặt,0,Không cần lắp đặt,sai nghĩa: 'cài đặt' dùng cho phần mềm,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+斜纹,183,织造工艺,Vân chéo,vân chéo: 73; vải dệt chéo: 49; vải chéo: 38; twill: 17; chéo: 5,,Vân chéo,0,,,,
+前后双录,182,镜头数量,Ghi kép trước và sau,ghi kép trước và sau: 103; ghi âm kép trước và sau: 71; ghi âm phía trước và phía sau đồng thời: 5,,Ghi kép trước và sau,0,,,,
+舒缓肌肤,181,化妆品功效,Làm dịu da,làm dịu da: 180; làm sáng tông màu da: 1,,Làm dịu da,0,,,,
+可收纳,180,功能,Có thể lưu trữ,có thể lưu trữ: 97; có thể được lưu trữ: 80; giảm gánh nặng: 1,,Có thể lưu trữ,0,Có thể cất gọn,định dạng: rõ nghĩa hơn,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+速干,179,功能,Nhanh khô,nhanh khô: 153; làm khô nhanh: 14; sấy khô nhanh: 11,,Nhanh khô,0,,,,
+无线耳机,178,耳机类别,tai nghe không dây,tai nghe không dây: 174,,tai nghe không dây,0,Tai nghe không dây,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+首饰,178,适用范围,Trang sức,trang sức: 107; đồ trang sức: 70,,Trang sức,0,,,,
+袋装,177,包装形式,túi,túi: 99; đóng gói trong túi: 38; đóng gói: 18; đóng gói1: 13; đóng gói2: 1,,túi,0,Đóng túi,định dạng: hình thức đóng gói,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+日常休闲风,176,风格,"Phong cách thường ngày, thoải mái","phong cách thường ngày, thoải mái: 111; phong cách giản dị hàng ngày: 64",,"Phong cách thường ngày, thoải mái",0,,,,
+四季,175,适合季节,Bốn mùa,bốn mùa: 174,,Bốn mùa,0,,,,
+无袖,175,袖长,Không tay,không tay: 172; không tay áo: 2,,Không tay,0,,,,
+碰撞感应,173,功能,Cảm ứng va chạm,cảm ứng va chạm: 95; cảm biến va chạm: 78,,Cảm ứng va chạm,0,,,,
+水洗,173,织造工艺,Giặt nước,giặt nước: 115; có thể giặt được: 16; rửa bằng nước: 15; rửa sạch: 9; rửa: 6,,Giặt nước,0,Xử lý giặt,sai nghĩa: công nghệ vải giặt xử lý (wash),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+注塑,173,材质工艺,Đúc phun,đúc phun: 69; ép phun: 63; ép nhựa: 34; đúc khuôn ép phun: 2; chống cháy nổ: 1,,Đúc phun,0,,,,
+长绒棉,173,材质,Bông sợi dài,bông sợi dài: 106; bông nhung dài: 60,,Bông sợi dài,0,,,,
+格纹,172,流行元素,Kẻ caro,kẻ caro: 88; kẻ sọc: 82; mô hình ca rô: 2,,Kẻ caro,0,,,,
+磁扣,172,开盖方式,Khuy từ tính,khuy từ tính: 89; khóa từ: 43; khóa từ tính: 40,,Khuy từ tính,0,Khóa nam châm,định dạng: 'khuy từ tính' lạ,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+吸湿透气,171,功能,"Hút ẩm, thoáng khí","hút ẩm, thoáng khí: 108; hút ẩm và thoáng khí: 57; hấp thụ độ ẩm và thoáng khí: 3",,"Hút ẩm, thoáng khí",0,,,,
+20L以下,169,容量,Dưới 20L,dưới 20l: 169,,Dưới 20L,0,,,,
+涤棉,169,里料质地,Bông polyester,bông polyester: 118; vải pha polyester và cotton: 48; polyester: 2,,Bông polyester,0,Cotton pha polyester,sai nghĩa: 'bông polyester' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+甘油,168,成分,glycerin,glycerin: 141; glyxerin: 21,,glycerin,0,Glycerin,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+8小时以上,168,续航时间,8 giờ trở lên,8 giờ trở lên: 88; hơn 8 giờ: 80,,8 giờ trở lên,0,,,,
+扩容,167,功能,Mở rộng,mở rộng: 139; mở rộng công suất: 28,,Mở rộng,0,,,,
+8-15天,167,最晚发货时间,8-15 ngày,8-15 ngày: 167,,8-15 ngày,0,,,,
+冷藏,167,储藏方法,Làm lạnh,làm lạnh: 76; tủ lạnh: 75; đã làm lạnh: 14; được làm lạnh: 2,,Làm lạnh,0,Bảo quản lạnh,định dạng: cách ghi bảo quản,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+阳台,165,收纳场景,Ban công,ban công: 164,,Ban công,0,,,,
+洗面奶,164,洁面分类,sữa rửa mặt,sữa rửa mặt: 143; chất tẩy rửa mặt: 4; sữa rửa mặt2: 1,,sữa rửa mặt,0,Sữa rửa mặt,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+降噪,163,功能,Giảm tiếng ồn,giảm tiếng ồn: 163,,Giảm tiếng ồn,0,,,,
+金色,162,颜色,vàng,vàng: 81; màu vàng: 69; màu vàng kim: 11; màu sô cô la: 1,,vàng,0,Màu vàng kim,sai nghĩa: phân biệt với 黄色 màu vàng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+卡其,162,颜色,Kaki,kaki: 126; màu kaki: 24; quần kaki: 10; màu đen: 1; màu xanh nhạt: 1,,Kaki,0,,,,
+格子,162,图案,Kẻ sọc,kẻ sọc: 67; ca rô: 62; lưới: 33,,Kẻ sọc,0,Kẻ ô,"sai nghĩa: 格子 = caro, không phải 'kẻ sọc'",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+创意设计,161,风格,Thiết kế sáng tạo,thiết kế sáng tạo: 161,,Thiết kế sáng tạo,0,,,,
+磨砂,160,工艺,mờ,mờ: 104; nhám: 53,,mờ,0,Nhám mờ,định dạng: bề mặt nhám,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+其他功效,160,化妆品功效,Tác dụng khác,tác dụng khác: 89; các hiệu ứng khác: 38; hiệu ứng khác: 27; các chức năng khác: 6,,Tác dụng khác,0,,,,
+潮范,160,元素,Thời thượng,thời thượng: 74; mẫu sành điệu: 57; phong cách hợp thời trang: 21; phong cách thời thượng: 7; kiểu sành điệu: 1,,Thời thượng,0,,,,
+苹果,159,适用机型,táo,táo: 158,,táo,0,Táo,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+懒人鞋,159,产品类别,Giày lười,giày lười: 156; giày lười2: 2; giày lười biếng: 1,,Giày lười,0,,,,
+河北保定,159,产地,"Bảo Định, Hà Bắc","bảo định, hà bắc: 149; bắc định, hà bắc: 7; bắc đỉnh, hà bắc: 2; hà bắc baoding: 1",,"Bảo Định, Hà Bắc",0,,,,
+可折叠,158,商品特性,Có thể gấp gọn,có thể gấp gọn: 116; có thể gập lại: 42,,Có thể gấp gọn,0,,,,
+15英寸,158,容纳电脑尺寸,15 inch,15 inch: 92; 15inch: 66,,15 inch,0,,,,
+头层牛皮,157,皮质特征,Da bò lớp đầu,da bò lớp đầu: 107; da bò lớp đầu tiên: 29; lớp da bò đầu tiên: 11; da bò lớp một: 1; da bò lớp đầu1: 1,,Da bò lớp đầu,0,,,,
+套脚,156,闭合方式,Giày lười,giày lười: 60; giày cao gót: 49; bộ chân: 42; giày cao gót2: 2; xỏ chân: 2,,Giày lười,0,Xỏ chân,sai nghĩa: 闭合方式: xỏ chân; 'giày lười' là loại giày,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+米色,155,颜色,Màu be,màu be: 155,,Màu be,0,,,,
+不支持同时连接两部手机,155,是否同时支持两部手机,Không hỗ trợ kết nối hai điện thoại di động cùng lúc,không hỗ trợ kết nối hai điện thoại di động cùng lúc: 62; không hỗ trợ kết nối đồng thời hai điện thoại di động: 45; không hỗ trợ kết nối hai điện thoại di động cùng một lúc: 44,,Không hỗ trợ kết nối hai điện thoại di động cùng lúc,0,,,,
+听觉,155,能力培养,Thính giác,thính giác: 154,,Thính giác,0,,,,
+直身,155,形状,Thẳng,thẳng: 98; thân thẳng: 52; cơ thể thẳng: 4,,Thẳng,0,,,,
+2023年春季,154,上市年份季节,Mùa xuân năm 2023,mùa xuân năm 2023: 148; mùa xuân 2023: 6,,Mùa xuân năm 2023,0,,,,
+尖头,154,鞋头形状,Mũi nhọn,mũi nhọn: 106; nhọn: 48,,Mũi nhọn,0,,,,
+标准口径,151,口径规格,Cỡ nòng tiêu chuẩn,cỡ nòng tiêu chuẩn: 95; đường kính tiêu chuẩn: 55,,Cỡ nòng tiêu chuẩn,0,Miệng tiêu chuẩn,thống nhất: thống nhất 宽口径 'Miệng rộng',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+洗衣房,150,收纳场景,Phòng giặt,phòng giặt: 93; phòng giặt ủi: 57,,Phòng giặt,0,,,,
+花园,150,收纳场景,Vườn,vườn: 99; vườn hoa: 47; sân vườn: 4,,Vườn,0,,,,
+浅灰色,149,颜色,Màu xám nhạt,màu xám nhạt: 147; xám nhạt: 1,,Màu xám nhạt,0,,,,
+挖袋,149,外袋种类,Túi đào,túi đào: 148,,Túi đào,0,Túi mổ,sai nghĩa: 'túi đào' sai (welt pocket),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+中号,149,规格,Cỡ trung,cỡ trung: 63; cỡ vừa: 44; trung bình: 23; kích thước trung bình: 19,,Cỡ trung,0,,,,
+2023年夏季,148,上市年份季节,Mùa hè năm 2023,mùa hè năm 2023: 142; mùa hè 2023: 6,,Mùa hè năm 2023,0,,,,
+USB接口,148,功能,Giao diện USB,giao diện usb: 147,,Giao diện USB,0,Cổng USB,sai nghĩa: 接口 phần cứng = cổng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+2026年春,147,产品上市时间,Mùa xuân năm 2026,mùa xuân năm 2026: 147,,Mùa xuân năm 2026,0,,,,
+北欧风,147,风格,phong cách Bắc Âu,phong cách bắc âu: 147,,phong cách Bắc Âu,0,Phong cách Bắc Âu,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+日式,147,风格,Phong cách Nhật Bản,phong cách nhật bản: 78; kiểu nhật: 69,,Phong cách Nhật Bản,0,,,,
+清新甜美,146,风格,Tươi mát ngọt ngào,tươi mát ngọt ngào: 96; tươi mát và ngọt ngào: 41; tươi và ngọt ngào: 6; tươi mới và ngọt ngào: 3,,Tươi mát ngọt ngào,0,,,,
+收缩毛孔,145,化妆品功效,Thu nhỏ lỗ chân lông,thu nhỏ lỗ chân lông: 145,,Thu nhỏ lỗ chân lông,0,,,,
+落肩袖,145,袖型,Tay áo trễ vai,tay áo trễ vai: 129; tay áo thả vai: 12; tay áo rớt vai: 3; tay áo vai bị rơi: 1,,Tay áo trễ vai,0,,,,
+藏青色,144,颜色,Màu xanh navy,màu xanh navy: 86; màu xanh hải quân: 52; màu xanh tím than: 5; màu trắng: 1,,Màu xanh navy,0,,,,
+电竞低延迟,144,功能,Thể thao điện tử độ trễ thấp,thể thao điện tử độ trễ thấp: 86; thể thao điện tử có độ trễ thấp: 33; esports độ trễ thấp: 18; độ trễ thấp cho thể thao điện tử: 2; e-sports độ trễ thấp: 2,,Thể thao điện tử độ trễ thấp,0,Độ trễ thấp khi chơi game,định dạng: 'thể thao điện tử độ trễ thấp' lủng củng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+床下,144,收纳场景,Dưới gầm giường,dưới gầm giường: 77; dưới giường: 67,,Dưới gầm giường,0,,,,
+网面鞋,144,产品类别,Giày lưới,giày lưới: 107; giày mặt lưới: 36,,Giày lưới,0,,,,
+爬行,142,能力培养,Bò,bò: 132; rình rập: 9,,Bò,0,Tập bò,định dạng: kỹ năng đồ chơi cho bé,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+商务通勤,141,风格,Đi lại kinh doanh,đi lại kinh doanh: 124; đi làm kinh doanh: 9; đi lại công tác: 7; đi làm bằng máy bay: 1,,Đi lại kinh doanh,0,Công sở,định dạng: 'đi lại kinh doanh' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+卡通风,140,风格,Phong cách hoạt hình,phong cách hoạt hình: 140,,Phong cách hoạt hình,0,,,,
+A字裙,140,裙型,Váy chữ A,váy chữ a: 139,,Váy chữ A,0,,,,
+没有,140,滑轮,Không có,không có: 64; không: 62; không có gì: 14,,Không có,0,,,,
+2500g（含）-3000g（不含）,139,克重,2500g (bao gồm) - 3000g (không bao gồm),2500g (bao gồm) - 3000g (không bao gồm): 74; 2500g (đã bao gồm)-3000g (độc quyền): 30; 2500g (bao gồm)-3000g (không bao gồm): 18; 2500g (tính cả) - 3000g (không tính): 8; 2500g (đã bao gồm) - 3000g (chưa bao gồm): 3,,2500g (bao gồm) - 3000g (không bao gồm),0,,,,
+2024年冬季,138,上市年份季节,Mùa đông năm 2024,mùa đông năm 2024: 133; mùa đông 2024: 5,,Mùa đông năm 2024,0,,,,
+高腰,137,腰型,Cạp cao,cạp cao: 80; eo cao: 57,,Cạp cao,0,,,,
+深蓝色,136,颜色,Màu xanh đậm,màu xanh đậm: 125; xanh đậm: 11,,Màu xanh đậm,0,,,,
+周转搬运,136,收纳场景,Xử lý doanh thu,xử lý doanh thu: 75; vận chuyển luân chuyển: 47; doanh thu và xử lý: 9; vận chuyển doanh thu: 5,,Xử lý doanh thu,0,"Vận chuyển, luân chuyển hàng",sai nghĩa: 'xử lý doanh thu' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+24小时,135,最快出货时间,24 giờ,24 giờ: 135,,24 giờ,0,,,,
+减震,135,功能,Giảm chấn,giảm chấn: 73; hấp thụ sốc: 36; giảm xóc: 26,,Giảm chấn,0,,,,
+银灰色,134,颜色分类,màu xám bạc,màu xám bạc: 133; xám bạc: 1,,màu xám bạc,0,Màu xám bạc,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+敏感性,134,适用肤质,Nhạy cảm,nhạy cảm: 72; độ nhạy: 43; sự nhạy cảm: 14; độ nhạy cảm: 3; dầu: 1,,Nhạy cảm,0,Da nhạy cảm,thống nhất: loại da,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+2000g（含）~2500g（不含）,134,克重,2000g (bao gồm) ~ 2500g (không bao gồm),2000g (bao gồm) ~ 2500g (không bao gồm): 91; 2000g (đã bao gồm)~2500g (độc quyền): 22; 2000g (đã bao gồm) ~ 2500g (chưa bao gồm): 13; 2000g (tính cả) ~ 2500g (không tính): 4; 2000g (đã bao gồm) ~ 2500g (đã bao gồm): 1,,2000g (bao gồm) ~ 2500g (không bao gồm),0,,,,
+乐福鞋,134,产品类别,Giày lười,giày lười: 121; giày đế bệt: 6; giày loafer: 4; người đi chơi: 2; giày lười2: 1,,Giày lười,0,Giày loafer,sai nghĩa: khác 懒人鞋 giày lười,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+中年,133,适用人群,trung niên,trung niên: 52; giữa tuổi: 41; tuổi trung niên: 33; lứa trung niên: 3; thông dụng: 1,,trung niên,0,Trung niên,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+菱格,133,流行元素,Caro hình thoi,caro hình thoi: 86; kim cương: 19; hình thoi: 15; thiết lục giác: 13,,Caro hình thoi,0,,,,
+提花,133,织造工艺,Vải jacquard,vải jacquard: 52; hoa nổi: 41; jacquard: 24; vải hoa: 14; dệt hoa: 2,,Vải jacquard,0,,,,
+食用农产品,133,售卖方式,Sản phẩm nông nghiệp ăn được,sản phẩm nông nghiệp ăn được: 72; nông sản ăn được: 61,,Sản phẩm nông nghiệp ăn được,0,Nông sản ăn được,thống nhất: thống nhất bảng từ chung,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+网红,132,流行元素,Nổi tiếng trên mạng,nổi tiếng trên mạng: 66; người nổi tiếng trên internet: 34; người nổi tiếng trên mạng: 30; người nổi tiếng internet: 2,,Nổi tiếng trên mạng,0,,,,
+跑步鞋,132,产品类别,Giày chạy bộ,giày chạy bộ: 130; giày chạy bộ1: 1,,Giày chạy bộ,0,,,,
+抗震,131,功能,Chống động đất,chống động đất: 113; khả năng chống động đất: 16; chống sốc: 2,,Chống động đất,0,Chống sốc,sai nghĩa: 'chống động đất' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+0-4小时,131,续航时间,0-4 giờ,0-4 giờ: 130,,0-4 giờ,0,,,,
+无领,131,领型,Không cổ,không cổ: 113; không cổ áo: 11; không có cổ áo: 7,,Không cổ,0,,,,
+14岁以下其它玩具,131,3C配置类别,Đồ chơi khác dưới 14 tuổi,đồ chơi khác dưới 14 tuổi: 68; đồ chơi khác cho trẻ dưới 14 tuổi: 36; các loại đồ chơi khác dành cho trẻ em dưới 14 tuổi: 19; đồ chơi khác dành cho trẻ dưới 14 tuổi: 8,,Đồ chơi khác dưới 14 tuổi,0,,,,
+敞口袋,130,外袋种类,Túi hở,túi hở: 71; túi mở: 57; mở túi: 2,,Túi hở,0,,,,
+福建泉州,130,产地,"Phúc Kiến, Tuyền Châu","phúc kiến, tuyền châu: 64; tuyền châu, phúc kiến: 45; quanzhou, phúc kiến: 11; quảng châu, phúc kiến: 8; quận châu, phúc kiến: 2",,"Phúc Kiến, Tuyền Châu",0,"Tuyền Châu, Phúc Kiến","thống nhất: thứ tự 'thành phố, tỉnh' như bảng địa danh",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+带分格,129,商品特性,Có ca rô,có ca rô: 52; với các bộ phận: 31; có chia ngăn: 29; có ngăn chứa: 14; ngăn: 2,,Có ca rô,0,Có chia ngăn,sai nghĩa: 'có ca rô' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+自检,129,质检单位,Tự kiểm tra,tự kiểm tra: 129,,Tự kiểm tra,0,,,,
+小号,128,规格,Cỡ nhỏ,cỡ nhỏ: 82; nhỏ: 30; kích thước nhỏ: 16,,Cỡ nhỏ,0,,,,
+云南,128,产地-国内,Vân Nam,vân nam: 118; vân nam1: 4; yunnan: 2,,Vân Nam,0,,,,
+详情见包装,128,生产日期,Xem bao bì để biết chi tiết,xem bao bì để biết chi tiết: 120; xem bao bì để biết chi tiết2: 1; xem bao bì để biết chi tiết1: 1; xem bao bì để biết chi tiết4: 1; xem chi tiết trên bao bì: 1,,Xem bao bì để biết chi tiết,0,Xem bao bì,thống nhất: thống nhất 见包装,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+浅蓝色,126,颜色,màu xanh nhạt,màu xanh nhạt: 65; màu xanh lam nhạt: 54; xanh nhạt: 7,,màu xanh nhạt,0,Màu xanh nhạt,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+前挡风玻璃,126,安装位置,Kính chắn gió phía trước,kính chắn gió phía trước: 126,,Kính chắn gió phía trước,0,,,,
+仿皮,126,内里材质,Giả da,giả da: 79; da giả: 47,,Giả da,0,,,,
+常规袖,126,袖型,Tay áo thông thường,tay áo thông thường: 126,,Tay áo thông thường,0,,,,
+pu+网布,126,鞋面材质,PU + vải lưới,pu + vải lưới: 60; vải lưới pu: 32; pu + lưới: 20; pu+lưới: 14,,PU + vải lưới,0,,,,
+金属,125,材质,Kim loại,kim loại: 125,,Kim loại,0,,,,
+干湿分离,125,功能,Tách khô và ướt,tách khô và ướt: 100; phân loại khô và ướt: 24; có chỗ ở: 1,,Tách khô và ướt,0,,,,
+14英寸,125,容纳电脑尺寸,14 inch,14 inch: 65; 14inch: 60,,14 inch,0,,,,
+韩式风,125,风格,Phong cách Hàn Quốc,phong cách hàn quốc: 123,,Phong cách Hàn Quốc,0,,,,
+聚丙烯（PP）,125,材质,Polypropylen (PP),polypropylen (pp): 125,,Polypropylen (PP),0,,,,
+金骏眉,124,产品类别,Kim Tuấn Lông mày,kim tuấn lông mày: 59; jin junmei: 35; kim tuấn mi: 20; jin jun mei: 6; tấn junmei: 3,,Kim Tuấn Lông mày,0,Kim Tuấn Mi,sai nghĩa: tên trà; 'lông mày' dịch sát,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+B类,124,安全等级,Loại B,loại b: 113; lớp b: 10; danh mục b: 1,,Loại B,0,,,,
+河北,123,产地,Hà Bắc,hà bắc: 104; hải bắc: 16,,Hà Bắc,0,,,,
+2023年秋季,123,上市年份季节,Mùa thu năm 2023,mùa thu năm 2023: 119; mùa thu 2023: 4,,Mùa thu năm 2023,0,,,,
+花朵,123,图案,hoa,hoa: 122,,hoa,0,Hoa,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+防水台,123,流行元素,Đế chống thấm nước,đế chống thấm nước: 50; đế chống nước: 40; nền tảng không thấm nước: 19; nền tảng chống thấm nước: 13; nền tảng chống nước: 1,,Đế chống thấm nước,0,Đế độn phía trước,"sai nghĩa: giày đế độn mũi (platform), không phải chống nước",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+不带屏幕,122,屏幕尺寸,Không có màn hình,không có màn hình: 122,,Không có màn hình,0,,,,
+散热,122,功能,Tản nhiệt,tản nhiệt: 121; chống trượt: 1,,Tản nhiệt,0,,,,
+详见外包装,122,生产日期,Xem bao bì bên ngoài để biết chi tiết,xem bao bì bên ngoài để biết chi tiết: 122,,Xem bao bì bên ngoài để biết chi tiết,0,Xem bao bì,thống nhất: thống nhất 见包装,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+水,121,成分,Nước,nước: 120,,Nước,0,,,,
+少年（7-14岁）,121,适用年龄,Thiếu niên (7-14 tuổi),thiếu niên (7-14 tuổi): 53; thanh thiếu niên (7-14 tuổi): 48; thanh niên (7-14 tuổi): 20,,Thiếu niên (7-14 tuổi),0,,,,
+盒装,120,包装形式,Đóng hộp,đóng hộp: 118,,Đóng hộp,0,,,,
+创意,120,风格,Sáng tạo,sáng tạo: 119; xu hướng: 1,,Sáng tạo,0,,,,
+脏衣,120,适用范围,Quần áo bẩn,quần áo bẩn: 62; áo bẩn: 58,,Quần áo bẩn,0,,,,
+触摸式,119,操作方式,Kiểu cảm ứng,kiểu cảm ứng: 94; chạm vào: 23; loại cảm ứng: 2,,Kiểu cảm ứng,0,,,,
+OPP袋,119,包装,Túi OPP,túi opp: 119,,Túi OPP,0,,,,
+中腰,119,腰型,Cạp vừa,cạp vừa: 82; giữa eo: 26; tầng giữa: 6; tăng trung bình: 3; vòng eo giữa: 2,,Cạp vừa,0,,,,
+棉被,118,适用范围,Chăn bông,chăn bông: 89; chăn: 29,,Chăn bông,0,,,,
+军绿色,117,颜色,Màu xanh quân đội,màu xanh quân đội: 70; xanh quân đội: 45; màu đỏ rượu: 1; màu xanh lá cây: 1,,Màu xanh quân đội,0,,,,
+食品级硅胶,117,材质,Silicone cấp thực phẩm,silicone cấp thực phẩm: 52; cấp thực phẩm silicone: 37; silicon cấp thực phẩm: 24; silicon cấp thực phẩm1: 1,,Silicone cấp thực phẩm,0,,,,
+不锈钢,116,材质,Thép không gỉ,thép không gỉ: 116,,Thép không gỉ,0,,,,
+收纳,116,功能,Sắp xếp,sắp xếp: 58; lưu trữ: 39; đựng đồ: 19,,Sắp xếp,0,Đựng đồ,định dạng: chức năng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+单镜头,116,镜头数量,Ống kính đơn,ống kính đơn: 116,,Ống kính đơn,0,,,,
+直筒型,116,版型,Loại ống thẳng,loại ống thẳng: 51; kiểu thẳng: 33; loại thẳng: 32,,Loại ống thẳng,0,Dáng suông,định dạng: 版型,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+定制/DIY,116,印花主题,Tùy chỉnh/DIY,tùy chỉnh/diy: 91; tùy chỉnh/tự làm: 25,,Tùy chỉnh/DIY,0,,,,
+鞋子,116,适用范围,giày,giày: 110; giày dép: 6,,giày,0,Giày,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+杂款,115,库存类型,Hỗn hợp các loại,hỗn hợp các loại: 44; nhiều loại: 32; mẫu linh tinh: 32; các mặt hàng khác: 4; các mặt hàng linh tinh: 1,,Hỗn hợp các loại,0,Mẫu hỗn hợp,định dạng: loại hàng tồn kho,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+1500g（含）~2000g（不含）,115,克重,1500g (bao gồm) ~ 2000g (không bao gồm),1500g (bao gồm) ~ 2000g (không bao gồm): 77; 1500g (đã bao gồm)~2000g (độc quyền): 19; 1500g (tính cả) ~ 2000g (không tính): 10; 1500g (đã bao gồm) ~ 2000g (chưa bao gồm): 5; 1500g (đã bao gồm) ~ 2000g (đã bao gồm): 1,,1500g (bao gồm) ~ 2000g (không bao gồm),0,,,,
+运动风休闲鞋,115,产品类别,Giày giản dị phong cách thể thao,giày giản dị phong cách thể thao: 46; giày thể thao phong cách casual: 44; giày thể thao phong cách giản dị: 13; giày thể thao thông thường: 10; giày thể thao phong cách năng động: 1,,Giày giản dị phong cách thể thao,0,,,,
+棉类混纺,114,面料名称,Bông pha,bông pha: 46; vải pha cotton: 36; hỗn hợp bông: 22; cotton pha trộn: 9,,Bông pha,0,,,,
+无性别风,113,风格,Vô tính,vô tính: 76; phong cách không giới tính: 37,,Vô tính,0,Phong cách phi giới tính,sai nghĩa: 'vô tính' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+复古风,113,风格,Phong cách cổ điển,phong cách cổ điển: 75; phong cách retro: 37; sang trọng: 1,,Phong cách cổ điển,0,,,,
+喂奶奶嘴,113,产品类别,Núm vú cho con bú,núm vú cho con bú: 53; cho bà ăn: 34; cho bà ăn miệng: 17; cho bé ăn: 4; cho miệng bà ăn: 3,,Núm vú cho con bú,0,,,,
+方形,112,形状,Hình vuông,hình vuông: 105,,Hình vuông,0,,,,
+马卡龙色,112,流行元素,Màu macaron,màu macaron: 112,,Màu macaron,0,,,,
+个性,112,风格,cá tính,cá tính: 104; tính cách: 6; kinh doanh: 1,,cá tính,0,Cá tính,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+长裙,112,裙长,váy dài,váy dài: 106; váy dài1: 6,,váy dài,0,Váy dài,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+带盖袋,111,外袋种类,Túi có nắp,túi có nắp: 111,,Túi có nắp,0,,,,
+短袖T恤,111,类别,Áo thun ngắn tay,áo thun ngắn tay: 58; áo phông ngắn tay: 30; áo thun tay ngắn: 18,,Áo thun ngắn tay,0,,,,
+棉质,111,内里材质,Chất liệu cotton,chất liệu cotton: 85; bông: 26,,Chất liệu cotton,0,,,,
+学校教育,110,适用场景,Giáo dục trường học,giáo dục trường học: 64; giảng dạy ở trường: 26; giáo dục học đường: 19; giáo dục phổ thông: 1,,Giáo dục trường học,0,,,,
+人造革,109,鞋面材质,Da nhân tạo,da nhân tạo: 109,,Da nhân tạo,0,,,,
+水桶型,109,箱包形状,Hình thùng nước,hình thùng nước: 69; loại thùng: 40,,Hình thùng nước,0,Dáng bucket,định dạng: dáng túi hình trụ,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+TSA密码锁,109,锁的类型,Khóa mật khẩu TSA,khóa mật khẩu tsa: 65; khóa kết hợp tsa: 40; khóa số tsa: 4,,Khóa mật khẩu TSA,0,,,,
+日韩,109,风格,Nhật Bản và Hàn Quốc,nhật bản và hàn quốc: 59; nhật hàn: 48,,Nhật Bản và Hàn Quốc,0,Phong cách Nhật Hàn,định dạng: phong cách,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+不支持防水,108,防水性能,Không hỗ trợ chống thấm nước,không hỗ trợ chống thấm nước: 76; không hỗ trợ chống thấm: 26; không thấm nước: 5,,Không hỗ trợ chống thấm nước,0,Không chống nước,định dạng: gọn,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+夜视补光,107,功能,Ánh sáng bổ sung tầm nhìn ban đêm,ánh sáng bổ sung tầm nhìn ban đêm: 68; tầm nhìn ban đêm lấp đầy ánh sáng: 28; ánh sáng lấp đầy tầm nhìn ban đêm: 4; đèn trợ sáng tầm nhìn ban đêm: 3; đèn chiếu sáng tầm nhìn ban đêm: 3,,Ánh sáng bổ sung tầm nhìn ban đêm,0,Đèn hỗ trợ quay đêm,sai nghĩa: tên tạm lủng củng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+羊皮,107,内里材质,Da cừu,da cừu: 102; da cừu1: 1; da cừu2: 1,,Da cừu,0,,,,
+保湿,107,化妆品功效,dưỡng ẩm,dưỡng ẩm: 103,,dưỡng ẩm,0,Dưỡng ẩm,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+全包款,107,款式,Tất cả bao gồm,tất cả bao gồm: 69; bao gồm tất cả: 38,,Tất cả bao gồm,0,Kiểu bọc toàn bộ,sai nghĩa: 'tất cả bao gồm' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+随身携带,107,收纳场景,Mang theo bên mình,mang theo bên mình: 93; mang nó theo bên mình: 8; mang nó theo bạn: 6,,Mang theo bên mình,0,,,,
+墨绿色,106,颜色,Màu xanh lục đậm,màu xanh lục đậm: 58; màu xanh đậm: 43; xanh rêu đậm: 4; xanh đậm: 1,,Màu xanh lục đậm,0,,,,
+ABS+PC材质,106,材质,Chất liệu PC ABS,chất liệu pc abs: 64; chất liệu abs + pc: 31; abs + chất liệu pc: 11,,Chất liệu PC ABS,0,Chất liệu ABS + PC,định dạng: giữ thứ tự và dấu cộng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+91%(含)-95%(含),106,主面料成分的含量,91% (bao gồm)-95% (bao gồm),91% (bao gồm)-95% (bao gồm): 61; 91% (đã bao gồm)-95% (đã bao gồm): 31; 91%(đã bao gồm)-95%(đã bao gồm): 9; 91% (đã bao gồm) - 95% (đã bao gồm): 5,,91% (bao gồm)-95% (bao gồm),0,,,,
+水洗棉,106,材质,Bông giặt nước,bông giặt nước: 36; vải cotton giặt: 36; bông đã giặt: 32,,Bông giặt nước,0,,,,
+床笠式,106,款式,Kiểu tấm vừa vặn,kiểu tấm vừa vặn: 30; loại ga bọc chun: 21; tấm trải giường: 7; kiểu giường: 7; kiểu ga trải giường: 5,,Kiểu tấm vừa vặn,0,Kiểu ga bọc chun,sai nghĩa: 'kiểu tấm vừa vặn' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+德训鞋,106,款式,Giày Đức huấn luyện,giày đức huấn luyện: 87; huấn luyện viên quân đội đức: 6; giày rèn luyện đạo đức: 5; giày đạo đức: 3; huấn luyện viên quân đội đức (gat): 3,,Giày Đức huấn luyện,0,Giày huấn luyện kiểu Đức,định dạng: 'Giày Đức huấn luyện' sai trật tự,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+台州,105,产地,Thái Châu,thái châu: 78; đài châu: 26; taizhou: 1,,Thái Châu,0,Đài Châu,sai nghĩa: 台州 = Đài Châu (bảng địa danh),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+棉:100%,104,材质成分,Bông: 100%,bông: 100%: 79; 100% cotton: 1,,Bông: 100%,0,,,,
+明前,104,采摘时间,Trước Tết Trung Thu,trước tết trung thu: 24; mingqian: 21; ming kiền: 19; trước thời nhà minh: 13; trước nhà minh: 10,sai nghĩa (đọc tay),Minh Tiền,1,,,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+日常休闲,104,风格,Phong cách thường ngày,phong cách thường ngày: 40; giải trí hàng ngày: 28; thường ngày: 24; thông thường hàng ngày: 12,,Phong cách thường ngày,0,,,,
+长方形,103,形状,hình chữ nhật,hình chữ nhật: 98,,hình chữ nhật,0,Hình chữ nhật,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+轻熟休闲,103,风格,Nhẹ nhàng thoải mái,nhẹ nhàng thoải mái: 61; nhẹ nhàng và giản dị: 39; người phụ nữ trẻ bình thường: 3,,Nhẹ nhàng thoải mái,0,,,,
+防潮,103,功能,Chống ẩm,chống ẩm: 103,,Chống ẩm,0,,,,
+户外运动,102,适用场景,Thể thao ngoài trời,thể thao ngoài trời: 102,,Thể thao ngoài trời,0,,,,
+时尚,102,风格,thời trang,thời trang: 99; kinh doanh: 1,,thời trang,0,Thời trang,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果15,102,适用型号,táo 15,táo 15: 101; apple 15: 1,,táo 15,0,iPhone 15,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+硬,101,硬度,Cứng,cứng: 76; khó: 25,,Cứng,0,,,,
+搭扣,101,穿着方式,Khóa cài,khóa cài: 47; khóa: 29; móc cài: 25,,Khóa cài,0,,,,
+气质优雅,101,跨境风格类型,Quý phái thanh lịch,quý phái thanh lịch: 48; khí chất thanh lịch: 27; tính khí và sự sang trọng: 11; thanh lịch và thanh lịch: 10; thanh lịch và tinh tế: 4,,Quý phái thanh lịch,0,,,,
+60支,101,面料支数,60 miếng,60 miếng: 68; 60 cái: 23; 60 que: 10,,60 miếng,0,Chi số 60,sai nghĩa: 支 = chi số sợi,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+平衡,101,功能,Cân bằng,cân bằng: 71; sự cân bằng: 19; số dư: 11,,Cân bằng,0,,,,
+默认项,100,最快出货时间,Mục mặc định,mục mặc định: 61; mặc định: 36; các mặt hàng mặc định: 3,,Mục mặc định,0,,,,
+小清新,100,风格,"Phong cách nhẹ nhàng, tươi mới","phong cách nhẹ nhàng, tươi mới: 32; tươi tắn: 31; thẩm mỹ tươi mới và sạch sẽ: 14; ít tươi: 12; tươi mới và sang trọng: 6",,"Phong cách nhẹ nhàng, tươi mới",0,,,,
+皮革,99,鞋面材质,Da,da: 89; da thuộc: 9; da1: 1,,Da,0,,,,
+厚底鞋,99,产品类别,Giày đế dày,giày đế dày: 89; giày đế bệt: 10,,Giày đế dày,0,,,,
+江西新余,99,产地,"Tân Ngu, Giang Tây","tân ngu, giang tây: 46; tân nghĩa, giang tây: 25; tân ngư, giang tây: 20; xinyu, giang tây: 6; giang tô: 1",,"Tân Ngu, Giang Tây",0,"Tân Dư, Giang Tây",sai nghĩa: 新余 = Tân Dư,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+深棕色,98,颜色,Màu nâu đậm,màu nâu đậm: 55; nâu sẫm: 20; màu nâu sẫm: 15; nâu đậm: 7; màu cà phê: 1,,Màu nâu đậm,0,,,,
+48小时,98,最快出货时间,48 giờ,48 giờ: 97,,48 giờ,0,,,,
+抽拉,98,开合方式,kéo,kéo: 62; kéo rút: 34,,kéo,0,Kéo,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果16,97,适用型号,Apple 16,apple 16: 52; táo 16: 45,,Apple 16,0,iPhone 16,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+精梳棉,97,面料名称,Bông chải kỹ,bông chải kỹ: 86; vải cotton chải kỹ: 10; chải bông: 1,,Bông chải kỹ,0,,,,
+降温凉感,97,材质功能,Làm mát cảm giác mát mẻ,làm mát cảm giác mát mẻ: 69; cảm giác mát lạnh: 27; cảm giác mát mẻ: 1,,Làm mát cảm giác mát mẻ,0,Cảm giác mát lạnh,định dạng: tên tạm lặp ý,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+潮流,96,风格,xu hướng,xu hướng: 46; sành điệu: 39; hợp thời trang: 7; thời thượng: 2; màu trơn: 1,,xu hướng,0,Xu hướng,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+15米,96,传输范围,15 mét,15 mét: 55; 15m: 41,,15 mét,0,,,,
+呼吸灯,95,功能,Đèn thở,đèn thở: 50; ánh sáng thở: 45,,Đèn thở,0,,,,
+苹果17,95,适用型号,táo 17,táo 17: 89; apple 17 inch: 3; apple 17: 3,,táo 17,0,iPhone 17,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+女孩,95,适用人群,Cô gái,cô gái: 87; con gái: 8,,Cô gái,0,Bé gái,định dạng: đối tượng dùng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+单个装,94,包装种类,Đóng gói đơn,đóng gói đơn: 52; gói đơn: 22; đóng gói đơn chiếc: 20,,Đóng gói đơn,0,,,,
+挂耳式,94,使用方式,Kiểu đeo tai,kiểu đeo tai: 59; gắn tai: 22; kiểu móc tai: 9; loại móc tai: 3; gắn trên tai: 1,,Kiểu đeo tai,0,,,,
+20-30元,94,价格段,20-30 nhân dân tệ,20-30 nhân dân tệ: 67; 20-30 tệ: 27,,20-30 nhân dân tệ,0,,,,
+三角爬,94,款式,Tam giác leo,tam giác leo: 36; cào tam giác: 33; leo tam giác: 17; leo lên tam giác: 7; leo núi tam giác: 1,,Tam giác leo,0,Bộ liền thân tam giác,sai nghĩa: đồ sơ sinh; 'tam giác leo' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+[电话],93,净含量,[SĐT],[sđt]: 88; 190220277601: 1; 190220277602: 1; 193124978871: 1; 193124978872: 1,,[SĐT],0,,,,
+见外包装,93,生产日期,Xem bao bì bên ngoài,xem bao bì bên ngoài: 81; xem bao bì ngoài: 12,,Xem bao bì bên ngoài,0,Xem bao bì,thống nhất: thống nhất 见包装,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+皮质,93,内里材质,Chất liệu da,chất liệu da: 31; chất da: 26; da: 21; vỏ não: 13; da thuộc: 2,,Chất liệu da,0,,,,
+休闲款,93,款式,Phong cách giản dị,phong cách giản dị: 60; kiểu dáng thường ngày: 32,,Phong cách giản dị,0,,,,
+中帮,93,鞋帮高度,Giày cổ lửng,giày cổ lửng: 54; giữa: 16; cổ vừa: 16; giữa đỉnh: 7,,Giày cổ lửng,0,Cổ vừa,thống nhất: thống nhất 低帮 'Cổ thấp',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+织物,92,鞋面材质,Vải,vải: 91,,Vải,0,,,,
+松糕跟,92,流行元素,Đế bánh xốp,đế bánh xốp: 40; gót bánh mì: 30; giày cao gót đế bệt: 21; kiểu gót giày: 1,,Đế bánh xốp,0,Đế xuồng dày,sai nghĩa: 'đế bánh xốp' dịch sát,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+三年,91,保质期,Ba năm,ba năm: 91,,Ba năm,0,,,,
+200万,91,拍照像素,2 triệu,2 triệu: 74; 200 triệu: 7; 2 triệu1: 4; 2 triệu2: 4; 2.0million: 2,,2 triệu,0,2 MP,sai nghĩa: 200万 像素 = 2 megapixel,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+商务,90,风格,kinh doanh,kinh doanh: 86,,kinh doanh,0,Công sở,định dạng: phong cách,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+深灰,90,颜色,Xám đậm,xám đậm: 54; màu xám đậm: 23; màu xám đen: 13,,Xám đậm,0,,,,
+中国风,90,风格,Phong cách Trung Quốc,phong cách trung quốc: 85; phong cách trung hoa: 5,,Phong cách Trung Quốc,0,,,,
+男孩,90,适用人群,Cậu bé,cậu bé: 45; bé trai: 35; con trai: 10,,Cậu bé,0,Bé trai,định dạng: đối tượng dùng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+蝴蝶结,89,流行元素,Nơ bướm,nơ bướm: 30; nơ: 30; cung: 16; thắt nơ: 11; nơ cà vạt: 2,,Nơ bướm,0,,,,
+天蓝色,89,颜色,Màu xanh da trời,màu xanh da trời: 43; trời xanh: 18; bầu trời xanh: 14; xanh da trời: 13; màu hồng: 1,,Màu xanh da trời,0,,,,
+米白,89,颜色,Trắng be,trắng be: 48; màu trắng nhạt: 26; màu trắng ngà: 12; trắng nhạt: 3,,Trắng be,0,,,,
+竖款方型,89,箱包形状,Kiểu dọc hình vuông,kiểu dọc hình vuông: 51; hình vuông thẳng đứng: 26; hình vuông dọc: 10; kiểu vuông dọc: 1,,Kiểu dọc hình vuông,0,,,,
+【床笠款】1.8四件套-被套200x230,89,尺寸规格,[Bộ ga chun]Bộ 4 món 1.8m - Vỏ chăn 200x230,[bộ ga chun]bộ 4 món 1.8m - vỏ chăn 200x230: 82; [ga trải giường vừa vặn] bộ 4 món 1.8 - vỏ chăn 200x230: 5; [kiểu ga bọc]bộ chăn ga gối 4 món cỡ giường 1.8m - vỏ chăn 200x230cm: 2,,[Bộ ga chun]Bộ 4 món 1.8m - Vỏ chăn 200x230,0,,,,
+福建莆田,89,产地,Phúc Kiến Phủ Điền,"phúc kiến phủ điền: 73; phúc kiến, phúc kiến: 8; putian, phúc kiến: 7; phủ điền, phúc kiến: 1",,Phúc Kiến Phủ Điền,0,"Bồ Điền, Phúc Kiến",sai nghĩa: 莆田 = Bồ Điền,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+玻璃,88,材质,kính,kính: 59; thủy tinh: 28,,kính,0,Thủy tinh,sai nghĩa: chất liệu: thủy tinh; 'kính' mơ hồ,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+圆形,88,形状,Hình tròn,hình tròn: 68; vòng: 11; tròn: 9,,Hình tròn,0,,,,
+提升气色,88,功效,Nâng cao màu nước da,nâng cao màu nước da: 61; cải thiện làn da: 27,,Nâng cao màu nước da,0,Cải thiện sắc da,định dạng: tên tạm lủng củng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+高弹,88,材质功能,Đàn hồi cao,đàn hồi cao: 54; độ đàn hồi cao: 34,,Đàn hồi cao,0,,,,
+原味,88,口味,Hương vị nguyên bản,hương vị nguyên bản: 50; nguyên vị: 34; hương vị ban đầu: 4,,Hương vị nguyên bản,0,,,,
+90码,88,适合身高,90 thước,90 thước: 41; cỡ 90: 36; 90 yard: 7; 90 thước anh: 4,,90 thước,0,Cỡ 90,sai nghĩa: 码 = cỡ; 'thước' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+镂空,87,流行元素,Họa tiết khoét rỗng,họa tiết khoét rỗng: 37; khoét lỗ: 31; rỗng: 9; rỗng ra: 9,,Họa tiết khoét rỗng,0,,,,
+去黑头,87,化妆品功效,Trị mụn đầu đen,trị mụn đầu đen: 52; loại bỏ mụn đầu đen: 35,,Trị mụn đầu đen,0,,,,
+苹果11,87,适用型号,Apple 11,apple 11: 44; iphone 11: 26; táo 11: 17,,Apple 11,0,iPhone 11,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+印染,87,织造工艺,In và nhuộm,in và nhuộm: 64; in ấn và nhuộm: 23,,In và nhuộm,0,,,,
+【床笠款】1.5四件套-被套200x230,87,尺寸规格,[Bộ ga chun]Bộ 4 món 1.5m - Vỏ chăn 200x230,"[bộ ga chun]bộ 4 món 1.5m - vỏ chăn 200x230: 81; [ga trải giường vừa vặn] bộ vỏ chăn bông 1,5 chiếc 200x230: 4; [kiểu ga bọc]bộ chăn ga gối 4 món cỡ giường 1.5m - vỏ chăn 200x230 cm: 1; [kiểu ga bọc]bộ chăn ga gối 4 món cỡ 1.5m - vỏ chăn 200x230 cm: 1",,[Bộ ga chun]Bộ 4 món 1.5m - Vỏ chăn 200x230,0,,,,
+500g（含）~800g（不含）,87,克重,500g (bao gồm) ~ 800g (không bao gồm),500g (bao gồm) ~ 800g (không bao gồm): 66; 500g (đã bao gồm)~800g (độc quyền): 13; 500g (tính cả) ~ 800g (không tính): 5; 500g (đã bao gồm) ~ 800g (chưa bao gồm): 3,,500g (bao gồm) ~ 800g (không bao gồm),0,,,,
+一脚蹬,87,闭合方式,Giày lười,giày lười: 35; bàn đạp: 26; một cú đá: 10; đá: 8; giày lười1: 5,,Giày lười,0,Xỏ chân,sai nghĩa: 闭合方式: xỏ chân,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+app交互,86,智能交互方式,tương tác ứng dụng,tương tác ứng dụng: 82,,tương tác ứng dụng,0,Tương tác ứng dụng,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+鞋盒,86,收纳场景,hộp giày,hộp giày: 46; hộp đựng giày: 40,,hộp giày,0,Hộp giày,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+14岁以下的塑胶玩具,86,3C配置类别,Đồ chơi nhựa dành cho trẻ em dưới 14 tuổi,đồ chơi nhựa dành cho trẻ em dưới 14 tuổi: 30; đồ chơi bằng nhựa dưới 14 tuổi: 25; đồ chơi nhựa cho trẻ em dưới 14 tuổi: 15; đồ chơi nhựa cho trẻ dưới 14 tuổi: 11; đồ chơi nhựa dưới 14 tuổi: 4,,Đồ chơi nhựa dành cho trẻ em dưới 14 tuổi,0,,,,
+0cm~3cm(含),86,鞋底厚度,0cm~3cm (bao gồm),0cm~3cm (bao gồm): 48; 0cm~3cm (đã bao gồm): 26; 0cm ~ 3cm (bao gồm): 12,,0cm~3cm (bao gồm),0,,,,
+徒步,85,适用运动,Đi bộ đường dài,đi bộ đường dài: 85,,Đi bộ đường dài,0,,,,
+苹果13,85,适用型号,Táo 13,táo 13: 84; apple 13: 1,,Táo 13,0,iPhone 13,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果14,85,适用型号,Táo 14,táo 14: 64; iphone 14: 20; apple 14: 1,,Táo 14,0,iPhone 14,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+气质通勤,85,风格类型,Khí chất đi lại,khí chất đi lại: 56; đi lại thanh lịch: 12; tính khí đi lại: 8; tính khí và đi lại: 5; đi lại khí chất: 3,,Khí chất đi lại,0,Công sở thanh lịch,sai nghĩa: 'khí chất đi lại' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+熟茶,85,茶叶生产工艺,Trà chín,trà chín: 80; trà nấu: 5,,Trà chín,0,,,,
+百搭,85,风格,Dễ phối đồ,dễ phối đồ: 42; dễ phối: 26; đa năng: 17,,Dễ phối đồ,0,,,,
+一字型,85,产品类别,Dạng thanh ngang,dạng thanh ngang: 36; hình chữ i: 28; một dòng: 13; kiểu một dòng: 6; kiểu một dòng1: 1,,Dạng thanh ngang,0,,,,
+见描述,84,毛重,Xem mô tả,xem mô tả: 84,,Xem mô tả,0,,,,
+带杯架,84,功能,Có ngăn đựng cốc,có ngăn đựng cốc: 83; tách khô và ướt: 1,,Có ngăn đựng cốc,0,,,,
+耳夹式,84,使用方式,Kiểu kẹp tai,kiểu kẹp tai: 47; loại kẹp tai: 37,,Kiểu kẹp tai,0,,,,
+见标签,84,生产日期,xem nhãn,xem nhãn: 80,,xem nhãn,0,Xem nhãn,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+30%以下,84,主面料成分2含量,Dưới 30%,dưới 30%: 76; 30% dưới đây: 6; không quá 30%: 1,,Dưới 30%,0,,,,
+便携式,84,功能,Di động,di động: 56; xách tay: 28,,Di động,0,,,,
+短视频分享,83,功能,Chia sẻ video ngắn,chia sẻ video ngắn: 83,,Chia sẻ video ngắn,0,,,,
+2023年冬季,83,上市年份季节,Mùa đông năm 2023,mùa đông năm 2023: 81; mùa đông 2023: 2,,Mùa đông năm 2023,0,,,,
+豹纹,83,流行元素,Vân báo,vân báo: 26; họa tiết da báo: 23; in họa tiết da báo: 21; in da báo: 11; in báo: 1,,Vân báo,0,,,,
+防皱,83,材质功能,Chống nhăn,chống nhăn: 83,,Chống nhăn,0,,,,
+男女通用,83,适用性别,Dùng được cho cả nam và nữ,dùng được cho cả nam và nữ: 37; unisex: 31; cả nam và nữ: 9; lý tưởng cho cả nam và nữ: 2; nam nữ thông dụng: 2,,Dùng được cho cả nam và nữ,0,,,,
+青少年(13-17岁),83,适用对象,Thanh niên (13-17 tuổi),thanh niên (13-17 tuổi): 44; thanh thiếu niên (13-17 tuổi): 31; thiếu niên (13-17 tuổi): 8,,Thanh niên (13-17 tuổi),0,Thanh thiếu niên (13-17 tuổi),sai nghĩa: 13-17 tuổi là thanh thiếu niên,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+订货,82,货源类别,Đặt hàng,đặt hàng: 68; đơn đặt hàng: 8; thứ tự: 6,,Đặt hàng,0,,,,
+绗缝,82,织造工艺,Chần bông,chần bông: 80; chần lông: 2,,Chần bông,0,,,,
+【床单款】1.2三件套-被套150x200,82,尺寸规格,[Kiểu ga trải giường]Bộ 3 món 1.2m - Vỏ chăn 150x200,[kiểu ga trải giường]bộ 3 món 1.2m - vỏ chăn 150x200: 77; [sheet style] 1.2 bộ 3 món - vỏ chăn 150x200: 3; [phong cách ga trải giường] 1.2 bộ ba món - vỏ chăn 150x200: 1; [bộ ga giường] bộ ba món cỡ 1.2m - vỏ chăn 150x200: 1,,[Kiểu ga trải giường]Bộ 3 món 1.2m - Vỏ chăn 150x200,0,,,,
+大口径,82,口径规格,Đường kính lớn,đường kính lớn: 45; cỡ nòng lớn: 34; đường kính lớn2: 1,,Đường kính lớn,0,Miệng lớn,thống nhất: thống nhất 宽口径 'Miệng rộng',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+牛奶丝,81,面料名称,Sợi sữa bò,sợi sữa bò: 60; lụa sữa: 21,,Sợi sữa bò,0,Vải sợi sữa,sai nghĩa: 'sợi sữa bò' dịch sát,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+莫代尔,81,面料名称,Phương thức,phương thức: 45; modal: 15; chế độ: 10; mô-đa: 5; đạo đức: 5,,Phương thức,0,Modal,sai nghĩa: tên sợi vải; 'phương thức' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+薄荷绿,81,颜色,Xanh bạc hà,xanh bạc hà: 40; màu xanh bạc hà: 39; đua xanh: 1; màu trắng: 1,,Xanh bạc hà,0,,,,
+欧美风,81,风格,phong cách châu Âu và Mỹ,phong cách châu âu và mỹ: 61; phong cách âu mỹ: 18,,phong cách châu Âu và Mỹ,0,Phong cách châu Âu và Mỹ,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+独立包装,81,是否独立包装,Đóng gói riêng lẻ,đóng gói riêng lẻ: 72; đóng gói độc lập: 6; bao bì cá nhân: 2; gói cá nhân: 1,,Đóng gói riêng lẻ,0,,,,
+化纤,81,材质,Sợi hóa học,sợi hóa học: 70; sợi tổng hợp: 9,,Sợi hóa học,0,Sợi tổng hợp,định dạng: 'sợi hóa học' dịch sát,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+阿甘鞋,81,款式,Giày Forrest Gump,giày forrest gump: 72; giày argan: 7; giày gump forrest: 2,,Giày Forrest Gump,0,,,,
+丝绒,80,质地,Nhung,nhung: 80,,Nhung,0,,,,
+无内里,80,内里材质,Không có lớp lót bên trong,không có lớp lót bên trong: 41; không có lớp lót: 23; không lót trong: 16,,Không có lớp lót bên trong,0,,,,
+易上色,80,功效,Dễ lên màu,dễ lên màu: 50; dễ dàng tô màu: 25; dễ tô màu: 5,,Dễ lên màu,0,,,,
+内增高,80,鞋跟形状,Tăng chiều cao bên trong,tăng chiều cao bên trong: 51; độn cao bên trong: 21; tăng trưởng nội bộ: 5; tăng trong vòng: 2; tăng chiều cao: 1,,Tăng chiều cao bên trong,0,Độn đế bên trong,định dạng: giày độn,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+刺绣,79,流行元素,Thêu,thêu: 65; thêu thùa: 14,,Thêu,0,,,,
+极简静奢,79,风格,Sang trọng tối giản và yên tĩnh,sang trọng tối giản và yên tĩnh: 23; sang trọng tối giản: 21; tối giản yên tĩnh sang trọng: 16; tối giản và sang trọng: 13; tối giản và sang trọng yên tĩnh: 4,,Sang trọng tối giản và yên tĩnh,0,,,,
+支架,79,功能,Giá đỡ,giá đỡ: 59; người giữ: 10; hỗ trợ: 7; khung: 3,,Giá đỡ,0,,,,
+苹果12,79,适用型号,Apple 12,apple 12: 41; táo 12: 24; iphone 12: 14,,Apple 12,0,iPhone 12,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+开衫,79,元素,Áo cardigan,áo cardigan: 45; áo len: 14; áo khoác cardigan: 13; áo len đan: 6,,Áo cardigan,0,,,,
+花茶,79,茶种类,Trà hoa,trà hoa: 50; trà thơm: 28,,Trà hoa,0,,,,
+可移动,79,功能,Có thể di chuyển,có thể di chuyển: 73; di chuyển được: 3; di động: 3,,Có thể di chuyển,0,,,,
+收纳盒,79,型号,Hộp đựng đồ,hộp đựng đồ: 51; hộp lưu trữ: 18; hộp lưu trữ1: 1,,Hộp đựng đồ,0,,,,
+可开档,79,元素,Có thể mở tệp,có thể mở tệp: 40; có thể mở đáy quần: 23; có sẵn: 13; có thể mở được: 3,,Có thể mở tệp,0,Có thể mở đáy quần,sai nghĩa: 'mở tệp' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+80码,79,适合身高,80 thước,80 thước: 38; cỡ 80: 30; 80 thước anh: 6; 80 yard: 5,,80 thước,0,Cỡ 80,sai nghĩa: 码 = cỡ,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+粘贴式,78,记录仪安装类型,Loại keo,loại keo: 57; dạng dính: 14; chất kết dính: 3; loại chất kết dính: 2; loại keo dán: 1,,Loại keo,0,Kiểu dán,định dạng: kiểu lắp camera,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+流苏,78,流行元素,Tua rua,tua rua: 77; tua: 1,,Tua rua,0,,,,
+美白,78,化妆品功效,Làm trắng,làm trắng: 76; màu trắng: 2,,Làm trắng,0,,,,
+精品国货,78,品牌类型,Sản phẩm nội địa tốt,sản phẩm nội địa tốt: 60; sản phẩm nội địa chất lượng cao: 17; sản phẩm nội địa cao cấp: 1,,Sản phẩm nội địa tốt,0,Hàng nội địa cao cấp,định dạng: gọn,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+河南洛阳,78,产地,"Lạc Dương, Hà Nam","lạc dương, hà nam: 76; luoyang, henan: 2",,"Lạc Dương, Hà Nam",0,,,,
+500万,77,拍照像素,5 triệu,5 triệu: 65; 500 triệu: 10; 5.0million: 1,,5 triệu,0,5 MP,sai nghĩa: 500万 像素 = 5 megapixel,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+英伦,77,风格,người Anh,người anh: 28; nước anh: 26; anh quốc: 18; anh: 5,,người Anh,0,Phong cách Anh,sai nghĩa: 'người Anh' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+加厚,77,厚薄,Dày dặn,dày dặn: 47; dày lên: 15; làm dày: 11; làm đặc: 3,,Dày dặn,0,,,,
+惯性,77,前进方式,Quán tính,quán tính: 73; quán tính1: 2,,Quán tính,0,,,,
+如图,76,图案,Như hình,như hình: 76,,Như hình,0,,,,
+蝴蝶衣,76,款式,Áo cánh bướm,áo cánh bướm: 51; quần áo bướm: 25,,Áo cánh bướm,0,,,,
+揭阳,75,产地,Yết Dương,yết dương: 31; giáp dương: 24; jieyang: 10; jie dương: 7; gia dương: 2,,Yết Dương,0,,,,
+中偏硬,75,硬度,Cứng trung bình,cứng trung bình: 42; trung bình đến khó: 18; trung bình đến cứng: 15,,Cứng trung bình,0,Trung bình đến cứng,thống nhất: thống nhất 中偏软 'Trung bình đến mềm',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+汕头,75,产地,Sán Đầu,sán đầu: 66; thành phố sán đầu: 5; shantou: 3; sơn đầu: 1,,Sán Đầu,0,,,,
+圆领T恤,75,类别,áo thun cổ tròn,áo thun cổ tròn: 72,,áo thun cổ tròn,0,Áo thun cổ tròn,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+250g(含)-300g(不含),75,克重,250g (bao gồm)-300g (không bao gồm),250g (bao gồm)-300g (không bao gồm): 30; 250g (tính cả) - 300g (không tính): 14; 250g (đã bao gồm) -300g (độc quyền): 13; 250g (đã bao gồm) - 300g (chưa bao gồm): 6; 250g (đã bao gồm)-300g (đã bao gồm): 6,,250g (bao gồm)-300g (không bao gồm),0,,,,
+【床单款】0.9三件套-被套150x200,75,尺寸规格,[Bộ ga trải giường]Bộ 3 món 0.9 - Vỏ chăn 150x200,"[bộ ga trải giường]bộ 3 món 0.9 - vỏ chăn 150x200: 71; [bộ ga giường] bộ ba món cỡ 0.9 - vỏ chăn 150x200: 2; [phong cách ga trải giường] bộ ba mảnh 0,9 - vỏ chăn 150x200: 1; [sheet style] bộ 3 món 0.9 - vỏ chăn 150x200: 1",,[Bộ ga trải giường]Bộ 3 món 0.9 - Vỏ chăn 150x200,0,,,,
+0-3岁,75,适用年龄,0-3 tuổi,0-3 tuổi: 75,,0-3 tuổi,0,,,,
+轻质,75,功能,Nhẹ,nhẹ: 71; trọng lượng nhẹ: 4,,Nhẹ,0,,,,
+玫红色,74,颜色,Màu đỏ hoa hồng,màu đỏ hoa hồng: 39; hoa hồng đỏ: 29; hồng hoa hồng: 5; màu hồng cánh sen: 1,,Màu đỏ hoa hồng,0,Màu hồng sen,sai nghĩa: 玫红 = hồng sen đậm,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+肤色,74,颜色,màu da,màu da: 74,,màu da,0,Màu da,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+头戴式,74,使用方式,Kiểu đeo đầu,kiểu đeo đầu: 51; gắn trên đầu: 16; đeo trên đầu: 4; đầu gắn: 2; kiểu băng đô: 1,,Kiểu đeo đầu,0,Kiểu chụp đầu,định dạng: tai nghe chụp đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+喷涂,74,工艺,Phun,phun: 55; xịt: 19,,Phun,0,Phun sơn,định dạng: công nghệ,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+拉链衫,74,闭合款式,Áo có khóa kéo,áo có khóa kéo: 31; áo kéo khóa: 26; áo sơ mi dây kéo: 11; áo sơ mi có khóa kéo: 6,,Áo có khóa kéo,0,,,,
+轻奢,73,风格,Sang trọng nhẹ nhàng,sang trọng nhẹ nhàng: 57; ánh sáng sang trọng: 9; sáng tạo sang trọng: 7,,Sang trọng nhẹ nhàng,0,,,,
+广东汕头,73,产地,"Sán Đầu, Quảng Đông","sán đầu, quảng đông: 51; thủ út, quảng đông: 21; sơn đầu, quảng đông: 1",,"Sán Đầu, Quảng Đông",0,,,,
+双镜头,73,镜头数量,Ống kính đôi,ống kính đôi: 42; ống kính kép: 30; ống kính kép1: 1,,Ống kính đôi,0,,,,
+牛皮,73,里料质地,Da bò,da bò: 73,,Da bò,0,,,,
+保护壳,73,款式,Vỏ bảo vệ,vỏ bảo vệ: 66; trường hợp bảo vệ: 7,,Vỏ bảo vệ,0,Ốp bảo vệ,định dạng: ốp điện thoại,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+中长款,73,裙长,Chiều dài trung bình,chiều dài trung bình: 67; trung bình và dài: 4; chiều dài vừa phải: 1,,Chiều dài trung bình,0,Dáng dài vừa (midi),sai nghĩa: 'chiều dài trung bình' mơ hồ,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+通用型,73,适用体型,Loại phổ thông,loại phổ thông: 46; loại chung: 24; loại phổ quát: 1,,Loại phổ thông,0,,,,
+66码,73,适合身高,Cỡ 66,cỡ 66: 34; kích thước 66: 22; 66 yard: 17,,Cỡ 66,0,,,,
+平底鞋,73,产品类别,Giày đế bằng,giày đế bằng: 69; giày phẳng: 3; căn hộ: 1,,Giày đế bằng,0,,,,
+高口（11CM以上）,73,开口深度,Cổ cao (trên 11CM),cổ cao (trên 11cm): 37; miệng cao (trên 11cm): 24; miệng cao (11cm trở lên): 12,,Cổ cao (trên 11CM),0,Miệng cao (trên 11cm),thống nhất: thống nhất với 浅口 'Miệng nông',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+无纺布,72,材质,Vải không dệt,vải không dệt: 68,,Vải không dệt,0,,,,
+电镀,72,工艺,Mạ điện,mạ điện: 71,,Mạ điện,0,,,,
+多镜头,72,镜头数量,Nhiều ống kính,nhiều ống kính: 51; nhiều bức ảnh: 21,,Nhiều ống kính,0,,,,
+苹果16PROMAX,72,适用型号,Apple 16PROMAX,apple 16promax: 69; táo 16promax: 3,,Apple 16PROMAX,0,iPhone 16 Pro Max,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+斜襟系带,72,闭合款式,Vạt chéo thắt dây,vạt chéo thắt dây: 31; dây buộc vạt chéo: 21; cà vạt nghiêng: 15; cà vạt xiên: 3; dây buộc ve áo nghiêng: 1,,Vạt chéo thắt dây,0,,,,
+员工福利,71,适用送礼场合,Lợi ích nhân viên,lợi ích nhân viên: 38; phúc lợi cho nhân viên: 17; phúc lợi nhân viên: 16,,Lợi ích nhân viên,0,Phúc lợi nhân viên,sai nghĩa: 'lợi ích nhân viên' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+湖南,71,原产地,Hồ Nam,hồ nam: 67; hưng nam: 2; hunan: 2,,Hồ Nam,0,,,,
+酒红,71,颜色,Đỏ rượu,đỏ rượu: 34; rượu vang đỏ: 28; đỏ rượu vang: 6; màu đỏ tía: 2; màu đá sa thạch: 1,,Đỏ rượu,0,,,,
+均码,71,尺寸,Một kích thước phù hợp với tất cả,một kích thước phù hợp với tất cả: 36; một size: 32; cỡ chung: 3,,Một kích thước phù hợp với tất cả,0,Free size,định dạng: cách ghi thông dụng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+港风,71,风格,Phong cách Hồng Kông,phong cách hồng kông: 71,,Phong cách Hồng Kông,0,,,,
+2.0英寸,70,屏幕尺寸,2.0inch,2.0inch: 35; 2.0 inch: 35,,2.0inch,0,2.0 inch,định dạng: khoảng trắng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+1200万,70,拍照像素,12 triệu,12 triệu: 59; 1200 triệu: 7; 12.0million: 1; 12 triệu1: 1; 12 triệu2: 1,,12 triệu,0,12 MP,sai nghĩa: 1200万 像素 = 12 megapixel,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+甜美,70,风格,Ngọt ngào,ngọt ngào: 60; ngọt: 9,,Ngọt ngào,0,,,,
+广东惠州,70,产地,"Huệ Châu, Quảng Đông","huệ châu, quảng đông: 70",,"Huệ Châu, Quảng Đông",0,,,,
+创意趣味,69,印花主题,Vui vẻ sáng tạo,vui vẻ sáng tạo: 49; sáng tạo và thú vị: 17; sáng tạo và vui vẻ: 2; niềm vui sáng tạo: 1,,Vui vẻ sáng tạo,0,,,,
+闽北乌龙,69,产区,Ô long bắc Phúc Kiến,ô long bắc phúc kiến: 43; ô long phúc kiến miền bắc: 14; trà ô long mân bắc: 5; ô long phúc kiến phía bắc: 4; miniso oolong miền bắc: 2,,Ô long bắc Phúc Kiến,0,,,,
+醇厚甘爽,69,口感,Êm dịu ngọt mát,"êm dịu ngọt mát: 41; dịu dàng và ngọt ngào: 16; đậm đà, ngọt thanh: 9; êm dịu và ngọt ngào: 2; dịu nhẹ và sảng khoái: 1",,Êm dịu ngọt mát,0,,,,
+首饰盒,69,产品类别,Hộp đựng trang sức,hộp đựng trang sức: 36; hộp trang sức: 22; hộp đựng đồ trang sức: 10,,Hộp đựng trang sức,0,,,,
+通用风,69,风格,Phong cách phổ thông,phong cách phổ thông: 44; phong cách chung: 19; phong cách phổ quát: 6,,Phong cách phổ thông,0,,,,
+高跟（6-8CM）,69,鞋跟高度,Giày cao gót (6-8CM),giày cao gót (6-8cm): 56; gót cao (6-8cm): 13,,Giày cao gót (6-8CM),0,Gót cao (6-8cm),thống nhất: thống nhất 低跟 'Gót thấp',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+坡跟,69,鞋跟形状,Gót xuồng,gót xuồng: 29; gót dốc: 19; nêm: 18; gót nêm: 2; đế xuồng: 1,,Gót xuồng,0,,,,
+宝蓝色,68,颜色,Màu xanh ngọc,màu xanh ngọc: 36; màu xanh hoàng gia: 27; xanh lam bảo: 4; màu đen: 1,,Màu xanh ngọc,0,Màu xanh hoàng gia,sai nghĩa: 宝蓝 = royal blue; 'xanh ngọc' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+前后三录,68,镜头数量,Ba bản ghi trước và sau,ba bản ghi trước và sau: 61; ba bản ghi âm trước và sau: 6; ghi âm ba phía trước và phía sau: 1,,Ba bản ghi trước và sau,0,Ghi hình 3 kênh trước sau,sai nghĩa: tên tạm sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+二层牛皮,68,皮质特征,Da bò hai lớp,da bò hai lớp: 34; da lộn: 18; da bò lớp thứ hai: 6; hai lớp da bò: 6; da bò lớp thứ hai1: 1,,Da bò hai lớp,0,Da bò lớp hai,sai nghĩa: 'da bò hai lớp' sai nghĩa (split leather),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+手机架,68,功能,Giá đỡ điện thoại di động,giá đỡ điện thoại di động: 37; giá đỡ điện thoại: 30; giá điện thoại: 1,,Giá đỡ điện thoại di động,0,,,,
+卡扣式开合,68,开合方式,Khóa cài,"khóa cài: 35; đóng cửa nhanh: 14; mở và đóng nhanh: 7; mở và đóng nhanh chóng, dễ dàng: 3; mở và đóng bằng cách bấm (snap-on): 3",,Khóa cài,0,,,,
+褶皱,67,流行元素,Nếp gấp,nếp gấp: 34; nếp nhăn: 32,,Nếp gấp,0,,,,
+电脑插袋,67,包内部结构,Túi cắm máy tính,túi cắm máy tính: 36; túi đựng máy tính: 28; túi máy tính: 2; túi trượt máy tính: 1,,Túi cắm máy tính,0,Ngăn đựng laptop,định dạng: 'túi cắm máy tính' lạ,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+藏青,67,颜色,Màu xanh hải quân,màu xanh hải quân: 31; xanh navy: 31; xanh tím than: 4; màu xám: 1,,Màu xanh hải quân,0,Màu xanh navy,thống nhất: thống nhất 藏青色,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+烘干,67,食品工艺,Sấy khô,sấy khô: 63; khô: 3,,Sấy khô,0,,,,
+冷泡,67,食品工艺,Pha lạnh,pha lạnh: 29; bọt lạnh: 19; bia lạnh: 17; nước pha lạnh: 2,,Pha lạnh,0,,,,
+100支,67,面料支数,100 miếng,100 miếng: 46; 100 chiếc: 21,,100 miếng,0,Chi số 100,sai nghĩa: 支 = chi số sợi,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+花边,67,织造工艺,Ren,ren: 49; viền hoa: 18,,Ren,0,,,,
+中帮(3-7cm),67,鞋帮高度,Cổ trung (3-7cm),cổ trung (3-7cm): 25; trung bình (3-7cm): 18; đỉnh vừa (3-7cm): 12; áo giữa (3-7cm): 5; băng giữa (3-7cm): 4,,Cổ trung (3-7cm),0,Cổ vừa (3-7cm),thống nhất: thống nhất 低帮 'Cổ thấp',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+广告促销,66,适用送礼场合,Khuyến mãi quảng cáo,khuyến mãi quảng cáo: 31; quảng cáo khuyến mãi: 22; quảng cáo và khuyến mãi: 1,,Khuyến mãi quảng cáo,0,,,,
+1000万,66,拍照像素,10 triệu,10 triệu: 61; 10.0million: 2; 1000 triệu: 2,,10 triệu,0,10 MP,sai nghĩa: 1000万 像素 = 10 megapixel,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+大白,66,形象,Đại Bạch,đại bạch: 25; trắng lớn: 18; màu trắng lớn: 9; đại bái: 6; đáp bị: 3,,Đại Bạch,0,Baymax,sai nghĩa: 形象 大白 = nhân vật Baymax,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+杯架,66,功能,Giá để cốc,giá để cốc: 44; người giữ cốc: 20; ngăn đựng cốc: 1; giá đỡ cốc: 1,,Giá để cốc,0,,,,
+礼盒装,66,包装种类,Hộp quà tặng,hộp quà tặng: 33; hộp quà: 27; hộp quà tặng1: 1,,Hộp quà tặng,0,,,,
+袋泡茶,66,茶种类,Trà túi lọc,trà túi lọc: 35; túi trà: 30,,Trà túi lọc,0,,,,
+1000g（含）~1500g（不含）,66,克重,1000g (tính cả) ~ 1500g (không tính),1000g (tính cả) ~ 1500g (không tính): 28; 1000g (bao gồm) ~ 1500g (không bao gồm): 24; 1000g (đã bao gồm)~1500g (độc quyền): 11; 1000g (đã bao gồm) ~ 1500g (chưa bao gồm): 2,,1000g (tính cả) ~ 1500g (không tính),0,,,,
+河南焦作,66,产地,"Tiêu Tác, Hà Nam","tiêu tác, hà nam: 47; jiaozuo, hà nam: 19",,"Tiêu Tác, Hà Nam",0,,,,
+休闲鞋,66,款式,giày thông thường,giày thông thường: 34; giày thể thao: 20; giày thường ngày: 11,,giày thông thường,0,Giày thường ngày,định dạng: chữ hoa + cách gọi,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+编织,65,流行元素,Đan,đan: 35; dệt: 27; đan lát: 3,,Đan,0,,,,
+2025年,65,产品上市时间,năm 2025,năm 2025: 50; 2025: 14,,năm 2025,0,Năm 2025,định dạng: chữ hoa,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+哑光,65,质地,Mờ,mờ: 65,,Mờ,0,,,,
+95%及以上,65,主面料成分含量,95% trở lên,95% trở lên: 65,,95% trở lên,0,,,,
+公主风,65,风格,Phong cách công chúa,phong cách công chúa: 65,,Phong cách công chúa,0,,,,
+多规格,65,规格,Nhiều thông số kỹ thuật,nhiều thông số kỹ thuật: 31; nhiều quy cách: 23,,Nhiều thông số kỹ thuật,0,Nhiều quy cách,thống nhất: thống nhất 规格,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+婚庆,64,适用送礼场合,Đám cưới,đám cưới: 35; sự kiện cưới: 19; đám cưới1: 8; sự kiện cưới2: 1,,Đám cưới,0,,,,
+3.0英寸,64,屏幕尺寸,3.0inch,3.0inch: 34; 3.0 inch: 30,,3.0inch,0,3.0 inch,định dạng: khoảng trắng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+亮片,64,流行元素,Miếng lấp lánh,miếng lấp lánh: 32; sequin: 18; kim sa: 14,,Miếng lấp lánh,0,Kim sa,sai nghĩa: 'miếng lấp lánh' dịch sát,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果XR,64,适用型号,Apple XR,apple xr: 50; applexr: 12; táo xr: 2,,Apple XR,0,iPhone XR,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果15PRO,64,适用型号,Apple 15PRO,apple 15pro: 62; táo 15pro: 2,,Apple 15PRO,0,iPhone 15 Pro,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+压花,63,流行元素,Hoa ép,hoa ép: 36; dập nổi: 24; hoa ép1: 1,,Hoa ép,0,Dập nổi,sai nghĩa: 'hoa ép' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+2022年春季,63,上市年份季节,Mùa xuân năm 2022,mùa xuân năm 2022: 62; mùa xuân 2022: 1,,Mùa xuân năm 2022,0,,,,
+三件套,63,套装件数,Bộ ba món,bộ ba món: 44; bộ ba chiếc: 17; bộ ba mảnh: 2,,Bộ ba món,0,,,,
+面膜,63,产品类型,mặt nạ,mặt nạ: 41; khẩu trang: 5; mặt nạ1: 1; mặt nạ3: 1,,mặt nạ,0,Mặt nạ,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+通勤风,63,风格,Phong cách đi lại,phong cách đi lại: 56; phong cách công sở: 7,,Phong cách đi lại,0,Phong cách công sở,sai nghĩa: 'phong cách đi lại' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果XSMAX,63,适用型号,Apple XSMAX,apple xsmax: 39; apple xs max: 19; apple xs tối đa: 3; táo xsmax: 2,,Apple XSMAX,0,iPhone XS Max,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果16PRO,63,适用型号,Apple 16PRO,apple 16pro: 59; táo 16pro: 2; apple 16 pro: 2,,Apple 16PRO,0,iPhone 16 Pro,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果16PLUS,63,适用型号,Apple 16PLUS,apple 16plus: 54; apple 16 cộng: 9,,Apple 16PLUS,0,iPhone 16 Plus,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果14PRO,63,适用型号,Apple 14PRO,apple 14pro: 61; táo 14pro: 2,,Apple 14PRO,0,iPhone 14 Pro,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果13PRO,63,适用型号,Apple 13PRO,apple 13pro: 63,,Apple 13PRO,0,iPhone 13 Pro,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+勐海茶区,63,茶区,Khu trà Menghai,khu trà menghai: 45; khu trà mạnh hải: 10; vùng trà menghai: 5; khu vực trà menghai: 2,,Khu trà Menghai,0,Vùng trà Mãnh Hải,định dạng: Hán Việt địa danh,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+龙井,63,产品类别,Long Tỉnh,long tỉnh: 60; lung tỉnh: 1,,Long Tỉnh,0,,,,
+200x230cm单被套,63,尺寸规格,"Vỏ chăn đơn, kích thước 200x230cm","vỏ chăn đơn, kích thước 200x230cm: 44; vỏ chăn đơn 200x230cm: 14; vỏ chăn đơn kích thước 200x230cm: 5",,"Vỏ chăn đơn, kích thước 200x230cm",0,,,,
+军绿,62,颜色,Xanh quân đội,xanh quân đội: 47; màu xanh quân đội: 13; màu vàng nhạt: 1; quân sự xanh: 1,,Xanh quân đội,0,,,,
+防晒,62,材质功能,Chống nắng,chống nắng: 59; kem chống nắng: 3,,Chống nắng,0,,,,
+前开口,62,功能,Hở trước,hở trước: 29; mở cửa phía trước: 24; mở phía trước: 9,,Hở trước,0,,,,
+玻尿酸,62,核心成分,axit hyaluronic,axit hyaluronic: 60,,axit hyaluronic,0,Axit hyaluronic,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果17PROMAX,62,适用型号,Apple 17PROMAX,apple 17promax: 59; táo 17promax: 3,,Apple 17PROMAX,0,iPhone 17 Pro Max,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果15PROMAX,62,适用型号,Apple 15PROMAX,apple 15promax: 60; táo 15promax: 2,,Apple 15PROMAX,0,iPhone 15 Pro Max,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+食品级PP,62,材质,PP cấp thực phẩm,pp cấp thực phẩm: 61,,PP cấp thực phẩm,0,,,,
+后视镜,61,安装位置,Gương chiếu hậu,gương chiếu hậu: 61,,Gương chiếu hậu,0,,,,
+日韩风,61,风格,Phong cách Nhật Bản và Hàn Quốc,phong cách nhật bản và hàn quốc: 58; phong cách nhật hàn: 3,,Phong cách Nhật Bản và Hàn Quốc,0,,,,
+苹果14PROMAX,61,适用型号,Apple 14PROMAX,apple 14promax: 59; apple 14 pro max: 2,,Apple 14PROMAX,0,iPhone 14 Pro Max,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果11PROMAX,61,适用型号,Apple 11PROMAX,apple 11promax: 44; apple 11 pro max: 15; táo 11promax: 2,,Apple 11PROMAX,0,iPhone 11 Pro Max,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+刺绣/绣花,61,工艺,Thêu/thêu hoa,thêu/thêu hoa: 34; thêu/thêu: 25; thêu: 2,,Thêu/thêu hoa,0,,,,
+【床单款】1.5四件套-被套150x200,61,尺寸规格,[Bộ ga trải giường]Bộ 4 món 1.5m - Vỏ chăn 150x200,[bộ ga trải giường]bộ 4 món 1.5m - vỏ chăn 150x200: 56; [sheet style] bộ 4 món 1.5 - vỏ chăn 150x200: 5,,[Bộ ga trải giường]Bộ 4 món 1.5m - Vỏ chăn 150x200,0,,,,
+150x200cm单被套,61,尺寸规格,Vỏ chăn đơn 150x200cm,vỏ chăn đơn 150x200cm: 56; vỏ chăn đơn kích thước 150x200cm: 5,,Vỏ chăn đơn 150x200cm,0,,,,
+73码,61,适合身高,73 cỡ,73 cỡ: 24; cỡ 73: 22; 73 yard: 10; kích thước 73: 4; 73 thước anh: 1,,73 cỡ,0,Cỡ 73,định dạng: trật tự,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+皮筋腰带,61,裤门襟,Thắt lưng dây chun,thắt lưng dây chun: 27; thắt lưng chun: 24; đai cao su: 6; thắt lưng cao su: 3; dây cao su: 1,,Thắt lưng dây chun,0,,,,
+羽毛球,60,适用运动,Cầu lông,cầu lông: 60,,Cầu lông,0,,,,
+特大号,60,规格,Cỡ đại,cỡ đại: 24; cỡ cực lớn: 20; cực lớn: 16,,Cỡ đại,0,,,,
+亚克力,60,材质,Acrylic,acrylic: 59,,Acrylic,0,,,,
+晒后修护,60,化妆品功效,Sửa chữa sau nắng,sửa chữa sau nắng: 30; chăm sóc sau khi tắm nắng: 25; sửa chữa sau khi tiếp xúc với ánh nắng mặt trời: 1; dưỡng ẩm: 1,,Sửa chữa sau nắng,0,Phục hồi da sau đi nắng,sai nghĩa: 'sửa chữa sau nắng' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+耳塞式,60,使用方式,Kiểu nhét tai,kiểu nhét tai: 35; loại nút tai: 19; tai nghe: 6,,Kiểu nhét tai,0,,,,
+骨传导,60,功能,Dẫn truyền xương,dẫn truyền xương: 55; dẫn truyền qua xương: 5,,Dẫn truyền xương,0,,,,
+拼多多,60,主要下游平台,Pinduoduo,pinduoduo: 40; ghép nhiều: 15,,Pinduoduo,0,,,,
+连帽,60,是否连帽,Liền mũ,liền mũ: 23; có mũ: 22; có mũ trùm đầu: 10; được trùm đầu: 4; mũ trùm đầu: 1,,Liền mũ,0,Có mũ liền,thống nhất: thống nhất 不连帽 'Không mũ liền',OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+合格品,60,产品等级,Sản phẩm đủ tiêu chuẩn,sản phẩm đủ tiêu chuẩn: 42; sản phẩm đạt tiêu chuẩn: 17,,Sản phẩm đủ tiêu chuẩn,0,,,,
+超细纤维,59,靴筒内里材质,sợi nhỏ,sợi nhỏ: 35; sợi siêu mịn: 23,,sợi nhỏ,0,Sợi microfiber,thống nhất: thống nhất với 超纤,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+装饰,59,功能,Trang trí,trang trí: 59,,Trang trí,0,,,,
+白黑,59,颜色,Trắng đen,trắng đen: 49; đen và trắng: 6; trắng và đen: 4,,Trắng đen,0,,,,
+氨基酸,59,成分,Axit amin,axit amin: 55; axit amin1: 1,,Axit amin,0,,,,
+苹果17AIR,59,适用型号,Apple 17AIR,apple 17air: 57; táo 17air: 2,,Apple 17AIR,0,iPhone 17 Air,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果17PRO,59,适用型号,Apple 17PRO,apple 17pro: 57; táo 17pro: 2,,Apple 17PRO,0,iPhone 17 Pro,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果15PLUS,59,适用型号,Apple 15PLUS,apple 15plus: 55; apple 15 plus: 2; táo 15plus: 2,,Apple 15PLUS,0,iPhone 15 Plus,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果14PLUS,59,适用型号,Apple 14PLUS,apple 14plus: 55; apple 14 cộng: 2; táo 14plus: 2,,Apple 14PLUS,0,iPhone 14 Plus,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果13PROMAX,59,适用型号,Apple 13PROMAX,apple 13promax: 57; táo 13promax: 2,,Apple 13PROMAX,0,iPhone 13 Pro Max,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+辑明线,59,款式细节,Dây,dây: 30; khâu trên cùng: 17; chỉnh sửa dòng: 5; chỉnh sửa dòng trên cùng: 4; topline: 3,,Dây,0,Đường chỉ nổi,sai nghĩa: 'dây' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+81%(含)-90%(含),59,主面料成分的含量,81% (bao gồm)-90% (bao gồm),81% (bao gồm)-90% (bao gồm): 41; 81% (đã bao gồm)-90% (đã bao gồm): 15; 81% (đã bao gồm) - 90% (đã bao gồm): 3,,81% (bao gồm)-90% (bao gồm),0,,,,
+熟普,59,产品类别,Nấu chung,nấu chung: 42; phổ nhĩ chín: 10; pu nấu chín: 6; quen thuộc: 1,,Nấu chung,0,Phổ Nhĩ chín,sai nghĩa: 'nấu chung' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+松紧带,59,穿着方式,Dây thun,dây thun: 40; dây chun: 19,,Dây thun,0,,,,
+商务馈赠,58,适用送礼场合,Quà tặng doanh nghiệp,quà tặng doanh nghiệp: 58,,Quà tặng doanh nghiệp,0,,,,
+毛绒,58,材质,Lông nhung,lông nhung: 25; sang trọng: 24; nhồi bông: 4; nhung: 1,,Lông nhung,0,,,,
+生理曲线背板,58,背负系统,Mặt sau đường cong sinh lý,mặt sau đường cong sinh lý: 48; bảng mặt sau đường cong sinh lý: 6; tấm lưng cong theo đường cong sinh lý: 3; tấm lưng cong sinh lý: 1,,Mặt sau đường cong sinh lý,0,Tấm lưng cong theo cột sống,định dạng: tên tạm lủng củng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+浅绿色,58,颜色,Màu xanh lục nhạt,màu xanh lục nhạt: 35; màu xanh nhạt: 18; xanh nhạt: 5,,Màu xanh lục nhạt,0,,,,
+腋下包,58,箱包潮流款式,túi nách,túi nách: 24; túi dưới nách: 21; túi đựng nách: 11,,túi nách,0,Túi nách,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+镜面,58,质地,Mặt kính,mặt kính: 30; gương: 28,,Mặt kính,0,,,,
+祛斑,58,化妆品功效,Xóa tàn nhang,xóa tàn nhang: 27; trị tàn nhang: 24; loại bỏ tàn nhang: 7,,Xóa tàn nhang,0,,,,
+苹果12PROMAX,58,适用型号,Apple 12PROMAX,apple 12promax: 46; apple 12 pro max: 10; táo 12promax: 2,,Apple 12PROMAX,0,iPhone 12 Pro Max,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+聚合物锂离子电芯,58,电芯类型,Pin lithium ion polymer,pin lithium ion polymer: 32; pin lithium-ion polymer: 16; tế bào pin lithium-ion polymer: 10,,Pin lithium ion polymer,0,,,,
+短裤,58,裤长,Quần short,quần short: 54; quần sooc: 4,,Quần short,0,,,,
+200*230cm单被套,58,尺寸规格,"Vỏ chăn đơn, kích thước 200 x 230 cm","vỏ chăn đơn, kích thước 200 x 230 cm: 36; vỏ chăn đơn 200*230cm: 16; vỏ chăn đơn kích thước 200*230cm: 5",,"Vỏ chăn đơn, kích thước 200 x 230 cm",0,,,,
+蓄热保暖,58,功能,"Giữ nhiệt, giữ ấm","giữ nhiệt, giữ ấm: 30; lưu trữ nhiệt và giữ ấm: 28",,"Giữ nhiệt, giữ ấm",0,,,,
+牛奶绒,58,材质,nhung sữa,nhung sữa: 27; vải nhung sữa: 22; lông cừu sữa: 6; nhung sữa1: 1,,nhung sữa,0,Nhung sữa,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+普通厚,58,厚薄,Dày thông thường,dày thông thường: 52; thông thường dày: 6,,Dày thông thường,0,,,,
+国标,57,产品标准号,Tiêu chuẩn quốc gia,tiêu chuẩn quốc gia: 56,,Tiêu chuẩn quốc gia,0,,,,
+800万,57,拍照像素,8 triệu,8 triệu: 56; 8.0million: 1,,8 triệu,0,8 MP,sai nghĩa: 800万 像素 = 8 megapixel,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+2022年夏季,57,上市年份季节,Mùa hè năm 2022,mùa hè năm 2022: 57,,Mùa hè năm 2022,0,,,,
+苹果12PRO,57,适用型号,Apple 12PRO,apple 12pro: 33; apple 12 pro: 22; táo 12pro: 2,,Apple 12PRO,0,iPhone 12 Pro,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+V字领,57,领型,Cổ chữ V,cổ chữ v: 57,,Cổ chữ V,0,,,,
+秋冬,57,适合季节,Mùa thu đông,mùa thu đông: 49; mùa thu và mùa đông: 7; thu đông: 1,,Mùa thu đông,0,,,,
+热泡,57,食品工艺,Nước ấm,nước ấm: 26; bong bóng nóng: 19; ngâm nóng: 5; brew nóng: 4; bia nóng: 2,,Nước ấm,0,Pha nóng,sai nghĩa: 'nước ấm' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+180x220cm单被套,57,尺寸规格,"Vỏ chăn đơn, kích thước 180x220cm","vỏ chăn đơn, kích thước 180x220cm: 42; vỏ chăn đơn 180x220cm: 14; vỏ chăn đơn kích thước 180x220cm: 1",,"Vỏ chăn đơn, kích thước 180x220cm",0,,,,
+锅/碗,57,适用对象,Nồi/bát,nồi/bát: 57,,Nồi/bát,0,,,,
+松糕底,57,鞋跟款式,Đế nền tảng,đế nền tảng: 21; đế bánh mì nướng: 15; đế bánh xốp: 14; đế nền: 5; nền tảng phía dưới: 2,,Đế nền tảng,0,Đế xuồng dày,sai nghĩa: 'đế nền tảng' dịch sát,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+回弹,57,功能,Độ đàn hồi,độ đàn hồi: 37; phục hồi: 20,,Độ đàn hồi,0,,,,
+厂内自检,57,质检单位,Kiểm tra nội bộ tại nhà máy,kiểm tra nội bộ tại nhà máy: 25; tự kiểm tra trong nhà máy: 18; nhà máy tự kiểm tra: 9; tự kiểm tra nhà máy: 5,,Kiểm tra nội bộ tại nhà máy,0,,,,
+挂钩,56,功能,móc,móc: 52; móc treo: 4,,móc,0,Móc,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+山东,56,产地,Sơn Đông,sơn đông: 54; thiên tân: 2,,Sơn Đông,0,,,,
+定制,56,流行元素,tùy chỉnh,tùy chỉnh: 27; đặt làm: 24; tùy chỉnh1: 1; được cá nhân hóa: 1,,tùy chỉnh,0,Tùy chỉnh,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+10英寸,56,屏幕尺寸,10 inch,10 inch: 31; 10inch: 25,,10 inch,0,,,,
+护脊,56,功能,Bảo vệ cột sống,bảo vệ cột sống: 56,,Bảo vệ cột sống,0,,,,
+柔雾,56,质地,Sương mù mềm,sương mù mềm: 42; sương mù mềm mại: 14,,Sương mù mềm,0,Lì mịn,sai nghĩa: son: hiệu ứng lì mịn,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+少女,56,风格,cô gái,cô gái: 29; thiếu nữ: 16; con gái: 11,,cô gái,0,Cô gái,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+粤妆20170506,56,生产许可证号,Trang điểm Quảng Đông 20170506,trang điểm quảng đông 20170506: 48; trang điểm cantonese 20170506: 4; trang điểm cantonese20170506: 2; trang điểm quảng đông20170506: 1,,Trang điểm Quảng Đông 20170506,0,粤妆20170506,sai nghĩa: số giấy phép: chép nguyên (luật mã thật),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+180g以下,56,克重,Dưới 180g,dưới 180g: 56,,Dưới 180g,0,,,,
+大红袍,56,产品类别,Áo choàng đỏ,áo choàng đỏ: 32; đại hồng bào: 18; áo choàng đỏ lớn: 5; áo choàng đỏ to: 1,,Áo choàng đỏ,0,Đại Hồng Bào,sai nghĩa: tên trà; 'áo choàng đỏ' dịch sát,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+是(本商品仅供外贸用途，可能不符合境内产品标准。请境内买家谨慎购入),56,是否专供外贸,Có (Sản phẩm này chỉ dành cho mục đích ngoại thương và có thể không đáp ứng các tiêu chuẩn sản phẩm trong nước. Người mua trong nước vui lòng mua cẩn thận),"có (sản phẩm này chỉ dành cho mục đích ngoại thương và có thể không đáp ứng các tiêu chuẩn sản phẩm trong nước. người mua trong nước vui lòng mua cẩn thận): 21; sản phẩm này chỉ dành cho mục đích xuất khẩu, có thể không đáp ứng tiêu chuẩn sản phẩm trong nước. xin người mua trong nước cân nhắc kỹ trước khi mua): 20; có (sản phẩm này chỉ dành cho mục đích ngoại thương và có thể không đáp ứng các tiêu chuẩn sản phẩm trong nước.người mua trong nước vui lòng mua hàng một cách thận trọng): 4; có (sản phẩm này chỉ dành cho mục đích ngoại thương và có thể không đáp ứng các tiêu chuẩn sản phẩm trong nước. người mua trong nước vui lòng mua hàng một cách thận trọng): 3; có (sản phẩm này chỉ dành cho mục đích ngoại thương và có thể không tuân thủ các tiêu chuẩn sản phẩm trong nước. người mua trong nước vui lòng mua hàng một cách thận trọng): 3",,Có (Sản phẩm này chỉ dành cho mục đích ngoại thương và có thể không đáp ứng các tiêu chuẩn sản phẩm trong nước. Người mua trong nước vui lòng mua cẩn thận),0,,,,
+黑色【180克精梳棉】,55,颜色,Màu đen [180g bông chải kỹ],màu đen [180g bông chải kỹ]: 29; màu đen [180g cotton chải kỹ]: 15; đen [180g bông chải kỹ]: 10; đen [180g cotton chải kỹ]: 1,,Màu đen [180g bông chải kỹ],0,,,,
+白色【180克精梳棉】,55,颜色,Trắng [180g bông chải kỹ],trắng [180g bông chải kỹ]: 39; màu trắng [180g cotton chải kỹ]: 11; trắng [180g cotton chải kỹ]: 5,,Trắng [180g bông chải kỹ],0,Màu trắng [180g bông chải kỹ],thống nhất: thống nhất 黑色【180克精梳棉】,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+【床单款】1.8四件套-被套180x220,55,尺寸规格,[Kiểu ga trải giường]Bộ 4 món 1.8m - Vỏ chăn 180x220,[kiểu ga trải giường]bộ 4 món 1.8m - vỏ chăn 180x220: 51; [sheet style] bộ 4 món 1.8 - vỏ chăn 180x220: 4,,[Kiểu ga trải giường]Bộ 4 món 1.8m - Vỏ chăn 180x220,0,,,,
+100%棉,55,主面料成分含量,100% cotton,100% cotton: 28; 100% bông: 17; bông 100%: 3; 100% cotton2: 3; 100% cotton1: 2,,100% cotton,0,,,,
+高硼硅玻璃,55,材质,Thủy tinh borosilicate cao cấp,thủy tinh borosilicate cao cấp: 53; thủy tinh borosilicate cao: 1,,Thủy tinh borosilicate cao cấp,0,Thủy tinh borosilicate,sai nghĩa: 'cao cấp' thêm sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+黑色大号,54,颜色,Màu đen cỡ lớn,"màu đen cỡ lớn: 30; màu đen lớn: 8; màu đen, kích thước lớn: 6; đen lớn: 4; đen, cỡ lớn: 3",,Màu đen cỡ lớn,0,,,,
+橘色,54,颜色,Màu cam,màu cam: 42; cam: 6; quả cam: 6,,Màu cam,0,,,,
+硬壳,54,款式,vỏ cứng,vỏ cứng: 34; ốp cứng: 17,,vỏ cứng,0,Vỏ cứng,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+立体声,54,功能,âm thanh nổi,âm thanh nổi: 53,,âm thanh nổi,0,Âm thanh nổi,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+苹果11PRO,54,适用型号,Apple 11PRO,apple 11pro: 35; apple 11 pro: 17; táo 11pro: 2,,Apple 11PRO,0,iPhone 11 Pro,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+头像,54,图案,Ảnh đại diện,ảnh đại diện: 27; hình đại diện: 24; tranh đại diện: 3,,Ảnh đại diện,0,,,,
+充电宝,54,分类,Pin dự phòng,pin dự phòng: 30; sạc dự phòng: 12; ngân hàng điện: 12,,Pin dự phòng,0,Sạc dự phòng,thống nhất: thống nhất bảng thuật ngữ,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+慢跑/长跑,54,适用运动,Chạy bộ/Chạy đường dài,chạy bộ/chạy đường dài: 50; chạy bộ/chạy dài: 3; chạy bộ/chạy lâu: 1,,Chạy bộ/Chạy đường dài,0,,,,
+12英寸,53,容纳电脑尺寸,12 inch,12 inch: 30; 12inch: 23,,12 inch,0,,,,
+2021年春季,53,上市年份季节,Mùa xuân năm 2021,mùa xuân năm 2021: 52; mùa xuân 2021: 1,,Mùa xuân năm 2021,0,,,,
+茶鲜叶,53,原料与配料,Lá trà tươi,lá trà tươi: 28; trà lá tươi: 25,,Lá trà tươi,0,,,,
+【床单款】1.8四件套-被套200x230,53,尺寸规格,[Kiểu ga trải giường]Bộ 4 món 1.8m - Vỏ chăn 200x230,[kiểu ga trải giường]bộ 4 món 1.8m - vỏ chăn 200x230: 47; [sheet style] bộ 4 món 1.8 - vỏ chăn 200x230: 4; [phong cách ga trải giường] 1.8 bộ bốn món - vỏ chăn 200x230: 1; [kiểu dáng ga giường]bộ chăn ga gối 4 món cỡ giường 1.8m - vỏ chăn 200x230 cm: 1,,[Kiểu ga trải giường]Bộ 4 món 1.8m - Vỏ chăn 200x230,0,,,,
+【床单款】2.0四件套-被套200x230,53,尺寸规格,[Kiểu ga trải giường]Bộ 4 món 2.0 - Vỏ chăn 200x230,[kiểu ga trải giường]bộ 4 món 2.0 - vỏ chăn 200x230: 50; [sheet style] bộ 4 món 2.0 - vỏ chăn 200x230: 3,,[Kiểu ga trải giường]Bộ 4 món 2.0 - Vỏ chăn 200x230,0,,,,
+暗扣,53,闭合款式,Khóa cài ẩn,khóa cài ẩn: 22; khuy ẩn: 21; khóa giấu: 5; nút ẩn: 3; khóa ẩn: 2,,Khóa cài ẩn,0,,,,
+手柄,53,遥控方式,Tay cầm,tay cầm: 42; xử lý: 11,,Tay cầm,0,,,,
+方头,53,鞋头形状,Đầu vuông,đầu vuông: 28; mũi vuông: 24,,Đầu vuông,0,,,,
+高帮(3-7cm),53,鞋帮高度,Cổ cao (3-7cm),cổ cao (3-7cm): 24; cao trên (3-7cm): 9; cao đến mắt cá chân (3-7cm): 9; đỉnh cao (3-7cm): 8; áo cao (3-7cm): 2,,Cổ cao (3-7cm),0,,,,
+展销会,52,适用送礼场合,Hội chợ thương mại,hội chợ thương mại: 44; triển lãm: 4,,Hội chợ thương mại,0,,,,
+樱花粉,52,颜色,Hoa anh đào,hoa anh đào: 30; bột hoa anh đào: 19; hồng hoa anh đào: 2; hoa anh đào màu hồng: 1,,Hoa anh đào,0,Màu hồng anh đào,"sai nghĩa: màu sắc, không phải hoa",OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+蓝牙,52,功能,Bluetooth,bluetooth: 50,,Bluetooth,0,,,,
+无里布,52,里料质地,Vải không lót,vải không lót: 28; không có lớp lót: 24,,Vải không lót,0,,,,
+天猫,52,主要下游平台,Tmall,tmall: 50; nhỏ: 1; t nhỏ: 1,,Tmall,0,,,,
+90%（含）-95%（不含）,52,主面料成分含量,90% (bao gồm)-95% (không bao gồm),90% (bao gồm)-95% (không bao gồm): 32; 90% (bao gồm) - 95% (không bao gồm): 7; 90% (đã bao gồm)-95% (độc quyền): 6; 90% (đã bao gồm) - 95% (không bao gồm): 5; 90% (đã bao gồm) - 95% (chưa bao gồm): 2,,90% (bao gồm)-95% (không bao gồm),0,,,,
+短信编码提货,52,特殊提货凭证,Nhận mã SMS,nhận mã sms: 18; mã sms nhận hàng: 14; nhận hàng mã sms: 14; nhận mã hóa sms: 4; mã sms để giao hàng: 2,,Nhận mã SMS,0,,,,
+衣物收纳盒,52,产品类别,Hộp đựng quần áo,hộp đựng quần áo: 51; hộp đựng quần áo1: 1,,Hộp đựng quần áo,0,,,,
+150*200cm单被套,52,尺寸规格,Vỏ chăn đơn 150*200cm,vỏ chăn đơn 150*200cm: 48; vỏ chăn đơn kích thước 150x200cm: 3,,Vỏ chăn đơn 150*200cm,0,,,,
+防烫,52,功能,Chống bỏng,chống bỏng: 52,,Chống bỏng,0,,,,
+工厂自检,52,质检单位,Kiểm tra chất lượng tại nhà máy,kiểm tra chất lượng tại nhà máy: 31; nhà máy tự kiểm tra: 12; tự kiểm tra nhà máy: 9,,Kiểm tra chất lượng tại nhà máy,0,,,,
+水桶包,51,箱包潮流款式,Túi xô,túi xô: 51,,Túi xô,0,Túi bucket,định dạng: cách gọi thông dụng,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+绣花,51,织造工艺,Thêu hoa,thêu hoa: 27; thêu: 24,,Thêu hoa,0,,,,
+湖北,51,产地,Hồ Bắc,hồ bắc: 46; hubei: 5,,Hồ Bắc,0,,,,
+抖音,51,主要下游平台,Douyin,douyin: 34; tik tok: 14; đouyin: 2; đậu nành: 1,,Douyin,0,,,,
+情侣,51,风格,cặp đôi,cặp đôi: 51,,cặp đôi,0,Cặp đôi,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+51%(含)-70%(含),51,主面料成分的含量,51% (bao gồm)-70% (bao gồm),51% (bao gồm)-70% (bao gồm): 30; 51% (đã bao gồm)-70% (đã bao gồm): 18; 51% (đã bao gồm) - 70% (đã bao gồm): 3,,51% (bao gồm)-70% (bao gồm),0,,,,
+数码印花,51,工艺,In kỹ thuật số,in kỹ thuật số: 26; in hoa kỹ thuật số: 25,,In kỹ thuật số,0,,,,
+圆点,51,图案,Chấm tròn,chấm tròn: 35; chấm: 16,,Chấm tròn,0,,,,
+办公室,51,收纳场景,Văn phòng,văn phòng: 50,,Văn phòng,0,,,,
+武夷岩茶,51,原料与配料,Trà đá Vũ Nữ,trà đá vũ nữ: 35; trà đá wuyi: 12; trà nham vũ di: 4,,Trà đá Vũ Nữ,0,Trà nham Vũ Di,sai nghĩa: 'trà đá Vũ Nữ' sai,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+斜襟单排扣,51,闭合款式,Áo vạt chéo cài một hàng cúc,áo vạt chéo cài một hàng cúc: 20; vạt chéo một hàng cúc: 16; đơn ngực có túi nghiêng: 9; một bên ngực có túi xéo: 1; áo vạt chéo cài một hàng cúc2: 1,,Áo vạt chéo cài một hàng cúc,0,,,,
+河北望都,51,产地,"Vọng Đô, Hà Bắc","vọng đô, hà bắc: 27; wangdu, hà bắc: 16; hà bắc wangdu: 8",,"Vọng Đô, Hà Bắc",0,,,,
+人造PU,51,鞋面材质,PU nhân tạo,pu nhân tạo: 51,,PU nhân tạo,0,,,,
+6个月以上,51,适用年龄,6 tháng trở lên,6 tháng trở lên: 32; 6 tháng tuổi trở lên: 14; hơn 6 tháng: 4,,6 tháng trở lên,0,,,,
+循环录制,50,数据存储时间,Ghi âm vòng lặp,ghi âm vòng lặp: 37; ghi vòng lặp: 11; ghi âm chu kỳ: 2,,Ghi âm vòng lặp,0,Ghi hình vòng lặp,thống nhất: thống nhất 循环录像,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+2022年秋季,50,上市年份季节,Mùa thu năm 2022,mùa thu năm 2022: 47; mùa thu 2022: 3,,Mùa thu năm 2022,0,,,,
+潮牌,50,风格,Thương hiệu sành điệu,thương hiệu sành điệu: 22; thương hiệu hợp thời trang: 16; thương hiệu thời thượng: 12,,Thương hiệu sành điệu,0,,,,
+奢华,50,风格,sang trọng,sang trọng: 48; dây đeo: 1; cá tính: 1,,sang trọng,0,Sang trọng,định dạng: viết hoa chữ đầu,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+简洁大方风,50,风格,Phong cách đơn giản và thanh lịch,phong cách đơn giản và thanh lịch: 49; phong cách tối giản: 1,,Phong cách đơn giản và thanh lịch,0,,,,
+苹果X,50,适用型号,Apple X,apple x: 39; applex: 7; apple: 2; táo x: 2,,Apple X,0,iPhone X,sai nghĩa: 苹果 + số máy = iPhone (tạm là 'táo'/'Apple N'),OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+翻领,50,领型,ve áo,ve áo: 30; cổ lật: 16; cổ bẻ: 3,,ve áo,0,Cổ bẻ,định dạng: kiểu cổ áo,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+30%（含）-50%（不含）,50,主面料成分2含量,30% (đã bao gồm)-50% (độc quyền),30% (đã bao gồm)-50% (độc quyền): 19; 30% (bao gồm)-50% (không bao gồm): 14; 30% (đã bao gồm) - 50% (không bao gồm): 6; 30% (bao gồm) - 50% (không bao gồm): 5; 30% (đã bao gồm) - 50% (chưa bao gồm): 4,,30% (đã bao gồm)-50% (độc quyền),0,30% (bao gồm)-50% (không bao gồm),sai nghĩa: 'độc quyền' sai; thống nhất các khoảng %,OK,"Nhật Anh xác nhận OK qua chat 02/10/2026, Claude ghi thay"
+文艺复古,50,风格类型,Văn nghệ cổ điển,văn nghệ cổ điển: 27; trở lại văn học: 14; chữ cổ điển: 6; ngụy biện văn học: 3,,Văn nghệ cổ điển,0,,,,
+铁观音,50,产品类别,Thiết Quan Âm,thiết quan âm: 30; tỳ quan âm: 6; trà thiết quan âm: 5; tế quan âm: 4; quan âm sắt: 2,,Thiết Quan Âm,0,,,,
+葫芦型,50,形状,Hình quả hồ lô,hình quả hồ lô: 22; hình hồ lô: 15; loại bầu: 13,,Hình quả hồ lô,0,,,,

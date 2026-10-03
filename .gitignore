@@ -1,18 +1,16 @@
-# Jupyter
+# Environment
+.venv/
+__pycache__/
+*.pyc
 .ipynb_checkpoints/
 
-# Python
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-env/
+# Data: snapshots live on Hugging Face (see data/snapshot/SNAPSHOT.md); caches are regenerable
+*.parquet
+data/interim/
 
-# IDE / OS
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-
-# Local config / secrets
+# Secrets
 .env
+
+# Bản chép tạm để tải lên HF (trùng data/release/desc_v1) và kết quả chạy thử bằng số giả
+data/release/desc_v1_tai_len_hf/
+data/eda/description/_thu_gia/

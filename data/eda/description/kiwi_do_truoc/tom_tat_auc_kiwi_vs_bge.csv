@@ -1,0 +1,11 @@
+﻿tap,cach,tb_dung,tb_sai,auc
+tang1,kiwi_gia_tri,0.64,0.524,0.692
+tang1,kiwi_ten_gia_tri,0.709,0.576,0.733
+tang1,cos_gia_tri,0.712,0.673,0.58
+tang1,cos_ten_gia_tri,0.777,0.732,0.626
+tang1,ket_hop,0.558,0.377,0.701
+tang2,kiwi_gia_tri,0.608,0.5,0.705
+tang2,kiwi_ten_gia_tri,0.663,0.551,0.724
+tang2,cos_gia_tri,0.712,0.685,0.574
+tang2,cos_ten_gia_tri,0.746,0.726,0.57
+tang2,ket_hop,0.462,0.325,0.665

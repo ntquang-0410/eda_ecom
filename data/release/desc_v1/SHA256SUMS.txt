@@ -1,0 +1,2 @@
+b16c4ee2ee74b88a3b3628de8c72ad11380d11d1a766d7ce56067ded9a371f3b  bilingual_zh_vi_desc_cleaned(nhatanh).parquet
+48f11ff3c7661bf17791ae286001c82c8c7b8420518d6fd5cca841cf49a0d447  bilingual_zh_vi_desc_pairs(nhatanh).parquet

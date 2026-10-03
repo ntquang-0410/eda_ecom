@@ -1,0 +1,10 @@
+# Pinned to the versions of the ecom_crawler .venv this work was developed in (Python 3.13.7).
+# pandas is pinned on purpose: the "\u escape rejected by .str.contains" behaviour depends on pandas 3's Arrow string dtype.
+pandas==3.0.5
+numpy==2.5.3
+pyarrow==25.0.1
+pypinyin==0.55.0
+# Added 01/10/2026 (Nhật Anh approved) for notebooks/eda-description.ipynb, run on the local .venv kernel.
+matplotlib==3.11.2
+ipykernel==7.4.0
+datasketch==2.0.0

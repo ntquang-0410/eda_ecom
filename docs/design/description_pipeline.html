@@ -1,0 +1,461 @@
+<title>Pipeline làm sạch Description</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: một cột như bản vẽ quy trình; dải tổng quan ở trên, các khối bước nối nhau bằng đường dọc, cổng duyệt đánh dấu trong mỗi khối; cuối trang là kết quả lần chạy và bảng cổng */
+:root {
+  --bg: #f6f7f5;
+  --panel: #ffffff;
+  --ink: #1d2523;
+  --muted: #5d6763;
+  --line: #d9dfdb;
+  --accent: #0f6b5c;
+  --accent-soft: #e3f1ed;
+  --gate: #6a3fa0;
+  --gate-soft: #f0e9f8;
+  --s1: #b3261e; --s1-soft: #fbe7e5;
+  --s2: #b85c00; --s2-soft: #fdf0e1;
+  --s3: #8a6d00; --s3-soft: #faf4d9;
+  --s4: #33658a; --s4-soft: #e6eef5;
+  --s0: #5d6763; --s0-soft: #eceeec;
+  --code-bg: #f1f3f1;
+  --f-display: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", "Cascadia Mono", Consolas, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121615; --panel: #1a201e; --ink: #e6ebe8; --muted: #9aa5a0; --line: #2d3532;
+    --accent: #5cc2ad; --accent-soft: #17302b; --gate: #b99ae6; --gate-soft: #2a2236;
+    --s1: #f08a82; --s1-soft: #3a1d1b; --s2: #f0a556; --s2-soft: #3a2a17;
+    --s3: #e0c45a; --s3-soft: #332d14; --s4: #8cb8de; --s4-soft: #1b2a37;
+    --s0: #9aa5a0; --s0-soft: #252b29; --code-bg: #222927; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121615; --panel: #1a201e; --ink: #e6ebe8; --muted: #9aa5a0; --line: #2d3532;
+  --accent: #5cc2ad; --accent-soft: #17302b; --gate: #b99ae6; --gate-soft: #2a2236;
+  --s1: #f08a82; --s1-soft: #3a1d1b; --s2: #f0a556; --s2-soft: #3a2a17;
+  --s3: #e0c45a; --s3-soft: #332d14; --s4: #8cb8de; --s4-soft: #1b2a37;
+  --s0: #9aa5a0; --s0-soft: #252b29; --code-bg: #222927; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.55; margin: 0; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 20px; padding-block: 32px 56px; display: grid; gap: 36px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(26px, 4vw, 36px); font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 20px; font-weight: 700; }
+h3 { font-size: 17px; font-weight: 600; }
+p { margin: 0; max-width: 72ch; }
+.eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+code, .mono { font-family: var(--f-mono); font-size: 0.86em; overflow-wrap: anywhere; }
+header { display: grid; gap: 14px; }
+.lede { color: var(--muted); }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; }
+.fact { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; font-size: 13px; }
+.fact b { color: var(--accent); font-weight: 600; }
+
+/* dải tổng quan */
+.overview { display: grid; gap: 12px; }
+.flow { display: flex; flex-wrap: wrap; gap: 8px 6px; align-items: center; list-style: none; padding: 0; margin: 0; }
+.flow li { display: flex; align-items: center; gap: 6px; }
+.flow a { text-decoration: none; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 6px 9px; font-size: 13px; display: inline-flex; gap: 6px; align-items: center; }
+.flow a:hover, .flow a:focus-visible { border-color: var(--accent); outline: none; }
+.flow .pid { font-family: var(--f-mono); color: var(--accent); font-weight: 500; }
+.flow li:not(:last-child)::after { content: "›"; color: var(--muted); }
+.gdot { width: 8px; height: 8px; border-radius: 50%; background: var(--gate); display: inline-block; flex: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--muted); align-items: center; }
+.legend span { display: inline-flex; gap: 6px; align-items: center; }
+
+/* chip mức độ */
+.ds { font-family: var(--f-mono); font-size: 12px; border-radius: 4px; padding: 1px 6px; white-space: nowrap; border: 1px solid transparent; }
+.l1 { color: var(--s1); background: var(--s1-soft); }
+.l2 { color: var(--s2); background: var(--s2-soft); }
+.l3 { color: var(--s3); background: var(--s3-soft); }
+.l4 { color: var(--s4); background: var(--s4-soft); }
+.l0 { color: var(--s0); background: var(--s0-soft); }
+
+/* các bước */
+.steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
+.step { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 16px; position: relative; padding-bottom: 22px; }
+.step::before { content: ""; position: absolute; left: 27px; top: 44px; bottom: 0; width: 2px; background: var(--line); }
+.step:last-child::before { display: none; }
+.num { width: 56px; height: 44px; border-radius: 8px; background: var(--accent-soft); color: var(--accent); font-family: var(--f-mono); font-weight: 500; display: grid; place-items: center; font-size: 15px; position: relative; z-index: 1; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; display: grid; gap: 12px; min-width: 0; }
+.card-head { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: baseline; justify-content: space-between; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px 20px; }
+.k { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; margin-bottom: 3px; }
+.ex { background: var(--code-bg); border-radius: 6px; padding: 10px 12px; font-family: var(--f-mono); font-size: 12.5px; display: grid; gap: 4px; overflow-x: auto; }
+.ex .in { color: var(--muted); }
+.ex .out { color: var(--ink); }
+.ex .arrow { color: var(--accent); }
+.gate { background: var(--gate-soft); color: var(--gate); border-radius: 6px; padding: 8px 12px; font-size: 13.5px; display: flex; gap: 8px; align-items: flex-start; }
+.gate b { font-weight: 600; }
+.nogate { background: var(--code-bg); color: var(--muted); border-radius: 6px; padding: 8px 12px; font-size: 13.5px; }
+.file { font-size: 13px; color: var(--muted); }
+.res { font-size: 13.5px; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 10px; }
+.loop { border: 1px dashed var(--accent); border-radius: 8px; padding: 12px 16px; color: var(--ink); background: var(--panel); font-size: 14px; }
+ul.plain { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+
+/* bảng */
+.tablewrap { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; min-width: 640px; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; background: var(--code-bg); }
+td.num-c { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+.st { font-size: 12px; border-radius: 4px; padding: 1px 7px; white-space: nowrap; font-weight: 500; }
+.st-dat { color: var(--accent); background: var(--accent-soft); }
+.st-cho { color: var(--gate); background: var(--gate-soft); }
+.st-claude { color: var(--s4); background: var(--s4-soft); }
+.st-chua { color: var(--s2); background: var(--s2-soft); }
+.pending { display: grid; gap: 10px; }
+.pending ul, .src ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.src { font-size: 13.5px; color: var(--muted); }
+.src a { color: var(--accent); }
+section { display: grid; gap: 14px; }
+@media (max-width: 560px) {
+  .wrap { padding-inline: 16px; }
+  .step { grid-template-columns: 40px minmax(0, 1fr); gap: 10px; }
+  .num { width: 40px; font-size: 13px; }
+  .step::before { left: 19px; }
+  .card { padding: 14px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Tiểu luận dịch máy Việt–Trung TMĐT · bước Xử lý dữ liệu · Version 5 · 03/10/2026</div>
+  <h1>Pipeline làm sạch description song ngữ 1688</h1>
+  <p class="lede">16.348 sản phẩm, 406.871 cặp thuộc tính đi qua 14 khối P0–P13 của notebook <code>notebooks/desc-pipeline.ipynb</code>. Đầu ra là bảng cặp thuộc tính sạch (có mã lý do và cột dùng cho train) và description_zh/vi dựng lại. Lỗi có quy luật được sửa bằng luật hoặc từ điển đã duyệt; phần còn lại gắn mã lý do và không đưa vào train, nhưng không xoá. Version 5 khớp với code và các quyết định đến ngày 03/10. <b>Mọi cổng đã đạt, dữ liệu là chính thức:</b> giữ 366.016/406.871 cặp (90,0%), 16.342 sản phẩm có description sạch.</p>
+  <div class="facts">
+    <span class="fact">Sửa: <b>lỗi có quy luật</b>, còn lại loại có mã lý do</span>
+    <span class="fact">LLM: <b>chỉ gợi ý</b> (Claude Code), người duyệt</span>
+    <span class="fact">Giá trị hiếm chưa kiểm: <b>loại có mã T2_CHUA_KIEM</b></span>
+    <span class="fact">Đầu ra: <b>bảng cặp + description dựng lại</b></span>
+    <span class="fact">Thuộc tính giao dịch: <b>giữ, gắn nhãn vai trò</b></span>
+    <span class="fact">Tên hãng: <b>pinyin</b></span>
+    <span class="fact">Mã có chữ Hán: <b>giữ, chú thích tỉnh</b></span>
+    <span class="fact">Thập phân: <b>dấu chấm</b></span>
+    <span class="fact">Tiếng Anh trong bản Việt: <b>để sau (Quang)</b></span>
+    <span class="fact">Chia tập: <b>hoãn, chỉ gắn nhóm</b></span>
+  </div>
+</header>
+
+<section class="overview" aria-labelledby="ov">
+  <h2 id="ov">Tổng quan thứ tự</h2>
+  <ol class="flow">
+    <li><a href="#p0"><span class="pid">P0</span> Đầu vào</a></li>
+    <li><a href="#p1"><span class="pid">P1</span> Ghép cặp</a></li>
+    <li><a href="#p2"><span class="pid">P2</span> Ký tự <span class="gdot" title="có cổng duyệt"></span></a></li>
+    <li><a href="#p3"><span class="pid">P3</span> Thông tin cá nhân</a></li>
+    <li><a href="#p4"><span class="pid">P4</span> Gắn nhãn <span class="gdot" title="có cổng duyệt"></span></a></li>
+    <li><a href="#p5"><span class="pid">P5</span> Lỗi đánh số <span class="gdot" title="có cổng duyệt"></span></a></li>
+    <li><a href="#p6"><span class="pid">P6</span> Từ điển tên <span class="gdot" title="có cổng duyệt"></span></a></li>
+    <li><a href="#p7"><span class="pid">P7</span> Từ điển giá trị <span class="gdot" title="có cổng duyệt"></span></a></li>
+    <li><a href="#p8"><span class="pid">P8</span> Số và mã</a></li>
+    <li><a href="#p9"><span class="pid">P9</span> Định dạng</a></li>
+    <li><a href="#p10"><span class="pid">P10</span> Kiểm nghĩa đuôi dài <span class="gdot" title="có cổng duyệt"></span></a></li>
+    <li><a href="#p11"><span class="pid">P11</span> Loại có mã lý do</a></li>
+    <li><a href="#p12"><span class="pid">P12</span> Trùng lặp và nhóm</a></li>
+    <li><a href="#p13"><span class="pid">P13</span> Dựng output và kiểm <span class="gdot" title="có cổng duyệt"></span></a></li>
+  </ol>
+  <div class="legend">
+    <span><span class="gdot"></span> cổng duyệt: đọc hết mục đã sửa, hoặc kiểm mẫu ngẫu nhiên</span>
+    <span><span class="ds l1">mức 1</span> sai/mất thông tin</span>
+    <span><span class="ds l2">mức 2</span> lan rộng</span>
+    <span><span class="ds l3">mức 3</span> cần đọc</span>
+    <span><span class="ds l4">mức 4</span> định dạng</span>
+    <span><span class="ds l0">mức 0</span> cấu trúc</span>
+  </div>
+  <p class="file">Cổng chưa đạt thì khối đó vẫn chạy bằng giá trị tạm; dữ liệu chỉ chính thức khi mọi cổng đạt. Mẫu kiểm do notebook bốc ngẫu nhiên với seed cố định: 0 lỗi trong n mẫu nghĩa là tỉ lệ lỗi dưới khoảng 3/n (độ tin cậy 95%). Có lỗi thì sửa luật rồi bốc mẫu phiên mới.</p>
+</section>
+
+<section aria-labelledby="st">
+  <h2 id="st">Từng bước</h2>
+  <ol class="steps">
+
+  <li class="step" id="p0"><div class="num">P0</div><div class="card">
+    <div class="card-head"><h3>Đầu vào, khoá dữ liệu và quyết định</h3></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><p>Đọc <code>data/snapshot/bilingual_zh_vi.parquet</code>, kiểm SHA256 như SNAPSHOT.md (lệch thì dừng). In các quyết định đã chốt và cờ <code>CLAUDE_XONG</code> cho biết Claude đã điền xong bảng gợi ý nào. Mỗi khối sau ghi một Parquet mới vào <code>data/processed/desc/</code>, không ghi đè bước trước (charter §4).</p></div>
+      <div><div class="k">Vì sao đầu tiên</div><p>Snapshot đổi thì mọi con số đổi theo. Ghi riêng từng bước giúp chạy lại từ giữa khi phát hiện luật sai.</p></div>
+    </div>
+  </div></li>
+
+  <li class="step" id="p1"><div class="num">P1</div><div class="card">
+    <div class="card-head"><h3>Tách và ghép cặp thuộc tính</h3><div class="chips"><span class="ds l0">DS01</span><span class="ds l0">DS25</span><span class="ds l2">DS02</span></div></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><p>Ghép zh–vi theo thứ tự đoạn trong description_vi (attributes_vi khác thứ tự ở 99,8% dòng). Cặp trùng y hệt trong cùng sản phẩm gắn DS25, giữ một bản. Dòng không ghép được gắn DS02 ở cấp sản phẩm.</p></div>
+      <div><div class="k">Vì sao ở đây</div><p>Mọi bước sau làm việc trên cặp thuộc tính; ghép sai từ đầu thì sửa gì cũng sai.</p></div>
+    </div>
+    <div class="ex"><span class="in">1007549743298: attributes_vi theo thứ tự [4, 22, 3, 11, ...]</span><span class="arrow">→</span><span class="out">mỗi cặp (vi_tri, name_zh, name_vi) và từng giá trị (k, v_zh, v_vi) đúng nghĩa</span></div>
+    <div class="res">406.871 cặp, 691.128 giá trị từ 16.342 sản phẩm; 6 sản phẩm DS02; 2 cặp DS25.</div>
+    <div class="file">Ra: p1_cap.parquet (1 dòng = 1 cặp), p1_gia_tri.parquet (1 dòng = 1 giá trị). Các khối sau ghi theo cùng mẫu pN_*.</div>
+  </div></li>
+
+  <li class="step" id="p2"><div class="num">P2</div><div class="card">
+    <div class="card-head"><h3>Làm sạch ký tự</h3><div class="chips"><span class="ds l4">DS24</span></div></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><p>Bỏ ký tự vùng riêng, gộp khoảng trắng, sửa khoảng trắng trong ngoặc. Bản Việt: 【】 đổi thành [ ], dấu câu Trung đổi sang ASCII, "; " trong giá trị đổi thành ", " để không vỡ description dựng lại. Bản Trung giữ nguyên; ~ | * giữ ở cả hai phía.</p></div>
+      <div><div class="k">Vì sao ở đây</div><p>Các từ điển ở P6, P7 so khớp chuỗi; chuỗi còn khoảng trắng lạ hay ký tự ẩn sẽ không khớp.</p></div>
+    </div>
+    <div class="ex"><span class="in">'【Jumping Puppy】Ốp Lưng Mềm...' · 'Mới【 26cm 】Ukulele...' · 意境-橙 → 'Tâm trạng-O&#xFFFD;'</span><span class="arrow">→</span><span class="out">'[Jumping Puppy]Ốp Lưng Mềm...' · 'Mới[26cm]Ukulele...' · 'Ý cảnh - Cam' (anh đã duyệt)</span></div>
+    <div class="res">Đổi 6.348 giá trị và 1 tên. 5 giá trị ký tự hỏng/chữ Hàn: chưa duyệt thì gắn DS24.</div>
+    <div class="gate"><span class="gdot" style="margin-top:6px"></span><span><b>Cổng P2_sua_tay:</b> anh đọc hết 5 giá trị trong <code>P2_sua_tay_editted.csv</code> (đã có gợi ý của Claude).</span></div>
+  </div></li>
+
+  <li class="step" id="p3"><div class="num">P3</div><div class="card">
+    <div class="card-head"><h3>Lọc thông tin cá nhân</h3><div class="chips"><span class="ds l2">DS12</span></div></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><p>Cặp có tên liên hệ (联系方式, 电话, 微信, 联系人) gắn mã PII. Cặp tên/địa chỉ nhà sản xuất (生产厂家, 生产厂商, 厂址, 公司, 制造商, 供货商, 工厂...) gắn mã PII_NSX. Trong các cặp còn lại, che số điện thoại, URL, email, ID WeChat/QQ bằng nhãn [电话]/[SĐT], [URL], [EMAIL], [联系方式]/[LIÊN HỆ] ở cả hai phía. Bản công bố bỏ hẳn cặp PII, PII_NSX và cột shop.</p></div>
+      <div><div class="k">Vì sao ở đây</div><p>Phải xong trước mọi bước gửi dữ liệu ra LLM (P6, P7, P10) và trước khi công bố dữ liệu (charter §6).</p></div>
+    </div>
+    <div class="ex"><span class="in">662300541992: 产品厂家联系方式: 138****1990</span><span class="arrow">→</span><span class="out">cặp không dùng cho train, ly_do = PII</span></div>
+    <div class="res">29 cặp PII, 1.567 cặp PII_NSX; che 98 giá trị zh và 94 giá trị vi. Quét lại bản công bố: không còn số điện thoại, email, URL hay ID liên hệ.</div>
+    <div class="nogate">Không có cổng: che theo hướng thận trọng. Chuỗi giống số điện thoại cũng bị che dù có thể là mã hàng; chấp nhận mất rất ít dữ liệu để chắc chắn không lộ thông tin.</div>
+  </div></li>
+
+  <li class="step" id="p4"><div class="num">P4</div><div class="card">
+    <div class="card-head"><h3>Gắn nhãn vai trò và giá trị rỗng nghĩa</h3><div class="chips"><span class="ds l3">DS21</span></div></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><p>Gắn vai_tro theo bảng <code>desc_vai_tro_thuoc_tinh_editted.csv</code> (anh_duyet, chưa có thì vai_tro_goi_y); tên ngoài bảng dùng luật. Đánh dấu giá trị là <b>mã thật</b> để P8 chép nguyên. Giá trị 其他, 无, 见包装, 咨询客服... dịch về một cách chuẩn và gắn it_thong_tin; cặp chỉ có ký hiệu (., /, -, null) gắn mã RONG.</p></div>
+      <div><div class="k">Mã thật là gì</div><p>(Vai trò mã/giấy tờ và giá trị Trung không có chữ Hán), hoặc (tên là số giấy phép/đăng ký: 许可证, 备案, 批准文号, 注册证, 标准号, 证号, 准字, và giá trị có từ 4 chữ số liền nhau). Chữ mô tả nằm dưới 型号/货号 vẫn dịch như thường.</p></div>
+    </div>
+    <div class="ex"><span class="in">668694370261: 咨询客服 → 'Tham khảo dịch vụ khách hàng' · 特殊用途化妆品证号: 国妆特字G20191510</span><span class="arrow">→</span><span class="out">'Liên hệ CSKH' + it_thong_tin · đánh dấu mã thật</span></div>
+    <div class="res">Vai trò: giao dịch 1688 79.808 cặp (giữ, có nhãn). Mã thật 16.705 giá trị. Rỗng nghĩa: 16.595 giá trị dịch chuẩn, 19.421 cặp it_thong_tin, 1.373 cặp RONG.</div>
+    <div class="gate"><span class="gdot" style="margin-top:6px"></span><span><b>Cổng P4_vai_tro_da_sua:</b> anh đọc hết 12 tên Claude đổi vai trò (đạt). <b>Cổng P4_vai_tro:</b> 30 mẫu theo trọng số số cặp, 0 sai (đạt).</span></div>
+  </div></li>
+
+  <li class="step" id="p5"><div class="num">P5</div><div class="card">
+    <div class="card-head"><h3>Gỡ lỗi đánh số</h3><div class="chips"><span class="ds l2">DS06</span><span class="ds l3">DS06B</span></div></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><p>Luật v2: bỏ 1–2 chữ số cuối khi (a) bỏ đi thì số còn lại khớp bản Trung, (b) chữ số đó không phải số Hán có trong bản Trung, (c) phần còn lại trùng một bản dịch khác trong cùng sản phẩm. Nhóm đánh số lẻ (DS06B, không thấy bản dịch trùng) chỉ áp khi 100 mẫu sai không quá 5.</p></div>
+      <div><div class="k">Vì sao ở đây</div><p>Từ điển giá trị ở P7 tra theo chuỗi sạch: 'Không4' không khớp mục 'Không'.</p></div>
+    </div>
+    <div class="ex"><span class="in">否 → 'Không4' · iPhone17 → 'iPhone172'</span><span class="arrow">→</span><span class="out">'Không' · 'iPhone17'</span></div>
+    <div class="res">Luật v2 sửa 72.127 giá trị. DS06B: 1.334 giá trị, đã áp sau khi 100 mẫu đạt.</div>
+    <div class="gate"><span class="gdot" style="margin-top:6px"></span><span><b>Cổng P5_danh_so:</b> 30 mẫu luật v2, 0 sai. <b>Cổng P5_danh_so_le:</b> 100 mẫu DS06B, 0 sai (đạt khi sai không quá 5).</span></div>
+  </div></li>
+
+  <li class="step" id="p6"><div class="num">P6</div><div class="card">
+    <div class="card-head"><h3>Từ điển tên thuộc tính</h3><div class="chips"><span class="ds l1">DS15</span><span class="ds l1">DS16</span><span class="ds l2">DS05</span><span class="ds l2">DS07 tên</span></div></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><p>Bảng <code>P6_ten_thuoc_tinh_editted.csv</code>: 300 tên phổ biến nhất, mỗi name_zh một tên tiếng Việt chuẩn. Tên tạm là cách dịch đa số, riêng 33 tên sai nghĩa đã biết dùng nghĩa đúng. Claude Code điền cột goi_y_claude. Khi áp, ưu tiên anh_duyet, rồi goi_y_claude, rồi tên tạm.</p></div>
+      <div><div class="k">Vì sao ở đây</div><p>Sửa một lần cho hàng nghìn dòng: DS15 dính 66,5% sản phẩm nhưng chỉ do 33 tên.</p></div>
+    </div>
+    <div class="ex"><span class="in">毛重 → 'Trọng lượng tịnh' · 适用场景 → 'Kịch bản áp dụng' · 容量 → 'Công suất'</span><span class="arrow">→</span><span class="out">'Trọng lượng cả bì' · 'Dịp sử dụng' · 'Dung tích'</span></div>
+    <div class="res">Claude đã gợi ý 86/300 tên (lý do ở cột ly_do_claude), ví dụ 包装体积 'Khối lượng đóng gói' → 'Thể tích đóng gói', 是否单双耳 'Có phải đôi tai đơn không' → 'Tai nghe một bên hay hai bên'. Đổi tên ở 212.537 cặp. Trên phần giữ lại, tên zh có hơn 1 cách dịch giảm từ 530 xuống 255 (còn lại là tên ngoài top 300).</div>
+    <div class="gate"><span class="gdot" style="margin-top:6px"></span><span><b>Cổng P6_ten_da_sua:</b> anh đọc hết 115 tên đã sửa (đạt). "Đã sửa" được tính lại mỗi lần chạy: sai nghĩa đã biết, hoặc Claude gợi ý khác cách dịch đa số. <b>Cổng P6_ten_mau:</b> 30 mẫu theo trọng số trong các tên còn lại, 0 sai (đạt).</span></div>
+  </div></li>
+
+  <li class="step" id="p7"><div class="num">P7</div><div class="card">
+    <div class="card-head"><h3>Từ điển giá trị có điều kiện</h3><div class="chips"><span class="ds l1">DS17</span><span class="ds l1">DS18</span><span class="ds l2">DS19</span><span class="ds l2">DS13</span><span class="ds l2">DS09A</span><span class="ds l2">DS07 giá trị</span><span class="ds l3">DS09B</span><span class="ds l3">DS08</span></div></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><ul class="plain">
+        <li><b>Từ điển giá trị:</b> 914 giá trị chữ Hán gặp từ 50 lần, cách làm như P6. Không áp cho 品牌 và mã thật.</li>
+        <li><b>Ngữ cảnh:</b> 苹果 ở thuộc tính dòng máy là 'Apple'; 中 ở kích cỡ là 'Vừa', ở độ cứng là 'Trung bình'.</li>
+        <li><b>Lỗi trong chuỗi dài:</b> không sửa an toàn được thì gắn DS17.</li>
+        <li><b>Địa danh:</b> bảng 87 địa danh Hán Việt, dựng lại 'Thành phố, Tỉnh'; bản Việt sai mà không dựng được thì DS18.</li>
+        <li><b>Tên hãng:</b> từ chung (通用, 厂家...) dịch theo bảng 101 từ; toàn chữ Latin thì chép nguyên; có phần Latin thì giữ; còn lại chuyển pinyin (giữ chữ số, 70迈 → 70mai); tên công ty hoặc dài bất thường thì DS09_dai.</li>
+        <li><b>Thuật ngữ chung với title:</b> 11 mục (爆款 → 'bán chạy', 一件代发 → 'dropship'...), chỉ thay biến thể tiếng Việt. <b>Tiếng Anh/pinyin:</b> tạm tắt, bạn Quang xử lý sau.</li>
+      </ul></div>
+      <div><div class="k">Vì sao ở đây</div><p>Cần tên thuộc tính chuẩn (P6) để làm điều kiện: 苹果 ở 适用机型 là 'Apple', ở 颜色 vẫn là 'táo'.</p></div>
+    </div>
+    <div class="ex"><span class="in">产地 浙江台州 → 'Chợp Châu, Chiết Giang' · 品牌 左颜右色 → 'Màu bên trái, màu bên phải' · 充电宝 → 'Ngân hàng điện'</span><span class="arrow">→</span><span class="out">'Đài Châu, Chiết Giang' · 'Zuoyanyouse' · 'Sạc dự phòng'</span></div>
+    <div class="res">Từ điển đổi 164.302 giá trị; ngữ cảnh 466; địa danh 461; tên hãng 10.164; thuật ngữ 612. DS17 110 cặp, DS18 3 cặp, DS09_dai 74 cặp.</div>
+    <div class="gate"><span class="gdot" style="margin-top:6px"></span><span><b>Cổng (đều đạt):</b> 235 giá trị đã sửa (đọc hết) + 30 mẫu; 87 địa danh; 101 từ chung; <b>200 mẫu tên hãng pinyin, 0 sai</b>; 11 thuật ngữ. Bảng tiếng Anh: không cần (đã tắt).</span></div>
+  </div></li>
+
+  <li class="step" id="p8"><div class="num">P8</div><div class="card">
+    <div class="card-head"><h3>Số, mã và đơn vị</h3><div class="chips"><span class="ds l1">DS10</span><span class="ds l1">DS03</span><span class="ds l1">DS20</span></div></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><p>Mã thật (đánh dấu ở P4): bản Việt chép nguyên bản Trung; mã còn chữ Hán thì thêm chú thích tỉnh hoặc "quốc gia" sau mã. Ngày dạng 2023年05月24日 đổi thành 24/05/2023. Năm bị đổi: lấy năm bên Trung. Số thập phân bị tách ("a, b"): ghép lại. Danh sách từ 3 giá trị lệch thứ tự: sắp lại theo số; không phải hoán vị thì DS03. Cặp còn lệch số sau khi quy đổi (斤 → kg, 万, số Hán) thì DS10.</p></div>
+      <div><div class="k">Vì sao ở đây</div><p>Sau P5 (không còn số đuôi giả) và trước P9 (đổi dấu thập phân sẽ làm khó so số).</p></div>
+    </div>
+    <div class="ex"><span class="in">粤妆20190234 → 'Trang điểm Quảng Đông 20190234' · HR → 'tài nguyên con người'</span><span class="arrow">→</span><span class="out">'粤妆20190234 (Quảng Đông)' · 'HR'</span></div>
+    <div class="res">Chép nguyên 16.705 giá trị, trong đó 2.478 mã còn chữ Hán đều có chú thích; sửa thập phân bị tách và năm 3.126 giá trị (tính cả phần chép mã); sắp lại 12 danh sách; DS03 62 cặp; DS10 555 cặp.</div>
+  </div></li>
+
+  <li class="step" id="p9"><div class="num">P9</div><div class="card">
+    <div class="card-head"><h3>Định dạng</h3><div class="chips"><span class="ds l4">DS22</span><span class="ds l4">DS23</span><span class="ds l4">DS14</span></div></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><p>Bỏ dấu chấm cuối do máy thêm (giữ '...', chữ viết tắt như 'P.U.', và khi bản Trung cũng kết thúc bằng dấu chấm). Tiếng Việt IN HOA toàn bộ thì viết hoa chữ đầu. Dấu thập phân: đổi mọi "a,b" thành "a.b" khi bản Trung có đúng "a.b" và chỉ có 1–2 chữ số sau dấu (từ 02/10 bỏ điều kiện phải có đơn vị). Số hàng nghìn "1.000" và danh sách "9,12,24" không bị đụng.</p></div>
+      <div><div class="k">Vì sao ở đây</div><p>Định dạng làm sau cùng phần nội dung để không phá các bước so khớp phía trước. Dấu chấm theo bản Trung và theo thói quen người bán Việt trên Tiki (dấu chấm nhiều gấp 2,4 lần dấu phẩy).</p></div>
+    </div>
+    <div class="ex"><span class="in">'... vỏ cứng cho điện thoại Apple.' · 否 → 'KHÔNG' · 13.5*3.5*2.5cm → '13,5 * 3,5 * 2,5cm' · 1.2米三件套 → 'Bộ ba mảnh 1,2 mét'</span><span class="arrow">→</span><span class="out">'... vỏ cứng cho điện thoại Apple' · 'Không' · '13.5 * 3.5 * 2.5cm' · 'Bộ ba mảnh 1.2 mét'</span></div>
+    <div class="res">Định dạng lại 7.910 giá trị.</div>
+  </div></li>
+
+  <li class="step" id="p10"><div class="num">P10</div><div class="card">
+    <div class="card-head"><h3>Kiểm nghĩa phần đuôi dài</h3><div class="chips"><span class="ds l3">DS04</span><span class="ds l1">DS15 đuôi</span><span class="ds l1">DS17 đuôi</span></div></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><p>"Đuôi dài" là giá trị chữ Hán không có trong từ điển P7, không phải mã, không phải tên hãng, thuộc cặp chưa bị loại. Chia hai tầng:</p>
+        <ul class="plain">
+          <li><b>Tầng 1</b> (Claude Code đọc từng cặp, <code>P10_tang1_v7_editted.csv</code> + file bổ sung): 4.006 cặp phổ biến nhất cộng các cặp có tỉ lệ độ dài bất thường. Kết quả: DUNG 2.840, SAI 1.151 (cặp nào cũng có bản sửa), KHONG_CHAC 15 (vào train với nhãn chua_kiem_nghia). Lỗi hay gặp: bản Việt lệch dòng, 苹果13 → 'Táo 13', size 斤 để nguyên số thành kg, 子母箱 → 'Hộp mẹ và con'.</li>
+          <li><b>Tầng 2</b> (khoảng 130 nghìn cặp hiếm): đã thử Qwen2.5-7B-Instruct trên Colab (4-bit, chấm theo xác suất câu trả lời) làm bộ gắn cờ. Trên 100 cặp hiệu chỉnh, độ chính xác chỉ 28–32% ở mọi ngưỡng, gần bằng tỉ lệ sai nền 25%, nên không dùng. <b>Phương án A (chốt 03/10):</b> cặp có giá trị tầng 2 gắn mã T2_CHUA_KIEM, không vào train nhưng vẫn giữ trong file để kiểm lại khi có cách tốt hơn.</li>
+        </ul></div>
+      <div><div class="k">Vì sao ở đây</div><p>Sau khi từ điển đã sửa phần phổ biến, phần còn lại là chuỗi hiếm, mỗi chuỗi vài lần. Claude đọc mẫu 300 cặp tầng 2 thấy khoảng 26% sai nghĩa, quá cao để đưa vào train khi chưa kiểm.</p></div>
+    </div>
+    <div class="ex"><span class="in">4XL推荐（180-200斤） → '4XL khuyến nghị (180-200 kg)' · 苹果13 → 'Táo 13' · 507银杏纷飞 → 'Cookies Bear' (lệch dòng)</span><span class="arrow">→</span><span class="out">'4XL gợi ý (90-100kg)' · 'iPhone 13' · '507 Lá bạch quả bay'</span></div>
+    <div class="res">Đuôi dài 181.232 giá trị / 134.225 cặp khác nhau. Tầng 1 sửa 7.088 giá trị. Tầng 2: 36.184 cặp T2_CHUA_KIEM. 36.200 cặp mang nhãn chua_kiem_nghia.</div>
+    <div class="gate"><span class="gdot" style="margin-top:6px"></span><span><b>Cổng P10_tang1:</b> anh kiểm 30 mẫu SAI và 30 mẫu DUNG, 0 sai (đạt). <b>Cổng P10_tang2_Qwen:</b> không cần (phương án A).</span></div>
+  </div></li>
+
+  <li class="step" id="p11"><div class="num">P11</div><div class="card">
+    <div class="card-head"><h3>Loại có mã lý do</h3></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><p>Bản Việt còn chữ Hán (không tính mã thật) thì gắn DS07. Cặp không sửa được không bị xoá: giữ danh sách mã trong ly_do và đặt dung_cho_train = 0. Nhãn (it_thong_tin, chua_kiem_nghia, vai_tro_tam, chep_ma) chỉ để biết, không loại cặp.</p></div>
+      <div><div class="k">Vì sao ở đây</div><p>Chỉ biết cặp nào không cứu được sau khi đã thử mọi cách sửa. Giữ mã lý do để đo và chạy lại.</p></div>
+    </div>
+    <div class="res">Giữ 366.016/406.871 cặp (90,0%). Mã: T2_CHUA_KIEM 36.184, DS07 2.787, PII_NSX 1.567, RONG 1.373, DS10 555, DS17 110, DS09_dai 74, DS03 62, PII 29, DS18 3, DS25 2 (một cặp có thể nhiều mã). Loại nhiều nhất: food 22,2%, auto 14,9%, beauty 14,1%, home 14,1%; ít nhất shoes 5,1%.</div>
+  </div></li>
+
+  <li class="step" id="p12"><div class="num">P12</div><div class="card">
+    <div class="card-head"><h3>Trùng lặp và nhóm</h3><div class="chips"><span class="ds l2">DS11</span></div></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><p>Dựng description sạch từ các cặp giữ lại. Sản phẩm trùng y hệt (cả zh lẫn vi) với sản phẩm khác: gắn trung_y_het = 1 từ bản thứ hai, không xoá. Gộp nhóm bằng union-find khi cùng title_zh, cùng shop, cùng description sạch, hoặc gần trùng (MinHash, Jaccard ≥ 0,8, shingle 5 ký tự) và gán nhom_trung.</p></div>
+      <div><div class="k">Vì sao ở đây</div><p>Sau chuẩn hoá mới lộ ra trùng thật. Việc chia train/dev/test đang hoãn tới khi nhóm chọn mô hình; khi chia sẽ chia theo nhom_trung để tránh rò rỉ.</p></div>
+    </div>
+    <div class="res">165 sản phẩm trùng y hệt; 6.566 nhóm, nhóm lớn nhất 629 sản phẩm (3,85%). Description dựng lại ngắn hơn (do loại tầng 2) nên lộ ra nhiều trùng hơn; khi chia tập cần để ý nhóm lớn này.</div>
+  </div></li>
+
+  <li class="step" id="p13"><div class="num">P13</div><div class="card">
+    <div class="card-head"><h3>Dựng output và kiểm định</h3></div>
+    <div class="grid2">
+      <div><div class="k">Làm gì</div><p>Xuất <code>desc_pairs_clean.parquet</code> (mọi cặp, kèm mã lý do, nhãn, vai trò, dung_cho_train), <code>desc_clean.parquet</code> (mỗi sản phẩm một dòng, description_zh/vi dựng lại, nhom_trung, trung_y_het) và <code>log_thay_doi.parquet</code>. Đo lại các lỗi trên phần giữ lại và in bảng trạng thái cổng.</p></div>
+      <div><div class="k">Vì sao cuối</div><p>Đo lại toàn bộ để bắt lỗi do chính bước sửa sinh ra.</p></div>
+    </div>
+    <div class="res">Bản công bố trong <code>data/release/desc_v1/</code>: <code>bilingual_zh_vi_desc_cleaned(nhatanh).parquet</code> (16.342 sản phẩm, 3,0 MB) và <code>bilingual_zh_vi_desc_pairs(nhatanh).parquet</code> (405.275 cặp, đã bỏ cặp PII/PII_NSX, 7,2 MB), kèm README và SHA256SUMS. Chưa đẩy lên Hugging Face.</div>
+    <div class="gate"><span class="gdot" style="margin-top:6px"></span><span><b>Cổng P13_mau_cuoi:</b> 200 sản phẩm ngẫu nhiên, đọc bản trước/sau (<code>P13_mau_cuoi_mau_v3.csv</code>), 0 sai: tỉ lệ lỗi dưới khoảng 2% (95%). Chỉ bốc khi mọi cổng khác đã đạt, để nội dung trong mẫu là bản cuối.</span></div>
+  </div></li>
+  </ol>
+  <div class="loop">Vòng lặp: lỗi có quy luật mới tìm được ở P10 hoặc P13 được thêm vào luật hoặc từ điển P6/P7, rồi chạy lại notebook (khoảng 4 phút). File duyệt không bị ghi đè; bảng nguồn đổi thì bốc mẫu ở phiên mới.</div>
+</section>
+
+<section aria-labelledby="kq">
+  <h2 id="kq">Kết quả lần chạy 03/10 (chính thức)</h2>
+  <p class="file">Đo trên các cặp dung_cho_train = 1, trước và sau khi sạch.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Chỉ số</th><th>Trước</th><th>Sau</th></tr></thead>
+      <tbody>
+        <tr><td>Giá trị bản Việt còn chữ Hán (không tính mã)</td><td class="num-c">1.943</td><td class="num-c">0</td></tr>
+        <tr><td>Giá trị có số đuôi kiểu đánh số</td><td class="num-c">42.081</td><td class="num-c">0</td></tr>
+        <tr><td>Giá trị có dấu chấm cuối do máy thêm</td><td class="num-c">4.792</td><td class="num-c">0</td></tr>
+        <tr><td>Giá trị IN HOA toàn bộ</td><td class="num-c">4.442</td><td class="num-c">0</td></tr>
+        <tr><td>Giá trị có 【】 (còn lại nằm trong mã chép nguyên)</td><td class="num-c">547</td><td class="num-c">14</td></tr>
+        <tr><td>Tên zh có hơn 1 cách dịch (đã bỏ khác biệt chữ hoa)</td><td class="num-c">530</td><td class="num-c">255</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Trạng thái cổng</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Cổng</th><th>Việc</th><th>Cách kiểm</th><th>Trạng thái</th></tr></thead>
+      <tbody>
+        <tr><td><code>P2_sua_tay</code></td><td>5 giá trị ký tự hỏng/chữ Hàn</td><td>Anh đọc hết</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P3_PII</code></td><td>Che thông tin cá nhân</td><td>Không cần</td><td><span class="st st-dat">mặc định</span></td></tr>
+        <tr><td><code>P4_vai_tro_da_sua</code></td><td>12 tên Claude đổi vai trò</td><td>Anh đọc hết</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P4_vai_tro</code></td><td>Vai trò giữ theo luật</td><td>30 mẫu, 0 sai</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P5_danh_so</code></td><td>Bỏ số đuôi luật v2</td><td>30 mẫu, 0 sai</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P5_danh_so_le</code></td><td>Số đuôi lẻ DS06B</td><td>100 mẫu, 0 sai</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P6_ten_da_sua</code></td><td>115 tên khác cách dịch đa số</td><td>Anh đọc hết</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P6_ten_mau</code></td><td>Tên giữ cách dịch đa số</td><td>30 mẫu, 0 sai</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P7_gia_tri_da_sua</code></td><td>235 giá trị khác cách dịch đa số</td><td>Anh đọc hết</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P7_gia_tri_mau</code></td><td>Giá trị giữ cách dịch đa số</td><td>30 mẫu, 0 sai</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P7_dia_danh</code></td><td>87 địa danh Hán Việt</td><td>Anh đọc hết</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P7_ten_hang</code></td><td>Tên hãng chuyển pinyin</td><td>200 mẫu, 0 sai</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P7_tu_chung_ten_hang</code></td><td>101 từ chung trong 品牌</td><td>Anh đọc hết</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P7_tieng_anh</code></td><td>Bảng từ tiếng Anh của title</td><td>Tắt, Quang xử lý sau</td><td><span class="st st-claude">không cần</span></td></tr>
+        <tr><td><code>P7_thuat_ngu</code></td><td>11 thuật ngữ chung title–description</td><td>Anh đọc hết</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P10_tang1_SAI</code></td><td>Cặp Claude gắn SAI (1.151)</td><td>30 mẫu, 0 sai</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P10_tang1_DUNG</code></td><td>Cặp Claude gắn DUNG (2.840)</td><td>30 mẫu, 0 sai</td><td><span class="st st-dat">đạt</span></td></tr>
+        <tr><td><code>P10_tang2_Qwen</code></td><td>Khoảng 130 nghìn cặp hiếm</td><td>Phương án A: loại có mã</td><td><span class="st st-claude">không cần</span></td></tr>
+        <tr><td><code>P13_mau_cuoi</code></td><td>200 sản phẩm trước/sau</td><td>200 mẫu, 0 sai</td><td><span class="st st-dat">đạt</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section aria-labelledby="map">
+  <h2 id="map">Vấn đề nào xử lý ở bước nào</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Mã</th><th>Vấn đề</th><th>Dòng dính (EDA)</th><th>Bước</th><th>Cách</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ds l1">DS15</span></td><td>Tên thuộc tính dịch sai nghĩa</td><td class="num-c">10.878</td><td>P6, P10</td><td>Sửa</td></tr>
+        <tr><td><span class="ds l1">DS17</span></td><td>Giá trị dịch sai nghĩa</td><td class="num-c">3.944</td><td>P7, P10</td><td>Sửa / loại</td></tr>
+        <tr><td><span class="ds l1">DS16</span></td><td>是否 → 'có nên/cho dù'</td><td class="num-c">2.877</td><td>P6</td><td>Sửa</td></tr>
+        <tr><td><span class="ds l1">DS18</span></td><td>Sai địa danh</td><td class="num-c">990</td><td>P7</td><td>Sửa / loại</td></tr>
+        <tr><td><span class="ds l1">DS10</span></td><td>Số lệch zh/vi</td><td class="num-c">727</td><td>P4, P8</td><td>Chép mã, sửa năm / loại</td></tr>
+        <tr><td><span class="ds l1">DS03</span></td><td>Danh sách lệch thứ tự/số</td><td class="num-c">73</td><td>P8</td><td>Sắp lại / loại</td></tr>
+        <tr><td><span class="ds l1">DS20</span></td><td>Số thập phân bị tách</td><td class="num-c">39</td><td>P8</td><td>Sửa</td></tr>
+        <tr><td><span class="ds l2">DS06</span></td><td>Lỗi đánh số</td><td class="num-c">14.329</td><td>P5</td><td>Sửa</td></tr>
+        <tr><td><span class="ds l2">DS05</span></td><td>Tên dịch không thống nhất</td><td class="num-c">14.005</td><td>P6</td><td>Sửa</td></tr>
+        <tr><td><span class="ds l2">DS19</span></td><td>Giá trị dịch không thống nhất</td><td class="num-c">13.652</td><td>P7</td><td>Sửa</td></tr>
+        <tr><td><span class="ds l2">DS07</span></td><td>Còn chữ Hán</td><td class="num-c">2.097</td><td>P6, P7, P11</td><td>Sửa / loại</td></tr>
+        <tr><td><span class="ds l2">DS11</span></td><td>Trùng / gần trùng</td><td class="num-c">1.319</td><td>P12</td><td>Gắn nhóm (chia tập hoãn)</td></tr>
+        <tr><td><span class="ds l2">DS12</span></td><td>Thông tin cá nhân</td><td class="num-c">297</td><td>P3</td><td>Che / loại, không cần duyệt</td></tr>
+        <tr><td><span class="ds l2">DS13</span></td><td>Thuật ngữ title ≠ description</td><td class="num-c">180</td><td>P7</td><td>Sửa</td></tr>
+        <tr><td><span class="ds l2">DS09A</span></td><td>Tên hãng còn chữ Hán</td><td class="num-c">49</td><td>P7</td><td>Pinyin</td></tr>
+        <tr><td><span class="ds l2">DS02</span></td><td>Không ghép được</td><td class="num-c">6</td><td>P1</td><td>Loại</td></tr>
+        <tr><td><span class="ds l3">DS21</span></td><td>Giá trị rỗng nghĩa</td><td class="num-c">10.036</td><td>P4</td><td>Dịch chuẩn + nhãn</td></tr>
+        <tr><td><span class="ds l3">DS09B</span></td><td>Tên hãng dịch nghĩa / Hán Việt</td><td class="num-c">5.766</td><td>P7</td><td>Pinyin, anh kiểm 200 mẫu</td></tr>
+        <tr><td><span class="ds l3">DS08</span></td><td>Tiếng Anh/pinyin phải thay</td><td class="num-c">4.040</td><td>P7</td><td>Tạm tắt, Quang xử lý sau</td></tr>
+        <tr><td><span class="ds l3">DS04</span></td><td>Nghi dịch thiếu/thừa</td><td class="num-c">1.111</td><td>P10</td><td>Claude đọc tầng 1 / loại tầng 2</td></tr>
+        <tr><td><span class="ds l3">DS06B</span></td><td>Nghi đánh số lẻ</td><td class="num-c">895</td><td>P5</td><td>Đã áp sau 100 mẫu</td></tr>
+        <tr><td><span class="ds l4">DS22</span></td><td>Dấu chấm cuối</td><td class="num-c">5.645</td><td>P9</td><td>Sửa</td></tr>
+        <tr><td><span class="ds l4">DS23</span></td><td>'KHÔNG' in hoa</td><td class="num-c">1.986</td><td>P9</td><td>Sửa</td></tr>
+        <tr><td><span class="ds l4">DS14</span></td><td>Dấu thập phân</td><td class="num-c">1.877</td><td>P9</td><td>Dấu chấm khi bản Trung có a.b</td></tr>
+        <tr><td><span class="ds l4">DS24</span></td><td>Ký tự lạ</td><td class="num-c">167</td><td>P2</td><td>Sửa / đọc 5 giá trị</td></tr>
+        <tr><td><span class="ds l0">DS01</span></td><td>attributes_vi khác thứ tự</td><td class="num-c">16.321</td><td>P1</td><td>Ghép đúng</td></tr>
+        <tr><td><span class="ds l0">DS25</span></td><td>Tên lặp trong sản phẩm</td><td class="num-c">47</td><td>P1</td><td>Gắn mã, giữ 1</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="file">Cột "Dòng dính" là số đo ở bước EDA. Chi tiết từng giải pháp (input, kỹ thuật, output, rủi ro, nguồn): <code>data/eda/description/pro_solu_descriptions.csv</code>.</p>
+</section>
+
+<section class="pending" aria-labelledby="pd">
+  <h2 id="pd">Đã chốt và còn mở</h2>
+  <h3>Đã chốt (Nhật Anh, 02–03/10/2026)</h3>
+  <ul>
+    <li>Tên hãng chữ Hán: pinyin; loại trừ danh sách từ chung; anh đọc 200 mẫu trước khi coi là đạt.</li>
+    <li>Dấu thập phân: dấu chấm; đổi mọi số có 1–2 chữ số sau dấu khi bản Trung có đúng a.b, không cần đơn vị.</li>
+    <li>Ký hiệu: không xoá; bản Trung giữ nguyên; bản Việt đổi 【】 thành [ ], giữ ~ | *.</li>
+    <li>Tên/địa chỉ nhà sản xuất: loại (PII_NSX); bản công bố bỏ cột shop.</li>
+    <li>Mã giấy phép còn chữ Hán: giữ nguyên, thêm chú thích tỉnh sau mã.</li>
+    <li>Phần tiếng Anh/pinyin trong bản Việt: tạm tắt, bạn Quang xử lý sau.</li>
+    <li>LLM: Claude Code cho từ điển và tầng 1; Qwen không đạt nên tầng 2 theo phương án A (loại có mã, giữ trong file). Mọi gợi ý đều qua người duyệt hoặc kiểm mẫu.</li>
+    <li>Quy trình kiểm mẫu 5 điều kiện ghi trong <code>CLAUDE.md</code> mục 5.2 và 5.3b.</li>
+  </ul>
+  <h3>Còn mở</h3>
+  <ul>
+    <li>Đẩy bản công bố lên Hugging Face (<code>ntquang0410/zh-vie_ecom</code>, thư mục <code>data/cleaned</code>): chờ anh đồng ý.</li>
+    <li>Chia train/dev/test: hoãn tới khi nhóm chọn mô hình; P12 chỉ gắn nhom_trung.</li>
+    <li>Cứu 4.341 cặp chỉ bị loại vì lẫn vài giá trị hiếm: cắt riêng giá trị hiếm, giữ phần còn lại. Chưa làm.</li>
+    <li>Kiểm lại tầng 2 (36.184 cặp T2_CHUA_KIEM) khi có mô hình hoặc cách kiểm tốt hơn.</li>
+  </ul>
+</section>
+
+<section class="src" aria-labelledby="sr">
+  <h2 id="sr" style="color:var(--ink)">Nguồn tham khảo chính</h2>
+  <ul>
+    <li><a href="https://aclanthology.org/2020.eamt-1.31/">Ramírez-Sánchez et al. 2020, Bifixer and Bicleaner</a>: sửa ký tự, khử trùng bằng hash (P2, P12).</li>
+    <li><a href="https://aclanthology.org/2020.acl-demos.20/">Aulamo et al. 2020, OpusFilter</a> và <a href="https://github.com/bitextor/bicleaner-hardrules">bicleaner-hardrules</a>: luật số phải khớp, tỉ lệ độ dài (P8, P10).</li>
+    <li><a href="https://aclanthology.org/P19-1294/">Dinu et al. 2019</a> và <a href="https://www.researchgate.net/publication/376403353_Findings_of_the_WMT_2023_Shared_Task_on_Machine_Translation_with_Terminologies">WMT 2023 Terminology</a>: thuật ngữ nhất quán (P6, P7).</li>
+    <li><a href="https://arxiv.org/abs/2104.07398">Jia et al. 2022</a> (thuật ngữ thuộc tính TMĐT) và <a href="https://arxiv.org/abs/2409.12880">Zhang et al. 2024</a> (RAG cho LLM dịch tiêu đề): LLM gợi ý kèm ví dụ (P6, P7).</li>
+    <li><a href="https://aclanthology.org/2024.tacl-1.54/">Guerreiro et al. 2024, xCOMET</a>, <a href="https://aclanthology.org/2023.wmt-1.64/">Kocmi & Federmann 2023, GEMBA-MQM</a>, <a href="https://aclanthology.org/2023.wmt-1.50/">Peter et al. 2023</a>: dò lỗi và lọc theo chất lượng (P10).</li>
+    <li><a href="https://aclanthology.org/2023.findings-emnlp.804/">Raunak et al. 2023</a>: LLM hậu biên tập có lúc bịa, nên chỉ gợi ý.</li>
+    <li><a href="https://huggingface.co/Qwen/Qwen2.5-7B-Instruct">Qwen2.5-7B-Instruct</a> (Apache 2.0): đã thử làm bộ gắn cờ tầng 2 (P10), không đạt nên không dùng.</li>
+    <li><a href="https://aclanthology.org/W18-2709/">Khayrallah & Koehn 2018</a>, <a href="https://aclanthology.org/2021.acl-long.562/">Briakou & Carpuat 2021</a>: cặp sai nghĩa hại NMT, nên loại phần không sửa được (P11).</li>
+    <li><a href="https://aclanthology.org/2022.acl-long.577/">Lee et al. 2022</a>, <a href="https://github.com/ekzhu/datasketch">datasketch</a>: khử trùng lặp, MinHash (P12).</li>
+    <li><a href="https://doi.org/10.1016/j.ipl.2005.11.003">Efraimidis & Spirakis 2006</a>: bốc mẫu có trọng số không hoàn lại (các cổng kiểm mẫu).</li>
+    <li><a href="https://microsoft.github.io/presidio/tutorial/02_regex/">Microsoft Presidio</a> (cách che bằng regex, P3), <a href="https://unicode.org/cldr/charts/45/verify/numbers/vi.html">CLDR tiếng Việt</a> (P9), <a href="https://github.com/mozillazg/python-pinyin">pypinyin</a> và <a href="https://github.com/ryanphung/chinese-hanviet-cognates">chinese-hanviet-cognates</a> (P7).</li>
+  </ul>
+</section>
+</div>

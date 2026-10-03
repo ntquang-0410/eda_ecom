@@ -1,0 +1,1275 @@
+﻿product_id,title_zh,title_vi,description_zh,description_vi,category,source_site,url,crawl_time,worker,keyword,page,search_url,price,sales,province,city,biz_type,is_ad,category_1688,category_id_1688,has_vi,attributes_zh,attributes_vi,n_attributes_zh,n_attributes_vi,n_attributes_aligned,description_extra_zh,description_images,sim_score,cjk_in_title_vi,cjk_in_description_vi,_reason,_ratio_tok,reason,ratio_tok
+836526255866,跨境DX-08无线蓝牙耳机机甲风游戏新款超长续航TWS跨境爆款,Tai nghe Bluetooth không dây DX-08 xuyên biên giới,"芯片类型: 杰理; 功能: 呼吸灯, 超长续航, 通话功能, 支持音乐, 数显屏幕; 续航时间: 8小时以上; 品牌: 中性; 防水性能: IPX7; 材质: 塑料; 使用方式: 入耳式; 传输范围: 15米; 蓝牙协议: 5.3; 是否单双耳: 双边立体声; 颜色: DX-08银色, DX-08黑色, DX-07银色, DX-07黑色; 有可授权的自有品牌: 是; 支持订制: 支持; 是否专利货源: 否; 模具类型: 私模; 上市年份/季节: 2024; 风格: 创意设计","Loại chip: Jie Li; Chức năng: Đèn thở, Thời lượng pin siêu dài, Chức năng gọi, Hỗ trợ âm nhạc, Màn hình hiển thị kỹ thuật số; Thời lượng pin: 8 giờ trở lên; Thương hiệu: Trung tính; Hiệu suất chống nước: IPX7; Chất liệu: Nhựa; Cách sử dụng: Kiểu nhét tai; Phạm vi truyền tải: 15 mét; Giao thức Bluetooth: 5.3; Có phải đôi tai đơn không: Âm thanh nổi song phương; Màu sắc: DX-08 bạc, DX-08 đen, DX-07 bạc, DX-07 đen; Thương hiệu riêng được ủy quyền: Là; Hỗ trợ tùy chỉnh: Hỗ trợ; Có phải là nguồn cấp bằng sáng chế không: không; Loại khuôn: Khuôn riêng; Năm/Mùa phát hành: 2024; Phong cách: Thiết kế sáng tạo",electronics,1688,https://detail.1688.com/offer/836526255866.html,2026-09-19T22:11:37+00:00,worker_huy,蓝牙耳机,3,https://s.1688.com/selloffer/offer_search.htm?keywords=%C0%B6%D1%C0%B6%FA%BB%FA&beginPage=3,36.0,11000.0,广东,深圳市,,False,蓝牙耳机,1048186,True,"[{'name': '芯片类型', 'values': array(['杰理'], dtype=object)}
+ {'name': '功能', 'values': array(['呼吸灯', '超长续航', '通话功能', '支持音乐', '数显屏幕'], dtype=object)}
+ {'name': '续航时间', 'values': array(['8小时以上'], dtype=object)}
+ {'name': '品牌', 'values': array(['中性'], dtype=object)}
+ {'name': '防水性能', 'values': array(['IPX7'], dtype=object)}
+ {'name': '材质', 'values': array(['塑料'], dtype=object)}
+ {'name': '使用方式', 'values': array(['入耳式'], dtype=object)}
+ {'name': '传输范围', 'values': array(['15米'], dtype=object)}
+ {'name': '蓝牙协议', 'values': array(['5.3'], dtype=object)}
+ {'name': '是否单双耳', 'values': array(['双边立体声'], dtype=object)}
+ {'name': '颜色', 'values': array(['DX-08银色', 'DX-08黑色', 'DX-07银色', 'DX-07黑色'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['是'], dtype=object)}
+ {'name': '支持订制', 'values': array(['支持'], dtype=object)}
+ {'name': '是否专利货源', 'values': array(['否'], dtype=object)}
+ {'name': '模具类型', 'values': array(['私模'], dtype=object)}
+ {'name': '上市年份/季节', 'values': array(['2024'], dtype=object)}
+ {'name': '风格', 'values': array(['创意设计'], dtype=object)}]","[{'name': 'Thương hiệu', 'values': array(['Trung tính'], dtype=object)}
+ {'name': 'Phạm vi truyền tải', 'values': array(['15 mét'], dtype=object)}
+ {'name': 'Chức năng', 'values': array(['Đèn thở', 'Thời lượng pin siêu dài', 'Chức năng gọi',
+        'Hỗ trợ âm nhạc', 'Màn hình hiển thị kỹ thuật số'], dtype=object)}
+ {'name': 'Giao thức Bluetooth', 'values': array(['5.3'], dtype=object)}
+ {'name': 'Cách sử dụng', 'values': array(['Kiểu nhét tai'], dtype=object)}
+ {'name': 'Có phải đôi tai đơn không', 'values': array(['Âm thanh nổi song phương'], dtype=object)}
+ {'name': 'Màu sắc', 'values': array(['DX-08 bạc', 'DX-08 đen', 'DX-07 bạc', 'DX-07 đen'], dtype=object)}
+ {'name': 'Thương hiệu riêng được ủy quyền', 'values': array(['Là'], dtype=object)}
+ {'name': 'Hỗ trợ tùy chỉnh', 'values': array(['Hỗ trợ'], dtype=object)}
+ {'name': 'Có phải là nguồn cấp bằng sáng chế không', 'values': array(['không'], dtype=object)}
+ {'name': 'Loại khuôn', 'values': array(['Khuôn riêng'], dtype=object)}
+ {'name': 'Loại chip', 'values': array(['Jie Li'], dtype=object)}
+ {'name': 'Thời lượng pin', 'values': array(['8 giờ trở lên'], dtype=object)}
+ {'name': 'Năm/Mùa phát hành', 'values': array(['2024'], dtype=object)}
+ {'name': 'Phong cách', 'values': array(['Thiết kế sáng tạo'], dtype=object)}
+ {'name': 'Hiệu suất chống nước', 'values': array(['IPX7'], dtype=object)}
+ {'name': 'Chất liệu', 'values': array(['Nhựa'], dtype=object)}]",17,17,17,,9,0.673,False,False,ratio,0.29,ratio,0.29
+859961801115,FLOWERWAY童颜胶原蛋白灌注面膜锁水保湿温和滋润贴片补水面膜,Mặt nạ dưỡng ẩm da trẻ em FLOWERWAY,"化妆品功效: 滋润, 紧致, 柔润肌肤; 品牌: FLOWERWAY; 适用肤质: 通用; 品牌类型: 国货品牌; 适用人群: 通用; 是否进口: 否; 规格: 正常规格; 生产许可证号: /; 保质期: 3年; 净含量: 23g*5片; 产品规格: FLOWERWAY童颜胶原蛋白灌注面膜23g*5片, FLOWERWAY童颜胶原蛋白灌活面膜23g*5片/盒; 主要下游平台: ebay, 亚马逊, wish, 速卖通, 独立站, LAZADA; 有可授权的自有品牌: 是; 是否跨境出口专供货源: 是; 产地: 广州; 货号: YL000109; 非特化妆品备案证号: 粤G妆网备字2024468069; 特殊用途化妆品: 否; 主要销售地区: 非洲, 欧洲, 南美, 东南亚, 北美, 东北亚, 中东; 产品名称: FLOWERWAY童颜胶原蛋白灌注面膜","Hiệu quả mỹ phẩm: Dưỡng ẩm, Săn chắc, Làm mềm da; Thương hiệu: FLOWERWAY; Loại da phù hợp: Thông dụng1; Loại hình thương hiệu: Thương hiệu sản phẩm nội địa; Đám đông áp dụng: Thông dụng2; Có nhập khẩu không: Không.1; Quy cách: Thông số kỹ thuật bình thường; Số giấy phép sản xuất: /; Thời hạn sử dụng: 3 năm; Hàm lượng tịnh: 23g * 5 viên; Thông số kỹ thuật sản phẩm: FLOWERWAY mặt nạ tưới collagen trẻ em 23g * 5 miếng, FLOWERWAY Mặt nạ phục hồi collagen trẻ thơ 23g*5 cái/hộp; Nền tảng hạ lưu chính: ebay, Amazon, wish, AliExpress, Trạm độc lập, LAZADA; Thương hiệu riêng được ủy quyền: Là1; Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không: Là2; Xuất xứ: Quảng Châu; Số mặt hàng: YL000109; Số hồ sơ mỹ phẩm không đặc biệt: Số chuẩn bị mạng lưới trang điểm Quảng Đông G 2024468069; Mỹ phẩm công dụng đặc biệt: Không.2; Khu vực bán hàng chính: Châu Phi, Châu Âu, Nam Mỹ, Đông Nam Á, Bắc Mỹ, Đông Bắc Á, Trung Đông; Tên sản phẩm: Mặt nạ truyền collagen trẻ thơ FLOWERWAY",beauty,1688,https://detail.1688.com/offer/859961801115.html,2026-09-19T17:32:00+00:00,worker_nhat_anh,面膜,7,https://s.1688.com/selloffer/offer_search.htm?keywords=%C3%E6%C4%A4&beginPage=7,7.2,2500.0,广东,广州市,生产加工,True,贴片面膜,1034765,True,"[{'name': '化妆品功效', 'values': array(['滋润', '紧致', '柔润肌肤'], dtype=object)}
+ {'name': '品牌', 'values': array(['FLOWERWAY'], dtype=object)}
+ {'name': '适用肤质', 'values': array(['通用'], dtype=object)}
+ {'name': '品牌类型', 'values': array(['国货品牌'], dtype=object)}
+ {'name': '适用人群', 'values': array(['通用'], dtype=object)}
+ {'name': '是否进口', 'values': array(['否'], dtype=object)}
+ {'name': '规格', 'values': array(['正常规格'], dtype=object)}
+ {'name': '生产许可证号', 'values': array(['/'], dtype=object)}
+ {'name': '保质期', 'values': array(['3年'], dtype=object)}
+ {'name': '净含量', 'values': array(['23g*5片'], dtype=object)}
+ {'name': '产品规格', 'values': array(['FLOWERWAY童颜胶原蛋白灌注面膜23g*5片', 'FLOWERWAY童颜胶原蛋白灌活面膜23g*5片/盒'],
+       dtype=object)}
+ {'name': '主要下游平台', 'values': array(['ebay', '亚马逊', 'wish', '速卖通', '独立站', 'LAZADA'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['是'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['是'], dtype=object)}
+ {'name': '产地', 'values': array(['广州'], dtype=object)}
+ {'name': '货号', 'values': array(['YL000109'], dtype=object)}
+ {'name': '非特化妆品备案证号', 'values': array(['粤G妆网备字2024468069'], dtype=object)}
+ {'name': '特殊用途化妆品', 'values': array(['否'], dtype=object)}
+ {'name': '主要销售地区', 'values': array(['非洲', '欧洲', '南美', '东南亚', '北美', '东北亚', '中东'], dtype=object)}
+ {'name': '产品名称', 'values': array(['FLOWERWAY童颜胶原蛋白灌注面膜'], dtype=object)}]","[{'name': 'Thương hiệu', 'values': array(['FLOWERWAY'], dtype=object)}
+ {'name': 'Có nhập khẩu không', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Loại da phù hợp', 'values': array(['Thông dụng1'], dtype=object)}
+ {'name': 'Quy cách', 'values': array(['Thông số kỹ thuật bình thường'], dtype=object)}
+ {'name': 'Loại hình thương hiệu', 'values': array(['Thương hiệu sản phẩm nội địa'], dtype=object)}
+ {'name': 'Số giấy phép sản xuất', 'values': array(['/'], dtype=object)}
+ {'name': 'Thời hạn sử dụng', 'values': array(['3 năm'], dtype=object)}
+ {'name': 'Hàm lượng tịnh', 'values': array(['23g * 5 viên'], dtype=object)}
+ {'name': 'Thông số kỹ thuật sản phẩm', 'values': array(['FLOWERWAY mặt nạ tưới collagen trẻ em 23g * 5 miếng',
+        'FLOWERWAY Mặt nạ phục hồi collagen trẻ thơ 23g*5 cái/hộp'],
+       dtype=object)}
+ {'name': 'Nền tảng hạ lưu chính', 'values': array(['ebay', 'Amazon', 'wish', 'AliExpress', 'Trạm độc lập', 'LAZADA'],
+       dtype=object)}
+ {'name': 'Thương hiệu riêng được ủy quyền', 'values': array(['Là1'], dtype=object)}
+ {'name': 'Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không', 'values': array(['Là2'], dtype=object)}
+ {'name': 'Xuất xứ', 'values': array(['Quảng Châu'], dtype=object)}
+ {'name': 'Hiệu quả mỹ phẩm', 'values': array(['Dưỡng ẩm', 'Săn chắc', 'Làm mềm da'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['YL000109'], dtype=object)}
+ {'name': 'Số hồ sơ mỹ phẩm không đặc biệt', 'values': array(['Số chuẩn bị mạng lưới trang điểm Quảng Đông G 2024468069'],
+       dtype=object)}
+ {'name': 'Mỹ phẩm công dụng đặc biệt', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Khu vực bán hàng chính', 'values': array(['Châu Phi', 'Châu Âu', 'Nam Mỹ', 'Đông Nam Á', 'Bắc Mỹ',
+        'Đông Bắc Á', 'Trung Đông'], dtype=object)}
+ {'name': 'Đám đông áp dụng', 'values': array(['Thông dụng2'], dtype=object)}
+ {'name': 'Tên sản phẩm', 'values': array(['Mặt nạ truyền collagen trẻ thơ FLOWERWAY'], dtype=object)}]",20,20,20,,10,0.754,False,False,ratio,0.24,ratio,0.24
+872054230824,Gaba Dahongpao tea Габа чай 嘎巴大红袍乌龙茶,Trà Gaba Dahongpao Trà Gaba 嘎巴大红袍乌龙茶,产品类别: 大红袍; 级别: 一级; 产区: 闽北乌龙; 保质期: 12个月以上; 口感: 醇厚甘爽; 耐泡程度: 约8泡; 净含量（规格）: 100; 原产地: 福建; 品牌: 聶羣號; 是否进口: 否; 生产许可证编号: SC11435078218889; 售卖方式: 包装; 生产日期: 见包装; 产品厂家厂名: 武夷山市千川茶厂; 包装规格: 100g; 是否礼盒装: 否; 储存条件: 常温; 适用场景: 家用,Danh mục sản phẩm: Áo choàng đỏ; Cấp độ: Cấp 1; Khu vực sản xuất: Ô long bắc Phúc Kiến; Thời hạn sử dụng: 12 tháng trở lên; Vị giác: Êm dịu ngọt mát; Mức độ chống bọt: Khoảng 8 bong bóng; Nội dung tịnh (thông số kỹ thuật): 100; Xuất xứ: Phúc Kiến; Thương hiệu: Số nhóm Nie; Có nhập khẩu không: Không.1; Số giấy phép sản xuất: SC11435078218889; Phương thức bán hàng: Đóng gói; Ngày sản xuất: Xem bao bì; Tên nhà sản xuất sản phẩm: Nhà máy trà Wuyishan Qianchuan; Thông số kỹ thuật đóng gói: 100g; Có đóng hộp quà không: Không.2; Điều kiện lưu trữ: Nhiệt độ thường; Kịch bản áp dụng: Gia dụng,food,1688,https://detail.1688.com/offer/872054230824.html,2026-09-20T12:04:13+00:00,worker_huy,茶叶,22,https://s.1688.com/selloffer/offer_search.htm?keywords=%B2%E8%D2%B6&beginPage=22,25.0,3200.0,云南,腾冲县,经销批发,False,乌龙茶,1032855,True,"[{'name': '产品类别', 'values': array(['大红袍'], dtype=object)}
+ {'name': '级别', 'values': array(['一级'], dtype=object)}
+ {'name': '产区', 'values': array(['闽北乌龙'], dtype=object)}
+ {'name': '保质期', 'values': array(['12个月以上'], dtype=object)}
+ {'name': '口感', 'values': array(['醇厚甘爽'], dtype=object)}
+ {'name': '耐泡程度', 'values': array(['约8泡'], dtype=object)}
+ {'name': '净含量（规格）', 'values': array(['100'], dtype=object)}
+ {'name': '原产地', 'values': array(['福建'], dtype=object)}
+ {'name': '品牌', 'values': array(['聶羣號'], dtype=object)}
+ {'name': '是否进口', 'values': array(['否'], dtype=object)}
+ {'name': '生产许可证编号', 'values': array(['SC11435078218889'], dtype=object)}
+ {'name': '售卖方式', 'values': array(['包装'], dtype=object)}
+ {'name': '生产日期', 'values': array(['见包装'], dtype=object)}
+ {'name': '产品厂家厂名', 'values': array(['武夷山市千川茶厂'], dtype=object)}
+ {'name': '包装规格', 'values': array(['100g'], dtype=object)}
+ {'name': '是否礼盒装', 'values': array(['否'], dtype=object)}
+ {'name': '储存条件', 'values': array(['常温'], dtype=object)}
+ {'name': '适用场景', 'values': array(['家用'], dtype=object)}]","[{'name': 'Thương hiệu', 'values': array(['Số nhóm Nie'], dtype=object)}
+ {'name': 'Có nhập khẩu không', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Xuất xứ', 'values': array(['Phúc Kiến'], dtype=object)}
+ {'name': 'Số giấy phép sản xuất', 'values': array(['SC11435078218889'], dtype=object)}
+ {'name': 'Khu vực sản xuất', 'values': array(['Ô long bắc Phúc Kiến'], dtype=object)}
+ {'name': 'Danh mục sản phẩm', 'values': array(['Áo choàng đỏ'], dtype=object)}
+ {'name': 'Vị giác', 'values': array(['Êm dịu ngọt mát'], dtype=object)}
+ {'name': 'Mức độ chống bọt', 'values': array(['Khoảng 8 bong bóng'], dtype=object)}
+ {'name': 'Phương thức bán hàng', 'values': array(['Đóng gói'], dtype=object)}
+ {'name': 'Nội dung tịnh (thông số kỹ thuật)', 'values': array(['100'], dtype=object)}
+ {'name': 'Thời hạn sử dụng', 'values': array(['12 tháng trở lên'], dtype=object)}
+ {'name': 'Ngày sản xuất', 'values': array(['Xem bao bì'], dtype=object)}
+ {'name': 'Tên nhà sản xuất sản phẩm', 'values': array(['Nhà máy trà Wuyishan Qianchuan'], dtype=object)}
+ {'name': 'Thông số kỹ thuật đóng gói', 'values': array(['100g'], dtype=object)}
+ {'name': 'Có đóng hộp quà không', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Điều kiện lưu trữ', 'values': array(['Nhiệt độ thường'], dtype=object)}
+ {'name': 'Kịch bản áp dụng', 'values': array(['Gia dụng'], dtype=object)}
+ {'name': 'Cấp độ', 'values': array(['Cấp 1'], dtype=object)}]",18,18,18,"Wu Yi Shan Da Hong Pao (Big Red Robe) GABA, 100g если хотите Индивидуальное прессование под вашим брендом напишите в личное сообщение!!! Самый красивый чайный сад культуры вулканических пород и габа-чая в мире! Первый чайный сад культуры вулканических пород и габа-чая в мире!Топ 1 Габа-чайная компания в Китае и во всем мире! Teng Chong Gaba Tea Co., Ltd Первая вулканическая чайная компания габа-чая в Китае! Самый лучший габа чай в Китае, топовый габа чай в мире! Наши габа-чаи можно победить любые высшие сорта габа чай из Тайваня! Ведущий производитель габа-чая в Китае! Первый чайный сад культуры вулканических пород и габа-чаев в Китае и во всем мире! Самый большой и самая высокая высота чайный сад культуры вулканических пород и габа-чаев в Китае и во всем мире! Чайный сад на высоте 2300-2500м над уровнем моря ! Pressed oolong tea by Nie Qun Hao brand (produced using GABA technology). Brick-shaped, weight: 100 grams. This is tea made using special GABA technology, based on an original blend (with the Wuyi Shan tea sorts: Zhou Gui and Shui Xian as a tea raw) and, of course, using the Da Hong Pao oolong production technology itself. By the way, there are no analogues to our tea on the market yet! Our company is trying to create fundamentally new kinds of Chinese tea by adding an additional production stage - GABA fermentation. For ease of storage and breaking off pieces, we decided to compress our new product into a “brick” shape. Approximate flavor range: shades of chocolate and coffee, light earthiness, refreshing aftertaste. Прессованный чай улун от бренда Не Цюнь Хао (произведён по технологии ГАБА). Форма прессовки: кирпич. Это чай, изготовлен по технологии ГАБА, на основе оригинального микса (из уишаньских сортов Жоу Гуй и Шуй Сянь) и, конечно, с использованием самой технологии производства улуна Да Хун Пао. Кстати, аналогов нашему чаю ещё нет на рынке! Наша компания старается создать принципиально новые сорта китайского чая, при помощи добавления дополнительного этапа производства - ГАБА ферментацию. Для удобства хранения и отламывания кусочков мы решили спрессовать наш новый продукт в форму ""кирпича"". Примерная вкусовая гамма: оттенки шоколада и кофе, лёгкая землистость, освежающее послевкусие. Первая вулканическая чайная компания габа-чая в Китае И ВО ВСЕМ МИРЕ! Ведущий производитель габа-чая в Китае Teng Chong Gaba Tea Co., Ltd. Компания, ориентированная на культуру производства и продажи чая, с акцентом на вулканические породы и габа-чай из Юньнаньского региона Тэнчонг. Это первая в стране компания, специализирующаяся на производстве и продаже чая под маркой габа-чая. Teng Chong Gaba Tea Co., Ltd. стремится развивать высококлассный горный вулканический органический габа-чай и популяризировать культуру вулканических пород Тэнчонга, а также чайную культуру Тэнчонгского Циньсинь Улуна! Чайные сады компании разделены по типам вулканических пород. У нас есть следующие органические чайные сады, выращиваемые на вулканических почвах: базальт, андезит, диабаз, на лавовых породах, обсидиан, пемза, кимберлит и другие. Компания управляет 400 акрами высокогорных чайных садов в соответствии с органическими стандартами ЕС, обеспечивая необходимый контроль для получения высококачественного сырья для производства чая. Мы стремимся к производству высококлассного габа-чая с использованием эксклюзивных инновационных технологий, открывая миру вулканические породы Тэнчонга и горный вулканический габа-чай. Мы надеемся, что люди по всему миру полюбят вулканические породы Тэнчонга и габа-чай, выращенный на вулканических почвах! Мы приглашаем любителей чая со всех уголков планеты посетить очаровательный Тэнчонг! Откройте для себя наши чайные плантации вулканического габа-чая в Юньнаньском Тэнчонге! Узнайте больше о единственном в мире и самом высоко расположенном органическом Циньсинь улунском чае! Наша компания предлагает новые знания и необычные вкусовые ощущения для любителей чая по всему миру! Под руководством наших мудрых лидеров, Teng Chong Gaba Tea Co., Ltd. в будущем станет ведущим распространителем чайной культуры города ТэнчУнг! Официальный экспорт «Белая» доставка, габа чай в честным знаком и Фитосанитарный сертификат!",18,0.923,True,False,ratio,0.19,ratio,0.19
+811228918732,2023新款帮帆布鞋女内休闲鞋韩版百搭女式平跟鞋舞蹈拉链街舞鞋,Giày vải bố kiểu mới 2023,"鞋面材质: 帆布; 内里材质: 布; 鞋底材质: 橡胶; 功能: 轻便; 品牌: 远步; 产品类别: 帆布鞋; 鞋底工艺: 硫化鞋; 适用年龄段: 成年; 货源类别: 现货; 货号: 911; 是否库存: 是; 最快出货时间: 其他; 适用性别: 女; 鞋帮高度: 高帮(7cm以上); 穿着方式: 侧拉链; 流行元素: 撞色; 图案: 纯色; 适合季节: 春季; 风格: 欧美; 鞋跟形状: 平跟; 颜色: 白色白带, 黑色黑带, 黑色白带, 全白色, 全黑色, 白色黑带, 白色黑边黑带, 黑色白带+黑带; 尺码: 34, 35, 36, 37, 38, 39, 40, 41, 42, 43; 闭合方式: 系带; 适用对象: 成年(18-59岁)","Chất liệu mặt giày: Vải bố; Chất liệu lót trong: Vải; Chất liệu đế giày: cao su; Chức năng: ánh sáng; thương hiệu: đi bộ dài; Danh mục sản phẩm: Giày Vải bạt; Tay nghề làm đế giày: giày lưu hóa; Nhóm Tuổi áp dụng: Trưởng Thành; Loại nguồn: Hàng sẵn; Số mặt hàng: 911; Nó có trong kho không?: Đúng.; Thời gian vận chuyển nhanh nhất: Khác; Giới tính áp dụng: Nữ; Chiều cao giày: Cao cổ (trên 7cm); cách mặc: dây kéo bên; Yếu tố phổ biến: Màu tương phản; Hoa văn: Màu trơn; Phù hợp với mùa: mùa xuân; Phong cách: Âu Mỹ; Hình dạng gót giày: Gót bằng; Màu sắc: Màu trắng sọc trắng, Màu Đen Đai Đen, Màu Đen Đai Trắng, tất cả màu trắng, tất cả màu đen, Màu trắng với sọc đen, Màu trắng viền đen và thắt lưng đen, Thắt lưng đen trắng + thắt lưng đen; Kích cỡ: 34, 35, 36, 37, 38, 39, 40, 41, 42, 43; Cách đóng: Thắt Dây; Đối tượng áp dụng: Người lớn (18-59 tuổi)",shoes,1688,https://detail.1688.com/offer/811228918732.html,2026-09-21T19:10:10+00:00,worker_huy,女鞋,1,https://s.1688.com/selloffer/offer_search.htm?keywords=%C5%AE%D0%AC&beginPage=1,55.0,4100.0,河南,郑州市,,False,女式帆布鞋,121916001,True,"[{'name': '鞋面材质', 'values': array(['帆布'], dtype=object)}
+ {'name': '内里材质', 'values': array(['布'], dtype=object)}
+ {'name': '鞋底材质', 'values': array(['橡胶'], dtype=object)}
+ {'name': '功能', 'values': array(['轻便'], dtype=object)}
+ {'name': '品牌', 'values': array(['远步'], dtype=object)}
+ {'name': '产品类别', 'values': array(['帆布鞋'], dtype=object)}
+ {'name': '鞋底工艺', 'values': array(['硫化鞋'], dtype=object)}
+ {'name': '适用年龄段', 'values': array(['成年'], dtype=object)}
+ {'name': '货源类别', 'values': array(['现货'], dtype=object)}
+ {'name': '货号', 'values': array(['911'], dtype=object)}
+ {'name': '是否库存', 'values': array(['是'], dtype=object)}
+ {'name': '最快出货时间', 'values': array(['其他'], dtype=object)}
+ {'name': '适用性别', 'values': array(['女'], dtype=object)}
+ {'name': '鞋帮高度', 'values': array(['高帮(7cm以上)'], dtype=object)}
+ {'name': '穿着方式', 'values': array(['侧拉链'], dtype=object)}
+ {'name': '流行元素', 'values': array(['撞色'], dtype=object)}
+ {'name': '图案', 'values': array(['纯色'], dtype=object)}
+ {'name': '适合季节', 'values': array(['春季'], dtype=object)}
+ {'name': '风格', 'values': array(['欧美'], dtype=object)}
+ {'name': '鞋跟形状', 'values': array(['平跟'], dtype=object)}
+ {'name': '颜色', 'values': array(['白色白带', '黑色黑带', '黑色白带', '全白色', '全黑色', '白色黑带', '白色黑边黑带', '黑色白带+黑带'],
+       dtype=object)}
+ {'name': '尺码', 'values': array(['34', '35', '36', '37', '38', '39', '40', '41', '42', '43'],
+       dtype=object)}
+ {'name': '闭合方式', 'values': array(['系带'], dtype=object)}
+ {'name': '适用对象', 'values': array(['成年(18-59岁)'], dtype=object)}]","[{'name': 'Danh mục sản phẩm', 'values': array(['Giày Vải bạt'], dtype=object)}
+ {'name': 'Nhóm Tuổi áp dụng', 'values': array(['Trưởng Thành'], dtype=object)}
+ {'name': 'Loại nguồn', 'values': array(['Hàng sẵn'], dtype=object)}
+ {'name': 'thương hiệu', 'values': array(['đi bộ dài'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['911'], dtype=object)}
+ {'name': 'Chất liệu mặt giày', 'values': array(['Vải bố'], dtype=object)}
+ {'name': 'Chất liệu đế giày', 'values': array(['cao su'], dtype=object)}
+ {'name': 'Nó có trong kho không?', 'values': array(['Đúng.'], dtype=object)}
+ {'name': 'Thời gian vận chuyển nhanh nhất', 'values': array(['Khác'], dtype=object)}
+ {'name': 'Giới tính áp dụng', 'values': array(['Nữ'], dtype=object)}
+ {'name': 'Chiều cao giày', 'values': array(['Cao cổ (trên 7cm)'], dtype=object)}
+ {'name': 'Tay nghề làm đế giày', 'values': array(['giày lưu hóa'], dtype=object)}
+ {'name': 'cách mặc', 'values': array(['dây kéo bên'], dtype=object)}
+ {'name': 'Yếu tố phổ biến', 'values': array(['Màu tương phản'], dtype=object)}
+ {'name': 'Chức năng', 'values': array(['ánh sáng'], dtype=object)}
+ {'name': 'Hoa văn', 'values': array(['Màu trơn'], dtype=object)}
+ {'name': 'Phù hợp với mùa', 'values': array(['mùa xuân'], dtype=object)}
+ {'name': 'Chất liệu lót trong', 'values': array(['Vải'], dtype=object)}
+ {'name': 'Phong cách', 'values': array(['Âu Mỹ'], dtype=object)}
+ {'name': 'Hình dạng gót giày', 'values': array(['Gót bằng'], dtype=object)}
+ {'name': 'Màu sắc', 'values': array(['Màu trắng sọc trắng', 'Màu Đen Đai Đen', 'Màu Đen Đai Trắng',
+        'tất cả màu trắng', 'tất cả màu đen', 'Màu trắng với sọc đen',
+        'Màu trắng viền đen và thắt lưng đen',
+        'Thắt lưng đen trắng + thắt lưng đen'], dtype=object)}
+ {'name': 'Kích cỡ', 'values': array(['34', '35', '36', '37', '38', '39', '40', '41', '42', '43'],
+       dtype=object)}
+ {'name': 'Cách đóng', 'values': array(['Thắt Dây'], dtype=object)}
+ {'name': 'Đối tượng áp dụng', 'values': array(['Người lớn (18-59 tuổi)'], dtype=object)}]",24,24,24,,26,0.594,False,False,ratio,0.19,ratio,0.19
+834457793386,2024新款时尚百搭博肯拖鞋女罗马凉拖女休闲平底一字防滑拖鞋批发,Dép Boken thời trang mới 2024,"鞋面材质: PVC; 鞋底材质: PVC; 品牌: 其他; 功能: 轻便, 防滑; 内里材质: PVC; 鞋底工艺: 注塑鞋; 风格: 休闲风; 产品类别: 一字型; 适用年龄段: 成年; 货源类别: 现货; 货号: A05; 流行元素: 其它; 库存类型: 整单; 是否库存: 是; 是否外贸: 否; 最快出货时间: 2天; 质检报告: 否; 质检单位: sgs; 图案: 纯色; 适用场景: 休闲; 毛重: 0.4; 包装体积: 0.01; 上市年份季节（上市时间）: 2024年夏季; 最晚发货时间: 4-7天; 颜色: 白色, 黑色, 卡其色; 尺码: 36-37, 38-39, 40-41; 主要下游平台: ebay, 亚马逊, wish, 速卖通, 独立站, LAZADA; 主要销售地区: 非洲, 欧洲, 南美, 东南亚, 北美, 东北亚, 中东; 有可授权的自有品牌: 否; 是否跨境出口专供货源: 是; 闭合方式: 一字拖; 鞋底厚度: 3cm~5cm(含); 鞋跟款式: 平底","Chất liệu mặt giày: PVC1; Chất liệu đế giày: PVC2; Thương hiệu: Khác1; Chức năng: Gọn nhẹ, Chống trượt; Chất liệu lót trong: PVC3; Công nghệ đế giày: Giày ép nhựa; Phong cách: Phong cách giản dị; Danh mục sản phẩm: Hình chữ I; Nhóm tuổi áp dụng: Trưởng thành; Loại nguồn: Hàng sẵn; Số mặt hàng: A05; Yếu tố phổ biến: Khác2; Loại hàng tồn kho: Nguyên đơn; Có tồn kho không: Là1; Có phải ngoại thương không: Không.1; Thời gian vận chuyển nhanh nhất: 2 ngày; Báo cáo kiểm tra chất lượng: Không.2; Đơn vị kiểm tra chất lượng: sgs; Hoa văn: Màu trơn; Kịch bản áp dụng: Thường ngày; Trọng lượng lông: 0.4; Khối lượng đóng gói: 0.01; Mùa năm niêm yết (thời gian niêm yết): Mùa hè năm 2024; Thời gian giao hàng muộn nhất: 4-7 ngày; Màu sắc: Màu trắng, Màu đen, Kaki; Kích cỡ: 36-37, 38-39, 40-41; Nền tảng hạ lưu chính: ebay, Amazon, wish, AliExpress, Trạm độc lập, LAZADA; Khu vực bán hàng chính: Châu Phi, Châu Âu, Nam Mỹ, Đông Nam Á, Bắc Mỹ, Đông Bắc Á, Trung Đông; Thương hiệu riêng được ủy quyền: Không.3; Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không: Là2; Cách đóng: Dép xỏ ngón; Độ dày đế giày: 3cm~5cm (đã bao gồm); Kiểu gót chân: đáy phẳng",shoes,1688,https://detail.1688.com/offer/834457793386.html,2026-09-21T17:00:08+00:00,worker_huy,女鞋,12,https://s.1688.com/selloffer/offer_search.htm?keywords=%C5%AE%D0%AC&beginPage=12,5.7,14000.0,广东,揭阳市,生产加工,False,平底拖鞋,121890002,True,"[{'name': '鞋面材质', 'values': array(['PVC'], dtype=object)}
+ {'name': '鞋底材质', 'values': array(['PVC'], dtype=object)}
+ {'name': '品牌', 'values': array(['其他'], dtype=object)}
+ {'name': '功能', 'values': array(['轻便', '防滑'], dtype=object)}
+ {'name': '内里材质', 'values': array(['PVC'], dtype=object)}
+ {'name': '鞋底工艺', 'values': array(['注塑鞋'], dtype=object)}
+ {'name': '风格', 'values': array(['休闲风'], dtype=object)}
+ {'name': '产品类别', 'values': array(['一字型'], dtype=object)}
+ {'name': '适用年龄段', 'values': array(['成年'], dtype=object)}
+ {'name': '货源类别', 'values': array(['现货'], dtype=object)}
+ {'name': '货号', 'values': array(['A05'], dtype=object)}
+ {'name': '流行元素', 'values': array(['其它'], dtype=object)}
+ {'name': '库存类型', 'values': array(['整单'], dtype=object)}
+ {'name': '是否库存', 'values': array(['是'], dtype=object)}
+ {'name': '是否外贸', 'values': array(['否'], dtype=object)}
+ {'name': '最快出货时间', 'values': array(['2天'], dtype=object)}
+ {'name': '质检报告', 'values': array(['否'], dtype=object)}
+ {'name': '质检单位', 'values': array(['sgs'], dtype=object)}
+ {'name': '图案', 'values': array(['纯色'], dtype=object)}
+ {'name': '适用场景', 'values': array(['休闲'], dtype=object)}
+ {'name': '毛重', 'values': array(['0.4'], dtype=object)}
+ {'name': '包装体积', 'values': array(['0.01'], dtype=object)}
+ {'name': '上市年份季节（上市时间）', 'values': array(['2024年夏季'], dtype=object)}
+ {'name': '最晚发货时间', 'values': array(['4-7天'], dtype=object)}
+ {'name': '颜色', 'values': array(['白色', '黑色', '卡其色'], dtype=object)}
+ {'name': '尺码', 'values': array(['36-37', '38-39', '40-41'], dtype=object)}
+ {'name': '主要下游平台', 'values': array(['ebay', '亚马逊', 'wish', '速卖通', '独立站', 'LAZADA'], dtype=object)}
+ {'name': '主要销售地区', 'values': array(['非洲', '欧洲', '南美', '东南亚', '北美', '东北亚', '中东'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['否'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['是'], dtype=object)}
+ {'name': '闭合方式', 'values': array(['一字拖'], dtype=object)}
+ {'name': '鞋底厚度', 'values': array(['3cm~5cm(含)'], dtype=object)}
+ {'name': '鞋跟款式', 'values': array(['平底'], dtype=object)}]","[{'name': 'Danh mục sản phẩm', 'values': array(['Hình chữ I'], dtype=object)}
+ {'name': 'Nhóm tuổi áp dụng', 'values': array(['Trưởng thành'], dtype=object)}
+ {'name': 'Loại nguồn', 'values': array(['Hàng sẵn'], dtype=object)}
+ {'name': 'Thương hiệu', 'values': array(['Khác1'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['A05'], dtype=object)}
+ {'name': 'Phong cách', 'values': array(['Phong cách giản dị'], dtype=object)}
+ {'name': 'Yếu tố phổ biến', 'values': array(['Khác2'], dtype=object)}
+ {'name': 'Loại hàng tồn kho', 'values': array(['Nguyên đơn'], dtype=object)}
+ {'name': 'Chất liệu mặt giày', 'values': array(['PVC1'], dtype=object)}
+ {'name': 'Có tồn kho không', 'values': array(['Là1'], dtype=object)}
+ {'name': 'Có phải ngoại thương không', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Chất liệu đế giày', 'values': array(['PVC2'], dtype=object)}
+ {'name': 'Thời gian vận chuyển nhanh nhất', 'values': array(['2 ngày'], dtype=object)}
+ {'name': 'Báo cáo kiểm tra chất lượng', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Đơn vị kiểm tra chất lượng', 'values': array(['sgs'], dtype=object)}
+ {'name': 'Hoa văn', 'values': array(['Màu trơn'], dtype=object)}
+ {'name': 'Chất liệu lót trong', 'values': array(['PVC3'], dtype=object)}
+ {'name': 'Kịch bản áp dụng', 'values': array(['Thường ngày'], dtype=object)}
+ {'name': 'Công nghệ đế giày', 'values': array(['Giày ép nhựa'], dtype=object)}
+ {'name': 'Chức năng', 'values': array(['Gọn nhẹ', 'Chống trượt'], dtype=object)}
+ {'name': 'Trọng lượng lông', 'values': array(['0.4'], dtype=object)}
+ {'name': 'Khối lượng đóng gói', 'values': array(['0.01'], dtype=object)}
+ {'name': 'Mùa năm niêm yết (thời gian niêm yết)', 'values': array(['Mùa hè năm 2024'], dtype=object)}
+ {'name': 'Thời gian giao hàng muộn nhất', 'values': array(['4-7 ngày'], dtype=object)}
+ {'name': 'Màu sắc', 'values': array(['Màu trắng', 'Màu đen', 'Kaki'], dtype=object)}
+ {'name': 'Kích cỡ', 'values': array(['36-37', '38-39', '40-41'], dtype=object)}
+ {'name': 'Nền tảng hạ lưu chính', 'values': array(['ebay', 'Amazon', 'wish', 'AliExpress', 'Trạm độc lập', 'LAZADA'],
+       dtype=object)}
+ {'name': 'Khu vực bán hàng chính', 'values': array(['Châu Phi', 'Châu Âu', 'Nam Mỹ', 'Đông Nam Á', 'Bắc Mỹ',
+        'Đông Bắc Á', 'Trung Đông'], dtype=object)}
+ {'name': 'Thương hiệu riêng được ủy quyền', 'values': array(['Không.3'], dtype=object)}
+ {'name': 'Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không', 'values': array(['Là2'], dtype=object)}
+ {'name': 'Cách đóng', 'values': array(['Dép xỏ ngón'], dtype=object)}
+ {'name': 'Độ dày đế giày', 'values': array(['3cm~5cm (đã bao gồm)'], dtype=object)}
+ {'name': 'Kiểu gót chân', 'values': array(['đáy phẳng'], dtype=object)}]",33,33,33,,22,0.51,False,False,ratio,0.19,ratio,0.19
+898729390213,汽车座椅缝隙塞条车内装饰用品大全车载夹缝防漏填补条收纳储物盒,Khe hở ghế ô tô,"品牌: 尚浮; 材质: PVC; 类型: 座椅缝隙条; 产地: 中国; 加工定制: 否; 型号: 通用; 适用送礼场合: 其它; 加印LOGO: 不可以; 货号: MT-245; 颜色: 椅缝塞条【黑色一对】, 椅缝塞条【红色一对】, 椅缝塞条【棕色一对】, 椅缝塞条【米色一对】; 是否跨境出口专供货源: 否; 安装方式: 卡扣式; 适用部位: 车侧","Thương hiệu: Vẫn còn; Chất liệu: PVC; Loại: Dải khe hở ghế; Xuất xứ: Trung Quốc; Gia công tùy chỉnh: Không.1; Số model: Thông dụng; Những dịp tặng quà thích hợp: khác; In LOGO: Không thể.; Số mặt hàng: MT-245; Màu sắc: Băng nối ghế [cặp đen], Băng nối ghế [cặp màu đỏ], Băng nối ghế [cặp màu nâu], Băng nối ghế [cặp màu be]; Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không: Không.2; Phương pháp cài đặt: chụp vào; Các bộ phận áp dụng: bên xe",auto,1688,https://detail.1688.com/offer/898729390213.html,2026-09-17T21:22:19+00:00,worker_nhat_anh,汽车用品,10,https://s.1688.com/selloffer/offer_search.htm?keywords=%C6%FB%B3%B5%D3%C3%C6%B7&beginPage=10,2.8,74000.0,广东,广州市,生产加工,False,其他汽车内饰用品,1032115,True,"[{'name': '品牌', 'values': array(['尚浮'], dtype=object)}
+ {'name': '材质', 'values': array(['PVC'], dtype=object)}
+ {'name': '类型', 'values': array(['座椅缝隙条'], dtype=object)}
+ {'name': '产地', 'values': array(['中国'], dtype=object)}
+ {'name': '加工定制', 'values': array(['否'], dtype=object)}
+ {'name': '型号', 'values': array(['通用'], dtype=object)}
+ {'name': '适用送礼场合', 'values': array(['其它'], dtype=object)}
+ {'name': '加印LOGO', 'values': array(['不可以'], dtype=object)}
+ {'name': '货号', 'values': array(['MT-245'], dtype=object)}
+ {'name': '颜色', 'values': array(['椅缝塞条【黑色一对】', '椅缝塞条【红色一对】', '椅缝塞条【棕色一对】', '椅缝塞条【米色一对】'],
+       dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['否'], dtype=object)}
+ {'name': '安装方式', 'values': array(['卡扣式'], dtype=object)}
+ {'name': '适用部位', 'values': array(['车侧'], dtype=object)}]","[{'name': 'Thương hiệu', 'values': array(['Vẫn còn'], dtype=object)}
+ {'name': 'Chất liệu', 'values': array(['PVC'], dtype=object)}
+ {'name': 'Xuất xứ', 'values': array(['Trung Quốc'], dtype=object)}
+ {'name': 'Gia công tùy chỉnh', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Số model', 'values': array(['Thông dụng'], dtype=object)}
+ {'name': 'Những dịp tặng quà thích hợp', 'values': array(['khác'], dtype=object)}
+ {'name': 'In LOGO', 'values': array(['Không thể.'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['MT-245'], dtype=object)}
+ {'name': 'Màu sắc', 'values': array(['Băng nối ghế [cặp đen]', 'Băng nối ghế [cặp màu đỏ]',
+        'Băng nối ghế [cặp màu nâu]', 'Băng nối ghế [cặp màu be]'],
+       dtype=object)}
+ {'name': 'Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Loại', 'values': array(['Dải khe hở ghế'], dtype=object)}
+ {'name': 'Phương pháp cài đặt', 'values': array(['chụp vào'], dtype=object)}
+ {'name': 'Các bộ phận áp dụng', 'values': array(['bên xe'], dtype=object)}]",13,13,13,,16,0.564,False,False,ratio,0.17,ratio,0.17
+1058721001412,HEATÔR夕碧泉水杨酸栀子花控油洁面乳清洁面部洗面奶厂家代发,HEATÔR夕碧泉水杨酸栀子花控油洁面乳清洁面部洗面奶厂家代发,"化妆品功效: 深层清洁; 成分: 其他; 品牌: HEATÔR; 起泡程度: 无泡洁面; 品牌类型: 国货品牌; 是否进口: 否; 产品名称: HEATÔR水杨酸栀子花控油洁面乳; 适用人群: 女士, 普通人群; 适用肤质: 中性, 油性, 混合性; 货号: D1XBQ09294; 规格: 正常规格; 生产许可证号: 粤妆20230064; 保质期: 3年; 产地: 广州; 净含量: 130; 是否跨境出口专供货源: 否; 产品规格: HEATÔR水杨酸栀子花控油洁面乳100g; 非特化妆品备案证号: 粤G妆网备字2025071720; 洁面分类: 洗面奶; 特殊用途化妆品: 否; 规格类型: 正常规格; 包装种类: 基础包装; 是否IP授权: 否","化妆品功效: 深层清洁; 成分: 其他; 品牌: HEATÔR; 起泡程度: 无泡洁面; 品牌类型: 国货品牌; 是否进口: 否; 产品名称: HEATÔR水杨酸栀子花控油洁面乳; 适用人群: 女士, 普通人群; 适用肤质: 中性, 油性, 混合性; 货号: D1XBQ09294; 规格: 正常规格; 生产许可证号: 粤妆20230064; 保质期: 3年; 产地: 广州; 净含量: 130; 是否跨境出口专供货源: 否; 产品规格: HEATÔR水杨酸栀子花控油洁面乳100g; 非特化妆品备案证号: 粤G妆网备字2025071720; 洁面分类: 洗面奶; 特殊用途化妆品: 否; 规格类型: 正常规格; 包装种类: 基础包装; 是否IP授权: 否",beauty,1688,https://detail.1688.com/offer/1058721001412.html,2026-09-19T21:00:41+00:00,worker_nhat_anh,洗面奶,24,https://s.1688.com/selloffer/offer_search.htm?keywords=%CF%B4%C3%E6%C4%CC&beginPage=24,3.1,3600.0,广东,广州市,生产加工,False,洁面产品,1042655,True,"[{'name': '化妆品功效', 'values': array(['深层清洁'], dtype=object)}
+ {'name': '成分', 'values': array(['其他'], dtype=object)}
+ {'name': '品牌', 'values': array(['HEATÔR'], dtype=object)}
+ {'name': '起泡程度', 'values': array(['无泡洁面'], dtype=object)}
+ {'name': '品牌类型', 'values': array(['国货品牌'], dtype=object)}
+ {'name': '是否进口', 'values': array(['否'], dtype=object)}
+ {'name': '产品名称', 'values': array(['HEATÔR水杨酸栀子花控油洁面乳'], dtype=object)}
+ {'name': '适用人群', 'values': array(['女士', '普通人群'], dtype=object)}
+ {'name': '适用肤质', 'values': array(['中性', '油性', '混合性'], dtype=object)}
+ {'name': '货号', 'values': array(['D1XBQ09294'], dtype=object)}
+ {'name': '规格', 'values': array(['正常规格'], dtype=object)}
+ {'name': '生产许可证号', 'values': array(['粤妆20230064'], dtype=object)}
+ {'name': '保质期', 'values': array(['3年'], dtype=object)}
+ {'name': '产地', 'values': array(['广州'], dtype=object)}
+ {'name': '净含量', 'values': array(['130'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['否'], dtype=object)}
+ {'name': '产品规格', 'values': array(['HEATÔR水杨酸栀子花控油洁面乳100g'], dtype=object)}
+ {'name': '非特化妆品备案证号', 'values': array(['粤G妆网备字2025071720'], dtype=object)}
+ {'name': '洁面分类', 'values': array(['洗面奶'], dtype=object)}
+ {'name': '特殊用途化妆品', 'values': array(['否'], dtype=object)}
+ {'name': '规格类型', 'values': array(['正常规格'], dtype=object)}
+ {'name': '包装种类', 'values': array(['基础包装'], dtype=object)}
+ {'name': '是否IP授权', 'values': array(['否'], dtype=object)}]","[{'name': '化妆品功效', 'values': array(['深层清洁'], dtype=object)}
+ {'name': '成分', 'values': array(['其他'], dtype=object)}
+ {'name': '品牌', 'values': array(['HEATÔR'], dtype=object)}
+ {'name': '起泡程度', 'values': array(['无泡洁面'], dtype=object)}
+ {'name': '品牌类型', 'values': array(['国货品牌'], dtype=object)}
+ {'name': '是否进口', 'values': array(['否'], dtype=object)}
+ {'name': '产品名称', 'values': array(['HEATÔR水杨酸栀子花控油洁面乳'], dtype=object)}
+ {'name': '适用人群', 'values': array(['女士', '普通人群'], dtype=object)}
+ {'name': '适用肤质', 'values': array(['中性', '油性', '混合性'], dtype=object)}
+ {'name': '货号', 'values': array(['D1XBQ09294'], dtype=object)}
+ {'name': '规格', 'values': array(['正常规格'], dtype=object)}
+ {'name': '生产许可证号', 'values': array(['粤妆20230064'], dtype=object)}
+ {'name': '保质期', 'values': array(['3年'], dtype=object)}
+ {'name': '产地', 'values': array(['广州'], dtype=object)}
+ {'name': '净含量', 'values': array(['130'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['否'], dtype=object)}
+ {'name': '产品规格', 'values': array(['HEATÔR水杨酸栀子花控油洁面乳100g'], dtype=object)}
+ {'name': '非特化妆品备案证号', 'values': array(['粤G妆网备字2025071720'], dtype=object)}
+ {'name': '洁面分类', 'values': array(['洗面奶'], dtype=object)}
+ {'name': '特殊用途化妆品', 'values': array(['否'], dtype=object)}
+ {'name': '规格类型', 'values': array(['正常规格'], dtype=object)}
+ {'name': '包装种类', 'values': array(['基础包装'], dtype=object)}
+ {'name': '是否IP授权', 'values': array(['否'], dtype=object)}]",23,23,23,,0,1.0,True,True,ratio,0.03,ratio,0.03
+943651956731,跨境Baby Silicone Bottle 婴儿奶瓶液态硅胶仿母乳实感宝宝奶瓶,Bình sữa bé bé Silicone Bottle xuyên biên giới,"材质: 食品级硅胶; 品牌: 无; 口径规格: 宽口径; 是否带柄: 带柄; 形状: 弧形; 货号: 0; 加印LOGO: 可以; 装箱数量: 170; 加工定制: 是; 是否进口: 否; 产地: 广州; 原产国/地区: 中国大陆; 商品条形码: 无; 容量: 60ml硅胶奶瓶（裸装）, 170ml硅胶奶瓶（裸装）, 150ml-Style A硅胶奶瓶, 250ml-Style A硅胶奶瓶, 150ml-Style B硅胶奶瓶, 240ml-Style B硅胶奶瓶, 150ml-Style A Pink硅胶奶瓶, 250ml-Style A Pink硅胶奶瓶, 150ml-Style A Green硅胶奶瓶, 250ml-Style A Green硅胶奶瓶; 是否跨境出口专供货源: 是; 专利类型: 否; 1: 奶瓶; 3: 跨境硅胶奶瓶; 2: 硅胶奶瓶; 适用年龄: 少儿（0-14岁）; 包装种类: 基础包装","Chất liệu: Silicon cấp thực phẩm; Thương hiệu: Không có1; Thông số kỹ thuật cỡ nòng: Cỡ nòng rộng; Có kèm tay cầm không: Tay cầm; Hình dạng: Hình vòng cung; Số mặt hàng: 0; In LOGO: Có thể; Số lượng đóng gói: 170; Gia công tùy chỉnh: Là1; Có nhập khẩu không: Không.1; Xuất xứ: Quảng Châu; Quốc gia/Khu vực xuất xứ: Trung Quốc đại lục; Mã vạch hàng hóa: Không có2; Công suất: Bình sữa silicon 60ml (trần), Bình sữa silicon 170ml (trần), Bình sữa silicon 150 ml-Style A, Bình sữa silicon 250ml-Style A, Bình sữa silicon 150 ml-Style B, Bình sữa silicon 240ml kiểu B, Bình sữa silicon 150 ml-Style A Pink, Bình sữa silicon 250ml-Style A Pink, Bình sữa silicon 150 ml-Style A Green, Bình sữa silicon 250ml-Style A Green; Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không: Là2; Loại bằng sáng chế: Không.2; 1: Bình sữa; 3: 跨境硅胶奶瓶; 2: 硅胶奶瓶; Độ tuổi áp dụng: Trẻ em (0-14 tuổi); Loại bao bì: Bao bì cơ bản",mother_baby,1688,https://detail.1688.com/offer/943651956731.html,2026-09-21T04:18:35+00:00,worker_nhat_anh,奶瓶,11,https://s.1688.com/selloffer/offer_search.htm?keywords=%C4%CC%C6%BF&beginPage=11,13.5,11000.0,广东,广州市,生产加工,False,奶瓶,1042957,True,"[{'name': '材质', 'values': array(['食品级硅胶'], dtype=object)}
+ {'name': '品牌', 'values': array(['无'], dtype=object)}
+ {'name': '口径规格', 'values': array(['宽口径'], dtype=object)}
+ {'name': '是否带柄', 'values': array(['带柄'], dtype=object)}
+ {'name': '形状', 'values': array(['弧形'], dtype=object)}
+ {'name': '货号', 'values': array(['0'], dtype=object)}
+ {'name': '加印LOGO', 'values': array(['可以'], dtype=object)}
+ {'name': '装箱数量', 'values': array(['170'], dtype=object)}
+ {'name': '加工定制', 'values': array(['是'], dtype=object)}
+ {'name': '是否进口', 'values': array(['否'], dtype=object)}
+ {'name': '产地', 'values': array(['广州'], dtype=object)}
+ {'name': '原产国/地区', 'values': array(['中国大陆'], dtype=object)}
+ {'name': '商品条形码', 'values': array(['无'], dtype=object)}
+ {'name': '容量', 'values': array(['60ml硅胶奶瓶（裸装）', '170ml硅胶奶瓶（裸装）', '150ml-Style A硅胶奶瓶',
+        '250ml-Style A硅胶奶瓶', '150ml-Style B硅胶奶瓶', '240ml-Style B硅胶奶瓶',
+        '150ml-Style A Pink硅胶奶瓶', '250ml-Style A Pink硅胶奶瓶',
+        '150ml-Style A Green硅胶奶瓶', '250ml-Style A Green硅胶奶瓶'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['是'], dtype=object)}
+ {'name': '专利类型', 'values': array(['否'], dtype=object)}
+ {'name': '1', 'values': array(['奶瓶'], dtype=object)}
+ {'name': '3', 'values': array(['跨境硅胶奶瓶'], dtype=object)}
+ {'name': '2', 'values': array(['硅胶奶瓶'], dtype=object)}
+ {'name': '适用年龄', 'values': array(['少儿（0-14岁）'], dtype=object)}
+ {'name': '包装种类', 'values': array(['基础包装'], dtype=object)}]","[{'name': 'Số mặt hàng', 'values': array(['0'], dtype=object)}
+ {'name': 'Thương hiệu', 'values': array(['Không có1'], dtype=object)}
+ {'name': 'Thông số kỹ thuật cỡ nòng', 'values': array(['Cỡ nòng rộng'], dtype=object)}
+ {'name': 'Hình dạng', 'values': array(['Hình vòng cung'], dtype=object)}
+ {'name': 'Có kèm tay cầm không', 'values': array(['Tay cầm'], dtype=object)}
+ {'name': 'In LOGO', 'values': array(['Có thể'], dtype=object)}
+ {'name': 'Số lượng đóng gói', 'values': array(['170'], dtype=object)}
+ {'name': 'Gia công tùy chỉnh', 'values': array(['Là1'], dtype=object)}
+ {'name': 'Có nhập khẩu không', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Xuất xứ', 'values': array(['Quảng Châu'], dtype=object)}
+ {'name': 'Quốc gia/Khu vực xuất xứ', 'values': array(['Trung Quốc đại lục'], dtype=object)}
+ {'name': 'Chất liệu', 'values': array(['Silicon cấp thực phẩm'], dtype=object)}
+ {'name': 'Mã vạch hàng hóa', 'values': array(['Không có2'], dtype=object)}
+ {'name': 'Công suất', 'values': array(['Bình sữa silicon 60ml (trần)', 'Bình sữa silicon 170ml (trần)',
+        'Bình sữa silicon 150 ml-Style A',
+        'Bình sữa silicon 250ml-Style A',
+        'Bình sữa silicon 150 ml-Style B', 'Bình sữa silicon 240ml kiểu B',
+        'Bình sữa silicon 150 ml-Style A Pink',
+        'Bình sữa silicon 250ml-Style A Pink',
+        'Bình sữa silicon 150 ml-Style A Green',
+        'Bình sữa silicon 250ml-Style A Green'], dtype=object)}
+ {'name': 'Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không', 'values': array(['Là2'], dtype=object)}
+ {'name': 'Loại bằng sáng chế', 'values': array(['Không.2'], dtype=object)}
+ {'name': '1', 'values': array(['Bình sữa'], dtype=object)}
+ {'name': '3', 'values': array(['跨境硅胶奶瓶'], dtype=object)}
+ {'name': '2', 'values': array(['硅胶奶瓶'], dtype=object)}
+ {'name': 'Độ tuổi áp dụng', 'values': array(['Trẻ em (0-14 tuổi)'], dtype=object)}
+ {'name': 'Loại bao bì', 'values': array(['Bao bì cơ bản'], dtype=object)}]",21,21,21,产品名称：硅胶奶瓶 产品特色：液态硅胶材质，柔软瓶身；7cm广口径奶嘴，更真实的吸吮乳感，更安全的温柔呵护 规格：标配带手柄、带重力球吸管（不要手柄联系客服！） 奶瓶尺寸与重量：↓↓↓ 150mL尺寸：约85x75x150mm 重量：约140g/个（塑封袋装） 240mL/250ml尺寸：约85x75x170mm 重量：约170g/个（塑封袋装） 纸盒约35g/个（150ml彩盒尺寸：85*85*15mm；240ml彩盒尺寸：85*85*170mm） 箱规（奶瓶塑封袋装）：尺寸与重量：↓↓↓ 150mL装170个/箱，尺寸：67cm×45cm×57cm 毛重：约24kg 240mL/250ml装150个/箱，尺寸：67cm×45cm×57cm 毛重：约26kg 箱规（奶瓶装进纸盒）：尺寸与重量：↓↓↓ 150mL装136个/箱，尺寸：67cm×45cm×57cm 毛重：约24kg 240mL/250ml装108个/箱，尺寸：67cm×45cm×57cm 毛重：约22kg 注意： 本店所有产品均不含税，含税找客服！ 本店全部产品不直接针对终端消费者，均为半成品销售！ 不作为成品面向大众消费群体！ 产品均为无品牌裸装半成品，无包装，出货！请知悉！ 如消费者私自购买使用，视为默认接受！本店不承担一切责任！ 此链接产品不含包装，均为OPP袋装，不含贴纸、说明、条码等详细信息，不直接面对零售消费者！！！彩盒装默认英文包装！！！介意慎拍！！！！,19,0.676,False,True,ratio,0.24,ratio,0.24
+861622282556,FLOWERWAY童颜胶原蛋白灌注面膜补水保湿柔润肌肤不粘腻贴片面膜,Mặt nạ nạp collagen trẻ em FLOWERWAY,"化妆品功效: 补水保湿, 滋润, 紧致; 品牌: FLOWERWAY; 适用肤质: 油性; 品牌类型: 国货品牌; 适用人群: 女士, 男士; 是否进口: 否; 规格: 正常规格; 生产许可证号: /; 保质期: 3年; 净含量: 23g/5片; 产品规格: FLOWERWAY童颜胶原蛋白灌活面膜23g*5片/盒; 主要下游平台: ebay, 亚马逊, wish, 速卖通, 独立站, LAZADA; 有可授权的自有品牌: 是; 是否跨境出口专供货源: 是; 产地: 广州; 货号: YL000093; 非特化妆品备案证号: 粤G妆网备字2024468069; 特殊用途化妆品: 否; 使用场景: 日常护理; 包装种类: 基础包装; 核心成分: 积雪草; 主要销售地区: 非洲, 欧洲, 南美, 东南亚, 北美, 东北亚, 中东; 产品名称: FLOWERWAY童颜胶原蛋白灌注面膜; 是否IP授权: 否","Hiệu quả mỹ phẩm: Dưỡng ẩm1, Dưỡng ẩm2, Săn chắc; Thương hiệu: FLOWERWAY; Loại da phù hợp: Dầu; Loại hình thương hiệu: Thương hiệu sản phẩm nội địa; Đám đông áp dụng: Nữ, Nam giới; Có nhập khẩu không: Không.1; Quy cách: Thông số kỹ thuật bình thường; Số giấy phép sản xuất: /; Thời hạn sử dụng: 3 năm; Hàm lượng tịnh: 23g/5 viên; Thông số kỹ thuật sản phẩm: FLOWERWAY Mặt nạ phục hồi collagen trẻ thơ 23g*5 miếng/hộp; Nền tảng hạ lưu chính: ebay, Amazon, wish, AliExpress, Trạm độc lập, LAZADA; Thương hiệu riêng được ủy quyền: Là1; Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không: Là2; Xuất xứ: Quảng Châu; Số mặt hàng: YL000093; Số hồ sơ mỹ phẩm không đặc biệt: Quảng Đông G trang điểm mạng chuẩn bị ký tự 2024468069; Mỹ phẩm công dụng đặc biệt: Không.2; Kịch bản sử dụng: chăm sóc hàng ngày; Loại bao bì: Bao bì cơ bản; thành phần cốt lõi: Centella asiatica; Khu vực bán hàng chính: Châu Phi, Châu Âu, Nam Mỹ, Đông Nam Á, Bắc Mỹ, Đông Bắc Á, Trung Đông; Tên sản phẩm: Mặt nạ tưới collagen trẻ em FLOWERWAY; Ủy quyền IP: Có hay Không?: Không.3",beauty,1688,https://detail.1688.com/offer/861622282556.html,2026-09-19T19:15:21+00:00,worker_huy,面膜,26,https://s.1688.com/selloffer/offer_search.htm?keywords=%C3%E6%C4%A4&beginPage=26,7.2,15000.0,广东,广州市,生产加工,False,贴片面膜,1034765,True,"[{'name': '化妆品功效', 'values': array(['补水保湿', '滋润', '紧致'], dtype=object)}
+ {'name': '品牌', 'values': array(['FLOWERWAY'], dtype=object)}
+ {'name': '适用肤质', 'values': array(['油性'], dtype=object)}
+ {'name': '品牌类型', 'values': array(['国货品牌'], dtype=object)}
+ {'name': '适用人群', 'values': array(['女士', '男士'], dtype=object)}
+ {'name': '是否进口', 'values': array(['否'], dtype=object)}
+ {'name': '规格', 'values': array(['正常规格'], dtype=object)}
+ {'name': '生产许可证号', 'values': array(['/'], dtype=object)}
+ {'name': '保质期', 'values': array(['3年'], dtype=object)}
+ {'name': '净含量', 'values': array(['23g/5片'], dtype=object)}
+ {'name': '产品规格', 'values': array(['FLOWERWAY童颜胶原蛋白灌活面膜23g*5片/盒'], dtype=object)}
+ {'name': '主要下游平台', 'values': array(['ebay', '亚马逊', 'wish', '速卖通', '独立站', 'LAZADA'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['是'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['是'], dtype=object)}
+ {'name': '产地', 'values': array(['广州'], dtype=object)}
+ {'name': '货号', 'values': array(['YL000093'], dtype=object)}
+ {'name': '非特化妆品备案证号', 'values': array(['粤G妆网备字2024468069'], dtype=object)}
+ {'name': '特殊用途化妆品', 'values': array(['否'], dtype=object)}
+ {'name': '使用场景', 'values': array(['日常护理'], dtype=object)}
+ {'name': '包装种类', 'values': array(['基础包装'], dtype=object)}
+ {'name': '核心成分', 'values': array(['积雪草'], dtype=object)}
+ {'name': '主要销售地区', 'values': array(['非洲', '欧洲', '南美', '东南亚', '北美', '东北亚', '中东'], dtype=object)}
+ {'name': '产品名称', 'values': array(['FLOWERWAY童颜胶原蛋白灌注面膜'], dtype=object)}
+ {'name': '是否IP授权', 'values': array(['否'], dtype=object)}]","[{'name': 'Thương hiệu', 'values': array(['FLOWERWAY'], dtype=object)}
+ {'name': 'Có nhập khẩu không', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Loại da phù hợp', 'values': array(['Dầu'], dtype=object)}
+ {'name': 'Quy cách', 'values': array(['Thông số kỹ thuật bình thường'], dtype=object)}
+ {'name': 'Loại hình thương hiệu', 'values': array(['Thương hiệu sản phẩm nội địa'], dtype=object)}
+ {'name': 'Số giấy phép sản xuất', 'values': array(['/'], dtype=object)}
+ {'name': 'Thời hạn sử dụng', 'values': array(['3 năm'], dtype=object)}
+ {'name': 'Hàm lượng tịnh', 'values': array(['23g/5 viên'], dtype=object)}
+ {'name': 'Thông số kỹ thuật sản phẩm', 'values': array(['FLOWERWAY Mặt nạ phục hồi collagen trẻ thơ 23g*5 miếng/hộp'],
+       dtype=object)}
+ {'name': 'Nền tảng hạ lưu chính', 'values': array(['ebay', 'Amazon', 'wish', 'AliExpress', 'Trạm độc lập', 'LAZADA'],
+       dtype=object)}
+ {'name': 'Thương hiệu riêng được ủy quyền', 'values': array(['Là1'], dtype=object)}
+ {'name': 'Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không', 'values': array(['Là2'], dtype=object)}
+ {'name': 'Xuất xứ', 'values': array(['Quảng Châu'], dtype=object)}
+ {'name': 'Hiệu quả mỹ phẩm', 'values': array(['Dưỡng ẩm1', 'Dưỡng ẩm2', 'Săn chắc'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['YL000093'], dtype=object)}
+ {'name': 'Số hồ sơ mỹ phẩm không đặc biệt', 'values': array(['Quảng Đông G trang điểm mạng chuẩn bị ký tự 2024468069'],
+       dtype=object)}
+ {'name': 'Mỹ phẩm công dụng đặc biệt', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Kịch bản sử dụng', 'values': array(['chăm sóc hàng ngày'], dtype=object)}
+ {'name': 'Loại bao bì', 'values': array(['Bao bì cơ bản'], dtype=object)}
+ {'name': 'thành phần cốt lõi', 'values': array(['Centella asiatica'], dtype=object)}
+ {'name': 'Khu vực bán hàng chính', 'values': array(['Châu Phi', 'Châu Âu', 'Nam Mỹ', 'Đông Nam Á', 'Bắc Mỹ',
+        'Đông Bắc Á', 'Trung Đông'], dtype=object)}
+ {'name': 'Đám đông áp dụng', 'values': array(['Nữ', 'Nam giới'], dtype=object)}
+ {'name': 'Tên sản phẩm', 'values': array(['Mặt nạ tưới collagen trẻ em FLOWERWAY'], dtype=object)}
+ {'name': 'Ủy quyền IP: Có hay Không?', 'values': array(['Không.3'], dtype=object)}]",24,24,24,,18,0.749,False,False,ratio,0.21,ratio,0.21
+673308007004,香港MackJhosel PU小众复古帆布法棍腋下包女秋夏新款单肩包,Túi Đeo Vai Nữ Mẫu Mới mùa thu hè,材质: 帆布; 箱包潮流款式: 法棍包; 箱包大小: 中; 里料质地: 涤纶; 品牌: 其他; 风格: 街头潮流; 流行元素: 撞色; 颜色: 浅蓝色; 货号: 1564; 上市年份季节: 2022年春季; 开盖方式: 拉链; 硬度: 软; 外袋种类: 内贴袋; 有无夹层: 无; 肩带根数: 单根; 适用场景: 日常搭配,Chất liệu: Vải bố; Túi xách kiểu dáng thời thượng: Túi đựng gậy; Kích thước túi: Trong; Kết cấu lót: Polyester; thương hiệu: Khác; Phong cách: Sành điệu đường phố; Yếu tố phổ biến: Màu tương phản; Màu sắc: Màu xanh lam nhạt; Số mặt hàng: 1564; Mùa năm niêm yết: Mùa xuân năm 2022; Cách mở nắp: Khóa kéo; Độ cứng: Mềm; Loại túi bên ngoài: Túi dán bên trong; Có lớp xen kẽ không: Không có; Số dây đeo vai: Một gốc; Kịch bản áp dụng: Kết hợp hàng ngày,bags,1688,https://detail.1688.com/offer/673308007004.html,2026-09-18T21:26:26+00:00,worker_nhat_anh,女包,7,https://s.1688.com/selloffer/offer_search.htm?keywords=%C5%AE%B0%FC&beginPage=7,14.0,4800.0,广东,广州市,经销批发,False,女士单肩包,201554511,True,"[{'name': '材质', 'values': array(['帆布'], dtype=object)}
+ {'name': '箱包潮流款式', 'values': array(['法棍包'], dtype=object)}
+ {'name': '箱包大小', 'values': array(['中'], dtype=object)}
+ {'name': '里料质地', 'values': array(['涤纶'], dtype=object)}
+ {'name': '品牌', 'values': array(['其他'], dtype=object)}
+ {'name': '风格', 'values': array(['街头潮流'], dtype=object)}
+ {'name': '流行元素', 'values': array(['撞色'], dtype=object)}
+ {'name': '颜色', 'values': array(['浅蓝色'], dtype=object)}
+ {'name': '货号', 'values': array(['1564'], dtype=object)}
+ {'name': '上市年份季节', 'values': array(['2022年春季'], dtype=object)}
+ {'name': '开盖方式', 'values': array(['拉链'], dtype=object)}
+ {'name': '硬度', 'values': array(['软'], dtype=object)}
+ {'name': '外袋种类', 'values': array(['内贴袋'], dtype=object)}
+ {'name': '有无夹层', 'values': array(['无'], dtype=object)}
+ {'name': '肩带根数', 'values': array(['单根'], dtype=object)}
+ {'name': '适用场景', 'values': array(['日常搭配'], dtype=object)}]","[{'name': 'Màu sắc', 'values': array(['Màu xanh lam nhạt'], dtype=object)}
+ {'name': 'Phong cách', 'values': array(['Sành điệu đường phố'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['1564'], dtype=object)}
+ {'name': 'Chất liệu', 'values': array(['Vải bố'], dtype=object)}
+ {'name': 'Túi xách kiểu dáng thời thượng', 'values': array(['Túi đựng gậy'], dtype=object)}
+ {'name': 'Kích thước túi', 'values': array(['Trong'], dtype=object)}
+ {'name': 'Yếu tố phổ biến', 'values': array(['Màu tương phản'], dtype=object)}
+ {'name': 'Mùa năm niêm yết', 'values': array(['Mùa xuân năm 2022'], dtype=object)}
+ {'name': 'Kết cấu lót', 'values': array(['Polyester'], dtype=object)}
+ {'name': 'Cách mở nắp', 'values': array(['Khóa kéo'], dtype=object)}
+ {'name': 'Độ cứng', 'values': array(['Mềm'], dtype=object)}
+ {'name': 'Loại túi bên ngoài', 'values': array(['Túi dán bên trong'], dtype=object)}
+ {'name': 'thương hiệu', 'values': array(['Khác'], dtype=object)}
+ {'name': 'Có lớp xen kẽ không', 'values': array(['Không có'], dtype=object)}
+ {'name': 'Số dây đeo vai', 'values': array(['Một gốc'], dtype=object)}
+ {'name': 'Kịch bản áp dụng', 'values': array(['Kết hợp hàng ngày'], dtype=object)}]",16,16,16,,10,0.557,False,False,ratio,0.27,ratio,0.27
+823772645016,汽车座椅缝隙塞条车载好物边缝防漏条座位夹缝塞防掉车内装饰用品,Khe hở ghế ô tô,"材质: EVA; 功能: 防水; 使用位置: 座椅; 适用汽车品牌: 通用; 品牌: 凯斯莱迪; 使用方式: 座式; 加工定制: 否; 颜色: 主副驾（黑色）一对, 主副驾（火山红）一对, 主副驾（米色）一对, 主副驾（摩卡棕）一对; 主要下游平台: 其他; 主要销售地区: 其他; 有可授权的自有品牌: 否; 是否跨境出口专供货源: 是; 是否专利货源: 否; 置物用品类型: 置物盒","Chất liệu: EVA; Chức năng: Chống nước; Sử dụng vị trí: Ghế ngồi; Thương hiệu xe áp dụng: Thông dụng; thương hiệu: Trường hợp Laidi; Cách sử dụng: Kiểu ngồi; Gia công tùy chỉnh: Không.1; Màu sắc: Một cặp tài xế chính và phụ (đen), Một cặp tài xế chính và phụ (Volcano Red), Một cặp lái xe chính và phụ (màu be), Một cặp tài xế chính và phụ (Mocha Brown); Nền tảng hạ lưu chính: Khác1; Khu vực bán hàng chính: Khác2; Thương hiệu riêng được ủy quyền: Không.2; Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không: Là; Có phải là nguồn cấp bằng sáng chế không: Không.3; Loại đồ dùng: Hộp đựng đồ",auto,1688,https://detail.1688.com/offer/823772645016.html,2026-09-17T21:57:08+00:00,worker_nhat_anh,汽车用品,24,https://s.1688.com/selloffer/offer_search.htm?keywords=%C6%FB%B3%B5%D3%C3%C6%B7&beginPage=24,2.4,46000.0,广东,广州市,,False,车用置物袋/置物箱,1032116,True,"[{'name': '材质', 'values': array(['EVA'], dtype=object)}
+ {'name': '功能', 'values': array(['防水'], dtype=object)}
+ {'name': '使用位置', 'values': array(['座椅'], dtype=object)}
+ {'name': '适用汽车品牌', 'values': array(['通用'], dtype=object)}
+ {'name': '品牌', 'values': array(['凯斯莱迪'], dtype=object)}
+ {'name': '使用方式', 'values': array(['座式'], dtype=object)}
+ {'name': '加工定制', 'values': array(['否'], dtype=object)}
+ {'name': '颜色', 'values': array(['主副驾（黑色）一对', '主副驾（火山红）一对', '主副驾（米色）一对', '主副驾（摩卡棕）一对'], dtype=object)}
+ {'name': '主要下游平台', 'values': array(['其他'], dtype=object)}
+ {'name': '主要销售地区', 'values': array(['其他'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['否'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['是'], dtype=object)}
+ {'name': '是否专利货源', 'values': array(['否'], dtype=object)}
+ {'name': '置物用品类型', 'values': array(['置物盒'], dtype=object)}]","[{'name': 'thương hiệu', 'values': array(['Trường hợp Laidi'], dtype=object)}
+ {'name': 'Chất liệu', 'values': array(['EVA'], dtype=object)}
+ {'name': 'Sử dụng vị trí', 'values': array(['Ghế ngồi'], dtype=object)}
+ {'name': 'Gia công tùy chỉnh', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Màu sắc', 'values': array(['Một cặp tài xế chính và phụ (đen)',
+        'Một cặp tài xế chính và phụ (Volcano Red)',
+        'Một cặp lái xe chính và phụ (màu be)',
+        'Một cặp tài xế chính và phụ (Mocha Brown)'], dtype=object)}
+ {'name': 'Nền tảng hạ lưu chính', 'values': array(['Khác1'], dtype=object)}
+ {'name': 'Khu vực bán hàng chính', 'values': array(['Khác2'], dtype=object)}
+ {'name': 'Thương hiệu riêng được ủy quyền', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không', 'values': array(['Là'], dtype=object)}
+ {'name': 'Chức năng', 'values': array(['Chống nước'], dtype=object)}
+ {'name': 'Thương hiệu xe áp dụng', 'values': array(['Thông dụng'], dtype=object)}
+ {'name': 'Có phải là nguồn cấp bằng sáng chế không', 'values': array(['Không.3'], dtype=object)}
+ {'name': 'Loại đồ dùng', 'values': array(['Hộp đựng đồ'], dtype=object)}
+ {'name': 'Cách sử dụng', 'values': array(['Kiểu ngồi'], dtype=object)}]",14,14,14,,16,0.595,False,False,ratio,0.17,ratio,0.17
+805834824450,全英文SADOER骨胶原抗皱睡眠面膜 补水保湿Facial mask外贸跨境,Mặt nạ ngủ chống nhăn Collagen toàn tiếng Anh,"化妆品功效: 滋润; 品牌: SADOER; 产品形态: 冻膜; 适用人群: 通用; 品牌类型: 国货品牌; 是否进口: 否; 适用肤质: 通用; 保质期: 3年; 规格: 正常规格; 净含量: -1; 产品规格: 睡眠面膜4mlX20pcs[仅供外贸出口售，禁国内销售，购买即默认免责声明且承担责任]; 主要下游平台: 亚马逊, 速卖通; 是否跨境出口专供货源: 是; 非特化妆品备案证号: 粤G妆网备字2022230619; 货号: NO.SD00582; 特殊用途化妆品: 否; 有可授权的自有品牌: 是; 特殊备案号成分: /; 产地: 广州; 生产许可证号: /; 主要销售地区: 东南亚","Hiệu quả thẩm mỹ: dưỡng ẩm; thương hiệu: SADOER; Hình thức sản phẩm: phim đông lạnh; Đám đông áp dụng: mục đích chung2; Loại thương hiệu: Thương hiệu nội địa; Có nên nhập khẩu hay không: KHÔNG1; Loại da áp dụng: mục đích chung1; thời hạn sử dụng: 3 năm; đặc điểm kỹ thuật: Thông số kỹ thuật bình thường; Hàm lượng tịnh: -1; Thông số kỹ thuật sản phẩm: Mặt nạ ngủ 4mlX20 chiếc [Chỉ dành cho xuất khẩu ngoại thương, bán hàng trong nước đều bị cấm, mua hàng có nghĩa là từ chối trách nhiệm và chịu trách nhiệm]; Các nền tảng hạ lưu chính: amazon, AliExpress; Có nên cung cấp nguồn cung độc quyền cho xuất khẩu xuyên biên giới hay không: là1; Số hồ sơ mỹ phẩm không đặc biệt: Quảng Đông G trang điểm mạng chuẩn bị ký tự 2022230619; Mã sản phẩm: NO.SD00582; Mỹ phẩm công dụng đặc biệt: KHÔNG2; Thương hiệu riêng được ủy quyền: là2; Thành phần số đăng ký đặc biệt: /1; Xuất xứ: Quảng Châu; Số giấy phép sản xuất: /2; Khu vực bán hàng chính: Đông Nam Á",beauty,1688,https://detail.1688.com/offer/805834824450.html,2026-09-19T19:00:42+00:00,worker_huy,面膜,24,https://s.1688.com/selloffer/offer_search.htm?keywords=%C3%E6%C4%A4&beginPage=24,1.9,100000.0,广东,广州市,生产加工,False,涂抹面膜,201305009,True,"[{'name': '化妆品功效', 'values': array(['滋润'], dtype=object)}
+ {'name': '品牌', 'values': array(['SADOER'], dtype=object)}
+ {'name': '产品形态', 'values': array(['冻膜'], dtype=object)}
+ {'name': '适用人群', 'values': array(['通用'], dtype=object)}
+ {'name': '品牌类型', 'values': array(['国货品牌'], dtype=object)}
+ {'name': '是否进口', 'values': array(['否'], dtype=object)}
+ {'name': '适用肤质', 'values': array(['通用'], dtype=object)}
+ {'name': '保质期', 'values': array(['3年'], dtype=object)}
+ {'name': '规格', 'values': array(['正常规格'], dtype=object)}
+ {'name': '净含量', 'values': array(['-1'], dtype=object)}
+ {'name': '产品规格', 'values': array(['睡眠面膜4mlX20pcs[仅供外贸出口售，禁国内销售，购买即默认免责声明且承担责任]'], dtype=object)}
+ {'name': '主要下游平台', 'values': array(['亚马逊', '速卖通'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['是'], dtype=object)}
+ {'name': '非特化妆品备案证号', 'values': array(['粤G妆网备字2022230619'], dtype=object)}
+ {'name': '货号', 'values': array(['NO.SD00582'], dtype=object)}
+ {'name': '特殊用途化妆品', 'values': array(['否'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['是'], dtype=object)}
+ {'name': '特殊备案号成分', 'values': array(['/'], dtype=object)}
+ {'name': '产地', 'values': array(['广州'], dtype=object)}
+ {'name': '生产许可证号', 'values': array(['/'], dtype=object)}
+ {'name': '主要销售地区', 'values': array(['东南亚'], dtype=object)}]","[{'name': 'Có nên nhập khẩu hay không', 'values': array(['KHÔNG1'], dtype=object)}
+ {'name': 'Loại da áp dụng', 'values': array(['mục đích chung1'], dtype=object)}
+ {'name': 'thời hạn sử dụng', 'values': array(['3 năm'], dtype=object)}
+ {'name': 'đặc điểm kỹ thuật', 'values': array(['Thông số kỹ thuật bình thường'], dtype=object)}
+ {'name': 'Hàm lượng tịnh', 'values': array(['-1'], dtype=object)}
+ {'name': 'Hình thức sản phẩm', 'values': array(['phim đông lạnh'], dtype=object)}
+ {'name': 'Thông số kỹ thuật sản phẩm', 'values': array(['Mặt nạ ngủ 4mlX20 chiếc [Chỉ dành cho xuất khẩu ngoại thương, bán hàng trong nước đều bị cấm, mua hàng có nghĩa là từ chối trách nhiệm và chịu trách nhiệm]'],
+       dtype=object)}
+ {'name': 'thương hiệu', 'values': array(['SADOER'], dtype=object)}
+ {'name': 'Hiệu quả thẩm mỹ', 'values': array(['dưỡng ẩm'], dtype=object)}
+ {'name': 'Các nền tảng hạ lưu chính', 'values': array(['amazon', 'AliExpress'], dtype=object)}
+ {'name': 'Có nên cung cấp nguồn cung độc quyền cho xuất khẩu xuyên biên giới hay không', 'values': array(['là1'], dtype=object)}
+ {'name': 'Loại thương hiệu', 'values': array(['Thương hiệu nội địa'], dtype=object)}
+ {'name': 'Số hồ sơ mỹ phẩm không đặc biệt', 'values': array(['Quảng Đông G trang điểm mạng chuẩn bị ký tự 2022230619'],
+       dtype=object)}
+ {'name': 'Mã sản phẩm', 'values': array(['NO.SD00582'], dtype=object)}
+ {'name': 'Mỹ phẩm công dụng đặc biệt', 'values': array(['KHÔNG2'], dtype=object)}
+ {'name': 'Thương hiệu riêng được ủy quyền', 'values': array(['là2'], dtype=object)}
+ {'name': 'Thành phần số đăng ký đặc biệt', 'values': array(['/1'], dtype=object)}
+ {'name': 'Xuất xứ', 'values': array(['Quảng Châu'], dtype=object)}
+ {'name': 'Số giấy phép sản xuất', 'values': array(['/2'], dtype=object)}
+ {'name': 'Khu vực bán hàng chính', 'values': array(['Đông Nam Á'], dtype=object)}
+ {'name': 'Đám đông áp dụng', 'values': array(['mục đích chung2'], dtype=object)}]",21,21,21,跨境专供全球精选 支持代发和OEM加工定制 Arrival price 0.40 元 Arrival price 2.50 元 Arrival price 0.25 元 Arrival price 0.25 元 Arrival price 0.35 元 Arrival price 2.10 元 Arrival price 8.60 元 Arrival price 3.60 元,20,0.639,False,False,ratio,0.25,ratio,0.25
+927262971546,奥迪专用行车记录仪A4L/A6L/Q5L/A7L/A3/Q3/TT/Q4/Q6手机WiFi互联,Audi chuyên dụng lái xe ghi A4L/A6L/Q5L/A7L/A3/Q3/TT/Q4/Q6 điện thoại di động kết nối WiFi,"拍照像素: 1200万; 功能: 循环录像, 停车监控, 夜视加强, 前后录像; 内存容量: 无; 影像分辨率: 4K及以上; 拍摄角度: 170°; 储存卡: TF卡; 镜头数量: 前后双录; 品牌: 源头厂家; 货号: P1014885566; 颜色分类: 无内存卡（自备）, 32G高速内存卡, 64G高速内存卡, 128G高速内存卡; 主镜头光圈: F1.5; 规格尺寸: 单录+1080P高清, 单录 2K超清, 单录+2K超清+语音声控, 单录 4K超高清, 单录+4K超高清+语音声控, 前后双录+4K超高清, 前后双录+4K超高清+语音声控; 是否专利货源: 否; 加工定制: 否; 操作方式: 按键式","Pixel máy ảnh: 12 triệu; Chức năng: Video vòng lặp, Giám sát bãi đậu xe, Tăng cường tầm nhìn ban đêm, Video trước và sau; Dung lượng bộ nhớ: Không có; Độ phân giải hình ảnh: 4K trở lên; Góc chụp: 170°; Thẻ lưu trữ: Thẻ TF; Số lượng ống kính: Ghi kép trước và sau; Thương hiệu: Nhà sản xuất nguồn; Số mặt hàng: P1014885566; Phân loại màu sắc: Không có thẻ nhớ (mang theo), Thẻ nhớ tốc độ cao 32G, Thẻ nhớ tốc độ cao 64G, 128G thẻ nhớ tốc độ cao; Khẩu độ ống kính chính: F1.5; Kích thước thông số kỹ thuật: Ghi đơn 1080P HD, Ghi đơn 2K siêu rõ nét, Ghi đơn 2K điều khiển bằng giọng nói siêu rõ nét, Ghi đĩa đơn 4K Ultra HD, Ghi âm đơn 4K Ultra HD bằng giọng nói điều khiển bằng giọng nói, Ghi kép 4K Ultra HD trước và sau, Ghi kép trước và sau 4K điều khiển bằng giọng nói độ nét cực cao; Có phải là nguồn cấp bằng sáng chế không: Không.1; Gia công tùy chỉnh: Không.2; Phương thức hoạt động: Kiểu nút bấm",auto,1688,https://detail.1688.com/offer/927262971546.html,2026-09-18T07:24:21+00:00,worker_nhat_anh,行车记录仪,14,https://s.1688.com/selloffer/offer_search.htm?keywords=%D0%D0%B3%B5%BC%C7%C2%BC%D2%C7&beginPage=14,76.0,400.0,广东,东莞市,,False,行车记录仪,1032112,True,"[{'name': '拍照像素', 'values': array(['1200万'], dtype=object)}
+ {'name': '功能', 'values': array(['循环录像', '停车监控', '夜视加强', '前后录像'], dtype=object)}
+ {'name': '内存容量', 'values': array(['无'], dtype=object)}
+ {'name': '影像分辨率', 'values': array(['4K及以上'], dtype=object)}
+ {'name': '拍摄角度', 'values': array(['170°'], dtype=object)}
+ {'name': '储存卡', 'values': array(['TF卡'], dtype=object)}
+ {'name': '镜头数量', 'values': array(['前后双录'], dtype=object)}
+ {'name': '品牌', 'values': array(['源头厂家'], dtype=object)}
+ {'name': '货号', 'values': array(['P1014885566'], dtype=object)}
+ {'name': '颜色分类', 'values': array(['无内存卡（自备）', '32G高速内存卡', '64G高速内存卡', '128G高速内存卡'], dtype=object)}
+ {'name': '主镜头光圈', 'values': array(['F1.5'], dtype=object)}
+ {'name': '规格尺寸', 'values': array(['单录+1080P高清', '单录 2K超清', '单录+2K超清+语音声控', '单录 4K超高清',
+        '单录+4K超高清+语音声控', '前后双录+4K超高清', '前后双录+4K超高清+语音声控'], dtype=object)}
+ {'name': '是否专利货源', 'values': array(['否'], dtype=object)}
+ {'name': '加工定制', 'values': array(['否'], dtype=object)}
+ {'name': '操作方式', 'values': array(['按键式'], dtype=object)}]","[{'name': 'Thẻ lưu trữ', 'values': array(['Thẻ TF'], dtype=object)}
+ {'name': 'Góc chụp', 'values': array(['170°'], dtype=object)}
+ {'name': 'Thương hiệu', 'values': array(['Nhà sản xuất nguồn'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['P1014885566'], dtype=object)}
+ {'name': 'Phân loại màu sắc', 'values': array(['Không có thẻ nhớ (mang theo)', 'Thẻ nhớ tốc độ cao 32G',
+        'Thẻ nhớ tốc độ cao 64G', '128G thẻ nhớ tốc độ cao'], dtype=object)}
+ {'name': 'Khẩu độ ống kính chính', 'values': array(['F1.5'], dtype=object)}
+ {'name': 'Kích thước thông số kỹ thuật', 'values': array(['Ghi đơn 1080P HD', 'Ghi đơn 2K siêu rõ nét',
+        'Ghi đơn 2K điều khiển bằng giọng nói siêu rõ nét',
+        'Ghi đĩa đơn 4K Ultra HD',
+        'Ghi âm đơn 4K Ultra HD bằng giọng nói điều khiển bằng giọng nói',
+        'Ghi kép 4K Ultra HD trước và sau',
+        'Ghi kép trước và sau 4K điều khiển bằng giọng nói độ nét cực cao'],
+       dtype=object)}
+ {'name': 'Có phải là nguồn cấp bằng sáng chế không', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Pixel máy ảnh', 'values': array(['12 triệu'], dtype=object)}
+ {'name': 'Chức năng', 'values': array(['Video vòng lặp', 'Giám sát bãi đậu xe',
+        'Tăng cường tầm nhìn ban đêm', 'Video trước và sau'], dtype=object)}
+ {'name': 'Độ phân giải hình ảnh', 'values': array(['4K trở lên'], dtype=object)}
+ {'name': 'Dung lượng bộ nhớ', 'values': array(['Không có'], dtype=object)}
+ {'name': 'Gia công tùy chỉnh', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Số lượng ống kính', 'values': array(['Ghi kép trước và sau'], dtype=object)}
+ {'name': 'Phương thức hoạt động', 'values': array(['Kiểu nút bấm'], dtype=object)}]",15,15,15,,22,0.809,False,False,ratio,0.3,ratio,0.3
+692412467354,奥迪A3/A4/A5/A6L/A8/Q2/Q7/Q5/RS7/S5原厂专车专用4K行车记录仪,Audi A3/A4/A5/A6L/A8/Q2/Q7/Q5/RS7/S5 chuyên dụng 4K lái xe,"拍照像素: 1500万,1600万; 功能: 循环录像, 变道辅助, 夜视加强, 前后录像; 内存容量: 2GB; 影像分辨率: 2160p; 拍摄角度: 170°; 储存卡: TF卡; 镜头数量: 前后双录; 品牌: 中性; 数据存储容量: 256G; 数据存储时间: 自动循环; 数据传输接口: 其他; 传输数率: 30帧; 安装位置: 前挡风玻璃后视镜; 电压: 12V; 货号: 奥迪记录仪; 颜色分类: 奥迪 A2, 奥迪 A2L, 奥迪 A3, 奥迪 A4L, 奥迪 A5, 奥迪 A6, 奥迪 A6L, 奥迪 A7, 奥迪 A8, 奥迪 RS3, 奥迪 R8, 奥迪 Q2L, 奥迪 Q3, 奥迪 Q5, 奥迪 Q5L, 奥迪 Q7, 奥迪 S3, 奥迪 S5, 奥迪 S7, 奥迪 TT, 奥迪 Q5 e-tron, 奥迪RS7/RS4/RS5; 是否跨境出口专供货源: 否; 主镜头光圈: F1.5; 规格尺寸: 2K 单镜头免接线32G卡, 4K 单镜头免接线64G卡, 4K 双镜头免接线64G卡, 1080P 双镜头免接线32G卡, 2K 单镜头OBD停车监控专用线32G卡, 4K 单镜头OBD停车监控专用线64G卡, 4K 双镜头OBD停车监控专用线64G卡, 1080P 双镜头OBD停车监控专用线32G卡; 是否专利货源: 否; 网络类型: WIFI; 传输速率: 30帧; 屏幕尺寸: 不带屏幕; 加工定制: 否; 操作方式: 按键式","Pixel máy ảnh: 15 triệu, 16 triệu; Chức năng: Video vòng lặp, Hỗ trợ chuyển làn, Tăng cường tầm nhìn ban đêm, Video trước và sau; Dung lượng bộ nhớ: 2GB; Độ phân giải hình ảnh: 2160p; Góc chụp: 170°; Thẻ lưu trữ: Thẻ TF; Số lượng ống kính: Ghi kép trước và sau; Thương hiệu: Trung tính; Dung lượng lưu trữ dữ liệu: 256G; Thời gian lưu trữ dữ liệu: Vòng lặp tự động; Giao diện truyền dữ liệu: Khác; Tỷ lệ truyền số: 30 khung hình1; Vị trí lắp đặt: Kính chắn gió phía trước gương chiếu hậu; Điện áp: 12V; Số mặt hàng: Máy ghi âm Audi; Phân loại màu sắc: Audi A2, Audi A2L, Audi A3, Audi A4L, Audi A5, Audi A6, Audi A6L, Audi A7, Audi A8, Audi RS3, Audi R8, Audi Q2L, Audi Q3, Audi Q5, Audi Q5L, Audi Q7, Audi S3, Audi S5, Audi S7, Audi TT, Audi Q5 e-tron, Audi RS7/RS4/RS5; Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không: Không.1; Khẩu độ ống kính chính: F1.5; Kích thước thông số kỹ thuật: 2K ống kính đơn miễn phí kết nối thẻ 32G, 4K ống kính đơn miễn phí kết nối thẻ 64G, 4K ống kính kép miễn phí nối dây thẻ 64G, 1080P ống kính kép miễn phí kết nối thẻ 32G, 2K ống kính đơn OBD giám sát bãi đậu xe chuyên dụng dòng 32G thẻ, 4K ống kính đơn OBD giám sát bãi đậu xe chuyên dụng dòng thẻ 64G, 4K ống kính kép OBD giám sát bãi đậu xe chuyên dụng dòng thẻ 64G, 1080P ống kính kép OBD giám sát bãi đậu xe chuyên dụng dòng 32G thẻ; Có phải là nguồn cấp bằng sáng chế không: Không.2; Loại mạng: WIFI; Tốc độ truyền tải: 30 khung hình2; Kích thước màn hình: Không có màn hình; Gia công tùy chỉnh: Không.3; Phương thức hoạt động: Kiểu nút bấm",auto,1688,https://detail.1688.com/offer/692412467354.html,2026-09-18T10:40:39+00:00,worker_nhat_anh,行车记录仪,34,https://s.1688.com/selloffer/offer_search.htm?keywords=%D0%D0%B3%B5%BC%C7%C2%BC%D2%C7&beginPage=34,240.65,500.0,广东,深圳市,生产加工,False,行车记录仪,1032112,True,"[{'name': '拍照像素', 'values': array(['1500万,1600万'], dtype=object)}
+ {'name': '功能', 'values': array(['循环录像', '变道辅助', '夜视加强', '前后录像'], dtype=object)}
+ {'name': '内存容量', 'values': array(['2GB'], dtype=object)}
+ {'name': '影像分辨率', 'values': array(['2160p'], dtype=object)}
+ {'name': '拍摄角度', 'values': array(['170°'], dtype=object)}
+ {'name': '储存卡', 'values': array(['TF卡'], dtype=object)}
+ {'name': '镜头数量', 'values': array(['前后双录'], dtype=object)}
+ {'name': '品牌', 'values': array(['中性'], dtype=object)}
+ {'name': '数据存储容量', 'values': array(['256G'], dtype=object)}
+ {'name': '数据存储时间', 'values': array(['自动循环'], dtype=object)}
+ {'name': '数据传输接口', 'values': array(['其他'], dtype=object)}
+ {'name': '传输数率', 'values': array(['30帧'], dtype=object)}
+ {'name': '安装位置', 'values': array(['前挡风玻璃后视镜'], dtype=object)}
+ {'name': '电压', 'values': array(['12V'], dtype=object)}
+ {'name': '货号', 'values': array(['奥迪记录仪'], dtype=object)}
+ {'name': '颜色分类', 'values': array(['奥迪 A2', '奥迪 A2L', '奥迪 A3', '奥迪 A4L', '奥迪 A5', '奥迪 A6', '奥迪 A6L',
+        '奥迪 A7', '奥迪 A8', '奥迪 RS3', '奥迪 R8', '奥迪 Q2L', '奥迪 Q3', '奥迪 Q5',
+        '奥迪 Q5L', '奥迪 Q7', '奥迪 S3', '奥迪 S5', '奥迪 S7', '奥迪 TT',
+        '奥迪 Q5 e-tron', '奥迪RS7/RS4/RS5'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['否'], dtype=object)}
+ {'name': '主镜头光圈', 'values': array(['F1.5'], dtype=object)}
+ {'name': '规格尺寸', 'values': array(['2K 单镜头免接线32G卡', '4K 单镜头免接线64G卡', '4K 双镜头免接线64G卡',
+        '1080P 双镜头免接线32G卡', '2K 单镜头OBD停车监控专用线32G卡', '4K 单镜头OBD停车监控专用线64G卡',
+        '4K 双镜头OBD停车监控专用线64G卡', '1080P 双镜头OBD停车监控专用线32G卡'], dtype=object)}
+ {'name': '是否专利货源', 'values': array(['否'], dtype=object)}
+ {'name': '网络类型', 'values': array(['WIFI'], dtype=object)}
+ {'name': '传输速率', 'values': array(['30帧'], dtype=object)}
+ {'name': '屏幕尺寸', 'values': array(['不带屏幕'], dtype=object)}
+ {'name': '加工定制', 'values': array(['否'], dtype=object)}
+ {'name': '操作方式', 'values': array(['按键式'], dtype=object)}]","[{'name': 'Thẻ lưu trữ', 'values': array(['Thẻ TF'], dtype=object)}
+ {'name': 'Góc chụp', 'values': array(['170°'], dtype=object)}
+ {'name': 'Dung lượng lưu trữ dữ liệu', 'values': array(['256G'], dtype=object)}
+ {'name': 'Thời gian lưu trữ dữ liệu', 'values': array(['Vòng lặp tự động'], dtype=object)}
+ {'name': 'Giao diện truyền dữ liệu', 'values': array(['Khác'], dtype=object)}
+ {'name': 'Tỷ lệ truyền số', 'values': array(['30 khung hình1'], dtype=object)}
+ {'name': 'Vị trí lắp đặt', 'values': array(['Kính chắn gió phía trước gương chiếu hậu'], dtype=object)}
+ {'name': 'Điện áp', 'values': array(['12V'], dtype=object)}
+ {'name': 'Thương hiệu', 'values': array(['Trung tính'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['Máy ghi âm Audi'], dtype=object)}
+ {'name': 'Phân loại màu sắc', 'values': array(['Audi A2', 'Audi A2L', 'Audi A3', 'Audi A4L', 'Audi A5', 'Audi A6',
+        'Audi A6L', 'Audi A7', 'Audi A8', 'Audi RS3', 'Audi R8',
+        'Audi Q2L', 'Audi Q3', 'Audi Q5', 'Audi Q5L', 'Audi Q7', 'Audi S3',
+        'Audi S5', 'Audi S7', 'Audi TT', 'Audi Q5 e-tron',
+        'Audi RS7/RS4/RS5'], dtype=object)}
+ {'name': 'Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Khẩu độ ống kính chính', 'values': array(['F1.5'], dtype=object)}
+ {'name': 'Kích thước thông số kỹ thuật', 'values': array(['2K ống kính đơn miễn phí kết nối thẻ 32G',
+        '4K ống kính đơn miễn phí kết nối thẻ 64G',
+        '4K ống kính kép miễn phí nối dây thẻ 64G',
+        '1080P ống kính kép miễn phí kết nối thẻ 32G',
+        '2K ống kính đơn OBD giám sát bãi đậu xe chuyên dụng dòng 32G thẻ',
+        '4K ống kính đơn OBD giám sát bãi đậu xe chuyên dụng dòng thẻ 64G',
+        '4K ống kính kép OBD giám sát bãi đậu xe chuyên dụng dòng thẻ 64G',
+        '1080P ống kính kép OBD giám sát bãi đậu xe chuyên dụng dòng 32G thẻ'],
+       dtype=object)}
+ {'name': 'Có phải là nguồn cấp bằng sáng chế không', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Pixel máy ảnh', 'values': array(['15 triệu, 16 triệu'], dtype=object)}
+ {'name': 'Loại mạng', 'values': array(['WIFI'], dtype=object)}
+ {'name': 'Chức năng', 'values': array(['Video vòng lặp', 'Hỗ trợ chuyển làn',
+        'Tăng cường tầm nhìn ban đêm', 'Video trước và sau'], dtype=object)}
+ {'name': 'Độ phân giải hình ảnh', 'values': array(['2160p'], dtype=object)}
+ {'name': 'Tốc độ truyền tải', 'values': array(['30 khung hình2'], dtype=object)}
+ {'name': 'Dung lượng bộ nhớ', 'values': array(['2GB'], dtype=object)}
+ {'name': 'Kích thước màn hình', 'values': array(['Không có màn hình'], dtype=object)}
+ {'name': 'Gia công tùy chỉnh', 'values': array(['Không.3'], dtype=object)}
+ {'name': 'Số lượng ống kính', 'values': array(['Ghi kép trước và sau'], dtype=object)}
+ {'name': 'Phương thức hoạt động', 'values': array(['Kiểu nút bấm'], dtype=object)}]",25,25,25,,26,0.796,False,False,ratio,0.15,ratio,0.15
+913240440681,临时停车电话号码牌汽车移车挪车牌停车号码牌磁吸夜光车载电话牌,Biển số điện thoại đỗ xe tạm thời,"材质: 塑料; 品牌: 其他; 类型: 夜光式; 产地: 浙江; 加工定制: 否; 尺寸: 见详情; 型号: 停车号码牌; 适用送礼场合: 商务馈赠; 加印LOGO: 不可以; 货号: 89667; 颜色: opp装, 彩盒装; 主要下游平台: ebay, 亚马逊, wish, 独立站; 主要销售地区: 南美, 东南亚, 北美, 国内电商; 有可授权的自有品牌: 否; 是否跨境出口专供货源: 否","Chất liệu: Nhựa; Thương hiệu: Khác; Loại: Kiểu dạ quang; Xuất xứ: Chiết Giang; Gia công tùy chỉnh: Không.1; Kích thước: Xem chi tiết; Số model: Biển số đỗ xe; Những dịp tặng quà thích hợp: Quà tặng doanh nghiệp; In LOGO: Không thể.; Số mặt hàng: 89667; Màu sắc: Gói opp, Đóng hộp màu; Nền tảng hạ lưu chính: ebay, Amazon, wish, Trạm độc lập; Khu vực bán hàng chính: Nam Mỹ, Đông Nam Á, Bắc Mỹ, Thương mại điện tử trong nước; Thương hiệu riêng được ủy quyền: Không.2; Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không: Không.3",auto,1688,https://detail.1688.com/offer/913240440681.html,2026-09-17T22:46:01+00:00,worker_nhat_anh,汽车用品,27,https://s.1688.com/selloffer/offer_search.htm?keywords=%C6%FB%B3%B5%D3%C3%C6%B7&beginPage=27,0.1,37000.0,浙江,义乌市,生产加工,False,临时停车牌,201327101,True,"[{'name': '材质', 'values': array(['塑料'], dtype=object)}
+ {'name': '品牌', 'values': array(['其他'], dtype=object)}
+ {'name': '类型', 'values': array(['夜光式'], dtype=object)}
+ {'name': '产地', 'values': array(['浙江'], dtype=object)}
+ {'name': '加工定制', 'values': array(['否'], dtype=object)}
+ {'name': '尺寸', 'values': array(['见详情'], dtype=object)}
+ {'name': '型号', 'values': array(['停车号码牌'], dtype=object)}
+ {'name': '适用送礼场合', 'values': array(['商务馈赠'], dtype=object)}
+ {'name': '加印LOGO', 'values': array(['不可以'], dtype=object)}
+ {'name': '货号', 'values': array(['89667'], dtype=object)}
+ {'name': '颜色', 'values': array(['opp装', '彩盒装'], dtype=object)}
+ {'name': '主要下游平台', 'values': array(['ebay', '亚马逊', 'wish', '独立站'], dtype=object)}
+ {'name': '主要销售地区', 'values': array(['南美', '东南亚', '北美', '国内电商'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['否'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['否'], dtype=object)}]","[{'name': 'Thương hiệu', 'values': array(['Khác'], dtype=object)}
+ {'name': 'Chất liệu', 'values': array(['Nhựa'], dtype=object)}
+ {'name': 'Xuất xứ', 'values': array(['Chiết Giang'], dtype=object)}
+ {'name': 'Gia công tùy chỉnh', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Kích thước', 'values': array(['Xem chi tiết'], dtype=object)}
+ {'name': 'Số model', 'values': array(['Biển số đỗ xe'], dtype=object)}
+ {'name': 'Những dịp tặng quà thích hợp', 'values': array(['Quà tặng doanh nghiệp'], dtype=object)}
+ {'name': 'In LOGO', 'values': array(['Không thể.'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['89667'], dtype=object)}
+ {'name': 'Màu sắc', 'values': array(['Gói opp', 'Đóng hộp màu'], dtype=object)}
+ {'name': 'Nền tảng hạ lưu chính', 'values': array(['ebay', 'Amazon', 'wish', 'Trạm độc lập'], dtype=object)}
+ {'name': 'Khu vực bán hàng chính', 'values': array(['Nam Mỹ', 'Đông Nam Á', 'Bắc Mỹ', 'Thương mại điện tử trong nước'],
+       dtype=object)}
+ {'name': 'Thương hiệu riêng được ủy quyền', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không', 'values': array(['Không.3'], dtype=object)}
+ {'name': 'Loại', 'values': array(['Kiểu dạ quang'], dtype=object)}]",15,15,15,,13,0.742,False,False,ratio,0.27,ratio,0.27
+641538382302,轻便网架户外包防泼水运动登山双肩包30L徒步背包,Ba lô đi bộ đường dài 30L,"材质: 尼龙; 功能: 透气, 超轻, 耐磨, 夜间安全反光; 里料质地: 涤纶; 品牌: Aione/艾王; 背负系统: 弧形肩带; 货号: 1869; 适用性别: 中性/男女均可; 有可授权的自有品牌: 是; 颜色: 红色, 浅绿, 蓝色, 紫色, 橙色, 墨绿, 黑色, 深绿; 容量: 30L; 上市年份季节: 2022年秋季; 适用场景: 户外运动; 图案: 条纹; 面料: 尼龙面料","Chất liệu: Nylon; Chức năng: Thoáng khí, Siêu nhẹ, Chịu mài mòn, Phản quang an toàn ban đêm; Kết cấu lót: Polyester; Thương hiệu: Aione/Aiwang; Hệ thống mang: Dây đeo vai hình vòng cung; Số mặt hàng: 1869; Giới tính áp dụng: Trung tính/nam và nữ; Thương hiệu riêng được ủy quyền: Là; Màu sắc: Màu đỏ, màu xanh nhạt, Màu xanh lam, Màu tím, quả cam, Xanh mực, Màu đen, màu xanh đậm; Công suất: 30L; Mùa năm niêm yết: Mùa thu năm 2022; Kịch bản áp dụng: Thể thao ngoài trời; Hoa văn: Kẻ sọc; 面料: 尼龙面料",bags,1688,https://detail.1688.com/offer/641538382302.html,2026-09-18T11:45:35+00:00,worker_nhat_anh,双肩包,8,https://s.1688.com/selloffer/offer_search.htm?keywords=%CB%AB%BC%E7%B0%FC&beginPage=8,153.0,1600.0,广东,广州市,生产加工,False,登山、徒步包,1048305,True,"[{'name': '材质', 'values': array(['尼龙'], dtype=object)}
+ {'name': '功能', 'values': array(['透气', '超轻', '耐磨', '夜间安全反光'], dtype=object)}
+ {'name': '里料质地', 'values': array(['涤纶'], dtype=object)}
+ {'name': '品牌', 'values': array(['Aione/艾王'], dtype=object)}
+ {'name': '背负系统', 'values': array(['弧形肩带'], dtype=object)}
+ {'name': '货号', 'values': array(['1869'], dtype=object)}
+ {'name': '适用性别', 'values': array(['中性/男女均可'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['是'], dtype=object)}
+ {'name': '颜色', 'values': array(['红色', '浅绿', '蓝色', '紫色', '橙色', '墨绿', '黑色', '深绿'], dtype=object)}
+ {'name': '容量', 'values': array(['30L'], dtype=object)}
+ {'name': '上市年份季节', 'values': array(['2022年秋季'], dtype=object)}
+ {'name': '适用场景', 'values': array(['户外运动'], dtype=object)}
+ {'name': '图案', 'values': array(['条纹'], dtype=object)}
+ {'name': '面料', 'values': array(['尼龙面料'], dtype=object)}]","[{'name': 'Thương hiệu', 'values': array(['Aione/Aiwang'], dtype=object)}
+ {'name': 'Chất liệu', 'values': array(['Nylon'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['1869'], dtype=object)}
+ {'name': 'Giới tính áp dụng', 'values': array(['Trung tính/nam và nữ'], dtype=object)}
+ {'name': 'Thương hiệu riêng được ủy quyền', 'values': array(['Là'], dtype=object)}
+ {'name': 'Chức năng', 'values': array(['Thoáng khí', 'Siêu nhẹ', 'Chịu mài mòn',
+        'Phản quang an toàn ban đêm'], dtype=object)}
+ {'name': 'Màu sắc', 'values': array(['Màu đỏ', 'màu xanh nhạt', 'Màu xanh lam', 'Màu tím', 'quả cam',
+        'Xanh mực', 'Màu đen', 'màu xanh đậm'], dtype=object)}
+ {'name': 'Công suất', 'values': array(['30L'], dtype=object)}
+ {'name': 'Mùa năm niêm yết', 'values': array(['Mùa thu năm 2022'], dtype=object)}
+ {'name': 'Kịch bản áp dụng', 'values': array(['Thể thao ngoài trời'], dtype=object)}
+ {'name': 'Hoa văn', 'values': array(['Kẻ sọc'], dtype=object)}
+ {'name': 'Kết cấu lót', 'values': array(['Polyester'], dtype=object)}
+ {'name': 'Hệ thống mang', 'values': array(['Dây đeo vai hình vòng cung'], dtype=object)}
+ {'name': '面料', 'values': array(['尼龙面料'], dtype=object)}]",14,14,14,,11,0.703,False,True,ratio,0.29,ratio,0.29
+892406046890,冰肤之萃绿豆海藻泥膜面膜 补水保湿温和海藻清洁 泥膜护肤品,Mặt nạ bùn tảo biển đậu xanh,"化妆品功效: 补水保湿, 滋润, 柔润肌肤; 品牌: 冰肤之萃; 产品形态: 泥膜; 适用人群: 女士, 男士, 通用; 品牌类型: 国货品牌; 是否进口: 否; 适用肤质: 中性, 油性, 干性, 混合性; 保质期: 3年; 规格: 正常规格; 净含量: 22021129220; 产品规格: 冰肤之萃矿物泥浆净润面膜（120g/盒）; 非特化妆品备案证号: 粤G妆网备字2023495986; 特殊用途化妆品: 否; 产地: 广东; 生产许可证号: 粤妆20230079; 产品名称: 冰肤之萃海藻泥膜","Hiệu quả mỹ phẩm: Dưỡng ẩm1, Dưỡng ẩm2, Làm mềm da; Thương hiệu: Chiết xuất băng; Hình thái sản phẩm: Màng bùn; Đám đông áp dụng: Nữ, Nam giới, Tổng quan; Loại thương hiệu: Thương hiệu nội địa; Có nhập khẩu không: Không.1; Loại da phù hợp: Trung tính, Dầu, Khô, Hỗn hợp; Thời hạn sử dụng: 3 năm; Quy cách: Thông số kỹ thuật bình thường; Hàm lượng tịnh: 22021129220; Thông số kỹ thuật sản phẩm: Mặt nạ làm sạch bùn khoáng băng (120 g/hộp); Số hồ sơ mỹ phẩm không đặc biệt: Quảng Đông G trang điểm mạng chuẩn bị ký tự 2023495986; Mỹ phẩm công dụng đặc biệt: Không.2; Xuất xứ: Quảng Đông; Số giấy phép sản xuất: Trang điểm Quảng Đông 20230079; Tên sản phẩm: Mặt nạ bùn tảo biển chiết xuất băng",beauty,1688,https://detail.1688.com/offer/892406046890.html,2026-09-19T18:42:53+00:00,worker_nhat_anh,面膜,12,https://s.1688.com/selloffer/offer_search.htm?keywords=%C3%E6%C4%A4&beginPage=12,6.0,400.0,广东,广州市,生产加工,False,涂抹面膜,201305009,True,"[{'name': '化妆品功效', 'values': array(['补水保湿', '滋润', '柔润肌肤'], dtype=object)}
+ {'name': '品牌', 'values': array(['冰肤之萃'], dtype=object)}
+ {'name': '产品形态', 'values': array(['泥膜'], dtype=object)}
+ {'name': '适用人群', 'values': array(['女士', '男士', '通用'], dtype=object)}
+ {'name': '品牌类型', 'values': array(['国货品牌'], dtype=object)}
+ {'name': '是否进口', 'values': array(['否'], dtype=object)}
+ {'name': '适用肤质', 'values': array(['中性', '油性', '干性', '混合性'], dtype=object)}
+ {'name': '保质期', 'values': array(['3年'], dtype=object)}
+ {'name': '规格', 'values': array(['正常规格'], dtype=object)}
+ {'name': '净含量', 'values': array(['22021129220'], dtype=object)}
+ {'name': '产品规格', 'values': array(['冰肤之萃矿物泥浆净润面膜（120g/盒）'], dtype=object)}
+ {'name': '非特化妆品备案证号', 'values': array(['粤G妆网备字2023495986'], dtype=object)}
+ {'name': '特殊用途化妆品', 'values': array(['否'], dtype=object)}
+ {'name': '产地', 'values': array(['广东'], dtype=object)}
+ {'name': '生产许可证号', 'values': array(['粤妆20230079'], dtype=object)}
+ {'name': '产品名称', 'values': array(['冰肤之萃海藻泥膜'], dtype=object)}]","[{'name': 'Có nhập khẩu không', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Loại da phù hợp', 'values': array(['Trung tính', 'Dầu', 'Khô', 'Hỗn hợp'], dtype=object)}
+ {'name': 'Thời hạn sử dụng', 'values': array(['3 năm'], dtype=object)}
+ {'name': 'Quy cách', 'values': array(['Thông số kỹ thuật bình thường'], dtype=object)}
+ {'name': 'Hàm lượng tịnh', 'values': array(['22021129220'], dtype=object)}
+ {'name': 'Hình thái sản phẩm', 'values': array(['Màng bùn'], dtype=object)}
+ {'name': 'Thông số kỹ thuật sản phẩm', 'values': array(['Mặt nạ làm sạch bùn khoáng băng (120 g/hộp)'], dtype=object)}
+ {'name': 'Thương hiệu', 'values': array(['Chiết xuất băng'], dtype=object)}
+ {'name': 'Hiệu quả mỹ phẩm', 'values': array(['Dưỡng ẩm1', 'Dưỡng ẩm2', 'Làm mềm da'], dtype=object)}
+ {'name': 'Loại thương hiệu', 'values': array(['Thương hiệu nội địa'], dtype=object)}
+ {'name': 'Số hồ sơ mỹ phẩm không đặc biệt', 'values': array(['Quảng Đông G trang điểm mạng chuẩn bị ký tự 2023495986'],
+       dtype=object)}
+ {'name': 'Mỹ phẩm công dụng đặc biệt', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Xuất xứ', 'values': array(['Quảng Đông'], dtype=object)}
+ {'name': 'Số giấy phép sản xuất', 'values': array(['Trang điểm Quảng Đông 20230079'], dtype=object)}
+ {'name': 'Đám đông áp dụng', 'values': array(['Nữ', 'Nam giới', 'Tổng quan'], dtype=object)}
+ {'name': 'Tên sản phẩm', 'values': array(['Mặt nạ bùn tảo biển chiết xuất băng'], dtype=object)}]",16,16,16,,12,0.52,False,False,ratio,0.26,ratio,0.26
+920392969007,适用苹果16Promax碳纤维磁吸手机壳iPhone15Pro简约肤感14Pro防滑,Ốp điện thoại hút từ bằng sợi carbon dùng cho Apple 16Promax,"材质: PC; 功能: 防震, 散热, 磁吸, 防磨, 防摔, 抗指纹; 款式: 全包; 品牌: 中性; 工艺: 磨砂; 流行元素: 格纹, 磁吸; 风格: 日韩, 潮流, 简约, 欧美; 颜色: 三色撞色【碳纤维磁吸+肤感】, 黑银撞色【碳纤维磁吸+肤感】, 黑红撞色【碳纤维磁吸+肤感】, 水晶点【碳纤维磁吸+肤感】, 石墨黑【碳纤维磁吸+肤感】, 日落紫【碳纤维磁吸+肤感】; 适用型号: iPhone17Promax, iPhone17Pro, iPhone17Air, iPhone17, iPhone16Promax, iPhone16Pro, iPhone16Plus, iPhone16, iPhone15Promax, iPhone15Pro, iPhone15Plus, iPhone15, iPhone14Promax, iPhone14Pro, iPhone14Plus, iPhone14, iPhone13Promax, iPhone13Pro, iPhone13, iPhone12Promax, iPhone12Pro, iPhone12, iPhone11; 支持订制: 支持; 适用机型: 21216681422; 颜色分类: 白色, 黄色, 红色, 绿色, 黑色, 银灰色","Chất liệu: PC; Chức năng: Chống rung, Tản nhiệt, Hút từ2, Chống mài mòn, Chống rơi, Chống vân tay; Kiểu dáng: Bọc toàn bộ; Thương hiệu: Trung tính; Công nghệ: Nhám; Yếu tố phổ biến: Kẻ caro, Hút từ1; Phong cách: Nhật Hàn, Sành điệu, Đơn giản, Âu Mỹ; Màu sắc: Độ tương phản ba màu [hút từ sợi carbon + cảm giác da], Màu tương phản đen và bạc [sợi carbon hút từ tính], Màu tương phản đen và đỏ [sợi carbon hút từ tính cảm giác da], Điểm pha lê [sợi carbon hút từ tính cảm giác da], Graphite Black [sợi carbon hút từ tính], Hoàng hôn tím [sợi carbon hút từ tính cảm giác da]; Số model áp dụng: iPhone17Promax, iPhone17Pro, iPhone17Air, iPhone17, iPhone16Promax, iPhone16Pro, iPhone16Plus, iPhone16, iPhone15Promax, iPhone15Pro, iPhone15Plus, iPhone15, iPhone14Promax, iPhone14Pro, iPhone14Plus, iPhone14, iPhone13Promax, iPhone13Pro, iPhone13, iPhone12Promax, iPhone12Pro, iPhone12, iPhone11; Hỗ trợ tùy chỉnh: Hỗ trợ; Mô hình áp dụng: 21216681422; Phân loại màu sắc: Màu trắng, Màu vàng, Màu đỏ, Màu xanh lá, Màu đen, Màu xám bạc",electronics,1688,https://detail.1688.com/offer/920392969007.html,2026-09-20T02:03:28+00:00,worker_huy,手机壳,30,https://s.1688.com/selloffer/offer_search.htm?keywords=%CA%D6%BB%FA%BF%C7&beginPage=30,9.27,1800.0,广东,深圳市,生产加工,False,iPhone保护套,1046694,True,"[{'name': '材质', 'values': array(['PC'], dtype=object)}
+ {'name': '功能', 'values': array(['防震', '散热', '磁吸', '防磨', '防摔', '抗指纹'], dtype=object)}
+ {'name': '款式', 'values': array(['全包'], dtype=object)}
+ {'name': '品牌', 'values': array(['中性'], dtype=object)}
+ {'name': '工艺', 'values': array(['磨砂'], dtype=object)}
+ {'name': '流行元素', 'values': array(['格纹', '磁吸'], dtype=object)}
+ {'name': '风格', 'values': array(['日韩', '潮流', '简约', '欧美'], dtype=object)}
+ {'name': '颜色', 'values': array(['三色撞色【碳纤维磁吸+肤感】', '黑银撞色【碳纤维磁吸+肤感】', '黑红撞色【碳纤维磁吸+肤感】',
+        '水晶点【碳纤维磁吸+肤感】', '石墨黑【碳纤维磁吸+肤感】', '日落紫【碳纤维磁吸+肤感】'], dtype=object)}
+ {'name': '适用型号', 'values': array(['iPhone17Promax', 'iPhone17Pro', 'iPhone17Air', 'iPhone17',
+        'iPhone16Promax', 'iPhone16Pro', 'iPhone16Plus', 'iPhone16',
+        'iPhone15Promax', 'iPhone15Pro', 'iPhone15Plus', 'iPhone15',
+        'iPhone14Promax', 'iPhone14Pro', 'iPhone14Plus', 'iPhone14',
+        'iPhone13Promax', 'iPhone13Pro', 'iPhone13', 'iPhone12Promax',
+        'iPhone12Pro', 'iPhone12', 'iPhone11'], dtype=object)}
+ {'name': '支持订制', 'values': array(['支持'], dtype=object)}
+ {'name': '适用机型', 'values': array(['21216681422'], dtype=object)}
+ {'name': '颜色分类', 'values': array(['白色', '黄色', '红色', '绿色', '黑色', '银灰色'], dtype=object)}]","[{'name': 'Thương hiệu', 'values': array(['Trung tính'], dtype=object)}
+ {'name': 'Kiểu dáng', 'values': array(['Bọc toàn bộ'], dtype=object)}
+ {'name': 'Chất liệu', 'values': array(['PC'], dtype=object)}
+ {'name': 'Yếu tố phổ biến', 'values': array(['Kẻ caro', 'Hút từ1'], dtype=object)}
+ {'name': 'Màu sắc', 'values': array(['Độ tương phản ba màu [hút từ sợi carbon + cảm giác da]',
+        'Màu tương phản đen và bạc [sợi carbon hút từ tính]',
+        'Màu tương phản đen và đỏ [sợi carbon hút từ tính cảm giác da]',
+        'Điểm pha lê [sợi carbon hút từ tính cảm giác da]',
+        'Graphite Black [sợi carbon hút từ tính]',
+        'Hoàng hôn tím [sợi carbon hút từ tính cảm giác da]'], dtype=object)}
+ {'name': 'Số model áp dụng', 'values': array(['iPhone17Promax', 'iPhone17Pro', 'iPhone17Air', 'iPhone17',
+        'iPhone16Promax', 'iPhone16Pro', 'iPhone16Plus', 'iPhone16',
+        'iPhone15Promax', 'iPhone15Pro', 'iPhone15Plus', 'iPhone15',
+        'iPhone14Promax', 'iPhone14Pro', 'iPhone14Plus', 'iPhone14',
+        'iPhone13Promax', 'iPhone13Pro', 'iPhone13', 'iPhone12Promax',
+        'iPhone12Pro', 'iPhone12', 'iPhone11'], dtype=object)}
+ {'name': 'Hỗ trợ tùy chỉnh', 'values': array(['Hỗ trợ'], dtype=object)}
+ {'name': 'Phong cách', 'values': array(['Nhật Hàn', 'Sành điệu', 'Đơn giản', 'Âu Mỹ'], dtype=object)}
+ {'name': 'Chức năng', 'values': array(['Chống rung', 'Tản nhiệt', 'Hút từ2', 'Chống mài mòn', 'Chống rơi',
+        'Chống vân tay'], dtype=object)}
+ {'name': 'Mô hình áp dụng', 'values': array(['21216681422'], dtype=object)}
+ {'name': 'Công nghệ', 'values': array(['Nhám'], dtype=object)}
+ {'name': 'Phân loại màu sắc', 'values': array(['Màu trắng', 'Màu vàng', 'Màu đỏ', 'Màu xanh lá', 'Màu đen',
+        'Màu xám bạc'], dtype=object)}                                                                      ]",12,12,12,采购须知/PURCHASE NOTICE 1、我们在阿里中文站有展示的产品均为工厂库存现货销售，一般当天17:00前订单当天可以发出，量大或定制订单最长发货时间不会超过一周。 2、工厂直接提供售后服务，有质量问题可以退换货，收到货物有任何问题可以及时和我们联系，我们会第一时间处理，给您一个满意的答复。 3、支持OEM贴牌，设计生产全包，贴上您的贴牌即可；支持ODM开发设计，按ID样式图纸，全新定制新品。 我们真诚欢迎各大贸易商、出口商、礼品商、经销商、海外代购和国际国内电商界的朋友来电垂 询采购，定制！ 【产品名称】；碳纤维纹磁吸手机壳 【适用型号】：iPhone系列 【产品材质】；PC 【产品供应】：现货 批发 代发 一件代发 【发货时间】：当天18点的订单会尽量发出 【发货快递】：中通 申通 顺丰（需连续客服） 【产品包装】：opp袋装/需要高级包装请联系客服 【产品图片】：请联系客服！,27,0.699,False,False,ratio,0.29,ratio,0.29
+925634550577,跨境4K行车记录仪高清夜视前后双录手机互联倒车影像车载记录器,Ghi hình lái xe 4K xuyên biên giới,"拍照像素: 800万; 功能: GPS导航, 倒车影像, 循环录像, 停车监控, 夜视加强, 前后录像; 内存容量: 无; 影像分辨率: 2160p; 拍摄角度: 170°; 储存卡: TF卡; 镜头数量: 前后双录; 品牌: 中性; 数据存储时间: 最大支持128G内存卡; 数据传输接口: 其他; 安装位置: 3M胶贴固定; 货号: k309、L380; 颜色分类: 车前+WiFi, 车前+车后+WiFi, 车前+车后+WiFi+GPS; 主要下游平台: 其他; 主要销售地区: 其他; 有可授权的自有品牌: 否; 是否跨境出口专供货源: 是; 主镜头光圈: F2.0; 规格尺寸: 无内存卡; 是否专利货源: 否; 是否支持到店安装: 否; 加工定制: 否; 产品类型: 前后双录行车记录仪; 操作方式: 按键式; 网络类型: WiFi; 记录仪安装类型: 通用; 传输速率: 30fps; 屏幕尺寸: 1.3英寸","Pixel máy ảnh: 8 triệu; Chức năng: Điều hướng GPS, Hình ảnh lùi xe, Video vòng lặp, Giám sát bãi đậu xe, Tăng cường tầm nhìn ban đêm, Video trước và sau; Dung lượng bộ nhớ: Không có; Độ phân giải hình ảnh: 2160p; Góc chụp: 170°; Thẻ lưu trữ: Thẻ TF; Số lượng ống kính: Ghi kép trước và sau; Thương hiệu: Trung tính; Thời gian lưu trữ dữ liệu: Hỗ trợ tối đa 128G thẻ nhớ; Giao diện truyền dữ liệu: Khác1; Vị trí lắp đặt: 3M dán cố định; Số mặt hàng: k309、L380; Phân loại màu sắc: Mặt trước xe + WiFi, WiFi phía trước và phía sau xe, Phía trước xe phía sau WiFi GPS; Nền tảng hạ lưu chính: Khác2; Khu vực bán hàng chính: Khác3; Thương hiệu riêng được ủy quyền: Không.1; Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không: Là; Khẩu độ ống kính chính: F2.0; Kích thước thông số kỹ thuật: Không có thẻ nhớ; Có phải là nguồn cấp bằng sáng chế không: Không.2; Nó có hỗ trợ cài đặt trong cửa hàng không?: Không.3; Gia công tùy chỉnh: Không.4; Loại sản phẩm: Camera hành trình ghi hình kép trước và sau.; Phương thức hoạt động: Kiểu nút bấm; Loại mạng: WiFi; Kiểu cài đặt máy ghi âm: phổ quát; Tốc độ truyền tải: 30fps; Kích thước màn hình: 1,3 inch",auto,1688,https://detail.1688.com/offer/925634550577.html,2026-09-18T04:53:04+00:00,worker_huy,行车记录仪,9,https://s.1688.com/selloffer/offer_search.htm?keywords=%D0%D0%B3%B5%BC%C7%C2%BC%D2%C7&beginPage=9,144.0,900.0,广东,东莞市,生产加工,False,行车记录仪,1032112,True,"[{'name': '拍照像素', 'values': array(['800万'], dtype=object)}
+ {'name': '功能', 'values': array(['GPS导航', '倒车影像', '循环录像', '停车监控', '夜视加强', '前后录像'], dtype=object)}
+ {'name': '内存容量', 'values': array(['无'], dtype=object)}
+ {'name': '影像分辨率', 'values': array(['2160p'], dtype=object)}
+ {'name': '拍摄角度', 'values': array(['170°'], dtype=object)}
+ {'name': '储存卡', 'values': array(['TF卡'], dtype=object)}
+ {'name': '镜头数量', 'values': array(['前后双录'], dtype=object)}
+ {'name': '品牌', 'values': array(['中性'], dtype=object)}
+ {'name': '数据存储时间', 'values': array(['最大支持128G内存卡'], dtype=object)}
+ {'name': '数据传输接口', 'values': array(['其他'], dtype=object)}
+ {'name': '安装位置', 'values': array(['3M胶贴固定'], dtype=object)}
+ {'name': '货号', 'values': array(['k309、L380'], dtype=object)}
+ {'name': '颜色分类', 'values': array(['车前+WiFi', '车前+车后+WiFi', '车前+车后+WiFi+GPS'], dtype=object)}
+ {'name': '主要下游平台', 'values': array(['其他'], dtype=object)}
+ {'name': '主要销售地区', 'values': array(['其他'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['否'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['是'], dtype=object)}
+ {'name': '主镜头光圈', 'values': array(['F2.0'], dtype=object)}
+ {'name': '规格尺寸', 'values': array(['无内存卡'], dtype=object)}
+ {'name': '是否专利货源', 'values': array(['否'], dtype=object)}
+ {'name': '是否支持到店安装', 'values': array(['否'], dtype=object)}
+ {'name': '加工定制', 'values': array(['否'], dtype=object)}
+ {'name': '产品类型', 'values': array(['前后双录行车记录仪'], dtype=object)}
+ {'name': '操作方式', 'values': array(['按键式'], dtype=object)}
+ {'name': '网络类型', 'values': array(['WiFi'], dtype=object)}
+ {'name': '记录仪安装类型', 'values': array(['通用'], dtype=object)}
+ {'name': '传输速率', 'values': array(['30fps'], dtype=object)}
+ {'name': '屏幕尺寸', 'values': array(['1.3英寸'], dtype=object)}]","[{'name': 'Thẻ lưu trữ', 'values': array(['Thẻ TF'], dtype=object)}
+ {'name': 'Góc chụp', 'values': array(['170°'], dtype=object)}
+ {'name': 'Thời gian lưu trữ dữ liệu', 'values': array(['Hỗ trợ tối đa 128G thẻ nhớ'], dtype=object)}
+ {'name': 'Giao diện truyền dữ liệu', 'values': array(['Khác1'], dtype=object)}
+ {'name': 'Vị trí lắp đặt', 'values': array(['3M dán cố định'], dtype=object)}
+ {'name': 'Thương hiệu', 'values': array(['Trung tính'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['k309、L380'], dtype=object)}
+ {'name': 'Phân loại màu sắc', 'values': array(['Mặt trước xe + WiFi', 'WiFi phía trước và phía sau xe',
+        'Phía trước xe phía sau WiFi GPS'], dtype=object)}
+ {'name': 'Nền tảng hạ lưu chính', 'values': array(['Khác2'], dtype=object)}
+ {'name': 'Khu vực bán hàng chính', 'values': array(['Khác3'], dtype=object)}
+ {'name': 'Thương hiệu riêng được ủy quyền', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không', 'values': array(['Là'], dtype=object)}
+ {'name': 'Khẩu độ ống kính chính', 'values': array(['F2.0'], dtype=object)}
+ {'name': 'Kích thước thông số kỹ thuật', 'values': array(['Không có thẻ nhớ'], dtype=object)}
+ {'name': 'Có phải là nguồn cấp bằng sáng chế không', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Nó có hỗ trợ cài đặt trong cửa hàng không?', 'values': array(['Không.3'], dtype=object)}
+ {'name': 'Độ phân giải hình ảnh', 'values': array(['2160p'], dtype=object)}
+ {'name': 'Dung lượng bộ nhớ', 'values': array(['Không có'], dtype=object)}
+ {'name': 'Gia công tùy chỉnh', 'values': array(['Không.4'], dtype=object)}
+ {'name': 'Số lượng ống kính', 'values': array(['Ghi kép trước và sau'], dtype=object)}
+ {'name': 'Loại sản phẩm', 'values': array(['Camera hành trình ghi hình kép trước và sau.'], dtype=object)}
+ {'name': 'Phương thức hoạt động', 'values': array(['Kiểu nút bấm'], dtype=object)}
+ {'name': 'Pixel máy ảnh', 'values': array(['8 triệu'], dtype=object)}
+ {'name': 'Loại mạng', 'values': array(['WiFi'], dtype=object)}
+ {'name': 'Kiểu cài đặt máy ghi âm', 'values': array(['phổ quát'], dtype=object)}
+ {'name': 'Chức năng', 'values': array(['Điều hướng GPS', 'Hình ảnh lùi xe', 'Video vòng lặp',
+        'Giám sát bãi đậu xe', 'Tăng cường tầm nhìn ban đêm',
+        'Video trước và sau'], dtype=object)}
+ {'name': 'Tốc độ truyền tải', 'values': array(['30fps'], dtype=object)}
+ {'name': 'Kích thước màn hình', 'values': array(['1,3 inch'], dtype=object)}]",28,28,28,"长期供货Ebay/Amazon/Aliexpress 大小卖家，外贸公司，各地批发商，经销商。 支持定制方案——全世界各国语言—开关机画面—LOGO—丝印logo —动态LOGO——语音LOGO界面等。 支持国内外一件发货,支持各种电商快递面单，支持店管家/表格/无痕发货。 我司为跨境专供店铺，默认跨境版本，出货为中性包装，包装上不含任何公司信息，无条形码，不带logo 彩盒尺寸：16*12.3*8cm 一套重量：360g,一套带GPS重量：400g 全新升级了1.47寸带屏显示，小屏大作用 ； 可显示实时录像画面 ；可显示下载二维码； 可显示时间、录像状态 主控 亿智220，前摄像头 GC2083/ 后镜头 GC1030 显示屏 1.47寸IPS屏 , 视频分辨率 3840*2160/30fp 视频格式 M-JPEG , 压缩格式 H.264 支持功能：2.4GWiFi，重力感应， 缩时录影（需搭配三芯降压线，需另外购买） 支架 3M胶支架 , 电池容量 纽扣电池 存储器 最大支持：256G （标配不含卡） USB类型 Type-C",16,0.693,False,False,ratio,0.27,ratio,0.27
+865018676573,适用小米14手机壳11/12/10s/13红米k40透明k50pro/Note12/10/K70,Ốp điện thoại dùng cho Xiaomi 14 11/12/10s/13 Redmi k40 trong suốt k50pro/Note12/10/K70,"材质: 硅胶; 工艺: 注塑; 款式: 全包防摔; 功能: 防摔; 适用机型: 小米14; 流行元素: 气囊; 颜色: 透明-高品质-加厚-大气囊-防摔手机壳; 适用型号: 小米15, 小米15 Pro, 小米 14, 小米 14 Pro, 小米 14 Ultra, 小米 11, 小米 11 Pro, 小米 11 青春版, 小米 11 Ultra, 小米 12, 小米 12 Pro, 小米 12X, 小米 12S, 小米 12S Pro, 小米 12S Ultra, 小米 13, 小米 13 Pro, 小米 13 Ultra, 小米 10S, 小米 10, 小米 10 Pro, 小米 10 至尊纪念版, 小米 10 青春版, 小米9, 小米cc9e, 小米9 Pro, 小米CC9 Pro, 小米CC9, 小米9 SE, 小米8, 小米8 SE, 小米8 青春版, 红米 Note 14, 红米 Note 14 Pro, 红米Note 14Pro+, 红米 Note 13, 红米 Note 13 Pro, 红米 Note 13 Pro+, 红米 Note 13R Pro, 红米 Note 12, 红米 Note 12 Pro, 红米 Note 12 Pro+, 红米 Note 12 Turbo, 红米 Note 12T Pro, 红米 note12pro极速版, 红米 Note 11 5G, 红米 Note 11 4G, 红米 Note 11 Pro, 红米 Note 10 5G, 红米 Note 10 Pro, 红米 Note 9 Pro, 红米 Note 9 5G, 红米 K80, 红米 K80 Pro, 红米 K70, 红米 K70 Pro, 红米 K70E, 红米 K60, 红米 K60 Pro, 红米 K60E, 红米 K60 至尊版, 红米 K50, 红米 K50 Pro, 红米 K50 至尊版, 红米 K50 电竞版, 红米 K40, 红米 K40 Pro, 红米 K40S, 红米 K40 游戏增强版, 红米 K40 Pro+, 红米 12C, 红米 13C 5G, 红米 K30, 红米 K30 Pro, 红米 K30 至尊纪念版, 红米 K30S, 红米 K30 极速版, 红米 K30i, 红米 K30S 至尊纪念版; 风格: 简约风","Chất liệu: Silicon; thủ công: Ép phun; phong cách: Chống rơi toàn diện; chức năng: Chống rơi; Các mẫu máy áp dụng: Tiêu Mi 14; Yếu tố phổ biến: túi khí; Màu sắc: Trong suốt chất lượng cao-dày-túi khí lớn-vỏ điện thoại chống rơi; Số model áp dụng: Xiaomi 15, Xiaomi 15 Pro, Xiaomi 14, Xiaomi 14 Pro, Xiaomi 14 Ultra, Xiaomi 11, Xiaomi 11 Pro, Phiên bản thanh niên Xiaomi 11, Xiaomi 11 Ultra, Xiaomi 12, Xiaomi 12 Pro, Xiaomi 12X, Xiaomi 12S, Xiaomi 12S Pro, Xiaomi 12S Ultra, Xiaomi 13, Xiaomi 13 Pro, Xiaomi 13 Ultra, Xiaomi 10S, Xiaomi 10, Xiaomi 10 Pro, Phiên bản kỷ niệm tối cao của Xiaomi 10, Phiên bản thanh niên Xiaomi 10, Xiaomi 9, Xiaomi cc9e, Xiaomi 9 Pro, Xiaomi CC9 Pro, Xiaomi CC9, Xiaomi 9 SE, Xiaomi 8, Xiaomi 8 SE, Phiên bản thanh niên Xiaomi 8, Redmi Note 14, Redmi Note 14 Pro, Redmi Note 14Pro, Redmi Note 13, Redmi Note 13 Pro1, Redmi Note 13 Pro2, Redmi Note 13R Pro, Redmi Note 12, Redmi Note 12 Pro1, Redmi Note 12 Pro2, Redmi Note 12 Turbo, Redmi Note 12T Pro, Redmi note12pro phiên bản tốc độ, Redmi Note 11 5G, Redmi Note 11 4G, Redmi Note 11 Pro, Redmi Note 10 5G, Redmi Note 10 Pro, Redmi Note 9 Pro, Redmi Note 9 5G, Gạo đỏ K80, Redmi K80 Pro, Gạo đỏ K70, Redmi K70 Pro, Gạo đỏ K70E, Gạo đỏ K60, Redmi K60 Pro, Gạo đỏ K60E, Redmi K60 phiên bản cực đoan, Gạo đỏ K50, Redmi K50 Pro, Redmi K50 phiên bản cực đoan, Phiên bản thể thao điện tử Redmi K50, Gạo đỏ K40, Redmi K40 Pro1, Gạo đỏ K40S, Phiên bản nâng cao trò chơi Redmi K40, Redmi K40 Pro2, Gạo đỏ 12C, Gạo đỏ 13C 5G, Gạo đỏ K30, Redmi K30 Pro, Phiên bản kỷ niệm tối cao Redmi K30, Gạo đỏ K30S, Phiên bản tốc độ Redmi K30, Gạo đỏ K30i, Phiên bản kỷ niệm tối cao Redmi K30S; Phong cách: Phong cách tối giản",electronics,1688,https://detail.1688.com/offer/865018676573.html,2026-09-20T00:59:43+00:00,worker_nhat_anh,手机壳,12,https://s.1688.com/selloffer/offer_search.htm?keywords=%CA%D6%BB%FA%BF%C7&beginPage=12,3.2,52000.0,广东,汕头市,,False,手机保护套,1042207,True,"[{'name': '材质', 'values': array(['硅胶'], dtype=object)}
+ {'name': '工艺', 'values': array(['注塑'], dtype=object)}
+ {'name': '款式', 'values': array(['全包防摔'], dtype=object)}
+ {'name': '功能', 'values': array(['防摔'], dtype=object)}
+ {'name': '适用机型', 'values': array(['小米14'], dtype=object)}
+ {'name': '流行元素', 'values': array(['气囊'], dtype=object)}
+ {'name': '颜色', 'values': array(['透明-高品质-加厚-大气囊-防摔手机壳'], dtype=object)}
+ {'name': '适用型号', 'values': array(['小米15', '小米15 Pro', '小米 14', '小米 14 Pro', '小米 14 Ultra', '小米 11',
+        '小米 11 Pro', '小米 11 青春版', '小米 11 Ultra', '小米 12', '小米 12 Pro',
+        '小米 12X', '小米 12S', '小米 12S Pro', '小米 12S Ultra', '小米 13',
+        '小米 13 Pro', '小米 13 Ultra', '小米 10S', '小米 10', '小米 10 Pro',
+        '小米 10 至尊纪念版', '小米 10 青春版', '小米9', '小米cc9e', '小米9 Pro',
+        '小米CC9 Pro', '小米CC9', '小米9 SE', '小米8', '小米8 SE', '小米8 青春版',
+        '红米 Note 14', '红米 Note 14 Pro', '红米Note 14Pro+', '红米 Note 13',
+        '红米 Note 13 Pro', '红米 Note 13 Pro+', '红米 Note 13R Pro',
+        '红米 Note 12', '红米 Note 12 Pro', '红米 Note 12 Pro+',
+        '红米 Note 12 Turbo', '红米 Note 12T Pro', '红米 note12pro极速版',
+        '红米 Note 11 5G', '红米 Note 11 4G', '红米 Note 11 Pro',
+        '红米 Note 10 5G', '红米 Note 10 Pro', '红米 Note 9 Pro', '红米 Note 9 5G',
+        '红米 K80', '红米 K80 Pro', '红米 K70', '红米 K70 Pro', '红米 K70E',
+        '红米 K60', '红米 K60 Pro', '红米 K60E', '红米 K60 至尊版', '红米 K50',
+        '红米 K50 Pro', '红米 K50 至尊版', '红米 K50 电竞版', '红米 K40', '红米 K40 Pro',
+        '红米 K40S', '红米 K40 游戏增强版', '红米 K40 Pro+', '红米 12C', '红米 13C 5G',
+        '红米 K30', '红米 K30 Pro', '红米 K30 至尊纪念版', '红米 K30S', '红米 K30 极速版',
+        '红米 K30i', '红米 K30S 至尊纪念版'], dtype=object)}
+ {'name': '风格', 'values': array(['简约风'], dtype=object)}]","[{'name': 'phong cách', 'values': array(['Chống rơi toàn diện'], dtype=object)}
+ {'name': 'Chất liệu', 'values': array(['Silicon'], dtype=object)}
+ {'name': 'Yếu tố phổ biến', 'values': array(['túi khí'], dtype=object)}
+ {'name': 'thủ công', 'values': array(['Ép phun'], dtype=object)}
+ {'name': 'Màu sắc', 'values': array(['Trong suốt chất lượng cao-dày-túi khí lớn-vỏ điện thoại chống rơi'],
+       dtype=object)}
+ {'name': 'Số model áp dụng', 'values': array(['Xiaomi 15', 'Xiaomi 15 Pro', 'Xiaomi 14', 'Xiaomi 14 Pro',
+        'Xiaomi 14 Ultra', 'Xiaomi 11', 'Xiaomi 11 Pro',
+        'Phiên bản thanh niên Xiaomi 11', 'Xiaomi 11 Ultra', 'Xiaomi 12',
+        'Xiaomi 12 Pro', 'Xiaomi 12X', 'Xiaomi 12S', 'Xiaomi 12S Pro',
+        'Xiaomi 12S Ultra', 'Xiaomi 13', 'Xiaomi 13 Pro',
+        'Xiaomi 13 Ultra', 'Xiaomi 10S', 'Xiaomi 10', 'Xiaomi 10 Pro',
+        'Phiên bản kỷ niệm tối cao của Xiaomi 10',
+        'Phiên bản thanh niên Xiaomi 10', 'Xiaomi 9', 'Xiaomi cc9e',
+        'Xiaomi 9 Pro', 'Xiaomi CC9 Pro', 'Xiaomi CC9', 'Xiaomi 9 SE',
+        'Xiaomi 8', 'Xiaomi 8 SE', 'Phiên bản thanh niên Xiaomi 8',
+        'Redmi Note 14', 'Redmi Note 14 Pro', 'Redmi Note 14Pro',
+        'Redmi Note 13', 'Redmi Note 13 Pro1', 'Redmi Note 13 Pro2',
+        'Redmi Note 13R Pro', 'Redmi Note 12', 'Redmi Note 12 Pro1',
+        'Redmi Note 12 Pro2', 'Redmi Note 12 Turbo', 'Redmi Note 12T Pro',
+        'Redmi note12pro phiên bản tốc độ', 'Redmi Note 11 5G',
+        'Redmi Note 11 4G', 'Redmi Note 11 Pro', 'Redmi Note 10 5G',
+        'Redmi Note 10 Pro', 'Redmi Note 9 Pro', 'Redmi Note 9 5G',
+        'Gạo đỏ K80', 'Redmi K80 Pro', 'Gạo đỏ K70', 'Redmi K70 Pro',
+        'Gạo đỏ K70E', 'Gạo đỏ K60', 'Redmi K60 Pro', 'Gạo đỏ K60E',
+        'Redmi K60 phiên bản cực đoan', 'Gạo đỏ K50', 'Redmi K50 Pro',
+        'Redmi K50 phiên bản cực đoan',
+        'Phiên bản thể thao điện tử Redmi K50', 'Gạo đỏ K40',
+        'Redmi K40 Pro1', 'Gạo đỏ K40S',
+        'Phiên bản nâng cao trò chơi Redmi K40', 'Redmi K40 Pro2',
+        'Gạo đỏ 12C', 'Gạo đỏ 13C 5G', 'Gạo đỏ K30', 'Redmi K30 Pro',
+        'Phiên bản kỷ niệm tối cao Redmi K30', 'Gạo đỏ K30S',
+        'Phiên bản tốc độ Redmi K30', 'Gạo đỏ K30i',
+        'Phiên bản kỷ niệm tối cao Redmi K30S'], dtype=object)}
+ {'name': 'Phong cách', 'values': array(['Phong cách tối giản'], dtype=object)}
+ {'name': 'chức năng', 'values': array(['Chống rơi'], dtype=object)}
+ {'name': 'Các mẫu máy áp dụng', 'values': array(['Tiêu Mi 14'], dtype=object)}]",9,9,9,,12,0.788,False,False,ratio,0.27,ratio,0.27
+684623158828,补水抗皱天丝面膜 致朵玻色因臻颜抗皱贴片面膜清透补水批发代发,Mặt nạ Tencel dưỡng ẩm và chống nhăn,"化妆品功效: 补水保湿, 滋润, 柔润肌肤; 品牌: 致朵; 适用肤质: 中性, 混合性; 品牌类型: 国货品牌; 适用人群: 通用; 是否进口: 否; 规格: 正常规格; 生产许可证号: 粤妆20230009; 保质期: 3年; 净含量: 25ml×5片; 产品规格: 致朵玻色因御颜抗皱面膜-片装25ml; 主要下游平台: 亚马逊, wish, 速卖通, 独立站, LAZADA; 有可授权的自有品牌: 是; 是否跨境出口专供货源: 是; 产地: 广州; 货号: NO.ZD57662; 非特化妆品备案证号: 粤G妆网备字2024197510; 特殊用途化妆品: 否; 主要销售地区: 欧洲, 南美, 东南亚, 北美, 东北亚, 中东; 产品名称: 致朵玻色因御颜抗皱面膜","Hiệu quả thẩm mỹ: Dưỡng ẩm1, dưỡng ẩm2, Da mềm mại; thương hiệu: Gửi Duo; Loại da áp dụng: trung lập, hỗn hợp; Loại thương hiệu: Thương hiệu nội địa; Người áp dụng: Tổng quan; Có nên nhập khẩu không: KHÔNG1; đặc điểm kỹ thuật: Thông số kỹ thuật bình thường; Số giấy phép sản xuất: Trang điểm Quảng Đông 20230009; thời hạn sử dụng: 3 năm; Nội dung ròng: 25ml x 5 viên; Thông số kỹ thuật sản phẩm: Mặt nạ chống nhăn Zhiduo Bose Yin 25ml; Các nền tảng hạ nguồn chính: Amazon, wish, AliExpress, Trạm độc lập, LAZADA; Có những thương hiệu tư nhân được cấp phép.: là1; Có độc quyền cung cấp hàng hóa xuất khẩu xuyên biên giới hay không: là2; Nguồn gốc: Quảng Châu; số mặt hàng: NO.ZD57662; Số giấy chứng nhận đăng ký mỹ phẩm không đặc biệt: Số đăng ký mạng lưới trang điểm Quảng Đông G: 2024197510; Mỹ phẩm chuyên dùng: KHÔNG2; Khu vực bán hàng chính: Châu Âu, Nam Mỹ, Đông Nam Á, Bắc Mỹ, Đông Bắc Á, Trung Đông; Tên sản phẩm: Mặt nạ chống nhăn Zhiduo Bosein",beauty,1688,https://detail.1688.com/offer/684623158828.html,2026-09-19T16:17:24+00:00,worker_nhat_anh,面膜,3,https://s.1688.com/selloffer/offer_search.htm?keywords=%C3%E6%C4%A4&beginPage=3,0.2,4100.0,广东,广州市,生产加工,False,贴片面膜,1034765,True,"[{'name': '化妆品功效', 'values': array(['补水保湿', '滋润', '柔润肌肤'], dtype=object)}
+ {'name': '品牌', 'values': array(['致朵'], dtype=object)}
+ {'name': '适用肤质', 'values': array(['中性', '混合性'], dtype=object)}
+ {'name': '品牌类型', 'values': array(['国货品牌'], dtype=object)}
+ {'name': '适用人群', 'values': array(['通用'], dtype=object)}
+ {'name': '是否进口', 'values': array(['否'], dtype=object)}
+ {'name': '规格', 'values': array(['正常规格'], dtype=object)}
+ {'name': '生产许可证号', 'values': array(['粤妆20230009'], dtype=object)}
+ {'name': '保质期', 'values': array(['3年'], dtype=object)}
+ {'name': '净含量', 'values': array(['25ml×5片'], dtype=object)}
+ {'name': '产品规格', 'values': array(['致朵玻色因御颜抗皱面膜-片装25ml'], dtype=object)}
+ {'name': '主要下游平台', 'values': array(['亚马逊', 'wish', '速卖通', '独立站', 'LAZADA'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['是'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['是'], dtype=object)}
+ {'name': '产地', 'values': array(['广州'], dtype=object)}
+ {'name': '货号', 'values': array(['NO.ZD57662'], dtype=object)}
+ {'name': '非特化妆品备案证号', 'values': array(['粤G妆网备字2024197510'], dtype=object)}
+ {'name': '特殊用途化妆品', 'values': array(['否'], dtype=object)}
+ {'name': '主要销售地区', 'values': array(['欧洲', '南美', '东南亚', '北美', '东北亚', '中东'], dtype=object)}
+ {'name': '产品名称', 'values': array(['致朵玻色因御颜抗皱面膜'], dtype=object)}]","[{'name': 'thương hiệu', 'values': array(['Gửi Duo'], dtype=object)}
+ {'name': 'Có nên nhập khẩu không', 'values': array(['KHÔNG1'], dtype=object)}
+ {'name': 'Loại da áp dụng', 'values': array(['trung lập', 'hỗn hợp'], dtype=object)}
+ {'name': 'đặc điểm kỹ thuật', 'values': array(['Thông số kỹ thuật bình thường'], dtype=object)}
+ {'name': 'Loại thương hiệu', 'values': array(['Thương hiệu nội địa'], dtype=object)}
+ {'name': 'Số giấy phép sản xuất', 'values': array(['Trang điểm Quảng Đông 20230009'], dtype=object)}
+ {'name': 'thời hạn sử dụng', 'values': array(['3 năm'], dtype=object)}
+ {'name': 'Nội dung ròng', 'values': array(['25ml x 5 viên'], dtype=object)}
+ {'name': 'Thông số kỹ thuật sản phẩm', 'values': array(['Mặt nạ chống nhăn Zhiduo Bose Yin 25ml'], dtype=object)}
+ {'name': 'Các nền tảng hạ nguồn chính', 'values': array(['Amazon', 'wish', 'AliExpress', 'Trạm độc lập', 'LAZADA'],
+       dtype=object)}
+ {'name': 'Có những thương hiệu tư nhân được cấp phép.', 'values': array(['là1'], dtype=object)}
+ {'name': 'Có độc quyền cung cấp hàng hóa xuất khẩu xuyên biên giới hay không', 'values': array(['là2'], dtype=object)}
+ {'name': 'Nguồn gốc', 'values': array(['Quảng Châu'], dtype=object)}
+ {'name': 'Hiệu quả thẩm mỹ', 'values': array(['Dưỡng ẩm1', 'dưỡng ẩm2', 'Da mềm mại'], dtype=object)}
+ {'name': 'số mặt hàng', 'values': array(['NO.ZD57662'], dtype=object)}
+ {'name': 'Số giấy chứng nhận đăng ký mỹ phẩm không đặc biệt', 'values': array(['Số đăng ký mạng lưới trang điểm Quảng Đông G: 2024197510'],
+       dtype=object)}
+ {'name': 'Mỹ phẩm chuyên dùng', 'values': array(['KHÔNG2'], dtype=object)}
+ {'name': 'Khu vực bán hàng chính', 'values': array(['Châu Âu', 'Nam Mỹ', 'Đông Nam Á', 'Bắc Mỹ', 'Đông Bắc Á',
+        'Trung Đông'], dtype=object)}
+ {'name': 'Người áp dụng', 'values': array(['Tổng quan'], dtype=object)}
+ {'name': 'Tên sản phẩm', 'values': array(['Mặt nạ chống nhăn Zhiduo Bosein'], dtype=object)}]",20,20,20,null null null,8,0.514,False,False,ratio,0.28,ratio,0.28
+731444260218,冰肤之萃抗皱补水润颜面膜补水保湿院线同款水光肌肤厂家批发代发,Mặt nạ dưỡng ẩm chống nhăn da đá,"化妆品功效: 补水保湿, 滋润, 柔润肌肤; 品牌: 冰肤之萃; 适用肤质: 通用; 品牌类型: 国货品牌; 适用人群: 通用; 是否进口: 否; 规格: 正常规格; 生产许可证号: 粤妆20230079; 保质期: 3年; 净含量: 25ml/片; 产品规格: 冰肤之萃抗皱补水润颜面膜【5片/盒】, 施逅烟酰胺补水冻干面膜【5片/盒】, 施逅玻尿酸冻干靓肤面膜【5片/盒】, 施逅寡肽玻尿酸冻干补水面膜【5片/盒】, 施逅富勒烯蛋白灯泡肌面膜【5片/盒】, 施逅玻尿酸水润嫩肤面膜【5片/盒】, 施逅富勒烯冰膜面膜【5片/盒】, 冰肤之萃多肽肌密贵妇面膜（盒装）, 冰肤之萃维生素原B5积雪草精研润颜面膜【5片/盒】, 冰肤之萃油橄榄臻萃润泽油敷面膜【5片/盒】, 冰肤之萃水光沁润面膜【5片/盒】, 冰肤之萃胶原蛋白沁润面膜（上下脸膜布）【5片/盒】, LRMO焕颜玻尿酸水光充盈导入玻色因安瓶面膜【5片/盒】, DASSFN紧致提拉面膜【5片/盒】, DASSFN赋活水光面膜【5片/盒】, DASSFN胶原水光紧致面膜【5片/盒】, DASSFN水光润颜面膜【5片/盒】, Gelianna格莲娜海生素水嫩面膜贴【5片/盒】, Gelianna格莲娜水油双锁紧致美颜膜套贴 【5片/盒】, Gelianna格莲娜黄精灵焕颜卡通面膜【5片/盒】, Gelianna格莲娜粉精灵嫩肤卡通面膜【5片/盒】, Gelianna格莲娜白番茄精华面膜【5片/盒】, Gelianna格莲娜麦角硫因胶原蛋白舒缓油敷面膜【5片/盒】; 是否跨境出口专供货源: 否; 产地: 广州; 货号: 冰肤之萃抗皱补水润颜面膜; 非特化妆品备案证号: 粤G妆网备字2024325496; 特殊用途化妆品: 否; 使用场景: 日常护理, 日常保湿; 包装种类: 基础包装; 产品名称: 冰肤之萃抗皱补水润颜面膜","Hiệu quả thẩm mỹ: Dưỡng ẩm và dưỡng ẩm, dưỡng ẩm, Da mềm mại; thương hiệu: Chiết xuất da băng; Loại da phù hợp: mục đích chung1; Loại thương hiệu: Thương hiệu nội địa; Người áp dụng: mục đích chung2; Có nhập khẩu không: KHÔNG1; đặc điểm kỹ thuật: Thông số kỹ thuật bình thường; Số giấy phép sản xuất: Trang điểm Quảng Đông 20230079; thời hạn sử dụng: 3 năm; nội dung ròng: 25ml/cái; Thông số kỹ thuật sản phẩm: 冰肤之萃胶原蛋白沁润面膜（上下脸膜布）【5片/盒】, Gelianna格莲娜麦角硫因胶原蛋白舒缓油敷面膜【5片/盒】, Mặt nạ dưỡng ẩm chống nhăn Ice Skin Extract [5 cái/hộp], Mặt nạ dưỡng ẩm đông khô Shi Chuo Niacinamide [5 miếng/hộp], Mặt nạ da khô đông lạnh axit Shi Chu Hyaluronic [5 cái/hộp], Mặt nạ dưỡng ẩm đông lạnh Shi Chu Oligopeptide Hyaluronic Acid [5 cái/hộp], Mặt nạ cơ bóng đèn Shitou Fullerene Protein [5 cái/hộp], Mặt nạ dưỡng ẩm và trẻ hóa axit hyaluronic Shitou [5 cái/hộp], Mặt nạ đá Shi Chuo Fullerene [5 cái/hộp], Mặt nạ dưỡng da Polypeptide Ice Skin Extract Lady Mask (đóng hộp), Mặt nạ dưỡng ẩm chiết xuất Ice Skin Provitamin B5 Centella Asiatica [5 cái/hộp], Mặt nạ dưỡng ẩm dầu ô liu chiết xuất nước đá [5 miếng/hộp], Mặt nạ dưỡng ẩm dạng nước chiết xuất từ da [5 miếng/hộp], LRMO Trẻ hóa Axit Hyaluronic Hydrating Full Import Bose Ampoule Mask [5 cái/hộp], Mặt nạ làm săn chắc và nâng cơ DASSFN [5 miếng/hộp], Mặt nạ dưỡng ẩm phục hồi DASSFN [5 cái/hộp], DASSFN Collagen Water Light Firming Mask [5 miếng/hộp], Mặt nạ dưỡng ẩm DASSFN [5 miếng/hộp], Mặt nạ làm mềm da Gelianna Helena Hydane [5 miếng/hộp], Bộ mặt nạ làm đẹp khóa đôi dầu và nước Gelianna Gelianna [5 cái/hộp], Mặt nạ hoạt hình trẻ hóa Gelianna Yellow Elf [5 miếng/hộp], Mặt nạ hoạt hình trẻ hóa Gelianna Pink Elf [5 miếng/hộp], Mặt nạ tinh chất cà chua trắng Gelianna [5 cái/hộp]; Có nên cung cấp nguồn cung độc quyền cho xuất khẩu xuyên biên giới hay không: KHÔNG2; Xuất xứ: Quảng Châu; Số mặt hàng: Mặt nạ dưỡng ẩm chống nhăn Ice Skin Extract1; Số giấy chứng nhận đăng ký mỹ phẩm không đặc biệt: Mã số đăng ký mạng lưới G makeup Quảng Đông: 2024325496; Mỹ phẩm công dụng đặc biệt: KHÔNG3; Kịch bản sử dụng: chăm sóc hàng ngày, Dưỡng ẩm hàng ngày; Loại bao bì: Bao bì cơ bản; tên sản phẩm: Mặt nạ dưỡng ẩm chống nhăn Ice Skin Extract2",beauty,1688,https://detail.1688.com/offer/731444260218.html,2026-09-19T16:59:51+00:00,worker_nhat_anh,面膜,5,https://s.1688.com/selloffer/offer_search.htm?keywords=%C3%E6%C4%A4&beginPage=5,1.5,100000.0,广东,广州市,生产加工,False,贴片面膜,1034765,True,"[{'name': '化妆品功效', 'values': array(['补水保湿', '滋润', '柔润肌肤'], dtype=object)}
+ {'name': '品牌', 'values': array(['冰肤之萃'], dtype=object)}
+ {'name': '适用肤质', 'values': array(['通用'], dtype=object)}
+ {'name': '品牌类型', 'values': array(['国货品牌'], dtype=object)}
+ {'name': '适用人群', 'values': array(['通用'], dtype=object)}
+ {'name': '是否进口', 'values': array(['否'], dtype=object)}
+ {'name': '规格', 'values': array(['正常规格'], dtype=object)}
+ {'name': '生产许可证号', 'values': array(['粤妆20230079'], dtype=object)}
+ {'name': '保质期', 'values': array(['3年'], dtype=object)}
+ {'name': '净含量', 'values': array(['25ml/片'], dtype=object)}
+ {'name': '产品规格', 'values': array(['冰肤之萃抗皱补水润颜面膜【5片/盒】', '施逅烟酰胺补水冻干面膜【5片/盒】', '施逅玻尿酸冻干靓肤面膜【5片/盒】',
+        '施逅寡肽玻尿酸冻干补水面膜【5片/盒】', '施逅富勒烯蛋白灯泡肌面膜【5片/盒】', '施逅玻尿酸水润嫩肤面膜【5片/盒】',
+        '施逅富勒烯冰膜面膜【5片/盒】', '冰肤之萃多肽肌密贵妇面膜（盒装）', '冰肤之萃维生素原B5积雪草精研润颜面膜【5片/盒】',
+        '冰肤之萃油橄榄臻萃润泽油敷面膜【5片/盒】', '冰肤之萃水光沁润面膜【5片/盒】',
+        '冰肤之萃胶原蛋白沁润面膜（上下脸膜布）【5片/盒】', 'LRMO焕颜玻尿酸水光充盈导入玻色因安瓶面膜【5片/盒】',
+        'DASSFN紧致提拉面膜【5片/盒】', 'DASSFN赋活水光面膜【5片/盒】', 'DASSFN胶原水光紧致面膜【5片/盒】',
+        'DASSFN水光润颜面膜【5片/盒】', 'Gelianna格莲娜海生素水嫩面膜贴【5片/盒】',
+        'Gelianna格莲娜水油双锁紧致美颜膜套贴 【5片/盒】', 'Gelianna格莲娜黄精灵焕颜卡通面膜【5片/盒】',
+        'Gelianna格莲娜粉精灵嫩肤卡通面膜【5片/盒】', 'Gelianna格莲娜白番茄精华面膜【5片/盒】',
+        'Gelianna格莲娜麦角硫因胶原蛋白舒缓油敷面膜【5片/盒】'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['否'], dtype=object)}
+ {'name': '产地', 'values': array(['广州'], dtype=object)}
+ {'name': '货号', 'values': array(['冰肤之萃抗皱补水润颜面膜'], dtype=object)}
+ {'name': '非特化妆品备案证号', 'values': array(['粤G妆网备字2024325496'], dtype=object)}
+ {'name': '特殊用途化妆品', 'values': array(['否'], dtype=object)}
+ {'name': '使用场景', 'values': array(['日常护理', '日常保湿'], dtype=object)}
+ {'name': '包装种类', 'values': array(['基础包装'], dtype=object)}
+ {'name': '产品名称', 'values': array(['冰肤之萃抗皱补水润颜面膜'], dtype=object)}]","[{'name': 'thương hiệu', 'values': array(['Chiết xuất da băng'], dtype=object)}
+ {'name': 'Có nhập khẩu không', 'values': array(['KHÔNG1'], dtype=object)}
+ {'name': 'Loại da phù hợp', 'values': array(['mục đích chung1'], dtype=object)}
+ {'name': 'đặc điểm kỹ thuật', 'values': array(['Thông số kỹ thuật bình thường'], dtype=object)}
+ {'name': 'Loại thương hiệu', 'values': array(['Thương hiệu nội địa'], dtype=object)}
+ {'name': 'Số giấy phép sản xuất', 'values': array(['Trang điểm Quảng Đông 20230079'], dtype=object)}
+ {'name': 'thời hạn sử dụng', 'values': array(['3 năm'], dtype=object)}
+ {'name': 'nội dung ròng', 'values': array(['25ml/cái'], dtype=object)}
+ {'name': 'Thông số kỹ thuật sản phẩm', 'values': array(['冰肤之萃胶原蛋白沁润面膜（上下脸膜布）【5片/盒】', 'Gelianna格莲娜麦角硫因胶原蛋白舒缓油敷面膜【5片/盒】',
+        'Mặt nạ dưỡng ẩm chống nhăn Ice Skin Extract [5 cái/hộp]',
+        'Mặt nạ dưỡng ẩm đông khô Shi Chuo Niacinamide [5 miếng/hộp]',
+        'Mặt nạ da khô đông lạnh axit Shi Chu Hyaluronic [5 cái/hộp]',
+        'Mặt nạ dưỡng ẩm đông lạnh Shi Chu Oligopeptide Hyaluronic Acid [5 cái/hộp]',
+        'Mặt nạ cơ bóng đèn Shitou Fullerene Protein [5 cái/hộp]',
+        'Mặt nạ dưỡng ẩm và trẻ hóa axit hyaluronic Shitou [5 cái/hộp]',
+        'Mặt nạ đá Shi Chuo Fullerene [5 cái/hộp]',
+        'Mặt nạ dưỡng da Polypeptide Ice Skin Extract Lady Mask (đóng hộp)',
+        'Mặt nạ dưỡng ẩm chiết xuất Ice Skin Provitamin B5 Centella Asiatica [5 cái/hộp]',
+        'Mặt nạ dưỡng ẩm dầu ô liu chiết xuất nước đá [5 miếng/hộp]',
+        'Mặt nạ dưỡng ẩm dạng nước chiết xuất từ da [5 miếng/hộp]',
+        'LRMO Trẻ hóa Axit Hyaluronic Hydrating Full Import Bose Ampoule Mask [5 cái/hộp]',
+        'Mặt nạ làm săn chắc và nâng cơ DASSFN [5 miếng/hộp]',
+        'Mặt nạ dưỡng ẩm phục hồi DASSFN [5 cái/hộp]',
+        'DASSFN Collagen Water Light Firming Mask [5 miếng/hộp]',
+        'Mặt nạ dưỡng ẩm DASSFN [5 miếng/hộp]',
+        'Mặt nạ làm mềm da Gelianna Helena Hydane [5 miếng/hộp]',
+        'Bộ mặt nạ làm đẹp khóa đôi dầu và nước Gelianna Gelianna [5 cái/hộp]',
+        'Mặt nạ hoạt hình trẻ hóa Gelianna Yellow Elf [5 miếng/hộp]',
+        'Mặt nạ hoạt hình trẻ hóa Gelianna Pink Elf [5 miếng/hộp]',
+        'Mặt nạ tinh chất cà chua trắng Gelianna [5 cái/hộp]'],
+       dtype=object)}
+ {'name': 'Có nên cung cấp nguồn cung độc quyền cho xuất khẩu xuyên biên giới hay không', 'values': array(['KHÔNG2'], dtype=object)}
+ {'name': 'Xuất xứ', 'values': array(['Quảng Châu'], dtype=object)}
+ {'name': 'Hiệu quả thẩm mỹ', 'values': array(['Dưỡng ẩm và dưỡng ẩm', 'dưỡng ẩm', 'Da mềm mại'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['Mặt nạ dưỡng ẩm chống nhăn Ice Skin Extract1'], dtype=object)}
+ {'name': 'Số giấy chứng nhận đăng ký mỹ phẩm không đặc biệt', 'values': array(['Mã số đăng ký mạng lưới G makeup Quảng Đông: 2024325496'],
+       dtype=object)}
+ {'name': 'Mỹ phẩm công dụng đặc biệt', 'values': array(['KHÔNG3'], dtype=object)}
+ {'name': 'Kịch bản sử dụng', 'values': array(['chăm sóc hàng ngày', 'Dưỡng ẩm hàng ngày'], dtype=object)}
+ {'name': 'Loại bao bì', 'values': array(['Bao bì cơ bản'], dtype=object)}
+ {'name': 'Người áp dụng', 'values': array(['mục đích chung2'], dtype=object)}
+ {'name': 'tên sản phẩm', 'values': array(['Mặt nạ dưỡng ẩm chống nhăn Ice Skin Extract2'], dtype=object)}]",19,19,19,,13,0.563,False,True,ratio,0.27,ratio,0.27
+774095913319,花草袋泡茶herbal Big Butt And Hips Enlargements maca Tea,Túi hoa cỏ pha trà herbal Big Butt And Hips Enlargements maca Tea,级别: 特级; 品牌: big butt tea; 保质期: 3年; 售卖方式: 包装; 生产日期: big butt tea; 原产地: 安徽; 是否进口: 否; 生产厂家: big butt tea; 原料与配料: big butt tea; 储藏方法: 常温; 净含量（规格）: big butt tea; 生产许可证编号: SC11434160335331; 货号: 509; 是否礼盒装: 否; 是否含糖: 无糖; 统一单位换算: 150.0,Cấp độ: Hạng đặc biệt; Thương hiệu: Big butt tea1; Thời hạn sử dụng: 3 năm; Phương Thức Bán Hàng: Đóng gói; Ngày sản xuất: Big butt tea4; Xuất xứ: An Huy; Có nhập khẩu không: Không.1; Nhà sản xuất: Big butt tea2; Nguyên liệu và thành phần: Big butt tea3; Phương pháp bảo quản: Nhiệt độ thường; Nội dung Tịnh (Thông số kỹ thuật): Big butt tea5; Số giấy phép sản xuất: SC11434160335331; Số mặt hàng: 509; Có đóng hộp quà không: Không.2; Nó có chứa đường không?: Không đường; Chuyển đổi đơn vị thống nhất: 150.0,food,1688,https://detail.1688.com/offer/774095913319.html,2026-09-20T11:51:00+00:00,worker_nhat_anh,茶叶,10,https://s.1688.com/selloffer/offer_search.htm?keywords=%B2%E8%D2%B6&beginPage=10,12.5,5100.0,安徽,亳州市,生产加工,False,再加工茶/配方茶/调味茶,124740021,True,"[{'name': '级别', 'values': array(['特级'], dtype=object)}
+ {'name': '品牌', 'values': array(['big butt tea'], dtype=object)}
+ {'name': '保质期', 'values': array(['3年'], dtype=object)}
+ {'name': '售卖方式', 'values': array(['包装'], dtype=object)}
+ {'name': '生产日期', 'values': array(['big butt tea'], dtype=object)}
+ {'name': '原产地', 'values': array(['安徽'], dtype=object)}
+ {'name': '是否进口', 'values': array(['否'], dtype=object)}
+ {'name': '生产厂家', 'values': array(['big butt tea'], dtype=object)}
+ {'name': '原料与配料', 'values': array(['big butt tea'], dtype=object)}
+ {'name': '储藏方法', 'values': array(['常温'], dtype=object)}
+ {'name': '净含量（规格）', 'values': array(['big butt tea'], dtype=object)}
+ {'name': '生产许可证编号', 'values': array(['SC11434160335331'], dtype=object)}
+ {'name': '货号', 'values': array(['509'], dtype=object)}
+ {'name': '是否礼盒装', 'values': array(['否'], dtype=object)}
+ {'name': '是否含糖', 'values': array(['无糖'], dtype=object)}
+ {'name': '统一单位换算', 'values': array(['150.0'], dtype=object)}]","[{'name': 'Xuất xứ', 'values': array(['An Huy'], dtype=object)}
+ {'name': 'Có nhập khẩu không', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Thời hạn sử dụng', 'values': array(['3 năm'], dtype=object)}
+ {'name': 'Thương hiệu', 'values': array(['Big butt tea1'], dtype=object)}
+ {'name': 'Nhà sản xuất', 'values': array(['Big butt tea2'], dtype=object)}
+ {'name': 'Nguyên liệu và thành phần', 'values': array(['Big butt tea3'], dtype=object)}
+ {'name': 'Phương Thức Bán Hàng', 'values': array(['Đóng gói'], dtype=object)}
+ {'name': 'Ngày sản xuất', 'values': array(['Big butt tea4'], dtype=object)}
+ {'name': 'Phương pháp bảo quản', 'values': array(['Nhiệt độ thường'], dtype=object)}
+ {'name': 'Nội dung Tịnh (Thông số kỹ thuật)', 'values': array(['Big butt tea5'], dtype=object)}
+ {'name': 'Số giấy phép sản xuất', 'values': array(['SC11434160335331'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['509'], dtype=object)}
+ {'name': 'Có đóng hộp quà không', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Nó có chứa đường không?', 'values': array(['Không đường'], dtype=object)}
+ {'name': 'Chuyển đổi đơn vị thống nhất', 'values': array(['150.0'], dtype=object)}
+ {'name': 'Cấp độ', 'values': array(['Hạng đặc biệt'], dtype=object)}]",16,16,16,,4,0.864,False,False,ratio,0.3,ratio,0.3
+1043561115166,2026新款Polèn真皮马鞍包女高级感通勤单肩斜挎包小众设计感腋下,2026新款Polèn真皮马鞍包女高级感通勤单肩斜挎包小众设计感腋下,"材质: 合成革; 箱包潮流款式: 马鞍包; 箱包大小: 中; 里料质地: 涤纶; 品牌: 其他; 风格: 跨境风潮; 流行元素: 皮带装饰; 颜色: 棕色, 黑色, 乌木色; 上市年份季节: 2026年春季; 箱包形状: 水饺型; 开盖方式: 拉链; 包内部结构: 证件袋; 硬度: 中; 外袋种类: 立体袋; 有可授权的自有品牌: 否; 有无夹层: 无; 肩带根数: 单根; 适用场景: 日常搭配","材质: 合成革; 箱包潮流款式: 马鞍包; 箱包大小: 中; 里料质地: 涤纶; 品牌: 其他; 风格: 跨境风潮; 流行元素: 皮带装饰; 颜色: 棕色, 黑色, 乌木色; 上市年份季节: 2026年春季; 箱包形状: 水饺型; 开盖方式: 拉链; 包内部结构: 证件袋; 硬度: 中; 外袋种类: 立体袋; 有可授权的自有品牌: 否; 有无夹层: 无; 肩带根数: 单根; 适用场景: 日常搭配",bags,1688,https://detail.1688.com/offer/1043561115166.html,2026-09-19T09:52:23+00:00,worker_huy,女包,33,https://s.1688.com/selloffer/offer_search.htm?keywords=%C5%AE%B0%FC&beginPage=33,75.0,400.0,广东,广州市,生产加工,False,女士单肩包,201554511,True,"[{'name': '材质', 'values': array(['合成革'], dtype=object)}
+ {'name': '箱包潮流款式', 'values': array(['马鞍包'], dtype=object)}
+ {'name': '箱包大小', 'values': array(['中'], dtype=object)}
+ {'name': '里料质地', 'values': array(['涤纶'], dtype=object)}
+ {'name': '品牌', 'values': array(['其他'], dtype=object)}
+ {'name': '风格', 'values': array(['跨境风潮'], dtype=object)}
+ {'name': '流行元素', 'values': array(['皮带装饰'], dtype=object)}
+ {'name': '颜色', 'values': array(['棕色', '黑色', '乌木色'], dtype=object)}
+ {'name': '上市年份季节', 'values': array(['2026年春季'], dtype=object)}
+ {'name': '箱包形状', 'values': array(['水饺型'], dtype=object)}
+ {'name': '开盖方式', 'values': array(['拉链'], dtype=object)}
+ {'name': '包内部结构', 'values': array(['证件袋'], dtype=object)}
+ {'name': '硬度', 'values': array(['中'], dtype=object)}
+ {'name': '外袋种类', 'values': array(['立体袋'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['否'], dtype=object)}
+ {'name': '有无夹层', 'values': array(['无'], dtype=object)}
+ {'name': '肩带根数', 'values': array(['单根'], dtype=object)}
+ {'name': '适用场景', 'values': array(['日常搭配'], dtype=object)}]","[{'name': '材质', 'values': array(['合成革'], dtype=object)}
+ {'name': '箱包潮流款式', 'values': array(['马鞍包'], dtype=object)}
+ {'name': '箱包大小', 'values': array(['中'], dtype=object)}
+ {'name': '里料质地', 'values': array(['涤纶'], dtype=object)}
+ {'name': '品牌', 'values': array(['其他'], dtype=object)}
+ {'name': '风格', 'values': array(['跨境风潮'], dtype=object)}
+ {'name': '流行元素', 'values': array(['皮带装饰'], dtype=object)}
+ {'name': '颜色', 'values': array(['棕色', '黑色', '乌木色'], dtype=object)}
+ {'name': '上市年份季节', 'values': array(['2026年春季'], dtype=object)}
+ {'name': '箱包形状', 'values': array(['水饺型'], dtype=object)}
+ {'name': '开盖方式', 'values': array(['拉链'], dtype=object)}
+ {'name': '包内部结构', 'values': array(['证件袋'], dtype=object)}
+ {'name': '硬度', 'values': array(['中'], dtype=object)}
+ {'name': '外袋种类', 'values': array(['立体袋'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['否'], dtype=object)}
+ {'name': '有无夹层', 'values': array(['无'], dtype=object)}
+ {'name': '肩带根数', 'values': array(['单根'], dtype=object)}
+ {'name': '适用场景', 'values': array(['日常搭配'], dtype=object)}]",18,18,18,,8,1.0,True,True,ratio,0.03,ratio,0.03
+1046073849386,Turmeric Ginger Cinnamon Tea Bags姜黄生姜肉桂茶包OE M非内销,Trà túi lọc gừng nghệ quế OE M không bán trong nước,"品牌: 祝笑堂; 茶种类: 花茶; 售卖方式: 预包装; 净含量（规格）: 2; 原料与配料: 肉桂，生姜，姜黄; 食品工艺: 烘干; 是否含糖: 无糖; 是否礼盒装: 否; 是否进口: 否; 原产地: 安徽; 保质期: 18个月; 生产日期: 不断更新中; 生产厂家: 安徽省亳州市谯城区华佗镇; 储藏方法: 冷藏; 产品标准号: /; 生产许可证编号: SC11434160234407; 货号: 肉桂生姜姜黄茶 英文版; 包装规格: 英文版 姜黄肉桂姜 2克x30包, 英文版 姜黄肉桂姜 2克x50包, 英文版 姜黄肉桂姜 2克x100包, 英文版 姜黄肉桂姜 2克x10包; 产品认证: 否; 产地: 中国大陆; 省份: 安徽省; 规格类型: 正常规格; 非内销: 跨境产品，国内下单发中文标签，英文标签需要备注","Thương hiệu: Chúc Hài Đường; Các loại trà: Trà hoa; Cách thức bán hàng: Đã đóng gói sẵn; Hàm lượng tịnh (quy cách): 2; Nguyên liệu và thành phần: Quế, gừng, nghệ; Công nghệ thực phẩm: Sấy khô; Có chứa đường không: Không đường; Có hộp quà không: Không1; Có nhập khẩu không: Không2; Nguồn gốc xuất xứ: An Huy; Thời hạn sử dụng: 18 tháng; Ngày sản xuất: Đang liên tục cập nhật; Nhà sản xuất: Thị trấn Hoa Đà, quận Tiêu Thành, thành phố Bạc Châu, tỉnh An Huy; Phương pháp bảo quản: Làm lạnh; Mã tiêu chuẩn sản phẩm: /; Số giấy phép sản xuất: SC11434160234407; Mã hàng: Trà Quế Gừng Nghệ phiên bản tiếng Anh; Quy cách đóng gói: Gừng nghệ quế phiên bản tiếng Anh, 2g x 30 gói, Gừng nghệ quế phiên bản tiếng Anh, 2g x 50 gói, Gừng nghệ quế phiên bản tiếng Anh, 2g x 100 gói, Gừng nghệ quế phiên bản tiếng Anh, 2g x 10 gói; Chứng nhận sản phẩm: Không3; 产地: 中国大陆; Tỉnh: Tỉnh An Huy; Loại quy cách: Kích thước tiêu chuẩn; Không bán trong nước: Sản phẩm xuyên biên giới, đặt hàng trong nước sẽ giao nhãn tiếng Trung, nhãn tiếng Anh cần ghi chú.",food,1688,https://detail.1688.com/offer/1046073849386.html,2026-09-20T12:39:56+00:00,worker_nhat_anh,茶叶,26,https://s.1688.com/selloffer/offer_search.htm?keywords=%B2%E8%D2%B6&beginPage=26,1.29,1400.0,安徽,亳州市,,False,代用/养生茶,10045,True,"[{'name': '品牌', 'values': array(['祝笑堂'], dtype=object)}
+ {'name': '茶种类', 'values': array(['花茶'], dtype=object)}
+ {'name': '售卖方式', 'values': array(['预包装'], dtype=object)}
+ {'name': '净含量（规格）', 'values': array(['2'], dtype=object)}
+ {'name': '原料与配料', 'values': array(['肉桂，生姜，姜黄'], dtype=object)}
+ {'name': '食品工艺', 'values': array(['烘干'], dtype=object)}
+ {'name': '是否含糖', 'values': array(['无糖'], dtype=object)}
+ {'name': '是否礼盒装', 'values': array(['否'], dtype=object)}
+ {'name': '是否进口', 'values': array(['否'], dtype=object)}
+ {'name': '原产地', 'values': array(['安徽'], dtype=object)}
+ {'name': '保质期', 'values': array(['18个月'], dtype=object)}
+ {'name': '生产日期', 'values': array(['不断更新中'], dtype=object)}
+ {'name': '生产厂家', 'values': array(['安徽省亳州市谯城区华佗镇'], dtype=object)}
+ {'name': '储藏方法', 'values': array(['冷藏'], dtype=object)}
+ {'name': '产品标准号', 'values': array(['/'], dtype=object)}
+ {'name': '生产许可证编号', 'values': array(['SC11434160234407'], dtype=object)}
+ {'name': '货号', 'values': array(['肉桂生姜姜黄茶 英文版'], dtype=object)}
+ {'name': '包装规格', 'values': array(['英文版 姜黄肉桂姜 2克x30包', '英文版 姜黄肉桂姜 2克x50包', '英文版 姜黄肉桂姜 2克x100包',
+        '英文版 姜黄肉桂姜 2克x10包'], dtype=object)}
+ {'name': '产品认证', 'values': array(['否'], dtype=object)}
+ {'name': '产地', 'values': array(['中国大陆'], dtype=object)}
+ {'name': '省份', 'values': array(['安徽省'], dtype=object)}
+ {'name': '规格类型', 'values': array(['正常规格'], dtype=object)}
+ {'name': '非内销', 'values': array(['跨境产品，国内下单发中文标签，英文标签需要备注'], dtype=object)}]","[{'name': 'Thương hiệu', 'values': array(['Chúc Hài Đường'], dtype=object)}
+ {'name': 'Có nhập khẩu không', 'values': array(['Không2'], dtype=object)}
+ {'name': 'Nguồn gốc xuất xứ', 'values': array(['An Huy'], dtype=object)}
+ {'name': 'Cách thức bán hàng', 'values': array(['Đã đóng gói sẵn'], dtype=object)}
+ {'name': 'Nguyên liệu và thành phần', 'values': array(['Quế, gừng, nghệ'], dtype=object)}
+ {'name': 'Hàm lượng tịnh (quy cách)', 'values': array(['2'], dtype=object)}
+ {'name': 'Thời hạn sử dụng', 'values': array(['18 tháng'], dtype=object)}
+ {'name': 'Ngày sản xuất', 'values': array(['Đang liên tục cập nhật'], dtype=object)}
+ {'name': 'Nhà sản xuất', 'values': array(['Thị trấn Hoa Đà, quận Tiêu Thành, thành phố Bạc Châu, tỉnh An Huy'],
+       dtype=object)}
+ {'name': 'Phương pháp bảo quản', 'values': array(['Làm lạnh'], dtype=object)}
+ {'name': 'Mã tiêu chuẩn sản phẩm', 'values': array(['/'], dtype=object)}
+ {'name': 'Số giấy phép sản xuất', 'values': array(['SC11434160234407'], dtype=object)}
+ {'name': 'Mã hàng', 'values': array(['Trà Quế Gừng Nghệ phiên bản tiếng Anh'], dtype=object)}
+ {'name': 'Quy cách đóng gói', 'values': array(['Gừng nghệ quế phiên bản tiếng Anh, 2g x 30 gói',
+        'Gừng nghệ quế phiên bản tiếng Anh, 2g x 50 gói',
+        'Gừng nghệ quế phiên bản tiếng Anh, 2g x 100 gói',
+        'Gừng nghệ quế phiên bản tiếng Anh, 2g x 10 gói'], dtype=object)}
+ {'name': 'Có hộp quà không', 'values': array(['Không1'], dtype=object)}
+ {'name': 'Chứng nhận sản phẩm', 'values': array(['Không3'], dtype=object)}
+ {'name': 'Có chứa đường không', 'values': array(['Không đường'], dtype=object)}
+ {'name': 'Công nghệ thực phẩm', 'values': array(['Sấy khô'], dtype=object)}
+ {'name': 'Các loại trà', 'values': array(['Trà hoa'], dtype=object)}
+ {'name': '产地', 'values': array(['中国大陆'], dtype=object)}
+ {'name': 'Tỉnh', 'values': array(['Tỉnh An Huy'], dtype=object)}
+ {'name': 'Loại quy cách', 'values': array(['Kích thước tiêu chuẩn'], dtype=object)}
+ {'name': 'Không bán trong nước', 'values': array(['Sản phẩm xuyên biên giới, đặt hàng trong nước sẽ giao nhãn tiếng Trung, nhãn tiếng Anh cần ghi chú.'],
+       dtype=object)}                                                                                                                                     ]",23,23,23,,14,0.586,False,True,ratio,0.28,ratio,0.28
+780449465663,跨境车品新款汽车座椅缝隙塞条夹缝填补边缝防漏储物车载内饰用品,Sản phẩm ô tô xuyên biên giới,"材质: eva; 功能: 带滚轮, 防水, 保温, 抗压, 可定制, 带提手; 使用位置: 座椅夹缝; 适用汽车品牌: 通用; 品牌: 其他; 使用方式: 座式; 加工定制: 是; 容积: 双槽款; 颜色: 黑色一对装【袋装】, 米色一对装【袋装】, 棕色一对装【袋装】, 红色一对装【袋装】, 盒装另外加1元; 主要下游平台: 独立站, LAZADA, 其他; 货号: 其他; 主要销售地区: 北美, 东北亚, 中东, 其他; 有可授权的自有品牌: 是; 是否跨境出口专供货源: 是; LOGO印刷: 可以; 是否专利货源: 否; 置物用品类型: 置物盒","Chất liệu: eva; Chức năng: Có bánh xe lăn, Chống nước, Giữ nhiệt, Chống nén, Có thể tùy chỉnh, Có tay cầm; Sử dụng vị trí: Khe hở ghế; Thương hiệu xe áp dụng: Thông dụng; Thương hiệu: Khác1; Cách sử dụng: Kiểu ngồi; Gia công tùy chỉnh: Là1; Thể tích: Kiểu hai khe; Màu sắc: Một cặp màu đen [túi], Một cặp màu be [túi], Cặp màu nâu [túi], Một cặp màu đỏ [túi], Thêm 1 nhân dân tệ vào hộp; Nền tảng hạ lưu chính: Trạm độc lập, LAZADA, Khác2; Số mặt hàng: Khác3; Khu vực bán hàng chính: Bắc Mỹ, Đông Bắc Á, Trung Đông, Khác4; Thương hiệu riêng được ủy quyền: Là2; Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không: Là3; In LOGO: Có thể; Có phải là nguồn cấp bằng sáng chế không: Không.; Loại đồ dùng: Hộp đựng đồ",auto,1688,https://detail.1688.com/offer/780449465663.html,2026-09-17T21:59:15+00:00,worker_nhat_anh,汽车用品,24,https://s.1688.com/selloffer/offer_search.htm?keywords=%C6%FB%B3%B5%D3%C3%C6%B7&beginPage=24,3.0,17000.0,广东,广州市,,False,车用置物袋/置物箱,1032116,True,"[{'name': '材质', 'values': array(['eva'], dtype=object)}
+ {'name': '功能', 'values': array(['带滚轮', '防水', '保温', '抗压', '可定制', '带提手'], dtype=object)}
+ {'name': '使用位置', 'values': array(['座椅夹缝'], dtype=object)}
+ {'name': '适用汽车品牌', 'values': array(['通用'], dtype=object)}
+ {'name': '品牌', 'values': array(['其他'], dtype=object)}
+ {'name': '使用方式', 'values': array(['座式'], dtype=object)}
+ {'name': '加工定制', 'values': array(['是'], dtype=object)}
+ {'name': '容积', 'values': array(['双槽款'], dtype=object)}
+ {'name': '颜色', 'values': array(['黑色一对装【袋装】', '米色一对装【袋装】', '棕色一对装【袋装】', '红色一对装【袋装】', '盒装另外加1元'],
+       dtype=object)}
+ {'name': '主要下游平台', 'values': array(['独立站', 'LAZADA', '其他'], dtype=object)}
+ {'name': '货号', 'values': array(['其他'], dtype=object)}
+ {'name': '主要销售地区', 'values': array(['北美', '东北亚', '中东', '其他'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['是'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['是'], dtype=object)}
+ {'name': 'LOGO印刷', 'values': array(['可以'], dtype=object)}
+ {'name': '是否专利货源', 'values': array(['否'], dtype=object)}
+ {'name': '置物用品类型', 'values': array(['置物盒'], dtype=object)}]","[{'name': 'Thương hiệu', 'values': array(['Khác1'], dtype=object)}
+ {'name': 'Chất liệu', 'values': array(['eva'], dtype=object)}
+ {'name': 'Sử dụng vị trí', 'values': array(['Khe hở ghế'], dtype=object)}
+ {'name': 'Gia công tùy chỉnh', 'values': array(['Là1'], dtype=object)}
+ {'name': 'Thể tích', 'values': array(['Kiểu hai khe'], dtype=object)}
+ {'name': 'Màu sắc', 'values': array(['Một cặp màu đen [túi]', 'Một cặp màu be [túi]',
+        'Cặp màu nâu [túi]', 'Một cặp màu đỏ [túi]',
+        'Thêm 1 nhân dân tệ vào hộp'], dtype=object)}
+ {'name': 'Nền tảng hạ lưu chính', 'values': array(['Trạm độc lập', 'LAZADA', 'Khác2'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['Khác3'], dtype=object)}
+ {'name': 'Khu vực bán hàng chính', 'values': array(['Bắc Mỹ', 'Đông Bắc Á', 'Trung Đông', 'Khác4'], dtype=object)}
+ {'name': 'Thương hiệu riêng được ủy quyền', 'values': array(['Là2'], dtype=object)}
+ {'name': 'Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không', 'values': array(['Là3'], dtype=object)}
+ {'name': 'Chức năng', 'values': array(['Có bánh xe lăn', 'Chống nước', 'Giữ nhiệt', 'Chống nén',
+        'Có thể tùy chỉnh', 'Có tay cầm'], dtype=object)}
+ {'name': 'Thương hiệu xe áp dụng', 'values': array(['Thông dụng'], dtype=object)}
+ {'name': 'In LOGO', 'values': array(['Có thể'], dtype=object)}
+ {'name': 'Có phải là nguồn cấp bằng sáng chế không', 'values': array(['Không.'], dtype=object)}
+ {'name': 'Loại đồ dùng', 'values': array(['Hộp đựng đồ'], dtype=object)}
+ {'name': 'Cách sử dụng', 'values': array(['Kiểu ngồi'], dtype=object)}]",17,17,17,产品名称】：座椅缝隙防漏塞 【产品颜色】：黑色/红色/棕色/米色 【产品尺寸】：约长43cm*宽6.5cm*高3.5cm 【产品材质】：聚氨酯 【产品净重】：约170g/一对 【产品包装】：OPP袋/盒装 【包装尺寸】：约长43.5cm*宽10.8cm*高4cm 【适合车型】：通用 【产品用途】：防物品掉落、填补缝隙 支持logo定制,16,0.597,False,False,ratio,0.23,ratio,0.23
+917201880653,车载垃圾袋粘贴自立式收纳袋汽车内用桶必用品车上好物备实用大全,Túi đựng rác trên ô tô,材质: 塑料; 功能: 防水; 使用位置: 座椅后背; 适用汽车品牌: 通用; 品牌: 启旺; 使用方式: 悬挂式; 加工定制: 否; 容积: 其他; 颜色: 1包20只【可立式可粘贴】; 货号: 5401; 是否跨境出口专供货源: 否; LOGO印刷: 不可以; 是否专利货源: 否; 置物用品类型: 置物袋,Chất liệu: Nhựa; Chức năng: Chống nước; Sử dụng vị trí: Lưng ghế; Thương hiệu xe áp dụng: Thông dụng; Thương hiệu: Khai Vương; Cách sử dụng: Kiểu treo; Gia công tùy chỉnh: Không.1; Thể tích: Khác; Màu sắc: 1 gói 20 cái [có thể đứng và dán]; Số mặt hàng: 5401; Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không: Không.2; In LOGO: Không thể.; Có phải là nguồn cấp bằng sáng chế không: Không.3; Loại đồ dùng: Túi đựng đồ,auto,1688,https://detail.1688.com/offer/917201880653.html,2026-09-17T20:00:21+00:00,worker_nhat_anh,汽车用品,4,https://s.1688.com/selloffer/offer_search.htm?keywords=%C6%FB%B3%B5%D3%C3%C6%B7&beginPage=4,0.91,37000.0,浙江,义乌市,生产加工,False,车用置物袋/置物箱,1032116,True,"[{'name': '材质', 'values': array(['塑料'], dtype=object)}
+ {'name': '功能', 'values': array(['防水'], dtype=object)}
+ {'name': '使用位置', 'values': array(['座椅后背'], dtype=object)}
+ {'name': '适用汽车品牌', 'values': array(['通用'], dtype=object)}
+ {'name': '品牌', 'values': array(['启旺'], dtype=object)}
+ {'name': '使用方式', 'values': array(['悬挂式'], dtype=object)}
+ {'name': '加工定制', 'values': array(['否'], dtype=object)}
+ {'name': '容积', 'values': array(['其他'], dtype=object)}
+ {'name': '颜色', 'values': array(['1包20只【可立式可粘贴】'], dtype=object)}
+ {'name': '货号', 'values': array(['5401'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['否'], dtype=object)}
+ {'name': 'LOGO印刷', 'values': array(['不可以'], dtype=object)}
+ {'name': '是否专利货源', 'values': array(['否'], dtype=object)}
+ {'name': '置物用品类型', 'values': array(['置物袋'], dtype=object)}]","[{'name': 'Thương hiệu', 'values': array(['Khai Vương'], dtype=object)}
+ {'name': 'Chất liệu', 'values': array(['Nhựa'], dtype=object)}
+ {'name': 'Sử dụng vị trí', 'values': array(['Lưng ghế'], dtype=object)}
+ {'name': 'Gia công tùy chỉnh', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Thể tích', 'values': array(['Khác'], dtype=object)}
+ {'name': 'Màu sắc', 'values': array(['1 gói 20 cái [có thể đứng và dán]'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['5401'], dtype=object)}
+ {'name': 'Có xuất khẩu xuyên biên giới dành riêng cho nguồn hàng không', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Chức năng', 'values': array(['Chống nước'], dtype=object)}
+ {'name': 'Thương hiệu xe áp dụng', 'values': array(['Thông dụng'], dtype=object)}
+ {'name': 'In LOGO', 'values': array(['Không thể.'], dtype=object)}
+ {'name': 'Có phải là nguồn cấp bằng sáng chế không', 'values': array(['Không.3'], dtype=object)}
+ {'name': 'Loại đồ dùng', 'values': array(['Túi đựng đồ'], dtype=object)}
+ {'name': 'Cách sử dụng', 'values': array(['Kiểu treo'], dtype=object)}]",14,14,14,,9,0.658,False,False,ratio,0.2,ratio,0.2
+805531778207,全英文SADOER骨胶原抗皱睡眠面膜 补水保湿Facial mask外贸跨境,Mặt nạ ngủ chống nhăn Collagen toàn tiếng Anh,"化妆品功效: 滋润; 品牌: SADOER; 产品形态: 冻膜; 适用人群: 通用; 品牌类型: 国货品牌; 是否进口: 否; 适用肤质: 通用; 保质期: 3年; 规格: 正常规格; 净含量: 3283093; 产品规格: 睡眠面膜4mlX20pcs[仅供外贸出口售，禁国内销售，购买即默认免责声明且承担责任]; 主要下游平台: 亚马逊, 速卖通; 是否跨境出口专供货源: 是; 非特化妆品备案证号: 粤G妆网备字2024247097; 货号: NO.SD00582; 特殊用途化妆品: 否; 有可授权的自有品牌: 是; 产地: 广州; 主要销售地区: 东南亚; 产品名称: 玖美堂虾青素双抗面膜","Hiệu quả thẩm mỹ: dưỡng ẩm; thương hiệu: SADOER; Hình thức sản phẩm: phim đông lạnh; Đám đông áp dụng: mục đích chung2; Loại thương hiệu: Thương hiệu nội địa; Có nhập khẩu không: KHÔNG1; Loại da áp dụng: mục đích chung1; thời hạn sử dụng: 3 năm; đặc điểm kỹ thuật: Thông số kỹ thuật bình thường; Hàm lượng tịnh: 3283093; Thông số kỹ thuật sản phẩm: Mặt nạ ngủ 4mlX20 chiếc [Chỉ dành cho xuất khẩu ngoại thương, bán hàng trong nước đều bị cấm, mua hàng có nghĩa là từ chối trách nhiệm và chịu trách nhiệm]; Các nền tảng hạ lưu chính: amazon, AliExpress; Có nên cung cấp nguồn cung độc quyền cho xuất khẩu xuyên biên giới hay không: là1; Số hồ sơ mỹ phẩm không đặc biệt: Quảng Đông G trang điểm mạng chuẩn bị ký tự 2024247097; Mã sản phẩm: NO.SD00582; Mỹ phẩm chuyên dùng: KHÔNG2; Thương hiệu riêng được ủy quyền: là2; Xuất xứ: Quảng Châu; Khu vực bán hàng chính: Đông Nam Á; tên sản phẩm: Mặt nạ kháng khuẩn kép Astaxanthin Jiumei Tang",beauty,1688,https://detail.1688.com/offer/805531778207.html,2026-09-19T18:58:34+00:00,worker_nhat_anh,面膜,24,https://s.1688.com/selloffer/offer_search.htm?keywords=%C3%E6%C4%A4&beginPage=24,1.9,6900.0,广东,广州市,经销批发,False,涂抹面膜,201305009,True,"[{'name': '化妆品功效', 'values': array(['滋润'], dtype=object)}
+ {'name': '品牌', 'values': array(['SADOER'], dtype=object)}
+ {'name': '产品形态', 'values': array(['冻膜'], dtype=object)}
+ {'name': '适用人群', 'values': array(['通用'], dtype=object)}
+ {'name': '品牌类型', 'values': array(['国货品牌'], dtype=object)}
+ {'name': '是否进口', 'values': array(['否'], dtype=object)}
+ {'name': '适用肤质', 'values': array(['通用'], dtype=object)}
+ {'name': '保质期', 'values': array(['3年'], dtype=object)}
+ {'name': '规格', 'values': array(['正常规格'], dtype=object)}
+ {'name': '净含量', 'values': array(['3283093'], dtype=object)}
+ {'name': '产品规格', 'values': array(['睡眠面膜4mlX20pcs[仅供外贸出口售，禁国内销售，购买即默认免责声明且承担责任]'], dtype=object)}
+ {'name': '主要下游平台', 'values': array(['亚马逊', '速卖通'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['是'], dtype=object)}
+ {'name': '非特化妆品备案证号', 'values': array(['粤G妆网备字2024247097'], dtype=object)}
+ {'name': '货号', 'values': array(['NO.SD00582'], dtype=object)}
+ {'name': '特殊用途化妆品', 'values': array(['否'], dtype=object)}
+ {'name': '有可授权的自有品牌', 'values': array(['是'], dtype=object)}
+ {'name': '产地', 'values': array(['广州'], dtype=object)}
+ {'name': '主要销售地区', 'values': array(['东南亚'], dtype=object)}
+ {'name': '产品名称', 'values': array(['玖美堂虾青素双抗面膜'], dtype=object)}]","[{'name': 'Có nhập khẩu không', 'values': array(['KHÔNG1'], dtype=object)}
+ {'name': 'Loại da áp dụng', 'values': array(['mục đích chung1'], dtype=object)}
+ {'name': 'thời hạn sử dụng', 'values': array(['3 năm'], dtype=object)}
+ {'name': 'đặc điểm kỹ thuật', 'values': array(['Thông số kỹ thuật bình thường'], dtype=object)}
+ {'name': 'Hàm lượng tịnh', 'values': array(['3283093'], dtype=object)}
+ {'name': 'Hình thức sản phẩm', 'values': array(['phim đông lạnh'], dtype=object)}
+ {'name': 'Thông số kỹ thuật sản phẩm', 'values': array(['Mặt nạ ngủ 4mlX20 chiếc [Chỉ dành cho xuất khẩu ngoại thương, bán hàng trong nước đều bị cấm, mua hàng có nghĩa là từ chối trách nhiệm và chịu trách nhiệm]'],
+       dtype=object)}
+ {'name': 'thương hiệu', 'values': array(['SADOER'], dtype=object)}
+ {'name': 'Hiệu quả thẩm mỹ', 'values': array(['dưỡng ẩm'], dtype=object)}
+ {'name': 'Các nền tảng hạ lưu chính', 'values': array(['amazon', 'AliExpress'], dtype=object)}
+ {'name': 'Có nên cung cấp nguồn cung độc quyền cho xuất khẩu xuyên biên giới hay không', 'values': array(['là1'], dtype=object)}
+ {'name': 'Loại thương hiệu', 'values': array(['Thương hiệu nội địa'], dtype=object)}
+ {'name': 'Số hồ sơ mỹ phẩm không đặc biệt', 'values': array(['Quảng Đông G trang điểm mạng chuẩn bị ký tự 2024247097'],
+       dtype=object)}
+ {'name': 'Mã sản phẩm', 'values': array(['NO.SD00582'], dtype=object)}
+ {'name': 'Mỹ phẩm chuyên dùng', 'values': array(['KHÔNG2'], dtype=object)}
+ {'name': 'Thương hiệu riêng được ủy quyền', 'values': array(['là2'], dtype=object)}
+ {'name': 'Xuất xứ', 'values': array(['Quảng Châu'], dtype=object)}
+ {'name': 'Khu vực bán hàng chính', 'values': array(['Đông Nam Á'], dtype=object)}
+ {'name': 'Đám đông áp dụng', 'values': array(['mục đích chung2'], dtype=object)}
+ {'name': 'tên sản phẩm', 'values': array(['Mặt nạ kháng khuẩn kép Astaxanthin Jiumei Tang'], dtype=object)}]",20,20,20,全英文SADOER植物玫瑰面膜Facial mask 补水保湿面膜跨境外贸批发 ￥ 0.25 已售6647775笔 全英文SADOER植物花果面膜Facial mask 补水保湿面膜跨境外贸批发 ￥ 0.24 已售665680笔 全英文SADOER植物玫瑰面膜Facial mask 补水嫩肤面膜跨境外贸批发 ￥ 0.24 已售294705笔 全英文FAYANKOU植物面膜25g Facial mask 保湿面膜跨境外贸批发 ￥ 0.28 已售329922笔 全英文SADOER骨胶原抗皱护肤品套装 身体乳洗发水跨境外贸批发 ￥ 0.58 已售72709笔 全英文SADOER椰子滋润洗护套装 身体乳洗发水沐浴露跨境外贸批发 ￥ 0.95 已售200484笔 全英文BIOAOUA大米原浆护肤品套装 补水嫩肤面膜面霜跨境外贸批发 ￥ 0.40 已售29502笔 全英文SADOER玻尿酸保湿抗氧化Facial mask 女神面膜跨境外贸批发 ￥ 0.24 已售101999笔 全英文ZOZU黄金眼膜补水保湿 眼膜贴全系列eye mask 跨境外贸批发 ￥ 3.00 已售586316笔 全英文SADOER鱼子酱眼膜片装 Eye mask眼膜全系列跨境外贸批发 ￥ 0.23 已售274505笔 全英文SADOER植萃护手霜系列 补水滋润 Hand Cream 跨境外贸批发 ￥ 0.42 已售193571笔 全英文SADOER植萃护手霜 补水滋润Hand Cream护手霜跨境外贸批发 ￥ 0.42 已售168450笔,24,0.639,False,False,ratio,0.25,ratio,0.25
+785329535292,轻熟风星空短袖满天星烫钻宽松微潮体恤Tee男上衣T恤2024年,Áo phông nam Áo Phông Nam 2024 năm,"主面料成分: 纯棉; 面料名称: 棉; 款式: 套头; 品牌: 其他; 工艺: 烫钻; 适合人群: 青少年; 类别: 短袖T恤; 风格: 青春流行; 货号: D287精梳棉; 图案: 圆点; 版型: 宽松型; 货源类别: 现货; 领型: 圆领; 袖长: 短袖; 厚薄: 薄款; 适合季节: 夏季; 是否库存: 是; 上市年份/季节: 2023年春季; 主面料成分的含量: 96%及以上; 适用场景: 日常; 款式细节: 烫钻; 印花主题: 其他; 颜色: 黑色, 白色; 尺码: S, M, L, XL, 2XL, 3XL, 4XL, 5XL; 主要下游平台: ebay, 亚马逊, wish, 速卖通, 独立站, LAZADA, 其他; 主要销售地区: 非洲, 欧洲, 南美, 东南亚, 北美, 东北亚, 中东, 其他; 是否跨境出口专供货源: 是; 袖型: 常规; 原创设计货源: 否; 有无质检报告: 否; 克重: 180g(含)-250g(不含); 材质功能: 抗菌; 领标: 有领标; 货源类型: 源头工厂; 吊牌: 有吊牌","Thành phần vải chính: Bông tơ tự nhiên; Tên vải: bông; phong cách: áo thun1; thương hiệu: Khác1; Công nghệ: Kim cương nóng2; Phù hợp với đám đông: Thanh thiếu niên; Danh mục: Áo thun ngắn tay; Phong cách: Thời trang trẻ trung; Số mặt hàng: D287 bông chải kỹ; Hoa văn: chấm; Kiểu dáng: Loại rời; Loại nguồn: Hàng sẵn; Kiểu cổ áo: Cổ tròn; Dài tay áo: Cộc tay; Dày mỏng: Mẫu mỏng; Thích hợp cho mùa: Mùa hè; Nó có trong kho không?: Đúng.1; Năm/Mùa niêm yết: Mùa xuân năm 2023; Nội dung của Thành phần vải chính: 96% trở lên; Các tình huống áp dụng: hàng ngày; Chi tiết phong cách: Kim cương nóng1; Chủ đề in hoa: Khác2; Màu sắc: Màu đen, Màu trắng; Kích cỡ: S, M, L, XL, 2XL, 3XL, 4XL, 5XL; Các nền tảng hạ nguồn chính: ebay, Amazon, wish, AliExpress, Trạm độc lập, LAZADA, Khác3; Khu vực bán hàng chính: Châu Phi, Châu Âu, Nam Mỹ, Đông Nam Á, Bắc Mỹ, Đông Bắc Á, Trung Đông, Khác4; Đây có phải là nguồn cung cấp xuất khẩu xuyên biên giới?: Đúng.2; Kiểu tay áo: Thông thường; Nguồn thiết kế ban đầu: Không.1; Có báo cáo kiểm tra chất lượng không: Không.2; Trọng lượng: 180g (bao gồm)-250g (không bao gồm); Chức năng chất liệu: Kháng khuẩn; Nhãn: Có nhãn cổ áo; Loại nguồn: Nhà máy nguồn; Thẻ treo: Có thẻ",fashion,1688,https://detail.1688.com/offer/785329535292.html,2026-09-20T07:43:15+00:00,worker_huy,男士T恤,24,https://s.1688.com/selloffer/offer_search.htm?keywords=%C4%D0%CA%BFT%D0%F4&beginPage=24,20.0,2400.0,广东,揭阳市,生产加工,False,男式T恤,315,True,"[{'name': '主面料成分', 'values': array(['纯棉'], dtype=object)}
+ {'name': '面料名称', 'values': array(['棉'], dtype=object)}
+ {'name': '款式', 'values': array(['套头'], dtype=object)}
+ {'name': '品牌', 'values': array(['其他'], dtype=object)}
+ {'name': '工艺', 'values': array(['烫钻'], dtype=object)}
+ {'name': '适合人群', 'values': array(['青少年'], dtype=object)}
+ {'name': '类别', 'values': array(['短袖T恤'], dtype=object)}
+ {'name': '风格', 'values': array(['青春流行'], dtype=object)}
+ {'name': '货号', 'values': array(['D287精梳棉'], dtype=object)}
+ {'name': '图案', 'values': array(['圆点'], dtype=object)}
+ {'name': '版型', 'values': array(['宽松型'], dtype=object)}
+ {'name': '货源类别', 'values': array(['现货'], dtype=object)}
+ {'name': '领型', 'values': array(['圆领'], dtype=object)}
+ {'name': '袖长', 'values': array(['短袖'], dtype=object)}
+ {'name': '厚薄', 'values': array(['薄款'], dtype=object)}
+ {'name': '适合季节', 'values': array(['夏季'], dtype=object)}
+ {'name': '是否库存', 'values': array(['是'], dtype=object)}
+ {'name': '上市年份/季节', 'values': array(['2023年春季'], dtype=object)}
+ {'name': '主面料成分的含量', 'values': array(['96%及以上'], dtype=object)}
+ {'name': '适用场景', 'values': array(['日常'], dtype=object)}
+ {'name': '款式细节', 'values': array(['烫钻'], dtype=object)}
+ {'name': '印花主题', 'values': array(['其他'], dtype=object)}
+ {'name': '颜色', 'values': array(['黑色', '白色'], dtype=object)}
+ {'name': '尺码', 'values': array(['S', 'M', 'L', 'XL', '2XL', '3XL', '4XL', '5XL'], dtype=object)}
+ {'name': '主要下游平台', 'values': array(['ebay', '亚马逊', 'wish', '速卖通', '独立站', 'LAZADA', '其他'], dtype=object)}
+ {'name': '主要销售地区', 'values': array(['非洲', '欧洲', '南美', '东南亚', '北美', '东北亚', '中东', '其他'], dtype=object)}
+ {'name': '是否跨境出口专供货源', 'values': array(['是'], dtype=object)}
+ {'name': '袖型', 'values': array(['常规'], dtype=object)}
+ {'name': '原创设计货源', 'values': array(['否'], dtype=object)}
+ {'name': '有无质检报告', 'values': array(['否'], dtype=object)}
+ {'name': '克重', 'values': array(['180g(含)-250g(不含)'], dtype=object)}
+ {'name': '材质功能', 'values': array(['抗菌'], dtype=object)}
+ {'name': '领标', 'values': array(['有领标'], dtype=object)}
+ {'name': '货源类型', 'values': array(['源头工厂'], dtype=object)}
+ {'name': '吊牌', 'values': array(['有吊牌'], dtype=object)}]","[{'name': 'Phong cách', 'values': array(['Thời trang trẻ trung'], dtype=object)}
+ {'name': 'Số mặt hàng', 'values': array(['D287 bông chải kỹ'], dtype=object)}
+ {'name': 'Thành phần vải chính', 'values': array(['Bông tơ tự nhiên'], dtype=object)}
+ {'name': 'Hoa văn', 'values': array(['chấm'], dtype=object)}
+ {'name': 'Kiểu dáng', 'values': array(['Loại rời'], dtype=object)}
+ {'name': 'Loại nguồn', 'values': array(['Hàng sẵn'], dtype=object)}
+ {'name': 'Loại nguồn', 'values': array(['Nhà máy nguồn'], dtype=object)}
+ {'name': 'Phù hợp với đám đông', 'values': array(['Thanh thiếu niên'], dtype=object)}
+ {'name': 'phong cách', 'values': array(['áo thun1'], dtype=object)}
+ {'name': 'Kiểu cổ áo', 'values': array(['Cổ tròn'], dtype=object)}
+ {'name': 'Dài tay áo', 'values': array(['Cộc tay'], dtype=object)}
+ {'name': 'Dày mỏng', 'values': array(['Mẫu mỏng'], dtype=object)}
+ {'name': 'thương hiệu', 'values': array(['Khác1'], dtype=object)}
+ {'name': 'Thích hợp cho mùa', 'values': array(['Mùa hè'], dtype=object)}
+ {'name': 'Nó có trong kho không?', 'values': array(['Đúng.1'], dtype=object)}
+ {'name': 'Năm/Mùa niêm yết', 'values': array(['Mùa xuân năm 2023'], dtype=object)}
+ {'name': 'Tên vải', 'values': array(['bông'], dtype=object)}
+ {'name': 'Nội dung của Thành phần vải chính', 'values': array(['96% trở lên'], dtype=object)}
+ {'name': 'Các tình huống áp dụng', 'values': array(['hàng ngày'], dtype=object)}
+ {'name': 'Chi tiết phong cách', 'values': array(['Kim cương nóng1'], dtype=object)}
+ {'name': 'Chủ đề in hoa', 'values': array(['Khác2'], dtype=object)}
+ {'name': 'Công nghệ', 'values': array(['Kim cương nóng2'], dtype=object)}
+ {'name': 'Màu sắc', 'values': array(['Màu đen', 'Màu trắng'], dtype=object)}
+ {'name': 'Kích cỡ', 'values': array(['S', 'M', 'L', 'XL', '2XL', '3XL', '4XL', '5XL'], dtype=object)}
+ {'name': 'Các nền tảng hạ nguồn chính', 'values': array(['ebay', 'Amazon', 'wish', 'AliExpress', 'Trạm độc lập', 'LAZADA',
+        'Khác3'], dtype=object)}
+ {'name': 'Khu vực bán hàng chính', 'values': array(['Châu Phi', 'Châu Âu', 'Nam Mỹ', 'Đông Nam Á', 'Bắc Mỹ',
+        'Đông Bắc Á', 'Trung Đông', 'Khác4'], dtype=object)}
+ {'name': 'Đây có phải là nguồn cung cấp xuất khẩu xuyên biên giới?', 'values': array(['Đúng.2'], dtype=object)}
+ {'name': 'Danh mục', 'values': array(['Áo thun ngắn tay'], dtype=object)}
+ {'name': 'Kiểu tay áo', 'values': array(['Thông thường'], dtype=object)}
+ {'name': 'Nguồn thiết kế ban đầu', 'values': array(['Không.1'], dtype=object)}
+ {'name': 'Có báo cáo kiểm tra chất lượng không', 'values': array(['Không.2'], dtype=object)}
+ {'name': 'Trọng lượng', 'values': array(['180g (bao gồm)-250g (không bao gồm)'], dtype=object)}
+ {'name': 'Chức năng chất liệu', 'values': array(['Kháng khuẩn'], dtype=object)}
+ {'name': 'Nhãn', 'values': array(['Có nhãn cổ áo'], dtype=object)}
+ {'name': 'Thẻ treo', 'values': array(['Có thẻ'], dtype=object)}]",35,35,35,,12,0.487,False,False,ratio,0.26,ratio,0.26
