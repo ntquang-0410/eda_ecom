@@ -2474,16 +2474,8 @@ chỉ thêm 4 file (`parent_commit` = phiên bản vừa kiểm), rồi kiểm l
 f5e2fa2abc, 79 mục, `data/cleaned/` chỉ có file của Huy, 4 đích chưa có, SHA khớp. README bản công bố sửa dòng trỏ tên
 file SHA mới. Chờ anh đăng nhập HF bằng token có quyền ghi (`hf auth login` trong terminal, không dán token vào chat).
 
+
 **Prompt 94:**
-> "Ủa sao Huy đẩy thẳng lên đó được"
-
-→ Giải thích (theo ảnh trang `data/cleaned` anh gửi): commit file của Huy đứng tên **ntquang0410** ("1 contributor"), tức
-được đẩy bằng tài khoản/token của Quang, không phải tài khoản riêng của Huy. Repo thuộc tài khoản cá nhân Quang, HF không
-cho thêm người ghi vào repo cá nhân → tài khoản trinhnhatanh trên trình duyệt chỉ mở được Pull Request. Cách: (1) Quang
-merge PR; (2) dùng token ghi của Quang như Huy (bộ crawl có HF_TOKEN trong .env; Claude bị chặn đọc .env, anh tự chạy);
-(3) chuyển repo sang Organization để mọi người ghi trực tiếp. (Các prompt về cách đẩy HF ngay trước đó anh dặn không ghi.)
-
-**Prompt 95:**
 > "Hãy commit và push lên nhánh https://github.com/ntquang-0410/eda_ecom/tree/nhatanh_updating"
 
 → Đã làm:
