@@ -1,0 +1,15 @@
+﻿,value
+rows,16348.0
+cols,30.0
+null_%_max,16.5
+empty_%_max,77.07
+dup_pair_%,1.29
+dup_zh_%,2.97
+dup_vi_%,1.33
+avg_len_zh,31.2
+avg_len_vi,125.0
+avg_tok_zh,31.1
+avg_tok_vi,27.8
+ratio_tok_median,0.9
+ratio_outliers_%,0.18
+suspect_%,0.18

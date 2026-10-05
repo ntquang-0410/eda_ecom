@@ -8,3 +8,7 @@ torch>=2.0.0
 
 # (Tùy chọn) Thư viện chính thức của BAAI - hỗ trợ dense/sparse/colbert:
 FlagEmbedding>=1.2.10
+
+# Hugging Face Hub & Environment configuration
+huggingface_hub>=0.20.0
+python-dotenv>=1.0.0
