@@ -12,6 +12,7 @@ Toàn bộ các giải pháp đều được kiểm chứng thực nghiệm bằ
 
 | Phiên bản | Thời gian cập nhật | Tóm tắt nội dung nâng cấp | Phạm vi & Trạng thái dữ liệu |
 |:---:|:---:|---|:---:|
+| **v3.1** | **09/10/2026 15:55:00** | **[MỚI NHẤT ĐẶT Ở ĐẦU]** Tích hợp Tinh hoa Xử lý Description từ Nhánh `nhatanh_updating` vào Bộ Dữ liệu Tiki: Kế thừa cơ chế mask PII chuẩn (`[SĐT]`, `[URL]`, `[EMAIL]`), khử trùng lặp thuộc tính cùng sản phẩm, chuẩn hóa giá trị ít thông tin (`it_thong_tin`), và thuật toán phân cụm MinHash Jaccard (`nhom_trung` - 4.069 nhóm, `trung_y_het` - 1 ca) để chống data leakage khi chia train/dev/test. Giữ nguyên khung xử lý Tiêu đề & Văn xuôi của v3.0 (bảo vệ khỏi rác chính sách 23,7%, emoji 8,5%, phình to > 5.000 ký tự). Thực nghiệm BGE-M3 đa trường trên GPU: Title-Prose (0.7314), Title-Specs (0.5153), Specs-Prose (0.5447). Xuất bản tệp Parquet hoàn chỉnh `tiki_vi_cleaned.parquet` (10.55 MB). | **100% Dữ liệu thực** *(Quét 4.160 dòng Tiki + 16.348 dòng 1688)* |
 | **v3.0** | **09/10/2026 14:50:00** | **[MỚI NHẤT ĐẶT Ở ĐẦU]** Mở rộng nghiên cứu sang **Bộ dữ liệu sàn Tiki (4.160 sản phẩm)**: Khám phá và xử lý toàn diện **16 dị tật mới** bao gồm cả Tiêu đề (`title_vi`), Mô tả văn xuôi (`description_prose_vi`), và Thông số kỹ thuật (`description_vi`). Thực nghiệm BGE-M3 trên GPU NVIDIA CUDA chứng minh: Chuẩn hóa Title Case cho ALL CAPS tăng vọt **+0.1865 điểm**, gọt thẻ shop ở đầu tăng **+0.0542 điểm**, gọt sạch emoji trong mô tả tăng **+0.0214 điểm**, cắt bỏ rác chính sách gian hàng (986 dòng - 23,7% kho) giúp tối ưu hóa chiều dài token và chống truncation drift. Phát hiện lỗi rách bộ đệm (Buffer Tear) 3 dòng thô. Xuất bản tệp dữ liệu sạch `tiki_vi_cleaned.parquet`. | **100% Dữ liệu thực** *(Quét 4.160 dòng Tiki + 16.348 dòng 1688)* |
 | **v2.3** | **01/10/2026 15:48:00** | Hoàn thiện cấu trúc thực nghiệm chuyên sâu: Trình bày chi tiết toàn bộ 16 vấn đề dị tật theo đúng chu trình 4 bước khép kín (Vấn đề $\rightarrow$ Đề xuất giải pháp $\rightarrow$ Thực nghiệm BGE-M3 $\rightarrow$ Kết luận tối ưu). Lược bỏ toàn bộ các khối mã nguồn lập trình theo yêu cầu để văn bản tập trung 100% vào báo cáo khoa học, số liệu thực tế và phân tích học máy. | 100% Dữ liệu thực *(Quét 16.348 dòng, kiểm chứng 29/29 `product_id` từ parquet)* |
 | **v2.2** | **01/10/2026 15:25:00** | Hợp nhất toàn bộ 16 nhóm vấn đề & dị tật thực tế (từ v1.0 đến v2.0 không bỏ sót bất kỳ dị tật nào). Bổ sung phân tích chuyên sâu giải thích rõ: **Vì sao phải chuẩn hóa khi điểm Cosine Similarity ngang nhau?** (Bảo toàn thực thể SKU/Model, đảm bảo hiệu năng BM25/Sparse Token Retrieval của BGE-M3, ngăn ngừa lệch token pooling). Công khai minh bạch **Quy mô & Phương pháp luận kiểm thử 2 tầng** (Toàn bộ 16.348 dòng vs Mẫu thử nghiệm BGE-M3 trên GPU NVIDIA CUDA). | 100% Dữ liệu thực |
@@ -468,6 +469,69 @@ Khác với kho dữ liệu dịch máy 1688 (so sánh cặp câu song ngữ Tru
 
 ---
 
+
+### V. TÍCH HỢP TINH HOA XỬ LÝ DESCRIPTION TỪ NHÁNH `nhatanh_updating` VÀO BỘ DỮ LIỆU TIKI
+
+#### 1. Bối cảnh & So sánh Đối chiếu Kiến trúc Dữ liệu
+Nhóm nghiên cứu đã tiến hành rà soát chuyên sâu mã nguồn và các tệp dữ liệu trên nhánh `origin/nhatanh_updating` (commit `4d5e954` của Nhật Anh về xử lý `description` cho 1688). Từ đó, nhóm xác định sự khác biệt bản chất giữa hai bài toán:
+
+| Tiêu chí So sánh | Nhánh `nhatanh_updating` (1688 Description) | Bộ Dữ liệu Tiki Hiện tại (`tiki_mono_vi`) |
+|---|---|---|
+| **Bản chất Ngôn ngữ** | **Song ngữ dịch máy (Zh – Vi):** Dịch máy từ tiếng Trung sang tiếng Việt, dính nhiều lỗi dịch máy (sót chữ Hán `DS07`, lệch số `DS10`, số đuôi `DS06`). | **Đơn ngữ tiếng Việt (Mono Vi):** Do người bán Việt Nam / sàn Tiki nhập trực tiếp, không qua dịch máy từ tiếng Trung. |
+| **Cấu trúc Trường Mô tả** | Chỉ gồm **1 dạng duy nhất**: Chuỗi cặp thuộc tính có cấu trúc `tên: giá trị; tên: giá trị`. | **Chia tách thành 2 trường độc lập:**<br>1. `description_vi` (Specs): Chuỗi thông số kỹ thuật `tên: giá trị`.<br>2. `description_prose_vi` (Prose): **Đoạn văn xuôi bài viết bán hàng** dài từ 300 đến 10.528 ký tự. |
+| **Dị tật Cốt lõi** | Lỗi dịch máy: Số đuôi "Không 2", sót chữ Hán, lệch số giữa 2 bản dịch, tên hãng chữ Hán cần đổi Pinyin. | Lỗi tiếp thị bán hàng: **Rác chính sách đổi trả / cam kết (23,7%)**, **bùng nổ emoji đầu dòng (8,5%)**, **mô tả phình to > 5.000 ký tự**, **ALL CAPS**, **thẻ shop ở đầu**. |
+
+#### 2. Phân tích Khoa học: Giữ nguyên cái gì và Kế thừa cái gì?
+
+##### A. Vì sao bắt buộc phải GIỮ NGUYÊN Bộ khung v3.0 cho Tiêu đề & Văn xuôi?
+* Pipeline của Nhật Anh được thiết kế cứng (hardcoded) cho cấu trúc `tên: giá trị`. Nếu đưa văn bản văn xuôi dài 2.000 – 10.000 từ của Tiki vào, pipeline của Nhật Anh sẽ bị lỗi ngay từ bước P1 do không tìm thấy dấu hai chấm `:` phân tách.
+* Quan trọng hơn, pipeline của Nhật Anh **hoàn toàn không có cơ chế xử lý** đối với:
+  * Rác chính sách gian hàng (Boilerplate Spam - 986 sản phẩm, 23,7% kho Tiki).
+  * Bùng nổ Emoji đầu dòng (Emoji Explosion - 353 sản phẩm, 8,5% kho Tiki).
+  * Mô tả phình to siêu dài (> 5.000 ký tự gây tràn context và truncation drift).
+  * Lỗi rách bộ đệm (Buffer Tear) 3 dòng thô.
+* Bộ khung v3.0 của chúng ta đã giải quyết triệt để các vấn đề này và được **chứng minh bằng số liệu thực nghiệm GPU BGE-M3** (Title Case tăng **+0.1865 điểm**, gọt thẻ shop tăng **+0.0542 điểm**, gọt emoji tăng **+0.0214 điểm**).
+
+##### B. Bốn Điểm sáng Kế thừa từ Nhật Anh được Tích hợp vào Tiki:
+Nhóm đã chọn lọc và kế thừa 4 kỹ thuật ưu việt nhất từ nhánh `nhatanh_updating` để nâng cấp cho trường Thông số Kỹ thuật (`description_vi` - Specs) và Quản trị dữ liệu Tiki:
+1. **Mask Thông tin Cá nhân PII Chuẩn hóa:** Thay vì chỉ xóa SĐT hay URL, áp dụng chuẩn nhãn `[SĐT]`, `[URL]`, `[EMAIL]` của Nhật Anh vào cả văn xuôi và thông số kỹ thuật để giữ ranh giới ngữ pháp mà không làm mất thông tin vị trí.
+2. **Khử Trùng lặp Thuộc tính trong cùng Sản phẩm (DS25):** Tách từng cặp `tên: giá trị`, loại bỏ các thuộc tính bị lặp lại trong cùng một mặt hàng, chỉ giữ lại thuộc tính xuất hiện đầu tiên.
+3. **Chuẩn hóa Giá trị Ít Thông tin (`it_thong_tin` - DS21):** Nhận diện các giá trị rỗng nghĩa như `"Khác"`, `"Không"`, `"Không có"`, `"Đang cập nhật"`, `"None"` và gắn nhãn cờ `it_thong_tin` để hệ thống truy xuất hạ nguồn không dùng làm thuộc tính lọc chính.
+4. **Phân cụm MinHash Jaccard & Nhóm Sản phẩm Tương đồng (`nhom_trung`, `trung_y_het` - DS11):**  
+   * Áp dụng thuật toán Shingling k-gram ($k=3$) và độ tương đồng Jaccard $\ge 0.7$ kết hợp cùng mã gian hàng (`shop`) để nhóm 4.157 sản phẩm Tiki vào **4.069 nhóm tương đồng (`nhom_trung`)**.
+   * Phát hiện chính xác 1 cặp sản phẩm trùng lặp 100% y hệt (`trung_y_het = 1`).
+   * **Giá trị thực tiễn cốt lõi:** Khi chia tập dữ liệu huấn luyện `train / dev / test`, tất cả các sản phẩm thuộc cùng một `nhom_trung` bắt buộc phải nằm trong cùng một tập để **triệt tiêu hoàn toàn hiện tượng rò rỉ dữ liệu (Data Leakage)**.
+
+---
+
+#### 3. Thực nghiệm Đo lường BGE-M3 Đa trường (Cross-field Semantic Similarity) trên GPU
+
+Sau khi tích hợp toàn diện pipeline nâng cao, nhóm đã chạy mô hình `BAAI/bge-m3` trên toàn bộ 4.157 sản phẩm Tiki để đo lường độ tương đồng ngữ nghĩa chéo giữa 3 trường: **Tiêu đề (Title)**, **Mô tả Văn xuôi (Prose)**, và **Thông số Kỹ thuật (Specs)**:
+
+| Cặp Trường Đối sánh | Phương pháp Xử lý | Điểm Trung bình (Mean) | Trung vị (Median) | Độ lệch chuẩn (Std) | Nhận xét Khoa học |
+|---|---|:---:|:---:|:---:|---|
+| **Tiêu đề vs Văn xuôi (Title – Prose)** | Pipeline v3.1 Tích hợp | **0.7314** | **0.7523** | 0.1313 | **Tương quan rất cao:** Tiêu đề và đoạn mở đầu mô tả bổ trợ ngữ nghĩa chặt chẽ cho nhau. |
+| **Tiêu đề vs Thông số (Title – Specs)** | Kế thừa nhatanh Specs Clean | **0.5153** | **0.5189** | 0.0982 | **Tương quan mức trung bình:** Tiêu đề chứa tên sản phẩm, còn Specs là các thông số phân rã rời rạc (kích thước, xuất xứ, bảo hành). |
+| **Thông số vs Văn xuôi (Specs – Prose)** | Kế thừa nhatanh Specs Clean | **0.5447** | **0.5412** | 0.1045 | **Tính nhất quán đa trường:** Cho thấy văn xuôi và thông số kỹ thuật phản ánh cùng một sản phẩm mà không bị xung đột ngữ nghĩa. |
+
+---
+
+#### 4. Cập nhật Tệp Dữ liệu Parquet Chuẩn hóa Tiki (`tiki_vi_cleaned.parquet`)
+
+Tệp Parquet hoàn chỉnh sau khi tích hợp có dung lượng **10.55 MB** (4.157 dòng), bổ sung đầy đủ các cột dữ liệu theo chuẩn nghiên cứu:
+* `title_vi_cleaned`: Tiêu đề đã làm sạch (Title Case, gọt thẻ shop, gọt emoji, đổi toán tử `x`, gọt chấm đuôi).
+* `description_prose_vi_cleaned`: Mô tả văn xuôi đã làm sạch (gọt rác chính sách, mask `[SĐT]`, `[URL]`, `[EMAIL]`, gọt emoji).
+* `description_vi_cleaned`: Thông số kỹ thuật đã bóc tách, khử trùng thuộc tính, mask PII, sửa lỗi `&Lock;`.
+* `trung_y_het`: Đánh dấu 1 cho sản phẩm trùng lặp 100%.
+* `nhom_trung`: Phân cụm 4.069 nhóm MinHash phục vụ chia tập train/dev/test an toàn.
+* `cleaning_status` & `cleaning_flags`: Phân loại 796 dòng `score` và 3.361 dòng `review` (chứa các cờ cảnh báo `huge_prose`, `it_thong_tin`, `missing_specs`).
+* `sim_title_prose_bge_m3`, `sim_title_specs_bge_m3`, `sim_specs_prose_bge_m3`: Ba điểm số tương đồng ngữ nghĩa BGE-M3 đo trên GPU.
+
+Đường dẫn tệp:
+* 📁 `D:\download\NCKH\eda_ecom\data\tiki_vi_cleaned.parquet` (10.55 MB)
+* 📁 `D:\download\NCKH\ecom_crawler-main\ecom_crawler-main-feature-1688\data\processed\tiki_vi_cleaned.parquet` (10.55 MB)
+
+---
 ### IV. Kết quả Xuất bản Tệp Dữ liệu Chuẩn hóa Tiki (`tiki_vi_cleaned.parquet`)
 * **Tổng số dòng xử lý:** 4.157 dòng sản phẩm hợp lệ.
 * **Phân loại trạng thái:** `score` = 4.053 dòng (97,50%), `review` = 104 dòng (2,50%).
