@@ -752,6 +752,8 @@ Pipeline chuyên biệt cho mô hình Thông số kỹ thuật (Specs-Only) đư
 Tệp dữ liệu Parquet chuẩn hóa theo kiến trúc Specs-Only v3.3 đã được xuất bản đồng bộ tại cả hai vị trí kho dữ liệu:
 * 📁 `D:\download\NCKH\eda_ecom\data\tiki_vi_cleaned.parquet` (Dung lượng: **2.12 MB**, 4.157 dòng, 41 cột)
 * 📁 `D:\download\NCKH\ecom_crawler-main\ecom_crawler-main-feature-1688\data\processed\tiki_vi_cleaned.parquet` (Dung lượng: **2.12 MB**, 4.157 dòng, 41 cột)
+* 🤗 **Hugging Face Hub:** [`ntquang0410/zh-vie_ecom/data/cleaned/tiki_vi_cleaned.parquet`](https://huggingface.co/datasets/ntquang0410/zh-vie_ecom/blob/main/data/cleaned/tiki_vi_cleaned.parquet) (Dung lượng: **2.12 MB**)
+
 
 
 ## 📑 [PHIÊN BẢN v2.3] NGHIÊN CỨU & XỬ LÝ DỊ TẬT TIÊU ĐỀ SONG NGỮ TRUNG–VIỆT SÀN 1688 (16.348 CẶP TIÊU ĐỀ)
