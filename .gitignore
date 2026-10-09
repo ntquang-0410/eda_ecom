@@ -14,3 +14,6 @@ data/interim/
 # Bản chép tạm để tải lên HF (trùng data/release/desc_v1) và kết quả chạy thử bằng số giả
 data/release/desc_v1_tai_len_hf/
 data/eda/description/_thu_gia/
+
+# Bản notebook đã chạy (chứa dòng dữ liệu mẫu), sinh bởi scripts/notebook/run_desc_pipeline.py
+notebooks/*.da_chay.ipynb
