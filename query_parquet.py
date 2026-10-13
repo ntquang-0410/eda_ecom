@@ -1,33 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Script truy vấn file parquet (bilingual_zh_vi.parquet) hỗ trợ:
-  1. Truy vấn bằng cú pháp SQL hoàn chỉnh (SELECT ... FROM data WHERE ...)
-  2. Lọc bằng điều kiện WHERE giống SQL (--where "price < 15 AND category = 'bags'")
-  3. Tìm kiếm chuỗi ký tự trên tất cả các cột
-  4. Hiển thị toàn bộ các cột (expanded key-value hoặc bảng ASCII grid)
-  5. Xem cấu trúc các cột (schema) để dễ viết câu truy vấn
-
-Cách sử dụng:
-  # 1. Truy vấn SQL trực tiếp:
-  python query_parquet.py "SELECT product_id, title_vi, price, category FROM data WHERE price < 15 LIMIT 5"
-  python query_parquet.py "SELECT category, count(*) AS total, round(avg(price), 2) AS avg_price FROM data GROUP BY category"
-
-  # 2. Sàng lọc theo điều kiện WHERE (giống SQL):
-  python query_parquet.py -w "product_id = '944607859983'"
-  python query_parquet.py -s "product_id, title_vi, price" -w "category = 'bags' AND price < 20"
-
-  # 3. Tìm chuỗi trên tất cả các cột (hiện đầy đủ cả 30 cột):
-  python query_parquet.py "944607859983"
-  python query_parquet.py "bàn chải" -n 3
-
-  # 4. Xem danh sách các cột và kiểu dữ liệu:
-  python query_parquet.py --schema
-
-  # 5. Chế độ console SQL tương tác:
-  python query_parquet.py
-"""
-
 import argparse
 import os
 import re
@@ -312,8 +282,8 @@ def main():
     )
     parser.add_argument(
         "-f", "--file",
-        default="bilingual_zh_vi.parquet",
-        help="Đường dẫn file parquet (mặc định: bilingual_zh_vi.parquet)",
+        default="data/raw/bilingual_zh_vi.parquet",
+        help="Đường dẫn file parquet (mặc định: data/raw/bilingual_zh_vi.parquet)",
     )
     parser.add_argument(
         "--sql",
