@@ -48,7 +48,7 @@ ls -lh csv/bitext_full_scores.csv           # Full scores để review
 
 ```python
 from huggingface_hub import HfApi
-api = HfApi(token="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")
+api = HfApi(token="hf_xxx")  # Thay bằng token của bạn
 
 api.upload_file("data/cleaned/bitext_scored.parquet",
     path_in_repo="data/cleaned/bitext_scored.parquet",
