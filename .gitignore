@@ -27,3 +27,4 @@ Thumbs.db
 
 # Local config
 .env
+COLAB_GUIDE.md
