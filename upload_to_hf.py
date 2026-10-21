@@ -14,10 +14,17 @@ from dotenv import load_dotenv
 # Tải biến môi trường từ .env
 load_dotenv()
 
-DEFAULT_PARQUET_FILE = (
-    "data/cleaned/bilingual_zh_vi_cleaned(huy).parquet"
-    if Path("data/cleaned/bilingual_zh_vi_cleaned(huy).parquet").is_file()
-    else "bilingual_zh_vi_cleaned(huy).parquet"
+PROJECT_ROOT = Path(__file__).resolve().parent
+
+DEFAULT_CANDIDATES = [
+    "data/cleaned/bilingual_zh_vi_cado.parquet",
+    "data/cleaned/bitext_scored.parquet",
+    "data/cleaned/bilingual_zh_vi_bitext_ready.parquet",
+    "data/raw/bilingual_zh_vi.parquet",
+]
+DEFAULT_PARQUET_FILE = next(
+    (path for path in DEFAULT_CANDIDATES if Path(path).is_file()),
+    DEFAULT_CANDIDATES[0],
 )
 
 
@@ -140,7 +147,13 @@ def main():
     elif "/" not in repo_id:
         repo_id = f"{username}/{repo_id}"
 
-    path_in_repo = args.path_in_repo or str(file_path).replace("\\", "/")
+    path_in_repo = args.path_in_repo
+    if not path_in_repo:
+        # Giữ cấu trúc thư mục nếu file nằm trong repo; nếu không, chỉ lấy tên file.
+        try:
+            path_in_repo = file_path.resolve().relative_to(PROJECT_ROOT).as_posix()
+        except ValueError:
+            path_in_repo = file_path.name
 
     # 5. Tạo Repo nếu chưa tồn tại
     print(f"🔍 Kiểm tra repository: https://huggingface.co/datasets/{repo_id} ...")

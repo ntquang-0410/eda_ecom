@@ -1,14 +1,20 @@
-# BAAI/bge-m3 multilingual embedding (Trung - Việt similarity)
-# Cách cài đặt:
+# Pipeline Trung–Việt (CADO + Bitext Filter)
+# Cài đặt:
 #   pip install -r requirements.txt
-#
-# Nếu chỉ cần dense embedding (đơn giản nhất cho cosine similarity):
+
+# Xử lý dữ liệu
+pandas>=2.0.0
+numpy>=1.24.0
+pyarrow>=14.0.0
+duckdb>=0.10.0
+
+# Embedding / model
 sentence-transformers>=2.6.0
 torch>=2.0.0
 
-# (Tùy chọn) Thư viện chính thức của BAAI - hỗ trợ dense/sparse/colbert:
-FlagEmbedding>=1.2.10
-
-# Hugging Face Hub & Environment configuration
+# Hugging Face Hub & cấu hình
 huggingface_hub>=0.20.0
 python-dotenv>=1.0.0
+
+# (Tuỳ chọn) Nếu muốn dùng sparse/colbert của BAAI ngoài sentence-transformers:
+# FlagEmbedding>=1.2.10
