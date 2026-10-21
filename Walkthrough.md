@@ -54,7 +54,7 @@ Hai thành phần chính:
 - 1688.com (Trung Quốc), sản phẩm được crawl và dịch sang tiếng Việt.
 - File gốc: `data/raw/bilingual_zh_vi.parquet` — **16.348 dòng × 30 cột**.
 - Ngoài ra có artifact Tiki `data/cleaned/tiki_vi_cado.parquet`
-  (**13.200 × 37**) nhưng repo **không có raw/source script** cho Tiki.
+  (**13.200 × 38**) nhưng repo **không có raw/source script** cho Tiki.
 
 ### 2.2 Nhóm cột
 
@@ -665,7 +665,7 @@ python -m unittest discover -s tests -v
 | `data/cleaned/bilingual_zh_vi_cado.parquet` | 16.348 × 33 | **Mới regenerate** |
 | `data/cleaned/bilingual_zh_vi_bitext_ready.parquet` | 16.346 × 44 | Legacy |
 | `data/cleaned/bitext_scored.parquet` | 16.346 × 39 | Legacy |
-| `data/cleaned/tiki_vi_cado.parquet` | 13.200 × 37 | Legacy, không có source |
+| `data/cleaned/tiki_vi_cado.parquet` | 13.200 × 38 | Legacy, không có source |
 
 ### 13.2 CSV mới
 

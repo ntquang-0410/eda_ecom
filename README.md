@@ -198,7 +198,7 @@ data/cleaned/bitext_scored.parquet
 | `data/cleaned/bilingual_zh_vi_cado.parquet` | 16.348 × 33 | **Đã regenerate**: thêm `title_zh_cleaned`, `title_vi_cleaned`, `desc_vi_cleaned` |
 | `data/cleaned/bilingual_zh_vi_bitext_ready.parquet` | 16.346 × 44 | Legacy, có `signal_S1..S7`, `entity_score`, `tier2_label` |
 | `data/cleaned/bitext_scored.parquet` | 16.346 × 39 | Legacy: KEEP 16.201 / DISCARD 145, cosine mean 0.7021 |
-| `data/cleaned/tiki_vi_cado.parquet` | 13.200 × 37 | Artifact Tiki; **không có raw/source script trong repo** |
+| `data/cleaned/tiki_vi_cado.parquet` | 13.200 × 38 | Artifact Tiki; **không có raw/source script trong repo** |
 
 Report mới:
 
@@ -262,14 +262,16 @@ python upload_to_hf.py --file data/cleaned/bilingual_zh_vi_cado.parquet
 Mặc định script chọn file cleaned đầu tiên tồn tại trong danh sách
 `bilingual_zh_vi_cado.parquet` → `bitext_scored.parquet` →
 `bilingual_zh_vi_bitext_ready.parquet` → raw. Đường dẫn trên repo được giữ
-tương đối so với gốc dự án.
+tương đối so với gốc dự án; riêng các file cleaned được map sang layout mới
+`data/cleaned/1688/` hoặc `data/cleaned/tiki/` (xem `REMOTE_PATH_MAP` trong
+`upload_to_hf.py`).
 
 ### Tiki EDA
 
 File EDA Tiki đã được publish tại:
 
-- 🤗 [`ntquang0410/zh-vie_ecom/data/cleaned/tiki_eda.parquet`](https://huggingface.co/datasets/ntquang0410/zh-vie_ecom/blob/main/data/cleaned/tiki_eda.parquet)
-- 13.200 dòng × 107 cột, ~60,6 MiB
+- 🤗 [`ntquang0410/zh-vie_ecom/data/cleaned/tiki/tiki_eda.parquet`](https://huggingface.co/datasets/ntquang0410/zh-vie_ecom/blob/main/data/cleaned/tiki/tiki_eda.parquet)
+- 13.200 dòng × 108 cột, ~60,6 MiB
 - SHA256: `7af2a2620b8ca2def3b80762cb8f99196bfe7c64baeaeaa8b99d974df570d3bd`
 
 Xem hướng dẫn cột và cách dùng trên Kaggle tại `tiki_mining/README.md`.

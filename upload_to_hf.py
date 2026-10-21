@@ -27,6 +27,19 @@ DEFAULT_PARQUET_FILE = next(
     DEFAULT_CANDIDATES[0],
 )
 
+# Layout mới trên Hugging Face: data/cleaned/<source>/...
+# Local vẫn giữ đường dẫn cũ để không phá code hiện tại.
+REMOTE_PATH_MAP = {
+    "data/cleaned/bilingual_zh_vi_cado.parquet": "data/cleaned/1688/bilingual_zh_vi_cado.parquet",
+    "data/cleaned/bilingual_zh_vi_cleaned(huy).parquet": "data/cleaned/1688/bilingual_zh_vi_titles_cleaned.parquet",
+    "data/cleaned/bilingual_zh_vi_desc_cleaned(nhatanh).parquet": "data/cleaned/1688/bilingual_zh_vi_desc_cleaned.parquet",
+    "data/cleaned/bilingual_zh_vi_desc_pairs(nhatanh).parquet": "data/cleaned/1688/bilingual_zh_vi_desc_pairs.parquet",
+    "data/cleaned/tiki_vi_cado.parquet": "data/cleaned/tiki/tiki_vi_cado.parquet",
+    "data/cleaned/tiki_eda.parquet": "data/cleaned/tiki/tiki_eda.parquet",
+    "data/cleaned/tiki_vi_cleaned.parquet": "data/cleaned/tiki/legacy/tiki_vi_cleaned.parquet",
+    "data/cleaned/tiki_vi_cleaned(huy).parquet": "data/cleaned/tiki/legacy/tiki_vi_cleaned.parquet",
+}
+
 
 def create_dataset_card_content(repo_id: str, filename: str) -> str:
     """Tạo nội dung Dataset Card (README.md) chuẩn cho Hugging Face Dataset."""
@@ -151,9 +164,10 @@ def main():
     if not path_in_repo:
         # Giữ cấu trúc thư mục nếu file nằm trong repo; nếu không, chỉ lấy tên file.
         try:
-            path_in_repo = file_path.resolve().relative_to(PROJECT_ROOT).as_posix()
+            relative_path = file_path.resolve().relative_to(PROJECT_ROOT).as_posix()
         except ValueError:
-            path_in_repo = file_path.name
+            relative_path = file_path.name
+        path_in_repo = REMOTE_PATH_MAP.get(relative_path, relative_path)
 
     # 5. Tạo Repo nếu chưa tồn tại
     print(f"🔍 Kiểm tra repository: https://huggingface.co/datasets/{repo_id} ...")
