@@ -264,6 +264,16 @@ Mặc định script chọn file cleaned đầu tiên tồn tại trong danh sá
 `bilingual_zh_vi_bitext_ready.parquet` → raw. Đường dẫn trên repo được giữ
 tương đối so với gốc dự án.
 
+### Tiki EDA
+
+File EDA Tiki đã được publish tại:
+
+- 🤗 [`ntquang0410/zh-vie_ecom/data/cleaned/tiki_eda.parquet`](https://huggingface.co/datasets/ntquang0410/zh-vie_ecom/blob/main/data/cleaned/tiki_eda.parquet)
+- 13.200 dòng × 107 cột, ~60,6 MiB
+- SHA256: `7af2a2620b8ca2def3b80762cb8f99196bfe7c64baeaeaa8b99d974df570d3bd`
+
+Xem hướng dẫn cột và cách dùng trên Kaggle tại `tiki_mining/README.md`.
+
 ---
 
 ## Tài liệu

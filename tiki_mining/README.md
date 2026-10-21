@@ -4,6 +4,12 @@ Module `cado_core/tiki.py` chạy EDA trên **toàn bộ** Tiki và xuất **m�
 product-level** (1 dòng/sản phẩm). Bước này không gọi model, không dịch; người
 dùng có thể mang parquet lên Kaggle/Colab để back-translation.
 
+## File đã publish
+
+- 🤗 Hugging Face: [`ntquang0410/zh-vie_ecom/data/cleaned/tiki_eda.parquet`](https://huggingface.co/datasets/ntquang0410/zh-vie_ecom/blob/main/data/cleaned/tiki_eda.parquet)
+- Kích thước: **63.558.766 bytes** (~60,6 MiB), **13.200 dòng × 107 cột**
+- SHA256: `7af2a2620b8ca2def3b80762cb8f99196bfe7c64baeaeaa8b99d974df570d3bd`
+
 ## Chạy
 
 ```bash
