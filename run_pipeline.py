@@ -21,6 +21,9 @@ Ví dụ::
 
     # Chạy cả hai
     python run_pipeline.py all
+
+    # EDA Tiki (đơn ngữ VI) trước back-translation
+    python run_pipeline.py tiki-eda
 """
 
 from __future__ import annotations
@@ -54,6 +57,7 @@ from cado_core.config import (
     resolve_path,
 )
 from cado_core.rules import aggregate_word_report
+from cado_core.tiki import run_tiki_eda
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -313,6 +317,43 @@ def command_all(args: argparse.Namespace) -> None:
     )
 
 
+def command_tiki_eda(args: argparse.Namespace) -> None:
+    input_path = resolve_path(
+        args.input, PROJECT_ROOT / "data/cleaned/tiki_vi_cado.parquet"
+    )
+    output_path = resolve_path(
+        args.output, PROJECT_ROOT / "data/cleaned/tiki_eda.parquet"
+    )
+
+    log("=" * 68)
+    log("📊 TIKI EDA — CHUẨN BỊ BACK-TRANSLATION")
+    log("=" * 68)
+    log(f"📂 Input : {input_path}")
+    log(f"📂 Output: {output_path}")
+
+    df = pd.read_parquet(input_path)
+    if args.limit:
+        df = df.head(args.limit).copy()
+        log(f"⚠️  Giới hạn {args.limit:,} dòng để test")
+    if df["product_id"].duplicated().any():
+        duplicated = int(df["product_id"].duplicated().sum())
+        raise ValueError(f"product_id bị trùng {duplicated:,} dòng.")
+
+    result = run_tiki_eda(df, progress=log)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    result.df.to_parquet(output_path, index=False, compression="snappy")
+
+    stats = result.stats
+    size_mb = output_path.stat().st_size / (1024 * 1024)
+    log(f"\n✅ Đã lưu {output_path} ({size_mb:.1f} MB)")
+    log(f"   {stats['rows']:,} dòng × {stats['columns']:,} cột")
+    log(f"   BT ready (title/prose): {stats['bt_ready']:,}")
+    for route, count in sorted(
+        stats["overall_routes"].items(), key=lambda item: -item[1]
+    ):
+        log(f"   {route:<18} {count:>7,}")
+
+
 def command_stats(args: argparse.Namespace) -> None:
     from cado_core.dictionary import Cedict, Whitelist
 
@@ -423,6 +464,21 @@ def build_parser() -> argparse.ArgumentParser:
 
     stats = subparsers.add_parser("stats", help="In thống kê nhanh các artifact")
     stats.set_defaults(func=command_stats)
+
+    tiki_eda = subparsers.add_parser(
+        "tiki-eda",
+        help="EDA toàn bộ Tiki, xuất parquet product-level sẵn sàng BT",
+    )
+    tiki_eda.add_argument(
+        "--input",
+        help="Parquet Tiki đầu vào (mặc định data/cleaned/tiki_vi_cado.parquet)",
+    )
+    tiki_eda.add_argument(
+        "--output",
+        help="Parquet EDA đầu ra (mặc định data/cleaned/tiki_eda.parquet)",
+    )
+    tiki_eda.add_argument("--limit", type=int, help="Chỉ xử lý N dòng đầu (để test)")
+    tiki_eda.set_defaults(func=command_tiki_eda)
 
     return parser
 

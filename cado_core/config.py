@@ -45,7 +45,11 @@ def resolve_path(value: str | Path | None, default: Path) -> Path:
 
 # Chuỗi Latin liên tục (tiếng Anh + các ngôn ngữ dùng bảng chữ Latin).
 # \w không dùng được vì Python coi chữ Hán là \w.
-LATIN_WORD_RE = re.compile(r"[A-Za-z\u00C0-\u024F]+")
+# \u1E00-\u1EFF là Latin Extended Additional — chứa phần lớn nguyên âm có dấu
+# tiếng Việt (những, được, ...). Thiếu range này sẽ tách "những" thành "nh"+"ng".
+LATIN_WORD_RE = re.compile(
+    r"[A-Za-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u024F\u1E00-\u1EFF]+"
+)
 
 # Ký tự Hán (CJK Unified Ideographs + Extension A + Compatibility Ideographs).
 CJK_CHAR_RE = re.compile(r"[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff]")

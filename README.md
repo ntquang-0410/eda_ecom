@@ -52,6 +52,9 @@ python run_pipeline.py stats
 
 # 6) Kiểm thử nhanh
 python -m unittest discover -s tests -v
+
+# 7) EDA Tiki (đơn ngữ VI) và xuất parquet sẵn sàng back-translation
+python run_pipeline.py tiki-eda
 ```
 
 Các tuỳ chọn hữu ích:

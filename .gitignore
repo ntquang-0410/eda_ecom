@@ -28,3 +28,6 @@ Thumbs.db
 # Local config
 .env
 COLAB_GUIDE.md
+
+# Large data artifacts (upload to Hugging Face, not GitHub)
+data/cleaned/tiki_eda.parquet

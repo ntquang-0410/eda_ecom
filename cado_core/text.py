@@ -20,7 +20,8 @@ from .config import (
 )
 
 # Ký tự được phép nằm sát nhau như một phần của cùng một "từ Latin".
-_LATIN_CLASS = r"A-Za-z\u00C0-\u024F"
+# Gồm Latin-1/Extended-A/B và Latin Extended Additional (nguyên âm tiếng Việt).
+_LATIN_CLASS = r"A-Za-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u024F\u1E00-\u1EFF"
 _WORD_PATTERN_CACHE: dict[tuple[str, bool], re.Pattern[str]] = {}
 
 
