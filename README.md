@@ -55,6 +55,15 @@ python -m unittest discover -s tests -v
 
 # 7) EDA Tiki (đơn ngữ VI) và xuất parquet sẵn sàng back-translation
 python run_pipeline.py tiki-eda
+
+# 8) Phase 1: profile title + description key-value
+python run_pipeline.py tiki-profile
+
+# 9) Phase 1: build product-level + pair-level BT units (không gọi MT)
+python run_pipeline.py tiki-units
+
+# 10) Phase 1.5: học length prior từ 1688 human, gắn khoảng độ dài ZH cho Tiki
+python run_pipeline.py tiki-length-prior
 ```
 
 Các tuỳ chọn hữu ích:
@@ -166,15 +175,24 @@ data/cleaned/bitext_scored.parquet
 │   ├── rules.py               # Pattern, loanword, phân loại
 │   ├── cado.py                # Pipeline CADO T0–T5
 │   ├── cado_vi.py             # CADO-VI (map EN→VI)
-│   └── bitext.py              # Preprocess + cosine/lexical/hybrid
+│   ├── bitext.py              # Preprocess + cosine/lexical/hybrid
+│   ├── tiki.py                # EDA Tiki cũ (legacy, có prose)
+│   ├── tiki_units.py          # Phase 1: profile + title/KV BT units
+│   └── length_prior.py        # Phase 1.5: prior độ dài VI/ZH từ 1688 human
 ├── cado_layer/                # CLI wrapper từng tầng (giữ tương thích)
 ├── bitext_mining/             # CLI preprocess + filter
+├── tiki_mining/               # CLI EDA + Phase 1/1.5 Tiki
+│   ├── tiki_eda.py
+│   ├── tiki_profile.py
+│   ├── tiki_bt_units.py
+│   └── tiki_length_prior.py
 ├── dictionary/cedict_ts.u8    # CC-CEDICT offline
 ├── csv/
 │   ├── whitelist.csv          # 323 dòng / 289 từ unique
 │   ├── vi_english_map.csv     # Map EN→VI cho CADO-VI (16 từ)
 │   ├── cado/                  # Report CADO
 │   ├── bitext_mining/         # Report bitext
+│   ├── length_prior/          # Bảng prior độ dài theo bucket
 │   ├── changed_rows/          # Artifact legacy
 │   └── english_remover/       # Inventory từ tiếng Anh
 ├── data/
@@ -183,7 +201,10 @@ data/cleaned/bitext_scored.parquet
 ├── eda/eda-bilingual_zh_vi.ipynb
 ├── run_pipeline.py            # CLI thống nhất
 ├── upload_to_hf.py            # Upload dataset lên Hugging Face
-├── tests/test_core.py         # Smoke test boundary/CEDICT/pipeline
+├── tests/                      # Smoke + Phase 1/1.5 tests (30 test)
+│   ├── test_core.py
+│   ├── test_tiki_units.py
+│   └── test_length_prior.py
 ├── README.md
 └── Walkthrough.md             # Phân tích chi tiết + lịch sử refactor
 ```
@@ -198,7 +219,12 @@ data/cleaned/bitext_scored.parquet
 | `data/cleaned/bilingual_zh_vi_cado.parquet` | 16.348 × 33 | **Đã regenerate**: thêm `title_zh_cleaned`, `title_vi_cleaned`, `desc_vi_cleaned` |
 | `data/cleaned/bilingual_zh_vi_bitext_ready.parquet` | 16.346 × 44 | Legacy, có `signal_S1..S7`, `entity_score`, `tier2_label` |
 | `data/cleaned/bitext_scored.parquet` | 16.346 × 39 | Legacy: KEEP 16.201 / DISCARD 145, cosine mean 0.7021 |
-| `data/cleaned/tiki_vi_cado.parquet` | 13.200 × 38 | Artifact Tiki; **không có raw/source script trong repo** |
+| `data/cleaned/tiki_vi_cado.parquet` | 13.200 × 37 | Artifact Tiki; **không có raw/source script trong repo** |
+| `data/cleaned/tiki_products.parquet` | 13.200 × 27 | Phase 1: title + description KV, không có prose |
+| `data/cleaned/tiki_bt_units.parquet` | 120.884 × 28 | Phase 1: title + attribute value units, chưa dịch |
+| `data/cleaned/tiki_bt_units_length.parquet` | 120.884 × 43 | Phase 1.5: unit VI + prior độ dài ZH từ 1688 human |
+| `data/cleaned/length_prior_1688.json` | — | Prior học từ 438.902 cặp human, kèm 305 group |
+| `data/cleaned/tiki_length_prior_stats.json` | — | Coverage/scope/expected length sau khi apply |
 
 Report mới:
 
@@ -208,6 +234,56 @@ Report mới:
 - `csv/cado/cado_tier3_loanword_report.csv` — 478 ứng viên, 41 từ mượn.
 - `csv/cado/cado_vi_occurrences.csv` — 202 occurrence CADO-VI.
 - `csv/cado/cado_tier5_similarity.csv` — chỉ có khi chạy `--tier5`.
+
+### Tiki Phase 1 — title + description KV
+
+Phase 1 chỉ dùng `title_vi` và `description_vi` dạng `key: value`; prose bị loại
+khỏi profile, unit table và dataset gộp. Chạy:
+
+```bash
+python run_pipeline.py tiki-profile
+python run_pipeline.py tiki-units
+```
+
+Output:
+
+- `data/cleaned/tiki_profile.json` — thống kê title/KV/key class/parse error.
+- `csv/tiki/tiki_key_inventory.csv` — 698 key chuẩn hoá, sẵn cho key map Phase 2.
+- `csv/tiki/tiki_parse_errors.csv` — các phần description không có dấu `:`.
+- `data/cleaned/tiki_products.parquet` — product-level, không có prose.
+- `data/cleaned/tiki_bt_units.parquet` — pair-level title + attribute value.
+- `data/cleaned/tiki_units_stats.json` — thống kê unit/class/method.
+
+Chi tiết schema và cách phân loại xem `tiki_mining/README.md`.
+
+### Tiki Phase 1.5 — length prior 1688 → Tiki
+
+Học tỷ lệ độ dài `vi_chars / zh_chars` từ 1688 human, rồi gắn khoảng độ dài
+ZH kỳ vọng cho từng unit VI của Tiki. Không gọi model, không dịch:
+
+```bash
+python run_pipeline.py tiki-length-prior
+```
+
+- 438.902 cặp human: 16.348 title, 16.348 description, 406.206 attribute.
+- Ratio VI/ZH p50: title 3,156; attribute 3,0; description 2,6.
+- Bucket theo **số ký tự VI** (không dùng số từ) vì title Tiki ngắn hơn title
+  1688: VI chars p50 59 so với 97.
+- Fallback: `unit_type+category+bucket` (n ≥ 100) → `unit_type+bucket`
+  (kể cả n < 20) → `unit_type+category` → `unit_type` → `global`. Bucket được
+  ưu tiên trước category vì category không điều kiện theo độ dài; kiểm tra
+  `length_prior_n` để biết độ tin cậy.
+- Output: `data/cleaned/tiki_bt_units_length.parquet` (120.884 × 43),
+  `data/cleaned/length_prior_1688.json`,
+  `csv/length_prior/length_prior_by_bucket.csv` (305 group),
+  `data/cleaned/tiki_length_prior_stats.json`.
+- Cột mới: `vi_chars`, `vi_words`, `ratio_vi_zh_p05..p95`,
+  `expected_zh_chars`, `zh_chars_p05`, `zh_chars_p95`,
+  `length_prior_scope`, `length_prior_n`.
+- Phase 2 dùng `length_qc(text_zh, row)` để gắn `zh_too_short` /
+  `zh_too_long` sau khi có bản dịch.
+
+Chi tiết cách học prior xem `tiki_mining/README.md`.
 
 ---
 

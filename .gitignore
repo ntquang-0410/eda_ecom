@@ -31,3 +31,13 @@ COLAB_GUIDE.md
 
 # Large data artifacts (upload to Hugging Face, not GitHub)
 data/cleaned/tiki_eda.parquet
+data/cleaned/tiki_products.parquet
+data/cleaned/tiki_bt_units.parquet
+data/cleaned/tiki_profile.json
+data/cleaned/tiki_units_stats.json
+data/cleaned/tiki_bt_units_length.parquet
+data/cleaned/tiki_length_prior_stats.json
+data/cleaned/length_prior_1688.json
+csv/tiki/tiki_key_inventory.csv
+csv/tiki/tiki_parse_errors.csv
+csv/length_prior/

@@ -24,11 +24,21 @@ Ví dụ::
 
     # EDA Tiki (đơn ngữ VI) trước back-translation
     python run_pipeline.py tiki-eda
+
+    # Phase 1: profile title + description key-value
+    python run_pipeline.py tiki-profile
+
+    # Phase 1: build product-level + pair-level BT units (không gọi MT)
+    python run_pipeline.py tiki-units
+
+    # Phase 1.5: học length prior từ 1688 human, gắn khoảng độ dài ZH cho Tiki
+    python run_pipeline.py tiki-length-prior
 """
 
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -49,15 +59,35 @@ from cado_core.config import (
     DESC_VI_CLEANED,
     DESC_ZH,
     DESC_ZH_CLEANED,
+    LENGTH_PRIOR_CSV,
+    LENGTH_PRIOR_JSON,
     RAW_PARQUET,
+    TIKI_BT_UNITS_PARQUET,
+    TIKI_INPUT_PARQUET,
+    TIKI_KEY_INVENTORY_CSV,
+    TIKI_KEY_MAP_CSV,
+    TIKI_LENGTH_PRIOR_STATS_JSON,
+    TIKI_PARSE_ERRORS_CSV,
+    TIKI_PRODUCTS_PARQUET,
+    TIKI_PROFILE_JSON,
+    TIKI_UNITS_LENGTH_PARQUET,
+    TIKI_UNITS_STATS_JSON,
     TITLE_VI,
     TITLE_VI_CLEANED,
     TITLE_ZH,
     TITLE_ZH_CLEANED,
     resolve_path,
 )
+from cado_core.length_prior import (
+    LengthPriorConfig,
+    apply_length_prior,
+    extract_human_length_pairs,
+    fit_length_prior,
+    write_prior_table,
+)
 from cado_core.rules import aggregate_word_report
 from cado_core.tiki import run_tiki_eda
+from cado_core.tiki_units import build_tiki_units, profile_tiki
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -84,6 +114,15 @@ def _pair_for(column: str) -> tuple[str, str] | None:
     }
     cleaned = mapping.get(column)
     return (column, cleaned) if cleaned else None
+
+
+def _validate_product_ids(df: pd.DataFrame) -> None:
+    ids = df["product_id"].astype(str).str.strip()
+    if (ids == "").any():
+        raise ValueError("Có product_id rỗng; cần xử lý trước.")
+    duplicated = int(ids.duplicated().sum())
+    if duplicated:
+        raise ValueError(f"product_id bị trùng {duplicated:,} dòng; cần xử lý trước.")
 
 
 def _changed_mask(df: pd.DataFrame, pairs: list[tuple[str, str]]) -> pd.Series:
@@ -354,6 +393,181 @@ def command_tiki_eda(args: argparse.Namespace) -> None:
         log(f"   {route:<18} {count:>7,}")
 
 
+def command_tiki_profile(args: argparse.Namespace) -> None:
+    input_path = resolve_path(args.input, TIKI_INPUT_PARQUET)
+    profile_path = resolve_path(args.profile_output, TIKI_PROFILE_JSON)
+    inventory_path = resolve_path(args.key_inventory_output, TIKI_KEY_INVENTORY_CSV)
+    errors_path = resolve_path(args.parse_errors_output, TIKI_PARSE_ERRORS_CSV)
+
+    log("=" * 68)
+    log("📊 TIKI PHASE 1 — PROFILE TITLE + DESCRIPTION KV")
+    log("=" * 68)
+    log(f"📂 Input          : {input_path}")
+    log(f"📂 Profile        : {profile_path}")
+    log(f"📂 Key inventory  : {inventory_path}")
+    log(f"📂 Parse errors   : {errors_path}")
+
+    df = pd.read_parquet(input_path)
+    if args.limit:
+        df = df.head(args.limit).copy()
+        log(f"⚠️  Giới hạn {args.limit:,} dòng để test")
+    _validate_product_ids(df)
+
+    result = profile_tiki(df, progress=log)
+    stats = dict(result.stats)
+    stats["input"] = str(input_path)
+
+    profile_path.parent.mkdir(parents=True, exist_ok=True)
+    with profile_path.open("w", encoding="utf-8") as handle:
+        json.dump(stats, handle, ensure_ascii=False, indent=2)
+
+    inventory_path.parent.mkdir(parents=True, exist_ok=True)
+    result.key_inventory.to_csv(inventory_path, index=False, encoding="utf-8-sig")
+    errors_path.parent.mkdir(parents=True, exist_ok=True)
+    result.parse_errors.to_csv(errors_path, index=False, encoding="utf-8-sig")
+
+    title = stats["title"]
+    attributes = stats["attributes"]
+    description = stats["description"]
+    log(f"\n✅ Đã lưu {profile_path}")
+    log(f"   {stats['rows']:,} dòng")
+    log(f"   Title 3–40 từ: {title['n_3_40']:,}")
+    log(f"   Description lỗi: {description['n_malformed_parts']:,} phần")
+    log(f"   Attribute pairs: {attributes['n_pairs']:,}")
+    log(f"   Unique keys: {stats['key_inventory_rows']:,}")
+    log(f"   💾 {inventory_path}")
+    log(f"   💾 {errors_path}")
+
+
+def command_tiki_units(args: argparse.Namespace) -> None:
+    input_path = resolve_path(args.input, TIKI_INPUT_PARQUET)
+    products_path = resolve_path(args.products_output, TIKI_PRODUCTS_PARQUET)
+    units_path = resolve_path(args.units_output, TIKI_BT_UNITS_PARQUET)
+    stats_path = resolve_path(args.stats_output, TIKI_UNITS_STATS_JSON)
+    key_map_path = resolve_path(args.key_map, TIKI_KEY_MAP_CSV)
+
+    log("=" * 68)
+    log("🧱 TIKI PHASE 1 — BUILD BT UNITS")
+    log("=" * 68)
+    log(f"📂 Input        : {input_path}")
+    log(f"📂 Products     : {products_path}")
+    log(f"📂 Units        : {units_path}")
+    log(f"📂 Stats        : {stats_path}")
+    log(f"📂 Key map      : {key_map_path}")
+
+    df = pd.read_parquet(input_path)
+    if args.limit:
+        df = df.head(args.limit).copy()
+        log(f"⚠️  Giới hạn {args.limit:,} dòng để test")
+    _validate_product_ids(df)
+
+    result = build_tiki_units(df, key_map_path=key_map_path, progress=log)
+    stats = dict(result.stats)
+    stats["input"] = str(input_path)
+    stats["products_output"] = str(products_path)
+    stats["units_output"] = str(units_path)
+    stats["key_map_path"] = str(key_map_path)
+
+    products_path.parent.mkdir(parents=True, exist_ok=True)
+    result.products.to_parquet(products_path, index=False, compression="snappy")
+    units_path.parent.mkdir(parents=True, exist_ok=True)
+    result.units.to_parquet(units_path, index=False, compression="snappy")
+    stats_path.parent.mkdir(parents=True, exist_ok=True)
+    with stats_path.open("w", encoding="utf-8") as handle:
+        json.dump(stats, handle, ensure_ascii=False, indent=2)
+
+    log(f"\n✅ Đã lưu {products_path} ({len(result.products):,} dòng)")
+    log(f"✅ Đã lưu {units_path} ({len(result.units):,} dòng)")
+    log(f"   Title units     : {stats['title_units']:,}")
+    log(f"   Attribute units : {stats['attribute_units']:,}")
+    log(f"   Train-eligible  : {stats['train_eligible_units']:,}")
+    log(f"   Pending key map : {stats['pending_key_map']:,} units")
+    log(f"   💾 {stats_path}")
+
+
+def command_tiki_length_prior(args: argparse.Namespace) -> None:
+    bilingual_path = resolve_path(args.bilingual, CADO_PARQUET)
+    units_input_path = resolve_path(args.tiki_units, TIKI_BT_UNITS_PARQUET)
+    prior_path = resolve_path(args.prior_output, LENGTH_PRIOR_JSON)
+    prior_csv_path = resolve_path(args.prior_csv, LENGTH_PRIOR_CSV)
+    units_output_path = resolve_path(args.units_output, TIKI_UNITS_LENGTH_PARQUET)
+    stats_path = resolve_path(args.stats_output, TIKI_LENGTH_PRIOR_STATS_JSON)
+
+    log("=" * 68)
+    log("📏 TIKI PHASE 1.5 — LENGTH PRIOR 1688 → TIKI")
+    log("=" * 68)
+    log(f"📂 1688 human   : {bilingual_path}")
+    log(f"📂 Tiki units   : {units_input_path}")
+    log(f"📂 Prior JSON   : {prior_path}")
+    log(f"📂 Prior CSV    : {prior_csv_path}")
+    log(f"📂 Units output : {units_output_path}")
+    log(f"📂 Apply stats  : {stats_path}")
+
+    bilingual = pd.read_parquet(bilingual_path)
+    if args.fit_limit:
+        bilingual = bilingual.head(args.fit_limit).copy()
+        log(f"⚠️  Giới hạn fit {args.fit_limit:,} dòng 1688")
+
+    progress = None if args.quiet else log
+    pairs = extract_human_length_pairs(bilingual, progress=progress)
+    config = LengthPriorConfig(
+        min_group_samples=args.min_group_samples,
+        min_category_samples=args.min_category_samples,
+    )
+    prior = fit_length_prior(pairs, config=config, progress=progress)
+
+    prior_payload = dict(prior.stats)
+    prior_payload["bilingual_input"] = str(bilingual_path)
+    prior_payload["groups"] = prior.table.to_dict("records")
+    prior_path.parent.mkdir(parents=True, exist_ok=True)
+    with prior_path.open("w", encoding="utf-8") as handle:
+        json.dump(prior_payload, handle, ensure_ascii=False, indent=2)
+    write_prior_table(prior.table, prior_csv_path)
+
+    units = pd.read_parquet(units_input_path)
+    if args.limit:
+        units = units.head(args.limit).copy()
+        log(f"⚠️  Giới hạn apply {args.limit:,} Tiki unit")
+    applied = apply_length_prior(units, prior, config=config, progress=progress)
+
+    apply_stats = dict(applied.stats)
+    apply_stats.update({
+        "bilingual_input": str(bilingual_path),
+        "tiki_units_input": str(units_input_path),
+        "units_output": str(units_output_path),
+        "prior_json": str(prior_path),
+        "prior_csv": str(prior_csv_path),
+    })
+    units_output_path.parent.mkdir(parents=True, exist_ok=True)
+    applied.units.to_parquet(units_output_path, index=False, compression="snappy")
+    stats_path.parent.mkdir(parents=True, exist_ok=True)
+    with stats_path.open("w", encoding="utf-8") as handle:
+        json.dump(apply_stats, handle, ensure_ascii=False, indent=2)
+
+    overall = prior.stats["overall"]
+    by_unit = prior.stats["by_unit_type"]
+    log(f"\n✅ Đã lưu {prior_path}")
+    log(f"   Human pairs     : {prior.stats['n_pairs']:,}")
+    for unit_type, count in prior.stats["pair_counts"].items():
+        log(f"   {unit_type:<12} {count:>9,}")
+    log(f"   Ratio VI/ZH p50 : {overall['ratio_vi_zh_p50']:.3f}")
+    for unit_type in ("title", "attribute", "description"):
+        if unit_type in by_unit:
+            log(
+                f"   {unit_type:<12} n={by_unit[unit_type]['n']:>7,} "
+                f"ratio p50={by_unit[unit_type]['ratio_vi_zh_p50']:.3f}"
+            )
+    log(f"✅ Đã lưu {units_output_path} ({apply_stats['n_units']:,} dòng)")
+    log(f"   Expected ZH p50 : {apply_stats['expected_zh_chars']['p50']}")
+    log(f"   Expected ZH p05 : {apply_stats['expected_zh_chars']['p05']}")
+    log(f"   Expected ZH p95 : {apply_stats['expected_zh_chars']['p95']}")
+    log("   Scope counts:")
+    for scope, count in apply_stats["scope_counts"].items():
+        log(f"     {scope:<28} {count:>9,}")
+    log(f"   💾 {prior_csv_path} ({len(prior.table):,} group)")
+    log(f"   💾 {stats_path}")
+
+
 def command_stats(args: argparse.Namespace) -> None:
     from cado_core.dictionary import Cedict, Whitelist
 
@@ -361,7 +575,15 @@ def command_stats(args: argparse.Namespace) -> None:
     log("📊 THỐNG KÊ DỮ LIỆU")
     log("=" * 68)
 
-    for path in (RAW_PARQUET, CADO_PARQUET, BITEXT_READY_PARQUET, BitextConfig().output_parquet):
+    for path in (
+        RAW_PARQUET,
+        CADO_PARQUET,
+        BITEXT_READY_PARQUET,
+        BitextConfig().output_parquet,
+        TIKI_PRODUCTS_PARQUET,
+        TIKI_BT_UNITS_PARQUET,
+        TIKI_UNITS_LENGTH_PARQUET,
+    ):
         if path.exists():
             frame = pd.read_parquet(path)
             log(f"\n{path}")
@@ -479,6 +701,101 @@ def build_parser() -> argparse.ArgumentParser:
     )
     tiki_eda.add_argument("--limit", type=int, help="Chỉ xử lý N dòng đầu (để test)")
     tiki_eda.set_defaults(func=command_tiki_eda)
+
+    tiki_profile = subparsers.add_parser(
+        "tiki-profile",
+        help="Phase 1: profile title + description key-value, xuất JSON/CSV",
+    )
+    tiki_profile.add_argument(
+        "--input",
+        help="Parquet Tiki đầu vào (mặc định data/cleaned/tiki_vi_cado.parquet)",
+    )
+    tiki_profile.add_argument(
+        "--profile-output",
+        help="JSON profile đầu ra (mặc định data/cleaned/tiki_profile.json)",
+    )
+    tiki_profile.add_argument(
+        "--key-inventory-output",
+        help="CSV key inventory (mặc định csv/tiki/tiki_key_inventory.csv)",
+    )
+    tiki_profile.add_argument(
+        "--parse-errors-output",
+        help="CSV phần description lỗi parse (mặc định csv/tiki/tiki_parse_errors.csv)",
+    )
+    tiki_profile.add_argument("--limit", type=int, help="Chỉ xử lý N dòng đầu (để test)")
+    tiki_profile.set_defaults(func=command_tiki_profile)
+
+    tiki_units = subparsers.add_parser(
+        "tiki-units",
+        help="Phase 1: tạo product-level + pair-level BT units, không gọi MT",
+    )
+    tiki_units.add_argument(
+        "--input",
+        help="Parquet Tiki đầu vào (mặc định data/cleaned/tiki_vi_cado.parquet)",
+    )
+    tiki_units.add_argument(
+        "--products-output",
+        help="Parquet product-level (mặc định data/cleaned/tiki_products.parquet)",
+    )
+    tiki_units.add_argument(
+        "--units-output",
+        help="Parquet pair-level (mặc định data/cleaned/tiki_bt_units.parquet)",
+    )
+    tiki_units.add_argument(
+        "--stats-output",
+        help="JSON stats (mặc định data/cleaned/tiki_units_stats.json)",
+    )
+    tiki_units.add_argument(
+        "--key-map",
+        help="Glossary VI→ZH nếu có (mặc định csv/tiki/tiki_key_map.csv)",
+    )
+    tiki_units.add_argument("--limit", type=int, help="Chỉ xử lý N dòng đầu (để test)")
+    tiki_units.set_defaults(func=command_tiki_units)
+
+    length_prior = subparsers.add_parser(
+        "tiki-length-prior",
+        help="Phase 1.5: học length prior từ 1688 human, gắn khoảng độ dài ZH cho Tiki",
+    )
+    length_prior.add_argument(
+        "--bilingual",
+        help="Parquet 1688 human ZH–VI (mặc định data/cleaned/bilingual_zh_vi_cado.parquet)",
+    )
+    length_prior.add_argument(
+        "--tiki-units",
+        help="Parquet Tiki units (mặc định data/cleaned/tiki_bt_units.parquet)",
+    )
+    length_prior.add_argument(
+        "--prior-output",
+        help="JSON prior (mặc định data/cleaned/length_prior_1688.json)",
+    )
+    length_prior.add_argument(
+        "--prior-csv",
+        help="CSV bảng prior (mặc định csv/length_prior/length_prior_by_bucket.csv)",
+    )
+    length_prior.add_argument(
+        "--units-output",
+        help="Parquet Tiki units đã gắn prior (mặc định data/cleaned/tiki_bt_units_length.parquet)",
+    )
+    length_prior.add_argument(
+        "--stats-output",
+        help="JSON thống kê apply (mặc định data/cleaned/tiki_length_prior_stats.json)",
+    )
+    length_prior.add_argument(
+        "--min-group-samples",
+        type=int,
+        default=20,
+        help="Số cặp tối thiểu cho group unit_type+bucket (mặc định 20)",
+    )
+    length_prior.add_argument(
+        "--min-category-samples",
+        type=int,
+        default=100,
+        help="Số cặp tối thiểu cho group có category (mặc định 100)",
+    )
+    length_prior.add_argument("--fit-limit", type=int, help="Chỉ dùng N dòng 1688 đầu (để test)")
+    length_prior.add_argument("--limit", type=int, help="Chỉ áp dụng N Tiki unit đầu (để test)")
+    length_prior.add_argument("--quiet", action="store_true", help="Không in tiến độ")
+    length_prior.set_defaults(func=command_tiki_length_prior)
 
     return parser
 

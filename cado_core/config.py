@@ -30,6 +30,22 @@ CADO_CSV_DIR = CSV_DIR / "cado"
 BITEXT_CSV_DIR = CSV_DIR / "bitext_mining"
 ENGLISH_REMOVER_CSV_DIR = CSV_DIR / "english_remover"
 
+# Tiki — Phase 1: profile title + description key-value, build BT units.
+TIKI_INPUT_PARQUET = PROJECT_ROOT / "data/cleaned/tiki_vi_cado.parquet"
+TIKI_PROFILE_JSON = PROJECT_ROOT / "data/cleaned/tiki_profile.json"
+TIKI_PRODUCTS_PARQUET = PROJECT_ROOT / "data/cleaned/tiki_products.parquet"
+TIKI_BT_UNITS_PARQUET = PROJECT_ROOT / "data/cleaned/tiki_bt_units.parquet"
+TIKI_UNITS_STATS_JSON = PROJECT_ROOT / "data/cleaned/tiki_units_stats.json"
+TIKI_KEY_INVENTORY_CSV = CSV_DIR / "tiki/tiki_key_inventory.csv"
+TIKI_PARSE_ERRORS_CSV = CSV_DIR / "tiki/tiki_parse_errors.csv"
+TIKI_KEY_MAP_CSV = CSV_DIR / "tiki/tiki_key_map.csv"
+
+# Phase 1.5 — length prior học từ 1688 human, áp dụng cho Tiki units.
+LENGTH_PRIOR_JSON = PROJECT_ROOT / "data/cleaned/length_prior_1688.json"
+LENGTH_PRIOR_CSV = CSV_DIR / "length_prior/length_prior_by_bucket.csv"
+TIKI_UNITS_LENGTH_PARQUET = PROJECT_ROOT / "data/cleaned/tiki_bt_units_length.parquet"
+TIKI_LENGTH_PRIOR_STATS_JSON = PROJECT_ROOT / "data/cleaned/tiki_length_prior_stats.json"
+
 
 def resolve_path(value: str | Path | None, default: Path) -> Path:
     """Chuẩn hoá đường dẫn: tương đối → tính từ gốc dự án."""

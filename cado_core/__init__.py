@@ -8,6 +8,8 @@ Các module:
     cado        Pipeline làm sạch tiếng Anh trong văn bản Trung (T0–T5)
     cado_vi     Pipeline làm sạch tiếng Anh trong văn bản Việt (CADO-VI)
     bitext      Preprocess + chấm điểm cặp song ngữ (cosine + lexical)
+    tiki_units  Phase 1 Tiki: profile + title/KV BT units
+    length_prior Phase 1.5: prior độ dài VI/ZH từ 1688 human
 """
 
 __version__ = "2.0.0"
