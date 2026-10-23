@@ -39,6 +39,9 @@ Ví dụ::
 
     # Phase B/C v3: alignment fallback + hierarchical title smoothing
     python run_pipeline.py tiki-length-prior-v3
+
+    # Plan A: key map + routing + BT input/cache, chưa gọi MT
+    python run_pipeline.py tiki-bt-prepare
 """
 
 from __future__ import annotations
@@ -77,6 +80,7 @@ from cado_core.config import (
     LENGTH_PRIOR_V2_TRAIN_JSON,
     RAW_PARQUET,
     TIKI_BT_UNITS_PARQUET,
+    TIKI_BT_UNITS_PLAN_A_PARQUET,
     TIKI_INPUT_PARQUET,
     TIKI_KEY_INVENTORY_CSV,
     TIKI_KEY_MAP_CSV,
@@ -832,6 +836,12 @@ def command_tiki_length_prior_v3(args: argparse.Namespace) -> None:
     run_from_args(args)
 
 
+def command_tiki_bt_prepare(args: argparse.Namespace) -> None:
+    from tiki_mining.tiki_bt_prepare import run_from_args
+
+    run_from_args(args)
+
+
 def command_stats(args: argparse.Namespace) -> None:
     from cado_core.dictionary import Cedict, Whitelist
 
@@ -849,6 +859,7 @@ def command_stats(args: argparse.Namespace) -> None:
         TIKI_UNITS_LENGTH_PARQUET,
         TIKI_UNITS_LENGTH_V2_PARQUET,
         TIKI_UNITS_LENGTH_V3_PARQUET,
+        TIKI_BT_UNITS_PLAN_A_PARQUET,
     ):
         if path.exists():
             frame = pd.read_parquet(path)
@@ -1171,6 +1182,29 @@ def build_parser() -> argparse.ArgumentParser:
     length_prior_v3.add_argument("--no-key-fallback", action="store_true")
     length_prior_v3.add_argument("--quiet", action="store_true")
     length_prior_v3.set_defaults(func=command_tiki_length_prior_v3)
+
+    bt_prepare = subparsers.add_parser(
+        "tiki-bt-prepare",
+        help="Plan A: key map + routing + BT input/cache, chưa gọi MT",
+    )
+    bt_prepare.add_argument("--units")
+    bt_prepare.add_argument("--products")
+    bt_prepare.add_argument("--alignment-map")
+    bt_prepare.add_argument("--key-map")
+    bt_prepare.add_argument("--key-map-review")
+    bt_prepare.add_argument("--units-output")
+    bt_prepare.add_argument("--input-output")
+    bt_prepare.add_argument("--cache-output")
+    bt_prepare.add_argument("--product-state-output")
+    bt_prepare.add_argument("--routing-output")
+    bt_prepare.add_argument("--sample-output")
+    bt_prepare.add_argument("--stats-output")
+    bt_prepare.add_argument("--min-key-freq", type=int, default=20)
+    bt_prepare.add_argument("--min-key-share", type=float, default=0.60)
+    bt_prepare.add_argument("--separator-chars", type=int, default=2)
+    bt_prepare.add_argument("--limit", type=int)
+    bt_prepare.add_argument("--quiet", action="store_true")
+    bt_prepare.set_defaults(func=command_tiki_bt_prepare)
 
     return parser
 

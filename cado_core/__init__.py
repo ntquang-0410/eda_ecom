@@ -12,6 +12,7 @@ Các module:
     length_prior Phase 1.5: prior độ dài VI/ZH từ 1688 human (audit)
     length_prior_v2 Phase A: value-only, value_class, CJK, split-safe
     length_prior_v3 Phase B/C: alignment fallback + title smoothing
+    tiki_bt_prepare Plan A: key map, routing, BT input/cache, pre-BT state
 """
 
 __version__ = "2.0.0"

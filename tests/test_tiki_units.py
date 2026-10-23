@@ -128,7 +128,8 @@ class ProfileTest(unittest.TestCase):
 
 class UnitsTest(unittest.TestCase):
     def test_build_units_no_prose(self) -> None:
-        result = build_tiki_units(sample_frame())
+        # key_map={} để test không phụ thuộc file key map sinh bởi Plan A.
+        result = build_tiki_units(sample_frame(), key_map={})
         products = result.products
         units = result.units
         stats = result.stats

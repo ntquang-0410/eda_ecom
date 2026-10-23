@@ -71,6 +71,9 @@ python run_pipeline.py tiki-length-prior-v2
 
 # 12) Phase B/C v3: alignment audit/fallback + hierarchical title smoothing
 python run_pipeline.py tiki-length-prior-v3
+
+# 13) Plan A: key map + routing + BT input/cache (chưa gọi MT)
+python run_pipeline.py tiki-bt-prepare
 ```
 
 Các tuỳ chọn hữu ích:
@@ -187,16 +190,18 @@ data/cleaned/bitext_scored.parquet
 │   ├── tiki_units.py          # Phase 1: profile + title/KV BT units
 │   ├── length_prior.py        # Phase 1.5: prior key+value (audit)
 │   ├── length_prior_v2.py     # Phase A: value-only + class + CJK + split
-│   └── length_prior_v3.py     # Phase B/C: alignment + title smoothing
+│   ├── length_prior_v3.py     # Phase B/C: alignment + title smoothing
+│   └── tiki_bt_prepare.py     # Plan A: key map + routing + BT cache
 ├── cado_layer/                # CLI wrapper từng tầng (giữ tương thích)
 ├── bitext_mining/             # CLI preprocess + filter
-├── tiki_mining/               # CLI EDA + Phase 1/1.5/A/B/C Tiki
+├── tiki_mining/               # CLI EDA + Phase 1/1.5/A/B/C + Plan A Tiki
 │   ├── tiki_eda.py
 │   ├── tiki_profile.py
 │   ├── tiki_bt_units.py
 │   ├── tiki_length_prior.py
 │   ├── tiki_length_prior_v2.py
-│   └── tiki_length_prior_v3.py
+│   ├── tiki_length_prior_v3.py
+│   └── tiki_bt_prepare.py
 ├── dictionary/cedict_ts.u8    # CC-CEDICT offline
 ├── csv/
 │   ├── whitelist.csv          # 323 dòng / 289 từ unique
@@ -214,12 +219,13 @@ data/cleaned/bitext_scored.parquet
 ├── eda/eda-bilingual_zh_vi.ipynb
 ├── run_pipeline.py            # CLI thống nhất
 ├── upload_to_hf.py            # Upload dataset lên Hugging Face
-├── tests/                      # Smoke + Phase 1/1.5/A/B/C tests (43 test)
+├── tests/                      # Smoke + Phase 1/1.5/A/B/C + Plan A (46 test)
 │   ├── test_core.py
 │   ├── test_tiki_units.py
 │   ├── test_length_prior.py
 │   ├── test_length_prior_v2.py
-│   └── test_length_prior_v3.py
+│   ├── test_length_prior_v3.py
+│   └── test_tiki_bt_prepare.py
 ├── README.md
 └── Walkthrough.md             # Phân tích chi tiết + lịch sử refactor
 ```
@@ -248,6 +254,11 @@ data/cleaned/bitext_scored.parquet
 | `data/cleaned/length_prior_1688_v3_all.json` | — | Prior v3 fit all |
 | `data/cleaned/length_prior_1688_v3_train.json` | — | Prior v3 fit train, split-safe |
 | `data/cleaned/phase_evaluation.json` | — | Đánh giá tổng hợp A/B/C |
+| `data/cleaned/tiki_bt_units_plan_a.parquet` | 120.884 × 87 | Plan A: routing, key map, cache, merge flags |
+| `data/cleaned/tiki_bt_input.parquet` | 120.884 × 87 | Input BT (value/title), chưa có target |
+| `data/cleaned/tiki_translation_cache.parquet` | 40.646 × 11 | Cache dedup theo source/key/class/route |
+| `data/cleaned/tiki_products_bt_state.parquet` | 13.200 × 25 | Pre-BT/merge state theo product |
+| `data/cleaned/tiki_bt_plan_a_stats.json` | — | Coverage/routing/cache/state |
 | `data/cleaned/phase_evaluation.md` | — | Bản tóm tắt đánh giá A/B/C |
 
 Report mới:
@@ -391,6 +402,46 @@ Artifact v3:
 - `csv/length_prior_v3/alignment_summary.csv`
 - `data/cleaned/phase_evaluation.json`
 - `data/cleaned/phase_evaluation.md`
+
+### Plan A — pre-BT preparation
+
+```bash
+python run_pipeline.py tiki-bt-prepare
+```
+
+Plan A **không gọi MT**. Nó chuẩn bị:
+
+- key map VI→ZH;
+- BT input value-only cho attribute;
+- routing `text/title → MT`, `admin → dictionary`, `numeric → rule`,
+  `model → preserve`;
+- cache dedup;
+- state machine `queued/blocked`;
+- điều kiện `merge_ready` và product state.
+
+Kết quả full:
+
+- Key map: **227/698 key**, phủ **98,44% attribute unit**, **95,52%**
+  train-eligible attribute value.
+- 120.884 unit `bt_ready`; 119.201 unit `merge_ready`.
+- Routing: `dictionary` 61.805; `mt` 45.709; `rule` 11.081; `preserve` 2.289.
+- Cache: **40.646 key**, giảm **66,38%** số lần gọi BT.
+- Product state: 12.561 `ready_for_bt`; 639 `blocked_key_map`.
+- 471 key còn `pending_review`; 639 product bị chặn bởi key map.
+- `merge_eligible = false` toàn bộ — chờ BT + QC + reassembly.
+- Không đưa `text_vi` của attribute vào MT; chỉ dùng `value_vi`.
+
+Artifact Plan A:
+
+- `data/cleaned/tiki_bt_units_plan_a.parquet`
+- `data/cleaned/tiki_bt_input.parquet`
+- `data/cleaned/tiki_translation_cache.parquet`
+- `data/cleaned/tiki_products_bt_state.parquet`
+- `data/cleaned/tiki_bt_plan_a_stats.json`
+- `csv/tiki/tiki_key_map.csv`
+- `csv/tiki/tiki_key_map_review.csv`
+- `csv/tiki/tiki_bt_routing_summary.csv`
+- `csv/tiki/tiki_bt_input_sample.csv`
 
 ---
 

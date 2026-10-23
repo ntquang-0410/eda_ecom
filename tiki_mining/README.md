@@ -481,6 +481,60 @@ V3 Tiki:
 
 ---
 
+## Plan A — chuẩn bị trước Back-Translation
+
+Plan A **không gọi MT**; nó biến v3 thành input BT sạch và có kiểm soát.
+
+### Chạy
+
+```bash
+python run_pipeline.py tiki-bt-prepare
+# hoặc
+python tiki_mining/tiki_bt_prepare.py
+```
+
+### Điều chỉnh chính
+
+- Attribute dùng `value_vi` làm source BT, **không** dùng `text_vi`.
+- Title dùng `title_vi`.
+- `key_zh` được map trước để reassemble `text_zh`.
+- Routing:
+  - `text/title → MT`
+  - `admin → dictionary` (fallback MT)
+  - `numeric → rule`
+  - `model → preserve`
+- Tạo `merge_required`, `merge_ready`, `merge_block_reason`.
+- Tạo `bt_status = queued | blocked`; `merge_eligible` chỉ bật sau BT/QC.
+- Dedup cache theo `source_text + key + value_class + route`.
+
+### Kết quả full
+
+- Key map: **227/698 key**.
+- Unit coverage: **98,44%**.
+- Train-eligible coverage: **95,52%**.
+- 120.884 unit `bt_ready`; 119.201 `merge_ready`.
+- Routing: dictionary 61.805; mt 45.709; rule 11.081; preserve 2.289.
+- Cache: 40.646 key; giảm 66,38% số lần gọi BT.
+- Product ready: 12.561; blocked key map: 639.
+- 471 key còn pending review; 639 product bị chặn key map.
+- `merge_eligible=0` — chờ BT/QC.
+
+### Output
+
+| File | Nội dung |
+|---|---|
+| `data/cleaned/tiki_bt_units_plan_a.parquet` | 120.884 × 87; routing/state/cache |
+| `data/cleaned/tiki_bt_input.parquet` | input BT value/title |
+| `data/cleaned/tiki_translation_cache.parquet` | cache dedup |
+| `data/cleaned/tiki_products_bt_state.parquet` | product ready/blocked |
+| `data/cleaned/tiki_bt_plan_a_stats.json` | coverage/routing/cache |
+| `csv/tiki/tiki_key_map.csv` | key map manual + auto + pending |
+| `csv/tiki/tiki_key_map_review.csv` | key pending review |
+| `csv/tiki/tiki_bt_routing_summary.csv` | routing summary |
+| `csv/tiki/tiki_bt_input_sample.csv` | sample audit |
+
+---
+
 ## EDA Tiki cũ (legacy)
 
 Module `cado_core/tiki.py` chạy EDA trên **toàn bộ** Tiki và xuất **một parquet

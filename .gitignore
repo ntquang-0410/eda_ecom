@@ -46,8 +46,12 @@ data/cleaned/tiki_length_prior_v3_stats.json
 data/cleaned/length_prior_1688_v3_*.json
 data/cleaned/phase_evaluation.json
 data/cleaned/phase_evaluation.md
-csv/tiki/tiki_key_inventory.csv
-csv/tiki/tiki_parse_errors.csv
+data/cleaned/tiki_bt_units_plan_a.parquet
+data/cleaned/tiki_bt_input.parquet
+data/cleaned/tiki_translation_cache.parquet
+data/cleaned/tiki_products_bt_state.parquet
+data/cleaned/tiki_bt_plan_a_stats.json
+csv/tiki/
 csv/length_prior/
 csv/length_prior_v2/
 csv/length_prior_v3/

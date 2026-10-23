@@ -72,6 +72,16 @@ PHASE_EVALUATION_MD = PROJECT_ROOT / "data/cleaned/phase_evaluation.md"
 TIKI_UNITS_LENGTH_V3_PARQUET = PROJECT_ROOT / "data/cleaned/tiki_bt_units_length_v3.parquet"
 TIKI_LENGTH_PRIOR_V3_STATS_JSON = PROJECT_ROOT / "data/cleaned/tiki_length_prior_v3_stats.json"
 
+# Plan A — pre-BT preparation: key map, routing, BT input/cache, state machine.
+TIKI_BT_UNITS_PLAN_A_PARQUET = PROJECT_ROOT / "data/cleaned/tiki_bt_units_plan_a.parquet"
+TIKI_BT_INPUT_PARQUET = PROJECT_ROOT / "data/cleaned/tiki_bt_input.parquet"
+TIKI_TRANSLATION_CACHE_PARQUET = PROJECT_ROOT / "data/cleaned/tiki_translation_cache.parquet"
+TIKI_PRODUCTS_BT_STATE_PARQUET = PROJECT_ROOT / "data/cleaned/tiki_products_bt_state.parquet"
+TIKI_BT_PLAN_A_STATS_JSON = PROJECT_ROOT / "data/cleaned/tiki_bt_plan_a_stats.json"
+TIKI_KEY_MAP_REVIEW_CSV = CSV_DIR / "tiki/tiki_key_map_review.csv"
+TIKI_BT_ROUTING_CSV = CSV_DIR / "tiki/tiki_bt_routing_summary.csv"
+TIKI_BT_INPUT_SAMPLE_CSV = CSV_DIR / "tiki/tiki_bt_input_sample.csv"
+
 
 def resolve_path(value: str | Path | None, default: Path) -> Path:
     """Chuẩn hoá đường dẫn: tương đối → tính từ gốc dự án."""
