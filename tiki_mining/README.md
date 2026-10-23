@@ -535,6 +535,43 @@ python tiki_mining/tiki_bt_prepare.py
 
 ---
 
+## Plan B0 — Qwen review key map
+
+471 key pending được review bằng Qwen qua Alibaba Cloud DashScope.
+
+```bash
+export DASHSCOPE_API_KEY=...
+python run_pipeline.py tiki-key-map-review --model qwen3.8-max --votes 3
+```
+
+### Cách làm
+
+- 100 key silver từ 1688 để đo accuracy trước khi apply.
+- 3 vote/key; consensus + validation CJK.
+- Chỉ apply `qwen_high` mặc định; `--apply-medium` optional.
+- Nếu silver accuracy < 0,80: không apply, chỉ suggestion.
+- `enable_thinking=False`.
+- Không cần chuyên gia; LLM-as-judge có audit.
+
+### Output
+
+```text
+csv/tiki/key_map_review_input.csv
+csv/tiki/key_map_silver_eval.csv
+csv/tiki/key_map_qwen_votes.csv
+csv/tiki/key_map_qwen_review.csv
+csv/tiki/key_map_final.csv
+data/cleaned/key_map_qwen_review_stats.json
+```
+
+Sau review:
+
+```bash
+python run_pipeline.py tiki-bt-prepare
+```
+
+---
+
 ## EDA Tiki cũ (legacy)
 
 Module `cado_core/tiki.py` chạy EDA trên **toàn bộ** Tiki và xuất **một parquet

@@ -13,6 +13,7 @@ Các module:
     length_prior_v2 Phase A: value-only, value_class, CJK, split-safe
     length_prior_v3 Phase B/C: alignment fallback + title smoothing
     tiki_bt_prepare Plan A: key map, routing, BT input/cache, pre-BT state
+    key_map_review Plan B0: Qwen/DashScope review cho key map pending
 """
 
 __version__ = "2.0.0"

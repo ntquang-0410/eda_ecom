@@ -82,6 +82,14 @@ TIKI_KEY_MAP_REVIEW_CSV = CSV_DIR / "tiki/tiki_key_map_review.csv"
 TIKI_BT_ROUTING_CSV = CSV_DIR / "tiki/tiki_bt_routing_summary.csv"
 TIKI_BT_INPUT_SAMPLE_CSV = CSV_DIR / "tiki/tiki_bt_input_sample.csv"
 
+# Plan B0 — Qwen key-map review via Alibaba Cloud DashScope.
+KEY_MAP_REVIEW_INPUT_CSV = CSV_DIR / "tiki/key_map_review_input.csv"
+KEY_MAP_QWEN_VOTES_CSV = CSV_DIR / "tiki/key_map_qwen_votes.csv"
+KEY_MAP_QWEN_REVIEW_CSV = CSV_DIR / "tiki/key_map_qwen_review.csv"
+KEY_MAP_FINAL_CSV = CSV_DIR / "tiki/key_map_final.csv"
+KEY_MAP_SILVER_EVAL_CSV = CSV_DIR / "tiki/key_map_silver_eval.csv"
+KEY_MAP_QWEN_STATS_JSON = PROJECT_ROOT / "data/cleaned/key_map_qwen_review_stats.json"
+
 
 def resolve_path(value: str | Path | None, default: Path) -> Path:
     """Chuẩn hoá đường dẫn: tương đối → tính từ gốc dự án."""

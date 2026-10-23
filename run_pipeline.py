@@ -42,6 +42,9 @@ Ví dụ::
 
     # Plan A: key map + routing + BT input/cache, chưa gọi MT
     python run_pipeline.py tiki-bt-prepare
+
+    # Plan B0: review key map bằng Qwen qua Alibaba Cloud DashScope
+    python run_pipeline.py tiki-key-map-review
 """
 
 from __future__ import annotations
@@ -842,6 +845,12 @@ def command_tiki_bt_prepare(args: argparse.Namespace) -> None:
     run_from_args(args)
 
 
+def command_tiki_key_map_review(args: argparse.Namespace) -> None:
+    from tiki_mining.tiki_key_map_review import run_from_args
+
+    run_from_args(args)
+
+
 def command_stats(args: argparse.Namespace) -> None:
     from cado_core.dictionary import Cedict, Whitelist
 
@@ -1205,6 +1214,39 @@ def build_parser() -> argparse.ArgumentParser:
     bt_prepare.add_argument("--limit", type=int)
     bt_prepare.add_argument("--quiet", action="store_true")
     bt_prepare.set_defaults(func=command_tiki_bt_prepare)
+
+    key_map_review = subparsers.add_parser(
+        "tiki-key-map-review",
+        help="Plan B0: review key map bằng Qwen qua Alibaba Cloud DashScope",
+    )
+    key_map_review.add_argument("--review")
+    key_map_review.add_argument("--key-map")
+    key_map_review.add_argument("--units")
+    key_map_review.add_argument("--alignment-map")
+    key_map_review.add_argument("--input-output")
+    key_map_review.add_argument("--silver-output")
+    key_map_review.add_argument("--votes-output")
+    key_map_review.add_argument("--review-output")
+    key_map_review.add_argument("--final-output")
+    key_map_review.add_argument("--stats-output")
+    key_map_review.add_argument("--model")
+    key_map_review.add_argument("--base-url")
+    key_map_review.add_argument("--api-key-env", default="DASHSCOPE_API_KEY")
+    key_map_review.add_argument("--votes", type=int, default=3)
+    key_map_review.add_argument("--silver-votes", type=int, default=3)
+    key_map_review.add_argument("--silver-size", type=int, default=100)
+    key_map_review.add_argument("--min-silver-accuracy", type=float, default=0.80)
+    key_map_review.add_argument("--workers", type=int, default=4)
+    key_map_review.add_argument("--timeout", type=float, default=90.0)
+    key_map_review.add_argument("--seed", type=int, default=42)
+    key_map_review.add_argument("--limit", type=int)
+    key_map_review.add_argument("--apply-medium", action="store_true")
+    key_map_review.add_argument("--no-apply", action="store_true")
+    key_map_review.add_argument("--force-apply", action="store_true")
+    key_map_review.add_argument("--skip-silver", action="store_true")
+    key_map_review.add_argument("--dry-run", action="store_true")
+    key_map_review.add_argument("--quiet", action="store_true")
+    key_map_review.set_defaults(func=command_tiki_key_map_review)
 
     return parser
 
