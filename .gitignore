@@ -38,6 +38,16 @@ data/cleaned/tiki_units_stats.json
 data/cleaned/tiki_bt_units_length.parquet
 data/cleaned/tiki_length_prior_stats.json
 data/cleaned/length_prior_1688.json
+data/cleaned/tiki_bt_units_length_v2.parquet
+data/cleaned/tiki_length_prior_v2_stats.json
+data/cleaned/length_prior_1688_v2_*.json
+data/cleaned/tiki_bt_units_length_v3.parquet
+data/cleaned/tiki_length_prior_v3_stats.json
+data/cleaned/length_prior_1688_v3_*.json
+data/cleaned/phase_evaluation.json
+data/cleaned/phase_evaluation.md
 csv/tiki/tiki_key_inventory.csv
 csv/tiki/tiki_parse_errors.csv
 csv/length_prior/
+csv/length_prior_v2/
+csv/length_prior_v3/

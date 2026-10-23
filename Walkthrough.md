@@ -1,11 +1,12 @@
 # 📖 Walkthrough — Dữ Liệu & Pipeline Song Ngữ Trung–Việt (1688)
 
 Tài liệu này mô tả dữ liệu, các vấn đề phát hiện trong EDA, kiến trúc CADO,
-pipeline bitext, những bug đã sửa trong lần refactor 2026-10-21 và cách tái
-tạo artifact.
+pipeline bitext, refactor 2026-10-21, và **Tiki Phase 1 / 1.5 / A / B / C**
+(2026-10-23) cùng cách tái tạo artifact.
 
-> Đọc nhanh: nếu chỉ muốn chạy pipeline, xem mục **12. Runbook**.
+> Đọc nhanh: nếu chỉ muốn chạy pipeline, xem mục **12. Runbook** và **14–18**.
 > Nếu muốn hiểu vì sao một từ bị xoá, xem mục **6–8**.
+> Nếu chỉ quan tâm Tiki/length prior, đọc **14–18** và **11.4–11.6**.
 
 ---
 
@@ -24,8 +25,13 @@ tạo artifact.
 11. [Kết quả kiểm chứng](#11-kết-quả-kiểm-chứng)
 12. [Runbook](#12-runbook)
 13. [Artifact & CSV](#13-artifact--csv)
-14. [Giới hạn & roadmap](#14-giới-hạn--roadmap)
-15. [Glossary](#15-glossary)
+14. [Tiki Phase 1 — title + KV units](#14-tiki-phase-1--title--kv-units)
+15. [Tiki Phase 1.5 — length prior v1](#15-tiki-phase-15--length-prior-v1)
+16. [Phase A — value-only v2](#16-phase-a--value-only-v2)
+17. [Phase B/C — alignment + title v3](#17-phase-bc--alignment--title-v3)
+18. [Đánh giá tổng thể A/B/C](#18-đánh-giá-tổng-thể-abc)
+19. [Giới hạn & roadmap](#19-giới-hạn--roadmap)
+20. [Glossary](#20-glossary)
 
 ---
 
@@ -36,14 +42,21 @@ Mục tiêu của repo:
 - Làm sạch các từ tiếng Anh bị chèn vào tiêu đề/mô tả tiếng Trung và tiếng
   Việt của sản phẩm 1688, **không** xoá brand/model/đơn vị/từ mượn.
 - Tạo tập cặp câu Trung–Việt sạch để huấn luyện dịch máy.
-- Giữ khả năng audit: mỗi quyết định xoá/giữ đều có lý do và có thể xuất CSV.
+- Chuẩn bị Tiki VI → ZH: title + KV units, không dùng prose.
+- Học length prior từ 1688 human để QC/ước lượng độ dài ZH cho Tiki.
+- Giữ khả năng audit: mỗi quyết định xoá/giữ, split value và alignment đều có
+  artifact/CSV riêng.
 
-Hai thành phần chính:
+Các thành phần chính:
 
 | Thành phần | Vai trò | Code |
 |---|---|---|
 | **CADO** | Xoá từ tiếng Anh dư thừa trong ZH/VI | `cado_core/cado.py`, `cado_core/cado_vi.py` |
 | **Bitext Filter** | Preprocess + chấm điểm cặp câu | `cado_core/bitext.py` |
+| **Tiki Units** | Title + description KV → BT units | `cado_core/tiki_units.py` |
+| **Length Prior v1** | Prior key+value (audit) | `cado_core/length_prior.py` |
+| **Length Prior v2** | Value-only + class + CJK + split-safe | `cado_core/length_prior_v2.py` |
+| **Length Prior v3** | Alignment audit/fallback + title smoothing | `cado_core/length_prior_v3.py` |
 
 ---
 
@@ -54,7 +67,8 @@ Hai thành phần chính:
 - 1688.com (Trung Quốc), sản phẩm được crawl và dịch sang tiếng Việt.
 - File gốc: `data/raw/bilingual_zh_vi.parquet` — **16.348 dòng × 30 cột**.
 - Ngoài ra có artifact Tiki `data/cleaned/tiki_vi_cado.parquet`
-  (**13.200 × 38**) nhưng repo **không có raw/source script** cho Tiki.
+  (**13.200 × 37**) nhưng repo **không có raw/source script** cho Tiki.
+  Tiki là corpus đơn ngữ VI; `title_zh` / `description_zh` rỗng 100%.
 
 ### 2.2 Nhóm cột
 
@@ -584,6 +598,45 @@ Flags: stuffing=1.119, truncated=1.566, bloated=0
 Lưu ý: cosine trong artifact này được tính trước khi có `title_zh_cleaned`.
 Chạy lại `python run_pipeline.py bitext` để đồng bộ.
 
+### 11.4 Tiki Phase 1
+
+```text
+13.200 product
+13.200 title unit
+107.684 attribute unit
+120.884 unit tổng
+45.514 train_eligible
+698 key; 200 parse error
+```
+
+Value class: admin 61.805; text 32.509; numeric 11.081; model 2.289.
+
+### 11.5 Tiki length prior A/B/C
+
+| Metric | V2 | V3 |
+|---|---:|---:|
+| Dev coverage | 98,35% | 98,32% |
+| Test coverage | 98,38% | 98,36% |
+| Dev MAE | 1,43 | 1,42 |
+| Test MAE | 1,43 | 1,42 |
+| Title test MAE | 2,158 | **1,777** |
+| Alignment fallback | — | 213 |
+| Low-confidence group | — | 217.276 |
+
+- V2: 120.884 × 57.
+- V3: 120.884 × 58.
+- V3 title smoothing: 13.200 unit; 107.684 attribute value-only.
+- 0 null prior; 0 prose; `text_zh` vẫn null.
+
+### 11.6 Kết luận kiểm chứng
+
+- CADO/bitext vẫn giữ kết quả cũ; không regression.
+- Tiki Phase 1 tạo đúng unit grain, không đọc prose.
+- V2 sửa lỗi key/grain/class/split; V3 cải thiện title và thêm alignment
+  fallback.
+- Residual risk lớn nhất là low-confidence alignment long-tail và title
+  transfer từ 1688.
+
 ---
 
 ## 12. Runbook
@@ -651,6 +704,32 @@ python cado_layer/cado_tier2_entity.py --limit 200
 ```bash
 python run_pipeline.py stats
 python -m unittest discover -s tests -v
+# 43 test hiện tại
+```
+
+### 12.7 Tiki — Phase 1 / 1.5 / A / B / C
+
+```bash
+# Phase 1: profile + units (không gọi MT)
+python run_pipeline.py tiki-profile
+python run_pipeline.py tiki-units
+
+# Phase 1.5: prior key+value (v1, audit)
+python run_pipeline.py tiki-length-prior
+
+# Phase A: value-only + class + CJK + split-safe (v2)
+python run_pipeline.py tiki-length-prior-v2
+
+# Phase B/C: alignment audit/fallback + title smoothing (v3)
+python run_pipeline.py tiki-length-prior-v3
+```
+
+Chạy nhanh để test:
+
+```bash
+python run_pipeline.py tiki-units --limit 200
+python run_pipeline.py tiki-length-prior-v2 --fit-limit 1000 --limit 500
+python tiki_mining/tiki_length_prior_v3.py --fit-limit 1000 --limit 500 --quiet
 ```
 
 ---
@@ -665,7 +744,16 @@ python -m unittest discover -s tests -v
 | `data/cleaned/bilingual_zh_vi_cado.parquet` | 16.348 × 33 | **Mới regenerate** |
 | `data/cleaned/bilingual_zh_vi_bitext_ready.parquet` | 16.346 × 44 | Legacy |
 | `data/cleaned/bitext_scored.parquet` | 16.346 × 39 | Legacy |
-| `data/cleaned/tiki_vi_cado.parquet` | 13.200 × 38 | Legacy, không có source |
+| `data/cleaned/tiki_vi_cado.parquet` | 13.200 × 37 | Legacy, không có source |
+| `data/cleaned/tiki_products.parquet` | 13.200 × 27 | Phase 1: product-level, không prose |
+| `data/cleaned/tiki_bt_units.parquet` | 120.884 × 28 | Phase 1: title + attribute units |
+| `data/cleaned/tiki_bt_units_length.parquet` | 120.884 × 43 | Phase 1.5: prior v1 key+value (audit) |
+| `data/cleaned/tiki_bt_units_length_v2.parquet` | 120.884 × 57 | Phase A: value-only/class/CJK |
+| `data/cleaned/tiki_bt_units_length_v3.parquet` | 120.884 × 58 | Phase B/C: alignment + title smoothing |
+| `data/cleaned/tiki_length_prior_stats.json` | — | Stats v1 |
+| `data/cleaned/tiki_length_prior_v2_stats.json` | — | Stats v2 |
+| `data/cleaned/tiki_length_prior_v3_stats.json` | — | Stats v3 |
+| `data/cleaned/phase_evaluation.json` | — | Đánh giá A/B/C |
 
 ### 13.2 CSV mới
 
@@ -677,6 +765,17 @@ python -m unittest discover -s tests -v
 | `csv/cado/cado_tier3_loanword_report.csv` | 478 ứng viên T3 |
 | `csv/cado/cado_vi_occurrences.csv` | 202 occurrence VI |
 | `csv/cado/cado_tier5_similarity.csv` | Chỉ có khi chạy T5 |
+| `csv/tiki/tiki_key_inventory.csv` | 698 key Tiki Phase 1 |
+| `csv/tiki/tiki_parse_errors.csv` | 200 phần description lỗi |
+| `csv/length_prior/length_prior_by_bucket.csv` | 305 group prior v1 |
+| `csv/length_prior_v2/prior_value_by_class_bucket.csv` | Prior v2 all |
+| `csv/length_prior_v2/prior_value_by_class_bucket_train.csv` | Prior v2 train |
+| `csv/length_prior_v2/attribute_split_mismatch.csv` | 10.713 group split mismatch |
+| `csv/length_prior_v2/attribute_split_sample.csv` | Sample audit split |
+| `csv/length_prior_v2/attribute_split_summary.csv` | Summary split status |
+| `csv/length_prior_v3/alignment_key_map.csv` | Key map ZH→VI |
+| `csv/length_prior_v3/alignment_audit_sample.csv` | 500 group audit |
+| `csv/length_prior_v3/alignment_summary.csv` | Summary alignment |
 
 ### 13.3 CSV legacy (giữ để đối chiếu)
 
@@ -688,9 +787,352 @@ python -m unittest discover -s tests -v
 
 ---
 
-## 14. Giới hạn & roadmap
+## 14. Tiki Phase 1 — title + KV units
 
-### 14.1 Giới hạn hiện tại
+### 14.1 Phạm vi
+
+Phase 1 chỉ dùng:
+
+- `title_vi`;
+- `description_vi` dạng `key: value; ...`.
+
+`description_prose_vi` và toàn bộ prose **không** được đọc, không tạo unit và
+không xuất vào product-level. File raw `tiki_vi_cado.parquet` vẫn giữ để audit.
+Không dùng `title_vi_cleaned` của CADO-VI vì bản đó có thể làm hỏng brand/tên
+sản phẩm.
+
+### 14.2 Output
+
+| File | Grain | Nội dung |
+|---|---|---|
+| `data/cleaned/tiki_profile.json` | corpus | title/KV/key class/parse error |
+| `data/cleaned/tiki_products.parquet` | product | 13.200 × 27, không prose |
+| `data/cleaned/tiki_bt_units.parquet` | unit | 120.884 × 28 |
+| `data/cleaned/tiki_units_stats.json` | corpus | unit/class/method stats |
+| `csv/tiki/tiki_key_inventory.csv` | key | 698 key chuẩn hoá |
+| `csv/tiki/tiki_parse_errors.csv` | part | 200 phần description lỗi |
+
+Số liệu full:
+
+- 13.200 product; 13.200 title unit; 107.684 attribute unit.
+- 120.884 unit tổng; **45.514** unit `train_eligible`.
+- 698 unique key; 200 phần description malformed.
+- Value class:
+  - `admin`: 61.805
+  - `text`: 32.509
+  - `numeric`: 11.081
+  - `model`: 2.289
+
+### 14.3 Product schema
+
+```text
+product_id, source, category
+title_vi_raw, title_vi, title_zh
+description_vi_raw, description_vi, description_zh
+attributes_vi, attributes_vi_json, attributes_zh
+n_attributes_vi, n_attributes_zh, n_attributes_aligned, n_values_vi
+n_units, n_train_eligible_units
+description_parse_source, description_n_parts, description_n_malformed_parts
+title_duplicate_count, split, bt_status, zh_origin, qc_flags, qc_flags_text
+```
+
+- `description_vi` là bản canonical serialize từ `attributes_vi`.
+- `description_zh = null`, `attributes_zh = []` ở Phase 1.
+- Không có cột prose.
+
+### 14.4 Unit schema
+
+```text
+pair_id, product_id, source, category, split
+unit_type, unit_index, value_index
+key_vi, key_norm, key_class, key_zh
+value_vi, value_zh, text_vi, text_zh
+value_class, bt_method, bt_status, key_map_status
+parse_source, n_words, value_n_words, n_chars
+train_eligible, qc_flags, qc_flags_text, duplicate_count
+```
+
+- `unit_type = title | attribute`.
+- `pair_id = tiki:<product_id>:title` hoặc
+  `tiki:<product_id>:attr:<attribute_index>:<value_index>`.
+- `text_vi = "<key_vi>: <value_vi>"` với attribute; title dùng nguyên title.
+- `key_zh`, `value_zh`, `text_zh` để trống ở Phase 1; `bt_status = pending`.
+- `train_eligible` chỉ bật cho title 3–40 từ và attribute value `text`.
+- Admin/model/numeric vẫn có trong unit table để reassemble
+  `description_zh` nhưng không train bitext.
+
+### 14.5 Phân loại key/value
+
+| Class | Xử lý dự kiến | Ví dụ |
+|---|---|---|
+| `admin` | dictionary/preserve | thương hiệu, xuất xứ, bảo hành |
+| `model` | preserve | model, SKU, mã hàng |
+| `numeric` | rule/convert | trọng lượng, kích thước, dung tích |
+| `text` | MT | chất liệu, thành phần, màu sắc |
+
+`key_class` lấy theo tên key; `value_class` có thể override theo value thực tế.
+
+### 14.6 Key map Phase 2
+
+`tiki_bt_units.py` tự nạp `csv/tiki/tiki_key_map.csv` nếu tồn tại. Nếu chưa
+có, `key_zh = null`, `key_map_status = pending_phase2`, và text unit bị gắn
+`key_unmapped`.
+
+---
+
+## 15. Tiki Phase 1.5 — length prior v1
+
+### 15.1 Mục tiêu
+
+Học tỷ lệ độ dài VI/ZH từ **1688 human**, rồi gắn khoảng độ dài ZH kỳ vọng cho
+từng unit VI của Tiki. Không gọi model/MT.
+
+### 15.2 Cặp human
+
+| Unit type | Số cặp | Cách lấy |
+|---|---:|---|
+| `title` | 16.348 | `title_zh` ↔ `title_vi` |
+| `description` | 16.348 | `description_zh` ↔ `description_vi` |
+| `attribute` | 406.206 | parse KV description, ghép theo thứ tự |
+| **Tổng** | **438.902** | |
+
+Với attribute, thứ tự KV trong `description_zh` và `description_vi` khớp
+nhau. Không dùng thứ tự `attributes_zh` / `attributes_vi` vì hai list này
+không aligned theo index.
+
+### 15.3 Công thức v1
+
+```text
+ratio_vi_zh = vi_chars / zh_chars
+expected_zh_chars = round(vi_chars / ratio_vi_zh_p50)
+zh_chars_p05 = floor(vi_chars / ratio_vi_zh_p95)
+zh_chars_p95 = ceil(vi_chars / ratio_vi_zh_p05)
+```
+
+Bucket theo `vi_chars`: `0-10`, `11-20`, ..., `301+`.
+
+Ratio p50:
+
+| Unit type | `vi_chars` p50 | `ratio_vi_zh` p50 |
+|---|---:|---:|
+| `title` | 97 | 3,156 |
+| `attribute` | 24 | 3,000 |
+| `description` | 906 | 2,600 |
+
+### 15.4 Kết quả và artifact
+
+- 305 group prior.
+- Tiki v1: 120.884 × 43.
+- Title expected p50 ~30; attribute expected p50 ~7.
+- `length_prior_scope`, `length_prior_n`, `zh_too_short` / `zh_too_long` QC.
+
+Artifact:
+
+- `data/cleaned/length_prior_1688.json`
+- `data/cleaned/tiki_bt_units_length.parquet`
+- `data/cleaned/tiki_length_prior_stats.json`
+- `csv/length_prior/length_prior_by_bucket.csv`
+
+**Hạn chế:** v1 học trên `key: value`, key Tiki dài hơn key 1688; 1688 gộp
+nhiều value trong một attribute; title 1688 có đặc thù sàn. Vì vậy v1 chỉ giữ
+làm audit, không dùng làm prior chính.
+
+---
+
+## 16. Phase A — value-only v2
+
+### 16.1 Vấn đề phải sửa
+
+1. Prior v1 học trên key+value, không phải value-only.
+2. Grain 1688 gộp `a, b, c`, Tiki tách từng value.
+3. Title 1688 ~30 ký tự ZH do đặc thù sàn.
+4. Alignment attribute dựa trên description-order.
+5. Chưa stratify `value_class` / CJK.
+6. Chưa split-safe.
+
+### 16.2 Những gì v2 đã làm
+
+- Target **value-only** (`zh_value_chars`).
+- Key correction:
+  ```text
+  expected_zh_text_chars =
+      expected_zh_key_chars + separator_chars + expected_zh_value_chars
+  ```
+  `key_zh` dùng actual nếu có; nếu chưa có, estimate theo `key_class`.
+- `split_value_list`:
+  - tách `,`, `，`, `、`, `;`, `；`;
+  - guard `1,5`, `1,000`;
+  - mismatch không đoán, chỉ giữ group + audit.
+- Fit riêng `text`, `numeric`, `admin`, `model`.
+- Đo `zh_cjk_chars`, `zh_non_cjk_chars`, `cjk_ratio`, `ratio_vi_cjk`.
+- Split theo `product_id` 80/10/10.
+- `length_prior_soft_qc = true` cho title và `admin/model/numeric`; chỉ `text`
+  dùng QC cứng hơn.
+
+### 16.3 Kết quả v2
+
+| Chỉ số | Giá trị |
+|---|---:|
+| Value-only pairs | 592.055 |
+| Title pairs | 16.348 |
+| Group audit | 51.082 |
+| `single` | 355.117 (87,4%) |
+| `multi_matched` | 40.374 (9,9%) |
+| `mismatch` | 10.708 (2,6%) |
+| `empty` | 7 |
+| Train prior pairs | 488.969 |
+| All prior pairs | 608.403 |
+| Prior groups | 660 |
+
+Holdout train prior:
+
+| Split | Coverage p05–p95 | MAE value chars |
+|---|---:|---:|
+| dev | 98,35% | 1,43 |
+| test | 98,38% | 1,43 |
+
+Tiki v2: **120.884 × 57**:
+
+```text
+value_class+category+bucket  104.008
+unit_type+bucket               9.068
+unit_type+category+bucket      4.132
+value_class+bucket             3.350
+value_class                      326
+```
+
+Artifact:
+
+- `data/cleaned/length_prior_1688_v2_train.json`
+- `data/cleaned/length_prior_1688_v2_all.json`
+- `data/cleaned/length_prior_1688_v2_holdout_metrics.json`
+- `data/cleaned/tiki_bt_units_length_v2.parquet`
+- `data/cleaned/tiki_length_prior_v2_stats.json`
+- `csv/length_prior_v2/*`
+
+---
+
+## 17. Phase B/C — alignment + title v3
+
+### 17.1 Phase B — alignment audit/fallback
+
+V3 học key map từ description-order:
+
+```text
+key_zh_norm → key_vi_norm
+```
+
+Điều kiện map:
+
+- `freq >= 20`;
+- `top_share >= 0.60`.
+
+Với group low-confidence, thử tìm VI attribute theo key map. Nếu tìm được duy
+nhất, dùng `key_fallback`; nếu không, giữ description-order và gắn cờ review.
+
+Kết quả full:
+
+| Chỉ số | Giá trị |
+|---|---:|
+| ZH key được map | 276 / 2.049 |
+| Cặp key đủ tần suất | 921 |
+| `description_order` | 405.993 |
+| `key_fallback` | 213 |
+| High confidence | 188.723 |
+| Medium confidence | 207 |
+| Low confidence | 217.276 |
+
+Audit sample 500:
+
+| `audit_status` | Số group |
+|---|---:|
+| `review_low_confidence` | 252 |
+| `pass_auto` | 233 |
+| `review_split_mismatch` | 13 |
+| `review_fallback` | 2 |
+
+**Kết luận Phase B:** fallback hoạt động nhưng low-confidence vẫn lớn do key
+long-tail. Không nên coi toàn bộ alignment đã sạch; cần review sample hoặc fit
+strict high/medium trước khi dùng cho training.
+
+### 17.2 Phase C — hierarchical title smoothing
+
+Title dùng partial pooling:
+
+```text
+mu_shrunk = (n * mu_bucket + k * mu_parent) / (n + k)
+```
+
+- `k = 20`;
+- interval inflation cho bucket ít mẫu;
+- monotonic expected length theo bucket;
+- chỉ soft QC, không filter/không ép decode.
+
+Kết quả test:
+
+| Metric | V2 | V3 |
+|---|---:|---:|
+| Title MAE | 2,158 | **1,777** |
+| Title coverage | 95,19% | 94,67% |
+| Overall coverage | 98,38% | 98,36% |
+| Overall MAE | 1,433 | **1,423** |
+
+Tiki v3: **120.884 × 58**:
+
+- 13.200 title unit hierarchical smoothing;
+- 107.684 attribute giữ value-only;
+- 0 null prior; không prose; `text_zh` vẫn null;
+- 88.375 unit soft QC.
+
+Artifact:
+
+- `data/cleaned/length_prior_1688_v3_train.json`
+- `data/cleaned/length_prior_1688_v3_all.json`
+- `data/cleaned/length_prior_1688_v3_holdout_metrics.json`
+- `data/cleaned/tiki_bt_units_length_v3.parquet`
+- `data/cleaned/tiki_length_prior_v3_stats.json`
+- `csv/length_prior_v3/*`
+- `data/cleaned/phase_evaluation.json`
+- `data/cleaned/phase_evaluation.md`
+
+---
+
+## 18. Đánh giá tổng thể A/B/C
+
+### 18.1 Bảng tổng hợp
+
+| Hạng mục | Phase A (v2) | Phase B | Phase C (v3) |
+|---|---:|---:|---:|
+| Value-only pairs | 592.055 | 592.049 | 592.049 |
+| Title pairs | 16.348 | 16.348 | 16.348 |
+| Alignment fallback | — | 213 | 213 |
+| Low-confidence group | — | 217.276 | 217.276 |
+| Dev coverage | 98,35% | — | 98,32% |
+| Test coverage | 98,38% | — | 98,36% |
+| Dev MAE | 1,429 | — | 1,421 |
+| Test MAE | 1,433 | — | 1,423 |
+| Title test MAE | 2,158 | — | 1,777 |
+| Tiki output | 120.884 × 57 | — | 120.884 × 58 |
+
+### 18.2 Kết luận
+
+- **Phase A** giải quyết đúng các lỗi nền: value-only, grain, class, CJK và
+  split-safe. Đây là bước cải thiện chất lượng lớn nhất.
+- **Phase B** đã có audit/fallback thật, nhưng chưa xử lý được toàn bộ key
+  long-tail. Đây là residual risk lớn nhất.
+- **Phase C** giảm title MAE ~18%, đổi lại coverage giảm nhẹ. Title chỉ nên
+  dùng soft QC.
+- **V3 là bản nên dùng cho Phase 2**, nhưng nên:
+  1. review 500 sample alignment;
+  2. fit strict trên `high + medium` nếu cần training sạch;
+  3. dùng `text` cho length QC cứng, `admin/model/numeric` chỉ preserve/soft;
+  4. không dùng title làm hard constraint.
+
+---
+
+## 19. Giới hạn & roadmap
+
+### 19.1 Giới hạn hiện tại
 
 1. **Chưa chạy lại bge-m3** trong lần refactor (T5 + cosine). Cần ~2.2GB và
    thời gian encode.
@@ -704,8 +1146,18 @@ python -m unittest discover -s tests -v
 8. **Title trùng lặp** 485 dòng chưa dedupe ở bitext.
 9. `--preprocess-only` không tạo `signal_S1..S7`; chạy
    `cado_layer/cado_tier2_entity.py` nếu cần các cột này.
+10. **Tiki value alignment**: Phase B vẫn còn 217.276 group low-confidence
+    (key long-tail); fallback chỉ xử lý an toàn 213 group.
+11. **Tiki key_zh**: Phase 1 chưa có key map nên key length trong v3 là
+    estimate theo `key_class`; cần key map Phase 2 để chính xác hơn.
+12. **Title prior**: v3 đã smooth nhưng vẫn học từ 1688; title Tiki ngắn hơn
+    và có phân phối khác. Chỉ dùng soft QC.
+13. **Admin/model/numeric**: length prior không phản ánh đúng nghĩa preserve;
+    các class này đã được đánh dấu soft QC.
+14. **Split mismatch**: 10.713 group 1688 (2,64%) không tách value được; các
+    group này chỉ dùng audit, không đưa vào value-level prior.
 
-### 14.2 Roadmap đề xuất
+### 19.2 Roadmap đề xuất
 
 - Chạy full bge-m3, regenerate `bitext_scored.parquet` với `title_zh_cleaned`.
 - Thêm filter cho 29 cặp suspect (dùng entity + cosine).
@@ -714,10 +1166,17 @@ python -m unittest discover -s tests -v
 - Bổ sung guard cho `description_zh` (model code `Type-c`, `USB-C`).
 - Chuyển whitelist sang schema có `match_mode` thực sự.
 - Viết script crawl/clean Tiki để tái tạo artifact.
+- **Phase B.2:** review 500 alignment sample; fit strict prior chỉ trên
+  `high + medium`; bổ sung semantic/key map cho long-tail key.
+- **Phase C.2:** đánh giá title prior bằng một tập Tiki có bản dịch người;
+  nếu không có, giữ soft QC và không dùng làm hard constraint.
+- **Phase 2:** tạo `csv/tiki/tiki_key_map.csv`, chuyển
+  `key_len_source=estimated_key_class` sang `actual`, rồi dùng
+  `length_qc_v2/v3` để gắn flag sau BT.
 
 ---
 
-## 15. Glossary
+## 20. Glossary
 
 | Thuật ngữ | Nghĩa |
 |---|---|
@@ -732,3 +1191,12 @@ python -m unittest discover -s tests -v
 | **Lexical overlap** | Jaccard trên brand/model/số/đơn vị |
 | **Hybrid** | Kết hợp cosine và lexical |
 | **KEEP / DISCARD** | Nhãn cuối cùng của bitext filter |
+| **Value-only** | Prior chỉ học value, không học key |
+| **Key correction** | Cộng độ dài key_zh khi cần độ dài text_zh đầy đủ |
+| **Value grain** | Một value riêng lẻ trong attribute nhiều giá trị |
+| **Split-safe** | Chia train/dev/test theo product, không leakage |
+| **CJK-only** | Độ dài chỉ tính ký tự Hán, bỏ model/số/dấu câu |
+| **Key map** | Map `key_zh_norm → key_vi_norm` cho alignment |
+| **Key fallback** | Align lại VI attribute theo key map khi confidence thấp |
+| **Hierarchical smoothing** | Partial pooling bucket về parent, dùng cho title |
+| **Soft QC** | Chỉ cảnh báo độ dài, không filter/ép decode |

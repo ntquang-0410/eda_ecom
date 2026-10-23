@@ -9,7 +9,9 @@ Các module:
     cado_vi     Pipeline làm sạch tiếng Anh trong văn bản Việt (CADO-VI)
     bitext      Preprocess + chấm điểm cặp song ngữ (cosine + lexical)
     tiki_units  Phase 1 Tiki: profile + title/KV BT units
-    length_prior Phase 1.5: prior độ dài VI/ZH từ 1688 human
+    length_prior Phase 1.5: prior độ dài VI/ZH từ 1688 human (audit)
+    length_prior_v2 Phase A: value-only, value_class, CJK, split-safe
+    length_prior_v3 Phase B/C: alignment fallback + title smoothing
 """
 
 __version__ = "2.0.0"

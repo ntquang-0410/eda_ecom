@@ -253,6 +253,234 @@ hoặc cắt bản dịch.
 
 ---
 
+## Phase A — Length prior v2 (value-only, class, CJK, split-safe)
+
+Phase A sửa các lỗi grain/key/class/split của v1. **Không ghi đè v1**; v2 là
+artifact riêng, v1 vẫn dùng làm audit.
+
+### Chạy
+
+```bash
+python run_pipeline.py tiki-length-prior-v2
+# hoặc
+python tiki_mining/tiki_length_prior_v2.py
+```
+
+### Thay đổi chính
+
+| Vấn đề | Cách xử lý v2 |
+|---|---|
+| Prior v1 học `key: value` | Target **value-only**; key_zh cộng lại qua `expected_zh_key_chars` |
+| 1688 gộp `a, b, c` | `split_value_list` tách cả ZH/VI, guard `1,5` và `1,000`; mismatch đưa vào audit, không đoán |
+| Chưa stratify class | Fit riêng `text`, `numeric`, `admin`, `model` |
+| Chưa đo CJK | Thêm `zh_cjk_chars`, `zh_non_cjk_chars`, `cjk_ratio`, `ratio_vi_cjk` |
+| Chưa split-safe | Split theo `product_id` 80/10/10; fit train và all riêng |
+
+### Grain value
+
+Với mỗi attribute group:
+
+- nếu ZH/VI cùng 1 token → `single`;
+- nếu cùng >1 token → `multi_matched`, tạo value pair;
+- nếu lệch token → `mismatch`, chỉ giữ group pair để audit;
+- group `multi_matched`/`mismatch` có thêm `grain=attribute_group`;
+- prior chính chỉ dùng `grain=attribute_value`.
+
+Kết quả full:
+
+```text
+single       355.117  87,4%
+multi_matched 40.374   9,9%
+mismatch      10.708   2,6%
+empty              7   0,0%
+```
+
+Audit:
+
+- `csv/length_prior_v2/attribute_split_summary.csv`
+- `csv/length_prior_v2/attribute_split_mismatch.csv`
+- `csv/length_prior_v2/attribute_split_sample.csv`
+
+### Value class và CJK
+
+Prior v2 có các scope:
+
+```text
+value_class+category+bucket
+value_class+bucket
+value_class
+unit_type+category+bucket
+unit_type+bucket
+unit_type+category
+unit_type
+global
+```
+
+Tiki v2 full:
+
+- 120.884 unit; 0 prose; `text_zh` vẫn null.
+- Scope: 104.008 `value_class+category+bucket`; 9.068 `unit_type+bucket`;
+  4.132 `unit_type+category+bucket`; 3.350 `value_class+bucket`;
+  326 `value_class`.
+- Confidence: 119.611 high; 1.254 medium; 19 low.
+- `length_prior_soft_qc = true` cho title và `admin/model/numeric`;
+  chỉ `text` dùng length QC cứng hơn. Tổng 88.375 unit soft QC.
+- `key_len_source`:
+  - `actual` nếu có `key_zh`;
+  - `estimated_key_class` nếu Phase 1 chưa có key map;
+  - `title` cho title.
+
+### Split-safe và holdout
+
+Split theo `product_id` với seed 42:
+
+```text
+train 80% / dev 10% / test 10%
+```
+
+Fit train: 488.969 cặp; fit all: 608.403 cặp; prior all có 660 group.
+
+Holdout dùng train prior:
+
+| Split | Coverage p05–p95 | MAE value chars |
+|---|---:|---:|
+| dev | 98,35% | 1,43 |
+| test | 98,38% | 1,43 |
+
+Title coverage ~95,2%, MAE ~2,1; title chỉ dùng soft QC.
+
+### Output v2
+
+| File | Nội dung |
+|---|---|
+| `data/cleaned/length_prior_1688_v2_train.json` | prior fit train |
+| `data/cleaned/length_prior_1688_v2_all.json` | prior fit all |
+| `data/cleaned/length_prior_1688_v2_holdout_metrics.json` | metrics dev/test |
+| `data/cleaned/tiki_bt_units_length_v2.parquet` | 120.884 × 57 |
+| `data/cleaned/tiki_length_prior_v2_stats.json` | scope/confidence/key source |
+| `csv/length_prior_v2/prior_value_by_class_bucket.csv` | prior all |
+| `csv/length_prior_v2/prior_value_by_class_bucket_train.csv` | prior train |
+
+Cột v2 chính:
+
+```text
+expected_zh_value_chars
+zh_value_chars_p05 / p95
+expected_zh_key_chars
+expected_zh_text_chars
+zh_text_chars_p05 / p95
+expected_zh_cjk_chars
+zh_cjk_chars_p05 / p95
+length_prior_grain
+length_prior_value_class
+length_prior_scope
+length_prior_n
+length_prior_confidence
+length_prior_soft_qc
+key_len_source
+```
+
+---
+
+## Phase B/C — Alignment fallback + hierarchical title smoothing (v3)
+
+V3 dùng lại prior value-only của v2, bổ sung:
+
+- audit alignment + key map;
+- key-based fallback cho group low-confidence;
+- hierarchical smoothing cho title.
+
+### Chạy
+
+```bash
+python run_pipeline.py tiki-length-prior-v3
+# hoặc
+python tiki_mining/tiki_length_prior_v3.py
+```
+
+### Phase B — alignment audit/fallback
+
+Học key map từ description-order:
+
+```text
+key_zh_norm -> key_vi_norm
+```
+
+Điều kiện map:
+
+- `freq >= 20`;
+- `top_share >= 0.60`.
+
+Kết quả full:
+
+- **276/2.049** ZH key được map.
+- **921** cặp key đủ tần suất.
+- **213 group** được `key_fallback`.
+- Alignment method: `description_order` 405.993; `key_fallback` 213.
+- Confidence: high 188.723; medium 207; low 217.276.
+
+Audit sample 500 group:
+
+| `audit_status` | Số group |
+|---|---:|
+| `review_low_confidence` | 252 |
+| `pass_auto` | 233 |
+| `review_split_mismatch` | 13 |
+| `review_fallback` | 2 |
+
+Low-confidence còn lớn vì key long-tail; các group này không bị silently
+sửa, mà được gắn cờ review. Đây là residual risk của Phase B.
+
+Output:
+
+- `csv/length_prior_v3/alignment_key_map.csv`
+- `csv/length_prior_v3/alignment_audit_sample.csv`
+- `csv/length_prior_v3/alignment_summary.csv`
+
+### Phase C — hierarchical title smoothing
+
+Title không dùng ratio trực tiếp; dùng:
+
+```text
+mu_shrunk = (n * mu_bucket + k * mu_parent) / (n + k)
+```
+
+- `k = 20`;
+- interval inflation cho bucket ít mẫu;
+- monotonic expected length theo bucket;
+- `length_prior_soft_qc = true`;
+- không filter, không ép độ dài sinh.
+
+Kết quả test holdout:
+
+| Metric | V2 | V3 |
+|---|---:|---:|
+| Title MAE | 2,158 | **1,777** |
+| Title coverage | 95,19% | 94,67% |
+| Overall coverage | 98,38% | 98,36% |
+| Overall MAE | 1,433 | **1,423** |
+
+V3 Tiki:
+
+- 120.884 × 58.
+- 13.200 title unit được hierarchical smoothing.
+- 107.684 attribute giữ prior value-only.
+- 0 null prior, không prose, `text_zh` vẫn null.
+
+### Output v3
+
+| File | Nội dung |
+|---|---|
+| `data/cleaned/length_prior_1688_v3_train.json` | prior train |
+| `data/cleaned/length_prior_1688_v3_all.json` | prior all |
+| `data/cleaned/length_prior_1688_v3_holdout_metrics.json` | dev/test |
+| `data/cleaned/tiki_bt_units_length_v3.parquet` | 120.884 × 58 |
+| `data/cleaned/tiki_length_prior_v3_stats.json` | stats apply |
+| `data/cleaned/phase_evaluation.json` | đánh giá A/B/C |
+| `data/cleaned/phase_evaluation.md` | bản tóm tắt |
+
+---
+
 ## EDA Tiki cũ (legacy)
 
 Module `cado_core/tiki.py` chạy EDA trên **toàn bộ** Tiki và xuất **một parquet

@@ -46,6 +46,32 @@ LENGTH_PRIOR_CSV = CSV_DIR / "length_prior/length_prior_by_bucket.csv"
 TIKI_UNITS_LENGTH_PARQUET = PROJECT_ROOT / "data/cleaned/tiki_bt_units_length.parquet"
 TIKI_LENGTH_PRIOR_STATS_JSON = PROJECT_ROOT / "data/cleaned/tiki_length_prior_stats.json"
 
+# Phase A — length prior v2: value-only, value_class, CJK, split-safe.
+LENGTH_PRIOR_V2_TRAIN_JSON = PROJECT_ROOT / "data/cleaned/length_prior_1688_v2_train.json"
+LENGTH_PRIOR_V2_ALL_JSON = PROJECT_ROOT / "data/cleaned/length_prior_1688_v2_all.json"
+LENGTH_PRIOR_V2_HOLDOUT_JSON = PROJECT_ROOT / "data/cleaned/length_prior_1688_v2_holdout_metrics.json"
+LENGTH_PRIOR_V2_CSV = CSV_DIR / "length_prior_v2/prior_value_by_class_bucket.csv"
+LENGTH_PRIOR_V2_TRAIN_CSV = CSV_DIR / "length_prior_v2/prior_value_by_class_bucket_train.csv"
+LENGTH_PRIOR_V2_SPLIT_MISMATCH_CSV = CSV_DIR / "length_prior_v2/attribute_split_mismatch.csv"
+LENGTH_PRIOR_V2_SPLIT_SAMPLE_CSV = CSV_DIR / "length_prior_v2/attribute_split_sample.csv"
+LENGTH_PRIOR_V2_SPLIT_SUMMARY_CSV = CSV_DIR / "length_prior_v2/attribute_split_summary.csv"
+TIKI_UNITS_LENGTH_V2_PARQUET = PROJECT_ROOT / "data/cleaned/tiki_bt_units_length_v2.parquet"
+TIKI_LENGTH_PRIOR_V2_STATS_JSON = PROJECT_ROOT / "data/cleaned/tiki_length_prior_v2_stats.json"
+
+# Phase B/C — alignment fallback + hierarchical title smoothing.
+LENGTH_PRIOR_V3_TRAIN_JSON = PROJECT_ROOT / "data/cleaned/length_prior_1688_v3_train.json"
+LENGTH_PRIOR_V3_ALL_JSON = PROJECT_ROOT / "data/cleaned/length_prior_1688_v3_all.json"
+LENGTH_PRIOR_V3_HOLDOUT_JSON = PROJECT_ROOT / "data/cleaned/length_prior_1688_v3_holdout_metrics.json"
+LENGTH_PRIOR_V3_CSV = CSV_DIR / "length_prior_v3/prior_value_by_class_bucket.csv"
+LENGTH_PRIOR_V3_TRAIN_CSV = CSV_DIR / "length_prior_v3/prior_value_by_class_bucket_train.csv"
+LENGTH_PRIOR_V3_ALIGNMENT_MAP_CSV = CSV_DIR / "length_prior_v3/alignment_key_map.csv"
+LENGTH_PRIOR_V3_ALIGNMENT_SAMPLE_CSV = CSV_DIR / "length_prior_v3/alignment_audit_sample.csv"
+LENGTH_PRIOR_V3_ALIGNMENT_SUMMARY_CSV = CSV_DIR / "length_prior_v3/alignment_summary.csv"
+PHASE_EVALUATION_JSON = PROJECT_ROOT / "data/cleaned/phase_evaluation.json"
+PHASE_EVALUATION_MD = PROJECT_ROOT / "data/cleaned/phase_evaluation.md"
+TIKI_UNITS_LENGTH_V3_PARQUET = PROJECT_ROOT / "data/cleaned/tiki_bt_units_length_v3.parquet"
+TIKI_LENGTH_PRIOR_V3_STATS_JSON = PROJECT_ROOT / "data/cleaned/tiki_length_prior_v3_stats.json"
+
 
 def resolve_path(value: str | Path | None, default: Path) -> Path:
     """Chuẩn hoá đường dẫn: tương đối → tính từ gốc dự án."""

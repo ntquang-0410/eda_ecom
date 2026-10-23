@@ -33,6 +33,12 @@ Ví dụ::
 
     # Phase 1.5: học length prior từ 1688 human, gắn khoảng độ dài ZH cho Tiki
     python run_pipeline.py tiki-length-prior
+
+    # Phase A v2: value-only + value_class + CJK + split-safe
+    python run_pipeline.py tiki-length-prior-v2
+
+    # Phase B/C v3: alignment fallback + hierarchical title smoothing
+    python run_pipeline.py tiki-length-prior-v3
 """
 
 from __future__ import annotations
@@ -61,16 +67,27 @@ from cado_core.config import (
     DESC_ZH_CLEANED,
     LENGTH_PRIOR_CSV,
     LENGTH_PRIOR_JSON,
+    LENGTH_PRIOR_V2_ALL_JSON,
+    LENGTH_PRIOR_V2_CSV,
+    LENGTH_PRIOR_V2_HOLDOUT_JSON,
+    LENGTH_PRIOR_V2_SPLIT_MISMATCH_CSV,
+    LENGTH_PRIOR_V2_SPLIT_SAMPLE_CSV,
+    LENGTH_PRIOR_V2_SPLIT_SUMMARY_CSV,
+    LENGTH_PRIOR_V2_TRAIN_CSV,
+    LENGTH_PRIOR_V2_TRAIN_JSON,
     RAW_PARQUET,
     TIKI_BT_UNITS_PARQUET,
     TIKI_INPUT_PARQUET,
     TIKI_KEY_INVENTORY_CSV,
     TIKI_KEY_MAP_CSV,
     TIKI_LENGTH_PRIOR_STATS_JSON,
+    TIKI_LENGTH_PRIOR_V2_STATS_JSON,
     TIKI_PARSE_ERRORS_CSV,
     TIKI_PRODUCTS_PARQUET,
     TIKI_PROFILE_JSON,
     TIKI_UNITS_LENGTH_PARQUET,
+    TIKI_UNITS_LENGTH_V2_PARQUET,
+    TIKI_UNITS_LENGTH_V3_PARQUET,
     TIKI_UNITS_STATS_JSON,
     TITLE_VI,
     TITLE_VI_CLEANED,
@@ -84,6 +101,13 @@ from cado_core.length_prior import (
     extract_human_length_pairs,
     fit_length_prior,
     write_prior_table,
+)
+from cado_core.length_prior_v2 import (
+    LengthPriorV2Config,
+    apply_length_prior_v2,
+    evaluate_length_prior_v2,
+    extract_human_value_pairs,
+    fit_length_prior_v2,
 )
 from cado_core.rules import aggregate_word_report
 from cado_core.tiki import run_tiki_eda
@@ -568,6 +592,246 @@ def command_tiki_length_prior(args: argparse.Namespace) -> None:
     log(f"   💾 {stats_path}")
 
 
+def _write_prior_v2_json(
+    prior,
+    pairs_result,
+    path: Path,
+    *,
+    bilingual_path: Path,
+) -> None:
+    payload = dict(prior.stats)
+    payload["bilingual_input"] = str(bilingual_path)
+    payload["split_audit"] = pairs_result.stats
+    payload["groups"] = prior.table.to_dict("records")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as handle:
+        json.dump(payload, handle, ensure_ascii=False, indent=2)
+
+
+def _write_split_audit_v2(
+    audit: pd.DataFrame,
+    *,
+    mismatch_path: Path,
+    sample_path: Path,
+    summary_path: Path,
+    sample_size: int,
+    seed: int,
+) -> dict:
+    summary = (
+        audit.groupby("split_status", dropna=False)
+        .size()
+        .rename("n")
+        .reset_index()
+        .sort_values("n", ascending=False)
+    )
+    total = int(summary["n"].sum()) if not summary.empty else 0
+    summary["pct"] = (summary["n"] / total if total else 0.0).round(4)
+    summary_path.parent.mkdir(parents=True, exist_ok=True)
+    summary.to_csv(summary_path, index=False, encoding="utf-8-sig")
+
+    mismatch = audit[audit["split_status"] == "mismatch"].copy()
+    mismatch_path.parent.mkdir(parents=True, exist_ok=True)
+    mismatch.to_csv(mismatch_path, index=False, encoding="utf-8-sig")
+
+    sample = (
+        audit.sample(n=sample_size, random_state=seed)
+        if len(audit) > sample_size
+        else audit
+    )
+    sample_path.parent.mkdir(parents=True, exist_ok=True)
+    sample.to_csv(sample_path, index=False, encoding="utf-8-sig")
+
+    return {
+        "summary_path": str(summary_path),
+        "mismatch_path": str(mismatch_path),
+        "sample_path": str(sample_path),
+        "n_mismatch": int(len(mismatch)),
+        "n_sample": int(len(sample)),
+        "summary": [
+            {
+                "split_status": str(row["split_status"]),
+                "n": int(row["n"]),
+                "pct": float(row["pct"]),
+            }
+            for row in summary.to_dict("records")
+        ],
+    }
+
+
+def _v2_config(args: argparse.Namespace, fit_split: str) -> LengthPriorV2Config:
+    return LengthPriorV2Config(
+        min_group_samples=args.min_group_samples,
+        min_category_samples=args.min_category_samples,
+        min_value_class_samples=args.min_value_class_samples,
+        min_value_class_category_samples=args.min_value_class_category_samples,
+        split_seed=args.split_seed,
+        fit_split=fit_split,
+    )
+
+
+def command_tiki_length_prior_v2(args: argparse.Namespace) -> None:
+    bilingual_path = resolve_path(args.bilingual, CADO_PARQUET)
+    tiki_units_path = resolve_path(args.tiki_units, TIKI_BT_UNITS_PARQUET)
+    prior_train_path = resolve_path(args.prior_train_output, LENGTH_PRIOR_V2_TRAIN_JSON)
+    prior_all_path = resolve_path(args.prior_all_output, LENGTH_PRIOR_V2_ALL_JSON)
+    holdout_path = resolve_path(args.holdout_output, LENGTH_PRIOR_V2_HOLDOUT_JSON)
+    prior_csv_path = resolve_path(args.prior_csv, LENGTH_PRIOR_V2_CSV)
+    prior_train_csv_path = resolve_path(args.prior_train_csv, LENGTH_PRIOR_V2_TRAIN_CSV)
+    mismatch_path = resolve_path(args.split_mismatch_output, LENGTH_PRIOR_V2_SPLIT_MISMATCH_CSV)
+    sample_path = resolve_path(args.split_sample_output, LENGTH_PRIOR_V2_SPLIT_SAMPLE_CSV)
+    split_summary_path = resolve_path(args.split_summary_output, LENGTH_PRIOR_V2_SPLIT_SUMMARY_CSV)
+    units_output_path = resolve_path(args.units_output, TIKI_UNITS_LENGTH_V2_PARQUET)
+    stats_path = resolve_path(args.stats_output, TIKI_LENGTH_PRIOR_V2_STATS_JSON)
+
+    log("=" * 68)
+    log("📏 PHASE A — LENGTH PRIOR V2 (VALUE-ONLY / CLASS / CJK / SPLIT-SAFE)")
+    log("=" * 68)
+    log(f"📂 1688 human   : {bilingual_path}")
+    log(f"📂 Tiki units   : {tiki_units_path}")
+    log(f"📂 Prior train  : {prior_train_path}")
+    log(f"📂 Prior all    : {prior_all_path}")
+    log(f"📂 Holdout      : {holdout_path}")
+    log(f"📂 Units v2     : {units_output_path}")
+    log(f"📂 Apply stats  : {stats_path}")
+
+    bilingual = pd.read_parquet(bilingual_path)
+    if args.fit_limit:
+        bilingual = bilingual.head(args.fit_limit).copy()
+        log(f"⚠️  Giới hạn fit {args.fit_limit:,} dòng 1688")
+
+    base_config = _v2_config(args, "all")
+    progress = None if args.quiet else log
+    extracted = extract_human_value_pairs(
+        bilingual,
+        config=base_config,
+        progress=progress,
+    )
+    pairs = extracted.pairs
+    log(
+        f"\n✅ Value pairs: {extracted.stats['n_value_pairs']:,} "
+        f"+ title {extracted.stats['n_title_pairs']:,} "
+        f"(group audit {extracted.stats['n_group_pairs']:,})"
+    )
+    log(f"   Split status: {extracted.stats['split_status_counts']}")
+    log(f"   Split counts: {extracted.stats['split_counts']}")
+
+    train_config = _v2_config(args, "train")
+    all_config = _v2_config(args, "all")
+    train_prior = fit_length_prior_v2(
+        pairs, config=train_config, progress=progress
+    )
+    all_prior = fit_length_prior_v2(
+        pairs, config=all_config, progress=progress
+    )
+
+    _write_prior_v2_json(
+        train_prior,
+        extracted,
+        prior_train_path,
+        bilingual_path=bilingual_path,
+    )
+    _write_prior_v2_json(
+        all_prior,
+        extracted,
+        prior_all_path,
+        bilingual_path=bilingual_path,
+    )
+    prior_train_csv_path.parent.mkdir(parents=True, exist_ok=True)
+    train_prior.table.to_csv(
+        prior_train_csv_path, index=False, encoding="utf-8-sig"
+    )
+    prior_csv_path.parent.mkdir(parents=True, exist_ok=True)
+    all_prior.table.to_csv(prior_csv_path, index=False, encoding="utf-8-sig")
+
+    split_audit_info = _write_split_audit_v2(
+        extracted.split_audit,
+        mismatch_path=mismatch_path,
+        sample_path=sample_path,
+        summary_path=split_summary_path,
+        sample_size=args.sample_size,
+        seed=args.split_seed,
+    )
+
+    holdout = {
+        "fit_split": "train",
+        "train_prior": str(prior_train_path),
+        "splits": {},
+    }
+    for split in ("dev", "test"):
+        holdout["splits"][split] = evaluate_length_prior_v2(
+            pairs,
+            train_prior,
+            split=split,
+            config=train_config,
+        )
+    holdout_path.parent.mkdir(parents=True, exist_ok=True)
+    with holdout_path.open("w", encoding="utf-8") as handle:
+        json.dump(holdout, handle, ensure_ascii=False, indent=2)
+
+    units = pd.read_parquet(tiki_units_path)
+    if args.limit:
+        units = units.head(args.limit).copy()
+        log(f"⚠️  Giới hạn apply {args.limit:,} Tiki unit")
+    applied = apply_length_prior_v2(
+        units,
+        all_prior,
+        config=all_config,
+        progress=progress,
+    )
+    apply_stats = dict(applied.stats)
+    apply_stats.update({
+        "bilingual_input": str(bilingual_path),
+        "tiki_units_input": str(tiki_units_path),
+        "units_output": str(units_output_path),
+        "prior_used": str(prior_all_path),
+        "prior_train": str(prior_train_path),
+        "holdout_metrics": str(holdout_path),
+        "split_audit": split_audit_info,
+    })
+    units_output_path.parent.mkdir(parents=True, exist_ok=True)
+    applied.units.to_parquet(
+        units_output_path, index=False, compression="snappy"
+    )
+    stats_path.parent.mkdir(parents=True, exist_ok=True)
+    with stats_path.open("w", encoding="utf-8") as handle:
+        json.dump(apply_stats, handle, ensure_ascii=False, indent=2)
+
+    log("\n" + "=" * 68)
+    log("✅ PHASE A HOÀN TẤT")
+    log("=" * 68)
+    log(f"Train prior pairs : {train_prior.stats['n_pairs']:,}")
+    log(f"All prior pairs   : {all_prior.stats['n_pairs']:,}")
+    log(f"Prior groups all  : {all_prior.stats['n_groups']:,}")
+    for split in ("dev", "test"):
+        metrics = holdout["splits"][split]
+        log(
+            f"Holdout {split:<4}    : n={metrics.get('n', 0):,} "
+            f"coverage={metrics.get('overall', {}).get('coverage_value_p05_p95', 0):.3f} "
+            f"MAE={metrics.get('overall', {}).get('mae_value_chars', 0):.3f}"
+        )
+    log(f"Tiki units        : {apply_stats['n_units']:,}")
+    log(f"Expected value p50: {apply_stats['expected_zh_value_chars']['p50']}")
+    log(f"Expected text p50 : {apply_stats['expected_zh_text_chars']['p50']}")
+    log(f"Scopes            : {apply_stats['scope_counts']}")
+    log(f"Confidence        : {apply_stats['confidence_counts']}")
+    log(f"\n💾 {prior_train_path}")
+    log(f"💾 {prior_all_path}")
+    log(f"💾 {holdout_path}")
+    log(f"💾 {prior_csv_path}")
+    log(f"💾 {prior_train_csv_path}")
+    log(f"💾 {split_summary_path}")
+    log(f"💾 {mismatch_path}")
+    log(f"💾 {sample_path}")
+    log(f"💾 {units_output_path}")
+    log(f"💾 {stats_path}")
+
+
+def command_tiki_length_prior_v3(args: argparse.Namespace) -> None:
+    from tiki_mining.tiki_length_prior_v3 import run_from_args
+
+    run_from_args(args)
+
+
 def command_stats(args: argparse.Namespace) -> None:
     from cado_core.dictionary import Cedict, Whitelist
 
@@ -583,6 +847,8 @@ def command_stats(args: argparse.Namespace) -> None:
         TIKI_PRODUCTS_PARQUET,
         TIKI_BT_UNITS_PARQUET,
         TIKI_UNITS_LENGTH_PARQUET,
+        TIKI_UNITS_LENGTH_V2_PARQUET,
+        TIKI_UNITS_LENGTH_V3_PARQUET,
     ):
         if path.exists():
             frame = pd.read_parquet(path)
@@ -796,6 +1062,115 @@ def build_parser() -> argparse.ArgumentParser:
     length_prior.add_argument("--limit", type=int, help="Chỉ áp dụng N Tiki unit đầu (để test)")
     length_prior.add_argument("--quiet", action="store_true", help="Không in tiến độ")
     length_prior.set_defaults(func=command_tiki_length_prior)
+
+    length_prior_v2 = subparsers.add_parser(
+        "tiki-length-prior-v2",
+        help="Phase A v2: value-only + value_class + CJK + split-safe",
+    )
+    length_prior_v2.add_argument(
+        "--bilingual",
+        help="Parquet 1688 human ZH–VI (mặc định data/cleaned/bilingual_zh_vi_cado.parquet)",
+    )
+    length_prior_v2.add_argument(
+        "--tiki-units",
+        help="Parquet Tiki units (mặc định data/cleaned/tiki_bt_units.parquet)",
+    )
+    length_prior_v2.add_argument(
+        "--prior-train-output",
+        help="JSON prior train (mặc định data/cleaned/length_prior_1688_v2_train.json)",
+    )
+    length_prior_v2.add_argument(
+        "--prior-all-output",
+        help="JSON prior all (mặc định data/cleaned/length_prior_1688_v2_all.json)",
+    )
+    length_prior_v2.add_argument(
+        "--holdout-output",
+        help="JSON metrics dev/test (mặc định data/cleaned/length_prior_1688_v2_holdout_metrics.json)",
+    )
+    length_prior_v2.add_argument(
+        "--prior-csv",
+        help="CSV prior all (mặc định csv/length_prior_v2/prior_value_by_class_bucket.csv)",
+    )
+    length_prior_v2.add_argument(
+        "--prior-train-csv",
+        help="CSV prior train (mặc định csv/length_prior_v2/prior_value_by_class_bucket_train.csv)",
+    )
+    length_prior_v2.add_argument(
+        "--split-mismatch-output",
+        help="CSV các group split mismatch",
+    )
+    length_prior_v2.add_argument(
+        "--split-sample-output",
+        help="CSV sample audit tách value",
+    )
+    length_prior_v2.add_argument(
+        "--split-summary-output",
+        help="CSV summary split status",
+    )
+    length_prior_v2.add_argument(
+        "--units-output",
+        help="Parquet Tiki units v2 (mặc định data/cleaned/tiki_bt_units_length_v2.parquet)",
+    )
+    length_prior_v2.add_argument(
+        "--stats-output",
+        help="JSON stats apply v2 (mặc định data/cleaned/tiki_length_prior_v2_stats.json)",
+    )
+    length_prior_v2.add_argument("--min-group-samples", type=int, default=20)
+    length_prior_v2.add_argument("--min-category-samples", type=int, default=100)
+    length_prior_v2.add_argument("--min-value-class-samples", type=int, default=50)
+    length_prior_v2.add_argument(
+        "--min-value-class-category-samples", type=int, default=100
+    )
+    length_prior_v2.add_argument("--split-seed", type=int, default=42)
+    length_prior_v2.add_argument("--sample-size", type=int, default=2000)
+    length_prior_v2.add_argument(
+        "--fit-limit", type=int, help="Chỉ dùng N dòng 1688 đầu (để test)"
+    )
+    length_prior_v2.add_argument(
+        "--limit", type=int, help="Chỉ áp dụng N Tiki unit đầu (để test)"
+    )
+    length_prior_v2.add_argument(
+        "--quiet", action="store_true", help="Không in tiến độ"
+    )
+    length_prior_v2.set_defaults(func=command_tiki_length_prior_v2)
+
+    length_prior_v3 = subparsers.add_parser(
+        "tiki-length-prior-v3",
+        help="Phase B/C: alignment fallback + hierarchical title smoothing",
+    )
+    length_prior_v3.add_argument("--bilingual")
+    length_prior_v3.add_argument("--tiki-units")
+    length_prior_v3.add_argument("--prior-train-output")
+    length_prior_v3.add_argument("--prior-all-output")
+    length_prior_v3.add_argument("--holdout-output")
+    length_prior_v3.add_argument("--prior-csv")
+    length_prior_v3.add_argument("--prior-train-csv")
+    length_prior_v3.add_argument("--alignment-map-output")
+    length_prior_v3.add_argument("--alignment-sample-output")
+    length_prior_v3.add_argument("--alignment-summary-output")
+    length_prior_v3.add_argument("--phase-eval-output")
+    length_prior_v3.add_argument("--phase-eval-md-output")
+    length_prior_v3.add_argument("--units-output")
+    length_prior_v3.add_argument("--stats-output")
+    length_prior_v3.add_argument("--min-group-samples", type=int, default=20)
+    length_prior_v3.add_argument("--min-category-samples", type=int, default=100)
+    length_prior_v3.add_argument("--min-value-class-samples", type=int, default=50)
+    length_prior_v3.add_argument(
+        "--min-value-class-category-samples", type=int, default=100
+    )
+    length_prior_v3.add_argument("--alignment-min-freq", type=int, default=20)
+    length_prior_v3.add_argument("--alignment-min-share", type=float, default=0.60)
+    length_prior_v3.add_argument("--alignment-sample-size", type=int, default=500)
+    length_prior_v3.add_argument("--title-smoothing-k", type=int, default=20)
+    length_prior_v3.add_argument(
+        "--title-interval-inflation", type=float, default=0.5
+    )
+    length_prior_v3.add_argument("--split-seed", type=int, default=42)
+    length_prior_v3.add_argument("--fit-limit", type=int)
+    length_prior_v3.add_argument("--limit", type=int)
+    length_prior_v3.add_argument("--no-key-fallback", action="store_true")
+    length_prior_v3.add_argument("--quiet", action="store_true")
+    length_prior_v3.set_defaults(func=command_tiki_length_prior_v3)
 
     return parser
 

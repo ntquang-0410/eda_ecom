@@ -13,6 +13,7 @@ CC-CEDICT offline và các artifact CSV/Parquet phục vụ audit.
 > **Trạng thái kiểm chứng:** CADO T1–T4 + CADO-VI đã chạy full trên 16.348
 > dòng. T5 (bge-m3) và cosine bitext cần tải model ~2.2GB nên **chưa chạy**
 > trong lần refactor này; artifact cosine hiện có là từ lần chạy trước.
+> Tiki Phase 1, 1.5, A, B/C đã chạy full; v3 là bản khuyến nghị cho Phase 2.
 
 ---
 
@@ -64,6 +65,12 @@ python run_pipeline.py tiki-units
 
 # 10) Phase 1.5: học length prior từ 1688 human, gắn khoảng độ dài ZH cho Tiki
 python run_pipeline.py tiki-length-prior
+
+# 11) Phase A v2: value-only + value_class + CJK + split-safe
+python run_pipeline.py tiki-length-prior-v2
+
+# 12) Phase B/C v3: alignment audit/fallback + hierarchical title smoothing
+python run_pipeline.py tiki-length-prior-v3
 ```
 
 Các tuỳ chọn hữu ích:
@@ -178,21 +185,27 @@ data/cleaned/bitext_scored.parquet
 │   ├── bitext.py              # Preprocess + cosine/lexical/hybrid
 │   ├── tiki.py                # EDA Tiki cũ (legacy, có prose)
 │   ├── tiki_units.py          # Phase 1: profile + title/KV BT units
-│   └── length_prior.py        # Phase 1.5: prior độ dài VI/ZH từ 1688 human
+│   ├── length_prior.py        # Phase 1.5: prior key+value (audit)
+│   ├── length_prior_v2.py     # Phase A: value-only + class + CJK + split
+│   └── length_prior_v3.py     # Phase B/C: alignment + title smoothing
 ├── cado_layer/                # CLI wrapper từng tầng (giữ tương thích)
 ├── bitext_mining/             # CLI preprocess + filter
-├── tiki_mining/               # CLI EDA + Phase 1/1.5 Tiki
+├── tiki_mining/               # CLI EDA + Phase 1/1.5/A/B/C Tiki
 │   ├── tiki_eda.py
 │   ├── tiki_profile.py
 │   ├── tiki_bt_units.py
-│   └── tiki_length_prior.py
+│   ├── tiki_length_prior.py
+│   ├── tiki_length_prior_v2.py
+│   └── tiki_length_prior_v3.py
 ├── dictionary/cedict_ts.u8    # CC-CEDICT offline
 ├── csv/
 │   ├── whitelist.csv          # 323 dòng / 289 từ unique
 │   ├── vi_english_map.csv     # Map EN→VI cho CADO-VI (16 từ)
 │   ├── cado/                  # Report CADO
 │   ├── bitext_mining/         # Report bitext
-│   ├── length_prior/          # Bảng prior độ dài theo bucket
+│   ├── length_prior/          # Bảng prior v1 (audit)
+│   ├── length_prior_v2/       # Prior value-only + audit split
+│   ├── length_prior_v3/       # Alignment audit + title smoothing
 │   ├── changed_rows/          # Artifact legacy
 │   └── english_remover/       # Inventory từ tiếng Anh
 ├── data/
@@ -201,10 +214,12 @@ data/cleaned/bitext_scored.parquet
 ├── eda/eda-bilingual_zh_vi.ipynb
 ├── run_pipeline.py            # CLI thống nhất
 ├── upload_to_hf.py            # Upload dataset lên Hugging Face
-├── tests/                      # Smoke + Phase 1/1.5 tests (30 test)
+├── tests/                      # Smoke + Phase 1/1.5/A/B/C tests (43 test)
 │   ├── test_core.py
 │   ├── test_tiki_units.py
-│   └── test_length_prior.py
+│   ├── test_length_prior.py
+│   ├── test_length_prior_v2.py
+│   └── test_length_prior_v3.py
 ├── README.md
 └── Walkthrough.md             # Phân tích chi tiết + lịch sử refactor
 ```
@@ -222,9 +237,18 @@ data/cleaned/bitext_scored.parquet
 | `data/cleaned/tiki_vi_cado.parquet` | 13.200 × 37 | Artifact Tiki; **không có raw/source script trong repo** |
 | `data/cleaned/tiki_products.parquet` | 13.200 × 27 | Phase 1: title + description KV, không có prose |
 | `data/cleaned/tiki_bt_units.parquet` | 120.884 × 28 | Phase 1: title + attribute value units, chưa dịch |
-| `data/cleaned/tiki_bt_units_length.parquet` | 120.884 × 43 | Phase 1.5: unit VI + prior độ dài ZH từ 1688 human |
-| `data/cleaned/length_prior_1688.json` | — | Prior học từ 438.902 cặp human, kèm 305 group |
-| `data/cleaned/tiki_length_prior_stats.json` | — | Coverage/scope/expected length sau khi apply |
+| `data/cleaned/tiki_bt_units_length.parquet` | 120.884 × 43 | Phase 1.5: unit VI + prior key+value (audit) |
+| `data/cleaned/length_prior_1688.json` | — | Prior v1 học từ 438.902 cặp human, 305 group |
+| `data/cleaned/tiki_length_prior_stats.json` | — | Coverage/scope/expected length v1 |
+| `data/cleaned/tiki_bt_units_length_v2.parquet` | 120.884 × 57 | Phase A: value-only + value_class + CJK + key correction |
+| `data/cleaned/length_prior_1688_v2_all.json` | — | Prior v2 fit all, 660 group |
+| `data/cleaned/length_prior_1688_v2_train.json` | — | Prior v2 fit train, split-safe |
+| `data/cleaned/length_prior_1688_v2_holdout_metrics.json` | — | Coverage/MAE dev/test |
+| `data/cleaned/tiki_bt_units_length_v3.parquet` | 120.884 × 58 | Phase B/C: alignment fallback + title smoothing |
+| `data/cleaned/length_prior_1688_v3_all.json` | — | Prior v3 fit all |
+| `data/cleaned/length_prior_1688_v3_train.json` | — | Prior v3 fit train, split-safe |
+| `data/cleaned/phase_evaluation.json` | — | Đánh giá tổng hợp A/B/C |
+| `data/cleaned/phase_evaluation.md` | — | Bản tóm tắt đánh giá A/B/C |
 
 Report mới:
 
@@ -283,7 +307,90 @@ python run_pipeline.py tiki-length-prior
 - Phase 2 dùng `length_qc(text_zh, row)` để gắn `zh_too_short` /
   `zh_too_long` sau khi có bản dịch.
 
-Chi tiết cách học prior xem `tiki_mining/README.md`.
+### Phase A v2 — value-only + value_class + CJK + split-safe
+
+Bản v2 xử lý các vấn đề grain/key/class/split. **V1 vẫn được giữ nguyên** để
+audit; v2 ghi ra artifact riêng:
+
+```bash
+python run_pipeline.py tiki-length-prior-v2
+```
+
+- Target là **value-only**, không còn `key: value`; key_zh được cộng lại bằng
+  `expected_zh_key_chars`.
+- Tách value 1688 có guard cho số thập phân (`1,5`, `1,000`):
+  - 592.055 value pair + 16.348 title.
+  - 355.117 group `single` (87,4%), 40.374 `multi_matched` (9,9%),
+    10.708 `mismatch` (2,6%), 7 `empty`.
+- Fit train 488.969 cặp; fit all 608.403 cặp; prior all có 660 group.
+- Holdout (train prior):
+  - dev: coverage p05–p95 **98,35%**, MAE **1,43** chars.
+  - test: coverage **98,38%**, MAE **1,43** chars.
+  - title coverage thấp hơn (~95,2%), được đánh dấu `length_prior_soft_qc`.
+- Tiki v2: **120.884 × 57**; scope:
+  - `value_class+category+bucket`: 104.008
+  - `unit_type+bucket`: 9.068
+  - `unit_type+category+bucket`: 4.132
+  - `value_class+bucket`: 3.350
+  - `value_class`: 326
+- `value_class` được fit riêng cho `text`, `numeric`, `admin`, `model`.
+- Có `zh_cjk_chars`, `zh_non_cjk_chars`, `cjk_ratio`, `ratio_vi_cjk_p05..p95`.
+- `length_prior_soft_qc = true` cho title và các class `admin/model/numeric`;
+  chỉ `text` dùng length QC cứng hơn.
+- Split theo `product_id` 80/10/10, không leakage giữa sản phẩm.
+- Audit split: `csv/length_prior_v2/attribute_split_mismatch.csv` (10.708),
+  `attribute_split_sample.csv`, `attribute_split_summary.csv`.
+
+Artifact v2:
+
+- `data/cleaned/length_prior_1688_v2_train.json`
+- `data/cleaned/length_prior_1688_v2_all.json`
+- `data/cleaned/length_prior_1688_v2_holdout_metrics.json`
+- `data/cleaned/tiki_bt_units_length_v2.parquet`
+- `data/cleaned/tiki_length_prior_v2_stats.json`
+- `csv/length_prior_v2/prior_value_by_class_bucket.csv`
+
+### Phase B/C v3 — alignment fallback + title smoothing
+
+```bash
+python run_pipeline.py tiki-length-prior-v3
+```
+
+- Học key map `key_zh_norm → key_vi_norm` từ description-order:
+  **276/2.049** ZH key được map; 921 cặp key đủ tần suất.
+- Với group low-confidence, thử align lại VI attribute theo key map:
+  **213 group** được `key_fallback`; phần còn lại giữ description-order và
+  được gắn cờ review, không silently sửa.
+- Audit sample 500 group:
+  - `review_low_confidence`: 252
+  - `pass_auto`: 233
+  - `review_split_mismatch`: 13
+  - `review_fallback`: 2
+- Vẫn còn **217.276 group low-confidence** (chủ yếu key long-tail). Đây là
+  residual risk của Phase B; cần review trước khi dùng toàn bộ cặp này cho
+  training.
+- Title smoothing:
+  - hierarchical partial pooling với `k=20`;
+  - interval inflation cho bucket ít mẫu;
+  - monotonic expected length theo bucket;
+  - chỉ soft QC, không ép model sinh đúng độ dài.
+- Title test MAE: **2,158 → 1,777**; coverage 95,19% → 94,67%.
+- V3 holdout: dev coverage **98,32%**, MAE **1,421**; test coverage **98,36%**,
+  MAE **1,423**.
+- Tiki v3: **120.884 × 58**; 13.200 title unit được hierarchical smoothing;
+  107.684 attribute giữ prior value-only.
+
+Artifact v3:
+
+- `data/cleaned/length_prior_1688_v3_train.json`
+- `data/cleaned/length_prior_1688_v3_all.json`
+- `data/cleaned/length_prior_1688_v3_holdout_metrics.json`
+- `data/cleaned/tiki_bt_units_length_v3.parquet`
+- `csv/length_prior_v3/alignment_key_map.csv`
+- `csv/length_prior_v3/alignment_audit_sample.csv`
+- `csv/length_prior_v3/alignment_summary.csv`
+- `data/cleaned/phase_evaluation.json`
+- `data/cleaned/phase_evaluation.md`
 
 ---
 
