@@ -238,7 +238,10 @@ def _load_existing_manual(path: str | Path) -> dict[str, str]:
         return {}
     if "key_map_status" in frame.columns:
         frame = frame[
-            frame["key_map_status"].isin({"manual", "manual_seed", "mapped_existing"})
+            frame["key_map_status"].isin({
+                "manual", "manual_seed", "mapped_existing",
+                "qwen_high", "qwen_medium",
+            })
         ]
     key_column = "key_norm" if "key_norm" in frame.columns else "key_vi"
     if key_column not in frame.columns:

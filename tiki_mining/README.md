@@ -509,14 +509,14 @@ python tiki_mining/tiki_bt_prepare.py
 
 ### Kết quả full
 
-- Key map: **227/698 key**.
-- Unit coverage: **98,44%**.
-- Train-eligible coverage: **95,52%**.
-- 120.884 unit `bt_ready`; 119.201 `merge_ready`.
+- Key map: **649/698 key**.
+- Unit coverage: **99,83%**.
+- Train-eligible coverage: **99,48%**.
+- 120.884 unit `bt_ready`; 120.703 `merge_ready`.
 - Routing: dictionary 61.805; mt 45.709; rule 11.081; preserve 2.289.
 - Cache: 40.646 key; giảm 66,38% số lần gọi BT.
-- Product ready: 12.561; blocked key map: 639.
-- 471 key còn pending review; 639 product bị chặn key map.
+- Product ready: 13.140; blocked key map: 60.
+- 49 key còn pending review; 60 product bị chặn key map.
 - `merge_eligible=0` — chờ BT/QC.
 
 ### Output
@@ -537,31 +537,33 @@ python tiki_mining/tiki_bt_prepare.py
 
 ## Plan B0 — Qwen review key map
 
-471 key pending được review bằng Qwen qua Alibaba Cloud DashScope.
+Đã review 471 key bằng OpenCode:
 
-```bash
-export DASHSCOPE_API_KEY=...
-python run_pipeline.py tiki-key-map-review --model qwen3.8-max --votes 3
-```
-
-### Cách làm
-
-- 100 key silver từ 1688 để đo accuracy trước khi apply.
-- 3 vote/key; consensus + validation CJK.
-- Chỉ apply `qwen_high` mặc định; `--apply-medium` optional.
-- Nếu silver accuracy < 0,80: không apply, chỉ suggestion.
-- `enable_thinking=False`.
-- Không cần chuyên gia; LLM-as-judge có audit.
+- **Qwen3.8 Max**: 3 vote/key; 370 `qwen_high`, 101 `qwen_low`.
+- **Qwen3.8 Flash** cho 101 key còn lại: 52 `qwen_high`, 49 `qwen_low`.
+- Tổng: 649/698 key mapped; 49 pending.
+- Silver: Max exact 66,7%; Flash exact 67,1%; nhiều khác biệt là synonym.
+- Chỉ apply `qwen_high`; giữ 49 key pending.
+- Backup: `tiki_key_map_before_opencode.csv`, `tiki_key_map_before_flash.csv`.
+- Có thể dùng Alibaba DashScope CLI dự phòng:
+  ```bash
+  export DASHSCOPE_API_KEY=...
+  python run_pipeline.py tiki-key-map-review --model qwen3.8-max --votes 3
+  ```
 
 ### Output
 
 ```text
-csv/tiki/key_map_review_input.csv
-csv/tiki/key_map_silver_eval.csv
-csv/tiki/key_map_qwen_votes.csv
-csv/tiki/key_map_qwen_review.csv
-csv/tiki/key_map_final.csv
-data/cleaned/key_map_qwen_review_stats.json
+csv/tiki/key_map_opencode_review.csv
+csv/tiki/key_map_opencode_votes.csv
+csv/tiki/key_map_opencode_silver.csv
+csv/tiki/key_map_opencode_high.csv
+csv/tiki/key_map_flash_review.csv
+csv/tiki/key_map_flash_votes.csv
+csv/tiki/key_map_flash_silver.csv
+csv/tiki/key_map_flash_high.csv
+data/cleaned/key_map_opencode_review_stats.json
+data/cleaned/key_map_flash_review_stats.json
 ```
 
 Sau review:

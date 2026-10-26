@@ -1,0 +1,22 @@
+{
+  "version": "plan_b_v1",
+  "input": {
+    "bt_input": "data/tiki_bt_input.parquet",
+    "translation_cache": "data/tiki_translation_cache.parquet",
+    "units": "data/tiki_bt_units_plan_a.parquet",
+    "products": "data/tiki_products.parquet",
+    "product_state": "data/tiki_products_bt_state.parquet",
+    "key_map": "csv/tiki_key_map.csv"
+  },
+  "models": [
+    "qwen3_0_6b.json",
+    "qwen3_1_7b.json",
+    "qwen3_4b.json",
+    "qwen3_8b.json"
+  ],
+  "priority_order": ["qwen3_0_6b", "qwen3_1_7b", "qwen3_4b", "qwen3_8b"],
+  "non_mt_routes": ["dictionary", "rule", "preserve"],
+  "mt_routes": ["mt"],
+  "checkpoint_every": 100,
+  "output_schema_version": 1
+}

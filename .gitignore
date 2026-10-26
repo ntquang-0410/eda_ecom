@@ -52,6 +52,10 @@ data/cleaned/tiki_translation_cache.parquet
 data/cleaned/tiki_products_bt_state.parquet
 data/cleaned/tiki_bt_plan_a_stats.json
 data/cleaned/key_map_qwen_review_stats.json
+data/cleaned/key_map_opencode_review_stats.json
+data/cleaned/key_map_flash_review_stats.json
+kaggle/kernel/kernel-metadata.json
+kaggle/kernel/env_report.json
 csv/tiki/
 csv/length_prior/
 csv/length_prior_v2/
