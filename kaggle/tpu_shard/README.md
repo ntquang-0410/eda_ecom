@@ -23,17 +23,29 @@ Tensor-parallel kiểu Megatron, 1 all-reduce mỗi block:
 Với Qwen3-8B: 32 Q heads / 8 = 4 head/chip, 8 KV heads / 8 = 1 head/chip,
 intermediate 12288 / 8 = 1536/chip. Chia hết, không lẻ.
 
-Memory dự kiến/chip:
+Memory/chip (đã tính từ config thật, bf16):
 
 ```text
-transformer weights   ~1.0 GB  (8.1 GB / 8)
-embed_tokens          ~1.24 GB (replicated, 151936 x 4096 bf16)
-lm_head               ~1.24 GB (replicated, tie_word_embeddings=False)
-KV cache (batch 2, 1152 token) ~0.34 GB
-activation + workspace ~1-2 GB
+transformer weights   1.74 GB  (13.89 GB / 8)
+embed_tokens          1.24 GB  (replicated, 151936 x 4096)
+lm_head               1.24 GB  (replicated, tie_word_embeddings=False)
+KV cache (batch 2, 864 token)  0.25 GB
+activation + workspace         ~0.5-1 GB
 -----------------------------------------
-~4-5 GB / 16 GB
+                      ~4.2-4.5 GB / 16 GB
 ```
+
+## Đã kiểm tra chia hết (không lẻ head)
+
+| model | q out/chip | kv out/chip | intermediate/chip |
+|---|---|---|---|
+| 0.6B | 2048/8 = 256 | 1024/8 = 128 | 3072/8 = 384 |
+| 1.7B | 2048/8 = 256 | 1024/8 = 128 | 6144/8 = 768 |
+| 4B   | 4096/8 = 512 | 1024/8 = 128 | 9728/8 = 1216 |
+| 8B   | 4096/8 = 512 | 1024/8 = 128 | 12288/8 = 1536 |
+
+`Qwen3RMSNorm` per-head (`q_norm`/`k_norm`) là 1-D → replicated, đúng vì norm chạy
+trên `head_dim` nằm gọn trong từng head sau khi chia.
 
 ## Cách nạp model không OOM
 
@@ -71,6 +83,13 @@ Quyết định:
 | `n_dev = 1` | Kaggle chỉ cấp 1 core → 8B phải sang RTX |
 | 8B OOM giữa chừng | xem `memory_at_error`, cần shard cả `lm_head`/`embed_tokens` |
 | text lệch | sharding sai spec, so lại `partition_spec` |
+
+## Trạng thái
+
+- Notebook đã dựng xong, syntax-checked.
+- **Chưa push được** vì Kaggle giới hạn 1 TPU batch session:
+  `Maximum batch TPU session count of 1 reached` (slot đang bị kernel BT 3 model giữ).
+- Sẽ push ngay khi kernel `tiki-plan-b-bt-tpu-v5e-8` kết thúc.
 
 ## Bước tiếp theo (sau khi spike pass)
 
