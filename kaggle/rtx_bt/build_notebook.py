@@ -1,0 +1,478 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Sinh notebook BT full 4 model Qwen3 trên RTX Pro 6000 (offline, competition).
+
+Ràng buộc: notebook có `competition_sources` -> Kaggle buộc `enable_internet=false`.
+Vì vậy:
+- KHÔNG pip install; dùng transformers có sẵn trong image (có preflight check).
+- Model lấy từ `model_sources` (Kaggle Models) qua kagglehub + fallback quét /kaggle/input.
+
+Khác notebook TPU: chạy tuần tự 4 model trên **một** GPU 96GB, batch lớn, có time budget.
+"""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+CELLS: list[dict] = []
+
+
+def md(text: str) -> None:
+    CELLS.append({"cell_type": "markdown", "metadata": {}, "source": text.splitlines(keepends=True)})
+
+
+def code(text: str) -> None:
+    CELLS.append(
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": text.splitlines(keepends=True),
+        }
+    )
+
+
+md(
+    """# Tiki Plan B — Qwen3 BT 4 model trên RTX Pro 6000
+
+- Input: `ntquang0410/tiki-plan-a-bt-input` (private dataset)
+- Route `mt`: **29.446 cache entry**
+- 4 model tuần tự: Qwen3-0.6B / 1.7B / 4B / 8B (bf16, 1 GPU 96GB)
+- Offline hoàn toàn (competition notebook): model từ Kaggle Models
+- Checkpoint mỗi 200 entry, resume theo `cache_key`
+- Time budget 11h: dừng êm, giữ output
+
+Output:
+
+```text
+/kaggle/working/plan_b_outputs/qwen3-0.6b/predictions.parquet
+                             /qwen3-1.7b/predictions.parquet
+                             /qwen3-4b/predictions.parquet
+                             /qwen3-8b/predictions.parquet
+                             /../run_state.json
+```
+"""
+)
+
+md("## 1. Phần cứng")
+
+code(
+    """import os, sys, json, glob, time
+from pathlib import Path
+
+import torch
+
+print('torch', torch.__version__)
+print('cuda_available', torch.cuda.is_available())
+if not torch.cuda.is_available():
+    raise RuntimeError('Notebook này cần GPU.')
+
+GPU_NAME = torch.cuda.get_device_name(0)
+VRAM_GB = round(torch.cuda.get_device_properties(0).total_memory / 1e9, 1)
+DEVICE = torch.device('cuda')
+print('gpu', GPU_NAME)
+print('vram_gb', VRAM_GB)
+print('capability', torch.cuda.get_device_capability(0))
+
+if VRAM_GB < 15:
+    raise RuntimeError(f'VRAM {VRAM_GB}GB quá nhỏ cho pipeline này')
+if 'RTX' not in GPU_NAME.upper() and 'PRO' not in GPU_NAME.upper():
+    print(f'CẢNH BÁO: GPU không phải RTX Pro 6000 ({GPU_NAME}); vẫn chạy nhưng 8B có thể bị skip.')
+"""
+)
+
+md("## 2. Preflight transformers (offline, không pip)")
+
+code(
+    """import transformers
+
+VERSION = tuple(int(part) for part in transformers.__version__.split('.')[:2])
+print('transformers', transformers.__version__)
+
+if VERSION < (4, 51):
+    raise RuntimeError(
+        f'transformers {transformers.__version__} < 4.51 -> không hỗ trợ Qwen3. '
+        'Notebook offline (competition) không pip install được; cần image mới hơn.'
+    )
+
+try:
+    from transformers import Qwen3ForCausalLM  # noqa: F401
+    print('Qwen3ForCausalLM OK')
+except Exception as error:
+    raise RuntimeError(f'Không import được Qwen3ForCausalLM: {error}')
+
+try:
+    import kagglehub
+    print('kagglehub', getattr(kagglehub, '__version__', 'installed'))
+except Exception as error:
+    kagglehub = None
+    print('kagglehub không có:', error, '-> sẽ chỉ dùng fallback /kaggle/input')
+"""
+)
+
+md("## 3. Config")
+
+code(
+    """CONFIG_FILES = {
+    'qwen3-0.6b': 'qwen3_0_6b.json',
+    'qwen3-1.7b': 'qwen3_1_7b.json',
+    'qwen3-4b':   'qwen3_4b.json',
+    'qwen3-8b':   'qwen3_8b.json',
+}
+MODEL_SOURCES = {
+    'qwen3-0.6b': 'qwen-lm/qwen-3/Transformers/0.6b/1',
+    'qwen3-1.7b': 'qwen-lm/qwen-3/Transformers/1.7b/1',
+    'qwen3-4b':   'qwen-lm/qwen-3/Transformers/4b/1',
+    'qwen3-8b':   'qwen-lm/qwen-3/Transformers/8b/1',
+}
+EXPECTED_SHAPE = {
+    'qwen3-0.6b': (1024, 3072, 28),
+    'qwen3-1.7b': (2048, 6144, 28),
+    'qwen3-4b':   (2560, 9728, 36),
+    'qwen3-8b':   (4096, 12288, 36),
+}
+
+MODEL_KEYS_TO_RUN = ['qwen3-0.6b', 'qwen3-1.7b', 'qwen3-4b', 'qwen3-8b']
+LIMIT = None                 # None = toàn bộ 29.446 entry
+MAX_NEW_TOKENS = 96
+MAX_INPUT_TOKENS = 768
+CHECKPOINT_EVERY = 200
+TIME_BUDGET_MIN = 660        # 11h, dừng êm trước giới hạn session
+PROMPT_VERSION = 'plan_b_rtx_v2'
+
+if VRAM_GB >= 80:
+    BATCH_BY_MODEL = {'qwen3-0.6b': 16, 'qwen3-1.7b': 16, 'qwen3-4b': 12, 'qwen3-8b': 8}
+elif VRAM_GB >= 40:
+    BATCH_BY_MODEL = {'qwen3-0.6b': 8, 'qwen3-1.7b': 8, 'qwen3-4b': 4, 'qwen3-8b': 2}
+else:
+    BATCH_BY_MODEL = {'qwen3-0.6b': 4, 'qwen3-1.7b': 2, 'qwen3-4b': 2, 'qwen3-8b': 1}
+
+MIN_VRAM_BY_MODEL = {'qwen3-0.6b': 4, 'qwen3-1.7b': 8, 'qwen3-4b': 18, 'qwen3-8b': 40}
+
+OUTPUT_ROOT = Path('/kaggle/working/plan_b_outputs')
+OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
+DEADLINE = time.time() + TIME_BUDGET_MIN * 60
+
+print('models', MODEL_KEYS_TO_RUN)
+print('limit', LIMIT, '| batch', BATCH_BY_MODEL)
+print('time_budget_min', TIME_BUDGET_MIN)
+"""
+)
+
+md("## 4. Dataset")
+
+code(
+    """import pandas as pd
+
+def find_dataset_dir():
+    candidates = [
+        Path('/kaggle/input/datasets/ntquang0410/tiki-plan-a-bt-input'),
+        Path('/kaggle/input/tiki-plan-a-bt-input'),
+    ]
+    for base in candidates:
+        if (base / 'tiki_bt_input.parquet').exists():
+            return base
+    matches = glob.glob('/kaggle/input/**/tiki_bt_input.parquet', recursive=True)
+    if matches:
+        return Path(matches[0]).parent
+    raise FileNotFoundError('Không thấy tiki_bt_input.parquet trong /kaggle/input')
+
+DATASET = find_dataset_dir()
+print('DATASET', DATASET)
+print('files', sorted(p.name for p in DATASET.glob('*.json')))
+
+cache = pd.read_parquet(DATASET / 'tiki_translation_cache.parquet')
+meta = pd.read_parquet(DATASET / 'tiki_bt_input.parquet')
+meta = meta[meta['bt_route'] == 'mt'].drop_duplicates('cache_key')
+meta_cols = [c for c in ['cache_key', 'expected_zh_value_chars'] if c in meta.columns]
+df = cache[cache['bt_route'] == 'mt'].merge(meta[meta_cols], on='cache_key', how='left')
+df['source_chars'] = df['source_text_bt'].fillna('').str.replace(' ', '', regex=False).str.len()
+if LIMIT:
+    df = df.sample(n=min(int(LIMIT), len(df)), random_state=42).reset_index(drop=True)
+else:
+    df = df.sort_values(['min_priority', 'source_chars', 'cache_key']).reset_index(drop=True)
+
+print('MT rows', len(df), '| duplicate', int(df['cache_key'].duplicated().sum()))
+print(df[['source_text_bt', 'key_vi', 'min_priority']].head(3).to_string(index=False))
+"""
+)
+
+md("## 5. Prompt")
+
+code(
+    """SYSTEM_PROMPT = '''You are a professional Vietnamese-to-Simplified Chinese e-commerce translator.
+Translate only the source text. Preserve brands, model codes, numbers and units.
+Return JSON only: {"translation": "..."}
+Do not explain, do not use markdown, do not translate the key itself.'''
+
+def make_prompt(row):
+    payload = {
+        'task': 'translate_title' if not str(row.get('key_vi') or '').strip() else 'translate_value',
+        'source_text': str(row.get('source_text_bt') or ''),
+        'key_vi': str(row.get('key_vi') or ''),
+        'key_zh': str(row.get('key_zh_effective') or ''),
+        'value_class': str(row.get('value_class') or ''),
+        'expected_zh_chars': int(row.get('expected_zh_value_chars') or 0),
+    }
+    return json.dumps(payload, ensure_ascii=False)
+
+def parse_translation(text):
+    text = (text or '').strip()
+    if text.startswith('```'):
+        text = text.replace('```json', '', 1).replace('```', '').strip()
+    start, end = text.find('{'), text.rfind('}')
+    if start >= 0 and end > start:
+        try:
+            obj = json.loads(text[start:end + 1])
+            if isinstance(obj, dict) and obj.get('translation'):
+                return str(obj['translation']).strip()
+        except json.JSONDecodeError:
+            pass
+    return text.strip()
+
+def build_prompt(tokenizer, row):
+    messages = [
+        {'role': 'system', 'content': SYSTEM_PROMPT},
+        {'role': 'user', 'content': make_prompt(row)},
+    ]
+    try:
+        return tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True, enable_thinking=False
+        )
+    except TypeError:
+        return tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+"""
+)
+
+md("## 6. Resolve model offline + run")
+
+code(
+    """from transformers import AutoTokenizer, AutoModelForCausalLM
+
+def find_config(model_key):
+    name = CONFIG_FILES[model_key]
+    for base in (DATASET, DATASET / 'configs', Path('/kaggle/input')):
+        path = base / name
+        if path.exists():
+            return path
+    matches = glob.glob(f'/kaggle/input/**/{name}', recursive=True)
+    return Path(matches[0]) if matches else None
+
+def load_config(model_key):
+    path = find_config(model_key)
+    if path is None:
+        return {}
+    return json.loads(path.read_text(encoding='utf-8'))
+
+def signature(config_path):
+    try:
+        payload = json.loads(config_path.read_text(encoding='utf-8'))
+    except Exception:
+        return None
+    return (payload.get('hidden_size'), payload.get('intermediate_size'), payload.get('num_hidden_layers'))
+
+def resolve_model_path(model_key):
+    \"\"\"Offline: ưu tiên model_sources qua kagglehub, fallback quét /kaggle/input theo signature.\"\"\"
+    if kagglehub is not None:
+        try:
+            path = kagglehub.model_download(MODEL_SOURCES[model_key])
+            print(f'{model_key}: kagglehub -> {path}')
+            return path
+        except Exception as error:
+            print(f'{model_key}: kagglehub failed ({type(error).__name__}: {error})')
+
+    expected = EXPECTED_SHAPE[model_key]
+    for config_path in Path('/kaggle/input').rglob('config.json'):
+        if signature(config_path) == expected:
+            print(f'{model_key}: fallback {config_path.parent}')
+            return str(config_path.parent)
+    raise FileNotFoundError(f'Không tìm được weights {model_key} trong model_sources lẫn /kaggle/input')
+
+def run_model(model_key):
+    out_dir = OUTPUT_ROOT / model_key
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_file = out_dir / 'predictions.parquet'
+    state_file = out_dir / 'run_state.json'
+
+    if VRAM_GB < MIN_VRAM_BY_MODEL[model_key]:
+        print(f'SKIP {model_key}: cần >= {MIN_VRAM_BY_MODEL[model_key]}GB VRAM, có {VRAM_GB}GB')
+        return {'model_key': model_key, 'skipped': True, 'reason': f'vram {VRAM_GB}GB'}
+
+    cfg = load_config(model_key)
+    existing = pd.DataFrame()
+    done = set()
+    if out_file.exists():
+        existing = pd.read_parquet(out_file)
+        done = set(existing['cache_key'].astype(str))
+        print(f'{model_key}: resume {len(done):,}')
+
+    todo = df[~df['cache_key'].astype(str).isin(done)].reset_index(drop=True)
+    print(f'{model_key}: todo {len(todo):,} / {len(df):,}')
+    if todo.empty:
+        return {'model_key': model_key, 'n_done': len(done), 'n_total': len(df), 'skipped': False}
+
+    model_path = resolve_model_path(model_key)
+    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, local_files_only=True)
+    tokenizer.padding_side = 'left'
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+
+    print(f'{model_key}: loading weights...')
+    model = AutoModelForCausalLM.from_pretrained(
+        model_path,
+        torch_dtype=torch.bfloat16,
+        trust_remote_code=True,
+        local_files_only=True,
+        low_cpu_mem_usage=True,
+    ).to(DEVICE)
+    model.eval()
+    model.generation_config.pad_token_id = tokenizer.pad_token_id
+    print(f'{model_key}: loaded | vram_alloc_gb',
+          round(torch.cuda.memory_allocated() / 1e9, 1))
+
+    batch_size = int(BATCH_BY_MODEL[model_key])
+    max_new = int(cfg.get('max_new_tokens') or MAX_NEW_TOKENS)
+    max_new = min(max_new, MAX_NEW_TOKENS)
+    records = []
+    started = time.time()
+    stopped = 'completed'
+
+    for start in range(0, len(todo), batch_size):
+        if time.time() >= DEADLINE:
+            stopped = 'time_budget'
+            print(f'{model_key}: dừng do time budget tại {start}/{len(todo)}')
+            break
+
+        batch = todo.iloc[start:start + batch_size]
+        prompts = [build_prompt(tokenizer, row) for row in batch.to_dict('records')]
+        enc = tokenizer(
+            prompts, return_tensors='pt', padding=True,
+            truncation=True, max_length=MAX_INPUT_TOKENS,
+        ).to(DEVICE)
+
+        t0 = time.time()
+        with torch.inference_mode():
+            output = model.generate(
+                **enc,
+                max_new_tokens=max_new,
+                do_sample=False,
+                num_beams=1,
+                eos_token_id=tokenizer.eos_token_id,
+                pad_token_id=tokenizer.pad_token_id,
+            )
+        latency_ms = (time.time() - t0) * 1000
+        generated = output[:, enc['input_ids'].shape[1]:]
+        texts = tokenizer.batch_decode(generated, skip_special_tokens=True)
+
+        for row, raw in zip(batch.to_dict('records'), texts):
+            records.append({
+                'cache_key': str(row['cache_key']),
+                'source_text_bt': row.get('source_text_bt'),
+                'key_vi': row.get('key_vi'),
+                'key_zh_effective': row.get('key_zh_effective'),
+                'value_class': row.get('value_class'),
+                'target_text_bt': parse_translation(raw),
+                'raw_output': raw,
+                'model_id': model_key,
+                'prompt_version': PROMPT_VERSION,
+                'qc_status': 'pending',
+                'latency_ms': round(latency_ms / max(1, len(batch)), 2),
+            })
+
+        if len(records) >= CHECKPOINT_EVERY or start + batch_size >= len(todo):
+            part = pd.DataFrame(records)
+            merged = pd.concat([existing, part], ignore_index=True) if len(existing) else part
+            merged.to_parquet(out_file, index=False)
+            existing = merged
+            records = []
+            elapsed_min = (time.time() - started) / 60
+            state_file.write_text(json.dumps({
+                'model_key': model_key,
+                'gpu': GPU_NAME,
+                'vram_gb': VRAM_GB,
+                'n_done': int(len(merged)),
+                'n_total': int(len(df)),
+                'elapsed_min': round(elapsed_min, 1),
+                'entries_per_min': round(len(merged) / max(1e-9, elapsed_min), 1),
+                'vram_alloc_gb': round(torch.cuda.memory_allocated() / 1e9, 1),
+                'updated_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+            }, ensure_ascii=False, indent=2), encoding='utf-8')
+            print(f'{model_key}: saved {len(merged):,}/{len(df):,} '
+                  f'({len(merged) / max(1e-9, elapsed_min):.0f} entry/min)', flush=True)
+
+    del model
+    torch.cuda.empty_cache()
+    elapsed = round((time.time() - started) / 60, 1)
+    print(f'{model_key}: {stopped} in {elapsed} min')
+    return {'model_key': model_key, 'n_done': int(len(existing)), 'n_total': int(len(df)),
+            'stopped': stopped, 'elapsed_min': elapsed}
+"""
+)
+
+md("## 7. Chạy 4 model")
+
+code(
+    """summaries = []
+for model_key in MODEL_KEYS_TO_RUN:
+    if time.time() >= DEADLINE:
+        print('hết time budget, dừng trước', model_key)
+        break
+    try:
+        summaries.append(run_model(model_key))
+    except Exception as error:
+        import traceback
+        traceback.print_exc()
+        summaries.append({'model_key': model_key, 'error': f'{type(error).__name__}: {error}'})
+        torch.cuda.empty_cache()
+    print(json.dumps(summaries[-1], ensure_ascii=False))
+
+print(json.dumps(summaries, ensure_ascii=False, indent=2))
+"""
+)
+
+md("## 8. Tổng kết")
+
+code(
+    """per_model = {}
+total_done = 0
+for model_key in MODEL_KEYS_TO_RUN:
+    path = OUTPUT_ROOT / model_key / 'predictions.parquet'
+    n = len(pd.read_parquet(path)) if path.exists() else 0
+    per_model[model_key] = n
+    total_done += n
+
+summary = {
+    'gpu': GPU_NAME,
+    'vram_gb': VRAM_GB,
+    'n_mt_total': int(len(df)),
+    'per_model': per_model,
+    'expected_per_model': int(len(df)),
+    'runs': summaries,
+    'written_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+}
+Path('/kaggle/working/plan_b_rtx_summary.json').write_text(
+    json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
+print(json.dumps(summary, ensure_ascii=False, indent=2))
+
+print('Files:')
+for path in sorted(OUTPUT_ROOT.rglob('*')):
+    if path.is_file():
+        print(' ', path.relative_to(OUTPUT_ROOT), round(path.stat().st_size / 1e6, 2), 'MB')
+"""
+)
+
+notebook = {
+    "cells": CELLS,
+    "metadata": {
+        "kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
+        "language_info": {"name": "python"},
+    },
+    "nbformat": 4,
+    "nbformat_minor": 5,
+}
+out = ROOT / "plan_b_bt_rtx.ipynb"
+out.write_text(json.dumps(notebook, ensure_ascii=False, indent=1), encoding="utf-8")
+print("wrote", out, "cells", len(CELLS))
