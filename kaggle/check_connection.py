@@ -9,7 +9,22 @@ import subprocess
 from pathlib import Path
 
 
+def load_dotenv(path: Path = Path(".env")) -> None:
+    if not path.exists():
+        return
+    for raw in path.read_text(encoding="utf-8", errors="ignore").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
 def main() -> None:
+    load_dotenv()
     print("Kaggle connection check")
     print("=" * 50)
     kaggle_json = Path.home() / ".kaggle" / "kaggle.json"
@@ -17,6 +32,7 @@ def main() -> None:
     print("kaggle.json:", "present" if kaggle_json.exists() else "missing")
     print("access_token:", "present" if access_token.exists() else "missing")
     print("KAGGLE_USERNAME:", "set" if os.getenv("KAGGLE_USERNAME") else "missing")
+    print("KAGGLE_API_TOKEN:", "set" if os.getenv("KAGGLE_API_TOKEN") else "missing")
     print("KAGGLE_KEY:", "set" if os.getenv("KAGGLE_KEY") else "missing")
     try:
         version = subprocess.run(

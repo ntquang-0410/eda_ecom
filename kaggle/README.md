@@ -4,30 +4,53 @@ Thư mục này chuẩn bị connection, dataset package và config cho 4 Qwen3 
 
 ## 1. Credentials
 
-Kaggle CLI 2.0.2 hiện dùng **access token**, không cần file `kaggle.json`:
+Kaggle CLI mới dùng **access token/OAuth**, không cần `kaggle.json`.
 
-```text
-~/.kaggle/access_token
+CLI hiện tại: `kaggle 2.2.5`.
+
+### OAuth
+
+```bash
+kaggle auth login
+```
+
+Nếu không mở được browser:
+
+```bash
+kaggle auth login --no-launch-browser
+```
+
+### API token
+
+Tạo token ở https://www.kaggle.com/settings/api → **Generate New Token**.
+
+Chọn một cách:
+
+```bash
+export KAGGLE_API_TOKEN="your_token"
+```
+
+hoặc lưu file:
+
+```bash
+mkdir -p ~/.kaggle
+read -r -s -p "Kaggle API token: " KAGGLE_API_TOKEN
+printf '%s' "$KAGGLE_API_TOKEN" > ~/.kaggle/access_token
+chmod 600 ~/.kaggle/access_token
+unset KAGGLE_API_TOKEN
+```
+
+Có thể đặt trong `.env` (đã gitignore):
+
+```bash
+KAGGLE_API_TOKEN=your_token
 ```
 
 Kiểm tra:
 
 ```bash
 kaggle config view
-```
-
-Kỳ vọng:
-
-```text
-- username: ntquang0410
-- auth_method: ACCESS_TOKEN
-```
-
-Nếu dùng environment:
-
-```bash
-export KAGGLE_USERNAME="your_kaggle_username"
-export KAGGLE_KEY="your_access_token"
+python kaggle/check_connection.py
 ```
 
 Không commit token vào repo.
