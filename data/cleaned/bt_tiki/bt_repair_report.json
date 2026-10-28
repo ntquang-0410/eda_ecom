@@ -1,0 +1,50 @@
+{
+  "qwen3-0.6b": {
+    "rows": 29446,
+    "good_before": 15719,
+    "good_before_pct": 53.38,
+    "repaired": 12345,
+    "still_untranslated": 1393,
+    "good_after": 28055,
+    "good_after_pct": 95.28,
+    "train_rows": 28055,
+    "full_file": "data/cleaned/bt_tiki/tiki_bt_qwen3-0.6b_full.parquet",
+    "train_file": "data/cleaned/bt_tiki/tiki_bt_qwen3-0.6b_train.parquet"
+  },
+  "qwen3-1.7b": {
+    "rows": 29446,
+    "good_before": 20736,
+    "good_before_pct": 70.42,
+    "repaired": 8086,
+    "still_untranslated": 631,
+    "good_after": 28817,
+    "good_after_pct": 97.86,
+    "train_rows": 28817,
+    "full_file": "data/cleaned/bt_tiki/tiki_bt_qwen3-1.7b_full.parquet",
+    "train_file": "data/cleaned/bt_tiki/tiki_bt_qwen3-1.7b_train.parquet"
+  },
+  "qwen3-4b": {
+    "rows": 29446,
+    "good_before": 29194,
+    "good_before_pct": 99.14,
+    "repaired": 210,
+    "still_untranslated": 43,
+    "good_after": 29403,
+    "good_after_pct": 99.85,
+    "train_rows": 29403,
+    "full_file": "data/cleaned/bt_tiki/tiki_bt_qwen3-4b_full.parquet",
+    "train_file": "data/cleaned/bt_tiki/tiki_bt_qwen3-4b_train.parquet"
+  },
+  "qwen3-8b": {
+    "rows": 29446,
+    "good_before": 29154,
+    "good_before_pct": 99.01,
+    "repaired": 250,
+    "still_untranslated": 42,
+    "good_after": 29404,
+    "good_after_pct": 99.86,
+    "train_rows": 29404,
+    "full_file": "data/cleaned/bt_tiki/tiki_bt_qwen3-8b_full.parquet",
+    "train_file": "data/cleaned/bt_tiki/tiki_bt_qwen3-8b_train.parquet"
+  }
+}
