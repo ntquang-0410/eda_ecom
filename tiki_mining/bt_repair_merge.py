@@ -50,6 +50,10 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--pred-root", required=True, help="thư mục chứa <model>/predictions.parquet")
     ap.add_argument("--repair-root", required=True, help="thư mục chứa <model>/repair.parquet")
+    ap.add_argument("--repair-v2-root", default=None,
+                    help="thư mục repair_outputs_v2 (tùy chọn)")
+    ap.add_argument("--recovered", default=None,
+                    help="recovered.parquet của bước cứu JSON (tùy chọn)")
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
 
@@ -98,6 +102,47 @@ def main() -> int:
         else:
             print(f"{model}: không có repair.parquet, chỉ đánh dấu")
 
+        # --- vòng 2: dịch lại các dòng vẫn hỏng ---
+        n_v2 = n_recovered = 0
+        pending = df["qc_status"] == "still_untranslated"
+        if args.repair_v2_root and pending.any():
+            rep2_path = Path(args.repair_v2_root) / model / "repair_v2.parquet"
+            if rep2_path.exists():
+                rep2 = pd.read_parquet(rep2_path).drop_duplicates("cache_key").set_index("cache_key")
+                for idx in df.index[pending]:
+                    key = str(df.at[idx, "cache_key"])
+                    if key not in rep2.index:
+                        continue
+                    fix = rep2.loc[key]
+                    if bool(fix.get("good")) and str(fix.get("target_text_bt") or "").strip():
+                        df.at[idx, "target_text_bt"] = fix["target_text_bt"]
+                        df.at[idx, "raw_output"] = fix.get("raw_output")
+                        df.at[idx, "json_ok"] = bool(fix.get("json_ok", True))
+                        df.at[idx, "n_new_tokens"] = int(fix.get("n_new_tokens", 0))
+                        df.at[idx, "attempt"] = 3
+                        df.at[idx, "prompt_version"] = "plan_b_repair_v5"
+                        df.at[idx, "repair_pass"] = 2
+                        df.at[idx, "qc_status"] = "repaired_v2"
+                        n_v2 += 1
+                pending = df["qc_status"] == "still_untranslated"
+
+        if args.recovered and pending.any():
+            rec = pd.read_parquet(args.recovered)
+            rec = rec[rec["model_key"] == model].drop_duplicates("cache_key").set_index("cache_key")
+            for idx in df.index[pending]:
+                key = str(df.at[idx, "cache_key"])
+                if key not in rec.index:
+                    continue
+                text = str(rec.loc[key, "target_text_bt"] or "").strip()
+                if not is_good_translation(text):
+                    continue
+                df.at[idx, "target_text_bt"] = text
+                df.at[idx, "attempt"] = 4
+                df.at[idx, "prompt_version"] = "plan_b_repair_v5"
+                df.at[idx, "repair_pass"] = 2
+                df.at[idx, "qc_status"] = "recovered_json"
+                n_recovered += 1
+
         after = df["target_text_bt"].fillna("").apply(is_good_translation)
         train = df[after].copy()
 
@@ -117,7 +162,9 @@ def main() -> int:
             "good_before": n_before,
             "good_before_pct": round(n_before / max(1, len(df)) * 100, 2),
             "repaired": n_repaired,
-            "still_untranslated": n_still,
+            "repaired_v2": n_v2,
+            "recovered_json": n_recovered,
+            "still_untranslated": int((df["qc_status"] == "still_untranslated").sum()),
             "good_after": int(after.sum()),
             "good_after_pct": round(after.mean() * 100, 2),
             "train_rows": int(len(train)),
