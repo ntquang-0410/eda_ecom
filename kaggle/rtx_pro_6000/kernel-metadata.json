@@ -1,0 +1,17 @@
+{
+  "id": "ntquang0410/rtx-pro-6000",
+  "id_no": 117346235,
+  "title": "RTX Pro 6000",
+  "code_file": "rtx-pro-6000.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": ["ntquang0410/tiki-plan-a-bt-input"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaRtxPro6000"
+}
