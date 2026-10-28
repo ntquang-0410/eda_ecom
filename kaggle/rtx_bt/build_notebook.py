@@ -137,11 +137,19 @@ EXPECTED_SHAPE = {
 
 MODEL_KEYS_TO_RUN = ['qwen3-0.6b', 'qwen3-1.7b', 'qwen3-4b', 'qwen3-8b']
 LIMIT = None                 # None = toàn bộ 29.446 entry
-MAX_NEW_TOKENS = 96
-MAX_INPUT_TOKENS = 768
+
+# --- giới hạn sinh ---
+# Số liệu thật trên 29.446 entry (expected_zh_value_chars):
+#   p50 30 | p99 230 | p99.5 336 | p99.9 684 | max 1781
+# 96 token (bản cũ) cắt cụt 976 entry (3.31%). 1536 phủ tới ~1200 ký tự Hán,
+# phần dư xử lý bằng repair pass riêng (4296 token).
+MAX_NEW_TOKENS = 1536
+MAX_NEW_TOKENS_RETRY = 4096
+# prompt token đo thật: p99 314 | max 1074 -> 1280 phủ 100%
+MAX_INPUT_TOKENS = 1280
 CHECKPOINT_EVERY = 200
 TIME_BUDGET_MIN = 660        # 11h, dừng êm trước giới hạn session
-PROMPT_VERSION = 'plan_b_rtx_v2'
+PROMPT_VERSION = 'plan_b_rtx_v3'
 
 if VRAM_GB >= 80:
     BATCH_BY_MODEL = {'qwen3-0.6b': 16, 'qwen3-1.7b': 16, 'qwen3-4b': 12, 'qwen3-8b': 8}
@@ -275,7 +283,7 @@ def signature(config_path):
     return (payload.get('hidden_size'), payload.get('intermediate_size'), payload.get('num_hidden_layers'))
 
 def resolve_model_path(model_key):
-    \"\"\"Offline: ưu tiên model_sources qua kagglehub, fallback quét /kaggle/input theo signature.\"\"\"
+    # Offline: ưu tiên model_sources qua kagglehub, fallback quét /kaggle/input theo signature
     if kagglehub is not None:
         try:
             path = kagglehub.model_download(MODEL_SOURCES[model_key])
@@ -291,17 +299,140 @@ def resolve_model_path(model_key):
             return str(config_path.parent)
     raise FileNotFoundError(f'Không tìm được weights {model_key} trong model_sources lẫn /kaggle/input')
 
+def parse_json_translation(text):
+    # Trả (translation, ok). ok=False = JSON không đóng hoặc model sinh hỏng
+    raw = (text or '').strip()
+    start, end = raw.find('{'), raw.rfind('}')
+    if start < 0 or end <= start:
+        return '', False
+    try:
+        payload = json.loads(raw[start:end + 1])
+    except json.JSONDecodeError:
+        return '', False
+    if not isinstance(payload, dict):
+        return '', False
+    value = str(payload.get('translation') or '').strip()
+    return value, bool(value)
+
+def generate_batch(model, tokenizer, rows, max_new):
+    prompts = [build_prompt(tokenizer, row) for row in rows]
+    enc = tokenizer(
+        prompts, return_tensors='pt', padding=True,
+        truncation=True, max_length=MAX_INPUT_TOKENS,
+    ).to(DEVICE)
+
+    lengths = enc['attention_mask'].sum(dim=1).tolist()
+    input_truncated = [bool(length >= MAX_INPUT_TOKENS) for length in lengths]
+
+    started = time.time()
+    with torch.inference_mode():
+        output = model.generate(
+            **enc,
+            max_new_tokens=max_new,
+            do_sample=False,
+            num_beams=1,
+            eos_token_id=tokenizer.eos_token_id,
+            pad_token_id=tokenizer.pad_token_id,
+        )
+    latency_ms = (time.time() - started) * 1000
+
+    generated = output[:, enc['input_ids'].shape[1]:]
+    texts = tokenizer.batch_decode(generated, skip_special_tokens=True)
+    n_new = [int((row != tokenizer.pad_token_id).sum()) for row in generated]
+    return texts, n_new, latency_ms / max(1, len(rows)), input_truncated
+
+def make_record(model_key, row, raw, n_new, input_truncated, latency_ms, attempt=1):
+    value, ok = parse_json_translation(raw)
+    return {
+        'cache_key': str(row['cache_key']),
+        'source_text_bt': row.get('source_text_bt'),
+        'key_vi': row.get('key_vi'),
+        'key_zh_effective': row.get('key_zh_effective'),
+        'value_class': row.get('value_class'),
+        'target_text_bt': value,
+        'raw_output': raw,
+        'json_ok': bool(ok),
+        'n_new_tokens': int(n_new),
+        'input_truncated': bool(input_truncated),
+        'attempt': int(attempt),
+        'model_id': model_key,
+        'prompt_version': PROMPT_VERSION,
+        'qc_status': 'pending' if ok else 'needs_review',
+        'latency_ms': round(latency_ms, 2),
+    }
+
+def write_state(model_key, frame, out_dir, started, extra=None):
+    payload = {
+        'model_key': model_key,
+        'gpu': GPU_NAME,
+        'vram_gb': VRAM_GB,
+        'n_done': int(len(frame)),
+        'n_total': int(len(df)),
+        'n_json_ok': int(frame['json_ok'].astype(bool).sum()) if 'json_ok' in frame.columns else None,
+        'n_needs_review': int((~frame['json_ok'].astype(bool)).sum()) if 'json_ok' in frame.columns else None,
+        'elapsed_min': round((time.time() - started) / 60, 1),
+        'vram_alloc_gb': round(torch.cuda.memory_allocated() / 1e9, 1),
+        'updated_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+    }
+    if extra:
+        payload.update(extra)
+    (out_dir / 'run_state.json').write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+
+def repair_failures(model_key, model, tokenizer, out_file, out_dir, started):
+    # Sinh lại các row json_ok=False với cap lớn hơn (batch 1)
+    frame = pd.read_parquet(out_file)
+    if 'json_ok' not in frame.columns:
+        return 0
+    bad = frame.index[~frame['json_ok'].astype(bool)]
+    print(f'{model_key}: repair {len(bad):,} row lỗi JSON / {len(frame):,}')
+    fixed = 0
+    for count, idx in enumerate(bad, 1):
+        if time.time() >= DEADLINE:
+            print(f'{model_key}: repair dừng do time budget tại {count}/{len(bad)}')
+            break
+        row = frame.loc[idx].to_dict()
+        best = None
+        for attempt, cap in ((2, MAX_NEW_TOKENS_RETRY), (3, MAX_NEW_TOKENS_RETRY * 2)):
+            texts, n_new, latency, input_trunc = generate_batch(model, tokenizer, [row], cap)
+            value, ok = parse_json_translation(texts[0])
+            best = (texts[0], value, ok, n_new[0], input_trunc[0], latency, attempt)
+            if ok:
+                break
+        raw, value, ok, n_tokens, input_trunc, latency, attempt = best
+        frame.at[idx, 'raw_output'] = raw
+        frame.at[idx, 'target_text_bt'] = value
+        frame.at[idx, 'json_ok'] = bool(ok)
+        frame.at[idx, 'n_new_tokens'] = int(n_tokens)
+        frame.at[idx, 'input_truncated'] = bool(input_trunc)
+        frame.at[idx, 'attempt'] = int(attempt)
+        frame.at[idx, 'qc_status'] = 'pending' if ok else 'needs_review'
+        frame.at[idx, 'latency_ms'] = round(latency, 2)
+        fixed += int(ok)
+        if count % 25 == 0 or count == len(bad):
+            frame.to_parquet(out_file, index=False)
+            print(f'{model_key}: repair {count}/{len(bad)} fixed={fixed}', flush=True)
+    frame.to_parquet(out_file, index=False)
+    print(f'{model_key}: repair xong, fixed {fixed}/{len(bad)}')
+    return fixed
+
+def load_model_weights(model_path):
+    # transformers >= 5 đổi torch_dtype -> dtype; thử dtype trước, fallback torch_dtype
+    kwargs = dict(trust_remote_code=True, local_files_only=True, low_cpu_mem_usage=True)
+    try:
+        return AutoModelForCausalLM.from_pretrained(model_path, dtype=torch.bfloat16, **kwargs)
+    except TypeError:
+        return AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, **kwargs)
+
 def run_model(model_key):
     out_dir = OUTPUT_ROOT / model_key
     out_dir.mkdir(parents=True, exist_ok=True)
     out_file = out_dir / 'predictions.parquet'
-    state_file = out_dir / 'run_state.json'
 
     if VRAM_GB < MIN_VRAM_BY_MODEL[model_key]:
         print(f'SKIP {model_key}: cần >= {MIN_VRAM_BY_MODEL[model_key]}GB VRAM, có {VRAM_GB}GB')
         return {'model_key': model_key, 'skipped': True, 'reason': f'vram {VRAM_GB}GB'}
 
-    cfg = load_config(model_key)
     existing = pd.DataFrame()
     done = set()
     if out_file.exists():
@@ -311,104 +442,77 @@ def run_model(model_key):
 
     todo = df[~df['cache_key'].astype(str).isin(done)].reset_index(drop=True)
     print(f'{model_key}: todo {len(todo):,} / {len(df):,}')
-    if todo.empty:
-        return {'model_key': model_key, 'n_done': len(done), 'n_total': len(df), 'skipped': False}
 
-    model_path = resolve_model_path(model_key)
-    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, local_files_only=True)
-    tokenizer.padding_side = 'left'
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
+    if todo.empty and existing.empty:
+        return {'model_key': model_key, 'n_done': 0, 'n_total': len(df), 'skipped': False}
 
-    print(f'{model_key}: loading weights...')
-    model = AutoModelForCausalLM.from_pretrained(
-        model_path,
-        torch_dtype=torch.bfloat16,
-        trust_remote_code=True,
-        local_files_only=True,
-        low_cpu_mem_usage=True,
-    ).to(DEVICE)
-    model.eval()
-    model.generation_config.pad_token_id = tokenizer.pad_token_id
-    print(f'{model_key}: loaded | vram_alloc_gb',
-          round(torch.cuda.memory_allocated() / 1e9, 1))
+    if not todo.empty:
+        model_path = resolve_model_path(model_key)
+        tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, local_files_only=True)
+        tokenizer.padding_side = 'left'
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
 
-    batch_size = int(BATCH_BY_MODEL[model_key])
-    max_new = int(cfg.get('max_new_tokens') or MAX_NEW_TOKENS)
-    max_new = min(max_new, MAX_NEW_TOKENS)
-    records = []
-    started = time.time()
-    stopped = 'completed'
+        print(f'{model_key}: loading weights...')
+        model = load_model_weights(model_path).to(DEVICE)
+        model.eval()
+        model.generation_config.pad_token_id = tokenizer.pad_token_id
+        print(f'{model_key}: loaded | vram_alloc_gb', round(torch.cuda.memory_allocated() / 1e9, 1))
 
-    for start in range(0, len(todo), batch_size):
-        if time.time() >= DEADLINE:
-            stopped = 'time_budget'
-            print(f'{model_key}: dừng do time budget tại {start}/{len(todo)}')
-            break
+        batch_size = int(BATCH_BY_MODEL[model_key])
+        records = []
+        started = time.time()
+        stopped = 'completed'
+        n_ok = 0
 
-        batch = todo.iloc[start:start + batch_size]
-        prompts = [build_prompt(tokenizer, row) for row in batch.to_dict('records')]
-        enc = tokenizer(
-            prompts, return_tensors='pt', padding=True,
-            truncation=True, max_length=MAX_INPUT_TOKENS,
-        ).to(DEVICE)
+        for start in range(0, len(todo), batch_size):
+            if time.time() >= DEADLINE:
+                stopped = 'time_budget'
+                print(f'{model_key}: dừng do time budget tại {start}/{len(todo)}')
+                break
 
-        t0 = time.time()
-        with torch.inference_mode():
-            output = model.generate(
-                **enc,
-                max_new_tokens=max_new,
-                do_sample=False,
-                num_beams=1,
-                eos_token_id=tokenizer.eos_token_id,
-                pad_token_id=tokenizer.pad_token_id,
-            )
-        latency_ms = (time.time() - t0) * 1000
-        generated = output[:, enc['input_ids'].shape[1]:]
-        texts = tokenizer.batch_decode(generated, skip_special_tokens=True)
+            batch = todo.iloc[start:start + batch_size]
+            rows = batch.to_dict('records')
+            texts, n_new, latency, input_trunc = generate_batch(model, tokenizer, rows, MAX_NEW_TOKENS)
 
-        for row, raw in zip(batch.to_dict('records'), texts):
-            records.append({
-                'cache_key': str(row['cache_key']),
-                'source_text_bt': row.get('source_text_bt'),
-                'key_vi': row.get('key_vi'),
-                'key_zh_effective': row.get('key_zh_effective'),
-                'value_class': row.get('value_class'),
-                'target_text_bt': parse_translation(raw),
-                'raw_output': raw,
-                'model_id': model_key,
-                'prompt_version': PROMPT_VERSION,
-                'qc_status': 'pending',
-                'latency_ms': round(latency_ms / max(1, len(batch)), 2),
-            })
+            for row, raw, n_tokens, truncated, lat in zip(rows, texts, n_new, input_trunc, [latency] * len(rows)):
+                record = make_record(model_key, row, raw, n_tokens, truncated, lat)
+                records.append(record)
+                n_ok += int(record['json_ok'])
 
-        if len(records) >= CHECKPOINT_EVERY or start + batch_size >= len(todo):
-            part = pd.DataFrame(records)
-            merged = pd.concat([existing, part], ignore_index=True) if len(existing) else part
-            merged.to_parquet(out_file, index=False)
-            existing = merged
-            records = []
-            elapsed_min = (time.time() - started) / 60
-            state_file.write_text(json.dumps({
-                'model_key': model_key,
-                'gpu': GPU_NAME,
-                'vram_gb': VRAM_GB,
-                'n_done': int(len(merged)),
-                'n_total': int(len(df)),
-                'elapsed_min': round(elapsed_min, 1),
-                'entries_per_min': round(len(merged) / max(1e-9, elapsed_min), 1),
-                'vram_alloc_gb': round(torch.cuda.memory_allocated() / 1e9, 1),
-                'updated_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
-            }, ensure_ascii=False, indent=2), encoding='utf-8')
-            print(f'{model_key}: saved {len(merged):,}/{len(df):,} '
-                  f'({len(merged) / max(1e-9, elapsed_min):.0f} entry/min)', flush=True)
+            if len(records) >= CHECKPOINT_EVERY or start + batch_size >= len(todo):
+                part = pd.DataFrame(records)
+                merged = pd.concat([existing, part], ignore_index=True) if len(existing) else part
+                merged.to_parquet(out_file, index=False)
+                existing = merged
+                records = []
+                elapsed_min = (time.time() - started) / 60
+                write_state(model_key, merged, out_dir, started, {
+                    'entries_per_min': round(len(merged) / max(1e-9, elapsed_min), 1),
+                })
+                print(f'{model_key}: saved {len(merged):,}/{len(df):,} '
+                      f'json_ok={n_ok:,} ({len(merged) / max(1e-9, elapsed_min):.0f} entry/min)', flush=True)
 
-    del model
-    torch.cuda.empty_cache()
-    elapsed = round((time.time() - started) / 60, 1)
-    print(f'{model_key}: {stopped} in {elapsed} min')
+        fixed = repair_failures(model_key, model, tokenizer, out_file, out_dir, started)
+        del model
+        torch.cuda.empty_cache()
+        elapsed_min = round((time.time() - started) / 60, 1)
+        final = pd.read_parquet(out_file)
+        n_ok_final = int(final['json_ok'].astype(bool).sum())
+        write_state(model_key, final, out_dir, started, {
+            'entries_per_min': round(len(final) / max(1e-9, elapsed_min), 1),
+            'repair_fixed': int(fixed),
+            'stopped': stopped,
+        })
+        print(f'{model_key}: {stopped} in {elapsed_min} min | json_ok {n_ok_final:,}/{len(final):,}')
+        return {'model_key': model_key, 'n_done': int(len(final)), 'n_total': int(len(df)),
+                'n_json_ok': n_ok_final, 'n_needs_review': int(len(final) - n_ok_final),
+                'repair_fixed': int(fixed), 'stopped': stopped, 'elapsed_min': elapsed_min}
+
+    # resume-only: vẫn repair nếu còn row lỗi
     return {'model_key': model_key, 'n_done': int(len(existing)), 'n_total': int(len(df)),
-            'stopped': stopped, 'elapsed_min': elapsed}
+            'n_json_ok': int(existing['json_ok'].astype(bool).sum()) if 'json_ok' in existing.columns else None,
+            'stopped': 'resumed'}
 """
 )
 
