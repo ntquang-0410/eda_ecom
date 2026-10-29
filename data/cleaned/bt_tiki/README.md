@@ -60,4 +60,4 @@ manifest.json     số dòng + sha256 từng file
 Còn 233 unit gắn cờ `still_untranslated` (mã màu, model code, đơn vị thuần).
 
 Lưu ý: bản dịch là **synthetic**, không phải gold. Xem `reports/bt_audit.json`
-và `../../../../reports/tiki_bt_eda.md` trong repo code để biết chi tiết EDA.
+để biết kiểm tra đầy đủ; EDA và làm sạch nằm ở pipeline code (`tiki_mining/bt_eda_clean.py`).
