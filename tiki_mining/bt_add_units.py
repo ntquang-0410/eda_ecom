@@ -75,7 +75,7 @@ def main() -> int:
 
     base_cols = [
         "pair_id", "product_id", "split", "unit_type", "unit_index", "value_index",
-        "key_vi", "key_zh", "value_class", "source_text_bt", "cache_key",
+        "key_vi", "key_zh", "key_zh_effective", "value_class", "source_text_bt", "cache_key",
     ]
     units = units[base_cols].copy()
 
