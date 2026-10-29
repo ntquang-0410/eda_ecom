@@ -66,18 +66,51 @@ hợp lệ: `iPhone 13`, `Type C`, `Z Fold 3`.
 Đây là **cờ**, không phải kết luận: một phần là model code (`S23` → `三星`) hoặc
 quy đổi đơn vị. Cần COMET-QE để chốt.
 
-## F. Chưa kiểm chứng được (blocked)
+## F. Đối chiếu nguồn Plan A — ĐẠT 100%
 
-1. `29.446 key` có đúng bằng tập cache route `mt` của Plan A không.
-   Số lượng khớp số đã biết nhưng không còn file nguồn để so.
-2. Mở rộng 29.446 cache → 45.709 unit MT (cần `tiki_bt_units_plan_a.parquet`).
-3. Join `product_id` / `split` cho train-test (dataset hiện chỉ có cache-level).
+Sau khi khôi phục credential và tải lại `tiki-plan-a-bt-input`:
 
-Nguyên nhân: `/tmp/opencode` bị xoá và `/root/.kaggle` mất credential.
+```text
+cache Plan A            : 40.646 dòng, 29.446 khóa route 'mt'
+dataset key set         : 29.446
+missing_in_dataset      : 0
+extra_in_dataset        : 0
+```
 
-## G. Việc cần làm
+Mở rộng ra unit (recompute `cache_key` bằng đúng hàm Plan A):
 
-- Khôi phục `~/.kaggle/access_token` (hoặc `kaggle.json`).
-- Tải lại `ntquang0410/tiki-plan-a-bt-input` và lưu vào `.artifacts/` (trong repo,
-  không dùng `/tmp`).
-- Bổ sung `product_id`, `unit_type`, `split` vào dataset trước khi merge 1688.
+| kiểm tra | kết quả |
+|---|---|
+| unit MT | 45.709 |
+| map được | 45.709 (100%) |
+| không map được | 0 |
+| `cache_key` recompute lệch Plan A | 0 |
+| `pair_id` trùng | 0 |
+| product phủ | 13.200 / 13.200 |
+| split unit | train 36.434 / dev 4.824 / test 4.451 |
+
+## G. Dataset unit-level
+
+`tiki_mining/bt_add_units.py` xuất thêm 4 file:
+
+```text
+tiki_bt_<model>_units.parquet   45.709 dòng
+  cột: pair_id, product_id, split, unit_type, key_vi, key_zh,
+       source_text_bt, target_text_bt, model_id, prompt_version,
+       json_ok, qc_status, repair_pass, attempt, latency_ms
+```
+
+| model | units | usable | còn cờ | train | dev | test | target rỗng |
+|---|---|---|---|---|---|---|---|
+| 0.6B | 45.709 | 45.547 | 162 | 36.308 | 4.801 | 4.438 | 0 |
+| 1.7B | 45.709 | 45.659 | 50 | 36.398 | 4.813 | 4.448 | 0 |
+| 4B | 45.709 | 45.698 | 11 | 36.424 | 4.823 | 4.451 | 0 |
+| 8B | 45.709 | 45.699 | 10 | 36.424 | 4.824 | 4.451 | 0 |
+
+Không có dòng usable nào có target rỗng.
+
+## H. Việc còn lại
+
+- Lưu `.artifacts/plan_a` vào nơi bền vững (đã nằm trong repo, không dùng `/tmp`).
+- Merge với 1688: chốt weight / cap attribute / gold set.
+- Thêm COMET-QE nếu muốn lọc ngữ nghĩa trước khi train.

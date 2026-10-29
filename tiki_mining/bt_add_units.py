@@ -66,17 +66,18 @@ def main() -> int:
     recomputed_mismatch = int((units["cache_key"].astype(str) != pd.Series(keys, index=units.index)).sum())
     units["cache_key"] = keys
 
-    base_cols = [
-        "pair_id", "product_id", "split", "unit_type", "unit_index", "value_index",
-        "key_vi", "key_zh", "value_class", "source_text_bt", "cache_key",
-    ]
-    units = units[base_cols].copy()
     units["source_text_bt"] = units["text_vi"]
     attribute = units["unit_type"] == "attribute"
     units.loc[attribute, "source_text_bt"] = units.loc[attribute, "value_vi"]
     units["source_text_bt"] = units["source_text_bt"].map(
         lambda value: normalize_text(value, collapse_whitespace=True).strip()
     )
+
+    base_cols = [
+        "pair_id", "product_id", "split", "unit_type", "unit_index", "value_index",
+        "key_vi", "key_zh", "value_class", "source_text_bt", "cache_key",
+    ]
+    units = units[base_cols].copy()
 
     report = {}
     for model in MODELS:
