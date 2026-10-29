@@ -1,0 +1,699 @@
+﻿key_norm,key_vi,key_class,n_units,n_products,n_train_eligible,key_zh,key_map_status,source,auto_key_zh,auto_freq,auto_share
+thương hiệu,Thương hiệu,admin,13184,13184,0,品牌,auto_1688,alignment_1688,品牌,15725,1.0
+xuất xứ (made in),Xuất xứ (Made in),admin,12672,12672,0,产地,manual,existing_key_map,,0,0.0
+sản phẩm có được bảo hành không?,Sản phẩm có được bảo hành không?,admin,12343,12343,0,是否保修,manual,existing_key_map,,0,0.0
+xuất xứ thương hiệu,Xuất xứ thương hiệu,admin,12075,12075,0,品牌产地,manual,existing_key_map,,0,0.0
+màu sắc,Màu,text,7684,2395,7623,颜色,auto_1688,alignment_1688,颜色,11411,1.0
+hạn sử dụng,Hạn sử dụng,admin,3657,3656,0,保质期,manual,existing_key_map,,0,0.0
+hình thức bảo hành,Hình thức bảo hành,admin,2916,2916,0,保修方式,manual,existing_key_map,,0,0.0
+thời gian bảo hành,Thời gian bảo hành,admin,2884,2884,0,保修期,auto_1688,alignment_1688,保修期,52,0.9455
+kích thước,Kích thước,numeric,2400,1681,913,尺寸,manual,existing_key_map,尺寸,1363,0.5483
+model,Model,model,2255,2237,0,型号,manual,existing_key_map,,0,0.0
+trọng lượng sản phẩm,Trọng lượng sản phẩm,numeric,1982,1982,61,产品重量,manual,existing_key_map,产品重量,5,1.0
+phân loại,Phân loại,text,1709,595,1549,分类,auto_1688,alignment_1688,分类,75,0.9868
+thành phần,Thành phần,text,1641,1641,1641,成分,auto_1688,alignment_1688,成分,344,0.8075
+hướng dẫn sử dụng,Hướng dẫn sử dụng,text,1613,1613,1613,使用说明,manual,existing_key_map,,0,0.0
+chất liệu,Chất liệu,text,1440,1426,1440,材质,auto_1688,alignment_1688,材质,5054,0.998
+hướng dẫn bảo quản,Hướng dẫn bảo quản,text,1426,1426,1426,保存说明,manual,existing_key_map,,0,0.0
+dòng máy,Dòng máy,text,1199,269,1192,机型,manual,existing_key_map,,0,0.0
+kích cỡ,Kích cỡ,numeric,1099,323,673,尺码,auto_1688,alignment_1688,尺码,3205,0.9197
+khối lượng (kg),Khối lượng (kg),numeric,1023,1023,0,重量(kg),manual,existing_key_map,,0,0.0
+tên đơn vị/tổ chức chịu trách nhiệm về hàng hóa,Tên đơn vị/tổ chức chịu trách nhiệm về hàng hóa,admin,1004,1004,0,责任单位名称,manual,existing_key_map,,0,0.0
+họa tiết,Họa Tiết,text,985,812,985,图案,auto_1688,alignment_1688,图案,2077,1.0
+địa chỉ tổ chức chịu trách nhiệm về hàng hóa,Địa chỉ tổ chức chịu trách nhiệm về hàng hóa,admin,948,948,0,责任单位地址,manual,existing_key_map,,0,0.0
+kích thước (dài x rộng x cao),Kích thước (Dài x Rộng x Cao),numeric,943,943,214,尺寸(长x宽x高),manual,existing_key_map,,0,0.0
+chọn màu,Chọn Màu,text,870,238,870,选择颜色,manual,existing_key_map,,0,0.0
+phương thức giao hàng seller delivery,Phương thức giao hàng Seller Delivery,text,837,837,837,配送方式 Seller Delivery,manual,existing_key_map,,0,0.0
+size,Size,text,816,263,425,尺寸,manual,existing_key_map,,0,0.0
+loại,Loại,text,781,256,681,类型,auto_1688,alignment_1688,类型,308,0.8462
+quy cách đóng gói,Quy cách đóng gói,numeric,702,541,554,包装规格,auto_1688,alignment_1688,包装规格,214,0.9953
+chọn số,Chọn số:,text,691,6,0,选择号码,manual,existing_key_map,,0,0.0
+dung tích,Dung tích,numeric,661,468,56,容量,manual,existing_key_map,,0,0.0
+đời xe,Đời Xe,text,531,60,0,车型年份,manual,existing_key_map,,0,0.0
+lưu ý,Lưu ý,text,465,465,465,注意,manual,existing_key_map,,0,0.0
+chọn số sim,CHỌN SỐ SIM,text,419,9,10,选择SIM号,manual,existing_key_map,,0,0.0
+dòng iphone,Dòng iphone,text,376,61,350,iPhone系列,manual,existing_key_map,,0,0.0
+dòng xe,Dòng Xe,text,375,44,375,车型,manual,existing_key_map,,0,0.0
+khác,khác,text,361,111,228,其他,manual,existing_key_map,其他,2,0.6667
+số lượng,Số lượng,numeric,284,107,110,数量,manual,existing_key_map,支数,19,0.6333
+loại da phù hợp,Loại da phù hợp,text,235,235,235,适用肤质,auto_1688,alignment_1688,适用肤质,843,1.0
+trọng lượng,Trọng lượng,numeric,228,101,41,重量,manual,existing_key_map,克重,909,0.5411
+tính năng,Tính năng,text,228,228,228,功能,manual,existing_key_map,特色功能,20,0.5128
+chọn iphone,Chọn iPhone,text,217,28,189,选择iPhone,manual,existing_key_map,,0,0.0
+iphone,iPhone,text,216,27,208,iPhone,manual,existing_key_map,,0,0.0
+mẫu,Mẫu,text,214,50,170,款式,manual,existing_key_map,图案,2109,0.9828
+khối lượng,Khối Lượng,numeric,211,85,31,克重,auto_1688,alignment_1688,克重,463,0.9646
+kết nối,Kết nối,text,210,209,204,连接方式,manual,existing_key_map,,0,0.0
+tải trọng tối đa,Tải trọng tối đa,text,201,201,3,最大承重,manual,existing_key_map,,0,0.0
+mùi hương,Mùi Hương,text,196,44,196,香味,manual,existing_key_map,,0,0.0
+chọn mẫu,Chọn mẫu,text,193,35,119,选择款式,manual,existing_key_map,,0,0.0
+độ tuổi phù hợp,Độ tuổi phù hợp,numeric,158,158,133,适用年龄段,auto_1688,alignment_1688,适用年龄段,804,0.6884
+phanh,Phanh,text,152,152,152,刹车,manual,existing_key_map,,0,0.0
+chọn dòng máy,chọn dòng máy,text,144,36,142,选择机型,manual,existing_key_map,,0,0.0
+công suất,Công suất,numeric,139,81,28,容量,auto_1688,alignment_1688,容量,1579,0.995
+chọn size,Chọn size,text,133,37,56,选择尺寸,manual,existing_key_map,,0,0.0
+variation,Variation,text,131,24,131,选项,manual,existing_key_map,,0,0.0
+hương vị,Hương vị,text,127,36,127,口味,manual,existing_key_map,口味,138,0.5633
+color,Color,text,123,40,123,颜色,manual,existing_key_map,,0,0.0
+chọn màu sắc,Chọn màu sắc,text,118,36,118,选择颜色,manual,existing_key_map,,0,0.0
+thời gian sạc đầy,Thời gian sạc đầy,text,110,110,77,充满时间,manual,existing_key_map,,0,0.0
+thương hiệu thiết bị phù hợp,Thương hiệu thiết bị phù hợp,admin,108,108,0,适用设备品牌,manual,existing_key_map,,0,0.0
+combo,Combo,text,106,39,80,组合,manual,existing_key_map,,0,0.0
+độ tuổi,Độ tuổi,numeric,103,96,92,年龄,manual,existing_key_map,年龄,1,1.0
+dòng xe sử dụng,Dòng xe sử dụng,text,96,96,96,适用车型,manual,existing_key_map,,0,0.0
+loại tóc,Loại tóc,text,85,85,85,发质,manual,existing_key_map,,0,0.0
+số km/mỗi lần sạc,Số km/mỗi lần sạc,text,84,84,22,每次充电公里数,manual,existing_key_map,,0,0.0
+kiểu dáng,Kiểu dáng,text,82,16,82,款式,auto_1688,alignment_1688,款式,3661,0.8234
+loại chìa khóa,Loại chìa khóa,text,79,79,79,钥匙类型,manual,existing_key_map,,0,0.0
+năm ra mắt,Năm ra mắt,text,78,78,0,上市年份,manual,existing_key_map,,0,0.0
+hỗ trợ sạc nhanh,Hỗ trợ sạc nhanh,text,75,75,58,支持快充,manual,existing_key_map,,0,0.0
+quy cách,Quy cách,numeric,71,32,26,规格,auto_1688,alignment_1688,规格,1504,1.0
+samsung,SamSung,text,71,12,71,三星,manual,existing_key_map,,0,0.0
+chiều dài,Chiều dài,numeric,67,20,29,裙长,auto_1688,alignment_1688,裙长,153,0.9684
+chất liệu nồi & chảo,Chất liệu nồi & chảo,text,66,66,66,锅具材质,manual,existing_key_map,,0,0.0
+sử dụng cho bếp,Sử dụng cho bếp,text,65,65,65,适用炉灶,manual,existing_key_map,,0,0.0
+thời gian sử dụng,Thời gian sử dụng,text,65,65,51,使用时间,manual,existing_key_map,使用时段,1,1.0
+độ dày,Độ dày,numeric,64,60,26,厚薄,auto_1688,alignment_1688,厚薄,1106,0.9584
+bluetooth,Bluetooth,text,62,62,45,蓝牙,manual,existing_key_map,,0,0.0
+chiều cao khuyến nghị,Chiều cao khuyến nghị,numeric,61,61,61,建议身高,manual,existing_key_map,,0,0.0
+loại nồi chảo,Loại nồi chảo,text,61,61,61,锅具类型,manual,existing_key_map,,0,0.0
+nắp nồi,Nắp nồi,text,61,61,61,锅盖,manual,existing_key_map,,0,0.0
+tốc độ tối đa,Tốc độ tối đa,text,60,60,3,最高速度,manual,existing_key_map,,0,0.0
+bộ,Bộ,text,59,7,56,套装,manual,existing_key_map,,0,0.0
+có thuế vat,Có thuế VAT,text,58,58,58,含VAT,manual,existing_key_map,,0,0.0
+màu da,MÀU DA,text,58,14,58,肤色,manual,existing_key_map,,0,0.0
+đầu ra,Đầu ra,text,58,58,50,输出,manual,existing_key_map,,0,0.0
+phụ kiện đi kèm,Phụ kiện đi kèm,text,57,57,57,附带配件,manual,existing_key_map,,0,0.0
+màu rối,Màu Rối,text,56,8,56,发色,manual,existing_key_map,,0,0.0
+độ phân giải quang học,Độ phân giải quang học,text,55,55,44,光学分辨率,manual,existing_key_map,,0,0.0
+thời gian pin,Thời gian pin,text,54,54,42,电池续航,manual,existing_key_map,,0,0.0
+loại jack cắm,Loại Jack cắm,text,53,53,28,接口类型,manual,existing_key_map,,0,0.0
+bộ bài,Bộ bài,text,50,1,50,卡牌套装,manual,existing_key_map,,0,0.0
+lựa chọn,Lựa chọn,text,50,12,50,选项,manual,existing_key_map,,0,0.0
+chọn kích thước ga,Chọn kích thước Ga,numeric,49,7,0,选择床垫尺寸,manual,existing_key_map,,0,0.0
+dòng máy / màu sắc,Dòng máy / màu sắc,text,48,7,48,机型/颜色,manual,existing_key_map,,0,0.0
+chọn điện thoại,Chọn điện thoại,text,47,11,47,选择手机,manual,existing_key_map,,0,0.0
+hàm lượng dinh dưỡng,Hàm lượng dinh dưỡng,numeric,47,47,47,营养成分,manual,existing_key_map,营养成分,2,1.0
+loại pin,Loại Pin,text,46,32,46,电池类型,manual,existing_key_map,电池类型,65,0.5242
+tuổi thọ tối đa,Tuổi thọ tối đa,numeric,46,46,36,最长寿命,manual,existing_key_map,,0,0.0
+dung lượng,Dung lượng,text,45,17,41,容量,auto_1688,alignment_1688,容量,575,1.0
+mẫu tranh,MẪU TRANH,text,45,6,23,画款,manual,existing_key_map,,0,0.0
+cổng usb,Cổng USB,text,43,43,42,USB接口,manual,existing_key_map,,0,0.0
+hãng xe,Hãng xe,text,43,5,43,汽车品牌,manual,existing_key_map,,0,0.0
+thời gian sạc,Thời gian sạc,text,43,43,30,充电时间,manual,existing_key_map,,0,0.0
+độ tuổi phù hợp (dành cho thú cưng),Độ tuổi phù hợp (dành cho thú cưng),numeric,43,43,40,适用年龄(宠物),manual,existing_key_map,,0,0.0
+tên máy,Tên máy,text,42,8,42,机器名称,manual,existing_key_map,,0,0.0
+vị,Vị,text,42,16,42,口味,auto_1688,alignment_1688,口味,195,1.0
+dạng,Dạng,text,38,12,38,形态,manual,existing_key_map,,0,0.0
+mầu sắc,Mầu Sắc,text,36,10,36,颜色,manual,existing_key_map,,0,0.0
+đặc sản vùng miền,Đặc sản vùng miền,text,36,36,36,地方特产,manual,existing_key_map,,0,0.0
+chọn loại iphone,Chọn loại iPhone,text,34,6,34,选择iPhone型号,manual,existing_key_map,,0,0.0
+phuộc,Phuộc,text,33,33,33,前叉,manual,existing_key_map,,0,0.0
+tần số,Tần số,numeric,33,33,24,频率,manual,existing_key_map,,0,0.0
+dòng samsung,Dòng Samsung,text,30,6,30,三星系列,manual,existing_key_map,,0,0.0
+họa tiết.,Họa tiết.,text,30,3,30,图案,manual,existing_key_map,,0,0.0
+logo,Logo,text,30,3,30,LOGO,manual,existing_key_map,logo,1,1.0
+mã hàng,MÃ HÀNG,model,30,4,0,货号,auto_1688,alignment_1688,货号,3083,0.9981
+tùy chọn,Tùy chọn,text,30,11,22,选项,manual,existing_key_map,,0,0.0
+khả năng giữ nhiệt,Khả năng giữ nhiệt,text,29,29,29,保温能力,manual,existing_key_map,,0,0.0
+mẫu pvc,Mẫu PVC,text,29,2,29,PVC款式,manual,existing_key_map,,0,0.0
+độ nhạy,Độ nhạy,text,29,29,29,灵敏度,manual,existing_key_map,灵敏度,2,1.0
+chọn logo,CHỌN LOGO,text,28,2,28,选择LOGO,manual,existing_key_map,,0,0.0
+tinh dầu,Tinh dầu,text,28,3,28,精油,manual,existing_key_map,,0,0.0
+điện áp,Điện áp,numeric,28,28,3,电压,auto_1688,alignment_1688,电压,124,1.0
+chọn,CHỌN,text,27,12,25,选择,manual,existing_key_map,,0,0.0
+chọn khối lượng,Chọn khối lượng,numeric,27,9,1,选择重量,manual,existing_key_map,,0,0.0
+hoa văn,Hoa văn,text,27,6,27,图案,auto_1688,alignment_1688,图案,3351,0.8761
+hỗ trợ lắp đặt,Hỗ trợ lắp đặt,text,27,27,27,支持安装,manual,existing_key_map,,0,0.0
+chọn kích cỡ,Chọn kích cỡ,numeric,26,4,24,选择尺寸,manual,existing_key_map,,0,0.0
+chọn loại,Chọn Loại,text,26,10,26,选择类型,manual,existing_key_map,,0,0.0
+dịch vụ nổi bật 2,Dịch vụ nổi bật 2,text,26,26,26,特色服务2,manual,existing_key_map,,0,0.0
+dịch vụ nổi bật 3,Dịch vụ nổi bật 3,text,26,26,26,特色服务3,manual,existing_key_map,,0,0.0
+giống nho,Giống nho,text,26,26,26,葡萄品种,manual,existing_key_map,,0,0.0
+lựa chọn ghế,Lựa chọn ghế,text,26,2,26,选择椅子,manual,existing_key_map,,0,0.0
+thắng xe,Thắng xe,text,26,26,26,汽车刹车,manual,existing_key_map,,0,0.0
+chọn vị,Chọn vị,text,25,4,25,选择口味,manual,existing_key_map,,0,0.0
+dạng bào chế,Dạng bào chế,text,25,25,25,剂型,manual,existing_key_map,剂型,1,1.0
+chọn mùi hương,CHỌN MÙI HƯƠNG,text,24,5,24,选择香味,manual,existing_key_map,,0,0.0
+hoạ tiết,hoạ tiết,text,24,2,24,图案,manual,existing_key_map,,0,0.0
+kich cỡ gạt mưa,Kich cỡ gạt mưa,text,24,3,0,雨刷尺寸,manual,existing_key_map,,0,0.0
+mã,Mã,text,24,2,24,编号,manual,existing_key_map,,0,0.0
+đối tượng,Đối tượng,text,24,24,24,适用对象,manual,existing_key_map,,0,0.0
+phân loại hàng,Phân loại hàng,text,23,6,14,商品分类,manual,existing_key_map,,0,0.0
+phụ kiện,PHỤ KIỆN,text,23,8,23,配件,auto_1688,alignment_1688,配件,36,1.0
+quà tặng,Quà tặng,text,23,13,23,礼品,manual,existing_key_map,礼品,1,1.0
+thành phẩm,Thành Phẩm,text,23,6,23,成品,manual,existing_key_map,,0,0.0
+loại ipad,Loại iPad,text,22,4,22,iPad型号,manual,existing_key_map,,0,0.0
+miếng lẻ,Miếng lẻ,text,22,1,22,单卖片,manual,existing_key_map,,0,0.0
+màu son,màu son,text,22,3,22,口红颜色,manual,existing_key_map,,0,0.0
+chiều cao nệm,chiều cao nệm,numeric,21,7,3,床垫高度,manual,existing_key_map,,0,0.0
+combo 10 miếng,Combo 10 Miếng,text,21,1,21,10片组合,manual,existing_key_map,,0,0.0
+màu ánh sáng,Màu ánh sáng,text,21,9,21,灯光颜色,manual,existing_key_map,,0,0.0
+mệnh giá,Mệnh Giá,text,21,2,8,面值,manual,existing_key_map,,0,0.0
+pl,PL,text,21,5,12,PL,manual,existing_key_map,,0,0.0
+số miếng,Số miếng,text,21,18,2,片数,manual,existing_key_map,,0,0.0
+inbound policy (days),Inbound Policy (days),text,20,20,0,入境政策(天),manual,existing_key_map,,0,0.0
+chữ cái biến hình,CHỮ CÁI BIẾN HÌNH,text,19,1,19,变形字母,manual,existing_key_map,,0,0.0
+gia vị vipep,Gia vị Vipep,text,19,1,19,Vipep调味料,manual,existing_key_map,,0,0.0
+nhóm màu,Nhóm màu,text,19,10,19,色系,manual,existing_key_map,,0,0.0
+đầu vào,Đầu vào,text,19,19,17,输入,manual,existing_key_map,,0,0.0
+hương,Hương,text,18,6,18,香味,manual,existing_key_map,,0,0.0
+hộp,HỘP,text,18,8,10,盒装,manual,existing_key_map,,0,0.0
+trong full hd,Trong Full HD,text,18,1,16,全高清,manual,existing_key_map,,0,0.0
+độ dài,Độ dài,text,18,12,4,长度,manual,existing_key_map,,0,0.0
+chọn kiểu dáng và size,Chọn kiểu dáng và Size,text,17,1,17,选择款式和尺寸,manual,existing_key_map,,0,0.0
+hệ điều hành,Hệ điều hành,text,17,17,17,操作系统,manual,existing_key_map,,0,0.0
+hỗ trợ đàm thoại,Hỗ trợ đàm thoại,text,17,17,17,支持通话,manual,existing_key_map,,0,0.0
+mùi vị,Mùi vị,text,17,3,17,口味,manual,existing_key_map,,0,0.0
+nẹp gỗ composit,Nẹp gỗ composit,text,17,2,17,复合木线条,manual,existing_key_map,,0,0.0
+phiên bản,Phiên bản,text,17,8,17,版型,auto_1688,alignment_1688,版型,456,0.9785
+đường kính đầu chải,Đường kính đầu chải,numeric,17,3,17,刷头直径,manual,existing_key_map,,0,0.0
+chiều dài dây phơi,Chiều dài dây phơi,numeric,16,1,0,晾衣绳长度,manual,existing_key_map,,0,0.0
+chọn kiểu dáng,Chọn Kiểu Dáng,text,16,2,16,选择款式,manual,existing_key_map,,0,0.0
+chọn mua,Chọn mua,text,16,5,15,选择购买,manual,existing_key_map,,0,0.0
+chống chỉ định,Chống Chỉ Định,text,16,16,16,禁忌,manual,existing_key_map,,0,0.0
+dung lượng pin,Dung lượng pin,text,16,16,0,电池容量,auto_1688,alignment_1688,电池容量,71,1.0
+loại xe,Loại xe,text,16,5,16,车型,manual,existing_key_map,,0,0.0
+mầu,Mầu,text,16,4,16,颜色,manual,existing_key_map,,0,0.0
+các vị,Các vị,text,15,3,15,口味,manual,existing_key_map,,0,0.0
+dòng ipad,Dòng iPad,text,15,2,15,iPad系列,manual,existing_key_map,,0,0.0
+hương thơm,Hương Thơm,text,15,4,15,香型,manual,existing_key_map,香型,40,0.3252
+lót ghế ô tô hạt gỗ,Lót ghế ô tô hạt gỗ,text,15,1,15,汽车木珠坐垫,manual,existing_key_map,,0,0.0
+mùi tinh dầu,Mùi Tinh Dầu,text,15,3,15,精油香味,manual,existing_key_map,,0,0.0
+độ đạm,ĐỘ ĐẠM,text,15,5,15,蛋白质含量,manual,existing_key_map,,0,0.0
+bao cao su,Bao Cao Su,text,14,3,14,避孕套,manual,existing_key_map,,0,0.0
+cảm ứng,Cảm ứng,text,14,14,14,触控,manual,existing_key_map,,0,0.0
+dạng sản phẩm,Dạng sản phẩm,text,14,5,8,产品形态,manual,existing_key_map,,0,0.0
+gạch màu,Gạch Màu,text,14,1,14,彩色瓷砖,manual,existing_key_map,,0,0.0
+độ chịu nước,Độ chịu nước,text,14,14,14,防水性,manual,existing_key_map,,0,0.0
+chống nhìn trộm,Chống nhìn trộm,text,13,1,11,防窥,manual,existing_key_map,,0,0.0
+kính cnt 360 độ,Kính CNT 360 độ,text,13,1,13,CNT 360度镜片,manual,existing_key_map,,0,0.0
+mẫu logo,Mẫu LOGO,text,13,1,13,LOGO款式,manual,existing_key_map,,0,0.0
+mẫu mã,Mẫu mã,text,13,6,13,型号,auto_1688,alignment_1688,型号,333,0.874
+switch,Switch,text,13,7,13,开关,manual,existing_key_map,,0,0.0
+vạch báo đầy,Vạch báo đầy,text,13,13,13,满电刻度,manual,existing_key_map,,0,0.0
+chọn màu sơn,Chọn Màu Sơn,text,12,1,12,选择油漆颜色,manual,existing_key_map,,0,0.0
+cổng sạc,Cổng sạc,text,12,12,12,充电接口,manual,existing_key_map,,0,0.0
+dòng,Dòng,text,12,3,11,系列,manual,existing_key_map,,0,0.0
+dòng macbook,Dòng Macbook,text,12,2,12,MacBook系列,manual,existing_key_map,,0,0.0
+dòng máy - màu,Dòng máy - Màu,text,12,2,12,机型-颜色,manual,existing_key_map,,0,0.0
+kích thước (ngang x sâu x cao),Kích thước (Ngang x sâu x cao),numeric,12,2,0,尺寸(宽x深x高),manual,existing_key_map,,0,0.0
+kích thước mặt,Kích thước mặt,numeric,12,12,0,表面尺寸,manual,existing_key_map,,0,0.0
+nguồn điện,Nguồn điện,text,12,12,4,电源,auto_1688,alignment_1688,电源,36,1.0
+số ngày sử dụng,Số ngày sử dụng,text,12,2,12,使用天数,manual,existing_key_map,,0,0.0
+tông màu,Tông màu,text,12,4,12,色调,manual,existing_key_map,,0,0.0
+các màu sắc,CÁC MÀU SẮC,text,11,1,11,颜色选项,manual,existing_key_map,,0,0.0
+gia vị,GIA VỊ,text,11,1,11,调味料,manual,existing_key_map,,0,0.0
+loại/ công nghệ màn hình,Loại/ Công nghệ màn hình,text,11,11,11,屏幕类型/技术,manual,existing_key_map,,0,0.0
+màu dây,Màu dây,text,11,1,11,带色,manual,existing_key_map,,0,0.0
+màu túi,Màu Túi,text,11,1,11,包色,manual,existing_key_map,,0,0.0
+tên con vật,Tên con vật,text,11,1,11,动物名称,manual,existing_key_map,,0,0.0
+chất chống dính,Chất chống dính,text,10,10,10,防粘材质,manual,existing_key_map,,0,0.0
+chất liệu mặt,Chất liệu mặt,text,10,10,10,表面材质,manual,existing_key_map,,0,0.0
+chọn kích thước size,CHỌN KÍCH THƯỚC SIZE:,numeric,10,4,0,尺寸,manual,existing_key_map,,0,0.0
+chủng loại,Chủng loại,text,10,3,10,类别,auto_1688,alignment_1688,类别,179,0.6303
+công dụng,Công dụng,text,10,3,10,用途,auto_1688,alignment_1688,用途,31,1.0
+dụng cụ,Dụng cụ,text,10,1,10,工具,manual,existing_key_map,,0,0.0
+không hộp,KHÔNG HỘP,text,10,1,10,无包装,manual,existing_key_map,,0,0.0
+màu sắc ốp,Màu sắc Ốp,text,10,3,10,壳色,manual,existing_key_map,,0,0.0
+mẫu custom,Mẫu Custom,text,10,1,8,,pending_review,pending,,0,0.0
+mẫu sản phẩm,Mẫu sản phẩm,text,10,1,10,款式,manual,existing_key_map,产品型号,33,0.55
+tống trà,Tống trà,text,10,1,10,,pending_review,pending,,0,0.0
+bản đồ nẹp gỗ composit,Bản đồ Nẹp gỗ composit,text,9,1,9,地图版本,manual,existing_key_map,,0,0.0
+bộ chuyển động,Bộ chuyển động,text,9,9,9,变速套件,manual,existing_key_map,,0,0.0
+chọn loại máy,Chọn loại máy,text,9,3,7,机型,manual,existing_key_map,,0,0.0
+chọn switch,Chọn switch,text,9,5,9,轴体,manual,existing_key_map,,0,0.0
+chọn tinh dầu,Chọn Tinh Dầu,text,9,1,9,精油香型,manual,existing_key_map,,0,0.0
+chủ đề,Chủ Đề,text,9,1,9,主题,manual,existing_key_map,造型主题,3,0.6
+cờ vua,CỜ VUA,text,9,2,9,国际象棋,manual,existing_key_map,,0,0.0
+loại airpod,Loại Airpod,text,9,3,9,耳机型号,manual,existing_key_map,,0,0.0
+màu viền,Màu viền,text,9,5,9,边框颜色,manual,existing_key_map,,0,0.0
+nguyên liệu,nguyên liệu,text,9,1,9,原料,manual,existing_key_map,,0,0.0
+đóng gói,Đóng gói,text,9,5,4,包装,auto_1688,alignment_1688,包装,174,0.9831
+đường kính,Đường kính,numeric,9,2,0,直径,manual,existing_key_map,直径,11,1.0
+chọn hãng xe,Chọn hãng xe,text,8,1,8,汽车品牌,manual,existing_key_map,,0,0.0
+chọn loại kính,Chọn loại kính,text,8,5,8,镜片类型,manual,existing_key_map,,0,0.0
+chọn máy,Chọn máy,text,8,1,8,手机型号,manual,existing_key_map,,0,0.0
+chọn nsd,Chọn NSD,text,8,3,8,传动套装,manual,existing_key_map,,0,0.0
+chọn phân loại,Chọn Phân Loại,text,8,4,8,分类,manual,existing_key_map,,0,0.0
+combo 6 hộp canh rong biển asuzac,Combo 6 hộp Canh rong biển Asuzac,text,8,1,8,,pending_review,pending,,0,0.0
+cấu hình 1,Cấu hình 1,text,8,4,8,配置,manual,existing_key_map,,0,0.0
+"giải thưởng, bảng xếp hạng","Giải thưởng, Bảng xếp hạng",text,8,8,8,荣誉认证,manual,existing_key_map,,0,0.0
+khủng long phát sáng,KHỦNG LONG PHÁT SÁNG,text,8,1,8,发光恐龙,manual,existing_key_map,,0,0.0
+kiểu vành,Kiểu Vành,text,8,2,8,轮毂款式,manual,existing_key_map,,0,0.0
+kích xay,Kích xay,text,8,2,8,研磨度,manual,existing_key_map,,0,0.0
+led,Led,text,8,1,8,LED灯色,manual,existing_key_map,led,1,1.0
+loại mặt nạ,Loại mặt nạ,text,8,1,8,面膜分类,manual,existing_key_map,,0,0.0
+loại sên,Loại sên,text,8,4,8,链条规格,manual,existing_key_map,,0,0.0
+màu khung,Màu khung,text,8,3,8,框架颜色,manual,existing_key_map,,0,0.0
+mùa nho,Mùa nho,text,8,8,5,葡萄年份,manual,existing_key_map,,0,0.0
+robot biến hình,ROBOT BIẾN HÌNH,text,8,2,8,变形机器人,manual,existing_key_map,,0,0.0
+robot chiến binh,ROBOT CHIẾN BINH,text,8,1,8,,pending_review,pending,,0,0.0
+size - màu,Size - Màu,text,8,2,8,尺码颜色,manual,existing_key_map,,0,0.0
+số tầng,số tầng,text,8,2,8,层数,auto_1688,alignment_1688,层数,68,1.0
+thể tích,thể tích,numeric,8,4,0,容积,auto_1688,alignment_1688,容积,36,1.0
+tính chất,Tính chất,text,8,8,8,,pending_review,pending,属性,4,1.0
+vùng nho,Vùng nho,text,8,8,8,葡萄产区,manual,existing_key_map,,0,0.0
+youlo,Youlo,text,8,1,8,,pending_review,pending,,0,0.0
+ánh sáng,Ánh sáng,text,8,3,8,光色,manual,existing_key_map,,0,0.0
+điểm chuyên gia,Điểm chuyên gia,text,8,8,7,专家评分,manual,existing_key_map,,0,0.0
+điện thoại,Điện thoại,text,8,2,8,适用机型,manual,existing_key_map,,0,0.0
+đèn,Đèn,text,8,4,8,是否带灯,manual,existing_key_map,,0,0.0
+bàn cờ,Bàn cờ,text,7,2,7,棋盘规格,manual,existing_key_map,,0,0.0
+cao cấp,Cao Cấp,text,7,3,7,,pending_review,pending,,0,0.0
+chọn phiên bản,Chọn Phiên Bản,text,7,2,7,款式,manual,existing_key_map,,0,0.0
+chọn sim,CHỌN SIM,text,7,1,7,SIM套餐,manual,existing_key_map,,0,0.0
+dành cho da,Dành cho da,text,7,4,7,适用肤质,manual,existing_key_map,,0,0.0
+dây dài,Dây dài,text,7,4,7,线长,manual,existing_key_map,,0,0.0
+hình thức,Hình Thức,text,7,2,1,包装形式,manual,existing_key_map,,0,0.0
+kèm arm,KÈM ARM,text,7,1,7,支架型号,manual,existing_key_map,,0,0.0
+kích thước ga,Kích Thước Ga,numeric,7,1,0,床单尺寸,manual,existing_key_map,,0,0.0
+logo hãng xe,Logo hãng xe,text,7,1,7,车标,manual,existing_key_map,,0,0.0
+màu khăn,Màu Khăn,text,7,2,7,毛巾颜色,manual,existing_key_map,,0,0.0
+phân loại màu sắc,Phân loại màu sắc,text,7,1,7,颜色分类,auto_1688,alignment_1688,颜色分类,998,1.0
+"quả cầu giá inox, đế inox vân nu","Quả cầu giá inox, đế inox vân nu",text,7,1,7,,pending_review,pending,,0,0.0
+sản phẩm,Sản phẩm,text,7,3,7,产品规格,manual,existing_key_map,产品,10,1.0
+tốc độ đọc,Tốc độ đọc,text,7,7,6,读取速度,manual,existing_key_map,读取速度,1,1.0
+"địa cầu giá nhựa, đế nhựa","Địa cầu giá nhựa, đế nhựa",text,7,1,7,,pending_review,pending,,0,0.0
+bình,Bình,text,6,2,6,奶瓶规格,manual,existing_key_map,,0,0.0
+bản đồ tờ rời,Bản đồ tờ rời,text,6,1,6,地图版本,manual,existing_key_map,,0,0.0
+bộ combo,Bộ combo,text,6,2,1,套装规格,manual,existing_key_map,,0,0.0
+bộ thẻ,Bộ Thẻ,text,6,1,6,卡片套装,manual,existing_key_map,,0,0.0
+chọn dòng,Chọn dòng,text,6,2,6,手表型号,manual,existing_key_map,,0,0.0
+chọn màu sắc/corlor,Chọn Màu sắc/Corlor,text,6,2,6,颜色,manual,existing_key_map,,0,0.0
+combo 6 hũ,Combo 6 hũ,text,6,1,6,6瓶装组合,manual,existing_key_map,,0,0.0
+cà phê,Cà phê,text,6,3,6,咖啡形态,manual,existing_key_map,,0,0.0
+có tựa cổ,Có tựa cổ,text,6,1,6,带头枕,manual,existing_key_map,,0,0.0
+cổ thường,Cổ thường,text,6,1,6,奶嘴型号,manual,existing_key_map,,0,0.0
+cỡ,Cỡ,text,6,2,2,尺码,manual,existing_key_map,,0,0.0
+dung lượng ổ cứng,Dung lượng ổ cứng,text,6,6,5,硬盘容量,manual,existing_key_map,,0,0.0
+dung tích(l),Dung tích(L),numeric,6,3,0,容量,manual,existing_key_map,,0,0.0
+ghế trẻ em joy,Ghế trẻ em JOY,text,6,1,6,,pending_review,pending,,0,0.0
+hoa tiết,HOA TIẾT,text,6,1,6,图案,manual,existing_key_map,,0,0.0
+hàm lượng,Hàm lượng,numeric,6,6,3,含量,manual,existing_key_map,,0,0.0
+hàng hoá,HÀNG HOÁ,text,6,1,6,商品款式,manual,existing_key_map,,0,0.0
+kiểu dáng ban cờ vua,Kiểu dáng ban cờ vua,text,6,2,6,款式,manual,existing_key_map,,0,0.0
+kích thước và màu sắc,Kích thước và màu sắc,numeric,6,1,6,颜色尺寸,manual,existing_key_map,,0,0.0
+loa ngoài,Loa ngoài,text,6,6,6,外放喇叭,manual,existing_key_map,,0,0.0
+màn hình hiển thị,Màn hình hiển thị,text,6,6,6,显示屏类型,manual,existing_key_map,显示屏,6,1.0
+màu - size,Màu - Size,text,6,1,6,颜色尺码,manual,existing_key_map,,0,0.0
+màu sắc & dung tích,Màu sắc & Dung tích,numeric,6,2,6,颜色容量,manual,existing_key_map,,0,0.0
+mẫu gỗ,Mẫu Gỗ,text,6,1,6,,pending_review,pending,,0,0.0
+mẫu vân đá,Mẫu vân đá,text,6,2,6,石纹款式,manual,existing_key_map,,0,0.0
+ngày sản xuất,Ngày sản xuất,admin,6,6,0,生产日期,auto_1688,alignment_1688,生产日期,1341,1.0
+size núm ty,Size núm ty,text,6,1,6,奶嘴尺码,manual,existing_key_map,,0,0.0
+sữa tắm sos,SỮA TẮM SOS,text,6,1,6,宠物沐浴露功效,manual,existing_key_map,,0,0.0
+tên,Tên,text,6,1,6,名称,auto_1688,alignment_1688,名称,28,1.0
+variation3,Variation3,text,6,1,6,车型适配,manual,existing_key_map,,0,0.0
+600ml,600ml,text,5,1,5,颜色,manual,existing_key_map,,0,0.0
+bg103 60x40cm,BG103 60x40cm,text,5,1,5,颜色,manual,existing_key_map,,0,0.0
+bg106,BG106,text,5,1,5,颜色,manual,existing_key_map,,0,0.0
+bàn làm việc,Bàn làm việc,text,5,1,5,颜色尺寸,manual,existing_key_map,,0,0.0
+bánh tráng,Bánh tráng,text,5,2,3,口味规格,manual,existing_key_map,,0,0.0
+bình silicone cổ rộng,Bình Silicone cổ rộng,text,5,1,5,奶瓶容量,manual,existing_key_map,,0,0.0
+chọn ipad,Chọn iPad,text,5,3,5,,pending_review,pending,,0,0.0
+chọn loại airpods,Chọn loại airpods,text,5,2,5,,pending_review,pending,,0,0.0
+combo 5 gói khăn ướt,Combo 5 gói khăn ướt,text,5,1,5,湿巾套装,manual,existing_key_map,,0,0.0
+các loại xe,các loại xe,text,5,1,5,车型,manual,existing_key_map,,0,0.0
+dòng sản phẩm,Dòng sản phẩm,text,5,4,5,产品系列,manual,existing_key_map,系列,118,0.5198
+dầu xả tóc,Dầu Xả Tóc,text,5,2,5,护发素,manual,existing_key_map,,0,0.0
+hiển thị màu sắc,Hiển thị màu sắc,text,5,5,5,颜色分类,manual,existing_key_map,,0,0.0
+hình dáng,Hình Dáng,text,5,2,5,形状,manual,existing_key_map,,0,0.0
+hình ảnh,Hình ảnh,text,5,1,5,形象,auto_1688,alignment_1688,形象,668,0.9985
+kiểu giao tiếp,Kiểu giao tiếp,text,5,5,5,连接方式,manual,existing_key_map,,0,0.0
+kích thước (rộng x dài),Kích thước (Rộng x Dài),numeric,5,1,0,尺寸,manual,existing_key_map,,0,0.0
+kích thướt,Kích Thướt,text,5,1,0,尺寸,manual,existing_key_map,,0,0.0
+leelong2,LeeLong2,text,5,1,5,研磨度,manual,existing_key_map,,0,0.0
+leelong3,LeeLong3,text,5,1,5,研磨度,manual,existing_key_map,,0,0.0
+leelong4,LeeLong4,text,5,1,5,研磨度,manual,existing_key_map,,0,0.0
+leelong5,LeeLong5,text,5,1,5,研磨度,manual,existing_key_map,,0,0.0
+loại bệ đỡ,loại bệ đỡ,text,5,1,5,底座类型,manual,existing_key_map,,0,0.0
+loại cổng,Loại cổng,text,5,3,5,接口类型,manual,existing_key_map,,0,0.0
+loại kính,LOẠI KÍNH,text,5,2,5,镜片类型,manual,existing_key_map,,0,0.0
+màu 2026,Màu 2026,text,5,2,5,颜色,manual,existing_key_map,,0,0.0
+màu hộp,Màu hộp,text,5,3,5,包装颜色,manual,existing_key_map,,0,0.0
+mã pin,Mã pin,text,5,1,5,电池型号,manual,existing_key_map,,0,0.0
+mô hình hợp kim,Mô Hình Hợp Kim,text,5,2,5,合金车模,manual,existing_key_map,,0,0.0
+mẫu sp,Mẫu SP,text,5,2,5,款式,manual,existing_key_map,,0,0.0
+mặt đế gỗ,Mặt Đế Gỗ,text,5,1,5,,pending_review,pending,,0,0.0
+mức ký/độ chia,Mức ký/Độ chia,text,5,1,0,量程精度,manual,existing_key_map,,0,0.0
+oppo,Oppo,text,5,1,5,适用机型,manual,existing_key_map,,0,0.0
+phân loại combo,Phân loại Combo,text,5,2,5,套餐分类,manual,existing_key_map,,0,0.0
+phân loại mẫu,PHÂN LOẠI MẪU,text,5,2,5,款式分类,manual,existing_key_map,,0,0.0
+robusta,Robusta,text,5,1,5,研磨度,manual,existing_key_map,,0,0.0
+tên hương,Tên hương,text,5,1,5,香型,manual,existing_key_map,,0,0.0
+tốc độ ghi,Tốc độ ghi,text,5,5,4,写入速度,manual,existing_key_map,,0,0.0
+yến chưng isomalt putanest,Yến chưng Isomalt PUTANEST,text,5,1,5,,pending_review,pending,,0,0.0
+đơn vị đo,Đơn vị đo,text,5,3,5,计量单位,manual,existing_key_map,,0,0.0
+3 tầng,3 tầng,text,4,1,4,,pending_review,pending,,0,0.0
+bé tự làm nữ trang,Bé Tự Làm Nữ Trang,text,4,1,4,,pending_review,pending,,0,0.0
+"bản, mã, màu","BẢN, MÃ, MÀU",text,4,1,4,型号颜色,manual,existing_key_map,,0,0.0
+chai,Chai,text,4,2,2,瓶型规格,manual,existing_key_map,,0,0.0
+chuông cửa thông minh,Chuông Cửa Thông Minh,text,4,1,4,智能门铃款式,manual,existing_key_map,,0,0.0
+chỉ số mgo,Chỉ số MGO,text,4,1,4,MGO指数,manual,existing_key_map,,0,0.0
+chọn cỡ,Chọn Cỡ,text,4,1,4,尺寸规格,manual,existing_key_map,,0,0.0
+chọn dung tích,Chọn Dung Tích,numeric,4,1,0,容量,manual,existing_key_map,,0,0.0
+class,Class,text,4,4,0,速度等级,manual,existing_key_map,,0,0.0
+cổ rộng,Cổ rộng,text,4,1,4,领宽,manual,existing_key_map,,0,0.0
+cổng,Cổng,text,4,2,4,接口,manual,existing_key_map,,0,0.0
+dành cho chó,Dành cho chó,text,4,1,4,适用犬重,manual,existing_key_map,,0,0.0
+dây lẻ,dây lẻ,text,4,1,4,,pending_review,pending,,0,0.0
+họa tiêt,HỌA TIÊT,text,4,1,4,图案,manual,existing_key_map,,0,0.0
+kiểu máy,Kiểu máy,text,4,2,4,机型,manual,existing_key_map,,0,0.0
+kệ 3 tầng,Kệ 3 tầng,text,4,1,4,,pending_review,pending,,0,0.0
+loại bơm,Loại bơm,text,4,1,4,泵类型,manual,existing_key_map,,0,0.0
+loại cà phê,Loại cà phê,text,4,2,4,咖啡形态,manual,existing_key_map,,0,0.0
+loại cọc,Loại Cọc,text,4,2,4,,pending_review,pending,,0,0.0
+loại gạo,Loại gạo,text,4,1,4,大米种类,manual,existing_key_map,,0,0.0
+loại hàng,Loại hàng,text,4,2,4,货品等级,manual,existing_key_map,,0,0.0
+loại móc,Loại móc,text,4,1,4,挂钩款式,manual,existing_key_map,,0,0.0
+loại nụ,Loại nụ,text,4,1,4,,pending_review,pending,,0,0.0
+loại rượu vang,Loại rượu vang,text,4,4,4,葡萄酒类型,manual,existing_key_map,,0,0.0
+loại túi,Loại túi,text,4,2,4,袋型,manual,existing_key_map,包型,16,1.0
+lứa tuổi,lứa tuổi,text,4,2,4,适用年龄,manual,existing_key_map,,0,0.0
+mau sắc,MAU SẮC,text,4,1,4,颜色,manual,existing_key_map,,0,0.0
+màu - tone,Màu - Tone,text,4,2,4,色号,manual,existing_key_map,,0,0.0
+màu sắc/ họa tiết,Màu Sắc/ Họa Tiết,text,4,1,4,颜色图案,manual,existing_key_map,,0,0.0
+màu sắt,màu sắt,text,4,1,4,颜色,manual,existing_key_map,,0,0.0
+màu đỏ,Màu đỏ,text,4,1,2,色号,manual,existing_key_map,,0,0.0
+mã sản phẩm,Mã sản phẩm,model,4,2,0,货号,auto_1688,alignment_1688,货号,3211,0.9991
+pate,Pate,text,4,1,4,口味,manual,existing_key_map,,0,0.0
+pg1,PG1,text,4,2,4,款式,manual,existing_key_map,,0,0.0
+phân khúc hàng,phân khúc hàng,text,4,2,4,档次,manual,existing_key_map,,0,0.0
+rang xay,Rang xay,text,4,2,0,规格,manual,existing_key_map,,0,0.0
+tb313,TB313,text,4,1,4,颜色,manual,existing_key_map,,0,0.0
+tb514,TB514,text,4,1,4,颜色,manual,existing_key_map,,0,0.0
+thông số,Thông số,text,4,2,4,规格,manual,existing_key_map,参数,1,1.0
+thùng 5d shb,Thùng 5D SHB,text,4,1,4,箱规,manual,existing_key_map,,0,0.0
+tuýp,Tuýp,text,4,2,4,数量,manual,existing_key_map,,0,0.0
+tần số quét,Tần số quét,numeric,4,4,3,频率,manual,existing_key_map,扫描频率,1,1.0
+vải lụa,Vải lụa,text,4,1,0,尺寸,manual,existing_key_map,,0,0.0
+vật liệu,Vật liệu,text,4,2,4,材质,auto_1688,alignment_1688,材质,2576,1.0
+yến hũ,Yến Hũ,text,4,2,4,包装,manual,existing_key_map,,0,0.0
+độ dài dây,Độ dài dây,text,4,2,0,线长,manual,existing_key_map,,0,0.0
+độ tuổi và màu,Độ Tuổi và Màu,numeric,4,1,4,适用年龄,manual,existing_key_map,,0,0.0
+ấm pha trà,Ấm pha trà,text,4,1,4,,pending_review,pending,,0,0.0
+1 chấu 0.5mm,1 chấu 0.5mm,text,3,1,3,规格,manual,existing_key_map,,0,0.0
+1000l,1000L,text,3,1,3,颜色,manual,existing_key_map,,0,0.0
+biến thể,Biến Thể,text,3,2,3,规格,manual,existing_key_map,,0,0.0
+bánh xe pvc,Bánh Xe PVC,text,3,1,3,PVC轮子,manual,existing_key_map,,0,0.0
+búp bê phụ kiện,BÚP BÊ PHỤ KIỆN,text,3,1,3,娃娃配件,manual,existing_key_map,,0,0.0
+bản cao cấp,Bản Cao Cấp,text,3,1,3,版本,manual,existing_key_map,,0,0.0
+bảng màu,Bảng màu,text,3,1,3,颜色,manual,existing_key_map,,0,0.0
+bộ 6 ly,Bộ 6 ly,text,3,1,3,套装规格,manual,existing_key_map,,0,0.0
+bộ gối,Bộ gối,text,3,1,3,枕头套装,manual,existing_key_map,,0,0.0
+bộ kẻ mày 2 ngăn mira,Bộ kẻ mày 2 ngăn Mira,text,3,1,3,眉笔套装,manual,existing_key_map,,0,0.0
+chiều cao nệm (khác ib báo giá),Chiều cao nệm (Khác IB báo giá),numeric,3,1,3,床垫厚度,manual,existing_key_map,,0,0.0
+chiều dài dây,Chiều dài dây,numeric,3,1,0,线长,manual,existing_key_map,导线长度,18,1.0
+chân cắm,Chân cắm,text,3,1,3,插头类型,manual,existing_key_map,,0,0.0
+chọn loại hàng,Chọn Loại Hàng,text,3,1,3,货源类别,manual,existing_key_map,,0,0.0
+chọn mẫu ppf,CHỌN MẪU PPF,text,3,1,3,PPF贴膜部位,manual,existing_key_map,,0,0.0
+chọn số mét,CHỌN SỐ MÉT,text,3,1,0,长度,manual,existing_key_map,,0,0.0
+chống nước,Chống nước,text,3,3,3,是否防水,manual,existing_key_map,,0,0.0
+cấu hình,Cấu hình,text,3,1,3,配置,manual,existing_key_map,,0,0.0
+cấu hình 1 (series),Cấu hình 1 (Series),text,3,2,3,系列,manual,existing_key_map,,0,0.0
+cấu hình 2 (color),Cấu hình 2 (Color),text,3,1,3,颜色,manual,existing_key_map,,0,0.0
+cổng kết nối,Cổng kết nối,text,3,2,3,接口类型,manual,existing_key_map,,0,0.0
+cỡ xay,Cỡ xay,text,3,1,3,研磨度,manual,existing_key_map,,0,0.0
+cỡ/size,Cỡ/Size,text,3,2,3,尺码,manual,existing_key_map,,0,0.0
+dung dích,dung dích,text,3,1,0,容量,manual,existing_key_map,,0,0.0
+dung tích dưỡng thể,Dung tích Dưỡng thể,numeric,3,3,0,容量,manual,existing_key_map,,0,0.0
+dàixđường kính,dàixđường kính,numeric,3,1,0,尺寸,manual,existing_key_map,,0,0.0
+dĩa,DĨA,text,3,1,3,颜色,manual,existing_key_map,,0,0.0
+dạng gạo,Dạng gạo,text,3,1,3,,pending_review,pending,,0,0.0
+dụng cụ cơ khí,DỤNG CỤ CƠ KHÍ,text,3,1,3,玩具款式,manual,existing_key_map,,0,0.0
+fullsize,Fullsize,text,3,1,3,规格,manual,existing_key_map,,0,0.0
+giao thông đô thị,GIAO THÔNG ĐÔ THỊ,text,3,1,3,款式,manual,existing_key_map,,0,0.0
+góc nhìn,Góc nhìn,text,3,3,3,视角,manual,existing_key_map,,0,0.0
+gói,Gói,text,3,3,2,包装,manual,existing_key_map,包装,15,1.0
+gói dùng,Gói Dùng,text,3,2,3,使用时长,manual,existing_key_map,,0,0.0
+hương mè,Hương mè,text,3,1,3,口味,manual,existing_key_map,,0,0.0
+khả năng cắt,Khả năng cắt,text,3,3,3,裁剪方式,manual,existing_key_map,,0,0.0
+khối lượng tịnh,Khối lượng tịnh,numeric,3,1,2,净重,manual,existing_key_map,,0,0.0
+khủng long lắp ráp,KHỦNG LONG LẮP RÁP,text,3,1,3,款式,manual,existing_key_map,,0,0.0
+kiểu pha,Kiểu Pha,text,3,1,3,冲泡方式,manual,existing_key_map,,0,0.0
+kiểu đóng gói,Kiểu đóng gói,text,3,1,1,包装方式,manual,existing_key_map,,0,0.0
+kèm thẻ nhớ,Kèm Thẻ Nhớ,text,3,1,3,含内存卡,manual,existing_key_map,,0,0.0
+kích cỡ - số lượng,Kích cỡ - số lượng,numeric,3,1,0,尺码数量,manual,existing_key_map,,0,0.0
+kích cỡ quân,Kích cỡ quân,numeric,3,1,3,棋子尺寸,manual,existing_key_map,,0,0.0
+kích thước bàn,Kích Thước Bàn,numeric,3,1,3,桌面尺寸,manual,existing_key_map,,0,0.0
+kích thước dây,Kích thước dây,numeric,3,1,0,线长,manual,existing_key_map,,0,0.0
+kích thước ống,Kích thước ống,numeric,3,1,3,,pending_review,pending,,0,0.0
+loại airpods,Loại Airpods,text,3,1,3,适配型号,manual,existing_key_map,,0,0.0
+loại dây,Loại dây,text,3,3,3,线材类型,manual,existing_key_map,,0,0.0
+loại khăn,Loại khăn,text,3,1,3,毛巾类型,manual,existing_key_map,,0,0.0
+loại kết nối,Loại Kết Nối,text,3,1,3,连接方式,manual,existing_key_map,,0,0.0
+loại sản phẩm,Loại sản phẩm,text,3,3,3,产品类型,auto_1688,alignment_1688,产品类型,223,0.9409
+loại thay thế,Loại thay thế,text,3,1,3,替换装类型,manual,existing_key_map,,0,0.0
+loại đèn,Loại Đèn,text,3,2,3,灯具类型,manual,existing_key_map,,0,0.0
+lót hạt gỗ oto,Lót hạt gỗ oto,text,3,1,3,木质材质,manual,existing_key_map,,0,0.0
+lắp ghép khủng long,LẮP GHÉP KHỦNG LONG,text,3,1,3,恐龙款式,manual,existing_key_map,,0,0.0
+mira,Mira,text,3,1,3,,pending_review,pending,,0,0.0
+muối tôm,muối tôm,text,3,1,1,净含量,manual,existing_key_map,,0,0.0
+màu adapter,MÀU ADAPTER,text,3,1,3,适配器颜色,manual,existing_key_map,,0,0.0
+màu sản phẩm,Màu sản phẩm,text,3,1,3,产品颜色,manual,existing_key_map,,0,0.0
+màu sắc nắp,Màu sắc nắp,text,3,1,3,盖子颜色,manual,existing_key_map,,0,0.0
+màu sắc viền,Màu sắc viền,text,3,1,3,边框颜色,manual,existing_key_map,,0,0.0
+màu sắc đồng hồ,Màu sắc đồng hồ,text,3,1,3,手表颜色,manual,existing_key_map,,0,0.0
+mùi,Mùi,text,3,1,3,香味,manual,existing_key_map,气味,7,1.0
+nắp gỗ,Nắp gỗ,text,3,1,3,木盖定制,manual,existing_key_map,,0,0.0
+ostrovit,Ostrovit,text,3,2,3,规格,manual,existing_key_map,,0,0.0
+phân loai,phân loai,text,3,1,3,分类,manual,existing_key_map,,0,0.0
+phấn nén,Phấn nén,text,3,1,3,色号,manual,existing_key_map,,0,0.0
+rong biển sấy,Rong biển sấy,text,3,1,0,净含量,manual,existing_key_map,,0,0.0
+rơ le + loa ?,Rơ Le + Loa ?,text,3,1,3,配件类型,manual,existing_key_map,,0,0.0
+sunhouse healthy inm7e,Sunhouse Healthy INM7E,text,3,1,3,型号,manual,existing_key_map,,0,0.0
+số cốc,Số cốc,text,3,1,3,杯数,manual,existing_key_map,,0,0.0
+số kg máy,SỐ KG MÁY,text,3,1,0,洗涤容量,manual,existing_key_map,,0,0.0
+số tiền đặt cọc,SỐ TIỀN ĐẶT CỌC,text,3,3,3,定金,manual,existing_key_map,,0,0.0
+số viên,Số Viên,text,3,1,0,片数,manual,existing_key_map,,0,0.0
+sữa hạt,Sữa hạt,text,3,1,2,包装规格,manual,existing_key_map,,0,0.0
+sữa hạt lợi sữa best mum,Sữa hạt lợi sữa Best Mum,text,3,1,2,包装规格,manual,existing_key_map,,0,0.0
+thuy tinh,Thuy tinh,text,3,1,3,玻璃造型,manual,existing_key_map,,0,0.0
+tiêu chuẩn,Tiêu chuẩn,admin,3,2,0,颜色,manual,existing_key_map,,0,0.0
+tiết diện cáp,Tiết diện cáp,text,3,1,0,线径,manual,existing_key_map,,0,0.0
+tã quần,TÃ QUẦN,text,3,1,0,尺码,manual,existing_key_map,,0,0.0
+tổng công suất,Tổng công suất,numeric,3,3,0,总功率,manual,existing_key_map,,0,0.0
+vui lòng chọn,VUI LÒNG CHỌN,text,3,2,3,款式,manual,existing_key_map,,0,0.0
+vòng bụng (dành cho tã),Vòng bụng (Dành cho tã),text,3,3,0,腰围,manual,existing_key_map,,0,0.0
+điều kiện sử dụng,Điều kiện sử dụng,text,3,3,3,使用说明,manual,existing_key_map,,0,0.0
+đáy,Đáy,text,3,1,3,底部,manual,existing_key_map,,0,0.0
+địa chỉ sử dụng,Địa chỉ sử dụng,admin,3,3,0,适用门店,manual,existing_key_map,,0,0.0
+độ sáng,Độ sáng,text,3,3,3,亮度,manual,existing_key_map,,0,0.0
+độ tương phản,Độ tương phản,text,3,3,3,对比度,manual,existing_key_map,,0,0.0
+1 lon,1 lon,text,2,1,0,,pending_review,pending,,0,0.0
+1 vỉ,1 vỉ,text,2,1,2,,pending_review,pending,,0,0.0
+2 đến 4 lon,2 đến 4 lon,text,2,1,0,,pending_review,pending,,0,0.0
+40gr,40gr,text,2,1,0,净含量,manual,existing_key_map,,0,0.0
+6384nr,6384NR,text,2,1,2,,pending_review,pending,,0,0.0
+675ml,675ml,text,2,1,2,容量,manual,existing_key_map,,0,0.0
+bao bì,Bao Bì,text,2,1,2,包装,auto_1688,alignment_1688,包装,82,1.0
+bimbim bắp,bimbim bắp,text,2,1,1,玉米脆片,manual,existing_key_map,,0,0.0
+box,Box,text,2,1,2,,pending_review,pending,box,1,1.0
+brand,Brand,text,2,1,2,品牌,manual,existing_key_map,,0,0.0
+bàn 1m8,Bàn 1m8,text,2,1,2,,pending_review,pending,,0,0.0
+bánh ăn dặm cho bé,Bánh ăn dặm cho bé,text,2,2,2,辅食饼干,manual,existing_key_map,,0,0.0
+bên tay,Bên tay,text,2,1,2,左右手,manual,existing_key_map,,0,0.0
+bình trữ sữa,Bình trữ sữa,text,2,1,0,储奶瓶,manual,existing_key_map,,0,0.0
+búa dừa,Búa dừa,text,2,1,2,椰壳锤,manual,existing_key_map,,0,0.0
+bơm điện,Bơm điện,text,2,1,2,电动泵,manual,existing_key_map,,0,0.0
+bộ cờ lê,Bộ cờ lê,text,2,1,2,扳手套装,manual,existing_key_map,,0,0.0
+bộ máy 2 pin,BỘ MÁY 2 PIN,text,2,1,2,电池数量,manual,existing_key_map,,0,0.0
+bộ nhớ,Bộ nhớ,text,2,2,1,内存容量,manual,existing_key_map,,0,0.0
+bộ quà tặng,bộ quà tặng,text,2,1,2,礼盒装,manual,existing_key_map,,0,0.0
+bột,bột,text,2,1,2,包装规格,manual,existing_key_map,,0,0.0
+bột cacao,bột cacao,text,2,1,1,包装规格,manual,existing_key_map,,0,0.0
+chiều cao,Chiều cao,numeric,2,1,0,高度,manual,existing_key_map,高度,4,1.0
+chiều dài tay cầm,Chiều dài tay cầm,numeric,2,1,0,手柄长度,manual,existing_key_map,,0,0.0
+chiều rộng,Chiều Rộng,numeric,2,1,0,宽度,manual,existing_key_map,宽度,3,1.0
+chuối sấy,chuối sấy,text,2,1,1,香蕉干,manual,existing_key_map,,0,0.0
+chì che khuyết điểm,Chì che khuyết điểm,text,2,1,2,遮瑕笔,manual,existing_key_map,,0,0.0
+chọn combo,Chọn Combo,text,2,1,2,套餐选择,manual,existing_key_map,,0,0.0
+chọn kiểu ốp,Chọn kiểu ốp,text,2,1,2,手机壳款式,manual,existing_key_map,,0,0.0
+chọn kích thước,CHỌN KÍCH THƯỚC,numeric,2,1,2,尺寸选择,manual,existing_key_map,,0,0.0
+chọn nước hoa,Chọn Nước Hoa,text,2,1,2,香型选择,manual,existing_key_map,,0,0.0
+chọn phân loại hàng,Chọn phân loại hàng,text,2,1,2,,pending_review,pending,,0,0.0
+chọn size nồi,CHỌN SIZE NỒI,text,2,1,0,锅具尺寸,manual,existing_key_map,,0,0.0
+chống ồn,Chống ồn,text,2,1,2,降噪功能,manual,existing_key_map,,0,0.0
+color_family,color_family,text,2,1,2,颜色,manual,existing_key_map,,0,0.0
+colour,Colour,text,2,1,2,颜色,manual,existing_key_map,,0,0.0
+các loại,CÁC LOẠI,text,2,1,2,种类,manual,existing_key_map,,0,0.0
+cách lắp,Cách lắp,text,2,1,2,安装方式,manual,existing_key_map,,0,0.0
+cân nặng,cân nặng,text,2,1,0,重量,auto_1688,alignment_1688,重量,217,1.0
+có sim hay ko sim,Có SIM hay Ko SIM,text,2,1,2,是否带卡,manual,existing_key_map,,0,0.0
+cờ tướng,CỜ TƯỚNG,text,2,1,2,中国象棋,manual,existing_key_map,,0,0.0
+cỡ (size),Cỡ (Size),text,2,1,2,尺码,manual,existing_key_map,,0,0.0
+date,Date,text,2,2,2,生产日期,manual,existing_key_map,,0,0.0
+ds,DS,text,2,1,2,,pending_review,pending,,0,0.0
+dáng chai,Dáng chai,text,2,1,2,瓶型,manual,existing_key_map,,0,0.0
+dòng kính,Dòng kính,text,2,1,2,镜片系列,manual,existing_key_map,,0,0.0
+gioi tính,Gioi tính,text,2,1,2,适用性别,manual,existing_key_map,,0,0.0
+gạo,Gạo,text,2,1,0,大米,manual,existing_key_map,,0,0.0
+hướng dẫn cách chơi,Hướng dẫn cách chơi,text,2,2,2,玩法说明,manual,existing_key_map,,0,0.0
+hạnh nhân thái lát,hạnh nhân thái lát,text,2,1,0,杏仁片,manual,existing_key_map,,0,0.0
+hạt gỗ màu,hạt gỗ màu,text,2,1,2,木珠颜色,manual,existing_key_map,,0,0.0
+hạt lựu khô,Hạt lựu khô,text,2,1,0,石榴籽干,manual,existing_key_map,,0,0.0
+inox 304,INOX 304,text,2,1,2,材质,manual,existing_key_map,,0,0.0
+ipad,ipad,text,2,2,2,iPad型号,manual,existing_key_map,,0,0.0
+kg10090-3,KG10090-3,text,2,1,2,型号,manual,existing_key_map,,0,0.0
+kg8090-3,KG8090-3,text,2,1,2,型号,manual,existing_key_map,,0,0.0
+khu vực,Khu vực,text,2,1,2,销售区域,manual,existing_key_map,区域,6,0.8571
+khóa nền,Khóa nền,text,2,1,2,妆效,manual,existing_key_map,,0,0.0
+khô gà lá chanh,Khô gà lá chanh,text,2,1,2,柠檬叶鸡肉干,manual,existing_key_map,,0,0.0
+khăn gừng nghệ,Khăn gừng nghệ,text,2,1,2,姜黄湿巾,manual,existing_key_map,,0,0.0
+kiểu,KIỂU,text,2,2,2,类型,auto_1688,alignment_1688,类型,126,1.0
+kiểu bánh xe,Kiểu Bánh Xe,text,2,1,2,轮子款式,manual,existing_key_map,,0,0.0
+kiểu móc,Kiểu móc,text,2,1,2,挂钩款式,manual,existing_key_map,,0,0.0
+kích cỡ pin,Kích Cỡ Pin,numeric,2,1,2,,pending_review,pending,,0,0.0
+kích thuoc,kích thuoc,text,2,1,0,尺寸,manual,existing_key_map,,0,0.0
+kích thước bàn cờ gỗ,Kích thước bàn cờ gỗ,numeric,2,1,2,棋盘尺寸,manual,existing_key_map,,0,0.0
+kích thước cỡ,Kích thước cỡ,numeric,2,1,2,棋子尺寸,manual,existing_key_map,,0,0.0
+kích thước gói,Kích thước gói,numeric,2,1,0,包大小,auto_1688,alignment_1688,包大小,31,1.0
+kích thước màn hình,Kích thước màn hình,numeric,2,2,0,屏幕尺寸,auto_1688,alignment_1688,屏幕尺寸,454,1.0
+kính bảo hộ,Kính bảo hộ,text,2,1,2,防护眼镜,manual,existing_key_map,,0,0.0
+kỷ tử,kỷ tử,text,2,1,0,枸杞,manual,existing_key_map,,0,0.0
+logo cánh chim,LOGO CÁNH CHIM,text,2,1,2,飞翼车标,manual,existing_key_map,,0,0.0
+loại 300kg,Loại 300kg,text,2,1,2,承重规格,manual,existing_key_map,,0,0.0
+loại bàn phím,Loại bàn phím,text,2,1,2,键盘类型,manual,existing_key_map,,0,0.0
+loại bóng đèn,Loại bóng đèn,text,2,2,2,光源类型,manual,existing_key_map,,0,0.0
+loại ca,Loại ca,text,2,1,2,杯盖款式,manual,existing_key_map,,0,0.0
+loại cốc,Loại cốc,text,2,1,2,杯盖款式,manual,existing_key_map,,0,0.0
+loại dao,LOẠI DAO,text,2,1,2,刀具类型,manual,existing_key_map,刀具类型,1,1.0
+loại led,Loại LED,text,2,1,2,LED型号,manual,existing_key_map,,0,0.0
+loại máy,loại máy,text,2,2,2,机型,manual,existing_key_map,,0,0.0
+loại nhựa,Loại nhựa,text,2,1,2,塑料材质,manual,existing_key_map,,0,0.0
+loại áo mưa,Loại áo mưa,text,2,2,2,雨衣类型,manual,existing_key_map,,0,0.0
+loại ốp,Loại ốp,text,2,1,2,手机壳类型,manual,existing_key_map,,0,0.0
+lọ 2ml,Lọ 2ml,text,2,1,2,2ml瓶型,manual,existing_key_map,,0,0.0
+lời dạy bất hủ khổng tử -tranh in dầu cao cấp,LỜI DẠY BẤT HỦ KHỔNG TỬ -TRANH IN DẦU CAO CẤP,text,2,1,2,,pending_review,pending,,0,0.0
+ml,Ml,text,2,1,0,容量,manual,existing_key_map,,0,0.0
+muối hồng,muối hồng,text,2,1,0,玫瑰盐,manual,existing_key_map,,0,0.0
+muối hồng dạng hạt,muối hồng dạng hạt,text,2,1,0,粉盐颗粒,manual,existing_key_map,,0,0.0
+màu que mây,Màu que mây,text,2,1,2,棉签颜色,manual,existing_key_map,,0,0.0
+màu sắc cầu,Màu sắc Cầu,text,2,1,2,球体颜色,manual,existing_key_map,,0,0.0
+màu sắc-độ dài,Màu sắc-Độ dài,text,2,1,2,颜色长度,manual,existing_key_map,,0,0.0
+màu2,Màu2,text,2,2,2,颜色2,manual,existing_key_map,,0,0.0
+mèo,Mèo,text,2,1,1,,pending_review,pending,,0,0.0
+mít sấy dẻo,Mít sấy dẻo,text,2,1,0,,pending_review,pending,,0,0.0
+mùa sắc,Mùa sắc,text,2,1,2,颜色,manual,existing_key_map,,0,0.0
+mầu sắc quân cờ,Mầu sắc quân cờ,text,2,1,2,棋子颜色,manual,existing_key_map,,0,0.0
+mẫu kèm,MẪU KÈM,text,2,2,2,附带款式,manual,existing_key_map,,0,0.0
+mặt gương chiếu hậu,Mặt gương chiếu hậu,text,2,1,2,后视镜片,manual,existing_key_map,,0,0.0
+mặt đồng hồ,Mặt đồng hồ,text,2,2,2,表盘形状,manual,existing_key_map,,0,0.0
+mực cán nguyên con,mực cán nguyên con,text,2,1,0,整只鱿鱼干,manual,existing_key_map,,0,0.0
+nhiều màu,Nhiều màu,text,2,2,2,多色,manual,existing_key_map,,0,0.0
+nước khoáng có ga tự nhiên sanpellegrino,Nước khoáng có ga tự nhiên Sanpellegrino,text,2,1,2,,pending_review,pending,,0,0.0
+nẹp mạ cản trước phía dưới,Nẹp mạ cản trước phía dưới,text,2,1,2,前杠下饰条,manual,existing_key_map,,0,0.0
+ostrovit omega,Ostrovit Omega,text,2,1,2,,pending_review,pending,,0,0.0
+phân loại 500g,Phân loại 500g,text,2,1,2,分类,manual,existing_key_map,,0,0.0
+phân loại hud,Phân Loại HUD,text,2,1,2,分类,manual,existing_key_map,,0,0.0
+phân loại.,Phân loại.,text,2,1,2,分类,manual,existing_key_map,,0,0.0
+phía,phía,text,2,1,2,方位,manual,existing_key_map,,0,0.0
+pn 39034 lt,PN 39034 LT,text,2,1,0,,pending_review,pending,,0,0.0
+quy đũa,quy đũa,text,2,1,0,规格,manual,existing_key_map,,0,0.0
+scion made in,Scion Made in,admin,2,2,0,产地,manual,existing_key_map,,0,0.0
+set,Set,text,2,2,2,规格,manual,existing_key_map,,0,0.0
+shidu sd-s358,SHIDU SD-S358,text,2,1,2,连接方式,manual,existing_key_map,,0,0.0
+size dây,Size dây,text,2,1,0,表带宽度,manual,existing_key_map,,0,0.0
+số bóng,Số bóng,text,2,2,2,灯泡数量,manual,existing_key_map,,0,0.0
+số lượng mua,Số Lượng Mua :,numeric,2,1,2,购买数量,manual,existing_key_map,,0,0.0
+số lượng nến,Số lượng nến,numeric,2,1,0,蜡烛数量,manual,existing_key_map,,0,0.0
+sốt maiyonnaise,sốt maiyonnaise,text,2,1,0,净含量,manual,existing_key_map,,0,0.0
+thẻ cào,Thẻ cào,text,2,1,2,充值卡,manual,existing_key_map,,0,0.0
+thể thao,Thể Thao,text,2,1,2,适用运动,manual,existing_key_map,,0,0.0
+thời hạn,Thời hạn,text,2,1,2,有效期,manual,existing_key_map,,0,0.0
+tiêu đề,Tiêu đề,text,2,1,2,标题,manual,existing_key_map,标题,1,1.0
+tone màu,Tone màu,text,2,1,2,色调,manual,existing_key_map,,0,0.0
+trở kháng,TRỞ KHÁNG,text,2,1,2,阻抗,manual,existing_key_map,阻抗,3,1.0
+tuỳ chọn,Tuỳ chọn,text,2,1,2,规格,manual,existing_key_map,,0,0.0
+tên màu,Tên màu,text,2,1,2,颜色名称,manual,existing_key_map,,0,0.0
+tên phân loại,Tên Phân Loại,text,2,1,2,分类名称,manual,existing_key_map,,0,0.0
+túi thơm cà phê,Túi thơm cà phê,text,2,1,2,咖啡香包,manual,existing_key_map,,0,0.0
+tỉ lệ màn hình,Tỉ lệ màn hình,text,2,2,2,屏幕比例,manual,existing_key_map,,0,0.0
+vietmap live pro,Vietmap Live Pro,text,2,1,2,质保期,manual,existing_key_map,,0,0.0
+vị trí,Vị trí,text,2,1,2,安装位置,manual,existing_key_map,,0,0.0
+xe vận chuyển,XE VẬN CHUYỂN,text,2,1,2,运输工具,manual,existing_key_map,,0,0.0
+xiaomi,XIAOMI,text,2,1,2,型号,manual,existing_key_map,,0,0.0
+xịt- 227g/chai,Xịt- 227g/chai,text,2,1,2,规格,manual,existing_key_map,,0,0.0
+xửng hấp,XỬNG HẤP,text,2,1,2,蒸笼层数,manual,existing_key_map,,0,0.0
+áp lực,Áp lực,text,2,1,2,压力值,manual,existing_key_map,,0,0.0
+đồ chơi bác sĩ,ĐỒ CHƠI BÁC SĨ,text,2,1,2,玩具类型,manual,existing_key_map,,0,0.0
+ốp gương chiếu hậu,Ốp gương chiếu hậu,text,2,1,2,后视镜壳,manual,existing_key_map,,0,0.0
+1,1,text,1,1,0,1,auto_1688,alignment_1688,1,166,1.0
+1 bộ,1 bộ,text,1,1,0,套装规格,manual,existing_key_map,,0,0.0
+1 gói,1 gói,text,1,1,0,包装规格,manual,existing_key_map,,0,0.0
+1 túi,1 túi,text,1,1,0,包装规格,manual,existing_key_map,,0,0.0
+10 miếng,10 miếng,text,1,1,1,片数,manual,existing_key_map,,0,0.0
+625ml,625ml,text,1,1,1,净含量,manual,existing_key_map,,0,0.0
+6384ng,6384NG,text,1,1,1,,pending_review,pending,,0,0.0
+bột yến mạch,Bột Yến mạch,text,1,1,0,燕麦粉,manual,existing_key_map,,0,0.0
+camera,Camera,text,1,1,1,摄像头,manual,existing_key_map,,0,0.0
+cana,Cana,text,1,1,1,,pending_review,pending,,0,0.0
+chip set,Chip set,text,1,1,1,芯片型号,manual,existing_key_map,,0,0.0
+chip star,Chip Star,text,1,1,1,口味,manual,existing_key_map,,0,0.0
+chất liệu dây,Chất liệu dây,text,1,1,1,线材材质,manual,existing_key_map,,0,0.0
+chất liệu quân cờ,Chất Liệu Quân Cờ,text,1,1,1,棋子材质,manual,existing_key_map,,0,0.0
+chất lượng loại,Chất lượng loại,text,1,1,0,品质等级,manual,existing_key_map,,0,0.0
+chỉ số chống nắng,Chỉ số chống nắng,text,1,1,0,防晒指数,manual,existing_key_map,防晒指数,11,1.0
+chọn loại kg,Chọn Loại KG,text,1,1,1,重量规格,manual,existing_key_map,,0,0.0
+chọn loại sim,CHỌN LOẠI SIM:,text,1,1,1,SIM卡类型,manual,existing_key_map,,0,0.0
+chọn màu que,Chọn màu que,text,1,1,1,颜色,manual,existing_key_map,,0,0.0
+chọn sản phẩm,Chọn Sản Phẩm,text,1,1,0,产品型号,manual,existing_key_map,,0,0.0
+chọn đầu cấm,Chọn đầu cấm,text,1,1,1,插头类型,manual,existing_key_map,,0,0.0
+chủng màu,Chủng màu,text,1,1,1,颜色分类,manual,existing_key_map,,0,0.0
+combo kèm cáp,combo kèm cáp,text,1,1,1,含线套餐,manual,existing_key_map,,0,0.0
+combo size,Combo Size,text,1,1,1,尺码组合,manual,existing_key_map,,0,0.0
+công nghệ inverter,Công nghệ inverter,text,1,1,1,变频技术,manual,existing_key_map,,0,0.0
+công suất sạc,Công suất sạc,numeric,1,1,0,充电功率,auto_1688,alignment_1688,充电功率,49,1.0
+cờ vây nam châm,Cờ Vây Nam Châm,text,1,1,1,磁性围棋,manual,existing_key_map,,0,0.0
+detox,Detox,text,1,1,1,排毒,manual,existing_key_map,,0,0.0
+diện tích sử dụng,Diện tích sử dụng,numeric,1,1,0,使用面积,manual,existing_key_map,,0,0.0
+dung tích/ trọng lượng,Dung tích/ Trọng lượng,numeric,1,1,0,容量重量,manual,existing_key_map,,0,0.0
+dàn gỗ,dàn gỗ,text,1,1,1,,pending_review,pending,,0,0.0
+dòng máy tương thích,Dòng máy tương thích,text,1,1,1,适用机型,manual,existing_key_map,,0,0.0
+eco in20-24-26m5,ECO IN20-24-26M5,text,1,1,1,型号,manual,existing_key_map,,0,0.0
+firo a16,FIRO A16,text,1,1,1,,pending_review,pending,,0,0.0
+hình dạng,Hình dạng,text,1,1,1,形状,auto_1688,alignment_1688,形状,887,0.6474
+hạt cám,Hạt cám,text,1,1,1,颗粒类型,manual,existing_key_map,,0,0.0
+hệ thống loa,Hệ thống loa,text,1,1,1,扬声器系统,manual,existing_key_map,,0,0.0
+hỗ trợ thẻ nhớ ngoài,Hỗ trợ thẻ nhớ ngoài,text,1,1,1,,pending_review,pending,,0,0.0
+hộp 06 chai,Hộp 06 CHAI,text,1,1,1,箱装数量,manual,existing_key_map,,0,0.0
+hộp thủy tinh,Hộp thủy tinh,text,1,1,1,,pending_review,pending,,0,0.0
+khay nướng,khay nướng,text,1,1,1,烤盘,manual,existing_key_map,,0,0.0
+kich co,kich co,text,1,1,1,尺寸,manual,existing_key_map,,0,0.0
+kiểu máy hút bụi,Kiểu máy hút bụi,text,1,1,1,吸尘器类型,manual,existing_key_map,,0,0.0
+kiểu đeo,Kiểu Đeo,text,1,1,1,佩戴方式,manual,existing_key_map,,0,0.0
+kích cỡ size,Kích cỡ size,numeric,1,1,0,尺码,manual,existing_key_map,,0,0.0
+kích cỡ và số miếng,Kích cỡ và Số Miếng,numeric,1,1,0,规格片数,manual,existing_key_map,,0,0.0
+loại công tắc,Loại công tắc,text,1,1,1,开关类型,manual,existing_key_map,,0,0.0
+loại cường lực,Loại cường lực,text,1,1,1,钢化膜类型,manual,existing_key_map,,0,0.0
+loại ghế,Loại Ghế,text,1,1,1,椅子类型,manual,existing_key_map,,0,0.0
+loại khay,Loại khay,text,1,1,1,托盘类型,manual,existing_key_map,,0,0.0
+loại thẻ dán,Loại thẻ dán,text,1,1,1,贴纸类型,manual,existing_key_map,,0,0.0
+lót bệ bồn cầu kiểu ếch có tay vịn cho bé yêu,Lót bệ bồn cầu kiểu ếch có tay vịn cho bé yêu,text,1,1,1,颜色,manual,existing_key_map,,0,0.0
+lưu lượng không khí,Lưu lượng không khí,text,1,1,1,风量,manual,existing_key_map,,0,0.0
+lưu lượng nước,Lưu lượng nước,text,1,1,1,水流量,manual,existing_key_map,,0,0.0
+maaux,Maaux,text,1,1,1,,pending_review,pending,,0,0.0
+màu ngẫu nhiên,Màu ngẫu nhiên,text,1,1,1,颜色随机,manual,existing_key_map,,0,0.0
+màu sáng đèn,Màu sáng đèn,text,1,1,1,灯光颜色,manual,existing_key_map,,0,0.0
+màu săc,Màu săc,text,1,1,1,颜色,manual,existing_key_map,,0,0.0
+màu sắc (color),Màu sắc (Color),text,1,1,1,颜色,manual,existing_key_map,,0,0.0
+màu xe,Màu Xe,text,1,1,1,车身颜色,manual,existing_key_map,,0,0.0
+mét,Mét,text,1,1,0,尺寸,manual,existing_key_map,,0,0.0
+mô hình,Mô hình,text,1,1,1,型号,auto_1688,alignment_1688,型号,323,0.6991
+mẫu hình,Mẫu hình,text,1,1,1,图案,manual,existing_key_map,,0,0.0
+mẫu số,Mẫu số,text,1,1,0,型号,manual,existing_key_map,,0,0.0
+mẫu ốp,Mẫu ốp,text,1,1,1,手机壳款式,manual,existing_key_map,,0,0.0
+options,Options,text,1,1,1,,pending_review,pending,,0,0.0
+phiên bản màu sắc,Phiên Bản Màu Sắc,text,1,1,1,颜色版本,manual,existing_key_map,,0,0.0
+phạm vi đo,Phạm vi đo,text,1,1,1,测量范围,manual,existing_key_map,测量范围,1,1.0
+ram,RAM,text,1,1,1,运行内存,manual,existing_key_map,,0,0.0
+trắng tinh khiết,Trắng Tinh Khiết,text,1,1,1,,pending_review,pending,,0,0.0
+tuổi,Tuổi,text,1,1,1,适用年龄,manual,existing_key_map,年龄,2,1.0
+tốc độ quạt,Tốc độ quạt,text,1,1,1,风扇转速,manual,existing_key_map,,0,0.0
+tỷ số nén nhiễu,Tỷ số nén nhiễu,text,1,1,1,信噪比,manual,existing_key_map,,0,0.0
+variations,Variations,text,1,1,1,规格,manual,existing_key_map,,0,0.0
+áp lực làm việc,Áp lực làm việc,text,1,1,1,工作压力,manual,existing_key_map,,0,0.0
+áp lực tối đa,Áp lực tối đa,text,1,1,1,最大压力,manual,existing_key_map,,0,0.0
+đặc biệt,Đặc Biệt,text,1,1,1,特色,manual,existing_key_map,,0,0.0
+độ ồn,Độ ồn,text,1,1,1,噪音,manual,existing_key_map,,0,0.0

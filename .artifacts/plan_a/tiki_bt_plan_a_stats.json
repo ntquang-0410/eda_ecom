@@ -1,0 +1,49 @@
+{
+  "plan": "A",
+  "version": "plan_a_v1",
+  "n_units": 120884,
+  "n_bt_ready": 120884,
+  "n_merge_ready": 120703,
+  "n_train_pair_eligible": 45514,
+  "n_title_units": 13200,
+  "n_attribute_units": 107684,
+  "route_counts": {
+    "dictionary": 61805,
+    "mt": 45709,
+    "rule": 11081,
+    "preserve": 2289
+  },
+  "bt_status_counts": {
+    "queued": 120884
+  },
+  "key_map_status_counts": {
+    "manual": 74020,
+    "auto_1688": 33483,
+    "pending_review": 13381
+  },
+  "merge_block_reason_counts": {
+    "": 120703,
+    "key_unmapped": 181
+  },
+  "n_cache_keys": 40646,
+  "cache_reduction": 0.6638,
+  "n_product_ready_for_bt": 13140,
+  "n_product_blocked_key_map": 60,
+  "n_product_blocked_source": 0,
+  "n_product_merge_eligible": 0,
+  "key_map": {
+    "n_keys": 698,
+    "n_mapped_keys": 649,
+    "n_manual_keys": 600,
+    "n_auto_keys": 49,
+    "n_pending_keys": 49,
+    "n_attribute_units": 107684,
+    "n_mapped_attribute_units": 107503,
+    "attribute_unit_coverage": 0.9983,
+    "n_train_attribute_units": 32509,
+    "n_mapped_train_attribute_units": 32339,
+    "train_attribute_unit_coverage": 0.9948,
+    "min_key_freq": 20,
+    "min_key_share": 0.6
+  }
+}

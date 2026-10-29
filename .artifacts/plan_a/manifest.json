@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-10-26T10:40:37.269367+00:00",
+  "dataset_id": "ntquang0410/tiki-plan-a-bt-input",
+  "files": [
+    {
+      "path": "data/cleaned/tiki_bt_input.parquet",
+      "bytes": 12467506,
+      "sha256": "d21309a7959765ce925943ac666fc3ec347ee583b3aede792b54d54f0c6cd197"
+    },
+    {
+      "path": "data/cleaned/tiki_translation_cache.parquet",
+      "bytes": 4200020,
+      "sha256": "23e908daf08aedcd983bb7b1353cb0ac475263a7b470f46a36c000e0a0f527c9"
+    },
+    {
+      "path": "data/cleaned/tiki_bt_units_plan_a.parquet",
+      "bytes": 12467506,
+      "sha256": "d21309a7959765ce925943ac666fc3ec347ee583b3aede792b54d54f0c6cd197"
+    },
+    {
+      "path": "data/cleaned/tiki_products_bt_state.parquet",
+      "bytes": 982037,
+      "sha256": "e128986916c4e8c2a1efb77d509e45710abab15b342ed6dcea1ace480515910e"
+    },
+    {
+      "path": "data/cleaned/tiki_bt_units_length_v3.parquet",
+      "bytes": 7189054,
+      "sha256": "43c75a9407d864c0eb892f1b1b38f1403d4331221070cc849789afac899bf5fd"
+    },
+    {
+      "path": "data/cleaned/tiki_products.parquet",
+      "bytes": 7241770,
+      "sha256": "0c07f8b45bb1a0e51a1a66c4a6a895fe7563b7b9d686edc8a4e62c558fb39a5a"
+    },
+    {
+      "path": "data/cleaned/tiki_bt_plan_a_stats.json",
+      "bytes": 1167,
+      "sha256": "800eaad9f676ebc5eac75b9649257c879dcacea0e33fd522e50bcea3bb03dae6"
+    },
+    {
+      "path": "csv/tiki/tiki_key_map.csv",
+      "bytes": 60198,
+      "sha256": "7b38c049d96a16423f5ac906242c6f5bcc06b554ada362cfcfebb545d318da7b"
+    },
+    {
+      "path": "csv/tiki/tiki_key_map_review.csv",
+      "bytes": 3821,
+      "sha256": "6c0e08e4ee6c7653b86c2a7596e6e84fc305eb2966555cf42f8311fd2155d442"
+    },
+    {
+      "path": "csv/tiki/tiki_bt_routing_summary.csv",
+      "bytes": 314,
+      "sha256": "f9775e6e6920b25f43a4c89d0c3731c8e482a2bd1468553015afeeea183cbfce"
+    },
+    {
+      "path": "cado_core/__init__.py",
+      "bytes": 1072,
+      "sha256": "1f96ea903ed85e11dfe4049badd8d3961d463ce0b77066270c7414203f71fa7e"
+    },
+    {
+      "path": "cado_core/config.py",
+      "bytes": 8885,
+      "sha256": "aaed544ac94e1402497848c00aaad7515b44b4b22d8ae98576eae0a3e9a747a2"
+    },
+    {
+      "path": "cado_core/text.py",
+      "bytes": 5625,
+      "sha256": "53c372ad54f1bb05d9fb06914c7032742988314c5274f574d1252a0f585f5bdf"
+    },
+    {
+      "path": "cado_core/tiki.py",
+      "bytes": 39991,
+      "sha256": "e3a8a36c3216b14c9d82f5e709cdb1dbd2150195a0244d49394e616aa1ec1697"
+    },
+    {
+      "path": "cado_core/tiki_units.py",
+      "bytes": 35264,
+      "sha256": "d61b06fc02d6889d91a0da1ca9e3f47cc38a48f5feeb1439a93d8db9afbd426a"
+    },
+    {
+      "path": "cado_core/tiki_bt_prepare.py",
+      "bytes": 30959,
+      "sha256": "9290d646de981f55dc7dcd8c54d13339e804d733e78527c962e89fd65498bea6"
+    },
+    {
+      "path": "cado_core/key_map_review.py",
+      "bytes": 21912,
+      "sha256": "6bb8d899aa3f8bd280f8a54a5ec0da91901fa3903b37c692d36802eeab8ee8c4"
+    },
+    {
+      "path": "cado_core/length_prior.py",
+      "bytes": 23549,
+      "sha256": "d84cd5ef22fe467a1dec72d95d370009816c4c2f418f3960ec9ef6404ae6011d"
+    },
+    {
+      "path": "cado_core/length_prior_v2.py",
+      "bytes": 54782,
+      "sha256": "5256a0ca640ea5898615bad50a63c8382f94e2527afb74ef9a4efaeedafb57d3"
+    },
+    {
+      "path": "cado_core/length_prior_v3.py",
+      "bytes": 11030,
+      "sha256": "46db370170fd5ed065dcdd9bd3a4944e878543c2dce7752fc6e035a3e998bbd8"
+    },
+    {
+      "path": "configs/plan_b_models.json",
+      "bytes": 666,
+      "sha256": "efe0244b29a94084ada1cefd6530e943b3793afdec5d73b601ff12f9fdfc15fb"
+    },
+    {
+      "path": "configs/qwen3_0_6b.json",
+      "bytes": 322,
+      "sha256": "35960f7736df84994f9da4e36c665bf0b406e3f2dddcd0876cbdba9c3394ae64"
+    },
+    {
+      "path": "configs/qwen3_1_7b.json",
+      "bytes": 322,
+      "sha256": "74a55e6a029129d55472ac208e996085cc7a5b68cb4dc4a2697e2a2e42aadde6"
+    },
+    {
+      "path": "configs/qwen3_4b.json",
+      "bytes": 317,
+      "sha256": "657b249ffbb3d0f7274267754030adbca2d899433759c74dde9650b273a88e0a"
+    },
+    {
+      "path": "configs/qwen3_8b.json",
+      "bytes": 451,
+      "sha256": "fc2fb53c4f967ba5befe1e6192730c937e7a2edf9a1c074c7e062936b6bb610d"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+# Pipeline Trung–Việt (CADO + Bitext Filter)
+# Cài đặt:
+#   pip install -r requirements.txt
+
+# Xử lý dữ liệu
+pandas>=2.0.0
+numpy>=1.24.0
+pyarrow>=14.0.0
+duckdb>=0.10.0
+
+# Từ điển tiếng Việt cho EDA Tiki (MIT, không cần model)
+pyvi>=0.1.1
+
+# Embedding / model
+sentence-transformers>=2.6.0
+torch>=2.0.0
+
+# Hugging Face Hub & cấu hình
+huggingface_hub>=0.20.0
+python-dotenv>=1.0.0
+
+# (Tuỳ chọn) Nếu muốn dùng sparse/colbert của BAAI ngoài sentence-transformers:
+# FlagEmbedding>=1.2.10

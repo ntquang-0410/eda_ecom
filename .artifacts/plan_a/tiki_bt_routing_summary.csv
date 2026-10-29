@@ -1,0 +1,6 @@
+﻿unit_type,value_class,bt_route,bt_route_fallback,n_units,n_train_pair_eligible,n_merge_ready,n_key_unmapped
+attribute,admin,dictionary,mt,61805,0,61805,0
+attribute,model,preserve,,2289,0,2289,0
+attribute,numeric,rule,,11081,0,11070,11
+attribute,text,mt,,32509,32509,32339,170
+title,text,mt,,13200,13005,13200,0
