@@ -9,7 +9,7 @@ source). Để fine-tune cần pair-level: mỗi unit là một dòng, kèm `pai
 Script recompute `cache_key` cho từng unit MT bằng đúng hàm của Plan A
 (`cado_core.tiki_bt_prepare`), join sang target của từng model, rồi xuất:
 
-  data/cleaned/bt_tiki/tiki_bt_<model>_units.parquet   45.709 dòng
+  data/cleaned/bt_tiki/<model>/units.parquet   45.709 dòng
 
 Kiểm tra: 0 unit không map được, 0 pair_id trùng, đủ 13.200 product.
 """
@@ -81,13 +81,14 @@ def main() -> int:
 
     report = {}
     for model in MODELS:
-        full = pd.read_parquet(bt_root / f"tiki_bt_{model}_full.parquet")
+        full = pd.read_parquet(bt_root / model / "full.parquet")
         payload = full[["cache_key", *TARGET_COLUMNS]].drop_duplicates("cache_key")
         merged = units.merge(payload, on="cache_key", how="left", validate="many_to_one")
 
         missing = int(merged["target_text_bt"].isna().sum() + merged["qc_status"].isna().sum())
         out = merged[base_cols + list(TARGET_COLUMNS)]
-        out_path = bt_root / f"tiki_bt_{model}_units.parquet"
+        (bt_root / model).mkdir(parents=True, exist_ok=True)
+        out_path = bt_root / model / "units.parquet"
         out.to_parquet(out_path, index=False)
 
         report[model] = {

@@ -54,7 +54,7 @@ def audit(args: argparse.Namespace) -> dict:
 
     frames = {}
     for model in MODELS:
-        df = pd.read_parquet(bt_root / f"tiki_bt_{model}_full.parquet")
+        df = pd.read_parquet(bt_root / model / "full.parquet")
         frames[model] = df
         src = df["source_text_bt"].fillna("")
         tgt = df["target_text_bt"].fillna("")

@@ -15,7 +15,7 @@
       "title": 13200
     },
     "usable": 45547,
-    "file": "data/cleaned/bt_tiki/tiki_bt_qwen3-0.6b_units.parquet"
+    "file": "data/cleaned/bt_tiki/qwen3-0.6b/units.parquet"
   },
   "qwen3-1.7b": {
     "units": 45709,
@@ -33,7 +33,7 @@
       "title": 13200
     },
     "usable": 45659,
-    "file": "data/cleaned/bt_tiki/tiki_bt_qwen3-1.7b_units.parquet"
+    "file": "data/cleaned/bt_tiki/qwen3-1.7b/units.parquet"
   },
   "qwen3-4b": {
     "units": 45709,
@@ -51,7 +51,7 @@
       "title": 13200
     },
     "usable": 45698,
-    "file": "data/cleaned/bt_tiki/tiki_bt_qwen3-4b_units.parquet"
+    "file": "data/cleaned/bt_tiki/qwen3-4b/units.parquet"
   },
   "qwen3-8b": {
     "units": 45709,
@@ -69,6 +69,6 @@
       "title": 13200
     },
     "usable": 45699,
-    "file": "data/cleaned/bt_tiki/tiki_bt_qwen3-8b_units.parquet"
+    "file": "data/cleaned/bt_tiki/qwen3-8b/units.parquet"
   }
 }

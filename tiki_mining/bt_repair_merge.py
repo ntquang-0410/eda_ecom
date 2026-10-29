@@ -8,8 +8,8 @@ Với mỗi model:
   - dòng không cần repair   -> qc_status='ok'
 
 Xuất 2 file / model (không ghi đè bất kỳ artifact cũ nào):
-  <out>/tiki_bt_<model>_full.parquet   : đủ 29.446 dòng + audit
-  <out>/tiki_bt_<model>_train.parquet  : chỉ dòng dùng được để fine-tune
+  <out>/<model>/full.parquet   : đủ 29.446 dòng + audit
+  <out>/<model>/train.parquet  : chỉ dòng dùng được để fine-tune
 """
 
 from __future__ import annotations
@@ -152,8 +152,9 @@ def main() -> int:
         full_cols = [c for c in AUDIT_COLUMNS if c in df.columns]
         full_cols += [c for c in df.columns if c not in full_cols]
 
-        full_path = out_dir / f"tiki_bt_{model}_full.parquet"
-        train_path = out_dir / f"tiki_bt_{model}_train.parquet"
+        (out_dir / model).mkdir(parents=True, exist_ok=True)
+        full_path = out_dir / model / "full.parquet"
+        train_path = out_dir / model / "train.parquet"
         df[full_cols].to_parquet(full_path, index=False)
         train[[c for c in full_cols if c in train.columns]].to_parquet(train_path, index=False)
 

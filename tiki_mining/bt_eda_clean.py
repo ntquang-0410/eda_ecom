@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """EDA + lọc heuristic + làm sạch cơ bản cho 4 tập BT Tiki (unit-level).
 
-Input : data/cleaned/bt_tiki/tiki_bt_<model>_units.parquet  (45.709 unit/model)
+Input : data/cleaned/bt_tiki/<model>/units.parquet  (45.709 unit/model)
 Output: data/cleaned/bt_tiki_clean/
           tiki_bt_<model>_clean.parquet   (đã lọc, còn cờ)
           eda_report.json
@@ -92,7 +92,7 @@ def clean_text(text: str) -> str:
 def build_frame(bt_root: Path) -> pd.DataFrame:
     frames = []
     for model in MODELS:
-        df = pd.read_parquet(bt_root / f"tiki_bt_{model}_units.parquet")
+        df = pd.read_parquet(bt_root / model / "units.parquet")
         df["model"] = MODEL_SHORT[model]
         frames.append(df)
     return pd.concat(frames, ignore_index=True)

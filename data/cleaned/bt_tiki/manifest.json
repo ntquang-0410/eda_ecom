@@ -1,0 +1,86 @@
+{
+  "dataset": "tiki-bt",
+  "version": "2026-10-29",
+  "source": {
+    "products": 13200,
+    "units_total": 120884,
+    "units_mt": 45709,
+    "cache_keys_mt": 29446,
+    "split_units": {
+      "train": 36434,
+      "dev": 4824,
+      "test": 4451
+    }
+  },
+  "models": {
+    "qwen3-0.6b": {
+      "full": {
+        "rows": 29446,
+        "bytes": 4964914,
+        "sha256": "655e025844697f0f27de3c53dcb8b6c2ba99df81937888e8edf2fd7823474f01"
+      },
+      "train": {
+        "rows": 29288,
+        "bytes": 4909340,
+        "sha256": "6bbd9232c3de964457b649a126260f4e3722828a08c78b3681bb32bc8abae247"
+      },
+      "units": {
+        "rows": 45709,
+        "bytes": 4728491,
+        "sha256": "f105009736df4a4866cdc5516b62f80a6923ed3109a2147aff86c27a93cfd658"
+      }
+    },
+    "qwen3-1.7b": {
+      "full": {
+        "rows": 29446,
+        "bytes": 5334418,
+        "sha256": "baa3993a22c345e0e59d62e8092e9c36a384a5afd2e7cd3bb1de6631c507589c"
+      },
+      "train": {
+        "rows": 29397,
+        "bytes": 5310703,
+        "sha256": "895c4d1e02e3fe1d7f5c21007df4b657a2c356e9d075a090c8abf98c3fff0c3c"
+      },
+      "units": {
+        "rows": 45709,
+        "bytes": 4917637,
+        "sha256": "461240d84f6998f889b747f714d57643ddba44b68dc0234ee6a4fbfccdd8702e"
+      }
+    },
+    "qwen3-4b": {
+      "full": {
+        "rows": 29446,
+        "bytes": 5280317,
+        "sha256": "418a2dade5d46adb079497f4bbcb4155054d26142dc8e239f12158dfe3334101"
+      },
+      "train": {
+        "rows": 29435,
+        "bytes": 5268528,
+        "sha256": "a331e7b4184c61f591a7bc730c14cae7f961515cdb02d2108e71b328331801cc"
+      },
+      "units": {
+        "rows": 45709,
+        "bytes": 4865086,
+        "sha256": "5861d99b4ea448c7a5f8aee8456faf56b01782727920d5f078fa8ce3fb7e4870"
+      }
+    },
+    "qwen3-8b": {
+      "full": {
+        "rows": 29446,
+        "bytes": 5349867,
+        "sha256": "6c4c67a0b3d33dfebc1a08cf38ab0fb2ebfa071c266ba9be0a6d125a8cba55ed"
+      },
+      "train": {
+        "rows": 29436,
+        "bytes": 5343543,
+        "sha256": "ce8e91dee8c8ea4a6065539bf5aa706afd8e8333776ac445c6a19867a8c876bc"
+      },
+      "units": {
+        "rows": 45709,
+        "bytes": 4903999,
+        "sha256": "c5782dc3683624748031839fd5aba391482a7df356c29ec1762f7249c490c3a4"
+      }
+    }
+  },
+  "generated_at": "2026-10-29T10:12:18Z"
+}

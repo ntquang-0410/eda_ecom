@@ -94,7 +94,7 @@ Mở rộng ra unit (recompute `cache_key` bằng đúng hàm Plan A):
 `tiki_mining/bt_add_units.py` xuất thêm 4 file:
 
 ```text
-tiki_bt_<model>_units.parquet   45.709 dòng
+<model>/units.parquet   45.709 dòng
   cột: pair_id, product_id, split, unit_type, key_vi, key_zh,
        source_text_bt, target_text_bt, model_id, prompt_version,
        json_ok, qc_status, repair_pass, attempt, latency_ms
