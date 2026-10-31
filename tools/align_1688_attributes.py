@@ -67,6 +67,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", default="data/cleaned/1688/bilingual_1688_clean.parquet")
     ap.add_argument("--out", default="data/cleaned/1688")
+    ap.add_argument("--mt-map", default=None,
+                    help="parquet name_vi/name_zh_mt từ kernel Qwen3")
     args = ap.parse_args()
 
     df = pd.read_parquet(args.input)
@@ -109,6 +111,46 @@ def main() -> int:
             name_map[name] = {"zh": best, "votes": count, "candidates": total,
                               "confidence": round(count / max(1, total), 3)}
 
+    # ---------- 1b. bổ sung bằng MT + snap vào từ vựng ZH ----------
+    mt_added = 0
+    if args.mt_map and Path(args.mt_map).exists():
+        mt = pd.read_parquet(args.mt_map)
+        zh_vocab = {}
+        for attrs in zh_df["attributes_zh"]:
+            if attrs is None:
+                continue
+            for a in attrs:
+                key = attr_key(a)
+                if key:
+                    zh_vocab[key] = str(a.get("name") or "").strip()
+
+        def snap(candidate: str) -> str | None:
+            key = norm(candidate)
+            if not key:
+                return None
+            if key in zh_vocab:
+                return key
+            best, best_score = None, 0.0
+            for vocab_key in zh_vocab:
+                if abs(len(vocab_key) - len(key)) > 2:
+                    continue
+                inter = len(set(key) & set(vocab_key))
+                union = len(set(key) | set(vocab_key))
+                score = inter / max(1, union)
+                if score > best_score:
+                    best, best_score = vocab_key, score
+            return best if best_score >= 0.5 else None
+
+        for row in mt.itertuples():
+            name = norm(row.name_vi)
+            if not name or name in name_map:
+                continue
+            target = snap(row.name_zh_mt)
+            if target:
+                name_map[name] = {"zh": target, "votes": 0, "candidates": 0,
+                                  "confidence": 0.5}
+                mt_added += 1
+
     covered = sum(vi_freq[n] for n in name_map if n in vi_freq)
     report = {
         "vi_names": len(vi_freq),
@@ -116,6 +158,7 @@ def main() -> int:
         "vi_attr_occurrences": int(sum(vi_freq.values())),
         "covered_occurrences": int(covered),
         "coverage_pct": round(covered / max(1, sum(vi_freq.values())) * 100, 2),
+        "mt_added": mt_added,
     }
 
     # ---------- 2. align từng sản phẩm ----------
