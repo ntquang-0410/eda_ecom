@@ -1,0 +1,78 @@
+[{"stream_name":"stderr","time":8.126103863,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":8.126139333,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":9.412090453,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.412108793,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.412110493,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.412111543,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.995610033,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.995631403,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.995633113,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.995634123,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":62.401563206,"data":"torch 2.11.0+cu128 | cuda True\n"}
+,{"stream_name":"stdout","time":62.401582146,"data":"gpu NVIDIA RTX PRO 6000 Blackwell Server Edition\n"}
+,{"stream_name":"stdout","time":63.938250398,"data":"INPUT /kaggle/input/datasets/ntquang0410/1688-attr-match-jobs\n"}
+,{"stream_name":"stdout","time":64.67813363,"data":"jobs 13262\n"}
+,{"stream_name":"stdout","time":191.565260196,"data":"loaded | vram 8.1\n"}
+,{"stream_name":"stdout","time":193.039051118,"data":"batch 16 / 13262\n"}
+,{"stream_name":"stdout","time":201.491806631,"data":"batch 336 / 13262\n"}
+,{"stream_name":"stdout","time":209.691361788,"data":"batch 656 / 13262\n"}
+,{"stream_name":"stdout","time":217.701827218,"data":"batch 976 / 13262\n"}
+,{"stream_name":"stdout","time":226.139901904,"data":"batch 1296 / 13262\n"}
+,{"stream_name":"stdout","time":234.501600488,"data":"batch 1616 / 13262\n"}
+,{"stream_name":"stdout","time":243.179689213,"data":"batch 1936 / 13262\n"}
+,{"stream_name":"stdout","time":251.797280836,"data":"batch 2256 / 13262\n"}
+,{"stream_name":"stdout","time":260.344327716,"data":"batch 2576 / 13262\n"}
+,{"stream_name":"stdout","time":268.979449179,"data":"batch 2896 / 13262\n"}
+,{"stream_name":"stdout","time":277.066223416,"data":"batch 3216 / 13262\n"}
+,{"stream_name":"stdout","time":284.859068269,"data":"batch 3536 / 13262\n"}
+,{"stream_name":"stdout","time":292.28572485,"data":"batch 3856 / 13262\n"}
+,{"stream_name":"stdout","time":300.151176811,"data":"batch 4176 / 13262\n"}
+,{"stream_name":"stdout","time":307.859352266,"data":"batch 4496 / 13262\n"}
+,{"stream_name":"stdout","time":318.767373556,"data":"batch 4816 / 13262\n"}
+,{"stream_name":"stdout","time":330.651165298,"data":"batch 5136 / 13262\n"}
+,{"stream_name":"stdout","time":342.655074108,"data":"batch 5456 / 13262\n"}
+,{"stream_name":"stdout","time":351.436190864,"data":"batch 5776 / 13262\n"}
+,{"stream_name":"stdout","time":360.055555914,"data":"batch 6096 / 13262\n"}
+,{"stream_name":"stdout","time":368.698957662,"data":"batch 6416 / 13262\n"}
+,{"stream_name":"stdout","time":377.543685678,"data":"batch 6736 / 13262\n"}
+,{"stream_name":"stdout","time":385.43944388,"data":"batch 7056 / 13262\n"}
+,{"stream_name":"stdout","time":393.034085717,"data":"batch 7376 / 13262\n"}
+,{"stream_name":"stdout","time":401.081963276,"data":"batch 7696 / 13262\n"}
+,{"stream_name":"stdout","time":411.324770453,"data":"batch 8016 / 13262\n"}
+,{"stream_name":"stdout","time":423.338178035,"data":"batch 8336 / 13262\n"}
+,{"stream_name":"stdout","time":435.331521954,"data":"batch 8656 / 13262\n"}
+,{"stream_name":"stdout","time":447.219054418,"data":"batch 8976 / 13262\n"}
+,{"stream_name":"stdout","time":459.244307961,"data":"batch 9296 / 13262\n"}
+,{"stream_name":"stdout","time":468.479590426,"data":"batch 9616 / 13262\n"}
+,{"stream_name":"stdout","time":476.543579474,"data":"batch 9936 / 13262\n"}
+,{"stream_name":"stdout","time":485.122535126,"data":"batch 10256 / 13262\n"}
+,{"stream_name":"stdout","time":493.588544956,"data":"batch 10576 / 13262\n"}
+,{"stream_name":"stdout","time":502.263507388,"data":"batch 10896 / 13262\n"}
+,{"stream_name":"stdout","time":510.94002142,"data":"batch 11216 / 13262\n"}
+,{"stream_name":"stdout","time":519.386029431,"data":"batch 11536 / 13262\n"}
+,{"stream_name":"stdout","time":527.573799186,"data":"batch 11856 / 13262\n"}
+,{"stream_name":"stdout","time":535.88031176,"data":"batch 12176 / 13262\n"}
+,{"stream_name":"stdout","time":544.414529685,"data":"batch 12496 / 13262\n"}
+,{"stream_name":"stdout","time":552.960426291,"data":"batch 12816 / 13262\n"}
+,{"stream_name":"stdout","time":561.644687847,"data":"batch 13136 / 13262\n"}
+,{"stream_name":"stdout","time":565.11878895,"data":"wrote /kaggle/working/match_results.parquet 13262 | NONE 258 (1.9%) | elapsed_min 6.2\n"}
+,{"stream_name":"stdout","time":565.1188018,"data":"   job_id                 name_vi key_zh_chosen                   raw\n"}
+,{"stream_name":"stdout","time":565.11880362,"data":"0       0          Sử dụng vị trí          使用位置    {\"key_zh\": \"使用位置\"}\n"}
+,{"stream_name":"stdout","time":565.11880589,"data":"1       1  Thương hiệu xe áp dụng        适用汽车品牌  {\"key_zh\": \"适用汽车品牌\"}\n"}
+,{"stream_name":"stdout","time":565.11880732,"data":"2       2            Cách sử dụng          使用方式    {\"key_zh\": \"使用方式\"}\n"}
+,{"stream_name":"stdout","time":565.11880856,"data":"3       3  Thương hiệu xe áp dụng        适用汽车品牌  {\"key_zh\": \"适用汽车品牌\"}\n"}
+,{"stream_name":"stdout","time":565.11880969,"data":"4       4    Phương pháp đặt hàng          NONE    {\"key_zh\": \"NONE\"}\n"}
+,{"stream_name":"stdout","time":565.11881089,"data":"5       5                Nước hoa            香味      {\"key_zh\": \"香味\"}\n"}
+,{"stream_name":"stdout","time":565.11881205,"data":"6       6       Xử lý và tùy biến          加工定制    {\"key_zh\": \"加工定制\"}\n"}
+,{"stream_name":"stdout","time":565.11881333,"data":"7       7                    Loại          NONE    {\"key_zh\": \"NONE\"}\n"}
+,{"stream_name":"stdout","time":565.11881438,"data":"8       8           In biểu tượng        加印LOGO  {\"key_zh\": \"加印LOGO\"}\n"}
+,{"stream_name":"stdout","time":565.11881551,"data":"9       9                    kiểu            类型      {\"key_zh\": \"类型\"}\n"}
+,{"stream_name":"stderr","time":569.047489135,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":569.047507835,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":569.185858506,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":569.185870186,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":569.6995104,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":569.73565087,"data":"[NbConvertApp] Writing 24654 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":571.001728898,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":571.26888323,"data":"[NbConvertApp] Writing 313250 bytes to __results__.html\n"}
+]
