@@ -71,9 +71,13 @@
 | Nội dung | File nguồn (xem mục 15) |
 |---|---|
 | Tiêu đề | `title_candidates/{1688,tiki}_title_best_cometkiwi.parquet` (có cả hai bản và điểm Kiwi; điểm Kiwi **không bao giờ** đưa vào lời nhắc; **có trên HF**, mục 15.2) |
-| Bản cụm 1688 | `song_ngu_4/cap_cum_*.parquet` (Nhật Anh gửi riêng, mục 15.3) |
-| Bản cụm Tiki | `song_ngu_3/so_sanh_cum_*.parquet` (lọc theo các cặp đã phát hành trong `cap_cum_*.parquet`; Nhật Anh gửi riêng) |
-| Bản pair 1688 / Tiki | `song_ngu_1` và `song_ngu_2`: `don_vi_da_chon_*.parquet` + `bo_song_ngu_*_day_du_*.parquet` (Nhật Anh gửi riêng) |
+| Bản cụm 1688: **hai ứng viên A/B** của từng cặp | `song_ngu_4/cap_cum_20261026_2123.parquet` (**chỉ có trên máy Nhật Anh**, mục 15.3) |
+| Bản cụm Tiki: **hai ứng viên A/B** của từng cặp | `song_ngu_3/so_sanh_cum_20261024_1616.parquet` (**chỉ có trên máy Nhật Anh**) |
+| Bản cụm Tiki: danh sách cặp đã phát hành + cột nguồn/đích | `song_ngu_3/cap_cum_20261024_1616.parquet` = **bản phát hành trên HF** `tiki_description_pairs_context_vi_zh.parquet` (mục 15.2) |
+| Bản pair 1688 / Tiki: **hai ứng viên A/B** của từng đơn vị | `song_ngu_1/don_vi_da_chon_20261022_2126.parquet` và `song_ngu_2/don_vi_da_chon_20261023_1656.parquet` (**chỉ có trên máy Nhật Anh**) |
+| Bản pair: các cặp (tên, giá trị) của từng sản phẩm | `song_ngu_1/bo_song_ngu_1_day_du_*.parquet` và `song_ngu_2/bo_song_ngu_2_day_du_*.parquet` = **bản phát hành trên HF** `1688_description_pairs_zh_vi.parquet` và `tiki_description_pairs_vi_zh.parquet` (mục 15.2) |
+
+Lưu ý: các bản dịch đã **phát hành trên HF** (thư mục `data/LLM/{1688,tiki}/descriptions/`) chỉ chứa **bản đã chọn** của mỗi cặp, **không** có hai ứng viên A/B. Vì judge cần cả hai ứng viên nên 4 file có A/B ở trên phải do Nhật Anh gửi riêng; các file chỉ cần danh sách cặp và chữ nguồn/đích thì lấy từ HF (đã thử: thay thế cho kết quả **y hệt**, mục 15.2).
 
 **Các bảng mục** (dựng bằng `scripts/judge/so_cap_du_lieu.py`, ghi vào `data/processed/so_cap/`; số dòng và mã băm để đối chiếu ở Phụ lục C):
 
@@ -394,7 +398,15 @@ Dataset `ntquang0410/zh-vie_ecom`. URL tải: `https://huggingface.co/datasets/n
 | `data/LLM/1688/title_translations/best_cometkiwi/1688_zh_to_vi_best_cometkiwi.parquet` | `data/snapshot/title_candidates/1688_title_best_cometkiwi.parquet` (**đổi tên**) | `6b4f504f409ea2b1c6d33ce66d7d5e3b3b5825309e071c3bf8901646b9bca93c` |
 | `data/LLM/tiki/title_translations/best_cometkiwi/tiki_vi_to_zh_best_cometkiwi.parquet` | `data/snapshot/title_candidates/tiki_title_best_cometkiwi.parquet` (**đổi tên**) | `9b5af6aa02649506f2422c04fa83f8de81110e7609f4bad1d02ed08e4bd05b6e` |
 
-**Bắt buộc** cho judge: hai file tiêu đề ở trên (có cả bản Gemma, bản Qwen và điểm CometKiwi của từng sản phẩm; điểm Kiwi **không** đưa vào lời nhắc).
+**Bắt buộc** cho judge: hai file tiêu đề ở trên (có cả bản Gemma, bản Qwen và điểm CometKiwi của từng sản phẩm; điểm Kiwi **không** đưa vào lời nhắc) **và ba file phát hành dưới đây** (thay cho ba file trong `song_ngu_*` nên Nhật Anh không phải gửi).
+
+**Ba file phát hành trên HF dùng thay cho file trong `song_ngu_*`** (nội dung các cột mã dùng đều **giống hệt 100%** từng dòng; build tag `20261022_2126` và `20261024_1616`). Mã đọc chỉ lấy các cột `pair_id, product_id, name_zh, gia_tri_zh, name_vi, gia_tri_vi` nên bản HF (ít cột hơn, không có ứng viên) dùng được. **Đã thử:** dựng lại 5 bảng mục bằng ba file này thì số dòng và mã băm `item_id` **khớp Phụ lục C**, và `ghep_bo.py --kiem-vong` vẫn cho lại đúng bộ official.
+
+| Đường dẫn trên HF | Lưu thành (trong repo, **đúng tên này**) | SHA256 (của file HF) |
+|---|---|---|
+| `data/LLM/1688/descriptions/zh_to_vi/1688_description_pairs_zh_vi.parquet` | `data/processed/song_ngu_1/bo_song_ngu_1_day_du_20261022_2126.parquet` | `e8c5cfed878268e8f63cd8760f2dbd91f4c420f21107b76082d0378a42ffb9ba` |
+| `data/LLM/tiki/descriptions/vi_to_zh/tiki_description_pairs_vi_zh.parquet` | `data/processed/song_ngu_2/bo_song_ngu_2_day_du_20261023_1656.parquet` | `0177e2b233d260dc024e0abe3797e91f11ddab714557368eb46e0a7ee30e78fc` |
+| `data/LLM/tiki/descriptions/vi_to_zh_context/tiki_description_pairs_context_vi_zh.parquet` | `data/processed/song_ngu_3/cap_cum_20261024_1616.parquet` | `b61ea8e42e8fccdb0e4dad492e11439f9aa27e022ca003855399c37eb751bd46` |
 
 Lệnh tải (PowerShell, từ thư mục gốc repo):
 ```
@@ -403,6 +415,13 @@ $hf = "https://huggingface.co/datasets/ntquang0410/zh-vie_ecom/resolve/main"
 Invoke-WebRequest "$hf/data/LLM/1688/title_translations/best_cometkiwi/1688_zh_to_vi_best_cometkiwi.parquet" -OutFile data\snapshot\title_candidates\1688_title_best_cometkiwi.parquet
 Invoke-WebRequest "$hf/data/LLM/tiki/title_translations/best_cometkiwi/tiki_vi_to_zh_best_cometkiwi.parquet" -OutFile data\snapshot\title_candidates\tiki_title_best_cometkiwi.parquet
 Get-FileHash data\snapshot\title_candidates\*.parquet -Algorithm SHA256
+
+# ba file phat hanh thay cho file trong song_ngu_* (luu DUNG ten file ma ma nguon doc)
+foreach ($d in "song_ngu_1","song_ngu_2","song_ngu_3") { New-Item -ItemType Directory -Force "data\processed\$d" | Out-Null }
+Invoke-WebRequest "$hf/data/LLM/1688/descriptions/zh_to_vi/1688_description_pairs_zh_vi.parquet" -OutFile data\processed\song_ngu_1\bo_song_ngu_1_day_du_20261022_2126.parquet
+Invoke-WebRequest "$hf/data/LLM/tiki/descriptions/vi_to_zh/tiki_description_pairs_vi_zh.parquet" -OutFile data\processed\song_ngu_2\bo_song_ngu_2_day_du_20261023_1656.parquet
+Invoke-WebRequest "$hf/data/LLM/tiki/descriptions/vi_to_zh_context/tiki_description_pairs_context_vi_zh.parquet" -OutFile data\processed\song_ngu_3\cap_cum_20261024_1616.parquet
+Get-FileHash data\processed\song_ngu_1\bo_song_ngu_1_day_du_*.parquet, data\processed\song_ngu_2\bo_song_ngu_2_day_du_*.parquet, data\processed\song_ngu_3\cap_cum_*.parquet -Algorithm SHA256
 ```
 (Linux/Mac: dùng `curl -L -o <đích> <url>` và `sha256sum`.)
 
@@ -419,7 +438,7 @@ Get-FileHash data\snapshot\title_candidates\*.parquet -Algorithm SHA256
 Tiêu chí gộp Tiki vào 1688 của Huy nằm trong chính thư mục đó: `data/LLM/bilingual_official/criteria.json`, `README.md`, `selection_report.json`, `manifest.json`, `SHA256SUMS.txt`. **Nên đọc để hiểu bộ official** (judge không thay đổi cấu trúc này).
 
 ### 15.3 Dữ liệu CHỈ nằm trên máy Nhật Anh (không có trên HF): Nhật Anh gửi riêng (Drive/zip), **không** đưa lên HF/GitHub
-Đặt đúng đường dẫn tương đối trong repo. Mã băm ở Phụ lục C.
+Đây là các file **chứa hai ứng viên A/B** (HF không có) và hai file nền đã làm sạch. Đặt đúng đường dẫn tương đối trong repo. Mã băm ở Phụ lục C. Tổng khoảng **83 MB**. (Ba file `bo_song_ngu_1_day_du`, `bo_song_ngu_2_day_du`, `cap_cum_3` **không** cần gửi vì đã có trên HF, mục 15.2.)
 
 | File | MB | Bắt buộc? |
 |---|---|---|
@@ -427,15 +446,12 @@ Tiêu chí gộp Tiki vào 1688 của Huy nằm trong chính thư mục đó: `d
 | `data/processed/ft_clean/ft_buoc4_giu_pair.parquet` (nền bản pair) | 11,9 | Có (hoặc tự dựng, 15.4) |
 | `data/processed/song_ngu_4/cap_cum_20261026_2123.parquet` (cụm 1688: hai ứng viên từng cặp) | 32,9 | Có |
 | `data/processed/song_ngu_3/so_sanh_cum_20261024_1616.parquet` (cụm Tiki: hai ứng viên) | 8,6 | Có |
-| `data/processed/song_ngu_3/cap_cum_20261024_1616.parquet` (cụm Tiki: các cặp đã phát hành) | 2,6 | Có |
 | `data/processed/song_ngu_1/don_vi_da_chon_20261022_2126.parquet` (pair 1688: hai ứng viên từng đơn vị) | 12,5 | Có |
-| `data/processed/song_ngu_1/bo_song_ngu_1_day_du_20261022_2126.parquet` (pair 1688: từng cặp của từng sản phẩm) | 18,1 | Có |
 | `data/processed/song_ngu_2/don_vi_da_chon_20261023_1656.parquet` (pair Tiki) | 3,9 | Có |
-| `data/processed/song_ngu_2/bo_song_ngu_2_day_du_20261023_1656.parquet` (pair Tiki) | 4,5 | Có |
 | `data/processed/so_cap/ket_qua_m2_v2_{title,cum_ctx,pair}_150.jsonl` (3 file, ~0,5 MB; đối chứng cho thí điểm B6) | 0,5 | Nên có |
 | `data/processed/so_cap/ket_qua_m2_v1_*_150.jsonl`, `ket_qua_b_*_150.jsonl`, `so_sanh_quy_tac.json`, `so_sanh_gom.json` | nhỏ | Tùy chọn (tham khảo) |
 
-(Huy có thể **đã có** các file `song_ngu_*` vì cùng nhóm tạo ra; nếu có thì chỉ cần đối chiếu SHA256 ở Phụ lục C. Mã băm **khác** nghĩa là dữ liệu khác bản đã dùng: báo Nhật Anh trước khi chạy.)
+(Huy có thể **đã có** các file `song_ngu_*` (cả loại có ứng viên A/B) vì cùng nhóm tạo ra; nếu có thì chỉ cần đối chiếu SHA256 ở Phụ lục C. Mã băm **khác** nghĩa là dữ liệu khác bản đã dùng: báo Nhật Anh trước khi chạy.)
 
 ### 15.4 Tùy chọn: tự dựng `ft_buoc4_*` từ bộ official trên HF thay vì nhận file
 Có thể dựng lại từ các file official ở 15.2 bằng `scripts/ft_clean/xay_ft_clean.py` rồi `xuat_ban_pair.py` (xem `scripts/ft_clean/README.md`). **Chưa thử trên máy khác**; nếu số dòng khác 25.575 hoặc khác mã băm Phụ lục C thì dùng file Nhật Anh gửi.
@@ -530,6 +546,8 @@ cae8eeff62fb099ba157fd2cc0bf5f51e197f04c993eca677baa9d211331ac5c  data/processed
 779c05183a7f726a399e59a452f024d27228fc2a0c143f43eefbcb247955a73c  data/processed/song_ngu_2/don_vi_da_chon_20261023_1656.parquet
 acef46a9c947013fdd20e04e3e7b5d953673e9696a4b05803c9323642372f534  data/processed/song_ngu_2/bo_song_ngu_2_day_du_20261023_1656.parquet
 ```
+Ghi chú: ba file local `bo_song_ngu_1_day_du_*`, `bo_song_ngu_2_day_du_*`, `cap_cum_20261024_1616` ở danh sách trên có mã băm **khác** bản phát hành trên HF (bản local nhiều cột hơn); nếu dùng bản HF thì đối chiếu mã băm ở mục 15.2 thay cho ba dòng đó.
+
 **Bảng mục dựng lại bằng `so_cap_du_lieu.py`** (số dòng | md5 của `item_id` đã sắp xếp, ghép bằng ký tự xuống dòng `\n`):
 ```
 muc_title        25374 | 7e13d6e619eac883ebe8b53fe9595112
