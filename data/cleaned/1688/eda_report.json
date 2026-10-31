@@ -1,0 +1,45 @@
+{
+  "input_rows": 16346,
+  "dedup": {
+    "duplicate_title_pairs": 213,
+    "after_dedup": 16133
+  },
+  "attributes": {
+    "products": 16133,
+    "names_total": 397407,
+    "values_total": 681235,
+    "names_p50": 22.0,
+    "values_p50": 39.0,
+    "dup_keys_merged": 3748,
+    "vi_values_with_cjk": 5051,
+    "suffix_values": 17893
+  },
+  "flags": {
+    "stored": {
+      "stuffing": 1100,
+      "truncated": 4,
+      "bloated": 8
+    },
+    "recomputed": {
+      "stuffing": 777,
+      "truncated": 620,
+      "bloated": 118
+    },
+    "disagree_stuffing": 711,
+    "disagree_truncated": 624
+  },
+  "descriptions": {
+    "empty_vi": 0,
+    "empty_zh": 0,
+    "duplicate_vi_rows": 18,
+    "duplicate_zh_rows": 79,
+    "length_vi_p50": 1129.0,
+    "length_zh_p50": 420.0
+  },
+  "language": {
+    "title_vi_with_cjk": 0,
+    "title_zh_with_vi": 0
+  },
+  "output_rows": 16133,
+  "keep_for_pairs": 16133
+}
