@@ -47,6 +47,7 @@ ZW = re.compile(r"[\u200b-\u200f\u2028-\u202f\ufeff]")
 CTRL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
 SPACE = re.compile(r"[ \t\u00a0]+")
 SUFFIX = re.compile(r"^(?P<base>.+?)\.\d+$")
+COMMON_SUFFIX = re.compile(r"^(?P<base>không|là|có|khác)[.\s]?\d+$", re.IGNORECASE)
 TOKEN = re.compile(r"[^\s,;&|/]+")
 LATIN_TOKEN = re.compile(r"[A-Za-z][A-Za-z0-9\-+.]{2,}")
 NUM = re.compile(r"\d+")
@@ -98,8 +99,12 @@ def clean_attributes(attrs):
                 continue
             if CJK.search(value):
                 vi_cjk += 1
-            match = SUFFIX.match(value)
-            if match:
+            common = COMMON_SUFFIX.match(value)
+            if common:
+                # "Không.1"/"Là2"/"Có1" là hậu tố đánh số của bước dedup nguồn
+                value = common.group("base").capitalize()
+                suffix += 1
+            elif SUFFIX.match(value):
                 suffix += 1
             values.append(value)
         if not values:

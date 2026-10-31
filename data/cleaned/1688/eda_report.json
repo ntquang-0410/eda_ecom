@@ -7,12 +7,12 @@
   "attributes": {
     "products": 16133,
     "names_total": 397407,
-    "values_total": 681235,
+    "values_total": 681234,
     "names_p50": 22.0,
     "values_p50": 39.0,
     "dup_keys_merged": 3748,
     "vi_values_with_cjk": 5051,
-    "suffix_values": 17893
+    "suffix_values": 53625
   },
   "flags": {
     "stored": {

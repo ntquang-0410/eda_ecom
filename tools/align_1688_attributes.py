@@ -1,26 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Re-align attributes 1688 (VI <-> ZH) trước khi dựng pair table.
+"""Re-align attributes 1688 (VI <-> ZH) — bản 2, dùng anchor + MT + fuzzy.
 
-Vấn đề: `attributes_vi` và `attributes_zh` không cùng thứ tự. Ví dụ cùng một
-sản phẩm:
+Vấn đề: `attributes_vi` và `attributes_zh` không cùng thứ tự (xem
+reports/1688_eda.md). Bản 1 chỉ khớp theo tên chính xác nên phủ 72,9%.
 
-    VI[0] Thương hiệu = "Vũ Cen"   |  ZH[0] 材质 = "皮革"
-    VI[1] Chất liệu   = "Da"       |  ZH[4] 品牌 = "羽岑"   <- đúng là VI[0]
-
-Cách làm:
-  1. Bootstrap map tên VI -> ZH từ chính dữ liệu: hai attribute được coi là cặp
-     nếu cùng số value và tập value trùng >= 60% (brand, model, số, giá trị Hán
-     còn sót...).
-  2. Vote để chọn tên ZH cho mỗi tên VI.
-  3. Align từng sản phẩm theo tên; nếu tên trùng hoặc thiếu, fallback theo
-     value-set.
-  4. Báo cáo độ phủ, xuất `attributes_aligned`.
+Bản 2 thêm fuzzy theo từng sản phẩm:
+  1. Anchor map (học từ value overlap) — ưu tiên, độ chính xác cao.
+  2. MT map (Qwen3-4B dịch tên key) — khớp chính xác.
+  3. Fuzzy: so ký tự giữa tên MT và các tên ZH **còn trống trong chính sản phẩm**
+     (xử lý trường hợp đồng nghĩa: "是否跨境货源" vs "是否跨境出口专供货源").
+  4. Fallback: value-set overlap.
 
 Output:
-  data/cleaned/1688/attributes_aligned.parquet   (product_id, attributes_aligned JSON)
+  data/cleaned/1688/attributes_aligned.parquet
   data/cleaned/1688/attr_align_report.json
-  data/cleaned/1688/attr_name_map.csv
 """
 
 from __future__ import annotations
@@ -33,8 +27,6 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-
-ZW = re.compile(r"[\u200b-\u200f\u2028-\u202f\ufeff]")
 
 
 def as_list(values):
@@ -59,27 +51,32 @@ def attr_values(attr) -> list[str]:
     return [str(v).strip() for v in as_list(attr.get("values") if isinstance(attr, dict) else None)]
 
 
-def value_sets(attrs) -> list[set[str]]:
-    return [set(norm(v) for v in attr_values(a)) for a in attrs]
+def value_set(attr) -> set[str]:
+    return set(norm(v) for v in attr_values(attr))
+
+
+def char_sim(a: str, b: str) -> float:
+    if not a or not b:
+        return 0.0
+    sa, sb = set(a), set(b)
+    return len(sa & sb) / max(1, len(sa | sb))
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", default="data/cleaned/1688/bilingual_1688_clean.parquet")
+    ap.add_argument("--raw", default="data/cleaned/bilingual_zh_vi_bitext_ready.parquet")
     ap.add_argument("--out", default="data/cleaned/1688")
-    ap.add_argument("--mt-map", default=None,
-                    help="parquet name_vi/name_zh_mt từ kernel Qwen3")
+    ap.add_argument("--mt-map", default=".artifacts/attr_names/attr_names_zh.parquet")
     args = ap.parse_args()
 
     df = pd.read_parquet(args.input)
+    raw = pd.read_parquet(args.raw)
+    zh_map = dict(zip(raw["product_id"].astype(str), raw["attributes_zh"]))
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # attributes_vi_clean đã gộp key trùng; ZH đọc từ file gốc đã clean text
-    zh_df = pd.read_parquet("data/cleaned/bilingual_zh_vi_bitext_ready.parquet")
-    zh_map = dict(zip(zh_df["product_id"].astype(str), zh_df["attributes_zh"]))
-
-    # ---------- 1. bootstrap map từ value overlap ----------
+    # ---------- anchor map ----------
     votes: dict[str, Counter] = defaultdict(Counter)
     vi_freq: Counter = Counter()
     for row in df.itertuples():
@@ -87,83 +84,40 @@ def main() -> int:
         zh_attrs = zh_map.get(str(row.product_id))
         if vi_attrs is None or zh_attrs is None:
             continue
-        zsets = value_sets(zh_attrs)
+        zsets = [value_set(a) for a in zh_attrs]
         for attr in vi_attrs:
             name = attr_key(attr)
             if not name:
                 continue
             vi_freq[name] += 1
-            values = set(norm(v) for v in attr_values(attr))
-            if not values:
+            vset = value_set(attr)
+            if not vset:
                 continue
             for index, zset in enumerate(zsets):
-                if len(values) != len(zset):
+                if len(vset) != len(zset):
                     continue
-                overlap = len(values & zset) / len(values)
-                if overlap >= 0.6:
+                if len(vset & zset) / len(vset) >= 0.6:
                     votes[name][attr_key(zh_attrs[index])] += 1
 
-    name_map = {}
+    anchors = {}
     for name, counter in votes.items():
         best, count = counter.most_common(1)[0]
-        total = sum(counter.values())
-        if count >= 1:
-            name_map[name] = {"zh": best, "votes": count, "candidates": total,
-                              "confidence": round(count / max(1, total), 3)}
+        anchors[name] = {"zh": best, "votes": count}
 
-    # ---------- 1b. bổ sung bằng MT + snap vào từ vựng ZH ----------
-    mt_added = 0
-    if args.mt_map and Path(args.mt_map).exists():
+    # ---------- MT map ----------
+    mt_map: dict[str, str] = {}
+    if Path(args.mt_map).exists():
         mt = pd.read_parquet(args.mt_map)
-        zh_vocab = {}
-        for attrs in zh_df["attributes_zh"]:
-            if attrs is None:
-                continue
-            for a in attrs:
-                key = attr_key(a)
-                if key:
-                    zh_vocab[key] = str(a.get("name") or "").strip()
-
-        def snap(candidate: str) -> str | None:
-            key = norm(candidate)
-            if not key:
-                return None
-            if key in zh_vocab:
-                return key
-            best, best_score = None, 0.0
-            for vocab_key in zh_vocab:
-                if abs(len(vocab_key) - len(key)) > 2:
-                    continue
-                inter = len(set(key) & set(vocab_key))
-                union = len(set(key) | set(vocab_key))
-                score = inter / max(1, union)
-                if score > best_score:
-                    best, best_score = vocab_key, score
-            return best if best_score >= 0.5 else None
-
         for row in mt.itertuples():
-            name = norm(row.name_vi)
-            if not name or name in name_map:
-                continue
-            target = snap(row.name_zh_mt)
-            if target:
-                name_map[name] = {"zh": target, "votes": 0, "candidates": 0,
-                                  "confidence": 0.5}
-                mt_added += 1
+            key = norm(row.name_vi)
+            target = norm(row.name_zh_mt)
+            if key and target:
+                mt_map[key] = target
 
-    covered = sum(vi_freq[n] for n in name_map if n in vi_freq)
-    report = {
-        "vi_names": len(vi_freq),
-        "mapped_names": len(name_map),
-        "vi_attr_occurrences": int(sum(vi_freq.values())),
-        "covered_occurrences": int(covered),
-        "coverage_pct": round(covered / max(1, sum(vi_freq.values())) * 100, 2),
-        "mt_added": mt_added,
-    }
-
-    # ---------- 2. align từng sản phẩm ----------
+    # ---------- align ----------
     aligned_rows = []
-    total_attrs = matched_name = matched_value = unmatched = 0
+    stats = Counter()
+    total_attrs = 0
     full_products = 0
 
     for row in df.itertuples():
@@ -174,63 +128,84 @@ def main() -> int:
                                  "n_vi": 0, "n_aligned": 0, "status": "missing"})
             continue
 
-        zsets = value_sets(zh_attrs)
-        zused = set()
+        znames = [attr_key(a) for a in zh_attrs]
+        zsets = [value_set(a) for a in zh_attrs]
+        used: set[int] = set()
         aligned = []
+
         for attr in vi_attrs:
             total_attrs += 1
             name = attr_key(attr)
             values = attr_values(attr)
-            vset = set(norm(v) for v in values)
-            mapped = name_map.get(name, {}).get("zh")
-            candidates = [i for i, za in enumerate(zh_attrs)
-                          if mapped and attr_key(za) == mapped and i not in zused]
-            chosen = None
-            how = None
-            if len(candidates) == 1:
-                chosen = candidates[0]
-                how = "name"
-            elif len(candidates) > 1:
-                same_count = [i for i in candidates if len(zsets[i]) == len(vset)]
-                if len(same_count) == 1:
-                    chosen = same_count[0]
-                    how = "name+count"
-                elif same_count:
-                    best = max(same_count, key=lambda i: len(vset & zsets[i]))
-                    if len(vset & zsets[best]) / max(1, len(vset)) >= 0.5:
-                        chosen = best
-                        how = "name+overlap"
+            vset = value_set(attr)
+            anchor = anchors.get(name)
+            mt_target = mt_map.get(name)
+            desired = anchor["zh"] if anchor else (mt_target or "")
+            chosen, how = None, None
+
+            candidates = [i for i in range(len(zh_attrs)) if i not in used]
+
+            # 1. khớp chính xác tên mong muốn
+            if desired:
+                exact = [i for i in candidates if znames[i] == desired]
+                if len(exact) == 1:
+                    chosen, how = exact[0], "anchor" if anchor else "mt"
+                elif len(exact) > 1:
+                    same = [i for i in exact if len(zsets[i]) == len(vset)]
+                    pick = same or exact
+                    chosen = max(pick, key=lambda i: len(vset & zsets[i]))
+                    how = "anchor+dup" if anchor else "mt+dup"
+
+            # 2. fuzzy trên tên MT (đồng nghĩa / containment)
+            if chosen is None and mt_target:
+                def score_for(index: int) -> float:
+                    name = znames[index]
+                    if mt_target and (mt_target in name or name in mt_target):
+                        return 1.0
+                    return char_sim(mt_target, name)
+
+                scored = sorted(((score_for(i), i) for i in candidates), reverse=True)
+                if scored:
+                    best_score, best_i = scored[0]
+                    second = scored[1][0] if len(scored) > 1 else 0.0
+                    if best_score >= 0.34:
+                        clear = (best_score - second) >= 0.10 or len(scored) == 1
+                        if not clear and abs(best_score - second) <= 0.02:
+                            # hoà điểm: ưu tiên candidate cùng số value
+                            tied = [i for score, i in scored if abs(score - best_score) <= 0.02]
+                            same_count = [i for i in tied if len(zsets[i]) == len(vset)]
+                            if len(same_count) == 1:
+                                best_i, clear = same_count[0], True
+                        if clear:
+                            chosen, how = best_i, "mt_fuzzy"
+
+            # 3. fallback theo value
             if chosen is None and vset:
-                overlap = [(i, len(vset & zsets[i]) / len(vset)) for i in range(len(zh_attrs))
-                           if i not in zused and len(zsets[i]) == len(vset)]
+                overlap = [(i, len(vset & zsets[i]) / len(vset)) for i in candidates
+                           if len(zsets[i]) == len(vset)]
                 overlap = [x for x in overlap if x[1] >= 0.6]
                 if len(overlap) == 1:
-                    chosen = overlap[0][0]
-                    how = "value"
+                    chosen, how = overlap[0][0], "value"
 
             if chosen is None:
-                unmatched += 1
+                stats["unmatched"] += 1
                 aligned.append({
-                    "name_vi": attr.get("name"), "name_zh": mapped or "",
+                    "name_vi": attr.get("name"), "name_zh": desired,
                     "values_vi": values, "values_zh": [],
                     "status": "unmatched",
                 })
                 continue
 
-            zused.add(chosen)
-            zattr = zh_attrs[chosen]
+            used.add(chosen)
+            stats[how] += 1
             aligned.append({
-                "name_vi": attr.get("name"), "name_zh": zattr.get("name"),
-                "values_vi": values, "values_zh": attr_values(zattr),
+                "name_vi": attr.get("name"), "name_zh": zh_attrs[chosen].get("name"),
+                "values_vi": values, "values_zh": attr_values(zh_attrs[chosen]),
                 "status": how,
             })
-            if how.startswith("name"):
-                matched_name += 1
-            else:
-                matched_value += 1
 
         n_aligned = sum(1 for a in aligned if a["status"] != "unmatched")
-        if n_aligned == len(aligned) and aligned:
+        if aligned and n_aligned == len(aligned):
             full_products += 1
         aligned_rows.append({
             "product_id": row.product_id,
@@ -240,22 +215,21 @@ def main() -> int:
             "status": "ok" if n_aligned == len(aligned) else "partial",
         })
 
-    report.update({
+    matched = total_attrs - stats["unmatched"]
+    report = {
+        "vi_names": len(vi_freq),
+        "anchors": len(anchors),
+        "mt_names": len(mt_map),
         "attributes_total": int(total_attrs),
-        "aligned_by_name": int(matched_name),
-        "aligned_by_value": int(matched_value),
-        "unmatched": int(unmatched),
-        "align_pct": round((matched_name + matched_value) / max(1, total_attrs) * 100, 2),
+        "aligned": int(matched),
+        "align_pct": round(matched / max(1, total_attrs) * 100, 2),
+        "by_how": {k: int(v) for k, v in stats.items()},
         "products": int(len(df)),
         "products_fully_aligned": int(full_products),
         "products_fully_aligned_pct": round(full_products / max(1, len(df)) * 100, 2),
-    })
+    }
 
-    out = pd.DataFrame(aligned_rows)
-    out.to_parquet(out_dir / "attributes_aligned.parquet", index=False)
-
-    map_rows = [{"name_vi": k, **v} for k, v in sorted(name_map.items(), key=lambda x: -vi_freq[x[0]])]
-    pd.DataFrame(map_rows).to_csv(out_dir / "attr_name_map.csv", index=False, encoding="utf-8-sig")
+    pd.DataFrame(aligned_rows).to_parquet(out_dir / "attributes_aligned.parquet", index=False)
     (out_dir / "attr_align_report.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False, indent=2))
