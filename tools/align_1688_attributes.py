@@ -68,6 +68,8 @@ def main() -> int:
     ap.add_argument("--raw", default="data/cleaned/bilingual_zh_vi_bitext_ready.parquet")
     ap.add_argument("--out", default="data/cleaned/1688")
     ap.add_argument("--mt-map", default=".artifacts/attr_names/attr_names_zh.parquet")
+    ap.add_argument("--match-map", default=None,
+                    help="parquet product_id/name_vi/key_zh_chosen (model chọn trong danh sách ZH)")
     args = ap.parse_args()
 
     df = pd.read_parquet(args.input)
@@ -114,6 +116,15 @@ def main() -> int:
             if key and target:
                 mt_map[key] = target
 
+    # ---------- product-specific match map ----------
+    match_map: dict[tuple[str, str], str] = {}
+    if args.match_map and Path(args.match_map).exists():
+        mm = pd.read_parquet(args.match_map)
+        for row in mm.itertuples():
+            chosen = str(row.key_zh_chosen or "").strip()
+            if chosen and chosen.upper() != "NONE":
+                match_map[(str(row.product_id), norm(row.name_vi))] = chosen
+
     # ---------- align ----------
     aligned_rows = []
     stats = Counter()
@@ -155,6 +166,18 @@ def main() -> int:
                     pick = same or exact
                     chosen = max(pick, key=lambda i: len(vset & zsets[i]))
                     how = "anchor+dup" if anchor else "mt+dup"
+
+            # 1b. model chọn trong danh sách key ZH của chính sản phẩm
+            if chosen is None:
+                picked = match_map.get((str(row.product_id), name))
+                if picked:
+                    hits = [i for i in candidates if znames[i] == norm(picked)]
+                    if len(hits) == 1:
+                        chosen, how = hits[0], "mt_choice"
+                    elif len(hits) > 1:
+                        same = [i for i in hits if len(zsets[i]) == len(vset)]
+                        if len(same) == 1:
+                            chosen, how = same[0], "mt_choice"
 
             # 2. fuzzy trên tên MT (đồng nghĩa / containment)
             if chosen is None and mt_target:
