@@ -17,3 +17,12 @@ data/eda/description/_thu_gia/
 
 # Bản notebook đã chạy (chứa dòng dữ liệu mẫu), sinh bởi scripts/notebook/run_desc_pipeline.py
 notebooks/*.da_chay.ipynb
+
+# Ket qua va du lieu trung gian cua judge (31/10/2026): KHONG commit (xem HUONG_DAN_JUDGE.md muc 15)
+data/processed/judge/
+data/processed/ft_clean/
+data/processed/so_cap/
+data/processed/bo_chon/
+data/processed/song_ngu_*/
+data/snapshot/title_candidates/
+data/snapshot/bilingual_official_v2/
