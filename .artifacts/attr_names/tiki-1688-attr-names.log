@@ -1,0 +1,50 @@
+[{"stream_name":"stderr","time":3.732123198,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":3.7321591979999997,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":4.262473871,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":4.262492051,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":4.262493591,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":4.262494691,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":4.575652096,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":4.575670446,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":4.575672206,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":4.575673156,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.087614121,"data":"torch 2.11.0+cu128 | cuda True\n"}
+,{"stream_name":"stdout","time":10.087632091,"data":"gpu NVIDIA RTX PRO 6000 Blackwell Server Edition\n"}
+,{"stream_name":"stdout","time":23.548008583,"data":"transformers 5.16.1\n"}
+,{"stream_name":"stdout","time":23.930376923,"data":"INPUT /kaggle/input/datasets/ntquang0410/1688-attr-names-vi\n"}
+,{"stream_name":"stdout","time":24.130556882,"data":"names 3881\n"}
+,{"stream_name":"stdout","time":101.541638607,"data":"loaded | vram 8.1\n"}
+,{"stream_name":"stdout","time":102.449623665,"data":"batch 32 / 3881\n"}
+,{"stream_name":"stdout","time":107.245522134,"data":"batch 352 / 3881\n"}
+,{"stream_name":"stdout","time":112.12743793,"data":"batch 672 / 3881\n"}
+,{"stream_name":"stdout","time":116.968473578,"data":"batch 992 / 3881\n"}
+,{"stream_name":"stdout","time":121.880961053,"data":"batch 1312 / 3881\n"}
+,{"stream_name":"stdout","time":126.612673025,"data":"batch 1632 / 3881\n"}
+,{"stream_name":"stdout","time":131.467832092,"data":"batch 1952 / 3881\n"}
+,{"stream_name":"stdout","time":136.232148093,"data":"batch 2272 / 3881\n"}
+,{"stream_name":"stdout","time":141.179534272,"data":"batch 2592 / 3881\n"}
+,{"stream_name":"stdout","time":146.101198746,"data":"batch 2912 / 3881\n"}
+,{"stream_name":"stdout","time":151.306032477,"data":"batch 3232 / 3881\n"}
+,{"stream_name":"stdout","time":156.241192151,"data":"batch 3552 / 3881\n"}
+,{"stream_name":"stdout","time":161.318703209,"data":"batch 3872 / 3881\n"}
+,{"stream_name":"stdout","time":161.578170876,"data":"wrote /kaggle/working/attr_names_zh.parquet 3881 | elapsed_min 1.0\n"}
+,{"stream_name":"stdout","time":161.578188796,"data":"                  name_vi name_zh_mt                      raw\n"}
+,{"stream_name":"stdout","time":161.578190726,"data":"0             Thương hiệu         品牌    {\"translation\": \"品牌\"}\n"}
+,{"stream_name":"stdout","time":161.578192556,"data":"1                 Màu sắc         颜色    {\"translation\": \"颜色\"}\n"}
+,{"stream_name":"stdout","time":161.578193906,"data":"2              Phong cách         风格    {\"translation\": \"风格\"}\n"}
+,{"stream_name":"stdout","time":161.578202566,"data":"3             Số mặt hàng         货号    {\"translation\": \"货号\"}\n"}
+,{"stream_name":"stdout","time":161.578203816,"data":"4               Chức năng         功能    {\"translation\": \"功能\"}\n"}
+,{"stream_name":"stdout","time":161.578204586,"data":"5             thương hiệu         品牌    {\"translation\": \"品牌\"}\n"}
+,{"stream_name":"stdout","time":161.578205426,"data":"6  Khu vực bán hàng chính       主营区域  {\"translation\": \"主营区域\"}\n"}
+,{"stream_name":"stdout","time":161.578206396,"data":"7               Chất liệu         材质    {\"translation\": \"材质\"}\n"}
+,{"stream_name":"stdout","time":161.578207276,"data":"8              phong cách         风格    {\"translation\": \"风格\"}\n"}
+,{"stream_name":"stdout","time":161.578208056,"data":"9               Kiểu dáng         款式    {\"translation\": \"款式\"}\n"}
+,{"stream_name":"stderr","time":165.468520981,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":165.468535461,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":165.547354463,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":165.547365453,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":165.902772173,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":165.937549984,"data":"[NbConvertApp] Writing 23234 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":167.101733586,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":167.339936622,"data":"[NbConvertApp] Writing 310058 bytes to __results__.html\n"}
+]
