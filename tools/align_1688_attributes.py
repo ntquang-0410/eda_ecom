@@ -28,6 +28,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from cado_core.text import normalize_brackets
+
 
 def as_list(values):
     if values is None:
@@ -74,7 +76,21 @@ def main() -> int:
 
     df = pd.read_parquet(args.input)
     raw = pd.read_parquet(args.raw)
-    zh_map = dict(zip(raw["product_id"].astype(str), raw["attributes_zh"]))
+    def _clean_attrs(attrs):
+        if attrs is None:
+            return None
+        cleaned = []
+        for attr in attrs:
+            cleaned.append({
+                "name": normalize_brackets(attr.get("name")),
+                "values": [normalize_brackets(v) for v in as_list(attr.get("values"))],
+            })
+        return cleaned
+
+    zh_map = {
+        str(pid): _clean_attrs(attrs)
+        for pid, attrs in zip(raw["product_id"].astype(str), raw["attributes_zh"])
+    }
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
 

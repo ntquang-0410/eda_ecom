@@ -1,0 +1,22 @@
+{
+  "qwen3-0.6b": {
+    "full.parquet": 41,
+    "train.parquet": 41,
+    "units.parquet": 41
+  },
+  "qwen3-1.7b": {
+    "full.parquet": 20,
+    "train.parquet": 20,
+    "units.parquet": 20
+  },
+  "qwen3-4b": {
+    "full.parquet": 11,
+    "train.parquet": 11,
+    "units.parquet": 11
+  },
+  "qwen3-8b": {
+    "full.parquet": 5,
+    "train.parquet": 5,
+    "units.parquet": 5
+  }
+}
