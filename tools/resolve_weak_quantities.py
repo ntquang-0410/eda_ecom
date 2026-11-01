@@ -48,56 +48,64 @@ def to_sig(quantities: list[Quantity], include_weak: bool = True):
     return items
 
 
-def lenient_match(src_q: list[Quantity], tgt_q: list[Quantity]) -> tuple[bool, list, list]:
-    """Khớp chính xác, rồi cho phép bare <-> đơn vị theo **giá trị gốc**.
+def canonical(q: Quantity) -> tuple[str, float]:
+    """(kind, value) để so khớp mềm."""
+    if not q.dimension:
+        return ("bare", q.value)
+    if q.unit in ("年", "năm") and 1900 <= q.value <= 2100:
+        return ("year", q.value)
+    if q.dimension in ("capacity", "current"):
+        # "20000mAh" thường được viết "20000毫安" -> cùng nhóm
+        return ("mah", q.value)
+    return (q.dimension, q.base_value)
 
-    Ví dụ "29" ~ "29英寸": bare 29 khớp với quantity có raw value 29.
-    Không cho count/year khớp với đơn vị vật lý.
-    """
+
+def lenient_match(src_q: list[Quantity], tgt_q: list[Quantity]) -> tuple[bool, list, list]:
     used_src: set[int] = set()
     used_tgt: set[int] = set()
 
     def close(a: float, b: float) -> bool:
         return abs(a - b) <= max(1e-6, 0.02 * max(abs(a), abs(b)))
 
-    # 1. cùng thứ nguyên, cùng giá trị quy đổi
-    for i, src in enumerate(src_q):
-        for j, tgt in enumerate(tgt_q):
+    src_c = [canonical(q) for q in src_q]
+    tgt_c = [canonical(q) for q in tgt_q]
+
+    # 1. cùng kind + value
+    for i, (kind, value) in enumerate(src_c):
+        for j, (tkind, tvalue) in enumerate(tgt_c):
             if j in used_tgt:
                 continue
-            if src.dimension and src.dimension == tgt.dimension and close(src.base_value, tgt.base_value):
+            if kind == tkind and close(value, tvalue):
                 used_src.add(i); used_tgt.add(j)
                 break
 
-    # 2. bare <-> đơn vị, so theo giá trị gốc
-    for i, src in enumerate(src_q):
+    # 2. bare <-> bất kỳ đơn vị, so theo giá trị gốc
+    for i, (kind, value) in enumerate(src_c):
         if i in used_src:
+            continue
+        if kind != "bare":
             continue
         for j, tgt in enumerate(tgt_q):
             if j in used_tgt:
                 continue
-            if (not src.dimension) != (not tgt.dimension) and close(src.value, tgt.value):
+            if close(value, tgt.value):
                 used_src.add(i); used_tgt.add(j)
                 break
 
-    # 3. bare <-> count/year cùng giá trị
-    for i, src in enumerate(src_q):
-        if i in used_src:
+    for j, (kind, value) in enumerate(tgt_c):
+        if j in used_tgt:
             continue
-        for j, tgt in enumerate(tgt_q):
-            if j in used_tgt:
+        if kind != "bare":
+            continue
+        for i, src in enumerate(src_q):
+            if i in used_src:
                 continue
-            if (not src.dimension) and tgt.dimension in ("count", "year") and close(src.value, tgt.value):
-                used_src.add(i); used_tgt.add(j)
-                break
-            if (not tgt.dimension) and src.dimension in ("count", "year") and close(src.value, tgt.value):
+            if close(value, src.value):
                 used_src.add(i); used_tgt.add(j)
                 break
 
-    missing = [(q.dimension or "bare", round(q.base_value if q.dimension else q.value, 6))
-               for i, q in enumerate(src_q) if i not in used_src]
-    extra = [(q.dimension or "bare", round(q.base_value if q.dimension else q.value, 6))
-             for j, q in enumerate(tgt_q) if j not in used_tgt]
+    missing = [(kind, round(value, 6)) for i, (kind, value) in enumerate(src_c) if i not in used_src]
+    extra = [(kind, round(value, 6)) for j, (kind, value) in enumerate(tgt_c) if j not in used_tgt]
     return not missing and not extra, missing, extra
 
 

@@ -127,7 +127,7 @@ UNIT_WORD_BLACKLIST = {
     "件套", "件装",
     "天然", "天猫", "天蓝", "天空", "年份", "年代",
     "日本", "日常", "日式", "时尚", "时间", "年轻", "百年",
-    "米饭", "月份", "米色", "米白", "米黄",
+    "米饭", "月份", "米色", "米白", "米黄", "年级",
 }
 
 VI_NUMBERS = {"một": 1, "hai": 2, "ba": 3, "bốn": 4, "tư": 4, "sáu": 6,
@@ -204,8 +204,9 @@ def parse_number(token: str, lang: str) -> float | None:
         if len(parts) > 2:
             token = token.replace(".", "")
         elif len(parts) == 2 and len(parts[1]) == 3 and len(parts[0]) <= 3:
-            # 1.234 -> có thể là nghìn hoặc 1,234 thập phân
-            token = token  # giữ nguyên, compare sẽ thử cả 2
+            # "1.234" -> 1,234 (thập phân); "200.000" -> 200000 (nghìn)
+            if len(parts[0]) >= 3:
+                token = parts[0] + parts[1]
     try:
         return float(token)
     except ValueError:
@@ -321,6 +322,8 @@ def _in_code_token(text: str, start: int, end: int) -> bool:
         return False
     if token.lower().startswith(("size", "sz", "size:", "sz:")):
         return False
+    if re.fullmatch(r"[A-Za-z]{1,3}\d+[a-z]?", token):
+        return True
     return any(ch.isalpha() for ch in token)
 
 
@@ -347,6 +350,8 @@ def extract_quantities(text: str, lang: str = "vi") -> list[Quantity]:
             tail = text[end:end + 2]
             if tail.startswith("套") or tail.startswith("装") or tail.startswith("代发"):
                 continue
+        if not unit and len(match.group().replace(".", "").replace(",", "")) >= 7:
+            continue  # mã vạch / ID
         found.append(Quantity(match.group(), value, unit,
                               UNITS.get(unit, ("", 1.0))[0],
                               value * UNITS.get(unit, ("", 1.0))[1],
