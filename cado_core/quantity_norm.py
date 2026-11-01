@@ -67,7 +67,7 @@ _add("volume", 3.78541, "gallon", "gal", "加仑")
 # diện tích -> m²
 _add("area", 1.0, "m2", "m²", "平方米")
 _add("area", 1e-4, "cm2", "cm²", "平方厘米")
-_add("area", 666.667, "亩", "mẫu")
+_add("area", 666.667, "亩")
 
 # công suất -> W
 _add("power", 1.0, "w", "watt", "瓦", "瓦特")
@@ -93,7 +93,7 @@ _add("temperature", 1.0, "°c", "c", "độ c", "摄氏度", "℃")
 _add("time", 1.0, "s", "giây", "秒")
 _add("time", 60.0, "min", "phút", "分钟", "分")
 _add("time", 3600.0, "h", "giờ", "小时", "时")
-_add("time", 86400.0, "ngày", "天")
+_add("time", 86400.0, "ngày", "天", "日")
 _add("time", 2592000.0, "tháng", "个月", "月")
 _add("time", 31536000.0, "năm", "年")
 
@@ -119,6 +119,10 @@ _add("count", 1.0,
 _add("currency", 1.0, "đ", "vnd", "vnđ", "元", "¥", "rmb", "人民币", "美元", "usd")
 
 _UNIT_NAMES = sorted(UNITS, key=len, reverse=True)
+
+VI_NUMBERS = {"một": 1, "hai": 2, "ba": 3, "bốn": 4, "tư": 4, "sáu": 6,
+              "bảy": 7, "tám": 8, "chín": 9, "mười": 10}
+VI_NUM_RE = re.compile(r"\b(" + "|".join(VI_NUMBERS) + r")\b", re.IGNORECASE)
 
 
 # ---------------------------------------------------------------------------
@@ -226,6 +230,9 @@ def _match_unit(text: str, pos: int) -> tuple[str, int]:
                 nxt = text[after]
                 if nxt.isalpha() and not ("\u4e00" <= nxt <= "\u9fff"):
                     continue
+            # "尺寸" là từ, không phải đơn vị "尺"
+            if name == "尺" and text[pos + len(name):pos + len(name) + 1] == "寸":
+                continue
             return name, after
     return "", pos
 
@@ -260,6 +267,33 @@ def _propagate_range_units(text: str, quantities: list[Quantity]) -> None:
             left.base_value = left.value * UNITS.get(right.unit, ("", 1.0))[1]
 
 
+CODE_TOKEN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9./+\-]*$")
+_NUMBER_UNIT = re.compile(
+    r"^\d+(?:[.,]\d+)?(?:"
+    + "|".join(re.escape(name) for name in _UNIT_NAMES)
+    + r")$",
+    re.IGNORECASE,
+)
+
+
+def _in_code_token(text: str, start: int, end: int) -> bool:
+    """Số nằm trong token chữ+số (mã sản phẩm) nhưng không phải '20W'."""
+    left = start
+    while left > 0 and not text[left - 1].isspace():
+        left -= 1
+    right = end
+    while right < len(text) and not text[right].isspace():
+        right += 1
+    token = text[left:right]
+    if not CODE_TOKEN.match(token):
+        return False
+    # chỉ coi là mã khi có cụm >=2 chữ cái không phải đơn vị (EL, LED, IN...)
+    runs = re.findall(r"[A-Za-z]{2,}", token)
+    if not runs:
+        return False
+    return any(run.lower() not in UNITS for run in runs)
+
+
 def extract_quantities(text: str, lang: str = "vi") -> list[Quantity]:
     text = unicodedata.normalize("NFKC", str(text or ""))
     text = _normalize_fractions(text)
@@ -275,6 +309,12 @@ def extract_quantities(text: str, lang: str = "vi") -> list[Quantity]:
         if value is None:
             continue
         unit, end = _match_unit(text, match.end())
+        if _in_code_token(text, match.start(), end):
+            continue
+        if unit == "件":
+            tail = text[end:end + 2]
+            if tail.startswith("套") or tail.startswith("装") or tail.startswith("代发"):
+                continue
         found.append(Quantity(match.group(), value, unit,
                               UNITS.get(unit, ("", 1.0))[0],
                               value * UNITS.get(unit, ("", 1.0))[1],
@@ -294,7 +334,23 @@ def extract_quantities(text: str, lang: str = "vi") -> list[Quantity]:
             if value is None:
                 continue
             unit, end = _match_unit(text, match.end())
+            if not unit:
+                # số Hán đứng một mình thường là từ ("一体", "一款") -> bỏ
+                continue
             found.append(Quantity(match.group(), value, unit,
+                                  UNITS.get(unit, ("", 1.0))[0],
+                                  value * UNITS.get(unit, ("", 1.0))[1],
+                                  match.start(), end))
+
+    if False:
+        for match in VI_NUM_RE.finditer(text):
+            if any(q.start <= match.start() < q.end for q in found):
+                continue
+            value = VI_NUMBERS.get(match.group().lower())
+            if value is None:
+                continue
+            unit, end = _match_unit(text, match.end())
+            found.append(Quantity(match.group(), float(value), unit,
                                   UNITS.get(unit, ("", 1.0))[0],
                                   value * UNITS.get(unit, ("", 1.0))[1],
                                   match.start(), end))
@@ -313,6 +369,9 @@ def signature(quantities: Iterable[Quantity], round_digits: int = 4) -> list[tup
             continue
         if q.dimension == "count":
             result.append(("count", float(round(q.value))))
+            continue
+        if q.unit in ("年", "năm") and 1900 <= q.value <= 2100:
+            result.append(("year", float(round(q.value))))
             continue
         result.append((q.dimension, round(q.base_value, round_digits)))
     return sorted(result)
@@ -349,11 +408,11 @@ def compare(src_text: str, tgt_text: str,
     still_missing = []
     for item in missing:
         dim, value = item
-        if dim != "bare":
+        if dim not in ("bare", "count", "year"):
             still_missing.append(item)
             continue
         for index, candidate in enumerate(extra):
-            if _close(candidate[1], value):
+            if candidate[0] in ("bare", "count", "year") and _close(candidate[1], value):
                 extra.pop(index)
                 break
         else:
