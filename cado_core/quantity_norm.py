@@ -45,7 +45,7 @@ _add("length", 1000.0, "km", "kilomet", "公里", "千米")
 _add("length", 0.0254, "inch", "in", "英寸", "寸")
 _add("length", 0.3048, "ft", "foot", "feet", "英尺")
 _add("length", 0.9144, "yard", "yd", "码")
-_add("length", 0.333333, "尺", "chi")
+_add("length", 0.333333, "尺")
 _add("length", 500.0, "里")
 
 # khối lượng -> kg
@@ -91,7 +91,7 @@ _add("temperature", 1.0, "°c", "c", "độ c", "摄氏度", "℃")
 
 # thời gian -> s
 _add("time", 1.0, "s", "giây", "秒")
-_add("time", 60.0, "min", "phút", "分钟", "分")
+_add("time", 60.0, "min", "phút", "分钟")
 _add("time", 3600.0, "h", "giờ", "小时", "时")
 _add("time", 86400.0, "ngày", "天", "日")
 _add("time", 2592000.0, "tháng", "个月", "月")
@@ -337,12 +337,14 @@ def extract_quantities(text: str, lang: str = "vi") -> list[Quantity]:
             if not unit:
                 # số Hán đứng một mình thường là từ ("一体", "一款") -> bỏ
                 continue
+            if unit == "件" and text[end:end + 1] in ("套", "装"):
+                continue
             found.append(Quantity(match.group(), value, unit,
                                   UNITS.get(unit, ("", 1.0))[0],
                                   value * UNITS.get(unit, ("", 1.0))[1],
                                   match.start(), end))
 
-    if False:
+    if False:  # tắt: "ba lô", "một" gây false positive
         for match in VI_NUM_RE.finditer(text):
             if any(q.start <= match.start() < q.end for q in found):
                 continue
@@ -388,10 +390,18 @@ def _close(a: float, b: float, rel: float = 0.02) -> bool:
     return abs(a - b) / scale <= rel
 
 
+WEAK_DIMS = {"bare", "count", "year"}
+
+
 def compare(src_text: str, tgt_text: str,
-            src_lang: str = "vi", tgt_lang: str = "zh") -> dict:
+            src_lang: str = "vi", tgt_lang: str = "zh",
+            strict: bool = True) -> dict:
     src = signature(extract_quantities(src_text, src_lang))
     tgt = signature(extract_quantities(tgt_text, tgt_lang))
+    if strict:
+        # chỉ so đại lượng vật lý; bỏ số đếm/năm/bare vì dễ nhiễu
+        src = [item for item in src if item[0] not in WEAK_DIMS]
+        tgt = [item for item in tgt if item[0] not in WEAK_DIMS]
 
     missing = list(src)
     extra = []
@@ -419,10 +429,17 @@ def compare(src_text: str, tgt_text: str,
             still_missing.append(item)
     missing = still_missing
 
+    src_dims = {dim for dim, _ in src}
+    tgt_dims = {dim for dim, _ in tgt}
+    # strong: cùng thứ nguyên xuất hiện cả hai bên nhưng giá trị không khớp
+    strong = any(dim in tgt_dims for dim, _ in missing) or \
+             any(dim in src_dims for dim, _ in extra)
+
     return {
         "src": src,
         "tgt": tgt,
         "missing": missing,
         "extra": extra,
         "match": not missing and not extra,
+        "strong_mismatch": bool(strong and (missing or extra)),
     }

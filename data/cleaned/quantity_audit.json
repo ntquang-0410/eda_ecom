@@ -2,305 +2,289 @@
   "1688_title": {
     "label": "1688 title",
     "pairs": 16133,
-    "pairs_with_quantity": 8063,
-    "coverage_pct": 49.98,
-    "naive_match_pct": 84.75,
-    "quantity_match_pct": 60.8,
-    "both_match": 4551,
-    "rescued_by_quantity": 351,
-    "newly_flagged_by_quantity": 2282,
+    "pairs_with_quantity": 7616,
+    "coverage_pct": 47.21,
+    "naive_match_pct": 83.92,
+    "quantity_match_pct": 88.77,
+    "both_match": 6071,
+    "rescued_by_quantity": 690,
+    "newly_flagged_by_quantity": 320,
+    "newly_flagged_strong": 47,
     "examples_rescued": [
+      {
+        "src": "Đệm ghế ô tô mới xuyên biên giới, đệm ghế ô tô cao cấp Napppi, đệm ghế 5 chỗ trước và sau ",
+        "tgt": "跨境新款汽车坐垫纳帕皮高级感车载座椅垫加厚防滑五座前后排座垫",
+        "qty": []
+      },
+      {
+        "src": "Hộp đựng khăn giấy ô tô hộp tay vịn tăng cường miếng lót xe trung tâm cao cấp túi bảo quản",
+        "tgt": "车载纸巾盒扶手箱增高垫汽车中央高级收纳袋水杯架四合一通用精品",
+        "qty": []
+      },
+      {
+        "src": "Nội Thất Ô Tô Xe Xông Phòng Chiến Tranh Đại Bàng Số 3 Nội Thất Ô Tô Phụ Kiện Máy Bay Trực ",
+        "tgt": "汽车内饰车载香薰战鹰三号车内饰品直升飞机挪车号码牌太阳能摆件",
+        "qty": []
+      },
+      {
+        "src": "Camera hành trình 4 ống kính 1080P xuyên biên giới, quay phim ban đêm độ nét cao DVRSS7",
+        "tgt": "跨境新款行车记录仪1080P汽车摄像机四镜头高清夜视记录器dvrSs7",
+        "qty": []
+      },
+      {
+        "src": "Camera hành trình 4 ống kính 1080P mới, kết nối điện thoại di động WiFi, hiển thị và ghi h",
+        "tgt": "新款1080P四镜头行车记录仪WiFi手机互联四路同显同录车载摄像机",
+        "qty": []
+      },
+      {
+        "src": "Máy ghi âm lái xe ô tô độ nét cao chế độ xem ban đêm 1080P ô tô 360 độ gương kép phía trướ",
+        "tgt": "2024爆款推荐汽车行车记录仪高清夜视1080P车载360度车前车内双镜",
+        "qty": []
+      },
+      {
+        "src": "Nhà máy bán hàng trực tiếp chó điện tử VG3, tiếng Anh, tiếng Nga và radar, máy ghi âm lái ",
+        "tgt": "厂家直销VG3电子狗英俄语加雷达测速二合一2.0寸行车记录仪高清",
+        "qty": [
+          [
+            "length",
+            0.0508
+          ]
+        ]
+      },
       {
         "src": "Cặp sách học sinh dung tích lớn phong cách học đường ba lô 5 chiếc đeo vai rộng thời trang",
         "tgt": "校园风大容量学生书包潮搭新款简约时尚宽肩带轻便五件套双肩背包",
-        "qty": [
-          [
-            "count",
-            5.0
-          ]
-        ]
-      },
-      {
-        "src": "Ba lô nữ thường ngày dung tích lớn mẫu mới 2023 Ba lô máy tính Du Lịch Túi Thời Trang Chốn",
-        "tgt": "2026新款大容量女士休闲双肩包旅行电脑背包轻便防盗时尚潮流包包",
-        "qty": [
-          [
-            "bare",
-            2023.0
-          ]
-        ]
-      },
-      {
-        "src": "Balo nữ ba lô nhỏ vải Oxford phong cách Hàn Quốc mẫu mới 2023",
-        "tgt": "双肩包女2026新款韩版牛津布小背包女士尼龙菱格车缝线时尚书包",
-        "qty": [
-          [
-            "bare",
-            2023.0
-          ]
-        ]
-      },
-      {
-        "src": "Camera hành trình hai ống kính 4K với hình ảnh lùi xe, kết nối điện thoại di động, cảnh bá",
-        "tgt": "跨境4K行车记录仪流媒体后视镜前后双录手机互联车载WIFI360全景",
-        "qty": [
-          [
-            "bare",
-            4.0
-          ]
-        ]
-      },
-      {
-        "src": "Balo nữ đơn giản dung lượng lớn phong cách Hàn Quốc họa tiết 2023",
-        "tgt": "纯色菱格车缝线铆钉时尚双肩包女2026质感韩版大容量简约女士背包",
-        "qty": [
-          [
-            "bare",
-            2023.0
-          ]
-        ]
-      },
-      {
-        "src": "Ba lô da mềm PU cổ điển phong cách Âu Mỹ mẫu mới 2023 Ba lô nữ du lịch dung tích lớn Túi n",
-        "tgt": "2026新款欧美风复古PU软皮双肩包女士大容量旅行背包豹纹时尚女包",
-        "qty": [
-          [
-            "bare",
-            2023.0
-          ]
-        ]
-      },
-      {
-        "src": "Ba lô nữ thời trang in họa tiết, dung tích lớn, kiểu dáng mới 2025, chất liệu PU, phong cá",
-        "tgt": "时髦印花大容量2026新个性洋气时尚休闲PU女士背包旅行书包双肩包",
-        "qty": [
-          [
-            "bare",
-            2025.0
-          ]
-        ]
-      },
-      {
-        "src": "Túi đeo chéo nữ nhỏ hình vuông thời trang 2025 chất liệu vải Oxford đơn sắc đa năng tiện l",
-        "tgt": "2026跨境新款小方包简约系牛津布纯色百搭女包出行便捷斜挎单肩包",
-        "qty": [
-          [
-            "bare",
-            2025.0
-          ]
-        ]
+        "qty": []
       }
     ],
     "examples_newly_flagged": [
       {
-        "src": "Xe ô tô đổi màu phim cạnh dụng cụ thi công khe hở cạp đổi màu dụng cụ ô tô vô hình 43PCS",
-        "tgt": "汽车改色贴膜收边工具缝隙施工刮板 改色隐形车衣工具套装43PCS",
+        "src": "Camera hành trình 4G tích hợp định vị GPS, giám sát từ xa 24/24, phát hiện va chạm, ghi hì",
+        "tgt": "4G行车记录仪哨兵GPS定位24小时远程监控碰撞唤醒app无线行车记录",
         "missing": [],
         "extra": [
           [
-            "bare",
-            43.0
+            "time",
+            86400.0
           ]
         ]
       },
       {
-        "src": "Bọt Biển Thấm Nước Mật Độ Cao 8 Nhân Vật Rửa Xe Bọt Biển Lau Xe 8 Nhân Vật Xốp Khối Xe Dụn",
-        "tgt": "高密度吸水海棉 8字洗车海绵擦车八字海绵块汽车清洁用品洗车工具",
+        "src": "Màn hình thông minh Carplay 10.26 inch xuyên biên giới, đầu phát MP5, máy ghi âm lái xe mà",
+        "tgt": "跨境10.26寸Carplay智慧屏便捷导航MP5播放器车载投屏行车记录仪",
         "missing": [
           [
-            "bare",
-            8.0
+            "length",
+            0.2606
           ]
         ],
         "extra": []
       },
       {
-        "src": "Thương mại điện tử xuyên biên giới Amazon bốn mùa chung bao quanh bộ đệm ghế nhỏ ba mảnh k",
-        "tgt": "跨境电商亚马逊四季通用包围小三件套座垫无靠背汽车用品汽车坐垫",
-        "missing": [],
-        "extra": [
-          [
-            "count",
-            3.0
-          ]
-        ]
-      },
-      {
-        "src": "Thích hợp cho 25 mẫu xe của thương hiệu Wei Alpine 7/8/9 điều khiển trung tâm dưới hộp lưu",
-        "tgt": "适用25款魏牌高山7/8/9中控下层储物盒收纳分类新车改装配件用品",
+        "src": "Màn hình thông minh xuyên biên giới 9inch carplay điều hướng tiện lợi Máy nghe nhạc MP5 ch",
+        "tgt": "跨境9寸carplay智慧屏便捷导航MP5播放器车载投屏行车记录仪",
         "missing": [
           [
-            "area",
-            16666.675
-          ]
-        ],
-        "extra": [
-          [
-            "bare",
-            25.0
-          ]
-        ]
-      },
-      {
-        "src": "Vật tư ô tô Dán ô tô 3D 3D Mô hình dán 3D Dán tĩnh điện cao cấp Dán phản quang ô tô Dán xư",
-        "tgt": "汽车用品车贴3D立体粘贴式图案高级感静电贴磁吸反光车贴纸划痕贴",
-        "missing": [
-          [
-            "bare",
-            3.0
-          ],
-          [
-            "bare",
-            3.0
+            "length",
+            0.2286
           ]
         ],
         "extra": []
       },
       {
-        "src": "Gối tựa đầu ô tô, gối tựa cổ ghế ô tô, gối tựa ô tô, vật dụng nội thất ô tô, gối tựa eo ô ",
-        "tgt": "汽车头枕靠枕车用座椅护颈枕一对装车枕头汽车内饰用品车载腰靠",
+        "src": "Máy ghi hình lái xe 70mai Video độ phân giải cao 3K 2inch màn hình wifi điều khiển bằng gi",
+        "tgt": "70迈行车记录仪3K高清影像2英寸屏wifi语音声控70mai A510 Lite",
         "missing": [],
         "extra": [
           [
-            "count",
-            1.0
+            "current",
+            0.07
           ]
         ]
       },
       {
-        "src": "Nhà máy cung cấp trực tiếp đệm mát mùa hè, đệm ghế ô tô, tấm tre, thông gió, thoáng khí, đ",
-        "tgt": "厂家直供夏季凉垫汽车坐垫竹片竹子通风透气面包货车凉席垫三件套",
-        "missing": [],
+        "src": "Camera gương chiếu hậu tích hợp GPS, ghi hình lái xe độ nét cao 4K+2.5K, hỗ trợ wifi 5G, m",
+        "tgt": "11寸4K+2.5K流媒体摄像头后视镜GPS高清5Gwifi行车记录仪",
+        "missing": [
+          [
+            "mass",
+            0.005
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Ổ USB flash drive đầu T, ghi hình lái xe, loại C, phù hợp với xe C6L/GLC, S-Class, EL, EQE",
+        "tgt": "T头行车记录仪u盘用typec适用c6l/glc级s级EL新eqe车载优盘64128g",
+        "missing": [
+          [
+            "data",
+            64128000000000.0
+          ]
+        ],
         "extra": [
           [
-            "count",
-            3.0
+            "mass",
+            64.128
           ]
         ]
       },
       {
-        "src": "Ô tô tự lái du lịch đa chức năng dây hành lý có thể điều chỉnh dây phơi quần áo dây treo p",
-        "tgt": "汽车自驾出行多功能行李绳可调节晾衣绳挂衣绳汽车用品一件代发",
+        "src": "Camera hành trình 70mai M310Pro3K siêu nét 1620P tầm nhìn ban đêm WiFi độ nét cao mẫu mới ",
+        "tgt": "70迈行车记录仪M310Pro3K超清1620P夜视WiFi汽车高清新款70mai",
         "missing": [],
         "extra": [
           [
-            "count",
-            1.0
+            "current",
+            0.07
           ]
         ]
+      },
+      {
+        "src": "Camera hành trình 70 Mai M310Pro 3K 1620P Siêu rõ ràng Ánh sao nhìn đêm F1.55 khẩu độ lớn",
+        "tgt": "70迈行车记录仪M310Pro 3K 1620P超清 星光夜视 F1.55大光圈",
+        "missing": [
+          [
+            "current",
+            0.07
+          ]
+        ],
+        "extra": []
       }
     ],
     "examples_mismatch": [
       {
-        "src": "Xe ô tô đổi màu phim cạnh dụng cụ thi công khe hở cạp đổi màu dụng cụ ô tô vô hình 43PCS",
-        "tgt": "汽车改色贴膜收边工具缝隙施工刮板 改色隐形车衣工具套装43PCS",
+        "src": "Camera hành trình 4G tích hợp định vị GPS, giám sát từ xa 24/24, phát hiện va chạm, ghi hì",
+        "tgt": "4G行车记录仪哨兵GPS定位24小时远程监控碰撞唤醒app无线行车记录",
         "missing": [],
         "extra": [
           [
-            "bare",
-            43.0
+            "time",
+            86400.0
           ]
         ]
       },
       {
-        "src": "Bọt Biển Thấm Nước Mật Độ Cao 8 Nhân Vật Rửa Xe Bọt Biển Lau Xe 8 Nhân Vật Xốp Khối Xe Dụn",
-        "tgt": "高密度吸水海棉 8字洗车海绵擦车八字海绵块汽车清洁用品洗车工具",
+        "src": "Màn hình thông minh Carplay 10.26 inch xuyên biên giới, đầu phát MP5, máy ghi âm lái xe mà",
+        "tgt": "跨境10.26寸Carplay智慧屏便捷导航MP5播放器车载投屏行车记录仪",
         "missing": [
           [
-            "bare",
-            8.0
+            "length",
+            0.2606
           ]
         ],
         "extra": []
       },
       {
-        "src": "Thương mại điện tử xuyên biên giới Amazon bốn mùa chung bao quanh bộ đệm ghế nhỏ ba mảnh k",
-        "tgt": "跨境电商亚马逊四季通用包围小三件套座垫无靠背汽车用品汽车坐垫",
-        "missing": [],
-        "extra": [
-          [
-            "count",
-            3.0
-          ]
-        ]
-      },
-      {
-        "src": "Thích hợp cho 25 mẫu xe của thương hiệu Wei Alpine 7/8/9 điều khiển trung tâm dưới hộp lưu",
-        "tgt": "适用25款魏牌高山7/8/9中控下层储物盒收纳分类新车改装配件用品",
+        "src": "Màn hình thông minh xuyên biên giới 9inch carplay điều hướng tiện lợi Máy nghe nhạc MP5 ch",
+        "tgt": "跨境9寸carplay智慧屏便捷导航MP5播放器车载投屏行车记录仪",
         "missing": [
           [
-            "area",
-            16666.675
-          ]
-        ],
-        "extra": [
-          [
-            "bare",
-            25.0
-          ]
-        ]
-      },
-      {
-        "src": "Vật tư ô tô Dán ô tô 3D 3D Mô hình dán 3D Dán tĩnh điện cao cấp Dán phản quang ô tô Dán xư",
-        "tgt": "汽车用品车贴3D立体粘贴式图案高级感静电贴磁吸反光车贴纸划痕贴",
-        "missing": [
-          [
-            "bare",
-            3.0
-          ],
-          [
-            "bare",
-            3.0
+            "length",
+            0.2286
           ]
         ],
         "extra": []
       },
       {
-        "src": "Gối tựa đầu ô tô, gối tựa cổ ghế ô tô, gối tựa ô tô, vật dụng nội thất ô tô, gối tựa eo ô ",
-        "tgt": "汽车头枕靠枕车用座椅护颈枕一对装车枕头汽车内饰用品车载腰靠",
+        "src": "Máy ghi hình lái xe 70mai Video độ phân giải cao 3K 2inch màn hình wifi điều khiển bằng gi",
+        "tgt": "70迈行车记录仪3K高清影像2英寸屏wifi语音声控70mai A510 Lite",
         "missing": [],
         "extra": [
           [
-            "count",
-            1.0
+            "current",
+            0.07
           ]
         ]
       },
       {
-        "src": "Đệm ghế ô tô mới xuyên biên giới, đệm ghế ô tô cao cấp Napppi, đệm ghế 5 chỗ trước và sau ",
-        "tgt": "跨境新款汽车坐垫纳帕皮高级感车载座椅垫加厚防滑五座前后排座垫",
+        "src": "Camera gương chiếu hậu tích hợp GPS, ghi hình lái xe độ nét cao 4K+2.5K, hỗ trợ wifi 5G, m",
+        "tgt": "11寸4K+2.5K流媒体摄像头后视镜GPS高清5Gwifi行车记录仪",
         "missing": [
           [
-            "bare",
-            5.0
+            "mass",
+            0.005
           ]
         ],
         "extra": []
       },
       {
-        "src": "Nhà máy cung cấp trực tiếp đệm mát mùa hè, đệm ghế ô tô, tấm tre, thông gió, thoáng khí, đ",
-        "tgt": "厂家直供夏季凉垫汽车坐垫竹片竹子通风透气面包货车凉席垫三件套",
+        "src": "Ổ USB flash drive đầu T, ghi hình lái xe, loại C, phù hợp với xe C6L/GLC, S-Class, EL, EQE",
+        "tgt": "T头行车记录仪u盘用typec适用c6l/glc级s级EL新eqe车载优盘64128g",
+        "missing": [
+          [
+            "data",
+            64128000000000.0
+          ]
+        ],
+        "extra": [
+          [
+            "mass",
+            64.128
+          ]
+        ]
+      },
+      {
+        "src": "Camera hành trình 70mai M310Pro3K siêu nét 1620P tầm nhìn ban đêm WiFi độ nét cao mẫu mới ",
+        "tgt": "70迈行车记录仪M310Pro3K超清1620P夜视WiFi汽车高清新款70mai",
         "missing": [],
         "extra": [
           [
-            "count",
-            3.0
+            "current",
+            0.07
           ]
         ]
+      },
+      {
+        "src": "Camera hành trình 70 Mai M310Pro 3K 1620P Siêu rõ ràng Ánh sao nhìn đêm F1.55 khẩu độ lớn",
+        "tgt": "70迈行车记录仪M310Pro 3K 1620P超清 星光夜视 F1.55大光圈",
+        "missing": [
+          [
+            "current",
+            0.07
+          ]
+        ],
+        "extra": []
       }
     ]
   },
   "1688_attribute": {
     "label": "1688 attribute",
     "pairs": 395575,
-    "pairs_with_quantity": 86589,
-    "coverage_pct": 21.89,
-    "naive_match_pct": 82.62,
-    "quantity_match_pct": 69.25,
-    "both_match": 59053,
-    "rescued_by_quantity": 912,
-    "newly_flagged_by_quantity": 12490,
+    "pairs_with_quantity": 85830,
+    "coverage_pct": 21.7,
+    "naive_match_pct": 82.52,
+    "quantity_match_pct": 93.57,
+    "both_match": 67875,
+    "rescued_by_quantity": 12432,
+    "newly_flagged_by_quantity": 2951,
+    "newly_flagged_strong": 836,
     "examples_rescued": [
+      {
+        "src": "00031",
+        "tgt": "0003",
+        "qty": []
+      },
+      {
+        "src": "00032",
+        "tgt": "0003",
+        "qty": []
+      },
+      {
+        "src": "Tựa đầu Maybach [nâu hạt dẻ] một cặp ; Tựa đầu Maybach [mocha brown] một cặp ; Tựa đầu May",
+        "tgt": "迈巴赫头枕【栗棕色】一对装 ; 迈巴赫头枕【摩卡棕】一对装 ; 迈巴赫头枕【尊贵黑】一对装 ; 迈巴赫头枕【赭石棕】一对装 ; 迈巴赫头枕【酒红色】一对装 ; 迈巴赫头枕【米白色】",
+        "qty": []
+      },
+      {
+        "src": "9041",
+        "tgt": "904",
+        "qty": []
+      },
+      {
+        "src": "Lưới đàn hồi ba lớp bốn mặt ; Lưới đàn hồi bốn mặt hai tầng ; Lưới đàn hồi hai bên hai tần",
+        "tgt": "三层四边弹力网 ; 二层四边弹力网 ; 二层二边弹力网 ; 三层两边弹力网（4代）（无现货勿拍） ; 三层两边弹力网（5代）（无现货勿拍） ; 三层两边弹力网（无现货勿拍） ; 单",
+        "qty": []
+      },
       {
         "src": "【Nước Tẩy Rửa Nội Thất Xe Hơi Cỡ Lớn】 18kg Hương Hoa Mộc Lan Trắng ; [Peach] 18kg Nước Tẩy",
         "tgt": "【白玉兰香】36斤大桶内饰清洗剂 ; 【水蜜桃】36斤大桶内饰清洗剂 ; 【无香无味】36斤大桶内饰清洗剂 ; 【白玉兰香】强效款 8斤桶装 ; 【水蜜桃香】强效款 8斤桶装 ; ",
@@ -332,331 +316,22 @@
         ]
       },
       {
-        "src": "Bàn chải bụi ô tô cỡ nhỏ (túi OPP) ; Bàn chải bụi ô tô nhỏ (có vỏ bảo vệ) ; Bàn chải bụi ô",
-        "tgt": "汽车除尘刷小号（OPP袋） ; 汽车除尘刷小号 (带保护壳） ; 汽车除尘刷大号（OPP袋） ; 汽车除尘刷大号 (带保护壳） ; 黑色短款＋opp袋 ; 黑色长款＋opp袋 ; ",
-        "qty": [
-          [
-            "bare",
-            3.0
-          ]
-        ]
+        "src": "Ba tầng và bốn phía ; Tầng hai và bốn mặt ; Tầng 2 2 bên",
+        "tgt": "三层四边 ; 二层四边 ; 二层两边",
+        "qty": []
       },
       {
-        "src": "98*11*4CM1",
-        "tgt": "98*11*4CM",
-        "qty": [
-          [
-            "bare",
-            98.0
-          ],
-          [
-            "length",
-            0.04
-          ],
-          [
-            "length",
-            0.11
-          ]
-        ]
-      },
-      {
-        "src": "[Màng phản quang cho thú cưng rỗng] Chống thấm nước, chống nắng và siêu bền ; [Nam châm ph",
-        "tgt": "【pet反光膜镂空】防水防晒超耐用 ; 【pet钻石反光磁贴】软磁吸附不伤车 ; 【pet钻石反光胶贴】一粘就稳夜间反光 ; 【pet喷绘粘磨砂底】撕除不留胶 ; 【pet喷绘胶粘",
-        "qty": [
-          [
-            "bare",
-            3.0
-          ]
-        ]
-      },
-      {
-        "src": "Màu đen kiểu ngắn + túi opp ; Màu đen dài + túi opp ; Kiểu dáng dài màu cam + túi opp ; Bà",
-        "tgt": "黑色短款＋opp袋 ; 黑色长款＋opp袋 ; 橙色长款＋opp袋 ; 汽车除尘刷小号（OPP袋） ; 汽车除尘刷小号 (带保护壳） ; 汽车除尘刷大号（OPP袋） ; 汽车除尘刷",
-        "qty": [
-          [
-            "bare",
-            3.0
-          ]
-        ]
-      },
-      {
-        "src": "[1:1200 loại tức thì] Rượu mẹ rửa xe tuyết rơi/ 4kg gói ; Công thức nâng cấp Nước rửa xe đ",
-        "tgt": "【1:1200速溶型】雪瀑洗车母液/8斤装 ; 升级款/水性洗车液母液1:500 兑水即用 ; 【升级款】1:150高泡洗车液大桶装36斤 ; 【升级款】1:150水蜡香波洗车液大",
-        "qty": [
-          [
-            "bare",
-            1.0
-          ],
-          [
-            "bare",
-            1.0
-          ],
-          [
-            "bare",
-            1.0
-          ],
-          [
-            "bare",
-            1.0
-          ],
-          [
-            "bare",
-            1.0
-          ],
-          [
-            "bare",
-            1.0
-          ],
-          [
-            "bare",
-            1.0
-          ],
-          [
-            "bare",
-            120.0
-          ],
-          [
-            "bare",
-            120.0
-          ],
-          [
-            "bare",
-            150.0
-          ],
-          [
-            "bare",
-            150.0
-          ],
-          [
-            "bare",
-            500.0
-          ],
-          [
-            "bare",
-            500.0
-          ],
-          [
-            "bare",
-            1200.0
-          ],
-          [
-            "mass",
-            4.0
-          ],
-          [
-            "mass",
-            4.0
-          ],
-          [
-            "mass",
-            18.0
-          ],
-          [
-            "mass",
-            18.0
-          ],
-          [
-            "mass",
-            18.0
-          ],
-          [
-            "mass",
-            18.0
-          ]
-        ]
-      },
-      {
-        "src": "Đầu bàn chải hai mặt + thanh nối nước (38,5cm~160cm) ; Đầu cọ hoa 5 mặt + que nối nước (38",
-        "tgt": "双面刷头+通水拼接杆(38.5cm~160cm) ; 5面开花刷头+通水拼接杆(38.5cm~160cm) ; 十二件套【通水拼接杆+2面刷+其他配件】 ; 十二件套【通水拼接杆+",
-        "qty": [
-          [
-            "bare",
-            2.0
-          ],
-          [
-            "bare",
-            5.0
-          ],
-          [
-            "bare",
-            5.0
-          ],
-          [
-            "bare",
-            5.0
-          ],
-          [
-            "bare",
-            5.0
-          ],
-          [
-            "bare",
-            5.0
-          ],
-          [
-            "bare",
-            5.0
-          ],
-          [
-            "bare",
-            12.0
-          ],
-          [
-            "bare",
-            12.0
-          ],
-          [
-            "bare",
-            15.0
-          ],
-          [
-            "bare",
-            18.0
-          ],
-          [
-            "bare",
-            18.0
-          ],
-          [
-            "length",
-            0.385
-          ],
-          [
-            "length",
-            0.385
-          ],
-          [
-            "length",
-            0.385
-          ],
-          [
-            "length",
-            1.01
-          ],
-          [
-            "length",
-            1.01
-          ],
-          [
-            "length",
-            1.27
-          ],
-          [
-            "length",
-            1.27
-          ],
-          [
-            "length",
-            1.27
-          ],
-          [
-            "length",
-            1.28
-          ],
-          [
-            "length",
-            1.28
-          ],
-          [
-            "length",
-            1.28
-          ],
-          [
-            "length",
-            1.6
-          ],
-          [
-            "length",
-            1.6
-          ],
-          [
-            "length",
-            1.6
-          ],
-          [
-            "length",
-            1.68
-          ],
-          [
-            "length",
-            1.68
-          ],
-          [
-            "length",
-            2.29
-          ],
-          [
-            "length",
-            2.29
-          ],
-          [
-            "length",
-            2.29
-          ],
-          [
-            "length",
-            3.0
-          ],
-          [
-            "length",
-            3.0
-          ],
-          [
-            "length",
-            3.0
-          ]
-        ]
-      },
-      {
-        "src": "Nước tẩy keo 350ml ; Nước tẩy keo 450ml1 ; Nước tẩy keo 450ml2",
-        "tgt": "粘胶去除剂350ml ; 粘胶去除剂450ml ; 不干胶清除剂450ml",
-        "qty": [
-          [
-            "volume",
-            0.35
-          ],
-          [
-            "volume",
-            0.45
-          ],
-          [
-            "volume",
-            0.45
-          ]
-        ]
+        "src": "/1",
+        "tgt": "/",
+        "qty": []
       }
     ],
     "examples_newly_flagged": [
       {
         "src": "Bàn chải cán tre số 1 ; Số 2 bàn chải đầu tròn tốt ; Số 3 bàn chải đầu tròn màu đen ; Bàn ",
         "tgt": "1号竹柄刷 ; 2号圆头刷好 ; 3号黑色圆头刷 ; 4号小尖头刷 ; 5号大尖头刷 ; 6号 双色尖头刷小号泡壳包装 ; 7号 双色尖头刷大号泡壳包装 ; 8号 弧形刷 ; 9号",
-        "missing": [
-          [
-            "count",
-            30.0
-          ]
-        ],
+        "missing": [],
         "extra": [
-          [
-            "bare",
-            30.0
-          ],
-          [
-            "count",
-            3.0
-          ],
-          [
-            "count",
-            3.0
-          ],
-          [
-            "count",
-            3.0
-          ],
-          [
-            "count",
-            5.0
-          ],
           [
             "length",
             0.0762
@@ -686,17 +361,13 @@
         ]
       },
       {
-        "src": "Gối đầu Shuxiang ; Shuxiang eo ; Bộ tựa lưng tựa đầu Shuxiang",
-        "tgt": "舒享头枕一个 ; 舒享腰靠一个 ; 舒享头枕腰靠套装",
+        "src": "Ba năm",
+        "tgt": "三年",
         "missing": [],
         "extra": [
           [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
+            "time",
+            94608000.0
           ]
         ]
       },
@@ -712,18 +383,13 @@
         ]
       },
       {
-        "src": "Màu đen ; Màu trắng ; Màu hồng ; Túi rác 1 cuộn 20 cái ; Thùng rác gắn trên ô tô [1 gói] ;",
-        "tgt": "黑色 ; 白色 ; 粉色 ; 垃圾袋1卷20个 ; 车载挂式垃圾桶【1个装】 ; 4L加厚可折叠垃圾桶1个【无盖】 ; 4L加厚可折叠垃圾桶1个【有盖】",
-        "missing": [
-          [
-            "count",
-            1.0
-          ]
-        ],
+        "src": "ba năm",
+        "tgt": "三年",
+        "missing": [],
         "extra": [
           [
-            "bare",
-            1.0
+            "time",
+            94608000.0
           ]
         ]
       },
@@ -739,45 +405,13 @@
         ]
       },
       {
-        "src": "Bộ phim 43PCS ; Bộ phim 13PCS ; Bộ phim 13 món ; Công cụ quay phim 18PCS ; Công cụ quay ph",
-        "tgt": "贴膜套装43PCS ; 贴膜套装13PCS ; 贴膜套装13件套 ; 贴膜工具18PCS ; 贴膜工具22PCS ; 贴膜工具7PCS ; 贴膜工具24PCS ; 贴膜工具10PC",
+        "src": "Ba năm",
+        "tgt": "三年",
         "missing": [],
         "extra": [
           [
-            "bare",
-            7.0
-          ],
-          [
-            "bare",
-            10.0
-          ],
-          [
-            "bare",
-            18.0
-          ],
-          [
-            "bare",
-            19.0
-          ],
-          [
-            "bare",
-            22.0
-          ],
-          [
-            "bare",
-            24.0
-          ],
-          [
-            "bare",
-            43.0
-          ],
-          [
-            "bare",
-            45.0
-          ],
-          [
-            "count",
-            13.0
+            "time",
+            94608000.0
           ]
         ]
       }
@@ -786,68 +420,11 @@
       {
         "src": "Bàn chải cán tre số 1 ; Số 2 bàn chải đầu tròn tốt ; Số 3 bàn chải đầu tròn màu đen ; Bàn ",
         "tgt": "1号竹柄刷 ; 2号圆头刷好 ; 3号黑色圆头刷 ; 4号小尖头刷 ; 5号大尖头刷 ; 6号 双色尖头刷小号泡壳包装 ; 7号 双色尖头刷大号泡壳包装 ; 8号 弧形刷 ; 9号",
-        "missing": [
-          [
-            "count",
-            30.0
-          ]
-        ],
+        "missing": [],
         "extra": [
-          [
-            "bare",
-            30.0
-          ],
-          [
-            "count",
-            3.0
-          ],
-          [
-            "count",
-            3.0
-          ],
-          [
-            "count",
-            3.0
-          ],
-          [
-            "count",
-            5.0
-          ],
           [
             "length",
             0.0762
-          ]
-        ]
-      },
-      {
-        "src": "00031",
-        "tgt": "0003",
-        "missing": [
-          [
-            "bare",
-            31.0
-          ]
-        ],
-        "extra": [
-          [
-            "bare",
-            3.0
-          ]
-        ]
-      },
-      {
-        "src": "00032",
-        "tgt": "0003",
-        "missing": [
-          [
-            "bare",
-            32.0
-          ]
-        ],
-        "extra": [
-          [
-            "bare",
-            3.0
           ]
         ]
       },
@@ -863,113 +440,55 @@
         ]
       },
       {
-        "src": "Tựa đầu Maybach [nâu hạt dẻ] một cặp ; Tựa đầu Maybach [mocha brown] một cặp ; Tựa đầu May",
-        "tgt": "迈巴赫头枕【栗棕色】一对装 ; 迈巴赫头枕【摩卡棕】一对装 ; 迈巴赫头枕【尊贵黑】一对装 ; 迈巴赫头枕【赭石棕】一对装 ; 迈巴赫头枕【酒红色】一对装 ; 迈巴赫头枕【米白色】",
+        "src": "ba năm",
+        "tgt": "三年",
         "missing": [],
         "extra": [
           [
-            "count",
+            "time",
+            94608000.0
+          ]
+        ]
+      },
+      {
+        "src": "Ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            94608000.0
+          ]
+        ]
+      },
+      {
+        "src": "【ST-221B】Màu cam - Đo áp suất màn hình kép + Áp suất lốp đặt trước + Tự động dừng khi đầy ",
+        "tgt": "【ST-221B】橙色-双屏测压+预设胎压+充满自停 ; 【ST-221B】双屏测压+预设胎压+充满自停 ; 【ST-221C】-无线数显+反向充电款 ; 【ST-221D】三用充",
+        "missing": [
+          [
+            "voltage",
+            5529.0
+          ]
+        ],
+        "extra": [
+          [
+            "voltage",
+            12.0
+          ],
+          [
+            "volume",
             1.0
-          ],
+          ]
+        ]
+      },
+      {
+        "src": "Ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
           [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            2.0
-          ],
-          [
-            "count",
-            2.0
-          ],
-          [
-            "count",
-            2.0
-          ],
-          [
-            "count",
-            2.0
-          ],
-          [
-            "count",
-            2.0
+            "time",
+            94608000.0
           ]
         ]
       },
@@ -985,33 +504,13 @@
         ]
       },
       {
-        "src": "9041",
-        "tgt": "904",
-        "missing": [
-          [
-            "bare",
-            9041.0
-          ]
-        ],
-        "extra": [
-          [
-            "bare",
-            904.0
-          ]
-        ]
-      },
-      {
-        "src": "Gối đầu Shuxiang ; Shuxiang eo ; Bộ tựa lưng tựa đầu Shuxiang",
-        "tgt": "舒享头枕一个 ; 舒享腰靠一个 ; 舒享头枕腰靠套装",
+        "src": "Cologne cổ điển ; Hương thơm Osmanthus vào tháng 8 ; Hương thơm Gardenia ; Nước hoa Hilton",
+        "tgt": "经典古龙 ; 八月桂花香 ; 栀子花香 ; 希尔顿香 ; 清新茉莉",
         "missing": [],
         "extra": [
           [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
+            "time",
+            20736000.0
           ]
         ]
       }
@@ -1020,40 +519,68 @@
   "tiki_units": {
     "label": "Tiki units (8B)",
     "pairs": 45652,
-    "pairs_with_quantity": 19671,
-    "coverage_pct": 43.09,
+    "pairs_with_quantity": 19669,
+    "coverage_pct": 43.08,
     "naive_match_pct": 92.46,
-    "quantity_match_pct": 84.41,
-    "both_match": 16326,
-    "rescued_by_quantity": 279,
-    "newly_flagged_by_quantity": 1862,
+    "quantity_match_pct": 94.26,
+    "both_match": 17262,
+    "rescued_by_quantity": 1278,
+    "newly_flagged_by_quantity": 924,
+    "newly_flagged_strong": 237,
     "examples_rescued": [
+      {
+        "src": "Bình đựng thức ăn giữ nhiệt inox 304 Elmich EL8337 dung tích 650ml",
+        "tgt": "不锈钢保温食品容器 Elmich EL8337 容量 650ml",
+        "qty": [
+          [
+            "volume",
+            0.65
+          ]
+        ]
+      },
+      {
+        "src": "[KoSuyTu] Giá Đỡ Điện Thoại 3 Trong 1 Kèm Pin Dự Phòng & Loa Bluetooth - Đa Năng Tiện Lợi ",
+        "tgt": "[KoSuyTu] 三合一手机支架带备用电池及蓝牙音箱-多功能便携式可调节360度角度兼容多种设备",
+        "qty": []
+      },
+      {
+        "src": "Hộp cơm nhựa 3 ngăn trong suốt LocknLock 750ml - LCB501 và 1L - LCB502 - 2 màu (Tím, Xanh)",
+        "tgt": "LocknLock 750ml 透明三格饭盒 - LCB501 和 1L - LCB502 - 2色（紫色，蓝色）",
+        "qty": [
+          [
+            "volume",
+            0.75
+          ],
+          [
+            "volume",
+            1.0
+          ]
+        ]
+      },
+      {
+        "src": "Hộp cơm 2 tầng inox 304 Elmich EL8313 (1.5L) - Hàng chính hãng",
+        "tgt": "Elmich EL8313 304不锈钢双层饭盒 (1.5L) - 正品",
+        "qty": [
+          [
+            "volume",
+            1.5
+          ]
+        ]
+      },
+      {
+        "src": "- Không sử dụng sản phẩm để đựng sữa (thức ăn trẻ em), đá khô và đồ uống có ga. - Vui lòng",
+        "tgt": "- 请勿将产品用于储存牛奶（儿童食品）、干冰和碳酸饮料。- 请在首次使用前彻底清洗瓶子。- 清洁瓶子时，请勿使用刷子和研磨剂。- 请勿在洗碗机、微波炉或烤箱中使用。- 请勿对瓶盖进",
+        "qty": []
+      },
       {
         "src": "SET 4 Đệm Lót Chân Bàn Ghế Vuông Tròn Chống Ồn Hamart Bọc Chân Ghế Gỗ Silicone Chống Xước ",
         "tgt": "Hamart 四件套 防噪音 圆形方形桌脚垫 桌椅脚垫 木脚椅套 硅胶防刮地板",
-        "qty": [
-          [
-            "bare",
-            4.0
-          ]
-        ]
+        "qty": []
       },
       {
         "src": "- Chỉ cần ấn đầu bình gas nối với đầu nối bằng nhựa vào đầu lon gas, nhấn đầu nối vào vị t",
         "tgt": "只需将气罐头直接连接到塑料接头，然后将接头插入打火机气罐的充气口，垂直方向进行充气。平均来说，给一个打火机充气大约需要5-10秒。配有5个专用充气头，可适用于目前所有类型的打火机。",
         "qty": [
-          [
-            "bare",
-            5.0
-          ],
-          [
-            "count",
-            1.0
-          ],
-          [
-            "count",
-            1.0
-          ],
           [
             "time",
             5.0
@@ -1065,232 +592,147 @@
         ]
       },
       {
-        "src": "Bộ dao kéo 05 món Elmich diamond EL8404",
-        "tgt": "Elmich diamond EL8404 5件套刀具",
+        "src": "Chảo inox 3 lớp nguyên khối Elmich Trimax EL 3846OL16 size 16cm",
+        "tgt": "Elmich Trimax EL 3846OL16 三层不锈钢整块锅 16cm",
         "qty": [
-          [
-            "bare",
-            5.0
-          ]
-        ]
-      },
-      {
-        "src": "Hà Nội A0 82x112 Cũ",
-        "tgt": "复合木线条 老款 82x112",
-        "qty": [
-          [
-            "bare",
-            82.0
-          ]
-        ]
-      },
-      {
-        "src": "Bồn cầu nguyên khối Juno Sofa Yoshi nano kháng khuẩn CTT05 650 x 360 x 745mm",
-        "tgt": "Juno Sofa Yoshi 纳米抗菌整体浴室 650 x 360 x 745mm",
-        "qty": [
-          [
-            "bare",
-            650.0
-          ],
           [
             "length",
-            0.36
-          ],
-          [
-            "length",
-            0.745
-          ]
-        ]
-      },
-      {
-        "src": "Máy xông tinh dầu & Khuếch tán tinh dầu trực tiếp AN Naturals | Sử dụng không gian dưới 50",
-        "tgt": "AN Naturals 芳香扩香机 & 直接扩香机 | 适用于50平方米以下空间",
-        "qty": [
-          [
-            "area",
-            50.0
-          ]
-        ]
-      },
-      {
-        "src": "\"Ga Gối 3 Món Nỉ Nhung CoCo siêu ấm - lựa chọn hoàn hảo cho mùa đông\"",
-        "tgt": "三件套毛绒绒CoCo超保暖枕套 - 冬季完美选择",
-        "qty": [
-          [
-            "bare",
-            3.0
-          ]
-        ]
-      },
-      {
-        "src": "Bộ 06 ly",
-        "tgt": "6只杯",
-        "qty": [
-          [
-            "count",
-            6.0
+            0.16
           ]
         ]
       }
     ],
     "examples_newly_flagged": [
       {
+        "src": "Bình Nước Aqua 2.6L - Locknlock - 2 Màu (Xanh, Trắng) - HAP739",
+        "tgt": "Locknlock 水壶 2.6L - 2色 (蓝, 白) - HAP739",
+        "missing": [],
+        "extra": [
+          [
+            "volume",
+            2.0
+          ]
+        ]
+      },
+      {
         "src": "CÁCH LẤY VIÊN STORM RA KHỎI TÚI ĐÚNG CÁCH Dùng kéo cắt góc túi Rắc viên thuốc ra khỏi túi ",
         "tgt": "正确取出STORM药丸的方法 用剪刀剪开袋子 从袋中抖出药丸（避免用手直接接触药丸） 拿取药丸时应戴手套 使用STORM灭鼠药在稻田、玉米田的方法 放置位置：田边的杂草丛、洞口、鼠",
-        "missing": [
+        "missing": [],
+        "extra": [
           [
-            "bare",
-            2.0
+            "length",
+            5.0
           ],
           [
-            "bare",
-            2.0
+            "length",
+            10.0
+          ]
+        ]
+      },
+      {
+        "src": "2 ổ 3 nguồn 2USB 1C",
+        "tgt": "2口3电源2USB1C",
+        "missing": [
+          [
+            "temperature",
+            1.0
           ]
         ],
         "extra": []
       },
       {
-        "src": "Xuất xứ nhang trầm hương: Pleiku, Việt Nam Thành phần nhang trầm hương: Bột Trầm Hương tự ",
-        "tgt": "沉香香薰产地：越南平定市，沉香香薰成分：在沉香木加工成环的过程中自然产生的沉香木粉，含95%沉香木粉和5%由Bời Lời树制成的粘合剂。沉香木龄约7-12年，含油量适中，香味清新",
+        "src": "Nệm Ngủ Trải Sàn Xuất Nhật 1m / 1m2 / 1m4 / 1m6 / 1m8 Có Thể Gấp Gọn Dễ Di Chuyển Tặng Kèm",
+        "tgt": "日式地垫床垫 1米 / 1米2 / 1米4 / 1米6 / 1米8 可折叠易携带 赠送床单",
         "missing": [
           [
-            "count",
-            80.0
+            "area",
+            1.0
+          ]
+        ],
+        "extra": [
+          [
+            "length",
+            1.0
           ],
           [
-            "count",
-            100.0
+            "length",
+            2.0
           ],
           [
-            "count",
-            100.0
-          ]
-        ],
-        "extra": [
-          [
-            "bare",
-            80.0
+            "length",
+            4.0
           ],
           [
-            "bare",
-            100.0
+            "length",
+            6.0
+          ]
+        ]
+      },
+      {
+        "src": "Hộp Đựng Thuốc 20Đ Dài Slim Nắp Trượt Kim Loại Nhiều Màu",
+        "tgt": "药盒 20片 长款 纤细 滑盖 金属多色",
+        "missing": [
+          [
+            "currency",
+            20.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Tránh ngâm nước 24/24",
+        "tgt": "避免24小时浸泡",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            86400.0
+          ]
+        ]
+      },
+      {
+        "src": "từ 6 - 8 tiếng",
+        "tgt": "最长寿命 6 - 8 小时",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            21600.0
           ],
           [
-            "bare",
-            100.0
+            "time",
+            28800.0
           ]
         ]
       },
       {
-        "src": "12 Ổ 2TypeC 2USB 4m",
-        "tgt": "12口 2TypeC 2USB 4米",
-        "missing": [
-          [
-            "count",
-            12.0
-          ]
-        ],
+        "src": "L-Xanh-105mm",
+        "tgt": "L-蓝色-105mm",
+        "missing": [],
         "extra": [
           [
-            "bare",
-            12.0
-          ]
-        ]
-      },
-      {
-        "src": "4 Ổ 1TypeC 2USB 1.6m",
-        "tgt": "4口 1TypeC 2USB 1.6m",
-        "missing": [
-          [
-            "count",
-            4.0
-          ]
-        ],
-        "extra": [
-          [
-            "bare",
-            4.0
-          ]
-        ]
-      },
-      {
-        "src": "4 Ổ 1TypeC 2USB 2.4m",
-        "tgt": "4口 1TypeC 2USB 2.4米",
-        "missing": [
-          [
-            "count",
-            4.0
-          ]
-        ],
-        "extra": [
-          [
-            "bare",
-            4.0
-          ]
-        ]
-      },
-      {
-        "src": "8 Ổ 2TypeC 2USB 3m",
-        "tgt": "8口 2TypeC 2USB 3米",
-        "missing": [
-          [
-            "count",
-            8.0
-          ]
-        ],
-        "extra": [
-          [
-            "bare",
-            8.0
-          ]
-        ]
-      },
-      {
-        "src": "2 ổ 1 nguồn",
-        "tgt": "2孔1电源",
-        "missing": [
-          [
-            "count",
-            2.0
-          ]
-        ],
-        "extra": [
-          [
-            "bare",
-            2.0
-          ]
-        ]
-      },
-      {
-        "src": "2 ổ 2USB 1C 12W",
-        "tgt": "2个USB 1C 12W",
-        "missing": [
-          [
-            "count",
-            2.0
-          ]
-        ],
-        "extra": [
-          [
-            "bare",
-            2.0
+            "length",
+            0.105
           ]
         ]
       }
     ],
     "examples_mismatch": [
       {
+        "src": "Bình Nước Aqua 2.6L - Locknlock - 2 Màu (Xanh, Trắng) - HAP739",
+        "tgt": "Locknlock 水壶 2.6L - 2色 (蓝, 白) - HAP739",
+        "missing": [],
+        "extra": [
+          [
+            "volume",
+            2.0
+          ]
+        ]
+      },
+      {
         "src": "\"- Giữ nóng: ~4 tiếng (trên 600C) - Giữ lạnh: ~15 tiếng (dưới 110C) \"",
         "tgt": "保温能力: ~4小时 (高于60摄氏度) ~15小时 (低于110摄氏度)",
         "missing": [
-          [
-            "bare",
-            4.0
-          ],
-          [
-            "bare",
-            15.0
-          ],
           [
             "temperature",
             600.0
@@ -1312,30 +754,19 @@
         ]
       },
       {
-        "src": "Bình đựng thức ăn giữ nhiệt inox 304 Elmich EL8337 dung tích 650ml",
-        "tgt": "不锈钢保温食品容器 Elmich EL8337 容量 650ml",
-        "missing": [
-          [
-            "bare",
-            304.0
-          ]
-        ],
-        "extra": []
-      },
-      {
         "src": "CÁCH LẤY VIÊN STORM RA KHỎI TÚI ĐÚNG CÁCH Dùng kéo cắt góc túi Rắc viên thuốc ra khỏi túi ",
         "tgt": "正确取出STORM药丸的方法 用剪刀剪开袋子 从袋中抖出药丸（避免用手直接接触药丸） 拿取药丸时应戴手套 使用STORM灭鼠药在稻田、玉米田的方法 放置位置：田边的杂草丛、洞口、鼠",
-        "missing": [
+        "missing": [],
+        "extra": [
           [
-            "bare",
-            2.0
+            "length",
+            5.0
           ],
           [
-            "bare",
-            2.0
+            "length",
+            10.0
           ]
-        ],
-        "extra": []
+        ]
       },
       {
         "src": "IN24M5",
@@ -1353,82 +784,64 @@
         ]
       },
       {
-        "src": "Xuất xứ nhang trầm hương: Pleiku, Việt Nam Thành phần nhang trầm hương: Bột Trầm Hương tự ",
-        "tgt": "沉香香薰产地：越南平定市，沉香香薰成分：在沉香木加工成环的过程中自然产生的沉香木粉，含95%沉香木粉和5%由Bời Lời树制成的粘合剂。沉香木龄约7-12年，含油量适中，香味清新",
+        "src": "Chiếu Mây Điều Hòa Thủ Công Cao Cấp – Sợi Mây Tự Nhiên 5kg/Chiếc, Gấp Gọn Được, Giặt Được,",
+        "tgt": "云朵凉席 优质手工制作 – 自然云纤维 5公斤/件，可折叠，可水洗，夏季清凉 – 尺寸 1.6米 / 1.8米 / 2.2米 - HÀNG CHÍNH HÃNG MINIIN",
         "missing": [
           [
-            "count",
-            80.0
-          ],
-          [
-            "count",
-            100.0
-          ],
-          [
-            "count",
-            100.0
+            "length",
+            1.0
           ]
         ],
         "extra": [
           [
-            "bare",
-            80.0
+            "length",
+            1.6
           ],
           [
-            "bare",
-            100.0
+            "length",
+            1.8
           ],
           [
-            "bare",
-            100.0
+            "length",
+            2.2
           ]
         ]
       },
       {
-        "src": "12 Ổ 2TypeC 2USB 4m",
-        "tgt": "12口 2TypeC 2USB 4米",
+        "src": "2 ổ 3 nguồn 2USB 1C",
+        "tgt": "2口3电源2USB1C",
         "missing": [
           [
-            "count",
-            12.0
+            "temperature",
+            1.0
           ]
         ],
+        "extra": []
+      },
+      {
+        "src": "Chảo inox 3 lớp nguyên khối Elmich Trimax EL-3846 size 26",
+        "tgt": "Elmich Trimax EL-3846 三层不锈钢整块锅 26cm",
+        "missing": [],
         "extra": [
           [
-            "bare",
-            12.0
+            "length",
+            0.26
           ]
         ]
       },
       {
-        "src": "4 Ổ 1TypeC 2USB 1.6m",
-        "tgt": "4口 1TypeC 2USB 1.6m",
+        "src": "Loại 1m1 2 tầng",
+        "tgt": "1.1米 2层",
         "missing": [
           [
-            "count",
-            4.0
+            "length",
+            1.0
           ]
         ],
         "extra": [
           [
-            "bare",
-            4.0
-          ]
-        ]
-      },
-      {
-        "src": "4 Ổ 1TypeC 2USB 2.4m",
-        "tgt": "4口 1TypeC 2USB 2.4米",
-        "missing": [
-          [
-            "count",
-            4.0
-          ]
-        ],
-        "extra": [
-          [
-            "bare",
-            4.0
+            "length",
+            1.1
           ]
         ]
       }
