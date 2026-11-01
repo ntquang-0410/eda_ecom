@@ -1,22 +1,22 @@
 {
   "qwen3-0.6b": {
-    "full.parquet": 1354,
-    "train.parquet": 1325,
-    "units.parquet": 1472
+    "full.parquet": 1,
+    "train.parquet": 1,
+    "units.parquet": 1
   },
   "qwen3-1.7b": {
-    "full.parquet": 2312,
-    "train.parquet": 2299,
-    "units.parquet": 2478
+    "full.parquet": 1,
+    "train.parquet": 1,
+    "units.parquet": 1
   },
   "qwen3-4b": {
-    "full.parquet": 2538,
-    "train.parquet": 2521,
-    "units.parquet": 2739
+    "full.parquet": 2,
+    "train.parquet": 2,
+    "units.parquet": 2
   },
   "qwen3-8b": {
-    "full.parquet": 2639,
-    "train.parquet": 2622,
-    "units.parquet": 2845
+    "full.parquet": 2,
+    "train.parquet": 2,
+    "units.parquet": 2
   }
 }

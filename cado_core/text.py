@@ -172,6 +172,7 @@ _FULLWIDTH_ALNUM = str.maketrans(
 _INVISIBLE_RE = re.compile(
     r"[\u200b-\u200f\u2028-\u202f\u2060-\u2065\ufeff\u00ad\u034f\u061c\u180e"
     r"\u202a-\u202e\u2066-\u2069\ufe00-\ufe0f\U000E0100-\U000E01EF"
+    r"\ue000-\uf8ff"
     r"\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f]"
 )
 _SPECIAL_SPACE_RE = re.compile(r"[\u2000-\u200a\u202f\u205f\u3000\u00a0]")
@@ -179,7 +180,11 @@ _EMOJI_RE = re.compile(r"[\U0001F300-\U0001FAFF\u2600-\u27BF\u2B00-\u2BFF\uFE0F]
 _TEMPLATE_RE = re.compile(r"\{([^{}\n]{1,60})\}")
 _REPEAT_PUNCT_RE = re.compile(r"([!?。，,;:])\1+")
 _LONG_DOTS_RE = re.compile(r"\.{4,}")
-_HTML_TAG_RE = re.compile(r"<[^>\n]{1,80}>")
+_HTML_TAG_RE = re.compile(r"</?[a-zA-Z][^>\n]{0,80}>")
+_HTML_ENTITY_RE = re.compile(
+    r"&(amp|lt|gt|quot|apos|nbsp|copy|reg|trade|hellip|mdash|ndash|ldquo|rdquo"
+    r"|lsquo|rsquo|times|divide|deg|middot|bull|laquo|raquo|#\d+|#x[0-9a-fA-F]+);"
+)
 _ESCAPE_RE = re.compile(r"\\n|\\t|\\u[0-9a-fA-F]{4}")
 
 _BRACKET_PAIRS = [("(", ")"), ("[", "]"), ("{", "}"), ("<", ">"), ("《", "》"),
@@ -222,6 +227,7 @@ def clean_noise_characters(text: object) -> str:
     value = value.translate(_FULLWIDTH_ALNUM)
     value = value.translate(_BRACKET_MAP)
     value = _HTML_TAG_RE.sub(" ", value)
+    value = _HTML_ENTITY_RE.sub(" ", value)
     value = _INVISIBLE_RE.sub("", value)
     value = _SPECIAL_SPACE_RE.sub(" ", value)
     value = _EMOJI_RE.sub(" ", value)
