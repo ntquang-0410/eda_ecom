@@ -137,3 +137,19 @@ def remove_words(text: object, words: set[str] | list[str] | tuple[str, ...]) ->
 
 # Alias giữ tương thích với code cũ.
 clean_text = remove_words
+
+# Ngoặc trang trí thường gặp trong dữ liệu TMĐT -> ASCII, theo quy ước bitext.
+_BRACKET_MAP = str.maketrans({
+    "【": "[", "】": "]",
+    "〖": "[", "〗": "]",
+    "〔": "[", "〕": "]",
+    "丨": "|",
+})
+
+
+def normalize_brackets(text: object) -> str:
+    """Chuẩn hoá ngoặc trang trí: 【】〖〗〔〕 -> [] và 丨 -> |."""
+    if not isinstance(text, str):
+        return ""
+    return text.translate(_BRACKET_MAP)
+
