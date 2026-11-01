@@ -99,7 +99,8 @@ def main() -> int:
             "products": int(out["product_id"].nunique()),
             "split": out["split"].value_counts().to_dict(),
             "unit_type": out["unit_type"].value_counts().to_dict(),
-            "usable": int((out["qc_status"] != "still_untranslated").sum()),
+            "usable": int(out["qc_status"].isin(
+                ["ok", "repaired", "repaired_v2", "recovered_json"]).sum()),
             "file": str(out_path),
         }
         print(model, json.dumps(report[model], ensure_ascii=False))

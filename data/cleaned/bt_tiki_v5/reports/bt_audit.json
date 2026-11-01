@@ -1,0 +1,187 @@
+{
+  "models": {
+    "qwen3-0.6b": {
+      "rows": 29446,
+      "dup_cache_key": 0,
+      "null_cache_key": 0,
+      "empty_source": 0,
+      "empty_target": 322,
+      "target_cjk": 25038,
+      "target_cjk_pct": 85.03,
+      "still_untranslated": 0,
+      "qc_status": {
+        "ok": 27535,
+        "needs_review": 1911
+      },
+      "model_id_unique": [
+        "qwen3-0.6b"
+      ],
+      "prompt_versions": {
+        "plan_b_rtx_v5": 29446
+      },
+      "repair_pass": {
+        "0": 29446
+      },
+      "json_ok_false": 322,
+      "value_class": {
+        "text": 29446
+      },
+      "key_vi_empty": 13092
+    },
+    "qwen3-1.7b": {
+      "rows": 29446,
+      "dup_cache_key": 0,
+      "null_cache_key": 0,
+      "empty_source": 0,
+      "empty_target": 46,
+      "target_cjk": 26669,
+      "target_cjk_pct": 90.57,
+      "still_untranslated": 0,
+      "qc_status": {
+        "ok": 29029,
+        "needs_review": 417
+      },
+      "model_id_unique": [
+        "qwen3-1.7b"
+      ],
+      "prompt_versions": {
+        "plan_b_rtx_v5": 29446
+      },
+      "repair_pass": {
+        "0": 29446
+      },
+      "json_ok_false": 46,
+      "value_class": {
+        "text": 29446
+      },
+      "key_vi_empty": 13092
+    },
+    "qwen3-4b": {
+      "rows": 29446,
+      "dup_cache_key": 0,
+      "null_cache_key": 0,
+      "empty_source": 0,
+      "empty_target": 10,
+      "target_cjk": 27331,
+      "target_cjk_pct": 92.82,
+      "still_untranslated": 0,
+      "qc_status": {
+        "ok": 29353,
+        "needs_review": 93
+      },
+      "model_id_unique": [
+        "qwen3-4b"
+      ],
+      "prompt_versions": {
+        "plan_b_rtx_v5": 29446
+      },
+      "repair_pass": {
+        "0": 29446
+      },
+      "json_ok_false": 10,
+      "value_class": {
+        "text": 29446
+      },
+      "key_vi_empty": 13092
+    },
+    "qwen3-8b": {
+      "rows": 29446,
+      "dup_cache_key": 0,
+      "null_cache_key": 0,
+      "empty_source": 0,
+      "empty_target": 23,
+      "target_cjk": 27859,
+      "target_cjk_pct": 94.61,
+      "still_untranslated": 0,
+      "qc_status": {
+        "ok": 29393,
+        "needs_review": 53
+      },
+      "model_id_unique": [
+        "qwen3-8b"
+      ],
+      "prompt_versions": {
+        "plan_b_rtx_v5": 29446
+      },
+      "repair_pass": {
+        "0": 29446
+      },
+      "json_ok_false": 23,
+      "value_class": {
+        "text": 29446
+      },
+      "key_vi_empty": 13092
+    }
+  },
+  "cross_model": {
+    "same_key_set": true,
+    "key_set_sizes": {
+      "qwen3-0.6b": 29446,
+      "qwen3-1.7b": 29446,
+      "qwen3-4b": 29446,
+      "qwen3-8b": 29446
+    },
+    "source_mismatch_qwen3-1.7b": 0,
+    "source_mismatch_qwen3-4b": 0,
+    "source_mismatch_qwen3-8b": 0
+  },
+  "source": {
+    "cache_rows": 40646,
+    "cache_mt_keys": 29446,
+    "dataset_keys": 29446,
+    "missing_in_dataset": 0,
+    "extra_in_dataset": 0
+  },
+  "units": {
+    "mt_units": 45709,
+    "mapped_units": 45709,
+    "unmapped_units": 0,
+    "mapped_pct": 100.0,
+    "products_total": 13200,
+    "products_covered": 13200,
+    "split_units": {
+      "dev": 4824,
+      "test": 4451,
+      "train": 36434
+    },
+    "split_mapped": {
+      "dev": 4824,
+      "test": 4451,
+      "train": 36434
+    }
+  },
+  "hygiene": {
+    "qwen3-0.6b": {
+      "target_control_chars": 0,
+      "target_mojibake": 0,
+      "source_mojibake": 0,
+      "target_leading_trailing_space": 0,
+      "target_equals_source": 2570,
+      "target_vi_diacritics": 3039
+    },
+    "qwen3-1.7b": {
+      "target_control_chars": 0,
+      "target_mojibake": 0,
+      "source_mojibake": 0,
+      "target_leading_trailing_space": 0,
+      "target_equals_source": 2155,
+      "target_vi_diacritics": 969
+    },
+    "qwen3-4b": {
+      "target_control_chars": 0,
+      "target_mojibake": 0,
+      "source_mojibake": 0,
+      "target_leading_trailing_space": 0,
+      "target_equals_source": 1868,
+      "target_vi_diacritics": 583
+    },
+    "qwen3-8b": {
+      "target_control_chars": 0,
+      "target_mojibake": 0,
+      "source_mojibake": 0,
+      "target_leading_trailing_space": 0,
+      "target_equals_source": 1340,
+      "target_vi_diacritics": 545
+    }
+  }
+}

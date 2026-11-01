@@ -1,0 +1,74 @@
+{
+  "qwen3-0.6b": {
+    "units": 45709,
+    "unmapped": 0,
+    "cache_key_recomputed_mismatch": 0,
+    "dup_pair_id": 0,
+    "products": 13200,
+    "split": {
+      "train": 36434,
+      "dev": 4824,
+      "test": 4451
+    },
+    "unit_type": {
+      "attribute": 32509,
+      "title": 13200
+    },
+    "usable": 43598,
+    "file": "data/cleaned/bt_tiki_v5/qwen3-0.6b/units.parquet"
+  },
+  "qwen3-1.7b": {
+    "units": 45709,
+    "unmapped": 0,
+    "cache_key_recomputed_mismatch": 0,
+    "dup_pair_id": 0,
+    "products": 13200,
+    "split": {
+      "train": 36434,
+      "dev": 4824,
+      "test": 4451
+    },
+    "unit_type": {
+      "attribute": 32509,
+      "title": 13200
+    },
+    "usable": 45219,
+    "file": "data/cleaned/bt_tiki_v5/qwen3-1.7b/units.parquet"
+  },
+  "qwen3-4b": {
+    "units": 45709,
+    "unmapped": 0,
+    "cache_key_recomputed_mismatch": 0,
+    "dup_pair_id": 0,
+    "products": 13200,
+    "split": {
+      "train": 36434,
+      "dev": 4824,
+      "test": 4451
+    },
+    "unit_type": {
+      "attribute": 32509,
+      "title": 13200
+    },
+    "usable": 45612,
+    "file": "data/cleaned/bt_tiki_v5/qwen3-4b/units.parquet"
+  },
+  "qwen3-8b": {
+    "units": 45709,
+    "unmapped": 0,
+    "cache_key_recomputed_mismatch": 0,
+    "dup_pair_id": 0,
+    "products": 13200,
+    "split": {
+      "train": 36434,
+      "dev": 4824,
+      "test": 4451
+    },
+    "unit_type": {
+      "attribute": 32509,
+      "title": 13200
+    },
+    "usable": 45652,
+    "file": "data/cleaned/bt_tiki_v5/qwen3-8b/units.parquet"
+  }
+}
