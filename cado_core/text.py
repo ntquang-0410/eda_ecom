@@ -153,3 +153,83 @@ def normalize_brackets(text: object) -> str:
         return ""
     return text.translate(_BRACKET_MAP)
 
+# ── Chuẩn hoá ký tự nhiễu ──────────────────────────────────────────────
+_BRACKET_MAP = str.maketrans({
+    "【": "[", "】": "]",
+    "〖": "[", "〗": "]",
+    "〔": "[", "〕": "]",
+    "［": "[", "］": "]",
+    "｛": "{", "｝": "}",
+    "（": "(", "）": ")",
+    "〈": "<", "〉": ">",
+    "丨": "|",
+})
+_FULLWIDTH_ALNUM = str.maketrans(
+    {chr(0xFF10 + i): str(i) for i in range(10)}
+    | {chr(0xFF21 + i): chr(0x41 + i) for i in range(26)}
+    | {chr(0xFF41 + i): chr(0x61 + i) for i in range(26)}
+)
+_INVISIBLE_RE = re.compile(
+    r"[\u200b-\u200f\u2028-\u202f\u2060-\u2065\ufeff\u00ad\u034f\u061c\u180e"
+    r"\u202a-\u202e\u2066-\u2069\ufe00-\ufe0f\U000E0100-\U000E01EF"
+    r"\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f]"
+)
+_SPECIAL_SPACE_RE = re.compile(r"[\u2000-\u200a\u202f\u205f\u3000\u00a0]")
+_EMOJI_RE = re.compile(r"[\U0001F300-\U0001FAFF\u2600-\u27BF\u2B00-\u2BFF\uFE0F]")
+_TEMPLATE_RE = re.compile(r"\{([^{}\n]{1,60})\}")
+_REPEAT_PUNCT_RE = re.compile(r"([!?。，,;:])\1+")
+_LONG_DOTS_RE = re.compile(r"\.{4,}")
+_HTML_TAG_RE = re.compile(r"<[^>\n]{1,80}>")
+_ESCAPE_RE = re.compile(r"\\n|\\t|\\u[0-9a-fA-F]{4}")
+
+_BRACKET_PAIRS = [("(", ")"), ("[", "]"), ("{", "}"), ("<", ">"), ("《", "》"),
+                  ("「", "」"), ("『", "』")]
+
+
+def normalize_brackets(text: object) -> str:
+    """Chuẩn hoá ngoặc full-width/trang trí về ASCII."""
+    if not isinstance(text, str):
+        return ""
+    return text.translate(_BRACKET_MAP)
+
+
+def remove_unmatched_brackets(text: str) -> str:
+    """Bỏ ngoặc lẻ (không có cặp) trong cùng một chuỗi."""
+    for opener, closer in _BRACKET_PAIRS:
+        if text.count(opener) == text.count(closer):
+            continue
+        stack: list[int] = []
+        drop: set[int] = set()
+        for index, char in enumerate(text):
+            if char == opener:
+                stack.append(index)
+            elif char == closer:
+                if stack:
+                    stack.pop()
+                else:
+                    drop.add(index)
+        drop.update(stack)
+        if drop:
+            text = "".join(ch for i, ch in enumerate(text) if i not in drop)
+    return text
+
+
+def clean_noise_characters(text: object) -> str:
+    """Chuẩn hoá/loại ký tự nhiễu; giữ dấu câu và ký hiệu có nghĩa."""
+    if not isinstance(text, str):
+        return ""
+    value = unicodedata.normalize("NFC", text)
+    value = value.translate(_FULLWIDTH_ALNUM)
+    value = value.translate(_BRACKET_MAP)
+    value = _HTML_TAG_RE.sub(" ", value)
+    value = _INVISIBLE_RE.sub("", value)
+    value = _SPECIAL_SPACE_RE.sub(" ", value)
+    value = _EMOJI_RE.sub(" ", value)
+    value = _TEMPLATE_RE.sub(r"\1", value)
+    value = _ESCAPE_RE.sub(" ", value)
+    value = _REPEAT_PUNCT_RE.sub(r"\1", value)
+    value = _LONG_DOTS_RE.sub("...", value)
+    value = remove_unmatched_brackets(value)
+    value = re.sub(r"[ \t]{2,}", " ", value)
+    return value.strip()
+

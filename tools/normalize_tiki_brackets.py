@@ -14,7 +14,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from cado_core.text import normalize_brackets
+from cado_core.text import clean_noise_characters
 
 MODELS = ("qwen3-0.6b", "qwen3-1.7b", "qwen3-4b", "qwen3-8b")
 FILES = ("full.parquet", "train.parquet", "units.parquet")
@@ -40,7 +40,7 @@ def main() -> int:
                 if column not in df.columns:
                     continue
                 before = df[column].fillna("").astype(str)
-                after = before.map(normalize_brackets)
+                after = before.map(clean_noise_characters)
                 changed += int((before != after).sum())
                 df[column] = after
             df.to_parquet(path, index=False)

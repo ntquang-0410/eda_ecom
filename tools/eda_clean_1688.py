@@ -31,7 +31,7 @@ import unicodedata
 from collections import Counter
 from pathlib import Path
 
-from cado_core.text import normalize_brackets, _BRACKET_MAP
+from cado_core.text import clean_noise_characters, normalize_brackets
 
 import matplotlib
 matplotlib.use("Agg")
@@ -56,19 +56,13 @@ NUM = re.compile(r"\d+")
 
 
 def clean_text(value, keep_newlines: bool = False) -> str:
-    text = html.unescape(str(value or ""))
-    text = TAG.sub(" ", text)
-    text = unicodedata.normalize("NFC", text)
-    text = text.translate(_BRACKET_MAP)
-    text = ZW.sub("", text)
-    text = CTRL.sub(" ", text)
+    text = clean_noise_characters(html.unescape(str(value or "")))
     if keep_newlines:
-        text = re.sub(r"[ \t\u00a0]+", " ", text)
         text = re.sub(r"\n{3,}", "\n\n", text)
         text = "\n".join(line.strip() for line in text.split("\n"))
     else:
-        text = SPACE.sub(" ", text)
-    return text.strip()
+        text = re.sub(r"\s+", " ", text).strip()
+    return text
 
 
 def as_list(values):

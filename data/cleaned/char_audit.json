@@ -1,0 +1,911 @@
+{
+  "1688.title_vi_clean": {
+    "label": "title_vi_clean",
+    "rows": 16133,
+    "categories": {
+      "symbols": {
+        "rows": 561,
+        "chars": 654,
+        "examples": [
+          "Gối tựa đầu dùng cho xe Mercedes-Benz S-Class Maybach kê cổ E300LC260L lưng GLC đồ trang t",
+          "Găng tay rửa xe đánh bóng và tẩy lông giả len Găng tay rửa xe găng tay hai mặt R-0028 dụng",
+          "Thích hợp cho hộp đựng khăn giấy ô tô Mercedes-Benz E-class e300A-class C-class glc260/GLB"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 10,
+        "examples": [
+          "Phối và kết hợp 60 miếng mỗi hộp] Mười loại Lisu Lisu 60 miếng, mặt nạ ràng buộc ren bệnh ",
+          "Nhà sản xuất) 377 Mặt nạ làm trắng và chống nhăn Niacinamide Chứng nhận đặc biệt Mặt nạ là",
+          "Bông Tân Cương] Áo thun nam 100% cotton ngắn tay kiểu mới mùa hè 2024 cổ tròn màu trơn rộn"
+        ]
+      }
+    }
+  },
+  "1688.title_zh_clean": {
+    "label": "title_zh_clean",
+    "rows": 16133,
+    "categories": {
+      "symbols": {
+        "rows": 369,
+        "chars": 428,
+        "examples": [
+          "仿羊毛抛光打蜡洗车手套洗车手套双面手套车用清洗工具R-0028",
+          "11寸4K+2.5K流媒体摄像头后视镜GPS高清5Gwifi行车记录仪",
+          "C309-3镜头录像行车记录仪高清1080P车前车内车后同时录像多国语"
+        ]
+      },
+      "mixed_script": {
+        "rows": 5877,
+        "examples": [
+          "适用奔驰汽车头枕S级迈巴赫护颈枕E300LC260L腰靠GLC车内装饰用品",
+          "升级2L喷壶泡沫器众横洗车喷壶手动浇花喷水发泡器高压洗车工具",
+          "跨境新品Nature's Birds 装饰礼品2D亚克力装饰挂件"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 11,
+        "examples": [
+          "混搭60片一箱]十款丽素丽速60片院线装面膜备注指定蓝护三文鱼",
+          "厂家)377烟酰胺盒装美白面膜贴片 补水保湿紧致祛斑护肤品化妆品",
+          "厂家)山茶花氨基酸洗面奶温和深层清洁洁面乳男女士护肤品产品"
+        ]
+      }
+    }
+  },
+  "1688.description_vi_clean": {
+    "label": "description_vi_clean",
+    "rows": 16133,
+    "categories": {
+      "variation": {
+        "rows": 2,
+        "chars": 11,
+        "examples": [
+          "Chất liệu: PET; Chức năng: Có thể tháo rời; Danh mục sản phẩm: Hộp thuốc; Thương hiệu: Khô",
+          "vật liệu: thép không gỉ 304; Xử lý vật liệu: gỗ; thương hiệu: Tian Fengying; Chức năng: Ch"
+        ]
+      },
+      "html": {
+        "rows": 8,
+        "chars": 8,
+        "examples": [
+          "Chất liệu: Vải Oxford; Chức năng: Chịu mài mòn, Giảm gánh nặng; Công suất: 20-35L; Kích th",
+          "Vật liệu: vải oxford; chức năng: thoáng khí; Kích thước máy tính: 15inch; thương hiệu: khá",
+          "vật liệu: da thật; Chức năng: không thấm nước, Chống mài mòn; Đặc điểm vỏ não: Da lộn; Kết"
+        ]
+      },
+      "pua": {
+        "rows": 1,
+        "chars": 9,
+        "examples": [
+          "Chất liệu: PC; Chức năng: khác1, Hút từ tính2, Chống rơi, Chống dấu vân tay; hình dạng: Ba"
+        ]
+      },
+      "emoji": {
+        "rows": 117,
+        "chars": 978,
+        "examples": [
+          "Vật liệu: Thép không gỉ; thương hiệu: Đi theo; Mã số sản phẩm: LS-428; màu sắc: màu nâu★Bà",
+          "hương thơm: mùi hoa oải hương; Phương pháp vị trí: loại ghế; Chất liệu đựng nước hoa: nhựa",
+          "Chất độn: Bông nhung; Chất liệu bề mặt: Lông nhung; Mùa áp dụng: Mùa đông; Chức năng: Sưởi"
+        ]
+      },
+      "template": {
+        "rows": 9,
+        "chars": 54,
+        "examples": [
+          "Chất độn: Bông nhớ; Chất liệu bên ngoài: Sợi sữa bò; Thương hiệu xe áp dụng: Thông dụng; T",
+          "Danh mục sản phẩm: Tieguanyin; cấp độ: hạng nhất; Khu vực sản xuất: Oolong miền Nam tối th",
+          "Chất liệu: Nhựa1; Chức năng: Chống bụi; Danh mục sản phẩm: Hộp đựng đồ để bàn; Thương hiệu"
+        ]
+      },
+      "repeated_punct": {
+        "rows": 31,
+        "chars": 43,
+        "examples": [
+          "sức mạnh: 10W; Nó có thể sạc lại được không?: Không thể sạc lại; Các tính năng bổ sung: kh",
+          "Vật liệu: nylon; chức năng: không thấm nước; Kết cấu lót: Không có lớp lót; Đặc điểm vỏ nã",
+          "Chất liệu: Nylon; Chức năng: Chống nước; Kết cấu lót: Polyester; Thương hiệu: ....; Hệ thố"
+        ]
+      },
+      "long_run": {
+        "rows": 86,
+        "chars": 123,
+        "examples": [
+          "Pixel máy ảnh: 34 triệu; Chức năng: Phát hiện chuyển động, Video trước và sau; Dung lượng ",
+          "Chất liệu: Vải Oxford; Chức năng: Thoáng khí; Kết cấu lót: Polyester; Đặc điểm vỏ não: khá",
+          "vật liệu: P.U.; Yếu tố phổ biến: Nối; Kết cấu lót: polyester; Kích thước túi: lớn; thương "
+        ]
+      },
+      "url": {
+        "rows": 2,
+        "chars": 2,
+        "examples": [
+          "Chất liệu mặt giày: Khác1; Chất liệu lót trong: Giả da; thương hiệu: Cấp bách; Kiểu dáng: ",
+          "Chất liệu mặt giày: lông nhân tạo; Chất liệu lót trong: PU1; Thương hiệu: Halinfer/Han Lin"
+        ]
+      },
+      "symbols": {
+        "rows": 10391,
+        "chars": 63997,
+        "examples": [
+          "Chất liệu: sợi nhỏ; Thương hiệu: Perniz; Xuất xứ: Quảng Châu; Số mặt hàng: Dòng bàn chải r",
+          "Chất liệu: Nhựa; Thương hiệu: Khác/khác; Loại: Kiểu ẩn; Xuất xứ: Nghĩa Ô; Gia công tùy chỉ",
+          "chất độn: chất xơ tự nhiên; Vật liệu bên ngoài: da lộn; Thương hiệu xe áp dụng: mục đích c"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 214,
+        "examples": [
+          "Chất liệu: Hợp kim nhôm; Thương hiệu: CHONGTENG; Số mặt hàng: Cây lau nhà tay cầm lớn; Màu",
+          "Chất liệu: Sợi nhỏ; Thương hiệu: Tân Vũ D; Số mặt hàng: Vải lấp lánh; Màu sắc: 10cm * 10cm",
+          "Thành phần chính: axit citric; Loại: Chất loại bỏ màng dầu thủy tinh; Thương hiệu: Debedi;"
+        ]
+      }
+    }
+  },
+  "1688.description_zh_clean": {
+    "label": "description_zh_clean",
+    "rows": 16133,
+    "categories": {
+      "variation": {
+        "rows": 2,
+        "chars": 15,
+        "examples": [
+          "材质: PET; 功能: 可拆卸; 产品类别: 药盒; 品牌: 无品牌; 容量: 18; 收纳场景: 汽车; 是否进口: 否; 型号: snh-11; 适用范围: 其他; 风格: ",
+          "材质: 304不锈钢; 手柄材质: 木; 品牌: 天丰莹; 功能: 耐高温; 加印LOGO: 不可以; 产品类别: 烹饪铲; 是否进口: 否; 货号: 68ny8DnX; 加工定制"
+        ]
+      },
+      "html": {
+        "rows": 11,
+        "chars": 11,
+        "examples": [
+          "材质: 牛津布; 功能: 耐磨, 减负; 容量: 20-35L; 容纳电脑尺寸: 15寸; 里料质地: 涤纶; 背负系统: 弧形肩带; 品牌: End&start; 货号: 206",
+          "材质: 尼龙; 功能: 防水; 里料质地: 涤纶; 皮质特征: 其它; 容纳电脑尺寸: 14英寸; 容量: 20L以下; 适用性别: 男; 品牌: End&start; 颜色: 黑",
+          "材质: 牛津布; 功能: 透气; 容纳电脑尺寸: 15英寸; 品牌: 其他; 背负系统: 弧形肩带; 里料质地: 涤纶; 皮质特征: 牛津布; 颜色: WP黑色, WP粉色, WP"
+        ]
+      },
+      "pua": {
+        "rows": 1,
+        "chars": 10,
+        "examples": [
+          "材质: PC; 功能: 其它, 磁吸, 防摔, 抗指纹; 款式: 全包款; 品牌: 潮虹兔; 工艺: 磨砂; 流行元素: 磨砂; 风格: 商务, 情侣, 时尚, 民族风, 个性, "
+        ]
+      },
+      "emoji": {
+        "rows": 117,
+        "chars": 983,
+        "examples": [
+          "材质: 不锈钢; 品牌: 随途; 货号: LS-428; 颜色: 咖啡色★铝合金伸缩蜡刷(OPP包装), 绿色★铝合金伸缩蜡刷(OPP包装), 米白色★铝合金伸缩蜡刷(OPP包装)",
+          "香味: 熏衣草香; 摆放方式: 座式; 香水座材质: 塑料; 功能: 其它, 装饰, 芳香; 分类类型: 车用香薰; 品牌: 车格仕; 加工定制: 是; 保质期: 一年; 执行质量",
+          "填充物: 绒棉; 表层材质: 毛绒; 适用季节: 冬季; 功能: 加热; 款式: 包边; 品牌: CHEGES/车格仕; 加工定制: 是; 货号: CY-226; 颜色: CY22"
+        ]
+      },
+      "template": {
+        "rows": 2,
+        "chars": 5,
+        "examples": [
+          "填充物: 记忆棉; 外部材质: 牛奶丝; 适用汽车品牌: 通用; 品牌: 鳄鱼骑士; 风格: 简约风格; 加工定制: 是; 图案: LOGO可定制; 货号: {S级舒享}; 颜色:",
+          "品牌: KQT; 玩具材质: 塑料/塑胶; 特色功能: 仿真; 能力培养: 情感, 智力开发, 动手动脑, 其他能力培养, 互动玩具, 亲子交流, 兴趣培养; 类型: 仿真厨房类;"
+        ]
+      },
+      "repeated_punct": {
+        "rows": 10,
+        "chars": 16,
+        "examples": [
+          "功率: 10W; 是否可充电: 不可充电; 附加功能: 无; 安装方式: 卡扣式; 适用汽车品牌: 通用; 品牌: 中性; 适用部位: 出风口; 货号: YC18; 是否跨境出口专",
+          "材质: 尼龙; 功能: 防水; 里料质地: 涤纶; 品牌: ....; 背负系统: 气垫背带; 货号: TH-0395; 适用性别: 中性/男女均可; 有可授权的自有品牌: 否; ",
+          "材质: PU; 箱包潮流款式: 小方包; 皮质特征: 其它; 箱包大小: 小; 流行元素: 车缝线; 开盖方式: 拉链; 里料质地: 涤纶; 品牌: 漫屿岚汀; 颜色: 黑色无挂件"
+        ]
+      },
+      "long_run": {
+        "rows": 69,
+        "chars": 98,
+        "examples": [
+          "拍照像素: 3400万; 功能: 移动侦测, 前后录像; 内存容量: 无; 影像分辨率: 4K及以上; 拍摄角度: 170°; 储存卡: TF卡; 镜头数量: 前后双录; 品牌: ",
+          "材质: PU; 流行元素: 拼接; 里料质地: 涤纶; 箱包大小: 大; 品牌: DL8888888888888; 硬度: 中; 有无夹层: 有; 颜色: 黑色, 咖啡色; 风格:",
+          "材质: PC; 开盖方式: 锁扣; 滚轮样式: 万向轮; 功能: 防水, 防盗, 可登机; 锁的类型: TSA密码锁; 里料质地: 涤纶; 货号: 宽拉杆1001; 适用性别: 中"
+        ]
+      },
+      "url": {
+        "rows": 2,
+        "chars": 2,
+        "examples": [
+          "鞋面材质: 其它; 内里材质: 仿皮; 品牌: 急急急; 款式: 单鞋; 鞋垫材质: PU; 鞋底材质: 橡胶; 功能: 其它; 鞋头形状: 圆头; 风格: 罗马风; 流行元素: ",
+          "鞋面材质: 人造毛绒; 内里材质: PU; 品牌: halinfer/寒凌菲; 款式: 套脚款; 鞋垫材质: PU; 鞋底材质: 橡胶; 功能: 其它; 鞋头形状: 圆头; 风格:"
+        ]
+      },
+      "symbols": {
+        "rows": 10740,
+        "chars": 75123,
+        "examples": [
+          "材质: 超细纤维; 品牌: 柏尼士; 产地: 广州; 货号: 洗车刷子系列; 颜色: 1号竹柄刷, 2号圆头刷好, 3号黑色圆头刷, 4号小尖头刷, 5号大尖头刷, 6号 双色尖头",
+          "材质: 塑料; 品牌: other/其他; 类型: 隐藏式; 产地: 义乌; 加工定制: 否; 尺寸: 15; 型号: 0003; 适用送礼场合: 其他; 加印LOGO: 不可以;",
+          "填充物: 天然纤维; 外部材质: 麂皮绒; 适用汽车品牌: 通用; 品牌: 其他; 风格: 商务; 货号: 其他; 颜色: 迈巴赫头枕[栗棕色]一对装, 迈巴赫头枕[摩卡棕]一对装"
+        ]
+      },
+      "mixed_script": {
+        "rows": 11533,
+        "examples": [
+          "材质: 超细纤维; 品牌: 柏尼士; 产地: 广州; 货号: 洗车刷子系列; 颜色: 1号竹柄刷, 2号圆头刷好, 3号黑色圆头刷, 4号小尖头刷, 5号大尖头刷, 6号 双色尖头",
+          "材质: 皮革; 功能: 防水, 抗压, 可定制, 带提手; 使用位置: 座椅后背; 适用汽车品牌: 通用; 品牌: 羽岑; 使用方式: 悬挂式; 加工定制: 是; 容积: 如图; ",
+          "材质: 塑料; 品牌: other/其他; 类型: 隐藏式; 产地: 义乌; 加工定制: 否; 尺寸: 15; 型号: 0003; 适用送礼场合: 其他; 加印LOGO: 不可以;"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 231,
+        "examples": [
+          "材质: 玻璃; 风格: 中国传统; 功能: 车内装饰; 分类: 汽车挂饰; 品牌: 饰界光耀; 货号: 貔貅; 加工定制: 否; 颜色: 爆款绿玉吊坠[出入平安], 爆款绿玉吊坠[",
+          "材质: 超细纤维; 品牌: 欣羽D; 货号: 闪光布; 颜色: 10cm*10cm散装(约1.5克)), 10cm*20cm散装(约3克), 10x10*3片opp袋装, 10x2",
+          "主要成分: 柠檬酸; 类型: 玻璃油膜去除剂; 品牌: 德贝迪; 保质期: 三年; 加工定制: 是; 执行质量标准: qb1548114; 货号: dbdlymc; 颜色分类: ["
+        ]
+      }
+    }
+  },
+  "1688.attr_vi": {
+    "label": "attr_vi",
+    "rows": 681234,
+    "categories": {
+      "variation": {
+        "rows": 3,
+        "chars": 11,
+        "examples": [
+          "️ [Kiểu ngang màu trắng trong suốt] Gói 1 lớp [Thanh thẻ có thể tháo rời cho kiểu dày nâng",
+          "Kiểu dáng giống ảnh đầu tiên [bộ 6 món + móc treo xoay]️️️️️",
+          "[Bộ 6 món]️️️️️"
+        ]
+      },
+      "fullwidth_punct": {
+        "rows": 525,
+        "chars": 1094,
+        "examples": [
+          "8284 ，F19685，9620，0306，A11960，F19398，F19579，3306，F",
+          "跨境沙纹黑1.5(opp一个装）",
+          "跨境沙纹米1.5(opp一个装）"
+        ]
+      },
+      "pua": {
+        "rows": 9,
+        "chars": 9,
+        "examples": [
+          "Cam [Nano Frosted]  Chống mồ hôi tay chống vân tay",
+          "Vàng sa mạc [Nano mờChống mồ hôi tay vân tay]",
+          "Titan Xám [Nano mờChống mồ hôi tay vân tay]"
+        ]
+      },
+      "emoji": {
+        "rows": 612,
+        "chars": 978,
+        "examples": [
+          "màu nâu★Bàn chải sáp dạng ống lồng bằng hợp kim nhôm (bao bì OPP)",
+          "màu xanh lá cây★Bàn chải sáp dạng ống lồng bằng hợp kim nhôm (bao bì OPP)",
+          "trắng★Bàn chải sáp dạng ống lồng bằng hợp kim nhôm (bao bì OPP)"
+        ]
+      },
+      "template": {
+        "rows": 54,
+        "chars": 54,
+        "examples": [
+          "{Mức S Shuxiang}",
+          "Tựa đầu {S-class Shuxiang}",
+          "Dựa vào eo {S-level Shuxiang}"
+        ]
+      },
+      "repeated_punct": {
+        "rows": 14,
+        "chars": 16,
+        "examples": [
+          "...",
+          "Màu mới: Burgundy và...",
+          "...."
+        ]
+      },
+      "long_run": {
+        "rows": 98,
+        "chars": 102,
+        "examples": [
+          "11111111",
+          "-2929.999999999% off gói xếp chồng lên nhau màu đen",
+          "Gói xếp chồng màu cam -2929.999999999% off"
+        ]
+      },
+      "url": {
+        "rows": 2,
+        "chars": 2,
+        "examples": [
+          "https://detail.1688.com/offer/1066659119072.html",
+          "https://detail.1688.com/offer/592027445495.html?sp"
+        ]
+      },
+      "symbols": {
+        "rows": 51898,
+        "chars": 63836,
+        "examples": [
+          "Số 24-1 0,5 inch đơn gió",
+          "Bàn chải một lỗ thông hơi số 24-2 1 inch",
+          "Đơn số 24-3 1,5 inch"
+        ]
+      },
+      "mixed_script": {
+        "rows": 290,
+        "examples": [
+          "pp棉",
+          "椅背挂钩A1126",
+          "储物网兜A0102"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 527,
+        "examples": [
+          "Cây lau nhà cán lớn [15 ° Cần lau cong tiết kiệm sức lao động + có thể thu gọn và tháo rời",
+          "10cm * 10cm số lượng lớn (khoảng 1,5g))",
+          "跨境沙纹黑1.5(opp一个装）"
+        ]
+      }
+    }
+  },
+  "1688.attr_zh": {
+    "label": "attr_zh",
+    "rows": 673847,
+    "categories": {
+      "variation": {
+        "rows": 7,
+        "chars": 15,
+        "examples": [
+          "️[透明白色横款]5层装[升级加厚款可移动卡条]",
+          "️[透明白色横款]4层装[升级加厚款可移动卡条]",
+          "️[透明白色横款]3层装[升级加厚款可移动卡条]"
+        ]
+      },
+      "fullwidth_punct": {
+        "rows": 31260,
+        "chars": 61572,
+        "examples": [
+          "45号：安全带清洁刷",
+          "46号：发动机清洁长刷",
+          "47号：钢丝清洁刷"
+        ]
+      },
+      "pua": {
+        "rows": 10,
+        "chars": 10,
+        "examples": [
+          "樱桃红[纳米磨砂防指纹手汗]",
+          "橙色[纳米磨砂防指纹手汗",
+          "沙漠金[纳米磨砂防指纹手汗]"
+        ]
+      },
+      "emoji": {
+        "rows": 617,
+        "chars": 983,
+        "examples": [
+          "咖啡色★铝合金伸缩蜡刷（OPP包装）",
+          "绿色★铝合金伸缩蜡刷（OPP包装）",
+          "米白色★铝合金伸缩蜡刷（OPP包装）"
+        ]
+      },
+      "template": {
+        "rows": 5,
+        "chars": 5,
+        "examples": [
+          "{S级舒享}",
+          "头枕{S级舒享}",
+          "腰靠{S级舒享}"
+        ]
+      },
+      "repeated_punct": {
+        "rows": 12,
+        "chars": 12,
+        "examples": [
+          "...",
+          "....",
+          "...GD2662"
+        ]
+      },
+      "long_run": {
+        "rows": 94,
+        "chars": 98,
+        "examples": [
+          "11111111",
+          "DL8888888888888",
+          "白配黑-------黑拉杆"
+        ]
+      },
+      "url": {
+        "rows": 2,
+        "chars": 2,
+        "examples": [
+          "https://detail.1688.com/offer/1066659119072.html",
+          "https://detail.1688.com/offer/592027445495.html?sp"
+        ]
+      },
+      "symbols": {
+        "rows": 58452,
+        "chars": 74096,
+        "examples": [
+          "24-1号0.5寸单支风",
+          "24-2号 1寸单支风口刷",
+          "24-3号 1.5寸单支"
+        ]
+      },
+      "mixed_script": {
+        "rows": 36641,
+        "examples": [
+          "17号D型刮",
+          "59号：安全带刷opp袋装",
+          "60号：OPP机头刷3件套"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 1291,
+        "examples": [
+          "汽车除尘刷小号 (带保护壳）",
+          "汽车除尘刷大号 (带保护壳）",
+          "三折棉-棕色（151*55cm)"
+        ]
+      }
+    }
+  },
+  "tiki.qwen3-0.6b.source": {
+    "label": "source",
+    "rows": 45709,
+    "categories": {
+      "fullwidth_punct": {
+        "rows": 9,
+        "chars": 193,
+        "examples": [
+          "INGREDIENTS:WATER(AQUA/EAU)･GLYCERIN･BUTYLENE GLYCOL･ALCOHOL DENAT.･DIMETHICONE･ DIGLYCERI",
+          "DIMETHICONE･WATER･SILICA･ZINC OXIDE･DIPROPYLENE GLYCOL･GLYCERIN･CAPRYLYL METHICONE･DIPHENY",
+          "INGREDIENTS:WATER(AQUA/EAU)･GLYCERIN･BUTYLENE GLYCOL･ALCOHOL DENAT.･DIMETHICONE･ DIGLYCERI"
+        ]
+      },
+      "pua": {
+        "rows": 1,
+        "chars": 6,
+        "examples": [
+          "Thành phần:  Hương Sen: bột đài sen nguyên chất  Hương Tràm: bột đài sen, bột lá tràm  "
+        ]
+      },
+      "template": {
+        "rows": 15,
+        "chars": 15,
+        "examples": [
+          "{Nhiều Cỡ } Bộ Thau Rổ Nhựa Cao Cấp Yoko Inochi Nhật Bản - Kháng khuẩn khử mùi đảm bảo an ",
+          "Bộ bài Tarot classic design deck of 78 cards (Bộ bài tarot 78 lá) {KÈM QUÀ TẶNG}",
+          "{KÈM QUÀ TẶNG} Bộ bài tarot Golden Art Nouveau Tarot Bài Bói"
+        ]
+      },
+      "repeated_punct": {
+        "rows": 202,
+        "chars": 263,
+        "examples": [
+          "Cách sử dụng: Cắm hoa theo mùa, hoa giả theo ý thích của người mua hàng Làm quà tặng, đồ t",
+          "- Rắc: rắc một lớp bột dày 3 - 5 mm trước miệng hang, đường đi hay những nơi chuột ẩn nấp.",
+          "Chiết xuất tiêu xanh thực vật, amin hữu cơ, nước khử ion (DI), chất diệt bọ, hoạt chất bề "
+        ]
+      },
+      "symbols": {
+        "rows": 10922,
+        "chars": 18046,
+        "examples": [
+          "Đèn UV 20W-200W Diệt Tảo, Diệt Khuẩn Hồ Cá Cao Cấp - Sạch Nước Trong 7 Ngày| Diệt tảo ký s",
+          "Đèn Rọi Bể Cá Cao Cấp BAOYU UFO WRGB 60W-90W, Tùy Chỉnh Màu Qua App, Bảo Hành Tốt",
+          "Đèn led bể cá Caibao T4-40LED 6W siêu sáng dùng cho bể 40 - 50cm ( Trắng)"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 46,
+        "examples": [
+          "5 Viên ( 5 Vỉ 1 viên",
+          "Giữ lạnh tối đa 11 tiếng (dưới 11°C, giữ nhiệt tối đa 5 tiếng (trên 60°C)",
+          "(Bật Lửa Khè Honest 285 - Xài Gas (Giao Màu Ngẫu Nhiên)"
+        ]
+      }
+    }
+  },
+  "tiki.qwen3-0.6b.target": {
+    "label": "target",
+    "rows": 45709,
+    "categories": {
+      "fullwidth_punct": {
+        "rows": 5903,
+        "chars": 20277,
+        "examples": [
+          "食品保鲜膜 Ringo PVC，适用于冰箱、微波炉，配有便携式刀片，可容纳多种尺寸",
+          "杯身：304不锈钢，表面镀层；杯口：304不锈钢；盖子：硅胶；边框与垫圈：硅胶",
+          "- 保持温度：4小时（超过600℃） - 保持低温：15小时（低于110℃）"
+        ]
+      },
+      "template": {
+        "rows": 4,
+        "chars": 4,
+        "examples": [
+          "({Kèm quà tặng}) 背包传统漫画塔罗牌 背包牌",
+          "({Kèm quà tặng}) 袋装 Enchanted Love Tarot",
+          "({Kèm quà tặng}) 贝尔塔罗 星夜前的圣诞节塔罗"
+        ]
+      },
+      "repeated_punct": {
+        "rows": 66,
+        "chars": 68,
+        "examples": [
+          "植物提取物，有机胺，离子去除剂（DI），灭菌剂，表面活性剂...",
+          "在佩戴前：检查手套：无裂痕、破损或发红。保护层无脱落。选择正确尺寸（M、L、XL...）以确保操作灵活。佩戴方式：洗净双手并干燥后再佩戴。用手指依次插入手套，轻拉至肘部，使手套紧贴",
+          "办公桌、学习桌、客厅、收银台、卧室, ..."
+        ]
+      },
+      "long_run": {
+        "rows": 2,
+        "chars": 2,
+        "examples": [
+          "Hyundai 汽车暖光挡风玻璃 nam磁铁 80000000",
+          "Wilit U8Q 防近视镜 1000000000 点亮"
+        ]
+      },
+      "symbols": {
+        "rows": 8757,
+        "chars": 14328,
+        "examples": [
+          "UV 20W-200W 200W消毒灯, 消毒藻类, 消毒鱼虾, 7天清洁, TN2消毒",
+          "BOYU UFO WRGB 60W-90W, 可定制颜色, 优质保证",
+          "Caibao T4-40LED 6W 超级明亮 40-50厘米水箱"
+        ]
+      },
+      "mixed_script": {
+        "rows": 2668,
+        "examples": [
+          "UV 20W-200W 200W消毒灯, 消毒藻类, 消毒鱼虾, 7天清洁, TN2消毒",
+          "锁n锁 Color Coated STS 多容积食品容器",
+          "身体: 不锈钢; 箱盖: PP塑料; 水管: 二氧化硅"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 25,
+        "examples": [
+          "塑料挤压装水箱，塑料接头，塑料墙面，型号21（1/2'')，型号27（3/4'')，型号34（1'')- 厂家正品",
+          "保存时间最多11小时（低于11°C，保存时间最多5小时（高于60°C）",
+          "4912A: KT: 2.5(Dày) × 36(Rộng) × 36(Dài) cm 中等 4812A KT: 2.2(Dày) × 32(Rộng) × 32(Dài) cm "
+        ]
+      }
+    }
+  },
+  "tiki.qwen3-1.7b.source": {
+    "label": "source",
+    "rows": 45709,
+    "categories": {
+      "fullwidth_punct": {
+        "rows": 9,
+        "chars": 193,
+        "examples": [
+          "INGREDIENTS:WATER(AQUA/EAU)･GLYCERIN･BUTYLENE GLYCOL･ALCOHOL DENAT.･DIMETHICONE･ DIGLYCERI",
+          "DIMETHICONE･WATER･SILICA･ZINC OXIDE･DIPROPYLENE GLYCOL･GLYCERIN･CAPRYLYL METHICONE･DIPHENY",
+          "INGREDIENTS:WATER(AQUA/EAU)･GLYCERIN･BUTYLENE GLYCOL･ALCOHOL DENAT.･DIMETHICONE･ DIGLYCERI"
+        ]
+      },
+      "pua": {
+        "rows": 1,
+        "chars": 6,
+        "examples": [
+          "Thành phần:  Hương Sen: bột đài sen nguyên chất  Hương Tràm: bột đài sen, bột lá tràm  "
+        ]
+      },
+      "template": {
+        "rows": 15,
+        "chars": 15,
+        "examples": [
+          "{Nhiều Cỡ } Bộ Thau Rổ Nhựa Cao Cấp Yoko Inochi Nhật Bản - Kháng khuẩn khử mùi đảm bảo an ",
+          "Bộ bài Tarot classic design deck of 78 cards (Bộ bài tarot 78 lá) {KÈM QUÀ TẶNG}",
+          "{KÈM QUÀ TẶNG} Bộ bài tarot Golden Art Nouveau Tarot Bài Bói"
+        ]
+      },
+      "repeated_punct": {
+        "rows": 202,
+        "chars": 263,
+        "examples": [
+          "Cách sử dụng: Cắm hoa theo mùa, hoa giả theo ý thích của người mua hàng Làm quà tặng, đồ t",
+          "- Rắc: rắc một lớp bột dày 3 - 5 mm trước miệng hang, đường đi hay những nơi chuột ẩn nấp.",
+          "Chiết xuất tiêu xanh thực vật, amin hữu cơ, nước khử ion (DI), chất diệt bọ, hoạt chất bề "
+        ]
+      },
+      "symbols": {
+        "rows": 10922,
+        "chars": 18046,
+        "examples": [
+          "Đèn UV 20W-200W Diệt Tảo, Diệt Khuẩn Hồ Cá Cao Cấp - Sạch Nước Trong 7 Ngày| Diệt tảo ký s",
+          "Đèn Rọi Bể Cá Cao Cấp BAOYU UFO WRGB 60W-90W, Tùy Chỉnh Màu Qua App, Bảo Hành Tốt",
+          "Đèn led bể cá Caibao T4-40LED 6W siêu sáng dùng cho bể 40 - 50cm ( Trắng)"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 46,
+        "examples": [
+          "5 Viên ( 5 Vỉ 1 viên",
+          "Giữ lạnh tối đa 11 tiếng (dưới 11°C, giữ nhiệt tối đa 5 tiếng (trên 60°C)",
+          "(Bật Lửa Khè Honest 285 - Xài Gas (Giao Màu Ngẫu Nhiên)"
+        ]
+      }
+    }
+  },
+  "tiki.qwen3-1.7b.target": {
+    "label": "target",
+    "rows": 45709,
+    "categories": {
+      "fullwidth_punct": {
+        "rows": 6648,
+        "chars": 23532,
+        "examples": [
+          "UV 20W-200W 水藻/水生菌灭菌器，7天内净化水质 | TN2 病毒灭菌",
+          "Caibao T4-40LED 6W 超亮灯泡 用于40-50cm鱼缸（白色）",
+          "食品包装膜 Ringo PVC，可放入冰箱、微波炉使用，方便切割，多种尺寸"
+        ]
+      },
+      "repeated_punct": {
+        "rows": 165,
+        "chars": 218,
+        "examples": [
+          "使用方法：按季节插花，按顾客喜好选择假花。作为礼物赠送，作为婚礼用品。作为朋友的纪念品。装饰办公桌、咖啡馆、商店和家中各处。装饰花园、祖先神龛、土地神龛。美化、更新房屋。作为可零售",
+          "植物提取物，有机胺，去离子水（DI），杀虫剂，表面活性剂 ...",
+          "不锈钢不生锈，超硬，坚固，可承受力，多种尺寸，越南生产 * 产品信息：- 材质：不锈钢 - 生产地：越南 - 多种尺寸可选 - 适合悬挂厨房用品、衣物、家居用品等... * 特点："
+        ]
+      },
+      "symbols": {
+        "rows": 8566,
+        "chars": 13749,
+        "examples": [
+          "UV 20W-200W 水藻/水生菌灭菌器，7天内净化水质 | TN2 病毒灭菌",
+          "BOYU UFO WRGB 60W-90W, 可调色, 优质照明",
+          "Caibao T4-40LED 6W 超亮灯泡 用于40-50cm鱼缸（白色）"
+        ]
+      },
+      "mixed_script": {
+        "rows": 3203,
+        "examples": [
+          "Caibao T4-40LED 6W 超亮灯泡 用于40-50cm鱼缸（白色）",
+          "LocknLock 摇热杯 Metro咖啡杯 LHC4418 750ml 铁器套杯",
+          "不锈钢涂层LocknLock彩色容器多容量"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 33,
+        "examples": [
+          "5粒（5盒1粒",
+          "保温能力 最大保持11小时（低于11°C，最大保持5小时（高于60°C）",
+          "Crocin, 芦丁, 蓝莓, 甜菊糖苷浓稠, 蓝莓果汁粉, 黑莓提取物 / 甘露糖醇, 甜味剂（甜菊糖, 二肽基苯肽/ L-苯丙氨酸), 琥珀酸, 纤维素, 自然植物色素, 自然"
+        ]
+      }
+    }
+  },
+  "tiki.qwen3-4b.source": {
+    "label": "source",
+    "rows": 45709,
+    "categories": {
+      "fullwidth_punct": {
+        "rows": 9,
+        "chars": 193,
+        "examples": [
+          "INGREDIENTS:WATER(AQUA/EAU)･GLYCERIN･BUTYLENE GLYCOL･ALCOHOL DENAT.･DIMETHICONE･ DIGLYCERI",
+          "DIMETHICONE･WATER･SILICA･ZINC OXIDE･DIPROPYLENE GLYCOL･GLYCERIN･CAPRYLYL METHICONE･DIPHENY",
+          "INGREDIENTS:WATER(AQUA/EAU)･GLYCERIN･BUTYLENE GLYCOL･ALCOHOL DENAT.･DIMETHICONE･ DIGLYCERI"
+        ]
+      },
+      "pua": {
+        "rows": 1,
+        "chars": 6,
+        "examples": [
+          "Thành phần:  Hương Sen: bột đài sen nguyên chất  Hương Tràm: bột đài sen, bột lá tràm  "
+        ]
+      },
+      "template": {
+        "rows": 15,
+        "chars": 15,
+        "examples": [
+          "{Nhiều Cỡ } Bộ Thau Rổ Nhựa Cao Cấp Yoko Inochi Nhật Bản - Kháng khuẩn khử mùi đảm bảo an ",
+          "Bộ bài Tarot classic design deck of 78 cards (Bộ bài tarot 78 lá) {KÈM QUÀ TẶNG}",
+          "{KÈM QUÀ TẶNG} Bộ bài tarot Golden Art Nouveau Tarot Bài Bói"
+        ]
+      },
+      "repeated_punct": {
+        "rows": 202,
+        "chars": 263,
+        "examples": [
+          "Cách sử dụng: Cắm hoa theo mùa, hoa giả theo ý thích của người mua hàng Làm quà tặng, đồ t",
+          "- Rắc: rắc một lớp bột dày 3 - 5 mm trước miệng hang, đường đi hay những nơi chuột ẩn nấp.",
+          "Chiết xuất tiêu xanh thực vật, amin hữu cơ, nước khử ion (DI), chất diệt bọ, hoạt chất bề "
+        ]
+      },
+      "symbols": {
+        "rows": 10922,
+        "chars": 18046,
+        "examples": [
+          "Đèn UV 20W-200W Diệt Tảo, Diệt Khuẩn Hồ Cá Cao Cấp - Sạch Nước Trong 7 Ngày| Diệt tảo ký s",
+          "Đèn Rọi Bể Cá Cao Cấp BAOYU UFO WRGB 60W-90W, Tùy Chỉnh Màu Qua App, Bảo Hành Tốt",
+          "Đèn led bể cá Caibao T4-40LED 6W siêu sáng dùng cho bể 40 - 50cm ( Trắng)"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 46,
+        "examples": [
+          "5 Viên ( 5 Vỉ 1 viên",
+          "Giữ lạnh tối đa 11 tiếng (dưới 11°C, giữ nhiệt tối đa 5 tiếng (trên 60°C)",
+          "(Bật Lửa Khè Honest 285 - Xài Gas (Giao Màu Ngẫu Nhiên)"
+        ]
+      }
+    }
+  },
+  "tiki.qwen3-4b.target": {
+    "label": "target",
+    "rows": 45709,
+    "categories": {
+      "fullwidth_punct": {
+        "rows": 7919,
+        "chars": 30894,
+        "examples": [
+          "11W，26厘米，水箱<1000升",
+          "20W，35厘米，水箱<1500升",
+          "30W，45厘米，水箱<2000升"
+        ]
+      },
+      "pua": {
+        "rows": 1,
+        "chars": 6,
+        "examples": [
+          "成分： 莲花香：纯莲花粉  龙脑香：莲花粉、龙脑叶粉  旧日香：莲花粉、香附、大 hồi 和多种草药  麝香：纯麝香粉  柠檬香：莲花粉、柠檬精油  雏菊：莲花粉、雏菊"
+        ]
+      },
+      "repeated_punct": {
+        "rows": 138,
+        "chars": 188,
+        "examples": [
+          "使用方法：按季节插花，根据买家喜好选择假花。作为礼物、新居装饰。作为朋友的纪念品。装饰办公桌、咖啡馆、商店及室内外空间。装饰花园、祖先祭坛、土地神祭坛。美化、更新房屋。制作可零售、",
+          "植物青柠提取物，有机胺，去离子水（DI），杀虫剂，表面活性剂...",
+          "10个S形挂钩，承重力强，材质为不锈钢，超硬，承重力强，牢固，多种尺寸，越南制造 * 产品信息：- 10个 - 材质：不锈钢 - 在越南生产 - 多种尺寸可选 - 适用于厨房用具、"
+        ]
+      },
+      "symbols": {
+        "rows": 10022,
+        "chars": 16110,
+        "examples": [
+          "20W-200W紫外线灯 杀藻 杀菌鱼缸高级 - 7天净水| 杀寄生藻TN2",
+          "高端鱼缸灯 BAOYU UFO WRGB 60W-90W，通过App调节颜色，保修良好",
+          "Caibao LED鱼缸灯 T4-40LED 6W 超亮 适用于40-50厘米鱼缸（白色）"
+        ]
+      },
+      "mixed_script": {
+        "rows": 4955,
+        "examples": [
+          "20W-200W紫外线灯 杀藻 杀菌鱼缸高级 - 7天净水| 杀寄生藻TN2",
+          "高端鱼缸灯 BAOYU UFO WRGB 60W-90W，通过App调节颜色，保修良好",
+          "Caibao LED鱼缸灯 T4-40LED 6W 超亮 适用于40-50厘米鱼缸（白色）"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 34,
+        "examples": [
+          "（直径13厘米）（直径16厘米）（直径20厘米）（直径25厘米）（直径30厘米）（直径35厘米)",
+          "（Honest 285 点火器 - 使用燃气（随机颜色）",
+          "日本Komi草本银色洗发水包装 [25ml - 棕色"
+        ]
+      }
+    }
+  },
+  "tiki.qwen3-8b.source": {
+    "label": "source",
+    "rows": 45709,
+    "categories": {
+      "fullwidth_punct": {
+        "rows": 9,
+        "chars": 193,
+        "examples": [
+          "INGREDIENTS:WATER(AQUA/EAU)･GLYCERIN･BUTYLENE GLYCOL･ALCOHOL DENAT.･DIMETHICONE･ DIGLYCERI",
+          "DIMETHICONE･WATER･SILICA･ZINC OXIDE･DIPROPYLENE GLYCOL･GLYCERIN･CAPRYLYL METHICONE･DIPHENY",
+          "INGREDIENTS:WATER(AQUA/EAU)･GLYCERIN･BUTYLENE GLYCOL･ALCOHOL DENAT.･DIMETHICONE･ DIGLYCERI"
+        ]
+      },
+      "pua": {
+        "rows": 1,
+        "chars": 6,
+        "examples": [
+          "Thành phần:  Hương Sen: bột đài sen nguyên chất  Hương Tràm: bột đài sen, bột lá tràm  "
+        ]
+      },
+      "template": {
+        "rows": 15,
+        "chars": 15,
+        "examples": [
+          "{Nhiều Cỡ } Bộ Thau Rổ Nhựa Cao Cấp Yoko Inochi Nhật Bản - Kháng khuẩn khử mùi đảm bảo an ",
+          "Bộ bài Tarot classic design deck of 78 cards (Bộ bài tarot 78 lá) {KÈM QUÀ TẶNG}",
+          "{KÈM QUÀ TẶNG} Bộ bài tarot Golden Art Nouveau Tarot Bài Bói"
+        ]
+      },
+      "repeated_punct": {
+        "rows": 202,
+        "chars": 263,
+        "examples": [
+          "Cách sử dụng: Cắm hoa theo mùa, hoa giả theo ý thích của người mua hàng Làm quà tặng, đồ t",
+          "- Rắc: rắc một lớp bột dày 3 - 5 mm trước miệng hang, đường đi hay những nơi chuột ẩn nấp.",
+          "Chiết xuất tiêu xanh thực vật, amin hữu cơ, nước khử ion (DI), chất diệt bọ, hoạt chất bề "
+        ]
+      },
+      "symbols": {
+        "rows": 10922,
+        "chars": 18046,
+        "examples": [
+          "Đèn UV 20W-200W Diệt Tảo, Diệt Khuẩn Hồ Cá Cao Cấp - Sạch Nước Trong 7 Ngày| Diệt tảo ký s",
+          "Đèn Rọi Bể Cá Cao Cấp BAOYU UFO WRGB 60W-90W, Tùy Chỉnh Màu Qua App, Bảo Hành Tốt",
+          "Đèn led bể cá Caibao T4-40LED 6W siêu sáng dùng cho bể 40 - 50cm ( Trắng)"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 46,
+        "examples": [
+          "5 Viên ( 5 Vỉ 1 viên",
+          "Giữ lạnh tối đa 11 tiếng (dưới 11°C, giữ nhiệt tối đa 5 tiếng (trên 60°C)",
+          "(Bật Lửa Khè Honest 285 - Xài Gas (Giao Màu Ngẫu Nhiên)"
+        ]
+      }
+    }
+  },
+  "tiki.qwen3-8b.target": {
+    "label": "target",
+    "rows": 45709,
+    "categories": {
+      "fullwidth_punct": {
+        "rows": 8095,
+        "chars": 30654,
+        "examples": [
+          "11W，26cm，容积<1000L",
+          "20W，35cm，水族箱<1500L",
+          "30W，45cm，水箱<2000L"
+        ]
+      },
+      "pua": {
+        "rows": 1,
+        "chars": 6,
+        "examples": [
+          "成分： 莲香：纯莲粉  桂花香：莲粉，香茅粉  古早香：莲粉，肉豆蔻，八角及多种草本  麝香：纯沉香粉  薄荷香：莲粉，柠檬草精油  薰衣草：莲粉，薰衣草粉"
+        ]
+      },
+      "repeated_punct": {
+        "rows": 132,
+        "chars": 184,
+        "examples": [
+          "使用方法：按季节插花，按顾客喜好插假花。可作为礼物、乔迁礼物。可作为朋友的纪念品。用于办公桌、咖啡店、商店及室内空间装饰。用于庭院装饰、祖先牌位、土地神牌位。美化、更新房屋。可作为",
+          "植物提取黑胡椒素，有机胺，离子水（DI），杀虫剂，表面活性剂...",
+          "组合 10 个 S 形挂件承重材质不锈钢防锈超硬承重牢固多种尺寸 Sx 在越南 * 产品信息: - 10 个 - 材质: 不锈钢防锈 - 生产地: 越南 - 多种尺寸可选 - 适合"
+        ]
+      },
+      "symbols": {
+        "rows": 10353,
+        "chars": 16699,
+        "examples": [
+          "20W-200W 紫外线灯 杀藻 杀菌 鱼缸 高级 - 7天清澈水质| 杀寄生藻 TN2",
+          "水族箱射灯 高级 BAOYU UFO WRGB 60W-90W，可通过App调色，质保好",
+          "Caibao T4-40LED 6W 超亮水族箱灯 用于40 - 50厘米水族箱（白光）"
+        ]
+      },
+      "cjk_ext": {
+        "rows": 1,
+        "chars": 1,
+        "examples": [
+          "凡士林，双甘油聚乙酰基二酸酯-2，可可籽油，山茶花籽油，植物醇/异硬脂醇/鲸蜡醇/硬脂醇/鲸蜡硬脂醇二聚二亚油酸酯，石蜡，微晶蜡，蜂蜡，癸基二醇，荷荷巴酯，水，向日葵籽蜡，生育酚乙"
+        ]
+      },
+      "mixed_script": {
+        "rows": 3553,
+        "examples": [
+          "水族箱射灯 高级 BAOYU UFO WRGB 60W-90W，可通过App调色，质保好",
+          "杯体：内层：304不锈钢镀层，外层：SUS304不锈钢；盖： Tritan塑料，PP；密封圈及底部垫片：硅胶",
+          "主体：304不锈钢；盖子：PP塑料；密封圈：硅胶"
+        ]
+      },
+      "unbalanced_bracket": {
+        "rows": 28,
+        "examples": [
+          "塑料压制螺纹连接水箱，塑料螺纹隔板接口 21（1/2'') | 27（3/4'') | 34（1'')- 正品商品",
+          "5粒 (5板 1粒",
+          "最大保温11小时（低于11°C，最大保热5小时（高于60°C）"
+        ]
+      }
+    }
+  }
+}

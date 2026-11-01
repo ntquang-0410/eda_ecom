@@ -3,19 +3,19 @@
   "anchors": 1475,
   "mt_names": 3608,
   "attributes_total": 397407,
-  "aligned": 395575,
-  "align_pct": 99.54,
+  "aligned": 395493,
+  "align_pct": 99.52,
   "by_how": {
     "anchor": 211944,
     "mt": 50092,
     "mt_fuzzy": 81170,
-    "mt_choice": 51930,
-    "unmatched": 1832,
+    "mt_choice": 51848,
+    "unmatched": 1914,
     "value": 390,
     "anchor+dup": 48,
     "mt+dup": 1
   },
   "products": 16133,
-  "products_fully_aligned": 14608,
-  "products_fully_aligned_pct": 90.55
+  "products_fully_aligned": 14554,
+  "products_fully_aligned_pct": 90.21
 }

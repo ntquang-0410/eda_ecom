@@ -28,7 +28,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from cado_core.text import normalize_brackets
+from cado_core.text import clean_noise_characters
 
 
 def as_list(values):
@@ -82,8 +82,8 @@ def main() -> int:
         cleaned = []
         for attr in attrs:
             cleaned.append({
-                "name": normalize_brackets(attr.get("name")),
-                "values": [normalize_brackets(v) for v in as_list(attr.get("values"))],
+                "name": clean_noise_characters(attr.get("name")),
+                "values": [clean_noise_characters(v) for v in as_list(attr.get("values"))],
             })
         return cleaned
 
