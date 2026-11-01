@@ -16,8 +16,8 @@
     "qty_resolved": 11
   },
   "qwen3-4b": {
-    "qty_ok": 44723,
-    "qty_weak": 420,
+    "qty_ok": 44721,
+    "qty_weak": 422,
     "qty_mismatch": 394,
     "skipped": 97,
     "qty_review": 63,

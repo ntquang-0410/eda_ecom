@@ -109,8 +109,8 @@
       },
       "units": {
         "rows": 45709,
-        "bytes": 4911512,
-        "sha256": "248703820c7feffaff42b4a16b2706f81ec47f95e110a2e65a1e1d9e50677b92",
+        "bytes": 4911520,
+        "sha256": "5c9b0dbb7dd8a2a33d254b27109eae4c7a878949f1523f85153478c2d9ab7ef5",
         "extra_columns": [
           "qty_status",
           "qty_decision"
