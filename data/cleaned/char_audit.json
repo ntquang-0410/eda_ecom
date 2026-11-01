@@ -41,24 +41,6 @@
     "label": "description_vi_clean",
     "rows": 16133,
     "categories": {
-      "html": {
-        "rows": 8,
-        "chars": 8,
-        "examples": [
-          "Chất liệu: Vải Oxford; Chức năng: Chịu mài mòn, Giảm gánh nặng; Công suất: 20-35L; Kích th",
-          "Vật liệu: vải oxford; chức năng: thoáng khí; Kích thước máy tính: 15inch; thương hiệu: khá",
-          "vật liệu: da thật; Chức năng: không thấm nước, Chống mài mòn; Đặc điểm vỏ não: Da lộn; Kết"
-        ]
-      },
-      "repeated_punct": {
-        "rows": 9,
-        "chars": 16,
-        "examples": [
-          "sức mạnh: 10W; Nó có thể sạc lại được không?: Không thể sạc lại; Các tính năng bổ sung: kh",
-          "Vật liệu: nylon; chức năng: không thấm nước; Kết cấu lót: Không có lớp lót; Đặc điểm vỏ nã",
-          "Chất liệu: Nylon; Chức năng: Chống nước; Kết cấu lót: Polyester; Thương hiệu: ...; Hệ thốn"
-        ]
-      },
       "long_run": {
         "rows": 77,
         "chars": 112,
@@ -66,14 +48,6 @@
           "Pixel máy ảnh: 34 triệu; Chức năng: Phát hiện chuyển động, Video trước và sau; Dung lượng ",
           "Chất liệu: Vải Oxford; Chức năng: Thoáng khí; Kết cấu lót: Polyester; Đặc điểm vỏ não: khá",
           "vật liệu: P.U.; Yếu tố phổ biến: Nối; Kết cấu lót: polyester; Kích thước túi: lớn; thương "
-        ]
-      },
-      "url": {
-        "rows": 2,
-        "chars": 2,
-        "examples": [
-          "Chất liệu mặt giày: Khác1; Chất liệu lót trong: Giả da; thương hiệu: Cấp bách; Kiểu dáng: ",
-          "Chất liệu mặt giày: lông nhân tạo; Chất liệu lót trong: PU1; Thương hiệu: Halinfer/Han Lin"
         ]
       },
       "symbols": {
@@ -91,24 +65,6 @@
     "label": "description_zh_clean",
     "rows": 16133,
     "categories": {
-      "html": {
-        "rows": 11,
-        "chars": 11,
-        "examples": [
-          "材质: 牛津布; 功能: 耐磨, 减负; 容量: 20-35L; 容纳电脑尺寸: 15寸; 里料质地: 涤纶; 背负系统: 弧形肩带; 品牌: End&start; 货号: 206",
-          "材质: 尼龙; 功能: 防水; 里料质地: 涤纶; 皮质特征: 其它; 容纳电脑尺寸: 14英寸; 容量: 20L以下; 适用性别: 男; 品牌: End&start; 颜色: 黑",
-          "材质: 牛津布; 功能: 透气; 容纳电脑尺寸: 15英寸; 品牌: 其他; 背负系统: 弧形肩带; 里料质地: 涤纶; 皮质特征: 牛津布; 颜色: WP黑色, WP粉色, WP"
-        ]
-      },
-      "repeated_punct": {
-        "rows": 7,
-        "chars": 12,
-        "examples": [
-          "功率: 10W; 是否可充电: 不可充电; 附加功能: 无; 安装方式: 卡扣式; 适用汽车品牌: 通用; 品牌: 中性; 适用部位: 出风口; 货号: YC18; 是否跨境出口专",
-          "材质: 尼龙; 功能: 防水; 里料质地: 涤纶; 品牌: ...; 背负系统: 气垫背带; 货号: TH-0395; 适用性别: 中性/男女均可; 有可授权的自有品牌: 否; 颜",
-          "材质: PU; 箱包潮流款式: 小方包; 皮质特征: 其它; 箱包大小: 小; 流行元素: 车缝线; 开盖方式: 拉链; 里料质地: 涤纶; 品牌: 漫屿岚汀; 颜色: 黑色无挂件"
-        ]
-      },
       "long_run": {
         "rows": 69,
         "chars": 98,
@@ -116,14 +72,6 @@
           "拍照像素: 3400万; 功能: 移动侦测, 前后录像; 内存容量: 无; 影像分辨率: 4K及以上; 拍摄角度: 170°; 储存卡: TF卡; 镜头数量: 前后双录; 品牌: ",
           "材质: PU; 流行元素: 拼接; 里料质地: 涤纶; 箱包大小: 大; 品牌: DL8888888888888; 硬度: 中; 有无夹层: 有; 颜色: 黑色, 咖啡色; 风格:",
           "材质: PC; 开盖方式: 锁扣; 滚轮样式: 万向轮; 功能: 防水, 防盗, 可登机; 锁的类型: TSA密码锁; 里料质地: 涤纶; 货号: 宽拉杆1001; 适用性别: 中"
-        ]
-      },
-      "url": {
-        "rows": 2,
-        "chars": 2,
-        "examples": [
-          "鞋面材质: 其它; 内里材质: 仿皮; 品牌: 急急急; 款式: 单鞋; 鞋垫材质: PU; 鞋底材质: 橡胶; 功能: 其它; 鞋头形状: 圆头; 风格: 罗马风; 流行元素: ",
-          "鞋面材质: 人造毛绒; 内里材质: PU; 品牌: halinfer/寒凌菲; 款式: 套脚款; 鞋垫材质: PU; 鞋底材质: 橡胶; 功能: 其它; 鞋头形状: 圆头; 风格:"
         ]
       },
       "symbols": {
@@ -147,7 +95,7 @@
   },
   "1688.attr_vi": {
     "label": "attr_vi",
-    "rows": 681234,
+    "rows": 681232,
     "categories": {
       "fullwidth_punct": {
         "rows": 187,
@@ -158,15 +106,6 @@
           "采用高密度海绵，柔韧耐磨、吸附力强、高效清洁、易清洗不掉渣可重复使用"
         ]
       },
-      "repeated_punct": {
-        "rows": 13,
-        "chars": 15,
-        "examples": [
-          "...",
-          "Màu mới: Burgundy và...",
-          "..."
-        ]
-      },
       "long_run": {
         "rows": 98,
         "chars": 102,
@@ -174,14 +113,6 @@
           "11111111",
           "-2929.999999999% off gói xếp chồng lên nhau màu đen",
           "Gói xếp chồng màu cam -2929.999999999% off"
-        ]
-      },
-      "url": {
-        "rows": 2,
-        "chars": 2,
-        "examples": [
-          "https://detail.1688.com/offer/1066659119072.html",
-          "https://detail.1688.com/offer/592027445495.html?sp"
         ]
       },
       "symbols": {
@@ -216,15 +147,6 @@
           "47号：钢丝清洁刷"
         ]
       },
-      "repeated_punct": {
-        "rows": 12,
-        "chars": 12,
-        "examples": [
-          "...",
-          "...",
-          "...GD2662"
-        ]
-      },
       "long_run": {
         "rows": 94,
         "chars": 98,
@@ -232,14 +154,6 @@
           "11111111",
           "DL8888888888888",
           "白配黑-------黑拉杆"
-        ]
-      },
-      "url": {
-        "rows": 2,
-        "chars": 2,
-        "examples": [
-          "https://detail.1688.com/offer/1066659119072.html",
-          "https://detail.1688.com/offer/592027445495.html?sp"
         ]
       },
       "symbols": {
@@ -274,15 +188,6 @@
           "INGREDIENTS:WATER(AQUA/EAU)･GLYCERIN･BUTYLENE GLYCOL･ALCOHOL DENAT.･DIMETHICONE･ DIGLYCERI"
         ]
       },
-      "repeated_punct": {
-        "rows": 200,
-        "chars": 261,
-        "examples": [
-          "Cách sử dụng: Cắm hoa theo mùa, hoa giả theo ý thích của người mua hàng Làm quà tặng, đồ t",
-          "- Rắc: rắc một lớp bột dày 3 - 5 mm trước miệng hang, đường đi hay những nơi chuột ẩn nấp.",
-          "Chiết xuất tiêu xanh thực vật, amin hữu cơ, nước khử ion (DI), chất diệt bọ, hoạt chất bề "
-        ]
-      },
       "symbols": {
         "rows": 10922,
         "chars": 18046,
@@ -305,15 +210,6 @@
           "食品保鲜膜 Ringo PVC，适用于冰箱、微波炉，配有便携式刀片，可容纳多种尺寸",
           "杯身：304不锈钢，表面镀层；杯口：304不锈钢；盖子：硅胶；边框与垫圈：硅胶",
           "- 保持温度：4小时(超过600℃) - 保持低温：15小时(低于110℃)"
-        ]
-      },
-      "repeated_punct": {
-        "rows": 66,
-        "chars": 68,
-        "examples": [
-          "植物提取物，有机胺，离子去除剂(DI)，灭菌剂，表面活性剂...",
-          "在佩戴前：检查手套：无裂痕、破损或发红。保护层无脱落。选择正确尺寸(M、L、XL...)以确保操作灵活。佩戴方式：洗净双手并干燥后再佩戴。用手指依次插入手套，轻拉至肘部，使手套紧贴",
-          "办公桌、学习桌、客厅、收银台、卧室, ..."
         ]
       },
       "long_run": {
@@ -356,15 +252,6 @@
           "INGREDIENTS:WATER(AQUA/EAU)･GLYCERIN･BUTYLENE GLYCOL･ALCOHOL DENAT.･DIMETHICONE･ DIGLYCERI"
         ]
       },
-      "repeated_punct": {
-        "rows": 200,
-        "chars": 261,
-        "examples": [
-          "Cách sử dụng: Cắm hoa theo mùa, hoa giả theo ý thích của người mua hàng Làm quà tặng, đồ t",
-          "- Rắc: rắc một lớp bột dày 3 - 5 mm trước miệng hang, đường đi hay những nơi chuột ẩn nấp.",
-          "Chiết xuất tiêu xanh thực vật, amin hữu cơ, nước khử ion (DI), chất diệt bọ, hoạt chất bề "
-        ]
-      },
       "symbols": {
         "rows": 10922,
         "chars": 18046,
@@ -387,15 +274,6 @@
           "UV 20W-200W 水藻/水生菌灭菌器，7天内净化水质 | TN2 病毒灭菌",
           "食品包装膜 Ringo PVC，可放入冰箱、微波炉使用，方便切割，多种尺寸",
           "杯体：内层：304不锈钢釉面，外层：304不锈钢；盖子：聚碳酸酯，PP；垫圈及底垫：硅胶"
-        ]
-      },
-      "repeated_punct": {
-        "rows": 164,
-        "chars": 217,
-        "examples": [
-          "使用方法：按季节插花，按顾客喜好选择假花。作为礼物赠送，作为婚礼用品。作为朋友的纪念品。装饰办公桌、咖啡馆、商店和家中各处。装饰花园、祖先神龛、土地神龛。美化、更新房屋。作为可零售",
-          "植物提取物，有机胺，去离子水(DI)，杀虫剂，表面活性剂 ...",
-          "不锈钢不生锈，超硬，坚固，可承受力，多种尺寸，越南生产 * 产品信息：- 材质：不锈钢 - 生产地：越南 - 多种尺寸可选 - 适合悬挂厨房用品、衣物、家居用品等... * 特点："
         ]
       },
       "symbols": {
@@ -430,15 +308,6 @@
           "INGREDIENTS:WATER(AQUA/EAU)･GLYCERIN･BUTYLENE GLYCOL･ALCOHOL DENAT.･DIMETHICONE･ DIGLYCERI"
         ]
       },
-      "repeated_punct": {
-        "rows": 200,
-        "chars": 261,
-        "examples": [
-          "Cách sử dụng: Cắm hoa theo mùa, hoa giả theo ý thích của người mua hàng Làm quà tặng, đồ t",
-          "- Rắc: rắc một lớp bột dày 3 - 5 mm trước miệng hang, đường đi hay những nơi chuột ẩn nấp.",
-          "Chiết xuất tiêu xanh thực vật, amin hữu cơ, nước khử ion (DI), chất diệt bọ, hoạt chất bề "
-        ]
-      },
       "symbols": {
         "rows": 10922,
         "chars": 18046,
@@ -461,15 +330,6 @@
           "11W，26厘米，水箱1000升",
           "20W，35厘米，水箱1500升",
           "30W，45厘米，水箱2000升"
-        ]
-      },
-      "repeated_punct": {
-        "rows": 138,
-        "chars": 188,
-        "examples": [
-          "使用方法：按季节插花，根据买家喜好选择假花。作为礼物、新居装饰。作为朋友的纪念品。装饰办公桌、咖啡馆、商店及室内外空间。装饰花园、祖先祭坛、土地神祭坛。美化、更新房屋。制作可零售、",
-          "植物青柠提取物，有机胺，去离子水(DI)，杀虫剂，表面活性剂...",
-          "10个S形挂钩，承重力强，材质为不锈钢，超硬，承重力强，牢固，多种尺寸，越南制造 * 产品信息：- 10个 - 材质：不锈钢 - 在越南生产 - 多种尺寸可选 - 适用于厨房用具、"
         ]
       },
       "symbols": {
@@ -504,15 +364,6 @@
           "INGREDIENTS:WATER(AQUA/EAU)･GLYCERIN･BUTYLENE GLYCOL･ALCOHOL DENAT.･DIMETHICONE･ DIGLYCERI"
         ]
       },
-      "repeated_punct": {
-        "rows": 200,
-        "chars": 261,
-        "examples": [
-          "Cách sử dụng: Cắm hoa theo mùa, hoa giả theo ý thích của người mua hàng Làm quà tặng, đồ t",
-          "- Rắc: rắc một lớp bột dày 3 - 5 mm trước miệng hang, đường đi hay những nơi chuột ẩn nấp.",
-          "Chiết xuất tiêu xanh thực vật, amin hữu cơ, nước khử ion (DI), chất diệt bọ, hoạt chất bề "
-        ]
-      },
       "symbols": {
         "rows": 10922,
         "chars": 18046,
@@ -535,15 +386,6 @@
           "11W，26cm，容积1000L",
           "20W，35cm，水族箱1500L",
           "30W，45cm，水箱2000L"
-        ]
-      },
-      "repeated_punct": {
-        "rows": 131,
-        "chars": 183,
-        "examples": [
-          "使用方法：按季节插花，按顾客喜好插假花。可作为礼物、乔迁礼物。可作为朋友的纪念品。用于办公桌、咖啡店、商店及室内空间装饰。用于庭院装饰、祖先牌位、土地神牌位。美化、更新房屋。可作为",
-          "植物提取黑胡椒素，有机胺，离子水(DI)，杀虫剂，表面活性剂...",
-          "组合 10 个 S 形挂件承重材质不锈钢防锈超硬承重牢固多种尺寸 Sx 在越南 * 产品信息: - 10 个 - 材质: 不锈钢防锈 - 生产地: 越南 - 多种尺寸可选 - 适合"
         ]
       },
       "symbols": {

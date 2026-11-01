@@ -186,6 +186,7 @@ _HTML_ENTITY_RE = re.compile(
     r"|lsquo|rsquo|times|divide|deg|middot|bull|laquo|raquo|#\d+|#x[0-9a-fA-F]+);"
 )
 _ESCAPE_RE = re.compile(r"\\n|\\t|\\u[0-9a-fA-F]{4}")
+_URL_RE = re.compile(r"https?://\S+|www\.\S+")
 
 _BRACKET_PAIRS = [("(", ")"), ("[", "]"), ("{", "}"), ("<", ">"), ("《", "》"),
                   ("「", "」"), ("『", "』")]
@@ -233,6 +234,7 @@ def clean_noise_characters(text: object) -> str:
     value = _EMOJI_RE.sub(" ", value)
     value = _TEMPLATE_RE.sub(r"\1", value)
     value = _ESCAPE_RE.sub(" ", value)
+    value = _URL_RE.sub(" ", value)
     value = _REPEAT_PUNCT_RE.sub(r"\1", value)
     value = _LONG_DOTS_RE.sub("...", value)
     value = remove_unmatched_brackets(value)
