@@ -94,9 +94,9 @@ weak   : chỉ một bên có thứ nguyên đó                             -> 
 
 | nhóm | cặp có đại lượng | naive | quantity | cứu | bắt thêm | strong |
 |---|---:|---:|---:|---:|---:|---:|
-| 1688 title | 7.616 / 16.133 (47,2%) | 83,92% | **88,77%** | 690 | 320 | **47** |
-| 1688 attribute | 85.830 / 395.575 (21,7%) | 82,52% | **93,57%** | 12.432 | 2.951 | **836** |
-| Tiki units (8B) | 19.669 / 45.652 (43,1%) | 92,46% | **94,26%** | 1.278 | 924 | **237** |
+| 1688 title | 7.632 / 16.133 (47,3%) | 84,66% | **89,92%** | 695 | 274 | **49** |
+| 1688 attribute | 104.787 / 395.575 (26,5%) | 68,13% | **96,14%** | 30.823 | 1.473 | **736** |
+| Tiki units (8B) | 19.849 / 45.652 (43,5%) | 92,51% | **95,20%** | 1.269 | 735 | **263** |
 
 Diễn giải:
 
@@ -125,6 +125,27 @@ pair.qty_strong_mismatch = result["strong_mismatch"]
 pair.qty_missing = result["missing"]
 pair.qty_extra = result["extra"]
 ```
+
+### Xuất weak rows
+
+```bash
+PYTHONPATH=. python tools/export_weak_quantities.py
+# data/cleaned/quantity_weak_rows.csv  1.434 dòng (UTF-8 BOM)
+```
+
+Cột: `dataset, id, source_text, target_text, qty_src_all, qty_tgt_all,
+missing, extra, reason`.
+
+`reason`:
+
+```text
+one_side_only          : đơn vị chỉ xuất hiện một bên (1.324 dòng)
+both_sides_diff_dims   : hai bên có thứ nguyên khác nhau (110 dòng)
+```
+
+Đây là nhóm **không** bị cách cũ bắt và **không** phải strong mismatch —
+phần lớn là khác cách diễn đạt (`38` vs `38厘米`, `một tháng` vs `一个月`),
+cần review tay trước khi quyết định weight.
 
 ### Weight
 

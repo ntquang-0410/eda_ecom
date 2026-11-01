@@ -44,7 +44,7 @@ _add("length", 0.001, "mm", "milimet", "毫米")
 _add("length", 1000.0, "km", "kilomet", "公里", "千米")
 _add("length", 0.0254, "inch", "in", "英寸", "寸")
 _add("length", 0.3048, "ft", "foot", "feet", "英尺")
-_add("length", 0.9144, "yard", "yd", "码")
+_add("length", 0.9144, "yard", "yd")
 _add("length", 0.333333, "尺")
 _add("length", 500.0, "里")
 
@@ -226,12 +226,12 @@ def _match_unit(text: str, pos: int) -> tuple[str, int]:
         if lowered.startswith(name):
             # tránh khớp "a" trong "apple": đơn vị 1 ký tự phải đứng riêng
             after = pos + len(name)
-            if len(name) == 1 and after < len(text):
+            if after < len(text):
                 nxt = text[after]
                 if nxt.isalpha() and not ("\u4e00" <= nxt <= "\u9fff"):
                     continue
-            # "尺寸" là từ, không phải đơn vị "尺"
-            if name == "尺" and text[pos + len(name):pos + len(name) + 1] == "寸":
+            # "尺寸"/"尺码" là từ, không phải đơn vị "尺"
+            if name == "尺" and text[pos + len(name):pos + len(name) + 1] in ("寸", "码"):
                 continue
             return name, after
     return "", pos
@@ -290,6 +290,9 @@ def _in_code_token(text: str, start: int, end: int) -> bool:
         return False
     if _NUMBER_UNIT.match(token):
         return False
+    unit, unit_end = _match_unit(text, end)
+    if unit and _NUMBER_UNIT.match(text[start:unit_end]):
+        return False
     return any(ch.isalpha() for ch in token)
 
 
@@ -310,7 +313,7 @@ def extract_quantities(text: str, lang: str = "vi") -> list[Quantity]:
         if value is None:
             continue
         unit, end = _match_unit(text, match.end())
-        if _in_code_token(text, match.start(), end):
+        if _in_code_token(text, match.start(), match.end()):
             continue
         if unit == "件":
             tail = text[end:end + 2]

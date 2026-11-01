@@ -2,14 +2,14 @@
   "1688_title": {
     "label": "1688 title",
     "pairs": 16133,
-    "pairs_with_quantity": 8007,
-    "coverage_pct": 49.63,
+    "pairs_with_quantity": 8006,
+    "coverage_pct": 49.62,
     "naive_match_pct": 84.66,
-    "quantity_match_pct": 88.75,
-    "both_match": 6415,
-    "rescued_by_quantity": 691,
-    "newly_flagged_by_quantity": 364,
-    "newly_flagged_strong": 46,
+    "quantity_match_pct": 89.92,
+    "both_match": 6504,
+    "rescued_by_quantity": 695,
+    "newly_flagged_by_quantity": 274,
+    "newly_flagged_strong": 49,
     "examples_rescued": [
       {
         "src": "Đệm ghế ô tô mới xuyên biên giới, đệm ghế ô tô cao cấp Napppi, đệm ghế 5 chỗ trước và sau ",
@@ -59,51 +59,6 @@
     ],
     "examples_newly_flagged": [
       {
-        "src": "Gối tựa đầu dùng cho xe Mercedes-Benz S-Class Maybach kê cổ E300LC260L lưng GLC đồ trang t",
-        "tgt": "适用奔驰汽车头枕S级迈巴赫护颈枕E300LC260L腰靠GLC车内装饰用品",
-        "missing": [],
-        "extra": [
-          [
-            "volume",
-            260.0
-          ]
-        ]
-      },
-      {
-        "src": "Thích hợp cho hộp đựng khăn giấy ô tô Mercedes-Benz E-class e300A-class C-class glc260/GLB",
-        "tgt": "适用奔驰车载纸巾盒E级e300A级C级glc260/GLB/抽纸包汽车用品内饰",
-        "missing": [],
-        "extra": [
-          [
-            "current",
-            300.0
-          ]
-        ]
-      },
-      {
-        "src": "Thích hợp cho Volvo mới XC60S90XC90S60V60V90 hộp tỳ tay đệm tăng chiều cao vật tư sửa đổi ",
-        "tgt": "适用沃尔沃全新XC60S90XC90S60V60V90扶手箱增高垫汽车内改装用品",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            60.0
-          ],
-          [
-            "time",
-            90.0
-          ],
-          [
-            "voltage",
-            60.0
-          ],
-          [
-            "voltage",
-            60.0
-          ]
-        ]
-      },
-      {
         "src": "10inch Carplay màn hình thông minh trong xe ô tô định vị xe hơi MP5 Android Apple màn hình",
         "tgt": "10英寸车机carplay车载智慧屏导航车载MP5安卓苹果投屏行车记录仪",
         "missing": [],
@@ -148,64 +103,57 @@
         "extra": []
       },
       {
-        "src": "Máy ghi hình lái xe 70mai Video độ phân giải cao 3K 2inch màn hình wifi điều khiển bằng gi",
-        "tgt": "70迈行车记录仪3K高清影像2英寸屏wifi语音声控70mai A510 Lite",
+        "src": "Camera gương chiếu hậu tích hợp GPS, ghi hình lái xe độ nét cao 4K+2.5K, hỗ trợ wifi 5G, m",
+        "tgt": "11寸4K+2.5K流媒体摄像头后视镜GPS高清5Gwifi行车记录仪",
+        "missing": [
+          [
+            "mass",
+            0.005
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Ổ USB flash drive đầu T, ghi hình lái xe, loại C, phù hợp với xe C6L/GLC, S-Class, EL, EQE",
+        "tgt": "T头行车记录仪u盘用typec适用c6l/glc级s级EL新eqe车载优盘64128g",
+        "missing": [
+          [
+            "data",
+            64128000000000.0
+          ]
+        ],
+        "extra": [
+          [
+            "mass",
+            64.128
+          ]
+        ]
+      },
+      {
+        "src": "Xuyên biên giới X5 Android màn hình lớn điều hướng USB ghi âm lái xe ADAS hỗ trợ lái xe cả",
+        "tgt": "跨境X5安卓大屏导航USB行车记录仪ADAS驾驶辅助预警1080P电子狗",
         "missing": [],
         "extra": [
           [
             "current",
-            0.07
+            5.0
           ]
         ]
+      },
+      {
+        "src": "Bảng điều khiển trung Tâm Xuyên biên giới Máy ghi âm lái xe màn hình thông minh 9 inch Xe ",
+        "tgt": "跨境中控台9寸Carplay智慧屏行车记录仪前后高清4K导航货车汽车",
+        "missing": [
+          [
+            "length",
+            0.2286
+          ]
+        ],
+        "extra": []
       }
     ],
     "examples_mismatch": [
       {
-        "src": "Gối tựa đầu dùng cho xe Mercedes-Benz S-Class Maybach kê cổ E300LC260L lưng GLC đồ trang t",
-        "tgt": "适用奔驰汽车头枕S级迈巴赫护颈枕E300LC260L腰靠GLC车内装饰用品",
-        "missing": [],
-        "extra": [
-          [
-            "volume",
-            260.0
-          ]
-        ]
-      },
-      {
-        "src": "Thích hợp cho hộp đựng khăn giấy ô tô Mercedes-Benz E-class e300A-class C-class glc260/GLB",
-        "tgt": "适用奔驰车载纸巾盒E级e300A级C级glc260/GLB/抽纸包汽车用品内饰",
-        "missing": [],
-        "extra": [
-          [
-            "current",
-            300.0
-          ]
-        ]
-      },
-      {
-        "src": "Thích hợp cho Volvo mới XC60S90XC90S60V60V90 hộp tỳ tay đệm tăng chiều cao vật tư sửa đổi ",
-        "tgt": "适用沃尔沃全新XC60S90XC90S60V60V90扶手箱增高垫汽车内改装用品",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            60.0
-          ],
-          [
-            "time",
-            90.0
-          ],
-          [
-            "voltage",
-            60.0
-          ],
-          [
-            "voltage",
-            60.0
-          ]
-        ]
-      },
-      {
         "src": "10inch Carplay màn hình thông minh trong xe ô tô định vị xe hơi MP5 Android Apple màn hình",
         "tgt": "10英寸车机carplay车载智慧屏导航车载MP5安卓苹果投屏行车记录仪",
         "missing": [],
@@ -250,29 +198,67 @@
         "extra": []
       },
       {
-        "src": "Máy ghi hình lái xe 70mai Video độ phân giải cao 3K 2inch màn hình wifi điều khiển bằng gi",
-        "tgt": "70迈行车记录仪3K高清影像2英寸屏wifi语音声控70mai A510 Lite",
+        "src": "Camera gương chiếu hậu tích hợp GPS, ghi hình lái xe độ nét cao 4K+2.5K, hỗ trợ wifi 5G, m",
+        "tgt": "11寸4K+2.5K流媒体摄像头后视镜GPS高清5Gwifi行车记录仪",
+        "missing": [
+          [
+            "mass",
+            0.005
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Ổ USB flash drive đầu T, ghi hình lái xe, loại C, phù hợp với xe C6L/GLC, S-Class, EL, EQE",
+        "tgt": "T头行车记录仪u盘用typec适用c6l/glc级s级EL新eqe车载优盘64128g",
+        "missing": [
+          [
+            "data",
+            64128000000000.0
+          ]
+        ],
+        "extra": [
+          [
+            "mass",
+            64.128
+          ]
+        ]
+      },
+      {
+        "src": "Xuyên biên giới X5 Android màn hình lớn điều hướng USB ghi âm lái xe ADAS hỗ trợ lái xe cả",
+        "tgt": "跨境X5安卓大屏导航USB行车记录仪ADAS驾驶辅助预警1080P电子狗",
         "missing": [],
         "extra": [
           [
             "current",
-            0.07
+            5.0
           ]
         ]
+      },
+      {
+        "src": "Bảng điều khiển trung Tâm Xuyên biên giới Máy ghi âm lái xe màn hình thông minh 9 inch Xe ",
+        "tgt": "跨境中控台9寸Carplay智慧屏行车记录仪前后高清4K导航货车汽车",
+        "missing": [
+          [
+            "length",
+            0.2286
+          ]
+        ],
+        "extra": []
       }
     ]
   },
   "1688_attribute": {
     "label": "1688 attribute",
     "pairs": 395575,
-    "pairs_with_quantity": 104729,
-    "coverage_pct": 26.48,
-    "naive_match_pct": 67.94,
-    "quantity_match_pct": 95.36,
-    "both_match": 69114,
-    "rescued_by_quantity": 30756,
-    "newly_flagged_by_quantity": 2036,
-    "newly_flagged_strong": 969,
+    "pairs_with_quantity": 104787,
+    "coverage_pct": 26.49,
+    "naive_match_pct": 68.13,
+    "quantity_match_pct": 96.14,
+    "both_match": 69917,
+    "rescued_by_quantity": 30823,
+    "newly_flagged_by_quantity": 1473,
+    "newly_flagged_strong": 736,
     "examples_rescued": [
       {
         "src": "00031",
@@ -328,17 +314,6 @@
         ]
       },
       {
-        "src": "200g/can",
-        "tgt": "200g/罐",
-        "missing": [],
-        "extra": [
-          [
-            "mass",
-            0.2
-          ]
-        ]
-      },
-      {
         "src": "ba năm",
         "tgt": "三年",
         "missing": [],
@@ -401,6 +376,21 @@
           [
             "time",
             94608000.0
+          ]
+        ]
+      },
+      {
+        "src": "Ngày 61-90",
+        "tgt": "61-90日",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            5270400.0
+          ],
+          [
+            "time",
+            7776000.0
           ]
         ]
       }
@@ -414,17 +404,6 @@
           [
             "length",
             0.0762
-          ]
-        ]
-      },
-      {
-        "src": "200g/can",
-        "tgt": "200g/罐",
-        "missing": [],
-        "extra": [
-          [
-            "mass",
-            0.2
           ]
         ]
       },
@@ -460,10 +439,6 @@
           ]
         ],
         "extra": [
-          [
-            "voltage",
-            12.0
-          ],
           [
             "volume",
             1.0
@@ -502,20 +477,31 @@
             20736000.0
           ]
         ]
+      },
+      {
+        "src": "Ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            94608000.0
+          ]
+        ]
       }
     ]
   },
   "tiki_units": {
     "label": "Tiki units (8B)",
     "pairs": 45652,
-    "pairs_with_quantity": 21330,
-    "coverage_pct": 46.72,
-    "naive_match_pct": 93.01,
-    "quantity_match_pct": 93.94,
-    "both_match": 18748,
-    "rescued_by_quantity": 1289,
-    "newly_flagged_by_quantity": 1092,
-    "newly_flagged_strong": 329,
+    "pairs_with_quantity": 19849,
+    "coverage_pct": 43.48,
+    "naive_match_pct": 92.51,
+    "quantity_match_pct": 95.2,
+    "both_match": 17628,
+    "rescued_by_quantity": 1269,
+    "newly_flagged_by_quantity": 735,
+    "newly_flagged_strong": 263,
     "examples_rescued": [
       {
         "src": "Bình đựng thức ăn giữ nhiệt inox 304 Elmich EL8337 dung tích 650ml",
@@ -584,21 +570,6 @@
     ],
     "examples_newly_flagged": [
       {
-        "src": "Máy Hút Phân Cá Baoyu BY-X25 (25W-2000L/H) - Combo 6 Đầu Hút Vệ Sinh Toàn Diện",
-        "tgt": "Baoyu 25W-2000L/H 全面清洁组合吸污机 - 6头吸污器",
-        "missing": [
-          [
-            "power",
-            25.0
-          ],
-          [
-            "volume",
-            2000.0
-          ]
-        ],
-        "extra": []
-      },
-      {
         "src": "Bình Nước Aqua 2.6L - Locknlock - 2 Màu (Xanh, Trắng) - HAP739",
         "tgt": "Locknlock 水壶 2.6L - 2色 (蓝, 白) - HAP739",
         "missing": [],
@@ -625,50 +596,6 @@
         ]
       },
       {
-        "src": "- Rắc: rắc một lớp bột dày 3 - 5 mm trước miệng hang, đường đi hay những nơi chuột ẩn nấp.",
-        "tgt": "- 撒：在洞口、鼠类活动路径或藏身之处撒一层厚3-5毫米的粉末。老鼠会因习性而进入口中。- 撒完后至少要放置5天，必要时应补充。- 制作毒饵：将1份与19份老鼠喜爱的食物（如米饭、",
-        "missing": [],
-        "extra": [
-          [
-            "area",
-            50.0
-          ]
-        ]
-      },
-      {
-        "src": "2 ổ 2USB1C sạc nhanh",
-        "tgt": "2个USB1C快充接口",
-        "missing": [],
-        "extra": [
-          [
-            "temperature",
-            1.0
-          ]
-        ]
-      },
-      {
-        "src": "Thân bên trong: SUS316L/ Vỏ ngoài: SUS304; Nắp: PP; Vòng đệm đáy chai: silicone",
-        "tgt": "内胆：SUS316L/外胆：SUS304；盖子：PP；瓶底密封圈：硅胶",
-        "missing": [],
-        "extra": [
-          [
-            "volume",
-            316.0
-          ]
-        ]
-      },
-      {
-        "src": "Bình giữ nhiệt Active Shake It Bottle Pro LHC4276 Locknlock - Dung tích 650ml",
-        "tgt": "Locknlock 保温瓶 Pro LHC4276 - 650ml",
-        "missing": [],
-        "extra": [
-          [
-            "volume",
-            4.276
-          ]
-        ]
-      },
-      {
         "src": "Giấy Lọc café Ringo 1x2 và 1x4 Nhật",
         "tgt": "Ringo 咖啡滤纸 1x2 和 1x4 日本",
         "missing": [],
@@ -682,24 +609,68 @@
             345600.0
           ]
         ]
-      }
-    ],
-    "examples_mismatch": [
+      },
       {
-        "src": "Máy Hút Phân Cá Baoyu BY-X25 (25W-2000L/H) - Combo 6 Đầu Hút Vệ Sinh Toàn Diện",
-        "tgt": "Baoyu 25W-2000L/H 全面清洁组合吸污机 - 6头吸污器",
+        "src": "Hộp Đựng Thuốc 20Đ Dài Slim Nắp Trượt Kim Loại Nhiều Màu",
+        "tgt": "药盒 20片 长款 纤细 滑盖 金属多色",
         "missing": [
           [
-            "power",
-            25.0
-          ],
-          [
-            "volume",
-            2000.0
+            "currency",
+            20.0
           ]
         ],
         "extra": []
       },
+      {
+        "src": "Tránh ngâm nước 24/24",
+        "tgt": "避免24小时浸泡",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            86400.0
+          ]
+        ]
+      },
+      {
+        "src": "từ 6 - 8 tiếng",
+        "tgt": "最长寿命 6 - 8 小时",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            21600.0
+          ],
+          [
+            "time",
+            28800.0
+          ]
+        ]
+      },
+      {
+        "src": "GA CHỐNG THẤM LOVEMAMA XE Ô TÔ Sản phẩm bọc trực tiếp vào nện, không cần thêm lớp ga nào p",
+        "tgt": "GA CHỐNG THẤM LOVEMAMA XE Ô TÔ 产品直接包裹在内层，无需添加其他层的床单覆盖在上面。床单直接铺在内层。请存放在干燥通风处，放在衣柜中。用洗衣机清洗床单",
+        "missing": [
+          [
+            "temperature",
+            40.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "10 phân",
+        "tgt": "10厘米",
+        "missing": [],
+        "extra": [
+          [
+            "length",
+            0.1
+          ]
+        ]
+      }
+    ],
+    "examples_mismatch": [
       {
         "src": "Bình Nước Aqua 2.6L - Locknlock - 2 Màu (Xanh, Trắng) - HAP739",
         "tgt": "Locknlock 水壶 2.6L - 2色 (蓝, 白) - HAP739",
@@ -757,14 +728,27 @@
         "extra": [
           [
             "length",
-            0.127
+            26.0
           ]
         ]
       },
       {
         "src": "Chiếu Mây Điều Hòa Thủ Công Cao Cấp – Sợi Mây Tự Nhiên 5kg/Chiếc, Gấp Gọn Được, Giặt Được,",
         "tgt": "云朵凉席 优质手工制作 – 自然云纤维 5公斤/件，可折叠，可水洗，夏季清凉 – 尺寸 1.6米 / 1.8米 / 2.2米 - HÀNG CHÍNH HÃNG MINIIN",
-        "missing": [],
+        "missing": [
+          [
+            "area",
+            4.0
+          ],
+          [
+            "length",
+            1.0
+          ],
+          [
+            "length",
+            6.0
+          ]
+        ],
         "extra": [
           [
             "length",
@@ -781,24 +765,39 @@
         ]
       },
       {
-        "src": "- Rắc: rắc một lớp bột dày 3 - 5 mm trước miệng hang, đường đi hay những nơi chuột ẩn nấp.",
-        "tgt": "- 撒：在洞口、鼠类活动路径或藏身之处撒一层厚3-5毫米的粉末。老鼠会因习性而进入口中。- 撒完后至少要放置5天，必要时应补充。- 制作毒饵：将1份与19份老鼠喜爱的食物（如米饭、",
+        "src": "- Chỉ cần ấn đầu bình gas nối với đầu nối bằng nhựa vào đầu lon gas, nhấn đầu nối vào vị t",
+        "tgt": "只需将气罐头直接连接到塑料接头，然后将接头插入打火机气罐的充气口，垂直方向进行充气。平均来说，给一个打火机充气大约需要5-10秒。配有5个专用充气头，可适用于目前所有类型的打火机。",
         "missing": [],
         "extra": [
           [
-            "area",
-            50.0
+            "time",
+            5.0
           ]
         ]
       },
       {
-        "src": "2 ổ 2USB1C sạc nhanh",
-        "tgt": "2个USB1C快充接口",
+        "src": "Giấy Lọc café Ringo 1x2 và 1x4 Nhật",
+        "tgt": "Ringo 咖啡滤纸 1x2 和 1x4 日本",
         "missing": [],
         "extra": [
           [
-            "temperature",
-            1.0
+            "time",
+            86400.0
+          ],
+          [
+            "time",
+            345600.0
+          ]
+        ]
+      },
+      {
+        "src": "Chảo inox 3 lớp nguyên khối Elmich Trimax EL-3846 size 26",
+        "tgt": "Elmich Trimax EL-3846 三层不锈钢整块锅 26cm",
+        "missing": [],
+        "extra": [
+          [
+            "length",
+            0.26
           ]
         ]
       }
