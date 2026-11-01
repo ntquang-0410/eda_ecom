@@ -268,10 +268,11 @@ def _propagate_range_units(text: str, quantities: list[Quantity]) -> None:
 
 
 CODE_TOKEN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9./+\-]*$")
+_UNIT_ALT = "(?:" + "|".join(re.escape(name) for name in _UNIT_NAMES) + ")"
+_NUM = r"\d+(?:[.,]\d+)?"
+_PAIR = rf"{_NUM}{_UNIT_ALT}?"
 _NUMBER_UNIT = re.compile(
-    r"^\d+(?:[.,]\d+)?(?:"
-    + "|".join(re.escape(name) for name in _UNIT_NAMES)
-    + r")$",
+    rf"^{_PAIR}$|^(?:{_PAIR})(?:[-~/x*×,](?:{_PAIR}))+$",
     re.IGNORECASE,
 )
 
@@ -287,24 +288,24 @@ def _in_code_token(text: str, start: int, end: int) -> bool:
     token = text[left:right]
     if not CODE_TOKEN.match(token):
         return False
-    # chỉ coi là mã khi có cụm >=2 chữ cái không phải đơn vị (EL, LED, IN...)
-    runs = re.findall(r"[A-Za-z]{2,}", token)
-    if not runs:
+    if _NUMBER_UNIT.match(token):
         return False
-    return any(run.lower() not in UNITS for run in runs)
+    return any(ch.isalpha() for ch in token)
+
+
+CURRENCY_VI = re.compile(r"nhân\s+dân\s+tệ|\btệ\b|\bđồng\b", re.IGNORECASE)
 
 
 def extract_quantities(text: str, lang: str = "vi") -> list[Quantity]:
     text = unicodedata.normalize("NFKC", str(text or ""))
+    if lang == "vi":
+        text = CURRENCY_VI.sub("元", text)
     text = _normalize_fractions(text)
     found: list[Quantity] = []
 
     # số Ả Rập
     for match in ARABIC_RE.finditer(text):
         # "E300", "ABF916", "HAP739": số nằm trong mã sản phẩm -> bỏ
-        previous = text[match.start() - 1] if match.start() > 0 else ""
-        if previous.isascii() and previous.isalpha():
-            continue
         value = parse_number(match.group(), lang)
         if value is None:
             continue
