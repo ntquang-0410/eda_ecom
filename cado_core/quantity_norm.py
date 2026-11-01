@@ -120,6 +120,16 @@ _add("currency", 1.0, "đ", "vnd", "vnđ", "元", "¥", "rmb", "人民币", "美
 
 _UNIT_NAMES = sorted(UNITS, key=len, reverse=True)
 
+UNIT_WORD_BLACKLIST = {
+    "安卓", "安全", "安装", "安徽", "安庆",
+    "元祖", "元素", "元气", "元年",
+    "尺寸", "尺码",
+    "件套", "件装",
+    "天然", "天猫", "天蓝", "天空", "年份", "年代",
+    "日本", "日常", "日式", "时尚", "时间", "年轻", "百年",
+    "米饭", "月份",
+}
+
 VI_NUMBERS = {"một": 1, "hai": 2, "ba": 3, "bốn": 4, "tư": 4, "sáu": 6,
               "bảy": 7, "tám": 8, "chín": 9, "mười": 10}
 VI_NUM_RE = re.compile(r"\b(" + "|".join(VI_NUMBERS) + r")\b", re.IGNORECASE)
@@ -228,11 +238,18 @@ def _match_unit(text: str, pos: int) -> tuple[str, int]:
             after = pos + len(name)
             if after < len(text):
                 nxt = text[after]
-                if nxt.isalpha() and not ("\u4e00" <= nxt <= "\u9fff"):
+                if len(name) == 1 and nxt.isalpha() and not ("\u4e00" <= nxt <= "\u9fff"):
+                    continue
+                if len(name) == 1 and ("\u4e00" <= nxt <= "\u9fff"):
+                    # đơn vị 1 ký tự nằm trong từ ("安卓", "元祖", "百年青")
+                    if text[pos:pos + 2] in UNIT_WORD_BLACKLIST:
+                        continue
+                if len(name) > 1 and nxt.isalpha() and not ("\u4e00" <= nxt <= "\u9fff"):
                     continue
             # "尺寸"/"尺码" là từ, không phải đơn vị "尺"
             if name == "尺" and text[pos + len(name):pos + len(name) + 1] in ("寸", "码"):
                 continue
+
             return name, after
     return "", pos
 
@@ -343,6 +360,7 @@ def extract_quantities(text: str, lang: str = "vi") -> list[Quantity]:
                 continue
             if unit == "件" and text[end:end + 1] in ("套", "装"):
                 continue
+
             found.append(Quantity(match.group(), value, unit,
                                   UNITS.get(unit, ("", 1.0))[0],
                                   value * UNITS.get(unit, ("", 1.0))[1],
