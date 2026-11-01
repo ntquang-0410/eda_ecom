@@ -2,13 +2,13 @@
   "1688_title": {
     "label": "1688 title",
     "pairs": 16133,
-    "pairs_with_quantity": 8012,
-    "coverage_pct": 49.66,
-    "naive_match_pct": 84.61,
-    "quantity_match_pct": 90.39,
-    "both_match": 6542,
-    "rescued_by_quantity": 700,
-    "newly_flagged_by_quantity": 237,
+    "pairs_with_quantity": 8099,
+    "coverage_pct": 50.2,
+    "naive_match_pct": 84.78,
+    "quantity_match_pct": 90.62,
+    "both_match": 6637,
+    "rescued_by_quantity": 702,
+    "newly_flagged_by_quantity": 229,
     "newly_flagged_strong": 47,
     "examples_rescued": [
       {
@@ -256,14 +256,14 @@
   "1688_attribute": {
     "label": "1688 attribute",
     "pairs": 395575,
-    "pairs_with_quantity": 104789,
-    "coverage_pct": 26.49,
-    "naive_match_pct": 68.13,
-    "quantity_match_pct": 96.27,
-    "both_match": 70039,
-    "rescued_by_quantity": 30838,
-    "newly_flagged_by_quantity": 1353,
-    "newly_flagged_strong": 654,
+    "pairs_with_quantity": 101303,
+    "coverage_pct": 25.61,
+    "naive_match_pct": 67.09,
+    "quantity_match_pct": 96.28,
+    "both_match": 66755,
+    "rescued_by_quantity": 30778,
+    "newly_flagged_by_quantity": 1206,
+    "newly_flagged_strong": 652,
     "examples_rescued": [
       {
         "src": "00031",
@@ -308,79 +308,17 @@
     ],
     "examples_newly_flagged": [
       {
-        "src": "Bàn chải cán tre số 1 ; Số 2 bàn chải đầu tròn tốt ; Số 3 bàn chải đầu tròn màu đen ; Bàn ",
-        "tgt": "1号竹柄刷 ; 2号圆头刷好 ; 3号黑色圆头刷 ; 4号小尖头刷 ; 5号大尖头刷 ; 6号 双色尖头刷小号泡壳包装 ; 7号 双色尖头刷大号泡壳包装 ; 8号 弧形刷 ; 9号",
-        "missing": [],
-        "extra": [
-          [
-            "length",
-            0.0762
-          ]
-        ]
-      },
-      {
-        "src": "ba năm",
-        "tgt": "三年",
+        "src": "Ngày 61-90",
+        "tgt": "61-90日",
         "missing": [],
         "extra": [
           [
             "time",
-            94608000.0
-          ]
-        ]
-      },
-      {
-        "src": "Ba năm",
-        "tgt": "三年",
-        "missing": [],
-        "extra": [
+            5270400.0
+          ],
           [
             "time",
-            94608000.0
-          ]
-        ]
-      },
-      {
-        "src": "Ba năm",
-        "tgt": "三年",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            94608000.0
-          ]
-        ]
-      },
-      {
-        "src": "ba năm",
-        "tgt": "三年",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            94608000.0
-          ]
-        ]
-      },
-      {
-        "src": "Ba năm",
-        "tgt": "三年",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            94608000.0
-          ]
-        ]
-      },
-      {
-        "src": "Ba năm",
-        "tgt": "三年",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            94608000.0
+            7776000.0
           ]
         ]
       },
@@ -398,42 +336,79 @@
             7776000.0
           ]
         ]
+      },
+      {
+        "src": "Năm năm",
+        "tgt": "五年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            157680000.0
+          ]
+        ]
+      },
+      {
+        "src": "Năm năm",
+        "tgt": "五年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            157680000.0
+          ]
+        ]
+      },
+      {
+        "src": "Năm năm",
+        "tgt": "五年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            157680000.0
+          ]
+        ]
+      },
+      {
+        "src": "Năm năm",
+        "tgt": "五年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            157680000.0
+          ]
+        ]
+      },
+      {
+        "src": "Ngày 61-90",
+        "tgt": "61-90日",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            5270400.0
+          ],
+          [
+            "time",
+            7776000.0
+          ]
+        ]
+      },
+      {
+        "src": "Băng và tuyết (màu trắng) ; Băng và tuyết (màu xanh) ; Băng và tuyết (màu xanh lá cây) ; B",
+        "tgt": "冰雪（白） ; 冰雪（蓝） ; 冰雪（绿） ; 冰雪（透黑） ; 冰雪（粉） ; 冰雪（黄） ; 冰雪（紫） ; 冰雪（炫彩） ; 梦幻（白） ; 梦幻（彩） ; ZZ款（白） ;",
+        "missing": [
+          [
+            "time",
+            788400000.0
+          ]
+        ],
+        "extra": []
       }
     ],
     "examples_mismatch": [
-      {
-        "src": "Bàn chải cán tre số 1 ; Số 2 bàn chải đầu tròn tốt ; Số 3 bàn chải đầu tròn màu đen ; Bàn ",
-        "tgt": "1号竹柄刷 ; 2号圆头刷好 ; 3号黑色圆头刷 ; 4号小尖头刷 ; 5号大尖头刷 ; 6号 双色尖头刷小号泡壳包装 ; 7号 双色尖头刷大号泡壳包装 ; 8号 弧形刷 ; 9号",
-        "missing": [],
-        "extra": [
-          [
-            "length",
-            0.0762
-          ]
-        ]
-      },
-      {
-        "src": "ba năm",
-        "tgt": "三年",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            94608000.0
-          ]
-        ]
-      },
-      {
-        "src": "Ba năm",
-        "tgt": "三年",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            94608000.0
-          ]
-        ]
-      },
       {
         "src": "【ST-221B】Màu cam - Đo áp suất màn hình kép + Áp suất lốp đặt trước + Tự động dừng khi đầy ",
         "tgt": "【ST-221B】橙色-双屏测压+预设胎压+充满自停 ; 【ST-221B】双屏测压+预设胎压+充满自停 ; 【ST-221C】-无线数显+反向充电款 ; 【ST-221D】三用充",
@@ -451,28 +426,6 @@
         ]
       },
       {
-        "src": "Ba năm",
-        "tgt": "三年",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            94608000.0
-          ]
-        ]
-      },
-      {
-        "src": "ba năm",
-        "tgt": "三年",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            94608000.0
-          ]
-        ]
-      },
-      {
         "src": "Cologne cổ điển ; Hương thơm Osmanthus vào tháng 8 ; Hương thơm Gardenia ; Nước hoa Hilton",
         "tgt": "经典古龙 ; 八月桂花香 ; 栀子花香 ; 希尔顿香 ; 清新茉莉",
         "missing": [],
@@ -484,13 +437,80 @@
         ]
       },
       {
-        "src": "Ba năm",
-        "tgt": "三年",
+        "src": "Ngày 61-90",
+        "tgt": "61-90日",
         "missing": [],
         "extra": [
           [
             "time",
-            94608000.0
+            5270400.0
+          ],
+          [
+            "time",
+            7776000.0
+          ]
+        ]
+      },
+      {
+        "src": "Ngày 61-90",
+        "tgt": "61-90日",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            5270400.0
+          ],
+          [
+            "time",
+            7776000.0
+          ]
+        ]
+      },
+      {
+        "src": "70% off cotton-xám (151*55cm) ; 70% off cotton nâu (151*55cm)",
+        "tgt": "三折棉-灰色（151*55cm） ; 三折棉-棕色（151*55cm)",
+        "missing": [
+          [
+            "percent",
+            70.0
+          ],
+          [
+            "percent",
+            70.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Năm năm",
+        "tgt": "五年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            157680000.0
+          ]
+        ]
+      },
+      {
+        "src": "Năm năm",
+        "tgt": "五年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            157680000.0
+          ]
+        ]
+      },
+      {
+        "src": "Năm năm",
+        "tgt": "五年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            157680000.0
           ]
         ]
       }
@@ -499,14 +519,14 @@
   "tiki_units": {
     "label": "Tiki units (8B)",
     "pairs": 45652,
-    "pairs_with_quantity": 19849,
-    "coverage_pct": 43.48,
-    "naive_match_pct": 92.51,
-    "quantity_match_pct": 95.61,
-    "both_match": 17704,
-    "rescued_by_quantity": 1274,
-    "newly_flagged_by_quantity": 659,
-    "newly_flagged_strong": 257,
+    "pairs_with_quantity": 19776,
+    "coverage_pct": 43.32,
+    "naive_match_pct": 92.49,
+    "quantity_match_pct": 96.05,
+    "both_match": 17718,
+    "rescued_by_quantity": 1277,
+    "newly_flagged_by_quantity": 573,
+    "newly_flagged_strong": 245,
     "examples_rescued": [
       {
         "src": "Bình đựng thức ăn giữ nhiệt inox 304 Elmich EL8337 dung tích 650ml",
@@ -623,21 +643,6 @@
         ]
       },
       {
-        "src": "từ 6 - 8 tiếng",
-        "tgt": "最长寿命 6 - 8 小时",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            21600.0
-          ],
-          [
-            "time",
-            28800.0
-          ]
-        ]
-      },
-      {
         "src": "GA CHỐNG THẤM LOVEMAMA XE Ô TÔ Sản phẩm bọc trực tiếp vào nện, không cần thêm lớp ga nào p",
         "tgt": "GA CHỐNG THẤM LOVEMAMA XE Ô TÔ 产品直接包裹在内层，无需添加其他层的床单覆盖在上面。床单直接铺在内层。请存放在干燥通风处，放在衣柜中。用洗衣机清洗床单",
         "missing": [
@@ -669,6 +674,17 @@
             0.2
           ]
         ]
+      },
+      {
+        "src": "30 phân",
+        "tgt": "30毫米",
+        "missing": [],
+        "extra": [
+          [
+            "length",
+            0.03
+          ]
+        ]
       }
     ],
     "examples_mismatch": [
@@ -696,14 +712,6 @@
           [
             "temperature",
             60.0
-          ],
-          [
-            "time",
-            14400.0
-          ],
-          [
-            "time",
-            54000.0
           ]
         ]
       },

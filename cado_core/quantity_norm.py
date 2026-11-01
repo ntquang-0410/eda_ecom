@@ -120,6 +120,9 @@ _add("currency", 1.0, "đ", "vnd", "vnđ", "元", "¥", "rmb", "人民币", "美
 
 _UNIT_NAMES = sorted(UNITS, key=len, reverse=True)
 
+# lượng từ chen giữa số và đơn vị: "4个小时", "5个月", "10个装"
+MEASURE_WORDS = {"个", "只", "支", "条", "张", "件", "枚", "粒", "片", "位", "名", "台", "辆", "间"}
+
 UNIT_WORD_BLACKLIST = {
     "安卓", "安全", "安装", "安徽", "安庆",
     "元祖", "元素", "元气", "元年",
@@ -255,6 +258,12 @@ def _match_unit(text: str, pos: int) -> tuple[str, int]:
             if name == "尺" and text[pos + len(name):pos + len(name) + 1] in ("寸", "码"):
                 continue
 
+            # "4个小时": bỏ lượng từ "个" rồi khớp "小时"
+            if name in MEASURE_WORDS:
+                tail = text[after:]
+                for unit_name in _UNIT_NAMES:
+                    if len(unit_name) > 1 and tail.lower().startswith(unit_name):
+                        return unit_name, after + len(unit_name)
             return name, after
     return "", pos
 
