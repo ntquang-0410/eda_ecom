@@ -2,14 +2,14 @@
   "1688_title": {
     "label": "1688 title",
     "pairs": 16133,
-    "pairs_with_quantity": 7777,
-    "coverage_pct": 48.21,
-    "naive_match_pct": 84.16,
-    "quantity_match_pct": 77.15,
-    "both_match": 5349,
-    "rescued_by_quantity": 651,
-    "newly_flagged_by_quantity": 1196,
-    "newly_flagged_strong": 75,
+    "pairs_with_quantity": 8012,
+    "coverage_pct": 49.66,
+    "naive_match_pct": 84.61,
+    "quantity_match_pct": 90.39,
+    "both_match": 6542,
+    "rescued_by_quantity": 700,
+    "newly_flagged_by_quantity": 237,
+    "newly_flagged_strong": 47,
     "examples_rescued": [
       {
         "src": "Đệm ghế ô tô mới xuyên biên giới, đệm ghế ô tô cao cấp Napppi, đệm ghế 5 chỗ trước và sau ",
@@ -42,9 +42,14 @@
         "qty": []
       },
       {
-        "src": "2026 mẫu túi du lịch nam nữ mới, túi công tác, túi đi học dung tích lớn, túi đựng máy tính",
-        "tgt": "2026新款男女旅行包商务16寸大容量书包大学生电脑包双肩包背包",
-        "qty": []
+        "src": "Nhà máy bán hàng trực tiếp chó điện tử VG3, tiếng Anh, tiếng Nga và radar, máy ghi âm lái ",
+        "tgt": "厂家直销VG3电子狗英俄语加雷达测速二合一2.0寸行车记录仪高清",
+        "qty": [
+          [
+            "length",
+            0.0508
+          ]
+        ]
       },
       {
         "src": "Cặp sách học sinh dung tích lớn phong cách học đường ba lô 5 chiếc đeo vai rộng thời trang",
@@ -54,206 +59,211 @@
     ],
     "examples_newly_flagged": [
       {
-        "src": "Gối tựa đầu dùng cho xe Mercedes-Benz S-Class Maybach kê cổ E300LC260L lưng GLC đồ trang t",
-        "tgt": "适用奔驰汽车头枕S级迈巴赫护颈枕E300LC260L腰靠GLC车内装饰用品",
-        "missing": [
-          [
-            "volume",
-            260.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Bình xịt tạo bọt 2L nâng cấp, bình xịt rửa xe đa năng, bình xịt tạo bọt tưới hoa bằng tay,",
-        "tgt": "升级2L喷壶泡沫器众横洗车喷壶手动浇花喷水发泡器高压洗车工具",
-        "missing": [
-          [
-            "volume",
-            2.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Thích hợp cho hộp đựng khăn giấy ô tô Mercedes-Benz E-class e300A-class C-class glc260/GLB",
-        "tgt": "适用奔驰车载纸巾盒E级e300A级C级glc260/GLB/抽纸包汽车用品内饰",
-        "missing": [
-          [
-            "current",
-            300.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Rửa xe Máy tưới hoa cầm tay 2L Bình tưới vườn Máy phun khử trùng vệ sinh gia dụng Bình tướ",
-        "tgt": "洗车2L手持浇花园艺晒水壶家用清洁消毒喷雾器高压喷壶",
-        "missing": [
-          [
-            "volume",
-            2.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Kẹp Ma Thuật Q3 ô tô sạc không dây giá đỡ điện thoại di động 15W cảm ứng đóng mở giá đỡ đị",
-        "tgt": "魔夹Q3车载无线充电手机支架15W感应开合汽车导航架用品跨境",
-        "missing": [
-          [
-            "power",
-            15.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Cảnh báo phản quang dải phản quang ô tô 5cm * 3m cảnh báo an toàn dán trang trí ô tô phản ",
-        "tgt": "反光警告带 5cm*3m汽车反光条 安全警告汽车装饰贴纸彩色格子反射",
-        "missing": [
-          [
-            "length",
-            3.0
-          ]
-        ],
+        "src": "Camera hành trình 4G tích hợp định vị GPS, giám sát từ xa 24/24, phát hiện va chạm, ghi hì",
+        "tgt": "4G行车记录仪哨兵GPS定位24小时远程监控碰撞唤醒app无线行车记录",
+        "missing": [],
         "extra": [
           [
-            "length",
-            0.03
+            "time",
+            86400.0
           ]
         ]
       },
       {
-        "src": "Đệm sưởi ghế ô tô mùa đông 12V/24V đa năng, đệm sưởi điện, đệm ghế lông mềm, xuất khẩu",
-        "tgt": "汽车加热坐垫冬季12V/24V通用车载座椅保暖电加热垫毛绒座垫跨境",
+        "src": "Camera gương chiếu hậu tích hợp GPS, ghi hình lái xe độ nét cao 4K+2.5K, hỗ trợ wifi 5G, m",
+        "tgt": "11寸4K+2.5K流媒体摄像头后视镜GPS高清5Gwifi行车记录仪",
         "missing": [
           [
-            "voltage",
-            24.0
+            "mass",
+            0.005
           ]
         ],
         "extra": []
       },
       {
-        "src": "Dung dịch rửa xe tạo bọt cao cấp Hongpengfa, thùng lớn, dành cho tiệm rửa xe, nước đánh bó",
-        "tgt": "鸿鹏发汽车高泡洗车液大桶洗车店蜡水20L升母料 浓缩泡沫液",
+        "src": "Ổ USB flash drive đầu T, ghi hình lái xe, loại C, phù hợp với xe C6L/GLC, S-Class, EL, EQE",
+        "tgt": "T头行车记录仪u盘用typec适用c6l/glc级s级EL新eqe车载优盘64128g",
         "missing": [
           [
-            "volume",
-            20.0
+            "data",
+            64128000000000.0
+          ]
+        ],
+        "extra": [
+          [
+            "mass",
+            64.128
+          ]
+        ]
+      },
+      {
+        "src": "Camera hành trình 2K xuyên biên giới với chức năng giám sát đỗ xe 24/24, kết nối WiFi di đ",
+        "tgt": "跨境2K行车记录仪24小时停车监控手机WiFi互联高清夜视隐藏式车载",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            86400.0
+          ]
+        ]
+      },
+      {
+        "src": "10 inch wifi kết nối điện thoại di động ghi hình lái xe Camera kép phía trước và phía sau ",
+        "tgt": "10英寸wifi手机互联行车记录仪前后双摄高清夜视流媒体倒车影像",
+        "missing": [
+          [
+            "length",
+            0.254
           ]
         ],
         "extra": []
+      },
+      {
+        "src": "Camera hành trình ba camera E3 Ultra-clear 4K với chức năng xem và tải xuống qua WIFI, the",
+        "tgt": "E3超清4K三录行车记录仪WIFI查看下载 GPS时速轨迹24小时停车监控",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            86400.0
+          ]
+        ]
+      },
+      {
+        "src": "4 Ghi lại cảnh báo điểm mù 360 độ BSD HD 4K lái xe ghi ADAS12 inch toàn màn hình phương ti",
+        "tgt": "4录360度盲区预警BSD高清4K行车记录仪ADAS12寸全屏流媒体后视镜",
+        "missing": [],
+        "extra": [
+          [
+            "length",
+            0.3048
+          ]
+        ]
+      },
+      {
+        "src": "Camera hành trình bốn camera 3.0inch hỗ trợ WiFi, tầm nhìn ban đêm hồng ngoại, giám sát đỗ",
+        "tgt": "3.0寸四录行车记录仪支持WiFi红外夜视24小时停车监控无线互联",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            86400.0
+          ]
+        ]
       }
     ],
     "examples_mismatch": [
       {
-        "src": "Gối tựa đầu dùng cho xe Mercedes-Benz S-Class Maybach kê cổ E300LC260L lưng GLC đồ trang t",
-        "tgt": "适用奔驰汽车头枕S级迈巴赫护颈枕E300LC260L腰靠GLC车内装饰用品",
-        "missing": [
-          [
-            "volume",
-            260.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Bình xịt tạo bọt 2L nâng cấp, bình xịt rửa xe đa năng, bình xịt tạo bọt tưới hoa bằng tay,",
-        "tgt": "升级2L喷壶泡沫器众横洗车喷壶手动浇花喷水发泡器高压洗车工具",
-        "missing": [
-          [
-            "volume",
-            2.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Thích hợp cho hộp đựng khăn giấy ô tô Mercedes-Benz E-class e300A-class C-class glc260/GLB",
-        "tgt": "适用奔驰车载纸巾盒E级e300A级C级glc260/GLB/抽纸包汽车用品内饰",
-        "missing": [
-          [
-            "current",
-            300.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Rửa xe Máy tưới hoa cầm tay 2L Bình tưới vườn Máy phun khử trùng vệ sinh gia dụng Bình tướ",
-        "tgt": "洗车2L手持浇花园艺晒水壶家用清洁消毒喷雾器高压喷壶",
-        "missing": [
-          [
-            "volume",
-            2.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Kẹp Ma Thuật Q3 ô tô sạc không dây giá đỡ điện thoại di động 15W cảm ứng đóng mở giá đỡ đị",
-        "tgt": "魔夹Q3车载无线充电手机支架15W感应开合汽车导航架用品跨境",
-        "missing": [
-          [
-            "power",
-            15.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Cảnh báo phản quang dải phản quang ô tô 5cm * 3m cảnh báo an toàn dán trang trí ô tô phản ",
-        "tgt": "反光警告带 5cm*3m汽车反光条 安全警告汽车装饰贴纸彩色格子反射",
-        "missing": [
-          [
-            "length",
-            3.0
-          ]
-        ],
+        "src": "Camera hành trình 4G tích hợp định vị GPS, giám sát từ xa 24/24, phát hiện va chạm, ghi hì",
+        "tgt": "4G行车记录仪哨兵GPS定位24小时远程监控碰撞唤醒app无线行车记录",
+        "missing": [],
         "extra": [
           [
-            "length",
-            0.03
+            "time",
+            86400.0
           ]
         ]
       },
       {
-        "src": "Đệm sưởi ghế ô tô mùa đông 12V/24V đa năng, đệm sưởi điện, đệm ghế lông mềm, xuất khẩu",
-        "tgt": "汽车加热坐垫冬季12V/24V通用车载座椅保暖电加热垫毛绒座垫跨境",
+        "src": "Camera gương chiếu hậu tích hợp GPS, ghi hình lái xe độ nét cao 4K+2.5K, hỗ trợ wifi 5G, m",
+        "tgt": "11寸4K+2.5K流媒体摄像头后视镜GPS高清5Gwifi行车记录仪",
         "missing": [
           [
-            "voltage",
-            24.0
+            "mass",
+            0.005
           ]
         ],
         "extra": []
       },
       {
-        "src": "Dung dịch rửa xe tạo bọt cao cấp Hongpengfa, thùng lớn, dành cho tiệm rửa xe, nước đánh bó",
-        "tgt": "鸿鹏发汽车高泡洗车液大桶洗车店蜡水20L升母料 浓缩泡沫液",
+        "src": "Ổ USB flash drive đầu T, ghi hình lái xe, loại C, phù hợp với xe C6L/GLC, S-Class, EL, EQE",
+        "tgt": "T头行车记录仪u盘用typec适用c6l/glc级s级EL新eqe车载优盘64128g",
         "missing": [
           [
-            "volume",
-            20.0
+            "data",
+            64128000000000.0
+          ]
+        ],
+        "extra": [
+          [
+            "mass",
+            64.128
+          ]
+        ]
+      },
+      {
+        "src": "Camera hành trình 2K xuyên biên giới với chức năng giám sát đỗ xe 24/24, kết nối WiFi di đ",
+        "tgt": "跨境2K行车记录仪24小时停车监控手机WiFi互联高清夜视隐藏式车载",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            86400.0
+          ]
+        ]
+      },
+      {
+        "src": "10 inch wifi kết nối điện thoại di động ghi hình lái xe Camera kép phía trước và phía sau ",
+        "tgt": "10英寸wifi手机互联行车记录仪前后双摄高清夜视流媒体倒车影像",
+        "missing": [
+          [
+            "length",
+            0.254
           ]
         ],
         "extra": []
+      },
+      {
+        "src": "Máy ghi hình lái xe hai ống kính độ phân giải cao được lựa chọn kỹ lưỡng Camera lùi 900M H",
+        "tgt": "严选高清行车记录仪双镜头九亿H06倒车影像4.3寸夜视跨境现货",
+        "missing": [
+          [
+            "length",
+            900.0
+          ]
+        ],
+        "extra": [
+          [
+            "time",
+            3240000000000.0
+          ]
+        ]
+      },
+      {
+        "src": "2026 mẫu túi du lịch nam nữ mới, túi công tác, túi đi học dung tích lớn, túi đựng máy tính",
+        "tgt": "2026新款男女旅行包商务16寸大容量书包大学生电脑包双肩包背包",
+        "missing": [],
+        "extra": [
+          [
+            "length",
+            0.4064
+          ]
+        ]
+      },
+      {
+        "src": "Hình ảnh camera giám sát lái xe tải không dây 7 inch bùng nổ xuyên biên giới",
+        "tgt": "跨境爆款7寸无线货车监控行车记录仪摄像头前后双路24V倒车影像",
+        "missing": [],
+        "extra": [
+          [
+            "voltage",
+            24.0
+          ]
+        ]
       }
     ]
   },
   "1688_attribute": {
     "label": "1688 attribute",
     "pairs": 395575,
-    "pairs_with_quantity": 104470,
-    "coverage_pct": 26.41,
-    "naive_match_pct": 68.04,
-    "quantity_match_pct": 93.13,
-    "both_match": 66991,
-    "rescued_by_quantity": 30300,
-    "newly_flagged_by_quantity": 4087,
-    "newly_flagged_strong": 926,
+    "pairs_with_quantity": 104789,
+    "coverage_pct": 26.49,
+    "naive_match_pct": 68.13,
+    "quantity_match_pct": 96.27,
+    "both_match": 70039,
+    "rescued_by_quantity": 30838,
+    "newly_flagged_by_quantity": 1353,
+    "newly_flagged_strong": 654,
     "examples_rescued": [
       {
         "src": "00031",
@@ -300,25 +310,13 @@
       {
         "src": "Bàn chải cán tre số 1 ; Số 2 bàn chải đầu tròn tốt ; Số 3 bàn chải đầu tròn màu đen ; Bàn ",
         "tgt": "1号竹柄刷 ; 2号圆头刷好 ; 3号黑色圆头刷 ; 4号小尖头刷 ; 5号大尖头刷 ; 6号 双色尖头刷小号泡壳包装 ; 7号 双色尖头刷大号泡壳包装 ; 8号 弧形刷 ; 9号",
-        "missing": [
+        "missing": [],
+        "extra": [
           [
             "length",
-            0.0127
-          ],
-          [
-            "length",
-            0.0254
-          ],
-          [
-            "length",
-            0.0381
-          ],
-          [
-            "length",
-            0.0508
+            0.0762
           ]
-        ],
-        "extra": []
+        ]
       },
       {
         "src": "ba năm",
@@ -332,72 +330,72 @@
         ]
       },
       {
-        "src": "Hơn 90 ngày",
-        "tgt": "90日以上",
-        "missing": [
+        "src": "Ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            94608000.0
+          ]
+        ]
+      },
+      {
+        "src": "Ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            94608000.0
+          ]
+        ]
+      },
+      {
+        "src": "ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            94608000.0
+          ]
+        ]
+      },
+      {
+        "src": "Ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            94608000.0
+          ]
+        ]
+      },
+      {
+        "src": "Ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            94608000.0
+          ]
+        ]
+      },
+      {
+        "src": "Ngày 61-90",
+        "tgt": "61-90日",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            5270400.0
+          ],
           [
             "time",
             7776000.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Ba năm",
-        "tgt": "三年",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            94608000.0
-          ]
-        ]
-      },
-      {
-        "src": "Màu đen ; Màu trắng ; Màu hồng ; Túi rác 1 cuộn 20 cái ; Thùng rác gắn trên ô tô [1 gói] ;",
-        "tgt": "黑色 ; 白色 ; 粉色 ; 垃圾袋1卷20个 ; 车载挂式垃圾桶【1个装】 ; 4L加厚可折叠垃圾桶1个【无盖】 ; 4L加厚可折叠垃圾桶1个【有盖】",
-        "missing": [
-          [
-            "volume",
-            4.0
-          ],
-          [
-            "volume",
-            4.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Khoảng 1191.4g",
-        "tgt": "1191.4g左右",
-        "missing": [
-          [
-            "mass",
-            1.1914
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Ba năm",
-        "tgt": "三年",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            94608000.0
-          ]
-        ]
-      },
-      {
-        "src": "ba năm",
-        "tgt": "三年",
-        "missing": [],
-        "extra": [
-          [
-            "time",
-            94608000.0
           ]
         ]
       }
@@ -406,25 +404,13 @@
       {
         "src": "Bàn chải cán tre số 1 ; Số 2 bàn chải đầu tròn tốt ; Số 3 bàn chải đầu tròn màu đen ; Bàn ",
         "tgt": "1号竹柄刷 ; 2号圆头刷好 ; 3号黑色圆头刷 ; 4号小尖头刷 ; 5号大尖头刷 ; 6号 双色尖头刷小号泡壳包装 ; 7号 双色尖头刷大号泡壳包装 ; 8号 弧形刷 ; 9号",
-        "missing": [
+        "missing": [],
+        "extra": [
           [
             "length",
-            0.0127
-          ],
-          [
-            "length",
-            0.0254
-          ],
-          [
-            "length",
-            0.0381
-          ],
-          [
-            "length",
-            0.0508
+            0.0762
           ]
-        ],
-        "extra": []
+        ]
       },
       {
         "src": "ba năm",
@@ -438,15 +424,31 @@
         ]
       },
       {
-        "src": "Hơn 90 ngày",
-        "tgt": "90日以上",
-        "missing": [
+        "src": "Ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
           [
             "time",
-            7776000.0
+            94608000.0
+          ]
+        ]
+      },
+      {
+        "src": "【ST-221B】Màu cam - Đo áp suất màn hình kép + Áp suất lốp đặt trước + Tự động dừng khi đầy ",
+        "tgt": "【ST-221B】橙色-双屏测压+预设胎压+充满自停 ; 【ST-221B】双屏测压+预设胎压+充满自停 ; 【ST-221C】-无线数显+反向充电款 ; 【ST-221D】三用充",
+        "missing": [
+          [
+            "voltage",
+            5529.0
           ]
         ],
-        "extra": []
+        "extra": [
+          [
+            "volume",
+            1.0
+          ]
+        ]
       },
       {
         "src": "Ba năm",
@@ -460,57 +462,26 @@
         ]
       },
       {
-        "src": "Màu đen ; Màu trắng ; Màu hồng ; Túi rác 1 cuộn 20 cái ; Thùng rác gắn trên ô tô [1 gói] ;",
-        "tgt": "黑色 ; 白色 ; 粉色 ; 垃圾袋1卷20个 ; 车载挂式垃圾桶【1个装】 ; 4L加厚可折叠垃圾桶1个【无盖】 ; 4L加厚可折叠垃圾桶1个【有盖】",
-        "missing": [
+        "src": "ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
           [
-            "volume",
-            4.0
-          ],
-          [
-            "volume",
-            4.0
+            "time",
+            94608000.0
           ]
-        ],
-        "extra": []
+        ]
       },
       {
-        "src": "Khoảng 1191.4g",
-        "tgt": "1191.4g左右",
-        "missing": [
+        "src": "Cologne cổ điển ; Hương thơm Osmanthus vào tháng 8 ; Hương thơm Gardenia ; Nước hoa Hilton",
+        "tgt": "经典古龙 ; 八月桂花香 ; 栀子花香 ; 希尔顿香 ; 清新茉莉",
+        "missing": [],
+        "extra": [
           [
-            "mass",
-            1.1914
+            "time",
+            20736000.0
           ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "【ST-221B】Màu cam - Đo áp suất màn hình kép + Áp suất lốp đặt trước + Tự động dừng khi đầy ",
-        "tgt": "【ST-221B】橙色-双屏测压+预设胎压+充满自停 ; 【ST-221B】双屏测压+预设胎压+充满自停 ; 【ST-221C】-无线数显+反向充电款 ; 【ST-221D】三用充",
-        "missing": [
-          [
-            "data",
-            221.0
-          ],
-          [
-            "temperature",
-            5546.0
-          ],
-          [
-            "temperature",
-            9624.0
-          ],
-          [
-            "voltage",
-            12.0
-          ],
-          [
-            "voltage",
-            5529.0
-          ]
-        ],
-        "extra": []
+        ]
       },
       {
         "src": "Ba năm",
@@ -528,14 +499,14 @@
   "tiki_units": {
     "label": "Tiki units (8B)",
     "pairs": 45652,
-    "pairs_with_quantity": 19827,
-    "coverage_pct": 43.43,
+    "pairs_with_quantity": 19849,
+    "coverage_pct": 43.48,
     "naive_match_pct": 92.51,
-    "quantity_match_pct": 91.0,
-    "both_match": 16900,
-    "rescued_by_quantity": 1143,
-    "newly_flagged_by_quantity": 1442,
-    "newly_flagged_strong": 376,
+    "quantity_match_pct": 95.61,
+    "both_match": 17704,
+    "rescued_by_quantity": 1274,
+    "newly_flagged_by_quantity": 659,
+    "newly_flagged_strong": 257,
     "examples_rescued": [
       {
         "src": "Bình đựng thức ăn giữ nhiệt inox 304 Elmich EL8337 dung tích 650ml",
@@ -604,17 +575,6 @@
     ],
     "examples_newly_flagged": [
       {
-        "src": "Đèn UV 20W-200W Diệt Tảo, Diệt Khuẩn Hồ Cá Cao Cấp - Sạch Nước Trong 7 Ngày| Diệt tảo ký s",
-        "tgt": "20W-200W 紫外线灯 杀藻 杀菌 鱼缸 高级 - 7天清澈水质| 杀寄生藻 TN2",
-        "missing": [
-          [
-            "time",
-            604800.0
-          ]
-        ],
-        "extra": []
-      },
-      {
         "src": "Bình Nước Aqua 2.6L - Locknlock - 2 Màu (Xanh, Trắng) - HAP739",
         "tgt": "Locknlock 水壶 2.6L - 2色 (蓝, 白) - HAP739",
         "missing": [],
@@ -628,11 +588,8 @@
       {
         "src": "CÁCH LẤY VIÊN STORM RA KHỎI TÚI ĐÚNG CÁCH Dùng kéo cắt góc túi Rắc viên thuốc ra khỏi túi ",
         "tgt": "正确取出STORM药丸的方法 用剪刀剪开袋子 从袋中抖出药丸（避免用手直接接触药丸） 拿取药丸时应戴手套 使用STORM灭鼠药在稻田、玉米田的方法 放置位置：田边的杂草丛、洞口、鼠",
-        "missing": [
-          [
-            "length",
-            5.0
-          ],
+        "missing": [],
+        "extra": [
           [
             "length",
             5.0
@@ -640,98 +597,81 @@
           [
             "length",
             10.0
+          ]
+        ]
+      },
+      {
+        "src": "Hộp Đựng Thuốc 20Đ Dài Slim Nắp Trượt Kim Loại Nhiều Màu",
+        "tgt": "药盒 20片 长款 纤细 滑盖 金属多色",
+        "missing": [
+          [
+            "currency",
+            20.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Tránh ngâm nước 24/24",
+        "tgt": "避免24小时浸泡",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            86400.0
+          ]
+        ]
+      },
+      {
+        "src": "từ 6 - 8 tiếng",
+        "tgt": "最长寿命 6 - 8 小时",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            21600.0
           ],
+          [
+            "time",
+            28800.0
+          ]
+        ]
+      },
+      {
+        "src": "GA CHỐNG THẤM LOVEMAMA XE Ô TÔ Sản phẩm bọc trực tiếp vào nện, không cần thêm lớp ga nào p",
+        "tgt": "GA CHỐNG THẤM LOVEMAMA XE Ô TÔ 产品直接包裹在内层，无需添加其他层的床单覆盖在上面。床单直接铺在内层。请存放在干燥通风处，放在衣柜中。用洗衣机清洗床单",
+        "missing": [
+          [
+            "temperature",
+            40.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "10 phân",
+        "tgt": "10厘米",
+        "missing": [],
+        "extra": [
           [
             "length",
-            10.0
-          ],
-          [
-            "time",
-            604800.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Nhang Trầm Hương Đặc Biệt 3 Lành Dài 23-30-40cm, Hộp 100-400gr Sạch Tự Nhiên 100% Không Hó",
-        "tgt": "沉香线香 特别款 3支 长度23-30-40厘米 盒装100-400克 纯天然100% 无化学物质 7-12年沉香 祭祀 献香 熏香",
-        "missing": [
-          [
-            "time",
-            220752000.0
-          ],
-          [
-            "time",
-            378432000.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Xuất xứ nhang trầm hương: Pleiku, Việt Nam Thành phần nhang trầm hương: Bột Trầm Hương tự ",
-        "tgt": "沉香香薰产地：越南平定市，沉香香薰成分：在沉香木加工成环的过程中自然产生的沉香木粉，含95%沉香木粉和5%由Bời Lời树制成的粘合剂。沉香木龄约7-12年，含油量适中，香味清新",
-        "missing": [
-          [
-            "percent",
-            5.0
-          ],
-          [
-            "percent",
-            95.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "- Rắc: rắc một lớp bột dày 3 - 5 mm trước miệng hang, đường đi hay những nơi chuột ẩn nấp.",
-        "tgt": "- 撒：在洞口、鼠类活动路径或藏身之处撒一层厚3-5毫米的粉末。老鼠会因习性而进入口中。- 撒完后至少要放置5天，必要时应补充。- 制作毒饵：将1份与19份老鼠喜爱的食物（如米饭、",
-        "missing": [
-          [
-            "mass",
             0.1
-          ],
+          ]
+        ]
+      },
+      {
+        "src": "20 phân",
+        "tgt": "20厘米",
+        "missing": [],
+        "extra": [
           [
-            "mass",
+            "length",
             0.2
           ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "2 ổ 2USB1C sạc nhanh",
-        "tgt": "2个USB1C快充接口",
-        "missing": [
-          [
-            "temperature",
-            1.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "2 ổ 2USB 1C dây 2m",
-        "tgt": "2个USB 1C线 2米",
-        "missing": [
-          [
-            "temperature",
-            1.0
-          ]
-        ],
-        "extra": []
+        ]
       }
     ],
     "examples_mismatch": [
-      {
-        "src": "Đèn UV 20W-200W Diệt Tảo, Diệt Khuẩn Hồ Cá Cao Cấp - Sạch Nước Trong 7 Ngày| Diệt tảo ký s",
-        "tgt": "20W-200W 紫外线灯 杀藻 杀菌 鱼缸 高级 - 7天清澈水质| 杀寄生藻 TN2",
-        "missing": [
-          [
-            "time",
-            604800.0
-          ]
-        ],
-        "extra": []
-      },
       {
         "src": "Bình Nước Aqua 2.6L - Locknlock - 2 Màu (Xanh, Trắng) - HAP739",
         "tgt": "Locknlock 水壶 2.6L - 2色 (蓝, 白) - HAP739",
@@ -770,11 +710,8 @@
       {
         "src": "CÁCH LẤY VIÊN STORM RA KHỎI TÚI ĐÚNG CÁCH Dùng kéo cắt góc túi Rắc viên thuốc ra khỏi túi ",
         "tgt": "正确取出STORM药丸的方法 用剪刀剪开袋子 从袋中抖出药丸（避免用手直接接触药丸） 拿取药丸时应戴手套 使用STORM灭鼠药在稻田、玉米田的方法 放置位置：田边的杂草丛、洞口、鼠",
-        "missing": [
-          [
-            "length",
-            5.0
-          ],
+        "missing": [],
+        "extra": [
           [
             "length",
             5.0
@@ -782,17 +719,8 @@
           [
             "length",
             10.0
-          ],
-          [
-            "length",
-            10.0
-          ],
-          [
-            "time",
-            604800.0
           ]
-        ],
-        "extra": []
+        ]
       },
       {
         "src": "IN24M5",
@@ -804,36 +732,6 @@
             26.0
           ]
         ]
-      },
-      {
-        "src": "Nhang Trầm Hương Đặc Biệt 3 Lành Dài 23-30-40cm, Hộp 100-400gr Sạch Tự Nhiên 100% Không Hó",
-        "tgt": "沉香线香 特别款 3支 长度23-30-40厘米 盒装100-400克 纯天然100% 无化学物质 7-12年沉香 祭祀 献香 熏香",
-        "missing": [
-          [
-            "time",
-            220752000.0
-          ],
-          [
-            "time",
-            378432000.0
-          ]
-        ],
-        "extra": []
-      },
-      {
-        "src": "Xuất xứ nhang trầm hương: Pleiku, Việt Nam Thành phần nhang trầm hương: Bột Trầm Hương tự ",
-        "tgt": "沉香香薰产地：越南平定市，沉香香薰成分：在沉香木加工成环的过程中自然产生的沉香木粉，含95%沉香木粉和5%由Bời Lời树制成的粘合剂。沉香木龄约7-12年，含油量适中，香味清新",
-        "missing": [
-          [
-            "percent",
-            5.0
-          ],
-          [
-            "percent",
-            95.0
-          ]
-        ],
-        "extra": []
       },
       {
         "src": "Chiếu Mây Điều Hòa Thủ Công Cao Cấp – Sợi Mây Tự Nhiên 5kg/Chiếc, Gấp Gọn Được, Giặt Được,",
@@ -864,6 +762,44 @@
           [
             "length",
             2.2
+          ]
+        ]
+      },
+      {
+        "src": "- Chỉ cần ấn đầu bình gas nối với đầu nối bằng nhựa vào đầu lon gas, nhấn đầu nối vào vị t",
+        "tgt": "只需将气罐头直接连接到塑料接头，然后将接头插入打火机气罐的充气口，垂直方向进行充气。平均来说，给一个打火机充气大约需要5-10秒。配有5个专用充气头，可适用于目前所有类型的打火机。",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            5.0
+          ]
+        ]
+      },
+      {
+        "src": "Chảo inox 3 lớp nguyên khối Elmich Trimax EL-3846 size 26",
+        "tgt": "Elmich Trimax EL-3846 三层不锈钢整块锅 26cm",
+        "missing": [],
+        "extra": [
+          [
+            "length",
+            0.26
+          ]
+        ]
+      },
+      {
+        "src": "Loại 1m1 2 tầng",
+        "tgt": "1.1米 2层",
+        "missing": [
+          [
+            "length",
+            1.0
+          ]
+        ],
+        "extra": [
+          [
+            "length",
+            1.1
           ]
         ]
       }

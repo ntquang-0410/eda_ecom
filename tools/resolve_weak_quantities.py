@@ -49,34 +49,56 @@ def to_sig(quantities: list[Quantity], include_weak: bool = True):
 
 
 def lenient_match(src_q: list[Quantity], tgt_q: list[Quantity]) -> tuple[bool, list, list]:
-    """Khớp chính xác, sau đó cho phép bare <-> đơn vị vật lý cùng giá trị.
+    """Khớp chính xác, rồi cho phép bare <-> đơn vị theo **giá trị gốc**.
 
-    Không cho count/year khớp với đơn vị vật lý (tránh "2L" ~ "2个").
+    Ví dụ "29" ~ "29英寸": bare 29 khớp với quantity có raw value 29.
+    Không cho count/year khớp với đơn vị vật lý.
     """
-    src = to_sig(src_q)
-    tgt = to_sig(tgt_q)
-    missing = list(src)
-    extra = []
-    for item in tgt:
-        for index, candidate in enumerate(missing):
-            if candidate == item:
-                missing.pop(index)
-                break
-        else:
-            extra.append(item)
+    used_src: set[int] = set()
+    used_tgt: set[int] = set()
 
-    def match_bare(a, b) -> bool:
-        return (a[0] == "bare") != (b[0] == "bare") and abs(a[1] - b[1]) <= 1e-6
+    def close(a: float, b: float) -> bool:
+        return abs(a - b) <= max(1e-6, 0.02 * max(abs(a), abs(b)))
 
-    still_missing = []
-    for item in missing:
-        for index, candidate in enumerate(extra):
-            if match_bare(item, candidate) or item == candidate:
-                extra.pop(index)
+    # 1. cùng thứ nguyên, cùng giá trị quy đổi
+    for i, src in enumerate(src_q):
+        for j, tgt in enumerate(tgt_q):
+            if j in used_tgt:
+                continue
+            if src.dimension and src.dimension == tgt.dimension and close(src.base_value, tgt.base_value):
+                used_src.add(i); used_tgt.add(j)
                 break
-        else:
-            still_missing.append(item)
-    return (not still_missing and not extra), still_missing, extra
+
+    # 2. bare <-> đơn vị, so theo giá trị gốc
+    for i, src in enumerate(src_q):
+        if i in used_src:
+            continue
+        for j, tgt in enumerate(tgt_q):
+            if j in used_tgt:
+                continue
+            if (not src.dimension) != (not tgt.dimension) and close(src.value, tgt.value):
+                used_src.add(i); used_tgt.add(j)
+                break
+
+    # 3. bare <-> count/year cùng giá trị
+    for i, src in enumerate(src_q):
+        if i in used_src:
+            continue
+        for j, tgt in enumerate(tgt_q):
+            if j in used_tgt:
+                continue
+            if (not src.dimension) and tgt.dimension in ("count", "year") and close(src.value, tgt.value):
+                used_src.add(i); used_tgt.add(j)
+                break
+            if (not tgt.dimension) and src.dimension in ("count", "year") and close(src.value, tgt.value):
+                used_src.add(i); used_tgt.add(j)
+                break
+
+    missing = [(q.dimension or "bare", round(q.base_value if q.dimension else q.value, 6))
+               for i, q in enumerate(src_q) if i not in used_src]
+    extra = [(q.dimension or "bare", round(q.base_value if q.dimension else q.value, 6))
+             for j, q in enumerate(tgt_q) if j not in used_tgt]
+    return not missing and not extra, missing, extra
 
 
 def artifact_reason(dim: str, value: float, quantity: Quantity, text: str) -> str | None:

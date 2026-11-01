@@ -42,7 +42,7 @@ _add("length", 1.0, "m", "met", "mét", "meter", "米")
 _add("length", 0.01, "cm", "centimet", "厘米", "公分")
 _add("length", 0.001, "mm", "milimet", "毫米")
 _add("length", 1000.0, "km", "kilomet", "公里", "千米")
-_add("length", 0.0254, "inch", "in", "英寸", "寸")
+_add("length", 0.0254, "inch", "in", "英寸", "寸", "\"", "″", "'", "′")
 _add("length", 0.3048, "ft", "foot", "feet", "英尺")
 _add("length", 0.9144, "yard", "yd")
 _add("length", 0.333333, "尺")
@@ -92,7 +92,7 @@ _add("temperature", 1.0, "°c", "c", "độ c", "摄氏度", "℃")
 # thời gian -> s
 _add("time", 1.0, "s", "giây", "秒")
 _add("time", 60.0, "min", "phút", "分钟")
-_add("time", 3600.0, "h", "giờ", "小时", "时")
+_add("time", 3600.0, "h", "giờ", "tiếng", "小时", "时")
 _add("time", 86400.0, "ngày", "天", "日")
 _add("time", 2592000.0, "tháng", "个月", "月")
 _add("time", 31536000.0, "năm", "年")
@@ -127,7 +127,7 @@ UNIT_WORD_BLACKLIST = {
     "件套", "件装",
     "天然", "天猫", "天蓝", "天空", "年份", "年代",
     "日本", "日常", "日式", "时尚", "时间", "年轻", "百年",
-    "米饭", "月份",
+    "米饭", "月份", "米色", "米白", "米黄",
 }
 
 VI_NUMBERS = {"một": 1, "hai": 2, "ba": 3, "bốn": 4, "tư": 4, "sáu": 6,
@@ -238,13 +238,17 @@ def _match_unit(text: str, pos: int) -> tuple[str, int]:
             after = pos + len(name)
             if after < len(text):
                 nxt = text[after]
-                if len(name) == 1 and nxt.isalpha() and not ("\u4e00" <= nxt <= "\u9fff"):
-                    continue
-                if len(name) == 1 and ("\u4e00" <= nxt <= "\u9fff"):
-                    # đơn vị 1 ký tự nằm trong từ ("安卓", "元祖", "百年青")
-                    if text[pos:pos + 2] in UNIT_WORD_BLACKLIST:
-                        continue
-                if len(name) > 1 and nxt.isalpha() and not ("\u4e00" <= nxt <= "\u9fff"):
+                cjk_unit = "\u4e00" <= name <= "\u9fff"
+                if len(name) == 1:
+                    if cjk_unit:
+                        # đơn vị Hán 1 ký tự: bỏ nếu dính chữ Hán khác (từ ghép)
+                        if ("\u4e00" <= nxt <= "\u9fff") and text[pos:pos + 2] in UNIT_WORD_BLACKLIST:
+                            continue
+                    else:
+                        # đơn vị Latin 1 ký tự: bỏ nếu dính chữ Latin ("70mai")
+                        if nxt.isalpha() and not ("\u4e00" <= nxt <= "\u9fff"):
+                            continue
+                elif nxt.isalpha() and not ("\u4e00" <= nxt <= "\u9fff"):
                     continue
             # "尺寸"/"尺码" là từ, không phải đơn vị "尺"
             if name == "尺" and text[pos + len(name):pos + len(name) + 1] in ("寸", "码"):
@@ -274,6 +278,11 @@ def _propagate_range_units(text: str, quantities: list[Quantity]) -> None:
         separator = text[left.end:right.start].strip()
         if separator not in RANGE_SEPARATORS:
             continue
+        # "3g x 15": 15 là số lượng, không phải 15g -> chỉ lan đơn vị đo kích thước
+        if separator in ("x", "X", "×", "*"):
+            dims = {left.dimension, right.dimension}
+            if not dims & {"length", "area"}:
+                continue
         if left.dimension and not right.dimension:
             right.unit = left.unit
             right.dimension = left.dimension
@@ -309,6 +318,8 @@ def _in_code_token(text: str, start: int, end: int) -> bool:
         return False
     unit, unit_end = _match_unit(text, end)
     if unit and _NUMBER_UNIT.match(text[start:unit_end]):
+        return False
+    if token.lower().startswith(("size", "sz", "size:", "sz:")):
         return False
     return any(ch.isalpha() for ch in token)
 
@@ -366,7 +377,8 @@ def extract_quantities(text: str, lang: str = "vi") -> list[Quantity]:
                                   value * UNITS.get(unit, ("", 1.0))[1],
                                   match.start(), end))
 
-    if False:  # tắt: "ba lô", "một" gây false positive
+    if lang == "vi":
+        # chỉ nhận "ba", "một"... khi đi ngay trước đơn vị ("ba năm", "một tháng")
         for match in VI_NUM_RE.finditer(text):
             if any(q.start <= match.start() < q.end for q in found):
                 continue
@@ -374,6 +386,8 @@ def extract_quantities(text: str, lang: str = "vi") -> list[Quantity]:
             if value is None:
                 continue
             unit, end = _match_unit(text, match.end())
+            if not unit:
+                continue
             found.append(Quantity(match.group(), float(value), unit,
                                   UNITS.get(unit, ("", 1.0))[0],
                                   value * UNITS.get(unit, ("", 1.0))[1],
