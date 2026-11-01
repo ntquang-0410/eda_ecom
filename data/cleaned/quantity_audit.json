@@ -1,0 +1,1032 @@
+{
+  "1688_title": {
+    "label": "1688 title",
+    "pairs": 16133,
+    "pairs_with_quantity": 10362,
+    "coverage_pct": 64.23,
+    "naive_match_pct": 88.31,
+    "quantity_match_pct": 73.22,
+    "both_match": 7031,
+    "rescued_by_quantity": 556,
+    "newly_flagged_by_quantity": 2120,
+    "examples_rescued": [
+      {
+        "src": "Đệm ghế ô tô mới xuyên biên giới, đệm ghế ô tô cao cấp Napppi, đệm ghế 5 chỗ trước và sau ",
+        "tgt": "跨境新款汽车坐垫纳帕皮高级感车载座椅垫加厚防滑五座前后排座垫",
+        "qty": []
+      },
+      {
+        "src": "Hộp đựng khăn giấy ô tô hộp tay vịn tăng cường miếng lót xe trung tâm cao cấp túi bảo quản",
+        "tgt": "车载纸巾盒扶手箱增高垫汽车中央高级收纳袋水杯架四合一通用精品",
+        "qty": []
+      },
+      {
+        "src": "Nội Thất Ô Tô Xe Xông Phòng Chiến Tranh Đại Bàng Số 3 Nội Thất Ô Tô Phụ Kiện Máy Bay Trực ",
+        "tgt": "汽车内饰车载香薰战鹰三号车内饰品直升飞机挪车号码牌太阳能摆件",
+        "qty": []
+      },
+      {
+        "src": "Máy ghi âm lái xe ô tô độ nét cao chế độ xem ban đêm 1080P ô tô 360 độ gương kép phía trướ",
+        "tgt": "2024爆款推荐汽车行车记录仪高清夜视1080P车载360度车前车内双镜",
+        "qty": []
+      },
+      {
+        "src": "Ba lô nam, dung tích lớn, túi đựng máy tính cao cấp, ba lô quà tặng, cặp sách học sinh cấp",
+        "tgt": "双肩包男款大容量高级感电脑包礼品背包初中生高中生书包箱包工厂",
+        "qty": []
+      },
+      {
+        "src": "Ba lô học sinh thời trang và đa năng mới, ba lô học sinh cấp 2 và cấp 3, ba lô du lịch, ba",
+        "tgt": "新款时尚百搭学生书包初高中双肩包旅行双肩背包钢琴键波点双肩包",
+        "qty": []
+      },
+      {
+        "src": "Ba lô nam kiểu mới đơn giản, túi du lịch đa năng dung tích lớn, bán buôn ba lô học sinh cấ",
+        "tgt": "新款男士简约双肩包大容量休闲旅行包批发中学生书包电脑商务背包",
+        "qty": []
+      },
+      {
+        "src": "Ba lô nữ thường ngày dung tích lớn mẫu mới 2023 Ba lô máy tính Du Lịch Túi Thời Trang Chốn",
+        "tgt": "2026新款大容量女士休闲双肩包旅行电脑背包轻便防盗时尚潮流包包",
+        "qty": []
+      }
+    ],
+    "examples_newly_flagged": [
+      {
+        "src": "Bán buôn vật tư ô tô, túi đựng rác ô tô, Túi treo lưu trữ lưng ghế, thân thiện với môi trư",
+        "tgt": "汽车用品批发车载垃圾袋座椅背收纳挂袋环保可洗涤亚马逊热销35克",
+        "missing": [
+          [
+            "mass",
+            0.035
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Bình xịt tạo bọt 2L nâng cấp, bình xịt rửa xe đa năng, bình xịt tạo bọt tưới hoa bằng tay,",
+        "tgt": "升级2L喷壶泡沫器众横洗车喷壶手动浇花喷水发泡器高压洗车工具",
+        "missing": [
+          [
+            "volume",
+            2.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Rửa xe Máy tưới hoa cầm tay 2L Bình tưới vườn Máy phun khử trùng vệ sinh gia dụng Bình tướ",
+        "tgt": "洗车2L手持浇花园艺晒水壶家用清洁消毒喷雾器高压喷壶",
+        "missing": [
+          [
+            "volume",
+            2.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Thích hợp cho 25 mẫu xe của thương hiệu Wei Alpine 7/8/9 điều khiển trung tâm dưới hộp lưu",
+        "tgt": "适用25款魏牌高山7/8/9中控下层储物盒收纳分类新车改装配件用品",
+        "missing": [
+          [
+            "area",
+            16666.675
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "60 miếng dán graffiti hoạt hình Rockman Mega Man mới",
+        "tgt": "60张新款洛克人 Mega Man 卡通涂鸦贴纸汽车行李箱水杯贴纸批发",
+        "missing": [
+          [
+            "count",
+            60.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Kẹp Ma Thuật Q3 ô tô sạc không dây giá đỡ điện thoại di động 15W cảm ứng đóng mở giá đỡ đị",
+        "tgt": "魔夹Q3车载无线充电手机支架15W感应开合汽车导航架用品跨境",
+        "missing": [
+          [
+            "power",
+            15.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Cảnh báo phản quang dải phản quang ô tô 5cm * 3m cảnh báo an toàn dán trang trí ô tô phản ",
+        "tgt": "反光警告带 5cm*3m汽车反光条 安全警告汽车装饰贴纸彩色格子反射",
+        "missing": [
+          [
+            "length",
+            3.0
+          ]
+        ],
+        "extra": [
+          [
+            "length",
+            0.03
+          ]
+        ]
+      },
+      {
+        "src": "Đệm sưởi ghế ô tô mùa đông 12V/24V đa năng, đệm sưởi điện, đệm ghế lông mềm, xuất khẩu",
+        "tgt": "汽车加热坐垫冬季12V/24V通用车载座椅保暖电加热垫毛绒座垫跨境",
+        "missing": [
+          [
+            "voltage",
+            12.0
+          ],
+          [
+            "voltage",
+            24.0
+          ]
+        ],
+        "extra": []
+      }
+    ],
+    "examples_mismatch": [
+      {
+        "src": "Bán buôn vật tư ô tô, túi đựng rác ô tô, Túi treo lưu trữ lưng ghế, thân thiện với môi trư",
+        "tgt": "汽车用品批发车载垃圾袋座椅背收纳挂袋环保可洗涤亚马逊热销35克",
+        "missing": [
+          [
+            "mass",
+            0.035
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Bình xịt tạo bọt 2L nâng cấp, bình xịt rửa xe đa năng, bình xịt tạo bọt tưới hoa bằng tay,",
+        "tgt": "升级2L喷壶泡沫器众横洗车喷壶手动浇花喷水发泡器高压洗车工具",
+        "missing": [
+          [
+            "volume",
+            2.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Rửa xe Máy tưới hoa cầm tay 2L Bình tưới vườn Máy phun khử trùng vệ sinh gia dụng Bình tướ",
+        "tgt": "洗车2L手持浇花园艺晒水壶家用清洁消毒喷雾器高压喷壶",
+        "missing": [
+          [
+            "volume",
+            2.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Thích hợp cho 25 mẫu xe của thương hiệu Wei Alpine 7/8/9 điều khiển trung tâm dưới hộp lưu",
+        "tgt": "适用25款魏牌高山7/8/9中控下层储物盒收纳分类新车改装配件用品",
+        "missing": [
+          [
+            "area",
+            16666.675
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "60 miếng dán graffiti hoạt hình Rockman Mega Man mới",
+        "tgt": "60张新款洛克人 Mega Man 卡通涂鸦贴纸汽车行李箱水杯贴纸批发",
+        "missing": [
+          [
+            "count",
+            60.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Kẹp Ma Thuật Q3 ô tô sạc không dây giá đỡ điện thoại di động 15W cảm ứng đóng mở giá đỡ đị",
+        "tgt": "魔夹Q3车载无线充电手机支架15W感应开合汽车导航架用品跨境",
+        "missing": [
+          [
+            "power",
+            15.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Cảnh báo phản quang dải phản quang ô tô 5cm * 3m cảnh báo an toàn dán trang trí ô tô phản ",
+        "tgt": "反光警告带 5cm*3m汽车反光条 安全警告汽车装饰贴纸彩色格子反射",
+        "missing": [
+          [
+            "length",
+            3.0
+          ]
+        ],
+        "extra": [
+          [
+            "length",
+            0.03
+          ]
+        ]
+      },
+      {
+        "src": "Đệm sưởi ghế ô tô mùa đông 12V/24V đa năng, đệm sưởi điện, đệm ghế lông mềm, xuất khẩu",
+        "tgt": "汽车加热坐垫冬季12V/24V通用车载座椅保暖电加热垫毛绒座垫跨境",
+        "missing": [
+          [
+            "voltage",
+            12.0
+          ],
+          [
+            "voltage",
+            24.0
+          ]
+        ],
+        "extra": []
+      }
+    ]
+  },
+  "1688_attribute": {
+    "label": "1688 attribute",
+    "pairs": 395575,
+    "pairs_with_quantity": 88027,
+    "coverage_pct": 22.25,
+    "naive_match_pct": 87.9,
+    "quantity_match_pct": 86.93,
+    "both_match": 69353,
+    "rescued_by_quantity": 7170,
+    "newly_flagged_by_quantity": 8022,
+    "examples_rescued": [
+      {
+        "src": "00031",
+        "tgt": "0003",
+        "qty": []
+      },
+      {
+        "src": "00032",
+        "tgt": "0003",
+        "qty": []
+      },
+      {
+        "src": "9041",
+        "tgt": "904",
+        "qty": []
+      },
+      {
+        "src": "Lưới đàn hồi ba lớp bốn mặt ; Lưới đàn hồi bốn mặt hai tầng ; Lưới đàn hồi hai bên hai tần",
+        "tgt": "三层四边弹力网 ; 二层四边弹力网 ; 二层二边弹力网 ; 三层两边弹力网（4代）（无现货勿拍） ; 三层两边弹力网（5代）（无现货勿拍） ; 三层两边弹力网（无现货勿拍） ; 单",
+        "qty": []
+      },
+      {
+        "src": "Cologne cổ điển ; Hương thơm Osmanthus vào tháng 8 ; Hương thơm Gardenia ; Nước hoa Hilton",
+        "tgt": "经典古龙 ; 八月桂花香 ; 栀子花香 ; 希尔顿香 ; 清新茉莉",
+        "qty": []
+      },
+      {
+        "src": "Ba tầng và bốn phía ; Tầng hai và bốn mặt ; Tầng 2 2 bên",
+        "tgt": "三层四边 ; 二层四边 ; 二层两边",
+        "qty": []
+      },
+      {
+        "src": "/1",
+        "tgt": "/",
+        "qty": []
+      },
+      {
+        "src": "/2",
+        "tgt": "/",
+        "qty": []
+      }
+    ],
+    "examples_newly_flagged": [
+      {
+        "src": "Bàn chải cán tre số 1 ; Số 2 bàn chải đầu tròn tốt ; Số 3 bàn chải đầu tròn màu đen ; Bàn ",
+        "tgt": "1号竹柄刷 ; 2号圆头刷好 ; 3号黑色圆头刷 ; 4号小尖头刷 ; 5号大尖头刷 ; 6号 双色尖头刷小号泡壳包装 ; 7号 双色尖头刷大号泡壳包装 ; 8号 弧形刷 ; 9号",
+        "missing": [
+          [
+            "count",
+            3.0
+          ],
+          [
+            "count",
+            5.0
+          ],
+          [
+            "count",
+            30.0
+          ],
+          [
+            "length",
+            0.0127
+          ],
+          [
+            "length",
+            0.0254
+          ],
+          [
+            "length",
+            0.0381
+          ],
+          [
+            "length",
+            0.0508
+          ],
+          [
+            "mass",
+            0.042
+          ],
+          [
+            "mass",
+            0.09
+          ],
+          [
+            "mass",
+            0.09
+          ],
+          [
+            "mass",
+            0.153
+          ],
+          [
+            "mass",
+            0.34
+          ],
+          [
+            "mass",
+            0.371
+          ],
+          [
+            "mass",
+            0.425
+          ],
+          [
+            "mass",
+            0.717
+          ],
+          [
+            "mass",
+            0.97
+          ],
+          [
+            "mass",
+            0.97
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "140 lon",
+        "tgt": "140罐",
+        "missing": [],
+        "extra": [
+          [
+            "count",
+            140.0
+          ]
+        ]
+      },
+      {
+        "src": "ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            94608000.0
+          ]
+        ]
+      },
+      {
+        "src": "Hơn 90 ngày",
+        "tgt": "90日以上",
+        "missing": [
+          [
+            "time",
+            7776000.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Gối đầu Shuxiang ; Shuxiang eo ; Bộ tựa lưng tựa đầu Shuxiang",
+        "tgt": "舒享头枕一个 ; 舒享腰靠一个 ; 舒享头枕腰靠套装",
+        "missing": [],
+        "extra": [
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ]
+        ]
+      },
+      {
+        "src": "Ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            94608000.0
+          ]
+        ]
+      },
+      {
+        "src": "Màu đen ; Màu trắng ; Màu hồng ; Túi rác 1 cuộn 20 cái ; Thùng rác gắn trên ô tô [1 gói] ;",
+        "tgt": "黑色 ; 白色 ; 粉色 ; 垃圾袋1卷20个 ; 车载挂式垃圾桶【1个装】 ; 4L加厚可折叠垃圾桶1个【无盖】 ; 4L加厚可折叠垃圾桶1个【有盖】",
+        "missing": [
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            20.0
+          ],
+          [
+            "volume",
+            4.0
+          ],
+          [
+            "volume",
+            4.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "27 bộ màu xanh lam ; 27 bộ màu vàng ; Bộ 27 món A ; Bộ 29 món ; bộ 24 món ; Bộ 25 món ; bộ",
+        "tgt": "27件套蓝色 ; 27件套黄色 ; 27件套A ; 29件套 ; 24件套 ; 25件套 ; 31件套 ; 33件套A ; 33件套B ; 36件套A ; 36件套B ; 37件套",
+        "missing": [
+          [
+            "count",
+            27.0
+          ],
+          [
+            "count",
+            27.0
+          ]
+        ],
+        "extra": []
+      }
+    ],
+    "examples_mismatch": [
+      {
+        "src": "Bàn chải cán tre số 1 ; Số 2 bàn chải đầu tròn tốt ; Số 3 bàn chải đầu tròn màu đen ; Bàn ",
+        "tgt": "1号竹柄刷 ; 2号圆头刷好 ; 3号黑色圆头刷 ; 4号小尖头刷 ; 5号大尖头刷 ; 6号 双色尖头刷小号泡壳包装 ; 7号 双色尖头刷大号泡壳包装 ; 8号 弧形刷 ; 9号",
+        "missing": [
+          [
+            "count",
+            3.0
+          ],
+          [
+            "count",
+            5.0
+          ],
+          [
+            "count",
+            30.0
+          ],
+          [
+            "length",
+            0.0127
+          ],
+          [
+            "length",
+            0.0254
+          ],
+          [
+            "length",
+            0.0381
+          ],
+          [
+            "length",
+            0.0508
+          ],
+          [
+            "mass",
+            0.042
+          ],
+          [
+            "mass",
+            0.09
+          ],
+          [
+            "mass",
+            0.09
+          ],
+          [
+            "mass",
+            0.153
+          ],
+          [
+            "mass",
+            0.34
+          ],
+          [
+            "mass",
+            0.371
+          ],
+          [
+            "mass",
+            0.425
+          ],
+          [
+            "mass",
+            0.717
+          ],
+          [
+            "mass",
+            0.97
+          ],
+          [
+            "mass",
+            0.97
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "140 lon",
+        "tgt": "140罐",
+        "missing": [],
+        "extra": [
+          [
+            "count",
+            140.0
+          ]
+        ]
+      },
+      {
+        "src": "Tựa đầu Maybach [nâu hạt dẻ] một cặp ; Tựa đầu Maybach [mocha brown] một cặp ; Tựa đầu May",
+        "tgt": "迈巴赫头枕【栗棕色】一对装 ; 迈巴赫头枕【摩卡棕】一对装 ; 迈巴赫头枕【尊贵黑】一对装 ; 迈巴赫头枕【赭石棕】一对装 ; 迈巴赫头枕【酒红色】一对装 ; 迈巴赫头枕【米白色】",
+        "missing": [
+          [
+            "count",
+            2.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            94608000.0
+          ]
+        ]
+      },
+      {
+        "src": "Hơn 90 ngày",
+        "tgt": "90日以上",
+        "missing": [
+          [
+            "time",
+            7776000.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Gối đầu Shuxiang ; Shuxiang eo ; Bộ tựa lưng tựa đầu Shuxiang",
+        "tgt": "舒享头枕一个 ; 舒享腰靠一个 ; 舒享头枕腰靠套装",
+        "missing": [],
+        "extra": [
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ]
+        ]
+      },
+      {
+        "src": "Ba năm",
+        "tgt": "三年",
+        "missing": [],
+        "extra": [
+          [
+            "time",
+            94608000.0
+          ]
+        ]
+      },
+      {
+        "src": "Màu đen ; Màu trắng ; Màu hồng ; Túi rác 1 cuộn 20 cái ; Thùng rác gắn trên ô tô [1 gói] ;",
+        "tgt": "黑色 ; 白色 ; 粉色 ; 垃圾袋1卷20个 ; 车载挂式垃圾桶【1个装】 ; 4L加厚可折叠垃圾桶1个【无盖】 ; 4L加厚可折叠垃圾桶1个【有盖】",
+        "missing": [
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            20.0
+          ],
+          [
+            "volume",
+            4.0
+          ],
+          [
+            "volume",
+            4.0
+          ]
+        ],
+        "extra": []
+      }
+    ]
+  },
+  "tiki_units": {
+    "label": "Tiki units (8B)",
+    "pairs": 45652,
+    "pairs_with_quantity": 20644,
+    "coverage_pct": 45.22,
+    "naive_match_pct": 92.77,
+    "quantity_match_pct": 78.3,
+    "both_match": 15241,
+    "rescued_by_quantity": 924,
+    "newly_flagged_by_quantity": 3911,
+    "examples_rescued": [
+      {
+        "src": "Bình đựng thức ăn giữ nhiệt inox 304 Elmich EL8337 dung tích 650ml",
+        "tgt": "不锈钢保温食品容器 Elmich EL8337 容量 650ml",
+        "qty": [
+          [
+            "volume",
+            0.65
+          ]
+        ]
+      },
+      {
+        "src": "[KoSuyTu] Giá Đỡ Điện Thoại 3 Trong 1 Kèm Pin Dự Phòng & Loa Bluetooth - Đa Năng Tiện Lợi ",
+        "tgt": "[KoSuyTu] 三合一手机支架带备用电池及蓝牙音箱-多功能便携式可调节360度角度兼容多种设备",
+        "qty": []
+      },
+      {
+        "src": "Hộp cơm nhựa 3 ngăn trong suốt LocknLock 750ml - LCB501 và 1L - LCB502 - 2 màu (Tím, Xanh)",
+        "tgt": "LocknLock 750ml 透明三格饭盒 - LCB501 和 1L - LCB502 - 2色（紫色，蓝色）",
+        "qty": [
+          [
+            "volume",
+            0.75
+          ],
+          [
+            "volume",
+            1.0
+          ]
+        ]
+      },
+      {
+        "src": "Hộp cơm 2 tầng inox 304 Elmich EL8313 (1.5L) - Hàng chính hãng",
+        "tgt": "Elmich EL8313 304不锈钢双层饭盒 (1.5L) - 正品",
+        "qty": [
+          [
+            "volume",
+            1.5
+          ]
+        ]
+      },
+      {
+        "src": "- Không sử dụng sản phẩm để đựng sữa (thức ăn trẻ em), đá khô và đồ uống có ga. - Vui lòng",
+        "tgt": "- 请勿将产品用于储存牛奶（儿童食品）、干冰和碳酸饮料。- 请在首次使用前彻底清洗瓶子。- 清洁瓶子时，请勿使用刷子和研磨剂。- 请勿在洗碗机、微波炉或烤箱中使用。- 请勿对瓶盖进",
+        "qty": []
+      },
+      {
+        "src": "SET 4 Đệm Lót Chân Bàn Ghế Vuông Tròn Chống Ồn Hamart Bọc Chân Ghế Gỗ Silicone Chống Xước ",
+        "tgt": "Hamart 四件套 防噪音 圆形方形桌脚垫 桌椅脚垫 木脚椅套 硅胶防刮地板",
+        "qty": []
+      },
+      {
+        "src": "Chảo inox 3 lớp nguyên khối Elmich Trimax EL 3846OL16 size 16cm",
+        "tgt": "Elmich Trimax EL 3846OL16 三层不锈钢整块锅 16cm",
+        "qty": [
+          [
+            "length",
+            0.16
+          ]
+        ]
+      },
+      {
+        "src": "Đèn Bàn Học Đọc Sách Cao Cấp Teement Led Chống Cận 03 Chế Độ Ánh Sáng Vàng Bảo Vệ Mắt- Hàn",
+        "tgt": "护眼台灯 阅读学习 高级Teement LED 三档灯光 黄光护眼- 正品行货",
+        "qty": []
+      }
+    ],
+    "examples_newly_flagged": [
+      {
+        "src": "Đèn UV 20W-200W Diệt Tảo, Diệt Khuẩn Hồ Cá Cao Cấp - Sạch Nước Trong 7 Ngày| Diệt tảo ký s",
+        "tgt": "20W-200W 紫外线灯 杀藻 杀菌 鱼缸 高级 - 7天清澈水质| 杀寄生藻 TN2",
+        "missing": [
+          [
+            "time",
+            604800.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Đèn led bể cá Caibao T4-40LED 6W siêu sáng dùng cho bể 40 - 50cm ( Trắng)",
+        "tgt": "Caibao T4-40LED 6W 超亮水族箱灯 用于40 - 50厘米水族箱（白光）",
+        "missing": [
+          [
+            "length",
+            0.4
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Bình giữ nhiệt inox 304 Elmich EL8383 dung tích 510ml - Hàng chính hãng",
+        "tgt": "304不锈钢保温杯 Elmich EL8383 容量510ml - 正品",
+        "missing": [
+          [
+            "volume",
+            0.51
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Bộ dĩa bàn ăn 6 chiếc Elmich EL0002D189",
+        "tgt": "Elmich EL0002D189 6件餐盘套装",
+        "missing": [
+          [
+            "count",
+            6.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Bình Nước Aqua 2.6L - Locknlock - 2 Màu (Xanh, Trắng) - HAP739",
+        "tgt": "Locknlock 水壶 2.6L - 2色 (蓝, 白) - HAP739",
+        "missing": [],
+        "extra": [
+          [
+            "volume",
+            2.0
+          ]
+        ]
+      },
+      {
+        "src": "CÁCH LẤY VIÊN STORM RA KHỎI TÚI ĐÚNG CÁCH Dùng kéo cắt góc túi Rắc viên thuốc ra khỏi túi ",
+        "tgt": "正确取出STORM药丸的方法 用剪刀剪开袋子 从袋中抖出药丸（避免用手直接接触药丸） 拿取药丸时应戴手套 使用STORM灭鼠药在稻田、玉米田的方法 放置位置：田边的杂草丛、洞口、鼠",
+        "missing": [
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            30.0
+          ],
+          [
+            "count",
+            100.0
+          ],
+          [
+            "length",
+            0.03
+          ],
+          [
+            "length",
+            5.0
+          ],
+          [
+            "length",
+            5.0
+          ],
+          [
+            "length",
+            10.0
+          ],
+          [
+            "length",
+            10.0
+          ],
+          [
+            "time",
+            604800.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Hộp cơm giữ nhiệt inox 304 Elmich EL8302 dung tích 1.7L - Hàng chính hãng",
+        "tgt": "304不锈钢保温饭盒 Elmich EL8302 容量1.7L - 正品",
+        "missing": [
+          [
+            "volume",
+            1.7
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Móc Treo Đồ Hút Chân Không 6 Móc – Chất Liệu Hợp Kim Nhựa Cao Cấp, Chịu Lực Tốt, Không Cần",
+        "tgt": "吸尘挂钩 6个 - 高级塑料合金材质，承重力强，无需打孔 - 正品 MINIIN",
+        "missing": [],
+        "extra": [
+          [
+            "count",
+            6.0
+          ]
+        ]
+      }
+    ],
+    "examples_mismatch": [
+      {
+        "src": "Đèn UV 20W-200W Diệt Tảo, Diệt Khuẩn Hồ Cá Cao Cấp - Sạch Nước Trong 7 Ngày| Diệt tảo ký s",
+        "tgt": "20W-200W 紫外线灯 杀藻 杀菌 鱼缸 高级 - 7天清澈水质| 杀寄生藻 TN2",
+        "missing": [
+          [
+            "time",
+            604800.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Đèn led bể cá Caibao T4-40LED 6W siêu sáng dùng cho bể 40 - 50cm ( Trắng)",
+        "tgt": "Caibao T4-40LED 6W 超亮水族箱灯 用于40 - 50厘米水族箱（白光）",
+        "missing": [
+          [
+            "length",
+            0.4
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Bình giữ nhiệt inox 304 Elmich EL8383 dung tích 510ml - Hàng chính hãng",
+        "tgt": "304不锈钢保温杯 Elmich EL8383 容量510ml - 正品",
+        "missing": [
+          [
+            "volume",
+            0.51
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Bộ dĩa bàn ăn 6 chiếc Elmich EL0002D189",
+        "tgt": "Elmich EL0002D189 6件餐盘套装",
+        "missing": [
+          [
+            "count",
+            6.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Bình Nước Aqua 2.6L - Locknlock - 2 Màu (Xanh, Trắng) - HAP739",
+        "tgt": "Locknlock 水壶 2.6L - 2色 (蓝, 白) - HAP739",
+        "missing": [],
+        "extra": [
+          [
+            "volume",
+            2.0
+          ]
+        ]
+      },
+      {
+        "src": "\"- Giữ nóng: ~4 tiếng (trên 600C) - Giữ lạnh: ~15 tiếng (dưới 110C) \"",
+        "tgt": "保温能力: ~4小时 (高于60摄氏度) ~15小时 (低于110摄氏度)",
+        "missing": [
+          [
+            "temperature",
+            110.0
+          ],
+          [
+            "temperature",
+            600.0
+          ]
+        ],
+        "extra": [
+          [
+            "time",
+            14400.0
+          ],
+          [
+            "time",
+            54000.0
+          ]
+        ]
+      },
+      {
+        "src": "CÁCH LẤY VIÊN STORM RA KHỎI TÚI ĐÚNG CÁCH Dùng kéo cắt góc túi Rắc viên thuốc ra khỏi túi ",
+        "tgt": "正确取出STORM药丸的方法 用剪刀剪开袋子 从袋中抖出药丸（避免用手直接接触药丸） 拿取药丸时应戴手套 使用STORM灭鼠药在稻田、玉米田的方法 放置位置：田边的杂草丛、洞口、鼠",
+        "missing": [
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            1.0
+          ],
+          [
+            "count",
+            30.0
+          ],
+          [
+            "count",
+            100.0
+          ],
+          [
+            "length",
+            0.03
+          ],
+          [
+            "length",
+            5.0
+          ],
+          [
+            "length",
+            5.0
+          ],
+          [
+            "length",
+            10.0
+          ],
+          [
+            "length",
+            10.0
+          ],
+          [
+            "time",
+            604800.0
+          ]
+        ],
+        "extra": []
+      },
+      {
+        "src": "Hộp cơm giữ nhiệt inox 304 Elmich EL8302 dung tích 1.7L - Hàng chính hãng",
+        "tgt": "304不锈钢保温饭盒 Elmich EL8302 容量1.7L - 正品",
+        "missing": [
+          [
+            "volume",
+            1.7
+          ]
+        ],
+        "extra": []
+      }
+    ]
+  }
+}
