@@ -1,0 +1,16 @@
+{
+  "model_key": "qwen3-8b",
+  "n_done": 29446,
+  "n_total": 29446,
+  "n_good": 29393,
+  "good_rate": 0.9982,
+  "variant_scores": {
+    "brand_aware": 0.9875,
+    "no_key": 0.9875,
+    "v4_fewshot": 0.9875
+  },
+  "chosen_variant": "brand_aware",
+  "stopped": "completed",
+  "elapsed_min": 91.2,
+  "updated_at": "2026-10-31T21:29:39Z"
+}
