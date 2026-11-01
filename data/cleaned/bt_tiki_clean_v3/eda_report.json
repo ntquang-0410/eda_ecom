@@ -1,0 +1,329 @@
+{
+  "models": {
+    "0.6b": {
+      "units": 45709,
+      "split": {
+        "train": 36434,
+        "dev": 4824,
+        "test": 4451
+      },
+      "unit_type": {
+        "attribute": 32509,
+        "title": 13200
+      },
+      "src_len": {
+        "p50": 15.0,
+        "p95": 116.0,
+        "max": 3273
+      },
+      "tgt_len": {
+        "p50": 6.0,
+        "p95": 55.0,
+        "max": 1425
+      },
+      "ratio": {
+        "p05": 0.13333333333333333,
+        "p50": 0.425531914893617,
+        "p95": 1.0
+      },
+      "cjk_ratio_mean": 0.611810240077779,
+      "brand_keep_mean": 0.33676543869417597,
+      "flags": {
+        "hard_drop": 15089,
+        "f_empty": 2,
+        "f_untranslated": 160,
+        "f_latin_only": 2415,
+        "f_equals_key": 14231,
+        "f_partial_vi": 1569,
+        "f_degenerate": 159,
+        "f_too_short": 4107,
+        "f_ratio_out": 2717,
+        "f_number_mismatch": 3843,
+        "f_identical": 5629,
+        "flag_any": 26035
+      },
+      "flag_pct": {
+        "hard_drop": 33.01,
+        "f_empty": 0.0,
+        "f_untranslated": 0.35,
+        "f_latin_only": 5.28,
+        "f_equals_key": 31.13,
+        "f_partial_vi": 3.43,
+        "f_degenerate": 0.35,
+        "f_too_short": 8.99,
+        "f_ratio_out": 5.94,
+        "f_number_mismatch": 8.41,
+        "f_identical": 12.31,
+        "flag_any": 56.96
+      },
+      "qc_status": {
+        "ok": 29384,
+        "repaired": 14908,
+        "repaired_v2": 1253,
+        "still_untranslated": 162,
+        "recovered_json": 2
+      },
+      "dup_pair_source_target": 16270,
+      "source_multi_target": 528,
+      "unique_source": 28620,
+      "kept": 32061,
+      "train_eligible": 30620,
+      "test_rows": 4451,
+      "test_eligible": 3010,
+      "dropped": 15089,
+      "unique_pairs": 20612,
+      "duplicate_rows": 6998
+    },
+    "1.7b": {
+      "units": 45709,
+      "split": {
+        "train": 36434,
+        "dev": 4824,
+        "test": 4451
+      },
+      "unit_type": {
+        "attribute": 32509,
+        "title": 13200
+      },
+      "src_len": {
+        "p50": 15.0,
+        "p95": 116.0,
+        "max": 3273
+      },
+      "tgt_len": {
+        "p50": 8.0,
+        "p95": 60.0,
+        "max": 2530
+      },
+      "ratio": {
+        "p05": 0.16666666666666666,
+        "p50": 0.4603174603174603,
+        "p95": 1.0
+      },
+      "cjk_ratio_mean": 0.5625908797397526,
+      "brand_keep_mean": 0.4040436805356273,
+      "flags": {
+        "hard_drop": 3364,
+        "f_empty": 2,
+        "f_untranslated": 48,
+        "f_latin_only": 1762,
+        "f_equals_key": 1921,
+        "f_partial_vi": 1101,
+        "f_degenerate": 202,
+        "f_too_short": 1825,
+        "f_ratio_out": 905,
+        "f_number_mismatch": 2273,
+        "f_identical": 6746,
+        "flag_any": 14806
+      },
+      "flag_pct": {
+        "hard_drop": 7.36,
+        "f_empty": 0.0,
+        "f_untranslated": 0.11,
+        "f_latin_only": 3.85,
+        "f_equals_key": 4.2,
+        "f_partial_vi": 2.41,
+        "f_degenerate": 0.44,
+        "f_too_short": 3.99,
+        "f_ratio_out": 1.98,
+        "f_number_mismatch": 4.97,
+        "f_identical": 14.76,
+        "flag_any": 32.39
+      },
+      "qc_status": {
+        "ok": 35316,
+        "repaired": 9741,
+        "repaired_v2": 602,
+        "still_untranslated": 50
+      },
+      "dup_pair_source_target": 16659,
+      "source_multi_target": 359,
+      "unique_source": 28620,
+      "kept": 42642,
+      "train_eligible": 42345,
+      "test_rows": 4451,
+      "test_eligible": 4154,
+      "dropped": 3364,
+      "unique_pairs": 24889,
+      "duplicate_rows": 13302
+    },
+    "4b": {
+      "units": 45709,
+      "split": {
+        "train": 36434,
+        "dev": 4824,
+        "test": 4451
+      },
+      "unit_type": {
+        "attribute": 32509,
+        "title": 13200
+      },
+      "src_len": {
+        "p50": 15.0,
+        "p95": 116.0,
+        "max": 3273
+      },
+      "tgt_len": {
+        "p50": 8.0,
+        "p95": 57.0,
+        "max": 1112
+      },
+      "ratio": {
+        "p05": 0.1875,
+        "p50": 0.4117647058823529,
+        "p95": 1.0
+      },
+      "cjk_ratio_mean": 0.6303471791134821,
+      "brand_keep_mean": 0.3097572637022717,
+      "flags": {
+        "hard_drop": 1743,
+        "f_empty": 1,
+        "f_untranslated": 10,
+        "f_latin_only": 875,
+        "f_equals_key": 533,
+        "f_partial_vi": 515,
+        "f_degenerate": 156,
+        "f_too_short": 1163,
+        "f_ratio_out": 620,
+        "f_number_mismatch": 2144,
+        "f_identical": 3726,
+        "flag_any": 9027
+      },
+      "flag_pct": {
+        "hard_drop": 3.81,
+        "f_empty": 0.0,
+        "f_untranslated": 0.02,
+        "f_latin_only": 1.91,
+        "f_equals_key": 1.17,
+        "f_partial_vi": 1.13,
+        "f_degenerate": 0.34,
+        "f_too_short": 2.54,
+        "f_ratio_out": 1.36,
+        "f_number_mismatch": 4.69,
+        "f_identical": 8.15,
+        "flag_any": 19.75
+      },
+      "qc_status": {
+        "ok": 45436,
+        "repaired": 229,
+        "repaired_v2": 32,
+        "still_untranslated": 11,
+        "recovered_json": 1
+      },
+      "dup_pair_source_target": 16656,
+      "source_multi_target": 375,
+      "unique_source": 28620,
+      "kept": 44121,
+      "train_eligible": 43966,
+      "test_rows": 4451,
+      "test_eligible": 4296,
+      "dropped": 1743,
+      "unique_pairs": 25469,
+      "duplicate_rows": 14201
+    },
+    "8b": {
+      "units": 45709,
+      "split": {
+        "train": 36434,
+        "dev": 4824,
+        "test": 4451
+      },
+      "unit_type": {
+        "attribute": 32509,
+        "title": 13200
+      },
+      "src_len": {
+        "p50": 15.0,
+        "p95": 116.0,
+        "max": 3273
+      },
+      "tgt_len": {
+        "p50": 8.0,
+        "p95": 59.0,
+        "max": 1077
+      },
+      "ratio": {
+        "p05": 0.2,
+        "p50": 0.43243243243243246,
+        "p95": 1.0
+      },
+      "cjk_ratio_mean": 0.6374330478375246,
+      "brand_keep_mean": 0.3188698795479538,
+      "flags": {
+        "hard_drop": 1724,
+        "f_empty": 2,
+        "f_untranslated": 8,
+        "f_latin_only": 483,
+        "f_equals_key": 937,
+        "f_partial_vi": 420,
+        "f_degenerate": 171,
+        "f_too_short": 749,
+        "f_ratio_out": 244,
+        "f_number_mismatch": 1952,
+        "f_identical": 3697,
+        "flag_any": 7976
+      },
+      "flag_pct": {
+        "hard_drop": 3.77,
+        "f_empty": 0.0,
+        "f_untranslated": 0.02,
+        "f_latin_only": 1.06,
+        "f_equals_key": 2.05,
+        "f_partial_vi": 0.92,
+        "f_degenerate": 0.37,
+        "f_too_short": 1.64,
+        "f_ratio_out": 0.53,
+        "f_number_mismatch": 4.27,
+        "f_identical": 8.09,
+        "flag_any": 17.45
+      },
+      "qc_status": {
+        "ok": 45395,
+        "repaired": 267,
+        "repaired_v2": 36,
+        "still_untranslated": 10,
+        "recovered_json": 1
+      },
+      "dup_pair_source_target": 16673,
+      "source_multi_target": 353,
+      "unique_source": 28620,
+      "kept": 44137,
+      "train_eligible": 43985,
+      "test_rows": 4451,
+      "test_eligible": 4299,
+      "dropped": 1724,
+      "unique_pairs": 25437,
+      "duplicate_rows": 14249
+    }
+  },
+  "cross_model": {
+    "pairs_compared": 45709,
+    "exact_agreement_pct": {
+      "0.6b|1.7b": 18.46,
+      "0.6b|4b": 12.02,
+      "0.6b|8b": 13.02,
+      "1.7b|4b": 22.65,
+      "1.7b|8b": 21.71,
+      "4b|8b": 30.1
+    },
+    "cjk_presence_agreement_pct": {
+      "0.6b|1.7b": 87.89,
+      "0.6b|4b": 88.72,
+      "0.6b|8b": 88.21,
+      "1.7b|4b": 89.84,
+      "1.7b|8b": 89.42,
+      "4b|8b": 96.86
+    },
+    "all_four_identical_pct": 8.61
+  },
+  "figures": [
+    "reports/figures/flags_heatmap.png",
+    "reports/figures/ratio_hist.png",
+    "reports/figures/qc_status.png",
+    "reports/figures/length_by_type.png"
+  ],
+  "thresholds": {
+    "ratio_lo": 0.15,
+    "ratio_hi": 2.5
+  }
+}
