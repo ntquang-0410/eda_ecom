@@ -31,8 +31,12 @@
       },
       "units": {
         "rows": 45709,
-        "bytes": 4829211,
-        "sha256": "5d0760558870152ed5e064a2b11bd3a9f9341f5c357afba1d5a5b5a5e1a29c20"
+        "bytes": 4839676,
+        "sha256": "10d0e76f98ed6d7e1923414321d779ed97c72ab3fe870ae7f6e60e522ff9e432",
+        "extra_columns": [
+          "qty_status",
+          "qty_decision"
+        ]
       },
       "v3": {
         "full": {
@@ -66,8 +70,12 @@
       },
       "units": {
         "rows": 45709,
-        "bytes": 4807999,
-        "sha256": "8e13e58f612670d7bde51abfd990da8c79e2d817b3ea9f23e3e247308fd56993"
+        "bytes": 4814318,
+        "sha256": "20af4fa10448192c7670ac91e24a3199f48673d4b1329f9b28006345898a9370",
+        "extra_columns": [
+          "qty_status",
+          "qty_decision"
+        ]
       },
       "v3": {
         "full": {
@@ -101,8 +109,12 @@
       },
       "units": {
         "rows": 45709,
-        "bytes": 4906660,
-        "sha256": "3561a9c06f61a1b34cb1f7974659ac47a570ef1b1674f67fff8438f9f75c5b2c"
+        "bytes": 4911512,
+        "sha256": "248703820c7feffaff42b4a16b2706f81ec47f95e110a2e65a1e1d9e50677b92",
+        "extra_columns": [
+          "qty_status",
+          "qty_decision"
+        ]
       },
       "v3": {
         "full": {
@@ -136,8 +148,12 @@
       },
       "units": {
         "rows": 45709,
-        "bytes": 4931819,
-        "sha256": "a3ba25679ba7adec3af63f6b8306dd9f00ef176b4664010bde6a31c10e956265"
+        "bytes": 4936386,
+        "sha256": "780b84af5da73c5bc1a2682af6d925647a0f76296d18c790f6098ef276252ec5",
+        "extra_columns": [
+          "qty_status",
+          "qty_decision"
+        ]
       },
       "v3": {
         "full": {
@@ -158,5 +174,17 @@
       }
     }
   },
-  "generated_at": "2026-11-01T05:10:25Z"
+  "generated_at": "2026-11-01T05:10:25Z",
+  "quantity_normalization": {
+    "module": "cado_core/quantity_norm.py",
+    "unit_level_column": "qty_status",
+    "values": [
+      "qty_ok",
+      "qty_resolved",
+      "qty_review",
+      "qty_mismatch",
+      "qty_weak"
+    ],
+    "decision_file": "data/cleaned/quantity_weak_needs_decision.csv"
+  }
 }

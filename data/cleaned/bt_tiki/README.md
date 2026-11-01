@@ -59,3 +59,22 @@ Lỗi `target == key_zh` từng chiếm 31% ở 0.6B (v3) đã giảm còn 4 dò
 train 36.434 / dev 4.824 / test 4.451.
 
 Bản dịch là **synthetic**, không phải gold.
+
+
+## Chuẩn hoá đại lượng
+
+`units.parquet` có thêm 2 cột:
+
+| cột | ý nghĩa |
+|---|---|
+| `qty_status` | `qty_ok` / `qty_resolved` / `qty_review` / `qty_mismatch` / `qty_weak` |
+| `qty_decision` | quyết định thủ công cho dòng weak (`keep`/`drop`/`fix`) |
+
+Đại lượng được quy về SI trước khi so (`cado_core/quantity_norm.py`), nên
+`144,5cm` khớp `144.5厘米`, `20W` khớp `20瓦`, `1kg` khớp `1000克`.
+
+- `qty_ok`: khớp
+- `qty_resolved`: weak nhưng ngữ cảnh/đơn vị xác nhận tương đương
+- `qty_review`: cần người quyết
+- `qty_mismatch`: cùng thứ nguyên nhưng giá trị khác
+- `qty_weak`: weak chưa có quyết định
