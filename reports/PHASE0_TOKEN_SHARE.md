@@ -52,6 +52,17 @@ Tổng: **10.44M token**
 
 Đề xuất: chunk description ở ~800 token cho các dòng vượt 1.280, hoặc truncate 358 dòng.
 
+## 5b. Ảnh hưởng của dedup
+
+| trạng thái | tổng token | title | attr | desc | tiki |
+|---|---:|---:|---:|---:|---:|
+| cap 15 | 13,48M | 5,6% | 24,4% | 62,1% | 7,9% |
+| cap 15 + dedup | **12,27M** | 6,1% | 18,3% | **68,2%** | 7,3% |
+
+Dedup làm attribute giảm mạnh (3,30M → 2,25M) vì giá trị lặp nhiều, khiến
+description càng chiếm ưu thế (68,2%). Nếu dedup, weight cho description phải
+giảm thêm (~0,18 thay vì 0,21).
+
 ## 6. Kết luận
 
 ```text
