@@ -73,15 +73,15 @@ Return JSON only: {"translation": "..."}'''
 SYS_B = SYS_A + '''
 
 The previous translation had quantity problems:
-- missing quantities: {missing}
-- extra quantities: {extra}
+- missing quantities: __MISSING__
+- extra quantities: __EXTRA__
 Fix those problems: keep every number from the source, remove numbers that do not exist in the source.'''
 
 def build_prompt(tok, row, variant):
     payload = {'source_text': row['source_text_bt']}
     system = SYS_A
     if variant == 'with_previous':
-        system = SYS_B.format(missing=row['missing'], extra=row['extra'])
+        system = SYS_B.replace('__MISSING__', str(row['missing'])).replace('__EXTRA__', str(row['extra']))
         payload['previous_translation'] = row['previous_target']
     if row.get('key_vi'):
         payload['key_vi'] = row['key_vi']
