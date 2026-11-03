@@ -35,12 +35,11 @@ import pandas as pd
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-# torchao trong image Kaggle cũ (0.10) không tương thích peft -> tắt hẳn
-try:
-    import peft.import_utils as _peft_iu
-    _peft_iu.is_torchao_available = lambda: False
-except Exception as error:
-    print('peft import_utils patch failed:', error)
+# torchao trong image Kaggle cũ (0.10) không tương thích peft -> gỡ hẳn
+import subprocess, sys as _sys
+_res = subprocess.run([_sys.executable, '-m', 'pip', 'uninstall', '-y', 'torchao'],
+                      capture_output=True, text=True)
+print('torchao uninstall rc', _res.returncode, (_res.stdout or '')[-160:])
 from peft import LoraConfig, get_peft_model
 print('torch', torch.__version__, '| cuda', torch.cuda.is_available())
 if torch.cuda.is_available(): print('gpu', torch.cuda.get_device_name(0))
