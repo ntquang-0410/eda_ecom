@@ -29,7 +29,8 @@ CONFIGS = {
 def group_of(row) -> str:
     if row["domain"] == "tiki":
         return "tiki"
-    return f"{row['pair_type']}_1688"
+    return {"title": "title_1688", "attribute": "attr_1688",
+            "description": "desc_1688"}[row["pair_type"]]
 
 
 def apply_cap(df: pd.DataFrame, cap: int) -> pd.DataFrame:
