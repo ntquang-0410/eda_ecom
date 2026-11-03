@@ -78,3 +78,23 @@ Bản dịch là **synthetic**, không phải gold.
 - `qty_review`: cần người quyết
 - `qty_mismatch`: cùng thứ nguyên nhưng giá trị khác
 - `qty_weak`: weak chưa có quyết định
+
+
+## Quantity repair & weight
+
+`units.parquet` có thêm:
+
+| cột | ý nghĩa |
+|---|---|
+| `qty_repaired` | 1 nếu dòng đã được dịch lại và validate khớp |
+| `qty_weight` | trọng số sample khi train |
+
+Quy ước weight:
+
+```text
+qty_ok / qty_resolved / qty_repaired -> 1.0
+qty_weak                             -> 0.7
+qty_review                           -> 0.5
+qty_mismatch (A/B/C)                 -> 0.6 / 0.3 / 0.1 theo damage & consensus
+skipped                              -> 0.0
+```

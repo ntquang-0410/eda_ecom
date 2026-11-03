@@ -31,11 +31,13 @@
       },
       "units": {
         "rows": 45709,
-        "bytes": 4832281,
-        "sha256": "5e3789dd50fe1839340eba4bcba462a8269c2111ef677e72bc02748c624b9947",
+        "bytes": 4852275,
+        "sha256": "13d3704ca39271ebcd654e452e680714cab8349be0b56b726d905372ccf226e1",
         "extra_columns": [
           "qty_status",
-          "qty_decision"
+          "qty_decision",
+          "qty_repaired",
+          "qty_weight"
         ]
       },
       "v3": {
@@ -70,11 +72,13 @@
       },
       "units": {
         "rows": 45709,
-        "bytes": 4801886,
-        "sha256": "55a7f8b99a8ce3065929ad68112600ecb4c6fdd67b0f2e28246d43cf7618b4a8",
+        "bytes": 4819982,
+        "sha256": "f5059c9e039ce48b6b61fb5bc1b5410f3d4cc9a17fdffb42cb53f4e5cc0f2dd2",
         "extra_columns": [
           "qty_status",
-          "qty_decision"
+          "qty_decision",
+          "qty_repaired",
+          "qty_weight"
         ]
       },
       "v3": {
@@ -109,11 +113,13 @@
       },
       "units": {
         "rows": 45709,
-        "bytes": 4895547,
-        "sha256": "a161f2270677ac851b730a1fd5e55725fb7867d0a71bf54ee1d7539542cfb08a",
+        "bytes": 4904999,
+        "sha256": "2adb0a6de7443424f51a6397c426888e87444337a00c705600304693647c55d8",
         "extra_columns": [
           "qty_status",
-          "qty_decision"
+          "qty_decision",
+          "qty_repaired",
+          "qty_weight"
         ]
       },
       "v3": {
@@ -148,11 +154,13 @@
       },
       "units": {
         "rows": 45709,
-        "bytes": 4923541,
-        "sha256": "962778cf7c10abeb3f5f9ad17940cfe1cd5441f04fc0d811119af65454bab86b",
+        "bytes": 4934598,
+        "sha256": "6742453cbb55161ce8f17261089ea878ff571f1bb6b3637904127364b1d9f7b9",
         "extra_columns": [
           "qty_status",
-          "qty_decision"
+          "qty_decision",
+          "qty_repaired",
+          "qty_weight"
         ]
       },
       "v3": {
@@ -200,5 +208,11 @@
       "collapse repeated punctuation",
       "drop unmatched brackets"
     ]
+  },
+  "quantity_repair": {
+    "rows_total": 1891,
+    "repaired": 855,
+    "remaining_mismatch": 1036,
+    "weight_scheme": "qty_ok/resolved/repaired=1.0 | weak=0.7 | review=0.5 | mismatch A/B/C=0.6/0.3/0.1 (adjust per model)"
   }
 }
