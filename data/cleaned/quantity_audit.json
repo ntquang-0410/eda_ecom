@@ -5,11 +5,11 @@
     "pairs_with_quantity": 8099,
     "coverage_pct": 50.2,
     "naive_match_pct": 84.78,
-    "quantity_match_pct": 90.62,
-    "both_match": 6637,
-    "rescued_by_quantity": 702,
-    "newly_flagged_by_quantity": 229,
-    "newly_flagged_strong": 47,
+    "quantity_match_pct": 90.65,
+    "both_match": 6642,
+    "rescued_by_quantity": 700,
+    "newly_flagged_by_quantity": 224,
+    "newly_flagged_strong": 42,
     "examples_rescued": [
       {
         "src": "Đệm ghế ô tô mới xuyên biên giới, đệm ghế ô tô cao cấp Napppi, đệm ghế 5 chỗ trước và sau ",
@@ -255,15 +255,15 @@
   },
   "1688_attribute": {
     "label": "1688 attribute",
-    "pairs": 395575,
-    "pairs_with_quantity": 101303,
-    "coverage_pct": 25.61,
-    "naive_match_pct": 67.09,
-    "quantity_match_pct": 96.28,
-    "both_match": 66755,
-    "rescued_by_quantity": 30778,
-    "newly_flagged_by_quantity": 1206,
-    "newly_flagged_strong": 652,
+    "pairs": 395493,
+    "pairs_with_quantity": 101233,
+    "coverage_pct": 25.6,
+    "naive_match_pct": 67.06,
+    "quantity_match_pct": 96.29,
+    "both_match": 66698,
+    "rescued_by_quantity": 30784,
+    "newly_flagged_by_quantity": 1191,
+    "newly_flagged_strong": 639,
     "examples_rescued": [
       {
         "src": "00031",
@@ -277,7 +277,7 @@
       },
       {
         "src": "Tựa đầu Maybach [nâu hạt dẻ] một cặp ; Tựa đầu Maybach [mocha brown] một cặp ; Tựa đầu May",
-        "tgt": "迈巴赫头枕【栗棕色】一对装 ; 迈巴赫头枕【摩卡棕】一对装 ; 迈巴赫头枕【尊贵黑】一对装 ; 迈巴赫头枕【赭石棕】一对装 ; 迈巴赫头枕【酒红色】一对装 ; 迈巴赫头枕【米白色】",
+        "tgt": "迈巴赫头枕[栗棕色]一对装 ; 迈巴赫头枕[摩卡棕]一对装 ; 迈巴赫头枕[尊贵黑]一对装 ; 迈巴赫头枕[赭石棕]一对装 ; 迈巴赫头枕[酒红色]一对装 ; 迈巴赫头枕[米白色]",
         "qty": []
       },
       {
@@ -398,7 +398,7 @@
       },
       {
         "src": "Băng và tuyết (màu trắng) ; Băng và tuyết (màu xanh) ; Băng và tuyết (màu xanh lá cây) ; B",
-        "tgt": "冰雪（白） ; 冰雪（蓝） ; 冰雪（绿） ; 冰雪（透黑） ; 冰雪（粉） ; 冰雪（黄） ; 冰雪（紫） ; 冰雪（炫彩） ; 梦幻（白） ; 梦幻（彩） ; ZZ款（白） ;",
+        "tgt": "冰雪(白) ; 冰雪(蓝) ; 冰雪(绿) ; 冰雪(透黑) ; 冰雪(粉) ; 冰雪(黄) ; 冰雪(紫) ; 冰雪(炫彩) ; 梦幻(白) ; 梦幻(彩) ; ZZ款(白) ;",
         "missing": [
           [
             "time",
@@ -410,8 +410,8 @@
     ],
     "examples_mismatch": [
       {
-        "src": "【ST-221B】Màu cam - Đo áp suất màn hình kép + Áp suất lốp đặt trước + Tự động dừng khi đầy ",
-        "tgt": "【ST-221B】橙色-双屏测压+预设胎压+充满自停 ; 【ST-221B】双屏测压+预设胎压+充满自停 ; 【ST-221C】-无线数显+反向充电款 ; 【ST-221D】三用充",
+        "src": "[ST-221B]Màu cam - Đo áp suất màn hình kép + Áp suất lốp đặt trước + Tự động dừng khi đầy ",
+        "tgt": "[ST-221B]橙色-双屏测压+预设胎压+充满自停 ; [ST-221B]双屏测压+预设胎压+充满自停 ; [ST-221C]-无线数显+反向充电款 ; [ST-221D]三用充",
         "missing": [
           [
             "voltage",
@@ -468,7 +468,7 @@
       },
       {
         "src": "70% off cotton-xám (151*55cm) ; 70% off cotton nâu (151*55cm)",
-        "tgt": "三折棉-灰色（151*55cm） ; 三折棉-棕色（151*55cm)",
+        "tgt": "三折棉-灰色(151*55cm) ; 三折棉-棕色(151*55cm)",
         "missing": [
           [
             "percent",
@@ -519,14 +519,14 @@
   "tiki_units": {
     "label": "Tiki units (8B)",
     "pairs": 45652,
-    "pairs_with_quantity": 19776,
-    "coverage_pct": 43.32,
-    "naive_match_pct": 92.49,
-    "quantity_match_pct": 96.05,
-    "both_match": 17718,
-    "rescued_by_quantity": 1277,
-    "newly_flagged_by_quantity": 573,
-    "newly_flagged_strong": 245,
+    "pairs_with_quantity": 19789,
+    "coverage_pct": 43.35,
+    "naive_match_pct": 92.5,
+    "quantity_match_pct": 96.44,
+    "both_match": 17789,
+    "rescued_by_quantity": 1295,
+    "newly_flagged_by_quantity": 515,
+    "newly_flagged_strong": 205,
     "examples_rescued": [
       {
         "src": "Bình đựng thức ăn giữ nhiệt inox 304 Elmich EL8337 dung tích 650ml",
@@ -539,13 +539,35 @@
         ]
       },
       {
+        "src": "Chiếu Mây Điều Hòa Thủ Công Cao Cấp – Sợi Mây Tự Nhiên 5kg/Chiếc, Gấp Gọn Được, Giặt Được,",
+        "tgt": "云朵凉席 优质手工制作 – 自然云纤维 5公斤/件，可折叠，可水洗，夏季清凉 – 尺寸 1.6米 / 1.8米 / 2.2米 - HÀNG CHÍNH HÃNG MINIIN",
+        "qty": [
+          [
+            "length",
+            1.6
+          ],
+          [
+            "length",
+            1.8
+          ],
+          [
+            "length",
+            2.2
+          ],
+          [
+            "mass",
+            5.0
+          ]
+        ]
+      },
+      {
         "src": "[KoSuyTu] Giá Đỡ Điện Thoại 3 Trong 1 Kèm Pin Dự Phòng & Loa Bluetooth - Đa Năng Tiện Lợi ",
         "tgt": "[KoSuyTu] 三合一手机支架带备用电池及蓝牙音箱-多功能便携式可调节360度角度兼容多种设备",
         "qty": []
       },
       {
         "src": "Hộp cơm nhựa 3 ngăn trong suốt LocknLock 750ml - LCB501 và 1L - LCB502 - 2 màu (Tím, Xanh)",
-        "tgt": "LocknLock 750ml 透明三格饭盒 - LCB501 和 1L - LCB502 - 2色（紫色，蓝色）",
+        "tgt": "LocknLock 750ml 透明三格饭盒 - LCB501 和 1L - LCB502 - 2色(紫色，蓝色)",
         "qty": [
           [
             "volume",
@@ -569,7 +591,7 @@
       },
       {
         "src": "- Không sử dụng sản phẩm để đựng sữa (thức ăn trẻ em), đá khô và đồ uống có ga. - Vui lòng",
-        "tgt": "- 请勿将产品用于储存牛奶（儿童食品）、干冰和碳酸饮料。- 请在首次使用前彻底清洗瓶子。- 清洁瓶子时，请勿使用刷子和研磨剂。- 请勿在洗碗机、微波炉或烤箱中使用。- 请勿对瓶盖进",
+        "tgt": "- 请勿将产品用于储存牛奶(儿童食品)、干冰和碳酸饮料。- 请在首次使用前彻底清洗瓶子。- 清洁瓶子时，请勿使用刷子和研磨剂。- 请勿在洗碗机、微波炉或烤箱中使用。- 请勿对瓶盖进",
         "qty": []
       },
       {
@@ -586,11 +608,6 @@
             0.16
           ]
         ]
-      },
-      {
-        "src": "Đèn Bàn Học Đọc Sách Cao Cấp Teement Led Chống Cận 03 Chế Độ Ánh Sáng Vàng Bảo Vệ Mắt- Hàn",
-        "tgt": "护眼台灯 阅读学习 高级Teement LED 三档灯光 黄光护眼- 正品行货",
-        "qty": []
       }
     ],
     "examples_newly_flagged": [
@@ -607,7 +624,7 @@
       },
       {
         "src": "CÁCH LẤY VIÊN STORM RA KHỎI TÚI ĐÚNG CÁCH Dùng kéo cắt góc túi Rắc viên thuốc ra khỏi túi ",
-        "tgt": "正确取出STORM药丸的方法 用剪刀剪开袋子 从袋中抖出药丸（避免用手直接接触药丸） 拿取药丸时应戴手套 使用STORM灭鼠药在稻田、玉米田的方法 放置位置：田边的杂草丛、洞口、鼠",
+        "tgt": "正确取出STORM药丸的方法 用剪刀剪开袋子 从袋中抖出药丸(避免用手直接接触药丸) 拿取药丸时应戴手套 使用STORM灭鼠药在稻田、玉米田的方法 放置位置：田边的杂草丛、洞口、鼠",
         "missing": [],
         "extra": [
           [
@@ -617,6 +634,62 @@
           [
             "length",
             10.0
+          ]
+        ]
+      },
+      {
+        "src": "Loại 2m1 3 tầng",
+        "tgt": "2M1 3层",
+        "missing": [
+          [
+            "length",
+            2.1
+          ]
+        ],
+        "extra": [
+          [
+            "length",
+            2.0
+          ]
+        ]
+      },
+      {
+        "src": "Nệm Ngủ Trải Sàn Xuất Nhật 1m / 1m2 / 1m4 / 1m6 / 1m8 Có Thể Gấp Gọn Dễ Di Chuyển Tặng Kèm",
+        "tgt": "日式地垫床垫 1米 / 1米2 / 1米4 / 1米6 / 1米8 可折叠易携带 赠送床单",
+        "missing": [
+          [
+            "length",
+            1.2
+          ],
+          [
+            "length",
+            1.4
+          ],
+          [
+            "length",
+            1.6
+          ],
+          [
+            "length",
+            1.8
+          ]
+        ],
+        "extra": [
+          [
+            "length",
+            1.0
+          ],
+          [
+            "length",
+            2.0
+          ],
+          [
+            "length",
+            4.0
+          ],
+          [
+            "length",
+            6.0
           ]
         ]
       },
@@ -663,28 +736,6 @@
             0.1
           ]
         ]
-      },
-      {
-        "src": "20 phân",
-        "tgt": "20厘米",
-        "missing": [],
-        "extra": [
-          [
-            "length",
-            0.2
-          ]
-        ]
-      },
-      {
-        "src": "30 phân",
-        "tgt": "30毫米",
-        "missing": [],
-        "extra": [
-          [
-            "length",
-            0.03
-          ]
-        ]
       }
     ],
     "examples_mismatch": [
@@ -717,7 +768,7 @@
       },
       {
         "src": "CÁCH LẤY VIÊN STORM RA KHỎI TÚI ĐÚNG CÁCH Dùng kéo cắt góc túi Rắc viên thuốc ra khỏi túi ",
-        "tgt": "正确取出STORM药丸的方法 用剪刀剪开袋子 从袋中抖出药丸（避免用手直接接触药丸） 拿取药丸时应戴手套 使用STORM灭鼠药在稻田、玉米田的方法 放置位置：田边的杂草丛、洞口、鼠",
+        "tgt": "正确取出STORM药丸的方法 用剪刀剪开袋子 从袋中抖出药丸(避免用手直接接触药丸) 拿取药丸时应戴手套 使用STORM灭鼠药在稻田、玉米田的方法 放置位置：田边的杂草丛、洞口、鼠",
         "missing": [],
         "extra": [
           [
@@ -738,38 +789,6 @@
           [
             "length",
             26.0
-          ]
-        ]
-      },
-      {
-        "src": "Chiếu Mây Điều Hòa Thủ Công Cao Cấp – Sợi Mây Tự Nhiên 5kg/Chiếc, Gấp Gọn Được, Giặt Được,",
-        "tgt": "云朵凉席 优质手工制作 – 自然云纤维 5公斤/件，可折叠，可水洗，夏季清凉 – 尺寸 1.6米 / 1.8米 / 2.2米 - HÀNG CHÍNH HÃNG MINIIN",
-        "missing": [
-          [
-            "area",
-            4.0
-          ],
-          [
-            "length",
-            1.0
-          ],
-          [
-            "length",
-            6.0
-          ]
-        ],
-        "extra": [
-          [
-            "length",
-            1.6
-          ],
-          [
-            "length",
-            1.8
-          ],
-          [
-            "length",
-            2.2
           ]
         ]
       },
@@ -796,20 +815,31 @@
         ]
       },
       {
-        "src": "Loại 1m1 2 tầng",
-        "tgt": "1.1米 2层",
+        "src": "Loại 2m1 3 tầng",
+        "tgt": "2M1 3层",
         "missing": [
           [
             "length",
-            1.0
+            2.1
           ]
         ],
         "extra": [
           [
             "length",
-            1.1
+            2.0
           ]
         ]
+      },
+      {
+        "src": "Đèn Bắt Muỗi Diệt Côn Trùng Thông Minh , Máy Bắt Muỗi Quạt Động Cơ Từ Tính Siêu Êm – Đèn N",
+        "tgt": "灭蚊灯 智能驱虫器，风扇式灭蚊机 电磁静音 – 二合一睡眠灭蚊灯 高效驱蚊",
+        "missing": [
+          [
+            "length",
+            0.0508
+          ]
+        ],
+        "extra": []
       }
     ]
   }

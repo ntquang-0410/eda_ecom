@@ -39,7 +39,7 @@ def _add(dim: str, factor: float, *names: str) -> None:
 
 # độ dài -> m
 _add("length", 1.0, "m", "met", "mét", "meter", "米")
-_add("length", 0.01, "cm", "centimet", "厘米", "公分")
+_add("length", 0.01, "cm", "centimet", "厘米", "公分", "hcm")
 _add("length", 0.001, "mm", "milimet", "毫米")
 _add("length", 1000.0, "km", "kilomet", "公里", "千米")
 _add("length", 0.0254, "inch", "in", "英寸", "寸", "\"", "″", "'", "′")
@@ -208,7 +208,7 @@ def parse_number(token: str, lang: str) -> float | None:
             token = token.replace(".", "")
         elif len(parts) == 2 and len(parts[1]) == 3 and len(parts[0]) <= 3:
             # "1.234" -> 1,234 (thập phân); "200.000" -> 200000 (nghìn)
-            if len(parts[0]) >= 3:
+            if parts[1] == "000" or len(parts[0]) >= 3:
                 token = parts[0] + parts[1]
     try:
         return float(token)
@@ -252,7 +252,7 @@ def _match_unit(text: str, pos: int) -> tuple[str, int]:
                         # đơn vị Latin 1 ký tự: bỏ nếu dính chữ Latin ("70mai")
                         if nxt.isalpha() and not ("\u4e00" <= nxt <= "\u9fff"):
                             continue
-                elif nxt.isalpha() and not ("\u4e00" <= nxt <= "\u9fff"):
+                elif nxt.isalpha() and not ("\u4e00" <= nxt <= "\u9fff") and not nxt.isupper():
                     continue
             # "尺寸"/"尺码" là từ, không phải đơn vị "尺"
             if name == "尺" and text[pos + len(name):pos + len(name) + 1] in ("寸", "码"):
@@ -269,10 +269,14 @@ def _match_unit(text: str, pos: int) -> tuple[str, int]:
 
 
 FRACTIONS = {"½": "0.5", "¼": "0.25", "¾": "0.75", "⅓": "0.3333", "⅔": "0.6667"}
-RANGE_SEPARATORS = {"-", "–", "—", "~", "～", "至", "到", "x", "X", "×", "*"}
+RANGE_SEPARATORS = {"-", "–", "—", "~", "～", "至", "到", "x", "X", "×", "*", "tới", "đến", "toi", "den"}
+
+
+VI_SHORTHAND_RE = re.compile(r"(?<!\d)(\d)m(\d)(?![\d])")
 
 
 def _normalize_fractions(text: str) -> str:
+    text = VI_SHORTHAND_RE.sub(r"\1.\2 m", text)
     text = text.replace("⁄", "/").replace("／", "/")
     for symbol, value in FRACTIONS.items():
         text = text.replace(symbol, value)

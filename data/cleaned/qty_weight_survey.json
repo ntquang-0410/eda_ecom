@@ -2,15 +2,15 @@
   "qwen3-0.6b": {
     "summary": {
       "qty_mismatch": {
-        "rows": 1003,
-        "damage_mean": 0.194,
-        "damage_p50": 0.0,
-        "consensus_mean": 0.298,
-        "consensus_p10": 0.098,
+        "rows": 961,
+        "damage_mean": 0.337,
+        "damage_p50": 0.273,
+        "consensus_mean": 0.294,
+        "consensus_p10": 0.097,
         "length_ratio_p50": 0.47
       },
       "qty_ok": {
-        "rows": 41697,
+        "rows": 41752,
         "damage_mean": 0.0,
         "damage_p50": 0.0,
         "consensus_mean": 0.422,
@@ -21,44 +21,69 @@
     "tiers": [
       {
         "tier": "A. lệch ít, đồng thuận cao",
-        "rows": 36,
-        "share": 3.6,
-        "consensus_mean": 0.712,
-        "damage_mean": 0.09,
+        "rows": 32,
+        "share": 3.3,
+        "consensus_mean": 0.706,
+        "damage_mean": 0.229,
         "suggested_weight": 0.5
       },
       {
         "tier": "B. lệch ít, đồng thuận thấp",
-        "rows": 861,
-        "share": 85.8,
+        "rows": 787,
+        "share": 81.9,
         "consensus_mean": 0.284,
-        "damage_mean": 0.105,
+        "damage_mean": 0.247,
         "suggested_weight": 0.3
       },
       {
         "tier": "C. lệch nhiều (>50% đại lượng)",
-        "rows": 106,
-        "share": 10.6,
-        "consensus_mean": 0.266,
-        "damage_mean": 0.951,
+        "rows": 142,
+        "share": 14.8,
+        "consensus_mean": 0.255,
+        "damage_mean": 0.863,
         "suggested_weight": 0.1
       }
     ],
+    "kinds": {
+      "extra": 589,
+      "both": 250,
+      "missing": 122
+    },
     "peer": "qwen3-8b",
-    "mismatch_rows": 1003
+    "mismatch_rows": 961,
+    "examples": {
+      "A": {
+        "source": "Khoảng 6h30 phút (từ 0% đến 100%)",
+        "target": "6小时30分钟(从0%到100%)",
+        "consensus": 0.882,
+        "damage": 0.143
+      },
+      "B": {
+        "source": "Ghế ngồi ôtô cho bé Joie i - Prodigi (NRDC W/ ISOFIX 0/1/2) Oyster dành cho bé từ sơ sinh đến 23kg",
+        "target": "汽车婴儿椅 Joie i - Prodigi (NRDC W/ ISOFIX 0/1/2) Oyster 适合0-23kg婴儿",
+        "consensus": 0.597,
+        "damage": 0.143
+      },
+      "C": {
+        "source": "Xe đạp trẻ em Thống Nhất GN06-20 thế hệ mới 20inch, phù hợp với bé cao từ 1m20 đến 1m35",
+        "target": "儿童电动自行车 Thống Nhất GN06-20 新一代 20英寸，适合身高1米20到1米35的儿童",
+        "consensus": 0.705,
+        "damage": 0.625
+      }
+    }
   },
   "qwen3-1.7b": {
     "summary": {
       "qty_mismatch": {
-        "rows": 519,
-        "damage_mean": 0.215,
-        "damage_p50": 0.095,
-        "consensus_mean": 0.391,
-        "consensus_p10": 0.173,
+        "rows": 459,
+        "damage_mean": 0.269,
+        "damage_p50": 0.25,
+        "consensus_mean": 0.381,
+        "consensus_p10": 0.155,
         "length_ratio_p50": 0.45
       },
       "qty_ok": {
-        "rows": 44004,
+        "rows": 44072,
         "damage_mean": 0.0,
         "damage_p50": 0.0,
         "consensus_mean": 0.504,
@@ -69,44 +94,69 @@
     "tiers": [
       {
         "tier": "A. lệch ít, đồng thuận cao",
-        "rows": 62,
-        "share": 11.9,
-        "consensus_mean": 0.719,
-        "damage_mean": 0.129,
+        "rows": 53,
+        "share": 11.5,
+        "consensus_mean": 0.722,
+        "damage_mean": 0.2,
         "suggested_weight": 0.5
       },
       {
         "tier": "B. lệch ít, đồng thuận thấp",
-        "rows": 413,
-        "share": 79.6,
-        "consensus_mean": 0.351,
-        "damage_mean": 0.163,
+        "rows": 366,
+        "share": 79.7,
+        "consensus_mean": 0.346,
+        "damage_mean": 0.222,
         "suggested_weight": 0.3
       },
       {
         "tier": "C. lệch nhiều (>50% đại lượng)",
-        "rows": 44,
-        "share": 8.5,
-        "consensus_mean": 0.311,
-        "damage_mean": 0.817,
+        "rows": 40,
+        "share": 8.7,
+        "consensus_mean": 0.247,
+        "damage_mean": 0.797,
         "suggested_weight": 0.1
       }
     ],
+    "kinds": {
+      "extra": 231,
+      "missing": 107,
+      "both": 121
+    },
     "peer": "qwen3-8b",
-    "mismatch_rows": 519
+    "mismatch_rows": 459,
+    "examples": {
+      "A": {
+        "source": "1m2x1m5 (sai số +-2-3cm)",
+        "target": "1米2x1米5(误差±2-3厘米)",
+        "consensus": 1.0,
+        "damage": 0.333
+      },
+      "B": {
+        "source": "1.Cho một gói cà phê KING COFFEE 2IN1 Coffee & Creamer vào cốc. 2.Thêm 100ml nước nóng (800C - 1000C) 3.Thêm đường nếu t",
+        "target": "1. 将 KING COFFEE 2IN1 咖啡与奶精放入杯中。2. 加入 100ml 热水(80℃-100℃)3. 如需可加糖享用。",
+        "consensus": 0.597,
+        "damage": 0.286
+      },
+      "C": {
+        "source": "Khối lượng tịnh: 0,462kg",
+        "target": "产品重量: 0.462kg",
+        "consensus": 0.692,
+        "damage": 1.0
+      }
+    }
   },
   "qwen3-4b": {
     "summary": {
       "qty_mismatch": {
-        "rows": 394,
-        "damage_mean": 0.226,
-        "damage_p50": 0.048,
-        "consensus_mean": 0.535,
-        "consensus_p10": 0.3,
-        "length_ratio_p50": 0.48
+        "rows": 306,
+        "damage_mean": 0.248,
+        "damage_p50": 0.25,
+        "consensus_mean": 0.538,
+        "consensus_p10": 0.306,
+        "length_ratio_p50": 0.5
       },
       "qty_ok": {
-        "rows": 44719,
+        "rows": 44819,
         "damage_mean": 0.0,
         "damage_p50": 0.0,
         "consensus_mean": 0.609,
@@ -117,44 +167,69 @@
     "tiers": [
       {
         "tier": "A. lệch ít, đồng thuận cao",
-        "rows": 119,
-        "share": 30.2,
-        "consensus_mean": 0.757,
-        "damage_mean": 0.155,
+        "rows": 94,
+        "share": 30.7,
+        "consensus_mean": 0.753,
+        "damage_mean": 0.206,
         "suggested_weight": 0.5
       },
       {
         "tier": "B. lệch ít, đồng thuận thấp",
-        "rows": 232,
-        "share": 58.9,
-        "consensus_mean": 0.441,
-        "damage_mean": 0.152,
+        "rows": 185,
+        "share": 60.5,
+        "consensus_mean": 0.439,
+        "damage_mean": 0.2,
         "suggested_weight": 0.3
       },
       {
         "tier": "C. lệch nhiều (>50% đại lượng)",
-        "rows": 43,
-        "share": 10.9,
-        "consensus_mean": 0.429,
-        "damage_mean": 0.823,
+        "rows": 27,
+        "share": 8.8,
+        "consensus_mean": 0.469,
+        "damage_mean": 0.726,
         "suggested_weight": 0.1
       }
     ],
+    "kinds": {
+      "extra": 187,
+      "both": 68,
+      "missing": 51
+    },
     "peer": "qwen3-8b",
-    "mismatch_rows": 394
+    "mismatch_rows": 306,
+    "examples": {
+      "A": {
+        "source": "0.4-0.8mm-Mixed",
+        "target": "0.4-0.8mm-混合",
+        "consensus": 1.0,
+        "damage": 0.333
+      },
+      "B": {
+        "source": "Xe đạp TEKKO C200S 26 inch, Khung thép cao cấp (Phù hợp với người cao từ 1m45 trở lên)",
+        "target": "TEKKO C200S 26英寸 高级钢架 (适合身高1.45米以上的人)",
+        "consensus": 0.595,
+        "damage": 0.333
+      },
+      "C": {
+        "source": "Phân Bón Kích Rễ, Greenhome, B1, Chai 100ml, Tạo Mầm, Rễ Khoẻ, Sai Hoa, Phục Hồi Rễ Yếu, Lá Dày",
+        "target": "促根肥料，Greenhome，B1，100毫升瓶装，生根，根壮，开花，恢复弱根，叶片厚",
+        "consensus": 0.886,
+        "damage": 0.667
+      }
+    }
   },
   "qwen3-8b": {
     "summary": {
       "qty_mismatch": {
-        "rows": 346,
-        "damage_mean": 0.194,
-        "damage_p50": 0.0,
-        "consensus_mean": 0.56,
-        "consensus_p10": 0.337,
-        "length_ratio_p50": 0.51
+        "rows": 285,
+        "damage_mean": 0.245,
+        "damage_p50": 0.231,
+        "consensus_mean": 0.545,
+        "consensus_p10": 0.313,
+        "length_ratio_p50": 0.52
       },
       "qty_ok": {
-        "rows": 44870,
+        "rows": 44947,
         "damage_mean": 0.0,
         "damage_p50": 0.0,
         "consensus_mean": 0.609,
@@ -165,30 +240,55 @@
     "tiers": [
       {
         "tier": "A. lệch ít, đồng thuận cao",
-        "rows": 117,
-        "share": 33.8,
+        "rows": 92,
+        "share": 32.3,
         "consensus_mean": 0.764,
-        "damage_mean": 0.168,
+        "damage_mean": 0.205,
         "suggested_weight": 0.5
       },
       {
         "tier": "B. lệch ít, đồng thuận thấp",
-        "rows": 207,
-        "share": 59.8,
-        "consensus_mean": 0.45,
-        "damage_mean": 0.136,
+        "rows": 170,
+        "share": 59.6,
+        "consensus_mean": 0.444,
+        "damage_mean": 0.206,
         "suggested_weight": 0.3
       },
       {
         "tier": "C. lệch nhiều (>50% đại lượng)",
-        "rows": 22,
-        "share": 6.4,
-        "consensus_mean": 0.51,
-        "damage_mean": 0.884,
+        "rows": 23,
+        "share": 8.1,
+        "consensus_mean": 0.423,
+        "damage_mean": 0.695,
         "suggested_weight": 0.1
       }
     ],
+    "kinds": {
+      "extra": 155,
+      "both": 79,
+      "missing": 51
+    },
     "peer": "qwen3-4b",
-    "mismatch_rows": 346
+    "mismatch_rows": 285,
+    "examples": {
+      "A": {
+        "source": "0.4-0.8mm-Mixed",
+        "target": "0.4-0.8mm-混合",
+        "consensus": 1.0,
+        "damage": 0.333
+      },
+      "B": {
+        "source": "1.Cho một gói cà phê KING COFFEE 2IN1 Coffee & Creamer vào cốc. 2.Thêm 100ml nước nóng (800C - 1000C) 3.Thêm đường nếu t",
+        "target": "1. 将一包KING COFFEE 2IN1 咖啡与奶精放入杯中。2. 加入100毫升热水(80℃ - 100℃)。3. 根据喜好添加糖分，即可享用。",
+        "consensus": 0.595,
+        "damage": 0.267
+      },
+      "C": {
+        "source": "Phân Bón Kích Rễ, Greenhome, B1, Chai 100ml, Tạo Mầm, Rễ Khoẻ, Sai Hoa, Phục Hồi Rễ Yếu, Lá Dày",
+        "target": "生根肥料，Greenhome，B1，100毫升瓶装，促芽，根壮，开花，恢复弱根，叶片厚",
+        "consensus": 0.886,
+        "damage": 0.667
+      }
+    }
   }
 }
