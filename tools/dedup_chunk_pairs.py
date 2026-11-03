@@ -76,6 +76,29 @@ def pack(sentences: list[str], k: int, lang: str) -> list[str]:
     return chunks
 
 
+def slice_proportional(text: str, lang: str, k: int) -> list[str]:
+    """Cắt theo token mass (không theo ký tự) để cân bằng VI/ZH."""
+    text = str(text or "")
+    if k <= 1 or not text:
+        return [text]
+    per_char = 1 / (3.6 if lang == "vi" else 1.6)
+    total = len(text) * per_char
+    targets = [i * total / k for i in range(1, k)]
+    cuts, cumulative, target_index = [0], 0.0, 0
+    for index, _ in enumerate(text):
+        cumulative += per_char
+        while target_index < len(targets) and cumulative >= targets[target_index]:
+            cuts.append(index + 1)
+            target_index += 1
+    cuts.append(len(text))
+    pieces = []
+    for i in range(len(cuts) - 1):
+        piece = text[cuts[i]:cuts[i + 1]].strip()
+        if piece:
+            pieces.append(piece)
+    return pieces
+
+
 def chunk_pair(src: str, tgt: str, max_tokens: int = 800):
     total = tokens(src, tgt)
     if total <= 1280:
@@ -89,12 +112,21 @@ def chunk_pair(src: str, tgt: str, max_tokens: int = 800):
     tgt_parts = pack(tgt_sent, k, "zh")
     if not src_parts or not tgt_parts:
         return [(src, tgt)]
-    # cân bằng số chunk: gộp phần dư vào chunk cuối
-    while len(src_parts) > len(tgt_parts):
-        tgt_parts[-1] = tgt_parts[-1] + " " + src_parts.pop()
-    while len(tgt_parts) > len(src_parts):
-        src_parts[-1] = src_parts[-1] + " " + tgt_parts.pop()
-    return list(zip(src_parts, tgt_parts))
+    if len(src_parts) != len(tgt_parts):
+        # cắt tỉ lệ để đảm bảo cùng số chunk và không phình kích thước
+        src_parts = slice_proportional(src, "vi", k)
+        tgt_parts = slice_proportional(tgt, "zh", k)
+
+    # đảm bảo không chunk nào vượt 1280 token
+    result = []
+    for src_part, tgt_part in zip(src_parts, tgt_parts):
+        if tokens(src_part, tgt_part) > 1280:
+            kk = max(2, math.ceil(tokens(src_part, tgt_part) / max_tokens))
+            result.extend(zip(slice_proportional(src_part, "vi", kk),
+                              slice_proportional(tgt_part, "zh", kk)))
+        else:
+            result.append((src_part, tgt_part))
+    return result
 
 
 def process(path: Path, out: Path) -> dict:

@@ -1,10 +1,10 @@
 {
   "1688": {
-    "rows_before": 428318,
-    "rows_after": 106380,
-    "dedup_removed": 321938,
+    "rows_before": 428464,
+    "rows_after": 106528,
+    "dedup_removed": 321936,
     "descriptions_chunked": 358,
-    "tokens_million": 12.34
+    "tokens_million": 12.33
   },
   "tiki_qwen3-0.6b": {
     "rows_before": 43598,
