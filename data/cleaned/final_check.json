@@ -1,0 +1,152 @@
+[
+  {
+    "check":"qwen3-0.6b.integrity",
+    "status":"PASS",
+    "detail":"full 29,446 | train 27,535 | units 45,709 | prompt plan_b_rtx_v5"
+  },
+  {
+    "check":"qwen3-0.6b.noise_chars",
+    "status":"PASS",
+    "detail":"0 dòng còn ký tự nhiễu"
+  },
+  {
+    "check":"qwen3-0.6b.untranslated_units",
+    "status":"PASS",
+    "detail":"2,050 unit không có chữ Hán & source tiếng Việt"
+  },
+  {
+    "check":"qwen3-0.6b.qty_mismatch",
+    "status":"WARN",
+    "detail":"1,003 strong mismatch \/ 45,709 unit"
+  },
+  {
+    "check":"qwen3-0.6b.duplicate_pairs",
+    "status":"WARN",
+    "detail":"16,942 cặp (source,target) trùng — nên dedup khi train"
+  },
+  {
+    "check":"qwen3-1.7b.integrity",
+    "status":"PASS",
+    "detail":"full 29,446 | train 29,029 | units 45,709 | prompt plan_b_rtx_v5"
+  },
+  {
+    "check":"qwen3-1.7b.noise_chars",
+    "status":"PASS",
+    "detail":"0 dòng còn ký tự nhiễu"
+  },
+  {
+    "check":"qwen3-1.7b.untranslated_units",
+    "status":"PASS",
+    "detail":"461 unit không có chữ Hán & source tiếng Việt"
+  },
+  {
+    "check":"qwen3-1.7b.qty_mismatch",
+    "status":"WARN",
+    "detail":"519 strong mismatch \/ 45,709 unit"
+  },
+  {
+    "check":"qwen3-1.7b.duplicate_pairs",
+    "status":"WARN",
+    "detail":"16,691 cặp (source,target) trùng — nên dedup khi train"
+  },
+  {
+    "check":"qwen3-4b.integrity",
+    "status":"PASS",
+    "detail":"full 29,446 | train 29,353 | units 45,709 | prompt plan_b_rtx_v5"
+  },
+  {
+    "check":"qwen3-4b.noise_chars",
+    "status":"PASS",
+    "detail":"0 dòng còn ký tự nhiễu"
+  },
+  {
+    "check":"qwen3-4b.untranslated_units",
+    "status":"PASS",
+    "detail":"82 unit không có chữ Hán & source tiếng Việt"
+  },
+  {
+    "check":"qwen3-4b.qty_mismatch",
+    "status":"WARN",
+    "detail":"394 strong mismatch \/ 45,709 unit"
+  },
+  {
+    "check":"qwen3-4b.duplicate_pairs",
+    "status":"WARN",
+    "detail":"16,641 cặp (source,target) trùng — nên dedup khi train"
+  },
+  {
+    "check":"qwen3-8b.integrity",
+    "status":"PASS",
+    "detail":"full 29,446 | train 29,393 | units 45,709 | prompt plan_b_rtx_v5"
+  },
+  {
+    "check":"qwen3-8b.noise_chars",
+    "status":"PASS",
+    "detail":"0 dòng còn ký tự nhiễu"
+  },
+  {
+    "check":"qwen3-8b.untranslated_units",
+    "status":"PASS",
+    "detail":"54 unit không có chữ Hán & source tiếng Việt"
+  },
+  {
+    "check":"qwen3-8b.qty_mismatch",
+    "status":"WARN",
+    "detail":"346 strong mismatch \/ 45,709 unit"
+  },
+  {
+    "check":"qwen3-8b.duplicate_pairs",
+    "status":"WARN",
+    "detail":"16,567 cặp (source,target) trùng — nên dedup khi train"
+  },
+  {
+    "check":"tiki.split_integrity",
+    "status":"PASS",
+    "detail":"0 product nằm ở >1 split"
+  },
+  {
+    "check":"tiki.split_counts",
+    "status":"PASS",
+    "detail":"{'train': 36434, 'dev': 4824, 'test': 4451}"
+  },
+  {
+    "check":"1688.rows",
+    "status":"PASS",
+    "detail":"16,133 sản phẩm sau dedup"
+  },
+  {
+    "check":"1688.duplicate_titles",
+    "status":"PASS",
+    "detail":"0 cặp trùng"
+  },
+  {
+    "check":"1688.attr_alignment",
+    "status":"PASS",
+    "detail":"99.52% attribute align được"
+  },
+  {
+    "check":"1688.noise_chars",
+    "status":"PASS",
+    "detail":"0 dòng còn ký tự nhiễu"
+  },
+  {
+    "check":"1688.description_duplicates",
+    "status":"WARN",
+    "detail":"18 description VI trùng"
+  },
+  {
+    "check":"leakage.title_overlap",
+    "status":"PASS",
+    "detail":"0 source Tiki trùng title 1688"
+  },
+  {
+    "check":"review.pending",
+    "status":"WARN",
+    "detail":"327 dòng review chưa có decision"
+  },
+  {
+    "check":"length.max_seq_check",
+    "status":"PASS",
+    "detail":"source p95 148 ký tự + target p99 155 ký tự"
+  }
+]
