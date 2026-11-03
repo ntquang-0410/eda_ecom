@@ -1,0 +1,194 @@
+{
+  "qwen3-0.6b": {
+    "summary": {
+      "qty_mismatch": {
+        "rows": 1003,
+        "damage_mean": 0.194,
+        "damage_p50": 0.0,
+        "consensus_mean": 0.298,
+        "consensus_p10": 0.098,
+        "length_ratio_p50": 0.47
+      },
+      "qty_ok": {
+        "rows": 41697,
+        "damage_mean": 0.0,
+        "damage_p50": 0.0,
+        "consensus_mean": 0.422,
+        "consensus_p10": 0.0,
+        "length_ratio_p50": 0.41
+      }
+    },
+    "tiers": [
+      {
+        "tier": "A. lệch ít, đồng thuận cao",
+        "rows": 36,
+        "share": 3.6,
+        "consensus_mean": 0.712,
+        "damage_mean": 0.09,
+        "suggested_weight": 0.5
+      },
+      {
+        "tier": "B. lệch ít, đồng thuận thấp",
+        "rows": 861,
+        "share": 85.8,
+        "consensus_mean": 0.284,
+        "damage_mean": 0.105,
+        "suggested_weight": 0.3
+      },
+      {
+        "tier": "C. lệch nhiều (>50% đại lượng)",
+        "rows": 106,
+        "share": 10.6,
+        "consensus_mean": 0.266,
+        "damage_mean": 0.951,
+        "suggested_weight": 0.1
+      }
+    ],
+    "peer": "qwen3-8b",
+    "mismatch_rows": 1003
+  },
+  "qwen3-1.7b": {
+    "summary": {
+      "qty_mismatch": {
+        "rows": 519,
+        "damage_mean": 0.215,
+        "damage_p50": 0.095,
+        "consensus_mean": 0.391,
+        "consensus_p10": 0.173,
+        "length_ratio_p50": 0.45
+      },
+      "qty_ok": {
+        "rows": 44004,
+        "damage_mean": 0.0,
+        "damage_p50": 0.0,
+        "consensus_mean": 0.504,
+        "consensus_p10": 0.0,
+        "length_ratio_p50": 0.4
+      }
+    },
+    "tiers": [
+      {
+        "tier": "A. lệch ít, đồng thuận cao",
+        "rows": 62,
+        "share": 11.9,
+        "consensus_mean": 0.719,
+        "damage_mean": 0.129,
+        "suggested_weight": 0.5
+      },
+      {
+        "tier": "B. lệch ít, đồng thuận thấp",
+        "rows": 413,
+        "share": 79.6,
+        "consensus_mean": 0.351,
+        "damage_mean": 0.163,
+        "suggested_weight": 0.3
+      },
+      {
+        "tier": "C. lệch nhiều (>50% đại lượng)",
+        "rows": 44,
+        "share": 8.5,
+        "consensus_mean": 0.311,
+        "damage_mean": 0.817,
+        "suggested_weight": 0.1
+      }
+    ],
+    "peer": "qwen3-8b",
+    "mismatch_rows": 519
+  },
+  "qwen3-4b": {
+    "summary": {
+      "qty_mismatch": {
+        "rows": 394,
+        "damage_mean": 0.226,
+        "damage_p50": 0.048,
+        "consensus_mean": 0.535,
+        "consensus_p10": 0.3,
+        "length_ratio_p50": 0.48
+      },
+      "qty_ok": {
+        "rows": 44719,
+        "damage_mean": 0.0,
+        "damage_p50": 0.0,
+        "consensus_mean": 0.609,
+        "consensus_p10": 0.083,
+        "length_ratio_p50": 0.44
+      }
+    },
+    "tiers": [
+      {
+        "tier": "A. lệch ít, đồng thuận cao",
+        "rows": 119,
+        "share": 30.2,
+        "consensus_mean": 0.757,
+        "damage_mean": 0.155,
+        "suggested_weight": 0.5
+      },
+      {
+        "tier": "B. lệch ít, đồng thuận thấp",
+        "rows": 232,
+        "share": 58.9,
+        "consensus_mean": 0.441,
+        "damage_mean": 0.152,
+        "suggested_weight": 0.3
+      },
+      {
+        "tier": "C. lệch nhiều (>50% đại lượng)",
+        "rows": 43,
+        "share": 10.9,
+        "consensus_mean": 0.429,
+        "damage_mean": 0.823,
+        "suggested_weight": 0.1
+      }
+    ],
+    "peer": "qwen3-8b",
+    "mismatch_rows": 394
+  },
+  "qwen3-8b": {
+    "summary": {
+      "qty_mismatch": {
+        "rows": 346,
+        "damage_mean": 0.194,
+        "damage_p50": 0.0,
+        "consensus_mean": 0.56,
+        "consensus_p10": 0.337,
+        "length_ratio_p50": 0.51
+      },
+      "qty_ok": {
+        "rows": 44870,
+        "damage_mean": 0.0,
+        "damage_p50": 0.0,
+        "consensus_mean": 0.609,
+        "consensus_p10": 0.083,
+        "length_ratio_p50": 0.47
+      }
+    },
+    "tiers": [
+      {
+        "tier": "A. lệch ít, đồng thuận cao",
+        "rows": 117,
+        "share": 33.8,
+        "consensus_mean": 0.764,
+        "damage_mean": 0.168,
+        "suggested_weight": 0.5
+      },
+      {
+        "tier": "B. lệch ít, đồng thuận thấp",
+        "rows": 207,
+        "share": 59.8,
+        "consensus_mean": 0.45,
+        "damage_mean": 0.136,
+        "suggested_weight": 0.3
+      },
+      {
+        "tier": "C. lệch nhiều (>50% đại lượng)",
+        "rows": 22,
+        "share": 6.4,
+        "consensus_mean": 0.51,
+        "damage_mean": 0.884,
+        "suggested_weight": 0.1
+      }
+    ],
+    "peer": "qwen3-4b",
+    "mismatch_rows": 346
+  }
+}
