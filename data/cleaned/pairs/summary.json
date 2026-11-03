@@ -1,0 +1,63 @@
+{
+  "1688": {
+    "rows": 427759,
+    "by_type": {
+      "attribute": 395493,
+      "title": 16133,
+      "description": 16133
+    },
+    "split": {
+      "train": 385437,
+      "dev": 21427,
+      "test": 20895
+    }
+  },
+  "qwen3-0.6b": {
+    "rows": 43598,
+    "by_type": {
+      "attribute": 31646,
+      "title": 11952
+    },
+    "split": {
+      "train": 34740,
+      "dev": 4593,
+      "test": 4265
+    }
+  },
+  "qwen3-1.7b": {
+    "rows": 45219,
+    "by_type": {
+      "attribute": 32151,
+      "title": 13068
+    },
+    "split": {
+      "train": 36044,
+      "dev": 4770,
+      "test": 4405
+    }
+  },
+  "qwen3-4b": {
+    "rows": 45612,
+    "by_type": {
+      "attribute": 32457,
+      "title": 13155
+    },
+    "split": {
+      "train": 36361,
+      "dev": 4810,
+      "test": 4441
+    }
+  },
+  "qwen3-8b": {
+    "rows": 45652,
+    "by_type": {
+      "attribute": 32480,
+      "title": 13172
+    },
+    "split": {
+      "train": 36388,
+      "dev": 4819,
+      "test": 4445
+    }
+  }
+}
