@@ -165,9 +165,13 @@ def make_example(tokenizer, row):
         prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     target = str(row['target_text'] or '')
     prompt_ids = tokenizer(prompt, add_special_tokens=False).input_ids
+    if len(prompt_ids) >= MAX_SEQ - 16:
+        return None  # không còn chỗ cho target -> loss sẽ NaN
     full_ids = tokenizer(prompt + target + tokenizer.eos_token, add_special_tokens=False).input_ids
     full_ids = full_ids[:MAX_SEQ]
-    labels = [-100] * min(len(prompt_ids), len(full_ids)) + full_ids[len(prompt_ids):]
+    if len(full_ids) <= len(prompt_ids) + 1:
+        return None
+    labels = [-100] * len(prompt_ids) + full_ids[len(prompt_ids):]
     labels = labels[:len(full_ids)]
     return full_ids, labels
 
@@ -212,7 +216,7 @@ def train_one(config, tokenizer):
     for i in order:
         row = train.iloc[chosen[i]]
         example = make_example(tokenizer, row)
-        if len(example[0]) < 8:
+        if example is None or len(example[0]) < 8:
             continue
         batch = collate([example], tokenizer.pad_token_id)
         batch = {k: v.to('cuda') for k, v in batch.items()}
