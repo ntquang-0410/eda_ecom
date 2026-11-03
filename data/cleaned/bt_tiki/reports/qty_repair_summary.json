@@ -1,0 +1,54 @@
+{
+  "qwen3-0.6b": {
+    "repaired": 570,
+    "status": {
+      "qty_ok": 42350,
+      "skipped": 2111,
+      "qty_weak": 856,
+      "qty_mismatch": 359,
+      "qty_review": 26,
+      "qty_resolved": 7
+    },
+    "weight_mean": 0.942,
+    "weight_1_0_rows": 42357
+  },
+  "qwen3-1.7b": {
+    "repaired": 144,
+    "status": {
+      "qty_ok": 44244,
+      "qty_weak": 639,
+      "skipped": 490,
+      "qty_mismatch": 287,
+      "qty_review": 40,
+      "qty_resolved": 9
+    },
+    "weight_mean": 0.98,
+    "weight_1_0_rows": 44253
+  },
+  "qwen3-4b": {
+    "repaired": 75,
+    "status": {
+      "qty_ok": 44916,
+      "qty_weak": 415,
+      "qty_mismatch": 209,
+      "skipped": 97,
+      "qty_review": 61,
+      "qty_resolved": 11
+    },
+    "weight_mean": 0.992,
+    "weight_1_0_rows": 44927
+  },
+  "qwen3-8b": {
+    "repaired": 66,
+    "status": {
+      "qty_ok": 45050,
+      "qty_weak": 318,
+      "qty_mismatch": 181,
+      "qty_review": 82,
+      "skipped": 57,
+      "qty_resolved": 21
+    },
+    "weight_mean": 0.993,
+    "weight_1_0_rows": 45071
+  }
+}
