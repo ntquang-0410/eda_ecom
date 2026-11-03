@@ -273,10 +273,12 @@ RANGE_SEPARATORS = {"-", "–", "—", "~", "～", "至", "到", "x", "X", "×",
 
 
 VI_SHORTHAND_RE = re.compile(r"(?<!\d)(\d)m(\d)(?![\d])")
+ZH_SHORTHAND_RE = re.compile(r"(?<!\d)(\d)米(\d)(?![\d])")
 
 
 def _normalize_fractions(text: str) -> str:
     text = VI_SHORTHAND_RE.sub(r"\1.\2 m", text)
+    text = ZH_SHORTHAND_RE.sub(r"\1.\2米", text)
     text = text.replace("⁄", "/").replace("／", "/")
     for symbol, value in FRACTIONS.items():
         text = text.replace(symbol, value)
@@ -327,6 +329,9 @@ def _in_code_token(text: str, start: int, end: int) -> bool:
         right += 1
     token = text[left:right]
     if not CODE_TOKEN.match(token):
+        return False
+    if token[:1].isdigit():
+        # token bắt đầu bằng số: "0.4-0.8mm-Mixed" -> không phải mã
         return False
     if _NUMBER_UNIT.match(token):
         return False

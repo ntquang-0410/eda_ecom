@@ -1,32 +1,32 @@
 {
   "qwen3-0.6b": {
-    "qty_ok": 41752,
+    "qty_ok": 41780,
     "skipped": 2111,
-    "qty_mismatch": 961,
-    "qty_weak": 852,
+    "qty_mismatch": 929,
+    "qty_weak": 856,
     "qty_review": 26,
     "qty_resolved": 7
   },
   "qwen3-1.7b": {
-    "qty_ok": 44072,
+    "qty_ok": 44100,
     "qty_weak": 639,
     "skipped": 490,
-    "qty_mismatch": 459,
+    "qty_mismatch": 431,
     "qty_review": 40,
     "qty_resolved": 9
   },
   "qwen3-4b": {
-    "qty_ok": 44819,
+    "qty_ok": 44841,
     "qty_weak": 415,
-    "qty_mismatch": 306,
+    "qty_mismatch": 284,
     "skipped": 97,
     "qty_review": 61,
     "qty_resolved": 11
   },
   "qwen3-8b": {
-    "qty_ok": 44947,
-    "qty_weak": 317,
-    "qty_mismatch": 285,
+    "qty_ok": 44984,
+    "qty_weak": 318,
+    "qty_mismatch": 247,
     "qty_review": 82,
     "skipped": 57,
     "qty_resolved": 21

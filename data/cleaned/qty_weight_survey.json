@@ -2,15 +2,15 @@
   "qwen3-0.6b": {
     "summary": {
       "qty_mismatch": {
-        "rows": 961,
-        "damage_mean": 0.337,
+        "rows": 929,
+        "damage_mean": 0.336,
         "damage_p50": 0.273,
-        "consensus_mean": 0.294,
-        "consensus_p10": 0.097,
+        "consensus_mean": 0.288,
+        "consensus_p10": 0.094,
         "length_ratio_p50": 0.47
       },
       "qty_ok": {
-        "rows": 41752,
+        "rows": 41780,
         "damage_mean": 0.0,
         "damage_p50": 0.0,
         "consensus_mean": 0.422,
@@ -21,42 +21,42 @@
     "tiers": [
       {
         "tier": "A. lệch ít, đồng thuận cao",
-        "rows": 32,
-        "share": 3.3,
-        "consensus_mean": 0.706,
-        "damage_mean": 0.229,
+        "rows": 23,
+        "share": 2.5,
+        "consensus_mean": 0.683,
+        "damage_mean": 0.217,
         "suggested_weight": 0.5
       },
       {
         "tier": "B. lệch ít, đồng thuận thấp",
-        "rows": 787,
-        "share": 81.9,
-        "consensus_mean": 0.284,
-        "damage_mean": 0.247,
+        "rows": 770,
+        "share": 82.9,
+        "consensus_mean": 0.283,
+        "damage_mean": 0.246,
         "suggested_weight": 0.3
       },
       {
         "tier": "C. lệch nhiều (>50% đại lượng)",
-        "rows": 142,
-        "share": 14.8,
-        "consensus_mean": 0.255,
-        "damage_mean": 0.863,
+        "rows": 136,
+        "share": 14.6,
+        "consensus_mean": 0.251,
+        "damage_mean": 0.861,
         "suggested_weight": 0.1
       }
     ],
     "kinds": {
-      "extra": 589,
-      "both": 250,
-      "missing": 122
+      "extra": 567,
+      "both": 246,
+      "missing": 116
     },
     "peer": "qwen3-8b",
-    "mismatch_rows": 961,
+    "mismatch_rows": 929,
     "examples": {
       "A": {
-        "source": "Khoảng 6h30 phút (từ 0% đến 100%)",
-        "target": "6小时30分钟(从0%到100%)",
-        "consensus": 0.882,
-        "damage": 0.143
+        "source": "Macbook Pro 13.3 inch đời 2020 chip M1",
+        "target": "MacBook Pro 13.3 英寸 2020 M1芯片",
+        "consensus": 0.875,
+        "damage": 0.2
       },
       "B": {
         "source": "Ghế ngồi ôtô cho bé Joie i - Prodigi (NRDC W/ ISOFIX 0/1/2) Oyster dành cho bé từ sơ sinh đến 23kg",
@@ -68,22 +68,22 @@
         "source": "Xe đạp trẻ em Thống Nhất GN06-20 thế hệ mới 20inch, phù hợp với bé cao từ 1m20 đến 1m35",
         "target": "儿童电动自行车 Thống Nhất GN06-20 新一代 20英寸，适合身高1米20到1米35的儿童",
         "consensus": 0.705,
-        "damage": 0.625
+        "damage": 0.6
       }
     }
   },
   "qwen3-1.7b": {
     "summary": {
       "qty_mismatch": {
-        "rows": 459,
-        "damage_mean": 0.269,
-        "damage_p50": 0.25,
-        "consensus_mean": 0.381,
-        "consensus_p10": 0.155,
+        "rows": 431,
+        "damage_mean": 0.258,
+        "damage_p50": 0.2,
+        "consensus_mean": 0.379,
+        "consensus_p10": 0.159,
         "length_ratio_p50": 0.45
       },
       "qty_ok": {
-        "rows": 44072,
+        "rows": 44100,
         "damage_mean": 0.0,
         "damage_p50": 0.0,
         "consensus_mean": 0.504,
@@ -94,48 +94,48 @@
     "tiers": [
       {
         "tier": "A. lệch ít, đồng thuận cao",
-        "rows": 53,
-        "share": 11.5,
-        "consensus_mean": 0.722,
-        "damage_mean": 0.2,
+        "rows": 47,
+        "share": 10.9,
+        "consensus_mean": 0.71,
+        "damage_mean": 0.183,
         "suggested_weight": 0.5
       },
       {
         "tier": "B. lệch ít, đồng thuận thấp",
-        "rows": 366,
-        "share": 79.7,
-        "consensus_mean": 0.346,
-        "damage_mean": 0.222,
+        "rows": 350,
+        "share": 81.2,
+        "consensus_mean": 0.347,
+        "damage_mean": 0.215,
         "suggested_weight": 0.3
       },
       {
         "tier": "C. lệch nhiều (>50% đại lượng)",
-        "rows": 40,
-        "share": 8.7,
-        "consensus_mean": 0.247,
-        "damage_mean": 0.797,
+        "rows": 34,
+        "share": 7.9,
+        "consensus_mean": 0.257,
+        "damage_mean": 0.805,
         "suggested_weight": 0.1
       }
     ],
     "kinds": {
-      "extra": 231,
-      "missing": 107,
-      "both": 121
+      "extra": 212,
+      "missing": 106,
+      "both": 113
     },
     "peer": "qwen3-8b",
-    "mismatch_rows": 459,
+    "mismatch_rows": 431,
     "examples": {
       "A": {
         "source": "1m2x1m5 (sai số +-2-3cm)",
         "target": "1米2x1米5(误差±2-3厘米)",
         "consensus": 1.0,
-        "damage": 0.333
+        "damage": 0.286
       },
       "B": {
         "source": "1.Cho một gói cà phê KING COFFEE 2IN1 Coffee & Creamer vào cốc. 2.Thêm 100ml nước nóng (800C - 1000C) 3.Thêm đường nếu t",
         "target": "1. 将 KING COFFEE 2IN1 咖啡与奶精放入杯中。2. 加入 100ml 热水(80℃-100℃)3. 如需可加糖享用。",
         "consensus": 0.597,
-        "damage": 0.286
+        "damage": 0.235
       },
       "C": {
         "source": "Khối lượng tịnh: 0,462kg",
@@ -148,15 +148,15 @@
   "qwen3-4b": {
     "summary": {
       "qty_mismatch": {
-        "rows": 306,
-        "damage_mean": 0.248,
+        "rows": 284,
+        "damage_mean": 0.246,
         "damage_p50": 0.25,
-        "consensus_mean": 0.538,
-        "consensus_p10": 0.306,
+        "consensus_mean": 0.529,
+        "consensus_p10": 0.305,
         "length_ratio_p50": 0.5
       },
       "qty_ok": {
-        "rows": 44819,
+        "rows": 44841,
         "damage_mean": 0.0,
         "damage_p50": 0.0,
         "consensus_mean": 0.609,
@@ -167,48 +167,48 @@
     "tiers": [
       {
         "tier": "A. lệch ít, đồng thuận cao",
-        "rows": 94,
-        "share": 30.7,
-        "consensus_mean": 0.753,
-        "damage_mean": 0.206,
+        "rows": 82,
+        "share": 28.9,
+        "consensus_mean": 0.736,
+        "damage_mean": 0.203,
         "suggested_weight": 0.5
       },
       {
         "tier": "B. lệch ít, đồng thuận thấp",
-        "rows": 185,
-        "share": 60.5,
-        "consensus_mean": 0.439,
-        "damage_mean": 0.2,
+        "rows": 182,
+        "share": 64.1,
+        "consensus_mean": 0.44,
+        "damage_mean": 0.211,
         "suggested_weight": 0.3
       },
       {
         "tier": "C. lệch nhiều (>50% đại lượng)",
-        "rows": 27,
-        "share": 8.8,
-        "consensus_mean": 0.469,
-        "damage_mean": 0.726,
+        "rows": 20,
+        "share": 7.0,
+        "consensus_mean": 0.488,
+        "damage_mean": 0.736,
         "suggested_weight": 0.1
       }
     ],
     "kinds": {
-      "extra": 187,
-      "both": 68,
-      "missing": 51
+      "extra": 163,
+      "both": 71,
+      "missing": 50
     },
     "peer": "qwen3-8b",
-    "mismatch_rows": 306,
+    "mismatch_rows": 284,
     "examples": {
       "A": {
-        "source": "0.4-0.8mm-Mixed",
-        "target": "0.4-0.8mm-混合",
+        "source": "Gối 35x50cm + Mền 1m2x1m5",
+        "target": "35x50厘米枕头 + 1米2x1米5被子",
         "consensus": 1.0,
-        "damage": 0.333
+        "damage": 0.286
       },
       "B": {
         "source": "Xe đạp TEKKO C200S 26 inch, Khung thép cao cấp (Phù hợp với người cao từ 1m45 trở lên)",
         "target": "TEKKO C200S 26英寸 高级钢架 (适合身高1.45米以上的人)",
         "consensus": 0.595,
-        "damage": 0.333
+        "damage": 0.286
       },
       "C": {
         "source": "Phân Bón Kích Rễ, Greenhome, B1, Chai 100ml, Tạo Mầm, Rễ Khoẻ, Sai Hoa, Phục Hồi Rễ Yếu, Lá Dày",
@@ -221,15 +221,15 @@
   "qwen3-8b": {
     "summary": {
       "qty_mismatch": {
-        "rows": 285,
-        "damage_mean": 0.245,
-        "damage_p50": 0.231,
-        "consensus_mean": 0.545,
-        "consensus_p10": 0.313,
+        "rows": 247,
+        "damage_mean": 0.225,
+        "damage_p50": 0.2,
+        "consensus_mean": 0.542,
+        "consensus_p10": 0.342,
         "length_ratio_p50": 0.52
       },
       "qty_ok": {
-        "rows": 44947,
+        "rows": 44984,
         "damage_mean": 0.0,
         "damage_p50": 0.0,
         "consensus_mean": 0.609,
@@ -240,48 +240,48 @@
     "tiers": [
       {
         "tier": "A. lệch ít, đồng thuận cao",
-        "rows": 92,
-        "share": 32.3,
-        "consensus_mean": 0.764,
-        "damage_mean": 0.205,
+        "rows": 77,
+        "share": 31.2,
+        "consensus_mean": 0.745,
+        "damage_mean": 0.194,
         "suggested_weight": 0.5
       },
       {
         "tier": "B. lệch ít, đồng thuận thấp",
-        "rows": 170,
-        "share": 59.6,
-        "consensus_mean": 0.444,
-        "damage_mean": 0.206,
+        "rows": 158,
+        "share": 64.0,
+        "consensus_mean": 0.447,
+        "damage_mean": 0.204,
         "suggested_weight": 0.3
       },
       {
         "tier": "C. lệch nhiều (>50% đại lượng)",
-        "rows": 23,
-        "share": 8.1,
-        "consensus_mean": 0.423,
-        "damage_mean": 0.695,
+        "rows": 12,
+        "share": 4.9,
+        "consensus_mean": 0.493,
+        "damage_mean": 0.69,
         "suggested_weight": 0.1
       }
     ],
     "kinds": {
-      "extra": 155,
-      "both": 79,
-      "missing": 51
+      "extra": 128,
+      "both": 69,
+      "missing": 50
     },
     "peer": "qwen3-4b",
-    "mismatch_rows": 285,
+    "mismatch_rows": 247,
     "examples": {
       "A": {
-        "source": "0.4-0.8mm-Mixed",
-        "target": "0.4-0.8mm-混合",
+        "source": "Vàng Cát 1m6x2m",
+        "target": "沙黄色 1.6x2米",
         "consensus": 1.0,
-        "damage": 0.333
+        "damage": 0.25
       },
       "B": {
         "source": "1.Cho một gói cà phê KING COFFEE 2IN1 Coffee & Creamer vào cốc. 2.Thêm 100ml nước nóng (800C - 1000C) 3.Thêm đường nếu t",
         "target": "1. 将一包KING COFFEE 2IN1 咖啡与奶精放入杯中。2. 加入100毫升热水(80℃ - 100℃)。3. 根据喜好添加糖分，即可享用。",
         "consensus": 0.595,
-        "damage": 0.267
+        "damage": 0.222
       },
       "C": {
         "source": "Phân Bón Kích Rễ, Greenhome, B1, Chai 100ml, Tạo Mầm, Rễ Khoẻ, Sai Hoa, Phục Hồi Rễ Yếu, Lá Dày",
