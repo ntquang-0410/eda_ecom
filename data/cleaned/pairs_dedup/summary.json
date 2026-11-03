@@ -1,0 +1,37 @@
+{
+  "1688": {
+    "rows_before": 428318,
+    "rows_after": 106380,
+    "dedup_removed": 321938,
+    "descriptions_chunked": 358,
+    "tokens_million": 12.34
+  },
+  "tiki_qwen3-0.6b": {
+    "rows_before": 43598,
+    "rows_after": 26864,
+    "dedup_removed": 16734,
+    "descriptions_chunked": 0,
+    "tokens_million": 0.8
+  },
+  "tiki_qwen3-1.7b": {
+    "rows_before": 45219,
+    "rows_after": 28625,
+    "dedup_removed": 16594,
+    "descriptions_chunked": 0,
+    "tokens_million": 0.85
+  },
+  "tiki_qwen3-4b": {
+    "rows_before": 45612,
+    "rows_after": 28979,
+    "dedup_removed": 16633,
+    "descriptions_chunked": 0,
+    "tokens_million": 0.89
+  },
+  "tiki_qwen3-8b": {
+    "rows_before": 45652,
+    "rows_after": 29093,
+    "dedup_removed": 16559,
+    "descriptions_chunked": 0,
+    "tokens_million": 0.9
+  }
+}
