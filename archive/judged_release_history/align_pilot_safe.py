@@ -1,0 +1,8 @@
+from pathlib import Path
+import re,os,subprocess,sys,json
+root=Path(r'D:\download\NCKH\judge_kaggle_handoff');s=Path(r'D:\download\NCKH\eda_ecom\api_deepseek_alibaba.txt').read_text(encoding='utf8');k=re.findall(r'sk-[A-Za-z0-9_.-]{20,}',s);assert len(k)==1
+env=os.environ.copy();env['DASHSCOPE_API_KEY']=k[0];env['ALIBABA_BASE_URL']='https://token-plan.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1';env['SSL_CERT_FILE']=r'C:\Users\Lenovo\.codex\kaggle-system-ca.pem';env['OPENBLAS_NUM_THREADS']='1'
+cmd=[sys.executable,'-I','-X','utf8','scripts/judge/so_cap_chon.py','--loai','pair','--tat-ca','--vao','data/processed/so_cap/pilot_pair_reference_150.parquet','--rubric','v2','--che-do','mot_luot','--gom','15','--tat-suy-luan','--song-song','4','--tran-token','60000','--ten','b_pair_150','--nha-cung-cap','alibaba'];r=subprocess.run(cmd,cwd=root,env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,encoding='utf8',errors='replace');print('pair_reference_stage exit',r.returncode,'quota_reached','chạm trần' in r.stdout,flush=True)
+if r.returncode or 'chạm trần' in r.stdout:sys.exit(1)
+p=root/'data/processed/so_cap/tom_tat_b_pair_150.json';j=json.loads(p.read_text(encoding='utf8'));print('summary',json.dumps({x:j.get(x) for x in ['xong_truoc','ok_lan_nay','loi_lan_nay','tokens_vao','tokens_ra','dung_do']}),flush=True)
+r=subprocess.run([sys.executable,'-I','-X','utf8','scripts/judge/so_sanh_gom.py','--hai-luot','m2_v2_title_150,m2_v2_cum_ctx_150,m2_v2_pair_150','--gom','b_title_150,b_cum_ctx_150,b_pair_150'],cwd=root,env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,encoding='utf8',errors='replace');print('compare_exit',r.returncode);sys.exit(r.returncode)

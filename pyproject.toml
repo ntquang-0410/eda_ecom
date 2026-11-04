@@ -1,0 +1,21 @@
+[project]
+name = "ecom-bilingual-data-pipeline"
+version = "0.1.0"
+description = "Chinese–Vietnamese title translation, evaluation and dataset audit workflows"
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.0,<3", "numpy>=1.24,<3", "pyarrow>=14,<24", "requests>=2.31,<3", "huggingface-hub>=0.23,<2"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "websocket-client>=1.7,<2"]
+translation = ["transformers>=4.51,<5", "accelerate>=0.30", "torch>=2.2", "google-genai>=1"]
+comet = ["unbabel-comet==2.2.7", "protobuf==5.29.5"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "scripts/judge", "scripts/ft_clean"]
+pythonpath = [".", "src", "scripts/translation", "scripts/comparison", "scripts/audit", "scripts/datasets", "scripts/notebooks", "scripts/monitoring", "scripts/merge", "archive/infrastructure", "scripts/judge", "scripts/ft_clean"]
+addopts = "--import-mode=importlib"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 110
+exclude = ["archive", "notebooks"]

@@ -1,0 +1,8 @@
+# Local data validation and tests; model environments are separate.
+pandas>=2.0,<3
+numpy>=1.24,<3
+pyarrow>=14,<24
+requests>=2.31,<3
+huggingface-hub>=0.23,<2
+pytest>=8,<10
+websocket-client>=1.7,<2
