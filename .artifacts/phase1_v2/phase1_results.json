@@ -1,0 +1,67 @@
+{
+  "natural": {
+    "tiki_pass_rate": 0.963,
+    "tiki_qty_match": 0.9755,
+    "tiki_untranslated": 0.0015,
+    "tiki_len_ratio_p50": 0.438,
+    "g1688_chrf": 0.5707,
+    "g1688_qty_match": 0.8123,
+    "n_tiki": 2000,
+    "n_1688": 1998,
+    "steps": 633,
+    "tokens": 5000225.833333329,
+    "minutes": 8.2
+  },
+  "balanced": {
+    "tiki_pass_rate": 0.9605,
+    "tiki_qty_match": 0.9815,
+    "tiki_untranslated": 0.0055,
+    "tiki_len_ratio_p50": 0.455,
+    "g1688_chrf": 0.5664,
+    "g1688_qty_match": 0.8068,
+    "n_tiki": 2000,
+    "n_1688": 1998,
+    "steps": 912,
+    "tokens": 5001548.40277782,
+    "minutes": 11.5
+  },
+  "no_desc": {
+    "tiki_pass_rate": 0.9655,
+    "tiki_qty_match": 0.9815,
+    "tiki_untranslated": 0.0045,
+    "tiki_len_ratio_p50": 0.452,
+    "g1688_chrf": 0.4905,
+    "g1688_qty_match": 0.8313,
+    "n_tiki": 2000,
+    "n_1688": 1998,
+    "steps": 1248,
+    "tokens": 5000659.72222221,
+    "minutes": 15.3
+  },
+  "tiki_heavy": {
+    "tiki_pass_rate": 0.961,
+    "tiki_qty_match": 0.9805,
+    "tiki_untranslated": 0.0045,
+    "tiki_len_ratio_p50": 0.463,
+    "g1688_chrf": 0.5512,
+    "g1688_qty_match": 0.8053,
+    "n_tiki": 2000,
+    "n_1688": 1998,
+    "steps": 1088,
+    "tokens": 5002430.763888847,
+    "minutes": 13.7
+  },
+  "title_heavy": {
+    "tiki_pass_rate": 0.953,
+    "tiki_qty_match": 0.9785,
+    "tiki_untranslated": 0.0075,
+    "tiki_len_ratio_p50": 0.455,
+    "g1688_chrf": 0.5733,
+    "g1688_qty_match": 0.8048,
+    "n_tiki": 2000,
+    "n_1688": 1998,
+    "steps": 1171,
+    "tokens": 5000305.138888871,
+    "minutes": 14.6
+  }
+}
