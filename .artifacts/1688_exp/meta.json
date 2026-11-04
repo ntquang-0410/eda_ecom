@@ -1,0 +1,14 @@
+{
+  "train": 80811,
+  "dev": 4425,
+  "test": 4473,
+  "test_small": 1000,
+  "types": [
+    "title",
+    "attribute"
+  ],
+  "tokenization": {
+    "vi": "whitespace+punct",
+    "zh": "character-level"
+  }
+}
