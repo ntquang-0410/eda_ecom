@@ -1,0 +1,15 @@
+{
+  "id": "ntquang0410/tiki-1688-moses",
+  "title": "Tiki 1688 Moses",
+  "code_file": "exp_1688_moses.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": ["ntquang0410/tiki-1688-exp"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}
