@@ -36,7 +36,7 @@ notebooks/
   templates/             Template nguồn để dựng notebook, không có khóa
 tests/                   Kiểm thử tự dựng cho title, ghép và audit
 docs/                    Kiến trúc, vận hành, nguồn gốc, lịch sử
-archive/                 Script lịch sử, probe và xuất bản một lần
+archive/                 Mã lịch sử còn cần để kiểm thử hoặc truy vết
 data/                    Dữ liệu local; xem data/README.md
 outputs/                 Kết quả sinh và checkpoint, không commit
 ```

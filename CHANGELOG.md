@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-04 — Thu gọn cây mã
+
+- Gỡ các probe Kaggle và script publish/chỉnh metadata chỉ dùng một lần, giữ chúng trong lịch sử Git tại commit `c35396e`.
+- Giữ các module được test sử dụng, mã rà soát và script mô tả chính sách no-floor để truy vết.
+- Điều chỉnh CI theo Python 3.12 đã được kiểm tra, thêm giới hạn thời gian và hủy lượt chạy cũ cùng nhánh.
+
 ## 2026-11-04 — Tổ chức mã xử lý nhánh giahuy
 
 - Hợp nhất mã title 1688/Tiki, COMETKiwi, QA repair, judge, ghép và hậu kiểm từ các workspace đã dùng.

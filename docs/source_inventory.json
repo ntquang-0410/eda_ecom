@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "branch_base": "862c1a4b3483c47722c940a895ef2dd82e4c0d7a",
-  "note": "Source migration inventory. Historical release programs require their original private inputs; they are not current run instructions.",
+  "note": "Remaining source migration inventory; removed historical one-off scripts remain available in Git history.",
   "files": [
     {
       "source_group": "title_workspace",
@@ -61,13 +61,6 @@
     },
     {
       "source_group": "title_workspace",
-      "source_name": "build_qwen_kaggle_boot_probe.py",
-      "path": "archive/infrastructure/build_qwen_kaggle_boot_probe.py",
-      "source_sha256": "36b4e51c60cfb93c7d84e183a705a7a8b4bf34894f8c97b42c5991d98749090e",
-      "published_sha256": "2eaab4c7093a0655b08a9d2ffbd02c857ab781d59e34ddec41fcb1c86d582550"
-    },
-    {
-      "source_group": "title_workspace",
       "source_name": "build_qwen_qa_repair_notebooks.py",
       "path": "scripts/notebooks/build_qwen_qa_repair_notebooks.py",
       "source_sha256": "a8a685caf2f20f4064e54bc764456c609af22c7c881102d84b44736eb16de78f",
@@ -110,13 +103,6 @@
     },
     {
       "source_group": "title_workspace",
-      "source_name": "close_qwen_probe_session.py",
-      "path": "archive/infrastructure/close_qwen_probe_session.py",
-      "source_sha256": "5ce9a39b4c5819b4d622837bd2f0971b1d3530e473ff21e64addb6c24c4fd1a1",
-      "published_sha256": "ccf192323df62f16718f6342c0223fa3aeed214ea68b202b6fe3ff8e05ac28f1"
-    },
-    {
-      "source_group": "title_workspace",
       "source_name": "compare_1688_cometkiwi.py",
       "path": "scripts/comparison/compare_1688_cometkiwi.py",
       "source_sha256": "625c16660bc398e1171bae93d9b58fbce8df6ddc4464882da9d2ee56a694b4c1",
@@ -138,73 +124,10 @@
     },
     {
       "source_group": "title_workspace",
-      "source_name": "fix_full9_readmes.py",
-      "path": "archive/release_history/fix_full9_readmes.py",
-      "source_sha256": "31ae09ce554f06bd97c1207c418b955a02bd2ea9af173638da17c672f32c57ad",
-      "published_sha256": "27a5cc365ead1efbee060d2818fcf033c794c62e3089d876eb7bd936deb104de"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "fix_title_indicator_metadata.py",
-      "path": "archive/release_history/fix_title_indicator_metadata.py",
-      "source_sha256": "cd56b5d3b3d466dd6c4d0e3c3bc30c0521c8d700732ed05e1034f44d95ebb5e9",
-      "published_sha256": "80806a00047d732fe84923ab84895ab88d607db2fc737cdfa49da5a448db9488"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "fix_title_readme_checksums.py",
-      "path": "archive/release_history/fix_title_readme_checksums.py",
-      "source_sha256": "0ba2d4f793655b918fd280201b7b2aebf4dc4af8dd8e440e2778dc6f3bbe4a79",
-      "published_sha256": "def5175fd5459aafb6a4ef15a91190e555d4a44abd6a036d8ee96f211f229290"
-    },
-    {
-      "source_group": "title_workspace",
       "source_name": "gemma_kaggle_controller.py",
       "path": "archive/infrastructure/gemma_kaggle_controller.py",
       "source_sha256": "30bc116212d01ca3e7c7126463144088b3f18797270d479e8972c0591664d964",
       "published_sha256": "8a5de1dcfdf2d826431749594b8fe523c9da010305e7e19f0517f3bb14b4c54d"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "hf_repo_layout_inventory.py",
-      "path": "archive/release_history/hf_repo_layout_inventory.py",
-      "source_sha256": "b8aaa66a6c223ec95be2d02d887fa7f35d72aa466b1bceec183d299c8f4a8529",
-      "published_sha256": "2f1f6622508fc312dadcb39ed3e3552b0749c25cf94450760c304875b7e7283b"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "hf_translation_inventory.py",
-      "path": "archive/release_history/hf_translation_inventory.py",
-      "source_sha256": "28b7a66b38aaa7075255c133fe560f413d1946f2720b95ce621e3ed00a50055d",
-      "published_sha256": "a5f3fb2988b8a6d0783505207f6e4dbef3016decbdf5a6162fd01be326bca93c"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "inspect_full9_latest.py",
-      "path": "archive/infrastructure/inspect_full9_latest.py",
-      "source_sha256": "f648c6d0b090cc241a33bc1ab95881644503d8489011c1b93f7e574e2c10cf09",
-      "published_sha256": "d045119bd2aa02189dd14d14d20b75eb4a82ccc9896684f216eb3f40ecc54f7c"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "inspect_full9_na_latest.py",
-      "path": "archive/infrastructure/inspect_full9_na_latest.py",
-      "source_sha256": "30f85c52bec1c2d7a1c7963330196400512676e6d95735207b5cc82cd11f208d",
-      "published_sha256": "9a7c3c296fc96587bf3393407e7777184d52eec5015865a9ebedf15ab576d692"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "inspect_kaggle_gpu_operation.py",
-      "path": "archive/infrastructure/inspect_kaggle_gpu_operation.py",
-      "source_sha256": "c85b3f65e1e2b61bef5db97092d43bb14867ea367bc0b41938e1e559a75fd8bd",
-      "published_sha256": "64cb824b6ce9d58cf7cb6066466edd08da392d3cebd9105a40786c50b066649f"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "inspect_kaggle_jupyter.py",
-      "path": "archive/infrastructure/inspect_kaggle_jupyter.py",
-      "source_sha256": "35494f9039f2a9fd67dbeb203f9ceb687c26f911d0a247e1f9d826204d0ce185",
-      "published_sha256": "ffdf7d3950c9e855126e9e820500b53bfb83169e403e95e55e618264782bc0c3"
     },
     {
       "source_group": "title_workspace",
@@ -215,31 +138,10 @@
     },
     {
       "source_group": "title_workspace",
-      "source_name": "inspect_tiki_description_sources.py",
-      "path": "archive/infrastructure/inspect_tiki_description_sources.py",
-      "source_sha256": "f42064bb8e62112657be8df0c2be2ca5d42bdbdac2a3953a98083817f227534f",
-      "published_sha256": "d0046512f55609b5404dc42279cb37f1bd8b15ee736fc90203df424b03e004b0"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "inspect_tiki_full_schemas.py",
-      "path": "archive/infrastructure/inspect_tiki_full_schemas.py",
-      "source_sha256": "7bd7567516f23e06ec0309024601d32b2fe25769224e5df9996b0c13291f73b9",
-      "published_sha256": "1b7eb51afe0725241a8e07e58a737d7b561660202c613ceee84c783db3972556"
-    },
-    {
-      "source_group": "title_workspace",
       "source_name": "kaggle_batch_supervisor.py",
       "path": "src/kaggle_batch_supervisor.py",
       "source_sha256": "0aff4562a7e6104ed6fc5530d9e3682396c58cf00d786d7966a6c25e2e509430",
       "published_sha256": "7c2f4d465dbf9f4115c7b0c0d92391205d12341408c8e0b5102e0602f7d281d3"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "kaggle_direct_probe.py",
-      "path": "archive/infrastructure/kaggle_direct_probe.py",
-      "source_sha256": "c56ec2ff3164b1a156efde0ba62830756e2c411da6131d81fdf75c01e786fa5c",
-      "published_sha256": "e41185f15cdcb67ae4e24f544654ad11f81f1153a9dc9c6584a5634b8cb4a87c"
     },
     {
       "source_group": "title_workspace",
@@ -264,13 +166,6 @@
     },
     {
       "source_group": "title_workspace",
-      "source_name": "organize_hf_title_exports.py",
-      "path": "archive/release_history/organize_hf_title_exports.py",
-      "source_sha256": "dfb93482119cb23d5fbbb812d7b86f20576e365486179ac0a1b4b61ecc030345",
-      "published_sha256": "ba5911aa09e331f7c28346a8aa191c00beef6b41257ab73c413d51232c1a2c33"
-    },
-    {
-      "source_group": "title_workspace",
       "source_name": "prepare_full9_title_side.py",
       "path": "scripts/datasets/prepare_full9_title_side.py",
       "source_sha256": "c469cf66cec3ae38f51066dc8942183e90100ca85181f9072b4fef8ed09a9581",
@@ -282,76 +177,6 @@
       "path": "archive/infrastructure/prepare_live_qwen_worker.py",
       "source_sha256": "48006c427997b00571cfea0a3c35e606669da3bc52f31d82bef4c19d647efb58",
       "published_sha256": "1e05b7ab904ddfb4085c2c0f13a33e2de4df9cc47efc8a2e0ec25ff03cecc048"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "probe_kaggle_interactive_gpu.py",
-      "path": "archive/infrastructure/probe_kaggle_interactive_gpu.py",
-      "source_sha256": "49963c56a38e74d9a7c3d85c979f9360be7e0e3e53c5a99101ae06c0c440199c",
-      "published_sha256": "722d93d1effe0a7a5dcc00e32703c3af0bf839595284781ce69481731eee8101"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "probe_kaggle_log_endpoint.py",
-      "path": "archive/infrastructure/probe_kaggle_log_endpoint.py",
-      "source_sha256": "143ad99f8b04e2ca022206b5381076755b6dff27b1e4d08d088372d6b1aa91cf",
-      "published_sha256": "ecfa2b69e8762f24d9386e2f8b7d4a3a0349ce0e5dad4cb186e3603f2c5c1789"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "publish_1688_cjk_corrections.py",
-      "path": "archive/release_history/publish_1688_cjk_corrections.py",
-      "source_sha256": "91dc151e49e2b683c593b504307266d0792d872e949fbec67a62ab5d484d0b74",
-      "published_sha256": "729f6b7a98f6e4988274714f48c836d0ccc8755c32945cc932b3a5a93b972f68"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "publish_comet_results.py",
-      "path": "archive/release_history/publish_comet_results.py",
-      "source_sha256": "462d5a443a2c2e9c9b9c88f26fa55594c85ebea5546a742a76437ce710d14ee1",
-      "published_sha256": "ecc7b13794766be5ff3927b98a4a8b263fd8567184604225a59a502243f63595"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "publish_completed_translations.py",
-      "path": "archive/release_history/publish_completed_translations.py",
-      "source_sha256": "5b3290b993ffebe91601a3d51e8253632a25e23b8554aa33a5aec756ca24a744",
-      "published_sha256": "7fc7b22b273dd3d447ba13dcec0da1e0aa36a6ebcbeef65def8282c6c6b7e1b2"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "publish_individual_translation_readmes.py",
-      "path": "archive/release_history/publish_individual_translation_readmes.py",
-      "source_sha256": "84e28677939029f8765a6233b6023084f1af4327886ebe9cf4964ef59b41508f",
-      "published_sha256": "8c0f4a1f8d0bf83bd95159b0e6de37b322df00757b49b72507d4ff80c7d0c48f"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "publish_minimal_tiki_full.py",
-      "path": "archive/release_history/publish_minimal_tiki_full.py",
-      "source_sha256": "0f5a4c56e11c3aa4ab456b1fd6c2ed31cf5b256d78438a711bea01fcca2cf788",
-      "published_sha256": "2a8e7f9cd1c868e6dccb8bf100a5f69685383723636bf1975b52f353774220e4"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "publish_qwen1688_ready.py",
-      "path": "archive/release_history/publish_qwen1688_ready.py",
-      "source_sha256": "4e5e970abf474e2f8a3ca88f20d39e8bcda76057c5be4fc54495c938cf7bb70f",
-      "published_sha256": "ae6367598f36930dec045f28c9486be428f8e832777a8e66f61d612e7ca72db0"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "publish_tiki_vietnamese_cleanup.py",
-      "path": "archive/release_history/publish_tiki_vietnamese_cleanup.py",
-      "source_sha256": "9a8abe5a0202beae2796be58ac0ef102963d3317d79d783dcfbe093a608393c2",
-      "published_sha256": "267a76d5306f7d088c53eb5bf944c9819a17ba4338cad34ac8e4f689def0b627"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "publish_translation_only.py",
-      "path": "archive/release_history/publish_translation_only.py",
-      "source_sha256": "c74ac65ebbc65b44d2d233240d98bea9dade19f54f2949a4b13524539161b61b",
-      "published_sha256": "422d866d60e2d7686c97b329bb9b9d37e75930d8dc342e15c64f81c6af62cbb9"
     },
     {
       "source_group": "title_workspace",
@@ -397,13 +222,6 @@
     },
     {
       "source_group": "title_workspace",
-      "source_name": "reorganize_hf_datasets.py",
-      "path": "archive/release_history/reorganize_hf_datasets.py",
-      "source_sha256": "5c8a00e57d7eeee155406389add1cfcbb8e8ab892175d15464617522c25c200e",
-      "published_sha256": "96a78ce57f43bc4872524715080e5c10bdaf0e1e6d952f87f4a5ba7425fde008"
-    },
-    {
-      "source_group": "title_workspace",
       "source_name": "repair_1688_cjk.py",
       "path": "scripts/audit/repair_1688_cjk.py",
       "source_sha256": "b05f349c59383b9a74333789d4dd7e9395ddb5679ed5372441e3d6e2ebef7ef0",
@@ -422,13 +240,6 @@
       "path": "scripts/monitoring/report_title_translation_status.py",
       "source_sha256": "ca3dff395120235ed99f20fbeb0a8ce161976d0d96ebe2d6e4371c2c757aa2f7",
       "published_sha256": "f396828d4b35524a71769c0a4989e4e63cfcd8dd3e06b1559691629eeb973303"
-    },
-    {
-      "source_group": "title_workspace",
-      "source_name": "restore_scoped_layout_and_merge_tiki.py",
-      "path": "archive/release_history/restore_scoped_layout_and_merge_tiki.py",
-      "source_sha256": "1254622f5669742289e48bf7c497746f407c381abc8ffe860001334b962e1467",
-      "published_sha256": "8e427f0997720e1537cd78e502afd22e7634153661d3e5baf3a36cda7dba3ca3"
     },
     {
       "source_group": "title_workspace",
@@ -1013,45 +824,10 @@
     },
     {
       "source_group": "judge_review_workspace",
-      "source_name": "fix_pair_readme.py",
-      "path": "archive/judged_release_history/fix_pair_readme.py",
-      "source_sha256": "bca572eb2b9261ea79296e71a510cf151a64f005e5a9c1680091db681b05ae70",
-      "published_sha256": "bca572eb2b9261ea79296e71a510cf151a64f005e5a9c1680091db681b05ae70"
-    },
-    {
-      "source_group": "judge_review_workspace",
       "source_name": "prepare_judged_hf_release.py",
       "path": "archive/judged_release_history/prepare_judged_hf_release.py",
       "source_sha256": "5362d6fe390ef34a30fa8522507563e5e68ae1246d4727c4e3f19162bc198acc",
       "published_sha256": "ace5feafb53cb17676453e2f680b3615f6b6977d5c3911b276e6f6550605625a"
-    },
-    {
-      "source_group": "judge_review_workspace",
-      "source_name": "publish_cum_9col.py",
-      "path": "archive/judged_release_history/publish_cum_9col.py",
-      "source_sha256": "a7c6c001213bcb8443f2e9c9359a54713b1f5002a7cbe31b175c454b2863240e",
-      "published_sha256": "69ec746bc58fa8800b625401d1f9942ad50b141f09ccf99011f3d5252ab2ddb5"
-    },
-    {
-      "source_group": "judge_review_workspace",
-      "source_name": "publish_description_provenance.py",
-      "path": "archive/judged_release_history/publish_description_provenance.py",
-      "source_sha256": "689470484683674bc256f388a91160b84b7f374415610109e0b70cd068471922",
-      "published_sha256": "689470484683674bc256f388a91160b84b7f374415610109e0b70cd068471922"
-    },
-    {
-      "source_group": "judge_review_workspace",
-      "source_name": "publish_judged_hf.py",
-      "path": "archive/judged_release_history/publish_judged_hf.py",
-      "source_sha256": "adc9f7c66447f793dd7778b17ce2d75d697a6f9771f17c87ad1570bb201964b2",
-      "published_sha256": "450d400279468bd459671c9a148a6b4611c50c00b814d9c40a521ac7d6350b91"
-    },
-    {
-      "source_group": "judge_review_workspace",
-      "source_name": "publish_seven_assistant_review.py",
-      "path": "archive/judged_release_history/publish_seven_assistant_review.py",
-      "source_sha256": "80d7f15dd4ce94f7f518f198220faebd82b590cff3c5870f782f8994fd757009",
-      "published_sha256": "9c35e84bd41e0c442e4b7f55067408329ff634123bada0c97ee0821691dd9d53"
     },
     {
       "source_group": "judge_review_workspace",
@@ -1066,13 +842,6 @@
       "path": "archive/judged_release_history/run_pilot_safe.py",
       "source_sha256": "a3540258c4c25fcf95673424e784f29e497e56e788a7fe86cf92a3a344c554a8",
       "published_sha256": "f798f643ac9c7137a83ed7821a19de6128c1bff34eab14e47cd29ae136d0c827"
-    },
-    {
-      "source_group": "judge_review_workspace",
-      "source_name": "streamline_judged_hf.py",
-      "path": "archive/judged_release_history/streamline_judged_hf.py",
-      "source_sha256": "253283b9deaeb5ca7afb96984fd93db64c2194d5e18dae7ce1ae3528c281b251",
-      "published_sha256": "253283b9deaeb5ca7afb96984fd93db64c2194d5e18dae7ce1ae3528c281b251"
     },
     {
       "source_group": "judge_review_workspace",
