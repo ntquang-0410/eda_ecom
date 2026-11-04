@@ -63,7 +63,7 @@ def main() -> int:
     import sacrebleu
 
     da = load_from_checkpoint(download_model("Unbabel/wmt22-comet-da"))
-    qe = load_from_checkpoint(download_model("Unbabel/wmt22-cometkiwi-da"))
+    qe = load_from_checkpoint(download_model("Unbabel/wmt20-comet-qe-da"))
 
     metrics = {}
     for config, seed, dataset, path in files:
