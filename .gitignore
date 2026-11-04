@@ -60,3 +60,6 @@ csv/tiki/
 csv/length_prior/
 csv/length_prior_v2/
 csv/length_prior_v3/
+
+# API keys
+keys.txt
