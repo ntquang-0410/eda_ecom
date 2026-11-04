@@ -50,6 +50,7 @@ def main() -> int:
     ap.add_argument("--gpus", type=int, default=1)
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--filter", default="", help="chỉ chấm file có chuỗi này trong tên")
     args = ap.parse_args()
 
     hyp_dir, out_dir = Path(args.hyp_dir), Path(args.out_dir)
@@ -67,6 +68,8 @@ def main() -> int:
 
     metrics = {}
     for config, seed, dataset, path in files:
+        if args.filter and args.filter not in path.name:
+            continue
         score_path = out_dir / f"scores_{config}_seed{seed}_{dataset}.parquet"
         if score_path.exists() and not args.force:
             print("skip", score_path.name, flush=True)
