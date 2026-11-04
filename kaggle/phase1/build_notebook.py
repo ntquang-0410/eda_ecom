@@ -302,6 +302,7 @@ def evaluate(model, tokenizer):
 
 code("""results = {}
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH, trust_remote_code=True, local_files_only=True)
+tokenizer.padding_side = 'left'   # bắt buộc cho generate của decoder-only
 if tokenizer.pad_token is None: tokenizer.pad_token = tokenizer.eos_token
 
 for name, config in CONFIGS.items():
