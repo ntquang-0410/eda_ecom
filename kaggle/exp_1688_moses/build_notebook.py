@@ -19,7 +19,7 @@ def code(text: str) -> None:
 CELLS.append({"cell_type": "markdown", "metadata": {}, "source": [
     "# 1688-only — Moses (SMT)\n",
     "\n",
-    "Build Moses từ source, alignment bằng eflomal + atools, LM KenLM,\n",
+    "Build Moses từ source, alignment bằng eflomal (union), LM KenLM,\n",
     "train phrase-based trên 1688 train, dịch test_small.\n",
 ]})
 
@@ -42,14 +42,6 @@ ls bin/moses bin/lmplz
 
 code("""%%bash
 set -e
-cd /kaggle/working
-if [ ! -d eflomal ]; then git clone --depth 1 https://github.com/robertostling/eflomal.git; fi
-g++ -O3 -o /kaggle/working/atools eflomal/atools/atools.cc
-ls -l /kaggle/working/atools
-""")
-
-code("""%%bash
-set -e
 mkdir -p /kaggle/working/exp
 cp /kaggle/input/tiki-1688-exp/train.tok.vi /kaggle/working/exp/train.vi
 cp /kaggle/input/tiki-1688-exp/train.tok.zh /kaggle/working/exp/train.zh
@@ -66,8 +58,19 @@ echo "eflomal: $EG"
 cd /kaggle/working/exp
 $EG -s train.vi -t train.zh -f fwd --priors 3 --iterations 4 > eflomal_fwd.log 2>&1
 $EG -s train.zh -t train.vi -f rev --priors 3 --iterations 4 > eflomal_rev.log 2>&1
-/kaggle/working/atools -i fwd -j rev -c grow-diag-final-and > sym.grow-diag-final-and
-wc -l fwd rev sym.grow-diag-final-and
+wc -l fwd rev
+""")
+
+code("""from pathlib import Path
+
+fwd = Path('/kaggle/working/exp/fwd').read_text(encoding='utf-8').splitlines()
+rev = Path('/kaggle/working/exp/rev').read_text(encoding='utf-8').splitlines()
+lines = []
+for a, b in zip(fwd, rev):
+    links = set(a.split()) | set(b.split())
+    lines.append(' '.join(sorted(links, key=lambda x: (int(x.split('-')[0]), int(x.split('-')[1])))))
+Path('/kaggle/working/exp/sym.grow-diag-final-and').write_text(chr(10).join(lines), encoding='utf-8')
+print('sym lines', len(lines))
 """)
 
 code("""%%bash
