@@ -2,18 +2,18 @@
   "max_seq": 1024,
   "seed": 20261104,
   "eval_1688": {
-    "rows": 1000,
+    "rows": 750,
     "by_type": {
-      "attribute": 400,
-      "description": 200,
-      "title": 400
+      "attribute": 300,
+      "description": 150,
+      "title": 300
     }
   },
   "eval_tiki": {
-    "rows": 800,
+    "rows": 600,
     "by_type": {
-      "attribute": 400,
-      "title": 400
+      "attribute": 300,
+      "title": 300
     }
   },
   "views": {

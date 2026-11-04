@@ -204,12 +204,24 @@ def chunk(rows: list[dict], size: int):
 
 
 def build_prompt(rows: list[dict]) -> str:
-    return INSTRUCTION + json.dumps(rows, ensure_ascii=False)
+    # chỉ gửi các trường cần chấm; không gửi config/seed/dataset để tránh bias
+    keep = ("id", "source", "hypothesis", "reference")
+    clean = []
+    for row in rows:
+        item = {k: row[k] for k in keep if k in row and str(row.get(k, "")).strip()}
+        clean.append(item)
+    return INSTRUCTION + json.dumps(clean, ensure_ascii=False)
 
 
-def summarize(records: list[dict]) -> dict:
+def summarize(records: list[dict], mapping: dict[str, dict] | None = None) -> dict:
     import pandas as pd
     df = pd.DataFrame(records).drop_duplicates("id")
+    if mapping:
+        meta = df["id"].map(lambda x: mapping.get(str(x), {}))
+        for key in ("config", "seed", "dataset", "pair_type", "eval_id"):
+            df[key] = [m.get(key, "") for m in meta]
+        df["mean"] = df[["adequacy", "fluency", "terminology"]].mean(axis=1)
+        return _summarize_frame(df)
 
     def split_id(value: str):
         text = str(value)
@@ -232,7 +244,10 @@ def summarize(records: list[dict]) -> dict:
     df["dataset"] = [x[1] for x in parsed]
     df["pair_type"] = [x[2] for x in parsed]
     df["mean"] = df[["adequacy", "fluency", "terminology"]].mean(axis=1)
+    return _summarize_frame(df)
 
+
+def _summarize_frame(df) -> dict:
     def agg(part):
         return {"n": int(len(part)), **{k: round(float(part[k].mean()), 3)
                                         for k in ("adequacy", "fluency", "terminology", "mean")}}
@@ -242,6 +257,9 @@ def summarize(records: list[dict]) -> dict:
         "by_dataset": {name: agg(part) for name, part in df.groupby("dataset")},
         "by_pair_type": {name: agg(part) for name, part in df.groupby("pair_type")},
         "by_config": {name: agg(part) for name, part in df.groupby("config")} if df["config"].astype(bool).any() else {},
+        "by_seed": {str(name): agg(part) for name, part in df.groupby("seed")} if "seed" in df else {},
+        "by_config_seed": {f"{c}::{s}": agg(part) for (c, s), part in df.groupby(["config", "seed"])} if "seed" in df else {},
+        "by_stratum": {f"{c}::{d}::{t}": agg(part) for (c, d, t), part in df.groupby(["config", "dataset", "pair_type"])} if "config" in df else {},
         "rows": df.to_dict("records"),
     }
 
@@ -251,11 +269,12 @@ def main() -> int:
     ap.add_argument("--input", required=True, help="JSONL judge input")
     ap.add_argument("--keys", default="keys.txt")
     ap.add_argument("--out-dir", default="data/cleaned/judge")
-    ap.add_argument("--model", default="gemma-3-27b-it")
+    ap.add_argument("--model", default="gemma-4-31b-it")
     ap.add_argument("--batch-size", type=int, default=25)
     ap.add_argument("--limit", type=int, default=0, help="chỉ chấm N dòng đầu (0 = tất cả)")
     ap.add_argument("--max-retries", type=int, default=4)
     ap.add_argument("--temperature", type=float, default=0.1)
+    ap.add_argument("--map", default="", help="JSONL mapping judge_id -> metadata")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -353,7 +372,14 @@ def main() -> int:
             records.extend(json.loads(path.read_text(encoding="utf-8")))
         except json.JSONDecodeError:
             continue
-    summary = summarize(records) if records else {"overall": {"n": 0}}
+    mapping = None
+    if args.map and Path(args.map).exists():
+        mapping = {}
+        for line in Path(args.map).read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                item = json.loads(line)
+                mapping[str(item["judge_id"])] = item
+    summary = summarize(records, mapping) if records else {"overall": {"n": 0}}
     result = {"model": args.model, "summary": summary, "key_usage": pool.summary(),
               "updated_at": ts()}
     (out_dir / "gemma_scores.json").write_text(json.dumps(result, ensure_ascii=False, indent=2),

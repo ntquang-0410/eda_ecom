@@ -32,7 +32,7 @@ def make_eval_1688(df: pd.DataFrame, seed: int) -> pd.DataFrame:
     test["target_tokens"] = test["target_text"].map(
         lambda x: len(str(x).replace(" ", "")) / 1.6)
     rows = []
-    quotas = {"title": 400, "attribute": 400, "description": 200}
+    quotas = {"title": 300, "attribute": 300, "description": 150}
     for pair_type, quota in quotas.items():
         part = test[test["pair_type"] == pair_type]
         part = part[(part["tokens_est"] <= 1024) & (part["target_tokens"] <= 700)]
@@ -54,7 +54,7 @@ def make_eval_tiki(df: pd.DataFrame, seed: int) -> pd.DataFrame:
     test = df[df["split"] == "test"].copy()
     test = test[test["qty_status"].fillna("qty_ok") == "qty_ok"]
     rows = []
-    quotas = {"title": 400, "attribute": 400}
+    quotas = {"title": 300, "attribute": 300}
     for pair_type, quota in quotas.items():
         part = test[(test["pair_type"] == pair_type) & (test["tokens_est"] <= 1024)]
         n = min(quota, len(part))
