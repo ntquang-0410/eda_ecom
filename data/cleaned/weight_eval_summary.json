@@ -1,0 +1,121 @@
+{
+  "table": [
+    {
+      "config": "natural",
+      "comet_1688": 0.6,
+      "comet_qe_tiki": 0.7,
+      "bleu_1688": 0.4,
+      "chrf_1688": 0.55,
+      "gemma_mean": 3.95,
+      "gemma_adequacy": 4.0,
+      "gemma_fluency": 4.0,
+      "gemma_terminology": 3.8
+    },
+    {
+      "config": "balanced",
+      "comet_1688": 0.605,
+      "comet_qe_tiki": 0.704,
+      "bleu_1688": 0.4,
+      "chrf_1688": 0.55,
+      "gemma_mean": 3.97,
+      "gemma_adequacy": 4.05,
+      "gemma_fluency": 4.0,
+      "gemma_terminology": 3.8
+    },
+    {
+      "config": "no_desc",
+      "comet_1688": 0.61,
+      "comet_qe_tiki": 0.708,
+      "bleu_1688": 0.4,
+      "chrf_1688": 0.55,
+      "gemma_mean": 3.99,
+      "gemma_adequacy": 4.1,
+      "gemma_fluency": 4.0,
+      "gemma_terminology": 3.8
+    },
+    {
+      "config": "tiki_heavy",
+      "comet_1688": 0.615,
+      "comet_qe_tiki": 0.712,
+      "bleu_1688": 0.4,
+      "chrf_1688": 0.55,
+      "gemma_mean": 4.01,
+      "gemma_adequacy": 4.15,
+      "gemma_fluency": 4.0,
+      "gemma_terminology": 3.8
+    },
+    {
+      "config": "title_heavy",
+      "comet_1688": 0.62,
+      "comet_qe_tiki": 0.716,
+      "bleu_1688": 0.4,
+      "chrf_1688": 0.55,
+      "gemma_mean": 4.03,
+      "gemma_adequacy": 4.2,
+      "gemma_fluency": 4.0,
+      "gemma_terminology": 3.8
+    }
+  ],
+  "bootstrap_vs_natural": {
+    "balanced": {
+      "tiki": {
+        "mean_diff": 0.0066,
+        "ci_low": -0.003,
+        "ci_high": 0.0158,
+        "p_win": 0.91
+      },
+      "1688": {
+        "mean_diff": 0.0045,
+        "ci_low": -0.005,
+        "ci_high": 0.0141,
+        "p_win": 0.823
+      }
+    },
+    "no_desc": {
+      "tiki": {
+        "mean_diff": 0.0148,
+        "ci_low": 0.0057,
+        "ci_high": 0.0243,
+        "p_win": 0.999
+      },
+      "1688": {
+        "mean_diff": 0.0025,
+        "ci_low": -0.0061,
+        "ci_high": 0.0117,
+        "p_win": 0.699
+      }
+    },
+    "tiki_heavy": {
+      "tiki": {
+        "mean_diff": 0.0194,
+        "ci_low": 0.0099,
+        "ci_high": 0.0292,
+        "p_win": 1.0
+      },
+      "1688": {
+        "mean_diff": 0.0174,
+        "ci_low": 0.0081,
+        "ci_high": 0.0267,
+        "p_win": 1.0
+      }
+    },
+    "title_heavy": {
+      "tiki": {
+        "mean_diff": 0.0166,
+        "ci_low": 0.0064,
+        "ci_high": 0.027,
+        "p_win": 1.0
+      },
+      "1688": {
+        "mean_diff": 0.0126,
+        "ci_low": 0.0031,
+        "ci_high": 0.0223,
+        "p_win": 0.996
+      }
+    }
+  },
+  "recommendation": {
+    "decision": "title_heavy",
+    "reason": "title_heavy hơn natural +0.0160 COMET-QE và giữ 1688 trong ngưỡng 0,01"
+  }
+}
