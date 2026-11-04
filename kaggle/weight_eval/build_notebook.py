@@ -241,11 +241,17 @@ for name in CONFIGS:
     h = pd.read_parquet(f'/kaggle/working/hyp_{name}_1688.parquet')
     data = [{'src': str(s), 'mt': str(m), 'ref': str(r)} for s, m, r in zip(h['source'], h['hypothesis'], h['reference'])]
     out = da.predict(data, batch_size=8, gpus=1)
+    h['comet'] = out.scores
+    h[['id','source','hypothesis','reference','comet']].to_parquet(
+        f'/kaggle/working/scores_{name}_1688.parquet', index=False)
     bleu = sacrebleu.corpus_bleu(h['hypothesis'].tolist(), [h['reference'].tolist()], tokenize='zh').score
     chrf = sacrebleu.corpus_chrf(h['hypothesis'].tolist(), [h['reference'].tolist()]).score
     t = pd.read_parquet(f'/kaggle/working/hyp_{name}_tiki.parquet')
     data_qe = [{'src': str(s), 'mt': str(m)} for s, m in zip(t['source'], t['hypothesis'])]
     out_qe = qe.predict(data_qe, batch_size=8, gpus=1)
+    t['comet_qe'] = out_qe.scores
+    t[['id','source','hypothesis','comet_qe']].to_parquet(
+        f'/kaggle/working/scores_{name}_tiki.parquet', index=False)
     metrics[name] = {'comet_1688': round(float(out.system_score), 4),
                      'comet_qe_tiki': round(float(out_qe.system_score), 4),
                      'bleu_1688': round(float(bleu), 4),

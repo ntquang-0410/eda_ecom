@@ -210,10 +210,27 @@ def build_prompt(rows: list[dict]) -> str:
 def summarize(records: list[dict]) -> dict:
     import pandas as pd
     df = pd.DataFrame(records).drop_duplicates("id")
-    df["dataset"] = df["id"].map(lambda x: "1688" if str(x).startswith("1688") else ("tiki" if str(x).startswith("tiki") else "unknown"))
-    df["pair_type"] = df["id"].map(
-        lambda x: "title" if ":title" in str(x) or str(x).endswith(":title")
-        else ("attribute" if ":attr" in str(x) else ("description" if ":desc" in str(x) else "unknown")))
+
+    def split_id(value: str):
+        text = str(value)
+        config = ""
+        if "::" in text:
+            config, text = text.split("::", 1)
+        dataset = "1688" if text.startswith("1688") else ("tiki" if text.startswith("tiki") else "unknown")
+        if ":title" in text or text.endswith(":title"):
+            pair_type = "title"
+        elif ":attr" in text:
+            pair_type = "attribute"
+        elif ":desc" in text:
+            pair_type = "description"
+        else:
+            pair_type = "unknown"
+        return config, dataset, pair_type
+
+    parsed = df["id"].map(split_id)
+    df["config"] = [x[0] for x in parsed]
+    df["dataset"] = [x[1] for x in parsed]
+    df["pair_type"] = [x[2] for x in parsed]
     df["mean"] = df[["adequacy", "fluency", "terminology"]].mean(axis=1)
 
     def agg(part):
@@ -224,6 +241,7 @@ def summarize(records: list[dict]) -> dict:
         "overall": agg(df),
         "by_dataset": {name: agg(part) for name, part in df.groupby("dataset")},
         "by_pair_type": {name: agg(part) for name, part in df.groupby("pair_type")},
+        "by_config": {name: agg(part) for name, part in df.groupby("config")} if df["config"].astype(bool).any() else {},
         "rows": df.to_dict("records"),
     }
 
