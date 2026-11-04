@@ -4,6 +4,8 @@ Mã xử lý của nhánh **`giahuy`** cho dữ liệu thương mại điện t�
 
 Đây là hướng xử lý riêng của Gia Huy. Mã trên nhánh `main` về CADO, dữ liệu tổng hợp và thí nghiệm LoRA là một hướng khác; không được nhập đè vào nhánh này.
 
+Phạm vi báo cáo đã chốt bao quát cả hai hướng: trình bày cơ sở lý thuyết chung và phân biệt trách nhiệm của từng hướng trong phần phương pháp.
+
 ## Bắt đầu
 
 ```powershell
