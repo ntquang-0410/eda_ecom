@@ -37,7 +37,39 @@ Khuyến nghị:
 - file: data/cleaned/judge/judge_input.jsonl
 ```
 
-## 3. Prompt chấm điểm
+## 3. Chạy tự động bằng script (khuyến nghị)
+
+Chỉ cần dán key vào `keys.txt`:
+
+```bash
+cp keys.example.txt keys.txt
+# mở keys.txt, dán mỗi key một dòng
+bash tools/run_gemma_judge.sh data/cleaned/hyp_4b.parquet 200
+```
+
+Script tự:
+
+```text
+tạo judge_input.jsonl từ parquet
+chia batch 25 dòng
+xoay vòng nhiều key khi gặp 429/quota
+cooldown tăng dần, loại key hỏng
+resume nếu chạy lại
+lưu batches/ + gemma_scores.json
+```
+
+Có thể chạy trực tiếp:
+
+```bash
+python tools/gemma_judge.py \
+  --input data/cleaned/judge/judge_input.jsonl \
+  --keys keys.txt \
+  --out-dir data/cleaned/judge \
+  --model gemma-3-27b-it \
+  --batch-size 25
+```
+
+## 4. Prompt chấm điểm (nếu dán tay)
 
 Dán prompt sau vào AI Studio, thay `{{DATA}}` bằng batch JSONL:
 
