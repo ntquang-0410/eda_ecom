@@ -1,0 +1,34 @@
+{
+  "qwen3-0.6b": {
+    "tiki_pass_rate": 0.837,
+    "g1688_chrf": 0.4266,
+    "g1688_qty_match": 0.7983,
+    "steps": 9597,
+    "tokens": 5000190,
+    "minutes": 21.6
+  },
+  "qwen3-1.7b": {
+    "tiki_pass_rate": 0.9025,
+    "g1688_chrf": 0.5268,
+    "g1688_qty_match": 0.8043,
+    "steps": 4853,
+    "tokens": 5001043,
+    "minutes": 21.5
+  },
+  "qwen3-4b": {
+    "tiki_pass_rate": 0.9565,
+    "g1688_chrf": 0.596,
+    "g1688_qty_match": 0.8098,
+    "steps": 2446,
+    "tokens": 5000424,
+    "minutes": 31.4
+  },
+  "qwen3-8b": {
+    "tiki_pass_rate": 0.9305,
+    "g1688_chrf": 0.6114,
+    "g1688_qty_match": 0.8048,
+    "steps": 1208,
+    "tokens": 5000494,
+    "minutes": 37.9
+  }
+}
