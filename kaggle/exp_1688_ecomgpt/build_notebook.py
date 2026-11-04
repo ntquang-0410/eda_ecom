@@ -36,6 +36,11 @@ if torch.cuda.is_available(): print(torch.cuda.get_device_name(0))
 """)
 
 code("""INPUT = Path('/kaggle/input/tiki-1688-exp')
+if not (INPUT / 'test_small.parquet').exists():
+    import glob
+    hits = glob.glob('/kaggle/input/**/test_small.parquet', recursive=True)
+    INPUT = Path(hits[0]).parent if hits else INPUT
+print('INPUT', INPUT)
 test = pd.read_parquet(INPUT / 'test_small.parquet').reset_index(drop=True)
 train = pd.read_parquet(INPUT / 'train.parquet').reset_index(drop=True)
 print('test', len(test), '| train', len(train))
