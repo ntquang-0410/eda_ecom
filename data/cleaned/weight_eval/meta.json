@@ -1,0 +1,65 @@
+{
+  "max_seq": 1024,
+  "seed": 20261104,
+  "eval_1688": {
+    "rows": 1000,
+    "by_type": {
+      "attribute": 400,
+      "description": 200,
+      "title": 400
+    }
+  },
+  "eval_tiki": {
+    "rows": 800,
+    "by_type": {
+      "attribute": 400,
+      "title": 400
+    }
+  },
+  "views": {
+    "4b": {
+      "rows": 117247,
+      "tokens": 10945632,
+      "group_tokens": {
+        "attr_1688": 2574678,
+        "desc_1688": 6983881,
+        "tiki": 709096,
+        "title_1688": 677977
+      },
+      "group_share": {
+        "attr_1688": 0.2352,
+        "desc_1688": 0.6381,
+        "tiki": 0.0648,
+        "title_1688": 0.0619
+      },
+      "group_rows": {
+        "attr_1688": 65153,
+        "desc_1688": 14674,
+        "tiki": 22880,
+        "title_1688": 14540
+      }
+    },
+    "1.7b": {
+      "rows": 116900,
+      "tokens": 10913694,
+      "group_tokens": {
+        "attr_1688": 2574678,
+        "desc_1688": 6983881,
+        "tiki": 677158,
+        "title_1688": 677977
+      },
+      "group_share": {
+        "attr_1688": 0.2359,
+        "desc_1688": 0.6399,
+        "tiki": 0.062,
+        "title_1688": 0.0621
+      },
+      "group_rows": {
+        "attr_1688": 65153,
+        "desc_1688": 14674,
+        "tiki": 22533,
+        "title_1688": 14540
+      }
+    }
+  }
+}
