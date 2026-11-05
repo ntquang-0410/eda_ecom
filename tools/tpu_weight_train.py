@@ -176,15 +176,18 @@ def generate_rows(model, tokenizer, frame: pd.DataFrame, rank: int, world: int,
     part["prompt_tokens"] = part["prompt"].map(
         lambda x: len(tokenizer(x, add_special_tokens=False).input_ids))
     part = part[part["prompt_tokens"] < max_seq - 8]
+    # gom theo bucket cố định để XLA chỉ compile vài shape, không compile mỗi batch
+    part["bucket"] = part["prompt_tokens"].map(
+        lambda n: min([b for b in BUCKETS if b >= max(16, int(n))] or [BUCKETS[-1]]))
     out_map: dict[str, str] = {}
-    for max_new, group in part.groupby("max_new"):
+    for (max_new, bucket), group in part.groupby(["max_new", "bucket"]):
         records = group.sort_values("prompt_tokens").to_dict("records")
         batch_size = 1 if int(max_new) > 300 else 4
         for start in range(0, len(records), batch_size):
             chunk = records[start:start + batch_size]
             enc = tokenizer([r["prompt"] for r in chunk], return_tensors="pt",
-                            padding=True, truncation=True,
-                            max_length=max_seq).to(device)
+                            padding="max_length", truncation=True,
+                            max_length=int(bucket)).to(device)
             with torch.inference_mode():
                 gen = model.generate(
                     **enc, max_new_tokens=int(max_new), do_sample=False,
@@ -213,9 +216,14 @@ def _mp_fn(index: int) -> None:
         tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "left"
 
-    base = AutoModelForCausalLM.from_pretrained(
-        MODEL_PATH, dtype=torch.bfloat16, trust_remote_code=True,
-        low_cpu_mem_usage=True)
+    try:
+        base = AutoModelForCausalLM.from_pretrained(
+            MODEL_PATH, dtype=torch.bfloat16, trust_remote_code=True,
+            low_cpu_mem_usage=True)
+    except TypeError:
+        base = AutoModelForCausalLM.from_pretrained(
+            MODEL_PATH, torch_dtype=torch.bfloat16, trust_remote_code=True,
+            low_cpu_mem_usage=True)
     base.gradient_checkpointing_enable()
     base.enable_input_require_grads()
     model = None
