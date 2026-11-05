@@ -108,7 +108,7 @@ def main() -> int:
     eval_1688.to_parquet(out / "eval_1688.parquet", index=False)
 
     views = {}
-    for model in ("4b", "1.7b"):
+    for model in ("0.6b", "1.7b", "4b", "8b"):
         path = pairs / f"tiki_qwen3-{model}.parquet"
         tiki = pd.read_parquet(path)
         if model == "4b":

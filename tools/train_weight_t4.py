@@ -195,9 +195,15 @@ def train_one(args, config_name: str, seed: int, train: pd.DataFrame,
     chosen, tokens = sample_indices(train, config, seed, args.tokens)
     log(f"run {config_name} seed={seed}: {len(chosen)} examples, {tokens:.0f} tokens")
 
-    base = AutoModelForCausalLM.from_pretrained(
-        args.model, dtype=torch.float16, trust_remote_code=True,
-        low_cpu_mem_usage=True)
+    model_dtype = torch.bfloat16 if args.dtype == "bf16" else torch.float16
+    try:
+        base = AutoModelForCausalLM.from_pretrained(
+            args.model, dtype=model_dtype, trust_remote_code=True,
+            low_cpu_mem_usage=True)
+    except TypeError:
+        base = AutoModelForCausalLM.from_pretrained(
+            args.model, torch_dtype=model_dtype, trust_remote_code=True,
+            low_cpu_mem_usage=True)
     base.gradient_checkpointing_enable()
     base.enable_input_require_grads()
     model = get_peft_model(
@@ -207,7 +213,9 @@ def train_one(args, config_name: str, seed: int, train: pd.DataFrame,
     params = [p for p in model.parameters() if p.requires_grad]
     log(f"trainable params: {sum(p.numel() for p in params):,}")
     optimizer = torch.optim.AdamW(params, lr=args.lr, weight_decay=0.0)
-    scaler = torch.amp.GradScaler("cuda", enabled=True)
+    use_fp16 = args.dtype == "fp16"
+    autocast_dtype = torch.float16 if use_fp16 else torch.bfloat16
+    scaler = torch.amp.GradScaler("cuda", enabled=use_fp16)
 
     rows = train.iloc[chosen].to_dict("records")
     dataset = TokenDataset(rows, tokenizer, args.max_seq)
@@ -230,15 +238,22 @@ def train_one(args, config_name: str, seed: int, train: pd.DataFrame,
     started = time.time()
     for batch in loader:
         batch = {k: v.to("cuda", non_blocking=True) for k, v in batch.items()}
-        with torch.autocast("cuda", dtype=torch.float16):
+        with torch.autocast("cuda", dtype=autocast_dtype):
             loss = model(**batch).loss / args.accum
-        scaler.scale(loss).backward()
+        if use_fp16:
+            scaler.scale(loss).backward()
+        else:
+            loss.backward()
         micro += 1
         if micro >= args.accum:
-            scaler.unscale_(optimizer)
+            if use_fp16:
+                scaler.unscale_(optimizer)
             torch.nn.utils.clip_grad_norm_(params, 1.0)
-            scaler.step(optimizer)
-            scaler.update()
+            if use_fp16:
+                scaler.step(optimizer)
+                scaler.update()
+            else:
+                optimizer.step()
             scheduler.step()
             optimizer.zero_grad(set_to_none=True)
             micro = 0
@@ -295,6 +310,7 @@ def main() -> int:
     ap.add_argument("--batch-size", type=int, default=2)
     ap.add_argument("--accum", type=int, default=4)
     ap.add_argument("--lr", type=float, default=1e-4)
+    ap.add_argument("--dtype", choices=("fp16", "bf16"), default="bf16")
     ap.add_argument("--gen-batch", type=int, default=8)
     ap.add_argument("--max-steps", type=int, default=0)
     ap.add_argument("--no-generate", action="store_true")
