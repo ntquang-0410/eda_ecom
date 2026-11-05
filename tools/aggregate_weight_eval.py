@@ -202,6 +202,7 @@ def main() -> int:
             config, dataset, pair_type = key.split("::", 2)
             gemma_table.append({"config": config, "dataset": dataset,
                                 "pair_type": pair_type, "gemma_mean": value.get("mean"),
+                                "gemma_rating": value.get("mean_rating", ""),
                                 "n": value.get("n")})
 
     # quyết định
@@ -294,11 +295,12 @@ def main() -> int:
                          f"[{val['ci_low']:+.4f}, {val['ci_high']:+.4f}] | {val['p_win']} |")
 
         if gemma_table:
-            lines += ["", "## Gemma (1-5, blind)", "",
-                      "| cấu hình | dataset | pair_type | mean | n |", "|---|---|---|---:|---:|"]
+            lines += ["", "## Gemma credit (1-9, blind)", "",
+                      "| cấu hình | dataset | pair_type | mean | rating | n |",
+                      "|---|---|---|---:|---|---:|"]
             for row in gemma_table:
                 lines.append(f"| {row['config']} | {row['dataset']} | {row['pair_type']} | "
-                             f"{row['gemma_mean']} | {row['n']} |")
+                             f"{row['gemma_mean']} | {row['gemma_rating']} | {row['n']} |")
 
         lines += ["", "## Kết luận", "",
                   f"**{decision['decision']}** — {decision['reason']}", ""]
