@@ -50,6 +50,8 @@ cells = [
     ),
     code(
         "# Cài wheel offline (không internet), chỉ 6 package; bỏ qua nếu lỗi.\n"
+        "subprocess.run([sys.executable, '-m', 'pip', 'uninstall', '-y', 'torchao'],\n"
+        "               capture_output=True)\n"
         "WHEELS = Path('/kaggle/input/tiki-offline-wheels')\n"
         "if WHEELS.exists():\n"
         "    subprocess.run([sys.executable, '-m', 'pip', 'install', '--no-index',\n"
@@ -144,6 +146,9 @@ cells = [
         "           '--out', str(OUT), '--dtype', 'bf16', '--micro-batch', str(MB)]\n"
         "    print('RUN', cfg, 'micro-batch', MB, flush=True)\n"
         "    subprocess.run(cmd, check=True, env=env)\n"
+        "    if (time.time()-started)/60 >= 210:\n"
+        "        print('TIME GUARD: dừng ở 210 phút để không bị timeout', flush=True)\n"
+        "        break\n"
         "print('STAGE A DONE in', round((time.time()-started)/60, 1), 'min')\n"
     ),
     code(
