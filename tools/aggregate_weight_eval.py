@@ -143,6 +143,8 @@ def main() -> int:
     ap.add_argument("--gemma", default="data/cleaned/judge/gemma_scores.json")
     ap.add_argument("--out", default="reports/WEIGHT_EVAL.md")
     ap.add_argument("--summary", default="data/cleaned/weight_eval/summary.json")
+    ap.add_argument("--interim", action="store_true",
+                    help="chế độ 1 seed: không bắt buộc đồng thuận 2 seed")
     args = ap.parse_args()
 
     scores_dir, eval_dir = Path(args.scores_dir), Path(args.eval_dir)
@@ -223,12 +225,15 @@ def main() -> int:
             consistent = all(
                 consistency.get(f"{best['config']}::tiki::{p}", {}).get("same_sign", False)
                 for p in ("title", "attribute"))
+            if args.interim:
+                consistent = True
             if diff >= 0.005 and sig and consistent:
                 decision = {
                     "decision": best["config"],
                     "reason": (f"{best['config']} hơn natural {diff:+.4f} COMET-QE Tiki "
                                f"(CI {ci['ci_low']:+.4f}..{ci['ci_high']:+.4f}), "
-                               f"đồng thuận ở cả 2 seed, 1688 không giảm quá 0,01"),
+                               f"{'interim 1 seed' if args.interim else 'đồng thuận 2 seed'}, "
+                               f"1688 không giảm quá 0,01"),
                 }
             else:
                 reasons = []
@@ -264,7 +269,7 @@ def main() -> int:
     lines = ["# Trọng số desc / title / attribute có làm tăng chất lượng?",
              "", "## Giao thức", "",
              "- Qwen3-4B LoRA, 5M token/run, 625 optimizer step",
-             "- 5 cấu hình × 2 seed (42, 123)",
+             f"- 5 cấu hình × {'1 seed (interim)' if args.interim else '2 seed (42, 123)'}",
              "- eval cố định: 1688 title 300 / attr 300 / desc 150; Tiki title 300 / attr 300",
              "- 1688: COMET-da có reference; Tiki: COMET-QE không reference",
              "- paired bootstrap 2.000 lần theo eval_id", ""]
