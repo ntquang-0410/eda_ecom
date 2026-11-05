@@ -1,4 +1,0 @@
-# Dán mỗi API key Google AI Studio vào một dòng, bỏ dấu # ở đầu.
-# Lấy key tại: https://aistudio.google.com/app/apikey
-# AIzaSy...key1
-# AIzaSy...key2
