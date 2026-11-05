@@ -9,7 +9,9 @@
   "enable_tpu": false,
   "enable_internet": true,
   "dataset_sources": [],
-  "competition_sources": [],
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-3"
+  ],
   "kernel_sources": [],
   "model_sources": [],
   "machine_shape": "NvidiaRtxPro6000"
