@@ -121,6 +121,9 @@ def train_one(args, config_name: str, seed: int, train: pd.DataFrame,
     adapter_dir = out_dir / f"adapter_{config_name}_seed{seed}"
     model.save_pretrained(adapter_dir)
 
+    model.eval()
+    model.gradient_checkpointing_disable()
+    model.config.use_cache = True
     frames = []
     for dataset_name, frame in (("1688", eval_1688), ("tiki", eval_tiki)):
         records = generate_rows(model, tokenizer, frame, 0, 1, "cuda",
