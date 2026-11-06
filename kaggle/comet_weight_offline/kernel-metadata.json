@@ -12,7 +12,7 @@
     "nadsa091/tiki-4model-eval",
     "nadsa091/tiki-offline-wheels",
     "nadsa091/tiki-comet-wheels",
-    "nadsa091/comet-offline-files",
+    "nadsa091/comet-offline-shards",
     "nadsa091/tiki-weight-hyps"
   ],
   "competition_sources": [
