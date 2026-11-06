@@ -58,6 +58,26 @@
 
 Dùng weight của `title_heavy`; xem bảng trên để biết stratum nào tăng và stratum nào phải giữ guardrail.
 
+
+## Độ chắc chắn / tie-break
+
+- `title_heavy` vs `natural`: Tiki macro **+0.0356** CI **[+0.0210, +0.0502]**; 1688 macro **+0.0126** CI **[+0.0086, +0.0169]**.
+- `balanced` vs `natural`: Tiki macro **+0.0337** CI **[+0.0201, +0.0480]**; 1688 macro **+0.0092** CI **[+0.0057, +0.0134]**.
+- `title_heavy` vs `balanced`: Tiki **+0.0019** CI **[-0.0086, +0.0116]** → **không phân biệt được**; 1688 **+0.0034** CI **[+0.0008, +0.0059]** → title_heavy nhỉnh rất nhẹ.
+
+Kết luận thực dụng:
+
+```text
+title_heavy  : nhỉnh nhất về điểm trung bình, tốt nhất cho 1688 title
+balanced     : tương đương trên Tiki, tăng đều title + attribute, ổn định hơn
+no_desc      : loại (làm description giảm -0.0505)
+tiki_heavy   : chỉ 1 seed, Tiki macro thấp hơn title_heavy/balanced
+natural      : thấp hơn rõ rệt ở Tiki và 1688 title
+```
+
+Nếu ưu tiên `1688 title`: chọn `title_heavy`.
+Nếu ưu tiên cân bằng giữa title/attribute và tính ổn định: `balanced` là lựa chọn tương đương.
+
 ## Đọc kết quả
 
 - Nếu một cấu hình tăng đúng stratum mà nó được ưu tiên (ví dụ title_heavy tăng 1688/title)
