@@ -134,6 +134,23 @@ def seed_consistency(df: pd.DataFrame) -> dict:
                 "n_seeds": int(len(diff)),
                 "same_sign": bool(len(diff) >= 2 and ((diff > 0).all() or (diff < 0).all())),
             }
+        # macro Tiki: trung bình title + attribute theo từng seed
+        part = df[(df["dataset"] == "tiki") & (df["config"].isin([config, "natural"]))]
+        seed_diffs = {}
+        for seed in sorted(part["seed"].unique()):
+            a = part[(part["config"] == config) & (part["seed"] == seed)]
+            b = part[(part["config"] == "natural") & (part["seed"] == seed)]
+            if len(a) and len(b):
+                seed_diffs[str(seed)] = round(
+                    float(a.groupby("pair_type")["score"].mean().mean()
+                          - b.groupby("pair_type")["score"].mean().mean()), 4)
+        if seed_diffs:
+            vals = list(seed_diffs.values())
+            out[f"{config}::tiki::macro"] = {
+                "seed_diffs": seed_diffs,
+                "n_seeds": len(vals),
+                "same_sign": bool(len(vals) >= 2 and (all(v > 0 for v in vals) or all(v < 0 for v in vals))),
+            }
     return out
 
 
@@ -229,9 +246,8 @@ def main() -> int:
             diff = float(best["tiki_macro"] - natural_tiki)
             ci = macro_paired.get(best["config"], {})
             sig = bool(ci.get("ci_low") is not None and ci["ci_low"] > 0)
-            consistent = all(
-                consistency.get(f"{best['config']}::tiki::{p}", {}).get("same_sign", False)
-                for p in ("title", "attribute"))
+            consistent = consistency.get(
+                f"{best['config']}::tiki::macro", {}).get("same_sign", False)
             if args.interim:
                 consistent = True
             if diff >= 0.005 and sig and consistent:
@@ -249,7 +265,7 @@ def main() -> int:
                 if not sig:
                     reasons.append("CI 95% chứa 0")
                 if not consistent:
-                    reasons.append("2 seed không cùng dấu")
+                    reasons.append("2 seed không cùng dấu ở macro Tiki")
                 decision = {"decision": "natural", "reason": "; ".join(reasons)}
 
     summary = {

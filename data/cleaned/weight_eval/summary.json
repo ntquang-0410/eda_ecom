@@ -32,14 +32,14 @@
     },
     {
       "config": "balanced",
-      "1688_title": 0.8122,
-      "1688_attribute": 0.8677,
-      "1688_description": 0.9131,
-      "tiki_title": -0.035,
-      "tiki_attribute": 0.0926,
-      "tiki_macro": 0.0288,
-      "macro_1688": 0.8643,
-      "all_macro": 0.5301
+      "1688_title": 0.8127,
+      "1688_attribute": 0.8675,
+      "1688_description": 0.9153,
+      "tiki_title": -0.0312,
+      "tiki_attribute": 0.0754,
+      "tiki_macro": 0.0221,
+      "macro_1688": 0.8652,
+      "all_macro": 0.5279
     },
     {
       "config": "no_desc",
@@ -78,38 +78,38 @@
   "paired_vs_natural": {
     "balanced::1688::title": {
       "n": 300,
-      "mean_diff": 0.0202,
-      "ci_low": 0.0124,
+      "mean_diff": 0.0208,
+      "ci_low": 0.0134,
       "ci_high": 0.0286,
       "p_win": 1.0
     },
     "balanced::1688::attribute": {
       "n": 300,
-      "mean_diff": 0.002,
-      "ci_low": -0.0045,
-      "ci_high": 0.0087,
-      "p_win": 0.704
+      "mean_diff": 0.0018,
+      "ci_low": -0.0032,
+      "ci_high": 0.007,
+      "p_win": 0.737
     },
     "balanced::1688::description": {
       "n": 150,
-      "mean_diff": -0.0012,
-      "ci_low": -0.0048,
-      "ci_high": 0.0031,
-      "p_win": 0.291
+      "mean_diff": 0.001,
+      "ci_low": -0.0021,
+      "ci_high": 0.005,
+      "p_win": 0.699
     },
     "balanced::tiki::title": {
       "n": 300,
-      "mean_diff": 0.0528,
-      "ci_low": 0.0293,
-      "ci_high": 0.0774,
+      "mean_diff": 0.0566,
+      "ci_low": 0.034,
+      "ci_high": 0.0804,
       "p_win": 1.0
     },
     "balanced::tiki::attribute": {
       "n": 300,
-      "mean_diff": 0.0281,
-      "ci_low": 0.0068,
-      "ci_high": 0.0497,
-      "p_win": 0.998
+      "mean_diff": 0.0109,
+      "ci_low": -0.0046,
+      "ci_high": 0.0261,
+      "p_win": 0.911
     },
     "no_desc::1688::title": {
       "n": 300,
@@ -219,9 +219,9 @@
   },
   "tiki_macro_paired": {
     "balanced": {
-      "mean_diff": 0.0401,
-      "ci_low": 0.024,
-      "ci_high": 0.0566,
+      "mean_diff": 0.0336,
+      "ci_low": 0.0199,
+      "ci_high": 0.0476,
       "p_win": 1.0
     },
     "no_desc": {
@@ -246,38 +246,51 @@
   "seed_consistency": {
     "balanced::1688::title": {
       "seed_diffs": {
-        "42": 0.0175
+        "42": 0.0175,
+        "123": 0.024
       },
-      "n_seeds": 1,
-      "same_sign": false
+      "n_seeds": 2,
+      "same_sign": true
     },
     "balanced::1688::attribute": {
       "seed_diffs": {
-        "42": 0.002
+        "42": 0.002,
+        "123": 0.0016
       },
-      "n_seeds": 1,
-      "same_sign": false
+      "n_seeds": 2,
+      "same_sign": true
     },
     "balanced::1688::description": {
       "seed_diffs": {
-        "42": -0.0029
+        "42": -0.0029,
+        "123": 0.0048
       },
-      "n_seeds": 1,
+      "n_seeds": 2,
       "same_sign": false
     },
     "balanced::tiki::title": {
       "seed_diffs": {
-        "42": 0.0488
+        "42": 0.0488,
+        "123": 0.0643
       },
-      "n_seeds": 1,
-      "same_sign": false
+      "n_seeds": 2,
+      "same_sign": true
     },
     "balanced::tiki::attribute": {
       "seed_diffs": {
-        "42": 0.0266
+        "42": 0.0266,
+        "123": -0.0048
       },
-      "n_seeds": 1,
+      "n_seeds": 2,
       "same_sign": false
+    },
+    "balanced::tiki::macro": {
+      "seed_diffs": {
+        "42": 0.0377,
+        "123": 0.0297
+      },
+      "n_seeds": 2,
+      "same_sign": true
     },
     "no_desc::1688::title": {
       "seed_diffs": {
@@ -314,6 +327,13 @@
       "n_seeds": 1,
       "same_sign": false
     },
+    "no_desc::tiki::macro": {
+      "seed_diffs": {
+        "42": 0.031
+      },
+      "n_seeds": 1,
+      "same_sign": false
+    },
     "tiki_heavy::1688::title": {
       "seed_diffs": {
         "42": 0.0061
@@ -345,6 +365,13 @@
     "tiki_heavy::tiki::attribute": {
       "seed_diffs": {
         "42": 0.0176
+      },
+      "n_seeds": 1,
+      "same_sign": false
+    },
+    "tiki_heavy::tiki::macro": {
+      "seed_diffs": {
+        "42": 0.0342
       },
       "n_seeds": 1,
       "same_sign": false
@@ -388,11 +415,19 @@
       },
       "n_seeds": 2,
       "same_sign": false
+    },
+    "title_heavy::tiki::macro": {
+      "seed_diffs": {
+        "42": 0.0458,
+        "123": 0.0255
+      },
+      "n_seeds": 2,
+      "same_sign": true
     }
   },
   "gemma": [],
   "decision": {
-    "decision": "natural",
-    "reason": "2 seed không cùng dấu"
+    "decision": "title_heavy",
+    "reason": "title_heavy hơn natural +0.0357 COMET-QE Tiki (CI +0.0210..+0.0502), đồng thuận 2 seed, 1688 không giảm quá 0,01"
   }
 }

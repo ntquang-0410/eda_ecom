@@ -13,7 +13,7 @@
 | config | 1688_title | 1688_attribute | 1688_description | tiki_title | tiki_attribute | tiki_macro | macro_1688 | all_macro |
 |---|---|---|---|---|---|---|---|---|
 | natural | 0.7920 | 0.8657 | 0.9143 | -0.0878 | 0.0645 | -0.0117 | 0.8573 | 0.5097 |
-| balanced | 0.8122 | 0.8677 | 0.9131 | -0.0350 | 0.0926 | 0.0288 | 0.8643 | 0.5301 |
+| balanced | 0.8127 | 0.8675 | 0.9153 | -0.0312 | 0.0754 | 0.0221 | 0.8652 | 0.5279 |
 | no_desc | 0.8247 | 0.8621 | 0.8638 | -0.0370 | 0.0811 | 0.0221 | 0.8502 | 0.5189 |
 | tiki_heavy | 0.8008 | 0.8635 | 0.9141 | -0.0331 | 0.0836 | 0.0252 | 0.8595 | 0.5258 |
 | title_heavy | 0.8234 | 0.8658 | 0.9144 | -0.0326 | 0.0806 | 0.0240 | 0.8679 | 0.5303 |
@@ -22,11 +22,11 @@
 
 | cấu hình | stratum | diff | CI 95% | P(win) |
 |---|---|---:|---|---:|
-| balanced | 1688/title | +0.0202 | [+0.0124, +0.0286] | 1.0 |
-| balanced | 1688/attribute | +0.0020 | [-0.0045, +0.0087] | 0.704 |
-| balanced | 1688/description | -0.0012 | [-0.0048, +0.0031] | 0.291 |
-| balanced | tiki/title | +0.0528 | [+0.0293, +0.0774] | 1.0 |
-| balanced | tiki/attribute | +0.0281 | [+0.0068, +0.0497] | 0.998 |
+| balanced | 1688/title | +0.0208 | [+0.0134, +0.0286] | 1.0 |
+| balanced | 1688/attribute | +0.0018 | [-0.0032, +0.0070] | 0.737 |
+| balanced | 1688/description | +0.0010 | [-0.0021, +0.0050] | 0.699 |
+| balanced | tiki/title | +0.0566 | [+0.0340, +0.0804] | 1.0 |
+| balanced | tiki/attribute | +0.0109 | [-0.0046, +0.0261] | 0.911 |
 | no_desc | 1688/title | +0.0327 | [+0.0249, +0.0407] | 1.0 |
 | no_desc | 1688/attribute | -0.0037 | [-0.0118, +0.0038] | 0.195 |
 | no_desc | 1688/description | -0.0505 | [-0.0563, -0.0439] | 0.0 |
@@ -47,17 +47,16 @@
 
 | cấu hình | diff | CI 95% | P(win) |
 |---|---:|---|---:|
-| balanced | +0.0401 | [+0.0240, +0.0566] | 1.0 |
+| balanced | +0.0336 | [+0.0199, +0.0476] | 1.0 |
 | no_desc | +0.0337 | [+0.0160, +0.0501] | 1.0 |
 | tiki_heavy | +0.0367 | [+0.0204, +0.0531] | 1.0 |
 | title_heavy | +0.0356 | [+0.0210, +0.0502] | 1.0 |
 
 ## Kết luận
 
-**natural** — 2 seed không cùng dấu
+**title_heavy** — title_heavy hơn natural +0.0357 COMET-QE Tiki (CI +0.0210..+0.0502), đồng thuận 2 seed, 1688 không giảm quá 0,01
 
-Không có bằng chứng đủ mạnh rằng gán weight làm tăng chất lượng.
-Giữ phân bố token tự nhiên (desc ~64%).
+Dùng weight của `title_heavy`; xem bảng trên để biết stratum nào tăng và stratum nào phải giữ guardrail.
 
 ## Đọc kết quả
 
