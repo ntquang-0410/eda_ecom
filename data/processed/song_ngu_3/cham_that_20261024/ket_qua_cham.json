@@ -1,0 +1,2678 @@
+[
+{
+"stt": 1,
+"tang": "S5",
+"pair_id": 63866,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 2,
+"tang": "S1",
+"pair_id": 46629,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Trắng Hồng is White-Pink (粉白), not Pink-White (粉白色); Xám Ánh Hồng is Pinkish Grey (粉灰色)",
+"B": ""
+}
+},
+{
+"stt": 3,
+"tang": "S6",
+"pair_id": 4757,
+"truong": "ten",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "",
+"B": "SỐ KG MÁY is translated as 机身公斤数 (machine weight in kilograms)"
+}
+},
+{
+"stt": 4,
+"tang": "S5",
+"pair_id": 53524,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 5,
+"tang": "S4",
+"pair_id": 62964,
+"truong": "gia_tri",
+"cham": {
+"B": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"B"
+],
+"ly_do": {
+"A": "",
+"B": "将'monk fruit'改为'罗汉果'，将'glucoside'改为'苷'"
+}
+},
+{
+"stt": 6,
+"tang": "S5",
+"pair_id": 77891,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 7,
+"tang": "S3",
+"pair_id": 42890,
+"truong": "gia_tri",
+"cham": {
+"nhap": "-",
+"A": "D",
+"B": "D"
+},
+"tot_nhat": [
+"A",
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "Lưỡi gạt than chì is graphite blade/strip, Khung mạ kẽm is galvanized frame",
+"B": "Lưỡi gạt than chì is 石墨刮片 (石墨刮片), Khung mạ kẽm is 镀锌框架 (镀锌框架)"
+}
+},
+{
+"stt": 8,
+"tang": "S5",
+"pair_id": 62676,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 9,
+"tang": "S2",
+"pair_id": 2569,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Hmm is a typo for mm",
+"B": "Hmm is mm"
+}
+},
+{
+"stt": 10,
+"tang": "S4",
+"pair_id": 41188,
+"truong": "gia_tri",
+"cham": {
+"B": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"B"
+],
+"ly_do": {
+"A": "",
+"B": "Mangetic is a typo for Magnetic, which is 磁吸"
+}
+},
+{
+"stt": 11,
+"tang": "S1",
+"pair_id": 68779,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 12,
+"tang": "S5",
+"pair_id": 57416,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 13,
+"tang": "S1",
+"pair_id": 54586,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Xanh in this context (jade/gemstone) refers to green (绿色) rather than blue (蓝色)",
+"B": ""
+}
+},
+{
+"stt": 14,
+"tang": "S5",
+"pair_id": 61964,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 15,
+"tang": "S2",
+"pair_id": 8044,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Vàng in this context refers to gold color (金色), not yellow (黄色)",
+"B": "Vàng is gold (金色), not yellow"
+}
+},
+{
+"stt": 16,
+"tang": "S5",
+"pair_id": 53546,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 17,
+"tang": "S1",
+"pair_id": 56193,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"A": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Xanh đen is blue-black (蓝黑色), not dark blue (深蓝色)",
+"B": "Xanh đen is dark blue (深蓝色), not blue"
+}
+},
+{
+"stt": 18,
+"tang": "S4",
+"pair_id": 23397,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"B": "D"
+},
+"tot_nhat": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 19,
+"tang": "S5",
+"pair_id": 56008,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 20,
+"tang": "S1",
+"pair_id": 3022,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"A": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Changed to more natural Chinese counting for bags",
+"B": ""
+}
+},
+{
+"stt": 21,
+"tang": "S4",
+"pair_id": 14909,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"B": "N"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "Translated Vietnamese words in the value"
+}
+},
+{
+"stt": 22,
+"tang": "S3",
+"pair_id": 26124,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "D",
+"B": "D"
+},
+"tot_nhat": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "Bạc Đen is Silver Black (银黑), Xanh đen is Dark Blue (深蓝), Đen Nâu is Black Brown (黑棕)",
+"B": "Bạc Đen is silver black (银黑), not 黑银; Xanh đen is deep blue (深蓝色), not 蓝黑; Đen Nâu is black brown (黑棕色), not 黑棕"
+}
+},
+{
+"stt": 23,
+"tang": "S3",
+"pair_id": 78543,
+"truong": "gia_tri",
+"cham": {
+"nhap": "S",
+"A": "D",
+"B": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Phân bón hoa giấy refers to Bougainvillea fertilizer, not cotton paper; changed gram unit to g",
+"B": "PHÂN BÔNG GIẤY is 纸花肥料, not 棉花纸"
+}
+},
+{
+"stt": 24,
+"tang": "S5",
+"pair_id": 49841,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 25,
+"tang": "S1",
+"pair_id": 21412,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "The draft '三国时代' (Three Kingdoms Era) is less accurate than '三国志' (Three Kingdoms) which matches the product context 'Tam Quốc Chí'.",
+"B": ""
+}
+},
+{
+"stt": 26,
+"tang": "S3",
+"pair_id": 23111,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "D",
+"B": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Changed gr to g; translated xô thơm to 鼠尾草 (sage)",
+"B": "Changed 'gr' to 'g' for unit consistency"
+}
+},
+{
+"stt": 27,
+"tang": "S3",
+"pair_id": 60601,
+"truong": "gia_tri",
+"cham": {
+"B": "N",
+"A": "N",
+"nhap": "N"
+},
+"tot_nhat": [
+"A",
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "Change 'gr' to 'g' and fix structure",
+"B": "gr should be g"
+}
+},
+{
+"stt": 28,
+"tang": "S6",
+"pair_id": 46928,
+"truong": "ten",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Draft n was slightly unnatural, changed to 颜色版本",
+"B": "TIÊU CHUẨN is 标准版, ĐEN BẠC is 黑银"
+}
+},
+{
+"stt": 29,
+"tang": "S2",
+"pair_id": 47030,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "In the context of bicycle freewheels (Líp), 'tầng' refers to speeds (速) rather than physical layers (层)",
+"B": "7 tầng, 8 tầng, 9 tầng refers to 7-speed, 8-speed, 9-speed (7速, 8速, 9速)"
+}
+},
+{
+"stt": 30,
+"tang": "S3",
+"pair_id": 83824,
+"truong": "gia_tri",
+"cham": {
+"B": "D",
+"nhap": "N",
+"A": "N"
+},
+"tot_nhat": [
+"B"
+],
+"ly_do": {
+"A": "Corrected spelling of Alcohol",
+"B": "Translated chemical names and kept original terms"
+}
+},
+{
+"stt": 31,
+"tang": "S1",
+"pair_id": 21748,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"A": "N"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "Zoo alphabet is a specific pattern name, kept as is",
+"B": "Họa Tiết is 图案, and the draft_v is correct"
+}
+},
+{
+"stt": 32,
+"tang": "S4",
+"pair_id": 6571,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"B": "D"
+},
+"tot_nhat": [
+"B"
+],
+"ly_do": {
+"A": "",
+"B": "Amsterdam is transliterated as 阿姆斯特丹"
+}
+},
+{
+"stt": 33,
+"tang": "S4",
+"pair_id": 7139,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"B": "S"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "Kiwi is mango (芒果), not kiwi"
+}
+},
+{
+"stt": 34,
+"tang": "S1",
+"pair_id": 74948,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 35,
+"tang": "S3",
+"pair_id": 77638,
+"truong": "gia_tri",
+"cham": {
+"nhap": "-",
+"B": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Translated to match product context",
+"B": "Hồng is pink (粉色), not red"
+}
+},
+{
+"stt": 36,
+"tang": "S5",
+"pair_id": 39223,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 37,
+"tang": "S5",
+"pair_id": 48093,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 38,
+"tang": "S4",
+"pair_id": 76975,
+"truong": "gia_tri",
+"cham": {
+"B": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"B"
+],
+"ly_do": {
+"A": "",
+"B": "sillicone 改为 硅胶"
+}
+},
+{
+"stt": 39,
+"tang": "S3",
+"pair_id": 41298,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "N",
+"B": "N"
+},
+"tot_nhat": [
+"A",
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "Đẹn hạt refers to grained black (颗粒黑), not just black",
+"B": "Đẹn hạt is 磨砂黑 (磨砂黑), not 黑色"
+}
+},
+{
+"stt": 40,
+"tang": "S4",
+"pair_id": 45581,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"B": "D"
+},
+"tot_nhat": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "Added Chinese brand name for Ford"
+}
+},
+{
+"stt": 41,
+"tang": "S5",
+"pair_id": 45438,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 42,
+"tang": "S1",
+"pair_id": 66302,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 43,
+"tang": "S2",
+"pair_id": 40210,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Translate materials to Chinese",
+"B": "Polyester should be translated as 聚酯纤维, not kept as Polyester"
+}
+},
+{
+"stt": 44,
+"tang": "S1",
+"pair_id": 67066,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 45,
+"tang": "S1",
+"pair_id": 5053,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 46,
+"tang": "S6",
+"pair_id": 5023,
+"truong": "ten",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Tựa cổ refers to headrest (头枕) in the context of a chair; Ghi trắng is white-grey (白灰)",
+"B": "Có tựa cổ is '有护颈' (有护颈), not '有靠背' (有靠背)"
+}
+},
+{
+"stt": 47,
+"tang": "S3",
+"pair_id": 86559,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"B": "N",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Ariel is Aries (白羊座), and the draft order was rearranged to match the input list",
+"B": "scopio is 天蝎座 (天蝎座), not 室女座 (处女座)"
+}
+},
+{
+"stt": 48,
+"tang": "S1",
+"pair_id": 54785,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "保持原样，无错误"
+}
+},
+{
+"stt": 49,
+"tang": "S5",
+"pair_id": 57687,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 50,
+"tang": "S5",
+"pair_id": 66099,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 51,
+"tang": "S2",
+"pair_id": 69272,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Changed 'gr' to 'g'",
+"B": "gram unit should be written as 'g' instead of 'gr'"
+}
+},
+{
+"stt": 52,
+"tang": "S5",
+"pair_id": 75506,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 53,
+"tang": "S1",
+"pair_id": 38393,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Đỏ đen is red-black (红黑色), not dark red (深红色)",
+"B": "LỤC LAM is 蓝绿色 (蓝绿色), not 蓝色 (蓝色); ĐỎ ĐEN is 深红色 (深红色), not 红色 (红色)"
+}
+},
+{
+"stt": 54,
+"tang": "S1",
+"pair_id": 78865,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Lông cừu in this context (fleece blanket) refers to sherpa/lamb fleece (羊羔绒), not raw wool (羊毛)",
+"B": ""
+}
+},
+{
+"stt": 55,
+"tang": "S5",
+"pair_id": 22506,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 56,
+"tang": "S5",
+"pair_id": 57669,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 57,
+"tang": "S1",
+"pair_id": 61107,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"A": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 58,
+"tang": "S1",
+"pair_id": 61201,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Added 'Whole Bean' translation and refined grinding terms to match context",
+"B": "draft_n and draft_v are correct"
+}
+},
+{
+"stt": 59,
+"tang": "S6",
+"pair_id": 25609,
+"truong": "ten",
+"cham": {
+"nhap": "D",
+"A": "N"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 60,
+"tang": "S5",
+"pair_id": 60327,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 61,
+"tang": "S2",
+"pair_id": 11451,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Hoa đào is peach blossom (桃花)",
+"B": "Hoa đào is peach blossom (桃花), not flower peach (花桃)"
+}
+},
+{
+"stt": 62,
+"tang": "S3",
+"pair_id": 72899,
+"truong": "gia_tri",
+"cham": {
+"B": "N",
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Nham thạch is volcanic rock (火山岩); Sứ nhẫn is ring-shaped ceramic (环状陶瓷); Sứ bi is ceramic ball (陶瓷球); changed gr to g",
+"B": "gram unit should be written as 'g' instead of 'gr' or 'gram'"
+}
+},
+{
+"stt": 63,
+"tang": "S2",
+"pair_id": 21876,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "",
+"B": "Added \"尺寸: \" before the dimensions to match the Vietnamese original"
+}
+},
+{
+"stt": 64,
+"tang": "S1",
+"pair_id": 68338,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 65,
+"tang": "S4",
+"pair_id": 78791,
+"truong": "gia_tri",
+"cham": {
+"B": "N",
+"nhap": "D"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "Frost is 霜色, Hydrangea is 蓝花楹, Splash is 水花"
+}
+},
+{
+"stt": 66,
+"tang": "S3",
+"pair_id": 59877,
+"truong": "gia_tri",
+"cham": {
+"B": "D",
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "gram -> g",
+"B": "500gram should be 500克"
+}
+},
+{
+"stt": 67,
+"tang": "S3",
+"pair_id": 81781,
+"truong": "gia_tri",
+"cham": {
+"B": "N",
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Translated ingredients to Chinese",
+"B": "Hydrated Silica should be translated as 水合硅石"
+}
+},
+{
+"stt": 68,
+"tang": "S2",
+"pair_id": 84105,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Changed gram to g",
+"B": "将 'gram' 改为 'g'"
+}
+},
+{
+"stt": 69,
+"tang": "S1",
+"pair_id": 13363,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Added '干性' (dry) and '敏感性' (sensitive) to match the Vietnamese list structure and ensure all skin types are covered.",
+"B": "Dành cho da dầu is '适用于油性肌肤' (油性肌适用)"
+}
+},
+{
+"stt": 70,
+"tang": "S6",
+"pair_id": 13950,
+"truong": "ten",
+"cham": {
+"A": "N",
+"nhap": "D"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "Tuýp in this context refers to the packaging unit (tube/container), not a flexible hose (软管)",
+"B": ""
+}
+},
+{
+"stt": 71,
+"tang": "S6",
+"pair_id": 75521,
+"truong": "ten",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "",
+"B": "HỒNG is pink (粉红色), not red; VÀNG is yellow (黄色), not gold; Vàng nhạt is light yellow (淡黄色), not light gold; XANH LÁ is green (绿色), not green leaf; Xanh da trời is sky blue (天蓝色), not blue; ĐEN is black (黑色), not dark; ĐỎ is red (红色), not dark red"
+}
+},
+{
+"stt": 72,
+"tang": "S5",
+"pair_id": 46033,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 73,
+"tang": "S6",
+"pair_id": 12586,
+"truong": "ten",
+"cham": {
+"nhap": "D",
+"A": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 74,
+"tang": "S1",
+"pair_id": 51583,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Vòi refers to the nozzle/sprayer, not the hose (vòi xịt vs dây vòi)",
+"B": "Hồng is pink (粉色), not red"
+}
+},
+{
+"stt": 75,
+"tang": "S1",
+"pair_id": 63386,
+"truong": "gia_tri",
+"cham": {
+"A": "N",
+"nhap": "N"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Bánh xếp is more like a turnover/pie than a biscuit (饼干)",
+"B": ""
+}
+},
+{
+"stt": 76,
+"tang": "S1",
+"pair_id": 63676,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 77,
+"tang": "S5",
+"pair_id": 32269,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 78,
+"tang": "S4",
+"pair_id": 67234,
+"truong": "gia_tri",
+"cham": {
+"B": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"B"
+],
+"ly_do": {
+"A": "Stabilizer is not translated to Chinese",
+"B": "将 'chất ổn định' 翻译为 '稳定剂' 更准确，而不是 'Stabilizer'"
+}
+},
+{
+"stt": 79,
+"tang": "S1",
+"pair_id": 72094,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "S"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Mít is Jackfruit (波罗蜜), not Durian (榴莲)",
+"B": ""
+}
+},
+{
+"stt": 80,
+"tang": "S5",
+"pair_id": 23570,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 81,
+"tang": "S5",
+"pair_id": 40561,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 82,
+"tang": "S6",
+"pair_id": 33238,
+"truong": "ten",
+"cham": {
+"A": "D",
+"nhap": "S"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Tần số quét (Scan rate) is incorrect for 2.4G wireless connection; changed to connection frequency",
+"B": ""
+}
+},
+{
+"stt": 83,
+"tang": "S2",
+"pair_id": 2519,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "S"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "D (Dài) means Length, not Diameter (直径)",
+"B": "D200xR100xC95 is length 200xwidth 100xheight 95 (长 200x宽 100x高 95), not diameter"
+}
+},
+{
+"stt": 84,
+"tang": "S4",
+"pair_id": 3439,
+"truong": "gia_tri",
+"cham": {
+"B": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "Gỗ tre is bamboo (竹子), not bamboo wood"
+}
+},
+{
+"stt": 85,
+"tang": "S1",
+"pair_id": 69016,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "nấm nở (mushrooms expanding/rehydrating) is better translated as 发胀 than 绽放 (blooming/flowering)",
+"B": ""
+}
+},
+{
+"stt": 86,
+"tang": "S5",
+"pair_id": 3904,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 87,
+"tang": "S3",
+"pair_id": 51627,
+"truong": "gia_tri",
+"cham": {
+"A": "N",
+"B": "N",
+"nhap": "-"
+},
+"tot_nhat": [
+"A",
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "Translated terms for clarity and consistency with e-commerce context"
+}
+},
+{
+"stt": 88,
+"tang": "S5",
+"pair_id": 28151,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 89,
+"tang": "S1",
+"pair_id": 50077,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"A": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Hồng is pink (粉色), not pinkish red (粉红色)",
+"B": ""
+}
+},
+{
+"stt": 90,
+"tang": "S2",
+"pair_id": 70192,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "gr to g",
+"B": "gram unit should be written as 'g'"
+}
+},
+{
+"stt": 91,
+"tang": "S1",
+"pair_id": 6724,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "The draft '款式主椅套' is a bit awkward; '矫姿椅套' (posture chair cover) is more natural for this product type.",
+"B": ""
+}
+},
+{
+"stt": 92,
+"tang": "S3",
+"pair_id": 50288,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"B": "N",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Simplified the phrasing to match e-commerce style",
+"B": "chỉ trắng, chỉ đen, chỉ đỏ are white, black, red (白色, 黑色, 红色), not white line, black line, red line"
+}
+},
+{
+"stt": 93,
+"tang": "S5",
+"pair_id": 73207,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": "KT is translated as 尺寸 (尺寸), and Đen is translated as 黑色 (黑色)"
+}
+},
+{
+"stt": 94,
+"tang": "S1",
+"pair_id": 58398,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Removed redundant '汁' in '果汁汁', corrected 'natri polyphosphat' to '聚磷酸钠'",
+"B": ""
+}
+},
+{
+"stt": 95,
+"tang": "S1",
+"pair_id": 35073,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Black Blue and Black Red are better expressed as compound colors in Chinese",
+"B": "Xanh Lá is green (绿色), Xanh dương is blue (蓝色), Đen is black (黑色), Đen Xanh is black blue (黑色蓝色), Đen Đỏ is black red (黑色红色)"
+}
+},
+{
+"stt": 96,
+"tang": "S4",
+"pair_id": 44529,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"B": "D"
+},
+"tot_nhat": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "Added Chinese brand name before model names"
+}
+},
+{
+"stt": 97,
+"tang": "S4",
+"pair_id": 10245,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"B": "S"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "Translated Vietnamese component names into Chinese"
+}
+},
+{
+"stt": 98,
+"tang": "S4",
+"pair_id": 69617,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"B": "D"
+},
+"tot_nhat": [
+"B"
+],
+"ly_do": {
+"A": "Lốc 10 gói refers to a pack of 10, corrected to 10包装",
+"B": "GÓI LẺ is 单包, Lốc 10 gói is 10包, Set 10 gói is 10包套装, Thùng 60 gói is 60包箱装"
+}
+},
+{
+"stt": 99,
+"tang": "S2",
+"pair_id": 62571,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Changed 'kgs' to 'kg'",
+"B": "gram unit should be written as 'kg'"
+}
+},
+{
+"stt": 100,
+"tang": "S1",
+"pair_id": 32719,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Xanh Đen is Blue-Black (蓝黑色), not Deep Blue (深蓝色)",
+"B": ""
+}
+},
+{
+"stt": 101,
+"tang": "S5",
+"pair_id": 10053,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "The draft translated the value into Chinese, but the Vietnamese value is 'Sạch Vi Khuẩn Pocari'. I must keep the Vietnamese words as they are.",
+"B": "draft_n is correct, draft_v is correct"
+}
+},
+{
+"stt": 102,
+"tang": "S3",
+"pair_id": 45023,
+"truong": "gia_tri",
+"cham": {
+"B": "N",
+"nhap": "-",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Translated 'bình acquy' to 蓄电池 (battery) and clarified quantities",
+"B": ""
+}
+},
+{
+"stt": 103,
+"tang": "S1",
+"pair_id": 75370,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"A": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 104,
+"tang": "S5",
+"pair_id": 31372,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 105,
+"tang": "S1",
+"pair_id": 21445,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"A": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Corrected some draft translations to better match the Vietnamese terms (e.g., Gấu icon -> Icon熊, Thú trăng sao -> 星月动物)",
+"B": "Họa Tiết is a list of patterns, and the draft translation is accurate"
+}
+},
+{
+"stt": 106,
+"tang": "S5",
+"pair_id": 61331,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 107,
+"tang": "S4",
+"pair_id": 44355,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"B": "D"
+},
+"tot_nhat": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "Translated brand name 'Honda' to '本田'"
+}
+},
+{
+"stt": 108,
+"tang": "S3",
+"pair_id": 53044,
+"truong": "gia_tri",
+"cham": {
+"A": "N",
+"B": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "Added 'Solid Gloss' and 'Solid Matt' nuances to match the Vietnamese/English context",
+"B": "Nardo Grey is translated as 纳多灰, not Nardo 灰"
+}
+},
+{
+"stt": 109,
+"tang": "S3",
+"pair_id": 58189,
+"truong": "gia_tri",
+"cham": {
+"A": "N",
+"nhap": "D",
+"B": "D"
+},
+"tot_nhat": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "Gạo lứt is brown rice (糙米), not Genmai (玄米); Zip 500g mix 13 vị is a type/format, kept Zip as per brand/packaging style",
+"B": "Hạnh nhân is 杏仁 (杏仁), Hạt điều is 腰果 (腰果), Kiwi is 奇异果 (奇异果), Mè đen is 黑芝麻 (黑芝麻), Ruốc thịt is 肉松 (肉松), Socola is 巧克力 (巧克力), Trần bì is 陈皮 (陈皮), Viêt quất is 蓝莓 (蓝莓), Yến mạch is 燕麦 (燕麦), Óc chó is 核桃 (核桃). The draft was correct but the style was adjusted for consistency with common Chinese e-commerce listings."
+}
+},
+{
+"stt": 110,
+"tang": "S3",
+"pair_id": 68075,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"B": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "Changed gram to g",
+"B": "500gram改为500克"
+}
+},
+{
+"stt": 111,
+"tang": "S1",
+"pair_id": 2268,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Lẻ in this context refers to individual items/sets, changed '单个' to '单只/单组' for better accuracy in e-commerce",
+"B": ""
+}
+},
+{
+"stt": 112,
+"tang": "S1",
+"pair_id": 73361,
+"truong": "gia_tri",
+"cham": {
+"nhap": "S",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "tự chìm refers to submersible (浸没式) in the context of UV lamps, not embedded (嵌入式)",
+"B": ""
+}
+},
+{
+"stt": 113,
+"tang": "S2",
+"pair_id": 5014,
+"truong": "gia_tri",
+"cham": {
+"nhap": "S",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "nhiệt độ coa (typo for nhiệt độ cao) means high temperature, not low temperature",
+"B": "coa -> 高温"
+}
+},
+{
+"stt": 114,
+"tang": "S5",
+"pair_id": 46928,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "Draft n was slightly unnatural, changed to 颜色版本",
+"B": "TIÊU CHUẨN is 标准版, ĐEN BẠC is 黑银"
+}
+},
+{
+"stt": 115,
+"tang": "S5",
+"pair_id": 35992,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 116,
+"tang": "S5",
+"pair_id": 2648,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": "Hồng is pink (粉色), not red"
+}
+},
+{
+"stt": 117,
+"tang": "S1",
+"pair_id": 63538,
+"truong": "gia_tri",
+"cham": {
+"nhap": "S",
+"A": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "The draft incorrectly translated 'muối Bà Rịa-Vũng Tàu' as '鱼安和盐' (An Hòa salt); it should be '巴地头顿盐' (Ba Ria-Vung Tau salt).",
+"B": "Cá cơm Phú Quốc is 富国鱼安 (富国鱼安 is the correct translation for Cá cơm Phú Quốc, a specific type of fish used in the product)"
+}
+},
+{
+"stt": 118,
+"tang": "S2",
+"pair_id": 23361,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Hồng is pink (粉色), not deep pink (粉红色)",
+"B": ""
+}
+},
+{
+"stt": 119,
+"tang": "S6",
+"pair_id": 59798,
+"truong": "ten",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "The draft '大米' (Rice) is a product type, but the value '2kg, 500g' refers to weight/specification.",
+"B": ""
+}
+},
+{
+"stt": 120,
+"tang": "S1",
+"pair_id": 52505,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "cao cấp means high quality/premium, not just 'advanced'",
+"B": ""
+}
+},
+{
+"stt": 121,
+"tang": "S3",
+"pair_id": 32189,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"A": "D",
+"B": "N"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Added '色' to match standard Chinese color naming for consistency",
+"B": "Đen Xám is gray (灰色), not black gray; Đen Đỏ is red (红色), not black red"
+}
+},
+{
+"stt": 122,
+"tang": "S5",
+"pair_id": 7743,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 123,
+"tang": "S6",
+"pair_id": 42256,
+"truong": "ten",
+"cham": {
+"nhap": "D",
+"A": "N"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "n: 'Loại thẻ dán' refers to the type of sticker card, not 'sticker type'. v: 'Thẻ đèn' is better translated as '灯位贴卡' (lamp position sticker card) for clarity in e-commerce.",
+"B": ""
+}
+},
+{
+"stt": 124,
+"tang": "S3",
+"pair_id": 31868,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"A": "N",
+"B": "N"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "6ly is 6.35mm in audio context",
+"B": "将“6ly ra 3.5”改为“6ly转3.5mm”以符合中文表达习惯，并补充“mm”单位"
+}
+},
+{
+"stt": 125,
+"tang": "S6",
+"pair_id": 80685,
+"truong": "ten",
+"cham": {
+"nhap": "S",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Draft n was 'hair oil', but product is 'conditioner' (Dầu Xả)",
+"B": "根据产品标题和上下文，将“Dầu Xả Tóc”翻译为“护发精油”更符合中文电商用语"
+}
+},
+{
+"stt": 126,
+"tang": "S1",
+"pair_id": 44538,
+"truong": "gia_tri",
+"cham": {
+"A": "N",
+"nhap": "D"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "The draft order was changed to match the original Vietnamese order (Xám Đen Đỏ) and the colors were corrected to Gray, Black, Red",
+"B": "Xám Đen Đỏ is 灰黑红, but the draft is 黑红灰, which is a common way to list colors in Chinese e-commerce listings"
+}
+},
+{
+"stt": 127,
+"tang": "S2",
+"pair_id": 61043,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "gr changed to g",
+"B": "将'gr'改为'g'"
+}
+},
+{
+"stt": 128,
+"tang": "S6",
+"pair_id": 70111,
+"truong": "ten",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Hồng is pink (粉色), not pink-red (粉红色)",
+"B": ""
+}
+},
+{
+"stt": 129,
+"tang": "S3",
+"pair_id": 18838,
+"truong": "gia_tri",
+"cham": {
+"B": "D",
+"nhap": "-",
+"A": "D"
+},
+"tot_nhat": [
+"A",
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "CHỈ KHĂN PHỦ ĐÀN, PHỦ BÀN PHÍM, PHỦ GHẾ ĐÔI, PHỦ GHẾ ĐƠN is only cover for piano, keyboard cover, double chair cover, single chair cover"
+}
+},
+{
+"stt": 130,
+"tang": "S1",
+"pair_id": 47341,
+"truong": "gia_tri",
+"cham": {
+"nhap": "S",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "tay chống in this context refers to a balance scooter handle/handrail, not anti-glare rod",
+"B": "draft_n is correct, draft_v is correct"
+}
+},
+{
+"stt": 131,
+"tang": "S1",
+"pair_id": 28564,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Light is Lightning port; C port is Type-C",
+"B": ""
+}
+},
+{
+"stt": 132,
+"tang": "S6",
+"pair_id": 2081,
+"truong": "ten",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Ga is a waterproof sheet (床笠), not a regular sheet (床单)",
+"B": ""
+}
+},
+{
+"stt": 133,
+"tang": "S3",
+"pair_id": 13356,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D",
+"B": "N"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Changed '个' to '只' for better context of condoms",
+"B": "Hộp 12 cái, Hộp 3 chiếc should be translated as 12 个装, 3 个装"
+}
+},
+{
+"stt": 134,
+"tang": "S1",
+"pair_id": 5058,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Vàng is yellow (黄色), not gold (金色)",
+"B": ""
+}
+},
+{
+"stt": 135,
+"tang": "S6",
+"pair_id": 72108,
+"truong": "ten",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "quy đũa refers to the stick biscuit shape, not actual chopsticks",
+"B": "quy đũa is 'cuisine chopsticks' or 'cuisine stick', but in context it refers to packaging quantity, so '筷子规格' is not accurate. The correct translation is '包装规格' (packaging specification). However, the draft '筷子规格' is used as it is."
+}
+},
+{
+"stt": 136,
+"tang": "S5",
+"pair_id": 49355,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 137,
+"tang": "S1",
+"pair_id": 3250,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"A": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 138,
+"tang": "S1",
+"pair_id": 58265,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"A": "N"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "Removed English text to follow translation rules",
+"B": ""
+}
+},
+{
+"stt": 139,
+"tang": "S3",
+"pair_id": 29578,
+"truong": "gia_tri",
+"cham": {
+"B": "D",
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "Removed redundant '类型' and shortened 'chấu' to '插' for e-commerce style",
+"B": ""
+}
+},
+{
+"stt": 140,
+"tang": "S4",
+"pair_id": 58351,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"B": "D"
+},
+"tot_nhat": [
+"B"
+],
+"ly_do": {
+"A": "",
+"B": "原味糙米油中的'原味'没有依据，去掉"
+}
+},
+{
+"stt": 141,
+"tang": "S4",
+"pair_id": 83534,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"B": "S"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "Đổi 'Rosemary' thành '薰衣草' theo nghĩa đúng"
+}
+},
+{
+"stt": 142,
+"tang": "S3",
+"pair_id": 62540,
+"truong": "gia_tri",
+"cham": {
+"nhap": "-",
+"A": "D",
+"B": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "",
+"B": "Kẹo me cay -> 酸豆辣味, Kẹo me tắc -> 酸豆橘味, Kẹo me xí muội -> 酸豆腌制味"
+}
+},
+{
+"stt": 143,
+"tang": "S3",
+"pair_id": 53325,
+"truong": "gia_tri",
+"cham": {
+"B": "S",
+"nhap": "S",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "gr -> g; Siêu Dai refers to toughness/elasticity (韧/耐用) rather than length (长)",
+"B": "gr 改为 g，超 Dai 翻译为 超长装"
+}
+},
+{
+"stt": 144,
+"tang": "S5",
+"pair_id": 30324,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 145,
+"tang": "S5",
+"pair_id": 61785,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 146,
+"tang": "S5",
+"pair_id": 35691,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 147,
+"tang": "S1",
+"pair_id": 27125,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "nâu bò refers to cowhide brown (牛皮棕)",
+"B": ""
+}
+},
+{
+"stt": 148,
+"tang": "S1",
+"pair_id": 50821,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"A": "D"
+},
+"tot_nhat": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "MÀU XANH THAN is dark cyan/charcoal blue, not standard dark blue",
+"B": "MÀU XANH THAN is 深蓝色 (dark blue), not 深蓝色 (dark blue) is correct, and Màu xám is 灰色 (gray)"
+}
+},
+{
+"stt": 149,
+"tang": "S6",
+"pair_id": 62721,
+"truong": "ten",
+"cham": {
+"nhap": "D",
+"A": "N"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "DS is likely 'Dạng sản phẩm' or 'Dòng sản phẩm' (Flavor/Type), translated to '口味' for context",
+"B": ""
+}
+},
+{
+"stt": 150,
+"tang": "S4",
+"pair_id": 3246,
+"truong": "gia_tri",
+"cham": {
+"B": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "Hồng is pink (粉色), not red"
+}
+},
+{
+"stt": 151,
+"tang": "S4",
+"pair_id": 14374,
+"truong": "gia_tri",
+"cham": {
+"B": "D",
+"nhap": "D"
+},
+"tot_nhat": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "Translated Vietnamese words like 'Amarelli Mint' to 'Amarelli薄荷', 'Cinnamon Mint' to '肉桂薄荷', 'Ginger Mint' to '姜薄荷', 'Jasmin Mint' to '茉莉薄荷', and 'Whitening Mint' to '美白薄荷'"
+}
+},
+{
+"stt": 152,
+"tang": "S5",
+"pair_id": 58969,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 153,
+"tang": "S5",
+"pair_id": 43672,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 154,
+"tang": "S4",
+"pair_id": 5864,
+"truong": "gia_tri",
+"cham": {
+"B": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"B"
+],
+"ly_do": {
+"A": "",
+"B": "Hồng is pink (粉色), not red"
+}
+},
+{
+"stt": 155,
+"tang": "S1",
+"pair_id": 36428,
+"truong": "gia_tri",
+"cham": {
+"A": "D",
+"nhap": "N"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "260cm is likely 260mm for a strap, but I must keep the number as is. Changed 'Chiều dài dây' to '表带长度' (strap length) and fixed decimal separator from comma to dot for Chinese style.",
+"B": ""
+}
+},
+{
+"stt": 156,
+"tang": "S5",
+"pair_id": 2473,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 157,
+"tang": "S1",
+"pair_id": 67803,
+"truong": "gia_tri",
+"cham": {
+"nhap": "S",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "xát dối độ 5/7 refers to partial milling levels, not percentage of brown rice",
+"B": "xát dối độ 5 is 5% 糙米, not 5% 糙米"
+}
+},
+{
+"stt": 158,
+"tang": "S5",
+"pair_id": 35388,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D"
+},
+"tot_nhat": null,
+"ly_do": {
+"A": "",
+"B": ""
+}
+},
+{
+"stt": 159,
+"tang": "S2",
+"pair_id": 66352,
+"truong": "gia_tri",
+"cham": {
+"nhap": "N",
+"A": "D"
+},
+"tot_nhat": [
+"A"
+],
+"ly_do": {
+"A": "Changed 500gr to 500g",
+"B": "将500gr改为500g，gr是gram的缩写，应统一为g"
+}
+},
+{
+"stt": 160,
+"tang": "S1",
+"pair_id": 38013,
+"truong": "gia_tri",
+"cham": {
+"nhap": "D",
+"A": "N"
+},
+"tot_nhat": [
+"nhap"
+],
+"ly_do": {
+"A": "Silver is a color name, kept as is per rules",
+"B": ""
+}
+}
+]

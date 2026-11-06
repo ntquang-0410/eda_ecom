@@ -1,0 +1,57 @@
+[{"stream_name":"stderr","time":9.701005456,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.70106729,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.701075477,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.701080061999999,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.469159733,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.469212931,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.469219522,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.46922418,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":12.077726712,"data":"Dữ liệu vào: /kaggle/input/datasets/trinhnhatanh/song-ngu-3-cum-vao | thư mục ra: /kaggle/working/ra_cum_v2_thu | đầu ra cũ: không có | số GPU: 0\n"}
+,{"stream_name":"stdout","time":13.412994428,"data":"Đã nạp 5 khoá Gemini: ['GEMINI_API_KEY_aoCw', 'GEMINI_API_KEY_eVYg', 'GEMINI_API_KEY_rsqw', 'GEMINI_API_KEY_XIBA', 'GEMINI_API_KEY_XY2w']\n"}
+,{"stream_name":"stdout","time":13.413043813,"data":"  không nạp được GEMINI_API_KEY -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140388654 and label GEMINI_API_KEY.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":13.413053472,"data":"  không nạp được GEMINI_API_KEY_2 -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140388654 and label GEMINI_API_KEY_2.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":13.413058817,"data":"  không nạp được GEMINI_API_KEY_3 -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140388654 and label GEMINI_API_KEY_3.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":13.446555855,"data":"Có kết nối tới Google (HTTP 404 ).\n"}
+,{"stream_name":"stdout","time":73.681002241,"data":"[1 phút] A: 01:06:23 api_tuy_chon: xong 50/201 cụm (1.57 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":133.681672755,"data":"[2 phút] A: 01:06:56 api_tuy_chon: xong 100/201 cụm (1.54 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":193.682186705,"data":"[3 phút] A: 01:07:55 api_tuy_chon: xong 150/201 cụm (1.22 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":253.483520159,"data":"[4 phút] A: 01:09:35 Kết thúc api_tuy_chon | còn lại 0\n"}
+,{"stream_name":"stdout","time":253.483566048,"data":"--- A: mã thoát 0, 15 dòng cuối ---\n"}
+,{"stream_name":"stdout","time":253.483574491,"data":"    \"message\": \"Internal error encountered.\",\n"}
+,{"stream_name":"stdout","time":253.48358026,"data":"    \"status\": \"INTERNAL\"\n"}
+,{"stream_name":"stdout","time":253.483585823,"data":"  }\n"}
+,{"stream_name":"stdout","time":253.483590773,"data":"}\n"}
+,{"stream_name":"stdout","time":253.483595709,"data":"\n"}
+,{"stream_name":"stdout","time":253.48360052,"data":"01:05:51 Gọi thử khoá GEMINI_API_KEY_XY2w: 1.0 giây | '**你好** (Nǐ hǎo) dịch sang tiến'\n"}
+,{"stream_name":"stdout","time":253.483617373,"data":"01:05:51 Khoá dùng được: 5/5\n"}
+,{"stream_name":"stdout","time":253.483622053,"data":"01:05:51 Kết quả gọi thử: chọn {\"reasoning_effort\": \"minimal\"}: '**你好** (Nǐ hǎo) dịch sang tiếng Việt là:' sau 1.1 giây\n"}
+,{"stream_name":"stdout","time":253.483627249,"data":"01:05:51 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":253.483631177,"data":"01:06:23 api_tuy_chon: xong 50/201 cụm (1.57 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":253.483635481,"data":"01:06:56 api_tuy_chon: xong 100/201 cụm (1.54 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":253.483639992,"data":"01:07:55 api_tuy_chon: xong 150/201 cụm (1.22 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":253.483642914,"data":"01:09:24 api_tuy_chon: xong 200/201 cụm (0.94 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 3, sửa được 3 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":253.483645682,"data":"01:09:35 api_tuy_chon: xong 201/201 cụm (0.90 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 3, sửa được 3 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":253.483648409,"data":"01:09:35 Kết thúc api_tuy_chon | còn lại 0\n"}
+,{"stream_name":"stdout","time":254.084120053,"data":"A api_tuy_chon: 201/201 cụm | trạng thái {'ok': 201} | còn sót Việt 0 | hỏi lại 3, sửa được 3 | lý do lỗi {}\n"}
+,{"stream_name":"stdout","time":254.084162633,"data":"   thời gian 226 giây | tốc độ 0.9 cụm/giây | API {'yeu_cau': 131, 'thu_lai': 45, 'loi_api': 1, 'token_vao': 170298, 'token_ra': 13348}\n"}
+,{"stream_name":"stdout","time":254.084167179,"data":"   ví dụ 279642940#0 {\"_thua\": 0}\n"}
+,{"stream_name":"stdout","time":254.084170407,"data":"   ví dụ 279677567#0 {\"_thua\": 0}\n"}
+,{"stream_name":"stdout","time":254.084173177,"data":"B qwen3_14b : chưa có kết quả\n"}
+,{"stream_name":"stdout","time":254.084176161,"data":"\n"}
+,{"stream_name":"stdout","time":254.084179793,"data":"Các file đầu ra (tab Output):\n"}
+,{"stream_name":"stdout","time":254.084183747,"data":"  ra_cum_v2_thu/api_tuy_chon/lo_00000.parquet  7,551 byte\n"}
+,{"stream_name":"stdout","time":254.084187659,"data":"  ra_cum_v2_thu/api_tuy_chon/lo_00001.parquet  9,797 byte\n"}
+,{"stream_name":"stdout","time":254.084191705,"data":"  ra_cum_v2_thu/api_tuy_chon/lo_00002.parquet  12,193 byte\n"}
+,{"stream_name":"stdout","time":254.084195396,"data":"  ra_cum_v2_thu/api_tuy_chon/lo_00003.parquet  32,790 byte\n"}
+,{"stream_name":"stdout","time":254.084199339,"data":"  ra_cum_v2_thu/api_tuy_chon/lo_00004.parquet  22,234 byte\n"}
+,{"stream_name":"stdout","time":254.084203454,"data":"  ra_cum_v2_thu/log_A.log  1,944 byte\n"}
+,{"stream_name":"stdout","time":254.0842074,"data":"  ra_cum_v2_thu/the_api_tuy_chon.json  2,476 byte\n"}
+,{"stream_name":"stderr","time":257.383466482,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":257.383506649,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":257.599494194,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":257.599530671,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":258.531864333,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":258.627002387,"data":"[NbConvertApp] Writing 20454 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":261.758785816,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":262.483007801,"data":"[NbConvertApp] Writing 323329 bytes to __results__.html\n"}
+]

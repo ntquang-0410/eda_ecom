@@ -2488,7 +2488,7 @@ merge PR; (2) dùng token ghi của Quang như Huy (bộ crawl có HF_TOKEN tron
 
 → Đã làm:
 1. git: không có trên PATH; dùng git của GitHub Desktop (`%LOCALAPPDATA%\GitHubDesktop\app-3.4.19\resources\app\git\cmd\
-   git.exe`, 2.47.1); tài khoản git `nhatanh20022005 <<email-nhat-anh>>`, credential manager. Nhánh từ xa:
+   git.exe`, 2.47.1); tài khoản git `nhatanh20022005 <bena20022005@gmail.com>`, credential manager. Nhánh từ xa:
    `main`, `giahuy`, `nhatanh_updating` (095bb03, bản 28/09, 14 file).
 2. Thư mục làm việc vẫn KHÔNG là repo git (CLAUDE.md 01/10): clone riêng nhánh `nhatanh_updating` vào scratchpad, dùng
    `--git-dir=<clone>/.git --work-tree="D:\nam4_ky1\e-commerce - EDA"` để `add -A` theo `.gitignore` (bỏ .venv, *.parquet,
@@ -5761,7 +5761,7 @@ Chấm mù mẫu mới 160 mục (`scripts/song_ngu_3/lay_mau_cham_that.py`, `ti
 **Trả lời 638:** Nhờ bạn gửi key (nên tạo key riêng), địa chỉ gốc có WorkspaceId, xác nhận mô hình `deepseek-v4.1-flash` và hạn mức; thống nhất trần chi phí.
 
 **Prompt 639:**
-> (dán kết quả alibaba lần 1: địa chỉ `https://ws-<WorkspaceId>.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1`, HTTP 401 `invalid_api_key`)
+> (dán kết quả alibaba lần 1: địa chỉ `https://ws-jlpawu91s1xzwhcg.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1`, HTTP 401 `invalid_api_key`)
 
 **Trả lời 639:** Địa chỉ được nhận ra (lỗi đúng định dạng Alibaba), key bị từ chối; nghi key không cùng gói với địa chỉ (chuỗi dán dài bất thường).
 
@@ -6051,3 +6051,568 @@ Chấm mù mẫu mới 160 mục (`scripts/song_ngu_3/lay_mau_cham_that.py`, `ti
 > ủa tui nhớ có vài file dữ liệu tui đẩy lên HF ròi mà, bạn coi kĩ lại mục 3 đi
 
 **Trả lời 696:** Đối chiếu SHA256 toàn bộ 134 file / 57 parquet trên HF với 11 file local: chỉ 2 file tiêu đề trùng; các file song_ngu_* và ft_buoc4_* không trùng SHA vì bản phát hành trên HF (thư mục `data/LLM/{1688,tiki}/descriptions/`, build tag 20261022_2126 và 20261026_2123) chỉ chứa bản ĐÃ CHỌN (8-10 cột), không có hai ứng viên A/B. So từng dòng: bản HF khớp 100% với các cột chung của local. Ba file local chỉ cần danh sách cặp và chữ nguồn/đích thay được bằng bản HF: `bo_song_ngu_1_day_du` (HF `1688_description_pairs_zh_vi`), `bo_song_ngu_2_day_du` (HF `tiki_description_pairs_vi_zh`), `cap_cum_20261024_1616` (HF `tiki_description_pairs_context_vi_zh`). Đã thử thật: dựng lại 5 bảng mục bằng các file HF thay thế, số dòng và md5 item_id khớp, `ghep_bo --kiem-vong` vẫn đạt. Còn phải gửi riêng (có A/B): `cap_cum_20261026_2123` (32,9 MB), `so_sanh_cum_20261024_1616` (8,6), `don_vi_da_chon_*` 1 và 2 (12,5 + 3,9), cộng `ft_buoc4_giu*` (24,8) và 3 file kết quả nhỏ, tổng ~83 MB. Đã sửa mục 3, 15.2, 15.3 và Phụ lục C của `HUONG_DAN_JUDGE.md` và đẩy lên nhánh.
+
+**Prompt 697:**
+> các file data mà tui gửi drive riêng nằm ở đâu vậy, chỉ tui cụ thể để tui gửi đúng
+
+**Trả lời 697:** Liệt kê đường dẫn tuyệt đối, dung lượng và SHA256 của 9 file riêng (4 file có A/B: `song_ngu_4/cap_cum_20261026_2123`, `song_ngu_3/so_sanh_cum_20261024_1616`, `song_ngu_1/don_vi_da_chon_20261022_2126`, `song_ngu_2/don_vi_da_chon_20261023_1656`; 2 file nền `ft_clean/ft_buoc4_giu*.parquet`; 3 file kết quả `so_cap/ket_qua_m2_v2_*_150.jsonl`), tổng 83,2 MB. Đã gói sẵn `D:\nam4_ky1\e-commerce - EDA\GUI_CHO_HUY_du_lieu_rieng.zip` (70,3 MB) giữ đúng đường dẫn tương đối (dấu / để giải nén được trên mọi hệ điều hành) kèm `SHA256_FILE_GUI_HUY.txt`; zip nằm ngoài repo, không đưa lên GitHub. Sửa lỗi gõ ở lượt trước: thư mục đúng là `ft_clean` (không phải `ft_chean`).
+
+**Prompt 698:**
+> Tui muốn fine tune bộ sau Judge (HF zh-vie_ecom/data/LLM/bilingual_judged, gồm bản cụm và bản pair) trên model baseline Qwen3-4B để chọn siêu tham số. Đề xuất k-fold, bạn bổ sung cho đủ và đúng bước; mục tiêu: đánh giá 2 bản song ngữ sau Judge có ổn không + chọn siêu tham số cho các mô hình sau. Coi bộ data sau judge có lỗi gì không, đã sẵn sàng chạy baseline Qwen3-4B chưa.
+
+**Trả lời 698:** Tải 4 file parquet + README + manifest từ HF về `data/processed/bo_chon_hf/` (SHA256 khớp manifest; chỉ đọc, không sửa). Kiểm tra bằng script tạm ở scratchpad (kt1-kt12, chưa đưa vào repo): 25.575 sản phẩm duy nhất, 0 null/rỗng, cùng thứ tự/title/category giữa cụm và pair (title GIỐNG HỆT 100%, khác nhau chỉ ở mô tả); pair căn dòng nguồn-đích 100%, cụm lệch 53 sp vì `; ` nằm cả trong giá trị (14 sp lệch >=3). Không phát hiện lỗi chặn; không có dữ liệu cá nhân thật (email/URL 0; "điện thoại" chỉ là mã chứng nhận/mã hàng). Cảnh báo: (1) RÒ RỈ: chia ngẫu nhiên theo sản phẩm thì 2,8% title val có nguồn trùng train, 86,7% dòng mô tả val trùng nguyên dòng với train (chia theo nhóm gần-trùng: title 0%, dòng mô tả vẫn 85,5%, vì là thuộc tính khuôn mẫu); nhóm gần-trùng (title char-4gram Jaccard>=0,7 hoặc tập dòng mô tả Jaccard>=0,7): 1.903 nhóm >=2 sp phủ 7.322 sp (Tiki 4.983 = 46% Tiki, 1688 2.339 = 16%), nhóm lớn nhất 300; cùng title nguồn nhưng có >1 bản dịch: 64/381 nhóm. (2) NHÃN BẠC: nguồn nội dung mô tả cuối — cụm: gemma 49,3% / quy_tac 31,7% / chua_ro 18,9% / qwen 0,1%; pair: gemma 36,2% / quy_tac 27,3% / chua_ro 35,0% / qwen 1,5%. Pair mới chấm 5.000/34.534 đơn vị (31.510 mảnh chưa chấm, 17.240 sp chứa mảnh chưa chấm); cụm chấm 4.439/4.446 mục. Title: gemma 19.261 / qwen 6.314 (Tiki qwen 38%, 1688 qwen 15%), 5.021 title "tương đương". Chưa người kiểm. (3) Token (tokenizer Qwen3, +40 khung): mô tả trung bình ~565 token/mẫu, p99 ~1.881, >2.048: 181 (cụm)/173 (pair) mẫu, >4.096: 7; ~17,0M token/epoch (cụm), 16,3M (pair) cho title+mô tả. Pair: 436.017 dòng nhưng chỉ 75.433 dòng duy nhất theo (category, dòng): dư 83%. Pair nhất quán tuyệt đối (0% dòng có >1 bản dịch), cụm 0,9%. (4) Nhỏ: 13 title Tiki không dịch (toàn tên model: Yamaha R1M, SUPER SOCO...), 4 title 1688 dài >6 lần nguồn (>=2 thấy lặp cụm), "mất số" 4,3% title chủ yếu dương tính giả (25款 -> 2025). Đề xuất quy trình: khóa test (10%, có tập người rà 500-1.000 cặp theo điều lệ), chia nhóm + phân tầng nguồn x category, tìm siêu tham số bằng một dev split trên mẫu con (không k-fold toàn bộ), k-fold (K=3-5) dùng ở bước so cụm với pair trên cùng fold, title làm phép đo nhiễu A/A, đánh giá chéo bảng huấn luyện x tham chiếu, chỉ số chrF++/COMET/CometKiwi + kiểm tra số-đơn vị-thương hiệu-căn dòng + DeepSeek so cặp. Chưa tạo file chia tập hay chạy huấn luyện (chờ anh chốt).
+
+
+**Prompt 699:**
+> Tui có GPU 6000 Pro trên Kaggle. Vậy data hiện tại đã sẵn sàng cho quy trình bạn đề xuất rồi phải ko, ủa bạn làm riêng lẻ từng bộ (theo pair và theo cụm) phải ko
+
+**Trả lời 699:** Nội dung dữ liệu không có lỗi chặn, nhưng chưa "sẵn sàng" về chuẩn bị: chưa có file chia tập (nhóm gần-trùng, test khóa 10%, K fold, phân tầng nguồn x category), chưa có tập người rà, chưa có script dựng mẫu huấn luyện và script chấm điểm. Đã kiểm tra từng bộ riêng bằng cùng phép đo. Thiết kế: chia tập DÙNG CHUNG (so sánh ghép cặp), huấn luyện RIÊNG hai nhánh (cụm, pair) cùng siêu tham số và seed; dò siêu tham số trên bản cụm rồi thử lại 2 mức lr trên pair; title giống hệt nên chênh điểm title là nhiễu (A/A). GPU RTX PRO 6000 96 GB: dư cho Qwen3-4B, chạy LoRA bf16 không lượng tử hóa được; tốc độ token/giây và giới hạn phiên Kaggle chưa đo/kiểm chứng. Chưa tạo file hay chạy gì; chờ anh chốt có làm tập người rà không và có cho viết script chia tập + dựng mẫu + chạy Kaggle không.
+
+
+**Prompt 700:**
+> Chia tập thì dùng chung là sao vậy, tui chưa hiểu
+
+**Trả lời 700:** Giải thích bằng ví dụ 5 sản phẩm: hai bộ cụm và pair có cùng 25.575 sản phẩm, chỉ khác chữ mô tả; "chia dùng chung" là chia DANH SÁCH sản phẩm một lần (train/dev/test, nhóm gần-trùng gom cùng phía) rồi áp cho cả hai bộ, để hai mô hình thi cùng đề (so ghép cặp, kiểm định mạnh hơn). Chia riêng sẽ làm hai mô hình thi hai đề khác nhau nên không kết luận được bản nào tốt hơn. Chỉ huấn luyện là riêng (hai nhánh, cùng siêu tham số và seed). Không tạo file hay chạy gì.
+
+
+**Prompt 701:**
+> Quy trình k-fold của anh đúng hướng nhưng nên dùng k-fold ở bước so cụm với pair, không dùng để dò toàn bộ siêu tham số. Bạn giải thích cho tui ý này nha
+
+**Trả lời 701:** K-fold = chia K phần, huấn luyện K lần đổi phần thi rồi lấy trung bình; giá = K lần huấn luyện. Dò siêu tham số (ví dụ 12 cấu hình): một dev split + mẫu con 5.000 sp (~3,3M token/epoch) = 12 lần, so với k-fold K=5 dữ liệu đầy (~12M token/epoch) = 60 lần (ước tính, chưa đo tốc độ); khác biệt giữa cấu hình thường lớn nên một dev split đủ rõ, chỉ chạy thêm seed/fold cho 2 cấu hình sát nhau. So cụm với pair: chênh lệch có thể chỉ vài phần mười chrF++, cần K cặp điểm để tính trung bình/độ lệch/kiểm định ghép cặp. Test khóa 10% đo một lần ở cuối. Không tạo file hay chạy gì.
+
+
+**Prompt 702:**
+> Nhưng tui vẫn muốn theo K-fold thì vẫn được chứ phải ko, vì tui có GPU 6000 pro mà
+
+**Trả lời 702:** Được: k-fold để dò siêu tham số không sai, chỉ tốn hơn; RTX PRO 6000 làm nó khả thi. Ước tính (giả định 10.000 token/giây, chưa đo; 12 cấu hình, 2 epoch): dev split mẫu con 5.000 sp 12 lần ~64M token ~2 giờ; k-fold K=3 mẫu con 36 lần ~190M ~5 giờ; K=5 mẫu con 60 lần ~317M ~9 giờ; K=5 dữ liệu đầy 60 lần ~1,44 tỷ ~40 giờ. Khuyên: k-fold trên mẫu con 5.000 sp, hoặc dev split cho cả 12 cấu hình rồi k-fold chỉ cho 2-3 cấu hình đầu; đo tốc độ 100 bước đầu trước khi chốt. Không đổi: test khóa 10% vẫn cần, fold chia theo nhóm gần-trùng, một phép chia dùng chung cho cả hai bộ, giới hạn phiên Kaggle chưa kiểm chứng nên cần checkpoint. Không tạo file hay chạy gì.
+
+
+**Prompt 703:**
+> k-fold trên mẫu con 5.000 sản phẩm hợp lý nhất, tại sao vậy. Ko cần chạy trên toàn bộ data hử
+
+**Trả lời 703:** Dò siêu tham số chỉ cần xếp hạng cấu hình, mẫu con cho thứ hạng gần giống mà rẻ ~4-5 lần. THỪA NHẬN: câu "thứ hạng gần như không đổi" ở lượt 702 là kinh nghiệm chung, CHƯA kiểm chứng trên bộ này; hai chỗ có thể sai: số epoch tối ưu và lr phụ thuộc kích thước dữ liệu. Rào: dò trên mẫu con (lấy phân tầng nguồn x category, chia theo nhóm gần-trùng), lấy 2-3 cấu hình đầu, chạy lại trên dữ liệu đầy (~1-2 giờ) để xác nhận thứ hạng. Bước so cụm với pair thì chạy k-fold K=5 trên dữ liệu đầy cho cả hai bộ: 10 lần x ~24M token = ~240M token ~7 giờ (giả định 10.000 token/giây, chưa đo). Nếu muốn mọi giai đoạn trên dữ liệu đầy thì ~40 giờ GPU. Không tạo file hay chạy gì.
+
+
+**Prompt 704:**
+> Vậy quy trình thực hiện cụ thể là gì, bạn cho tui biết nha, mỗi bước giải thích kĩ cho tui mục tiêu, vì sao
+
+**Trả lời 704:** Quy trình 9 bước, mỗi bước có mục tiêu/làm gì/vì sao/điều kiện qua: B0 đóng băng dữ liệu (revision HF 82aa9c9, SHA256 4 file); B1 chia tập dùng chung (nhóm gần-trùng, test khóa 10% ~2.550 sp, pool ~23.000 chia 5 fold phân tầng nguồn x category, mẫu con 5.000 sp chia 3 fold) -> split.parquet; B2 dựng mẫu title + mô tả (chỉ dẫn nêu hướng, enable_thinking=False, loss chỉ trên phần dịch, max_len 2.048, mẫu quá dài cắt theo mảnh; pair không khử trùng dòng lặp mặc định, báo cáo tách dòng đã thấy/mới); B3 bộ chấm (chrF++, COMET, CometKiwi, giữ số/đơn vị/thương hiệu, sai chữ viết, đúng số dòng, sinh lặp) + zero-shot Qwen3-4B làm mức sàn; B4 chạy thử 100 bước + đo token/giây; B5 dò siêu tham số bản cụm trên mẫu con K=3: 6 cấu hình (lr 5e-5/1e-4/2e-4 x rank 16/64), 3 epoch chấm sau mỗi epoch, 18 lần chạy ~120M token ~3 giờ (giả định 10.000 token/giây; lưu ý cosine làm điểm epoch 1 không hoàn toàn bằng chạy riêng 1 epoch); B6 xác nhận 2-3 cấu hình đầu trên dữ liệu đầy + thử 2 mức lr trên pair; B7 so cụm với pair K=5 dữ liệu đầy, 10 lần ~240M token, thêm 3 seed một fold, title giống hệt nên chênh điểm title = mốc nhiễu; B8 đánh giá sâu: bảng chéo, DeepSeek so cặp mù, tập người rà 500-1.000 cặp là chỉ số chính; B9 huấn luyện cuối trên pool, đo một lần trên test khóa, tiêu chí "ổn", model khác chỉ quét lại 3 mức lr. Chưa kiểm chứng: token/giây, giới hạn phiên Kaggle, mẫu con cho thứ hạng giống dữ liệu đầy (B6 kiểm). Không tạo file hay chạy gì.
+
+
+**Prompt 705:**
+> chỗ Rút mẫu con 5.000 sản phẩm từ pool để dò siêu tham số, tui nghĩ có rủi ro á, bạn nghĩ sao
+
+**Trả lời 705:** Đồng ý rủi ro có thật. Rủi ro chính em chưa nêu đủ ở bước 6: loại nhầm cấu hình tốt nhất (bước 6 chỉ chạy lại 2-3 cấu hình đầu nên không cứu được cấu hình đã bị loại). Khác: epoch/lr phụ thuộc kích thước dữ liệu; nhiễu (mỗi fold mẫu con ~1.667 sp); mô tả mẫu con ít dòng lặp hơn nên tỉ lệ "dòng mới" lệch; rút theo nhóm cẩn thận kẻo lệch Tiki (46% nằm trong nhóm gần-trùng). Đề xuất: (1) nếu bước 4 đo >= ~20.000 token/giây thì bỏ mẫu con, dò 6 cấu hình x K=3 trên dữ liệu đầy ~610M token ~8-9 giờ (ước tính, chưa đo); (2) nếu vẫn dùng mẫu con thì kiểm chứng trước: 4 cấu hình khác biệt chạy trên mẫu con và dữ liệu đầy một fold, so thứ hạng, ~96M token ~3 giờ; (3) giữ mọi cấu hình trong 1 độ lệch chuẩn từ đầu bảng; (4) hoặc tăng mẫu con lên 10.000. Em nghiêng về (1) sau khi đo tốc độ, không thì (2). Không tạo file hay chạy gì.
+
+
+**Prompt 706:**
+> Bạn soạn quy trình 9 bước nãy vào file plan cho tui đi, để khi tui với bạn bàn về plan, có thay đổi gì thì tui kêu bạn cập nhật vào plan đó, bạn soạn kĩ nha, /plan
+
+**Trả lời 706:** Vào chế độ plan, soạn bản nháp v0.1 vào `C:\Users\ADMIN\.claude\plans\enumerated-questing-crystal.md` (10 mục: bối cảnh, hiện trạng dữ liệu [ĐO], nguyên tắc, 9 bước B0-B9, rủi ro, ngân sách [ƯỚC], việc cần tạo trong repo, kiểm chứng, câu hỏi mở [CHỜ], nhật ký thay đổi). Người dùng từ chối ExitPlanMode (chưa duyệt, muốn bàn tiếp). Không sửa file nào trong repo.
+
+**Prompt 707:**
+> Tiếp tục bàn về plan cho 2 bộ data (pair và cụm) qua mô hình baseline Qwen3-4B kèm k-fold để set tham số, làm rõ cho tui cái plan đó đi. Bạn kiểm tra plan kĩ coi đã tối ưu nhất cho project này và 2 bộ data đó chưa, phải hiệu quả tránh sai sót, rủi ro nha, tui có GPU 6000 Pro trên Kaggle
+
+**Trả lời 707:** Kiểm tra lại plan v0.1 bằng số đo mới (scratchpad kt13, kt14; chưa sửa plan, chờ lệnh): (1) HAI BỘ GIỐNG NHAU ~99%: token mô tả trùng 99,1% (khác 1,0% token; 70,9% sp trùng >=99%), 43,5% sp có mô tả dịch giống hệt nhau, ở 81,5% sp đo được từng mảnh thì 4,8% mảnh khác (5,8% ký tự; ví dụ "Một ống kính" vs "Đơn thấu kính" là đồng nghĩa); judge đổi mô tả chỉ 615/441.842 mảnh (0,14%) ở cụm, 9.054/872.034 (1,0%) ở pair, còn title đổi 7.604 (29,7%). Hệ quả: so cụm với pair có tín hiệu rất nhỏ, chênh điểm dễ nằm trong nhiễu; cần đo trên tập mảnh khác biệt và coi "không khác biệt có ý nghĩa" là kết quả hợp lệ. (2) Dòng mới khi chia theo nhóm: 15,3% số dòng nhưng 33,8% ký tự dịch (Tiki 24,2% dòng / 49,4% ký tự; 1688 13,4% / 32,6%). (3) 1688 chiếm 58% sp, ~82% token mô tả -> chọn siêu tham số phải macro-average theo hướng. (4) Thiếu trong plan v0.1: chi phí sinh bản dịch khi đánh giá chưa tính (ước 5-25 phút/lần chấm một fold nếu 4.600 sp x ~310 token), nên chọn bằng val loss trước rồi mới sinh cho top; cố định cách giải mã (greedy, max_new_tokens); DeepSeek vừa là judge tạo nhãn vừa là người chấm B8 nên có vòng tròn thiên vị; GPU Blackwell có thể lệch phiên bản thư viện (vLLM/bitsandbytes) -> kiểm ở B4; ngưỡng "ổn" phải chốt trước khi chạy; dùng cùng seed và cùng thứ tự sản phẩm cho hai nhánh để giảm nhiễu. Đề xuất sửa plan lên v0.2, chờ anh chốt.
+
+
+**Prompt 708:**
+> Đề xuất hiệu quả nhất của bạn là gì, nêu tại sao, lấy ví dụ cho tui dễ hiểu để tui chốt
+
+**Trả lời 708:** Đề xuất: coi hai bộ là một khi dò siêu tham số, chỉ soi riêng chỗ chúng khác nhau khi so cụm với pair. Lý do (ví dụ hai đề thi giống 99%, ví dụ thật "Một ống kính" vs "Đơn thấu kính"): điểm tổng gần như bằng nhau và chênh lệch là nhiễu. Bốn phần: (1) dò siêu tham số một lần trên bản cụm, K=3, dữ liệu đầy nếu B4 đo >= ~20.000 token/giây (không thì mẫu con + kiểm chứng), chọn bằng val loss trước rồi sinh/chấm cho 2-3 cấu hình đầu, bỏ bước thử lr trên pair; (2) hai nhánh thi cùng sản phẩm test nên nhiễu chủ yếu là seed: mỗi nhánh K=3 + 2 seed phụ ở một fold, ~10 lần chạy (ngang ngân sách cũ); (3) soi riêng ~19.000 mảnh khác nhau (~1.900 trong test), lấy mẫu 300 cho người rà/DeepSeek so cặp mù (DeepSeek chỉ phụ); (4) chốt ngưỡng "ổn" sau B3, trước B5. Đánh đổi: kết luận có thể là "như nhau về độ chính xác", khi đó chọn bản theo nhất quán/định dạng/độ phủ judge; tổng ước 15-20 giờ GPU (ước tính). Chờ anh chốt 3 việc: tập người rà, thí nghiệm title, đồng ý sửa plan v0.2. Chưa sửa plan, chưa tạo file.
+
+
+**Prompt 709:**
+> Bạn kiểm tra dùm tui, bản pair là từ bản cụm tách thành từng pair phải ko, vậy mô tả bản cụm khác gì với mô tả bản pair vậy (Title ko so vì dùng chung)
+
+**Trả lời 709:** Sửa nhận định: NGƯỢC LẠI. Theo CLAUDE.md (dòng 120-140) và HUONG_DAN_JUDGE.md mục 2: bản pair có trước (bộ 1 = 1688, bộ 2 = Tiki; mỗi tên/giá trị dịch riêng không ngữ cảnh, Gemma/Qwen hai ứng viên, CometKiwi chọn); bản cụm làm sau 23-26/10 (bộ 3 = Tiki, bộ 4 = 1688) là HIỆU ĐÍNH bản nháp pair với tên sản phẩm làm ngữ cảnh, khóa các mục từ điển/quy tắc/thương hiệu/số đo/mã từ pair; theo ghi chú 25/10 bộ 4 chạy cả bộ chỉ bằng Gemma (Qwen cả bộ huỷ). Số đo (scratchpad kt15, 318.682 mảnh căn hàng được, 81,5% sp): 4,8% mảnh khác nhau (tên 0,7%, giá trị 4,2%; chỉ tên 2.187, chỉ giá trị 13.158, cả hai 108). Nhất quán: tên nguồn có >1 cách dịch pair 0/3.044 vs cụm 40/3.044 (1,3%); giá trị pair 459/56.193 (0,82%, chưa tra được nguyên nhân vì chưa đọc mã tạo bộ), cụm 676 (1,20%). Ví dụ: 500GR vs 500g, 5000 miliampe vs 5000 mAh, 汽车安卓屏幕盒子 vs 车载屏幕 Android Box, núm vú vs núm ti, 通用 -> Thông dụng 709/711 lần ở cụm. Ý nghĩa: câu hỏi "cụm hay pair" thực chất là "hiệu đính theo ngữ cảnh có tốt hơn nháp từng đơn vị không", tập mảnh khác nhau là nơi hiệu đính (cộng Judge) tác động; củng cố đề xuất soi riêng mảnh khác nhau. Không sửa plan, không tạo file.
+
+
+**Prompt 710:**
+> ủa tui thấy ở zh-vie_ecom/data/LLM/bilingual_judged, có 2 bộ data (bản cụm và bản pair) thì cũng như bạn nói hử (dán lại đoạn trả lời Prompt 709)
+
+**Trả lời 710:** Xác nhận: hai file `bo_cum_chon_deepseek` và `bo_pair_chon_deepseek` là dạng cuối của hai nhánh (README HF: "bản dịch theo cụm" / "theo đơn vị pair"; pair judge 5.000/34.534 đơn vị, cụm 4.439/4.446 mục). Làm rõ hai điểm: (1) bản trong bilingual_judged không phải bộ 1-4 gốc mà là kết quả sau luật + Judge DeepSeek + rà soát trên nền official v2 (cột judge_chon_description: gemma/qwen/quy_tac/chua_ro); (2) chiều "pair có trước, cụm hiệu đính sau" lấy từ ghi chú CLAUDE.md 23-26/10, KHÔNG suy ra được từ dữ liệu (hai bộ đối xứng khi so); dữ liệu chỉ xác nhận gần nhau 99% và kiểu khác biệt phù hợp hiệu đính; chưa đối chiếu từng dòng bộ 1-4 với official v2. Lưu ý thuật ngữ "pair" = dịch từng đơn vị tên/giá trị riêng, không phải cặp câu song ngữ nói chung. Không sửa plan, không tạo file.
+
+
+**Prompt 711:**
+> Vậy là không hề có chuyện tách ra từ bản cụm phải ko, chứ nếu tách ra từ bản cụm thì 2 bộ giống nhau hoàn toàn rồi
+
+**Trả lời 711:** Xác nhận: theo tài liệu, pair không tách cơ học từ cụm; suy luận của anh đúng (tách cơ học thì sau khi đổi dấu ngăn mô tả phải giống hệt, thực tế chỉ 43,5% sản phẩm giống hệt, 4,8% mảnh khác). Khác biệt chủ yếu KHÔNG do Judge: Judge đổi mô tả cụm 615/441.842 mảnh (0,14%), pair 9.054/872.034 (1,0%), nhỏ hơn nhiều so với 4,8%; phần còn lại có từ trước Judge do hai quy trình dịch khác nhau, và kiểu khác biệt (500GR -> 500g, miliampe -> mAh, Android Box) là sửa theo ngữ cảnh. Giữ lưu ý: dữ liệu chỉ chứng minh không phải bản sao cơ học; chiều pair có trước/cụm hiệu đính dựa vào CLAUDE.md. Không sửa plan, không tạo file.
+
+
+**Prompt 712:**
+> Quay lại đề xuất của bạn. 1. Coi hai bộ là một khi dò siêu tham số... tui nghĩ không nên vì bên bản cụm có thêm ngữ cảnh nên dịch sẽ có vài chỗ khác. Nếu coi 2 là 1 sẽ có rủi ro gì không. 2. Có làm tập người rà 300 mảnh khác nhau + 500-1.000 cặp test không? mảnh là gì vậy, cho tui ví dụ dễ hiểu. 3. Có thêm thí nghiệm title để đo giá trị của Judge không? ... có cần thiết ko, nếu cần thì tại sao phải dùng bộ trước judge mà không phải bộ sau judge
+
+**Trả lời 712:** (1) Làm rõ "coi là một" = dùng chung bộ siêu tham số, KHÔNG gộp dữ liệu hay huấn luyện một mô hình chung. Rủi ro anh nêu có thật: cấu hình tốt cho cụm chưa chắc tốt cho pair (nhánh pair bất lợi nhẹ); và nếu prompt mô tả không có tên sản phẩm thì mô hình không thấy ngữ cảnh mà bản cụm dùng để sửa -> đề xuất đưa title nguồn vào prompt mô tả của CẢ HAI nhánh (~30 token/mẫu) để đầu vào giống nhau, chỉ khác bản dịch đích. Rút lại việc bỏ thử lại trên pair (lượt 708): dò trên cụm, rồi chạy 2-3 cấu hình đầu trên pair một fold (~3 lần chạy, ~2 giờ ước tính); nếu thứ hạng khác thì dò riêng pair. (2) Mảnh = một thuộc tính `tên: giá trị` (ví dụ nguồn `镜头数量: 前后双录`: cụm "Số lượng ống kính: Ghi hình trước sau", pair "...Ghi hình trước sau kép"); 300 mảnh khác nhau dùng để người chọn bản dịch nào tốt hơn (~15-30 giây/mảnh, ~1,5-2,5 giờ, ước tính); 500-1.000 cặp test là (văn bản nguồn, bản dịch người đã rà) để chấm điểm tuyệt đối mô hình, nặng hơn nhiều (ước vài chục giờ nếu rà cả mô tả dài). (3) Đo giá trị Judge cần so hai phiên bản chỉ khác ở Judge, nên cần bản trước Judge làm đối chứng (bản sau Judge một mình không có gì để so, như thử phân bón cần ô không bón). KHÔNG cần cho mục tiêu "ổn + siêu tham số"; chỉ cần nếu phải chứng minh Judge đáng giá. Đã kiểm (scratchpad kt16): bản trước Judge có sẵn ở `ft_clean/ft_buoc4_giu.parquet`, 25.575 sp khớp, title dịch khác sau Judge đúng 7.604, trùng cột title_da_doi 25.575/25.575. Rẻ nhất: người so trực tiếp 300 title khác nhau (không cần GPU); fine-tune title chỉ ~2,5M token/epoch (~15% bộ), ~0,6 giờ ước tính. Không sửa plan, không tạo file.
+
+
+**Prompt 713:**
+> Vậy thì không cần Thí nghiệm title. Quay lại đề xuất trong plan đi, bạn có cần hỏi tui và cần tui chốt gì nữa không, nêu tại sao và lấy ví dụ cho tui dễ hiểu, ví dụ chia tập test (để tui kiếm người học HSK 5 kiểm, thực ra nếu không có người thì tui sẽ kêu Claude kiểm)
+
+**Trả lời 713:** Ghi nhận quyết định: bỏ thí nghiệm title. Cần anh chốt 3 việc: (1) người rà và cách rà: test khóa 10% (~2.550 sp), rút ~500 cặp cho người rà (ví dụ 250 title 1688 zh->vi + 250 Tiki vi->zh); HSK 5 chấm được hướng 1688 (tiếng Việt là tiếng mẹ đẻ, thuật ngữ khó như 磨砂皮丝光反绒皮 thì đánh dấu "không chắc") nhưng yếu ở hướng Tiki vì phải đánh giá tiếng Trung tự nhiên (ví dụ "Cà phê muối / Salted coffee" -> 盐咖啡); đề xuất Claude rà đầu tiên và đánh dấu mục nghi ngờ, người HSK 5 xem mục đánh dấu + 20% mẫu kiểm chéo; nếu chỉ Claude thì phải ghi "rà soát bằng LLM" chứ không phải "người rà" theo điều lệ, và cần cân usage (500-1.000 cặp có mô tả dài ước vài trăm nghìn token); (2) có chờ Huy chạy Judge rộng cho pair không (đề xuất chạy ngay, ghi giới hạn; chạy lại nhánh pair sau ~5 lần ~3 giờ ước tính); (3) ai dựng notebook Kaggle và ai bấm chạy (trước đây bộ 3/4 em dựng + đẩy API, anh Commit trên web; cần tài khoản Kaggle, chế độ GPU RTX PRO 6000, giới hạn phiên chưa kiểm chứng; viết script tốn usage Claude nên có thể giao Huy kèm hướng dẫn). Em tự đặt mặc định: title nguồn trong prompt mô tả cho cả hai nhánh; không khử trùng dòng lặp pair; LoRA alpha = 2 x rank, dropout 0,05, batch 32, warmup 3%; dò mẫu con hay dữ liệu đầy quyết sau B4; ngưỡng "ổn" đề xuất sau B3 anh duyệt; bỏ DeepSeek làm người chấm so cặp ở B8; không làm thí nghiệm title. Chờ anh trả lời rồi cập nhật plan v0.2. Chưa sửa plan, chưa tạo file.
+
+
+**Prompt 714:**
+> (kèm ảnh Kaggle notebook `nlp-group3`, tài khoản trinhnhatanh, Settings > Accelerator có GPU RTX Pro 6000 đang chọn; Input có cuộc thi ARC Prize 2026 - ARC-AGI-3, dataset song-ngu-4-cum-vao; menu hiện "Turn on internet"). Trả lời ba câu hỏi: 1. Không có người HSK 5, nhờ Claude rà, hãy ước lượng usage, gói Weekly đã dùng 17%. 2. Không cần chờ Huy chạy Judge rộng cho pair. 3. Notebook Kaggle này vì có cuộc thi nên có RTX 6000 chạy lẹ. Dặn: phải hỏi cho tới khi hiểu rõ mục tiêu; khi nhận lệnh mới bắt đầu làm theo plan.
+
+**Trả lời 714:** Ghi nhận 3 quyết định (Claude rà thay người; không chờ Huy; dùng notebook Kaggle `nlp-group3`). Ước lượng usage rà bằng Claude (token, ước tính, KHÔNG quy ra % tuần được vì không biết hạn mức gói): 300 mảnh ~50-100k; 500 cặp (250 title + 250 mô tả) chấm đúng/sai + loại lỗi ~200-300k, nếu còn sửa thành bản tham chiếu ~350-500k; 1.000 cặp gấp đôi; cách đo thật: chạy thử 20 mục rồi nhìn thanh Weekly để ngoại suy; giảm chi phí: gom 15-25 mục mỗi lượt, ghi kết quả ra file từng lô, mở phiên mới với bản tóm tắt ngắn. Quan sát từ ảnh: RTX Pro 6000 gắn với cuộc thi (quyền dùng có thể có hạn/quota, chưa kiểm chứng); menu "Turn on internet" cho thấy phiên hiện đang tắt internet (cần để tải Qwen3-4B và dữ liệu HF, hoặc thêm bằng Kaggle Model/Dataset); notebook hiện là bộ 4 chạy vLLM 0.32.0 trên T4 x2, chưa biết vLLM/PyTorch có chạy trên Blackwell không. Câu hỏi để hiểu mục tiêu: (1) kết quả cuối cần chọn một bộ hay giữ cả hai hay chỉ siêu tham số; (2) các mô hình sau của nhóm (tên, cỡ, LoRA hay full); (3) mô hình một hay hai chiều, title + mô tả hay chỉ một; (4) nhóm đã có tập test chung chưa (tiki_eda có cột split gán sẵn); (5) Claude rà: chấm đúng/sai hay sửa tham chiếu, bao nhiêu mục, ngưỡng usage chấp nhận; (6) deadline và hạn dùng RTX Pro 6000; (7) quota GPU, internet, đã chạy gì nặng trên RTX Pro 6000 chưa, chạy bằng API hay Commit web. Chưa bắt đầu làm theo plan, chưa sửa plan v0.1, chờ anh trả lời và ra lệnh.
+
+
+**Prompt 715:**
+> 1. Kết quả cuối: b và c luôn (giữ cả hai, chỉ cần biết cả hai có ổn không + bộ siêu tham số). 2. Chưa chốt mô hình đang khảo sát thêm, sẽ dùng LoRA. 3. "mô hình cuối là sao", tui chưa hiểu; lúc demo tui mở trang mua sắm bên Trung, chuyển project thành extension, bấm là dịch qua tiếng Việt. 4. Chưa có tập test. 5. Claude kiểm tập test phải ko, theo bạn Claude nên chấm như thế nào. 6. Bạn cứ chạy thoải mái. 7. Thoải mái. Phản hồi theo mục cho dễ chốt.
+
+**Trả lời 715:** Phản hồi theo mục 1-7. (1) Không cần chọn một bộ: bỏ phần so cặp "bản nào hơn", thay bằng chấm tuyệt đối từng bộ; B7 giữ K-fold cho từng bộ để có điểm ổn định. (2) LoRA: siêu tham số Qwen3-4B làm điểm xuất phát, model khác chỉ quét lại 3 mức lr. (3) "mô hình cuối" = mô hình đặt vào extension; câu hỏi là có cần hướng vi->zh không (demo chỉ cần zh->vi); đề xuất vẫn huấn luyện hai chiều (quyết định 30/10) nhưng đánh giá chính trên zh->vi (1688); dữ liệu chỉ có title + thuộc tính, không có đánh giá/nút giao diện của trang. (4) Chưa có test: tạo tập test khóa 10% và chia sớm id test cho nhóm để các bạn không huấn luyện trên đó. (5) Claude có hai vai: (A) kiểm dữ liệu TRƯỚC khi tốn GPU: mẫu 300 sản phẩm phân tầng, chấm tuyệt đối đạt/lỗi nhẹ/lỗi nặng + loại lỗi (sai nghĩa, số-đơn vị, thương hiệu, thiếu-thừa, thuật ngữ, chữ lạ, văn phong), mù nguồn gốc bản dịch, thêm 300 mảnh khác nhau chấm từng bản; mục "Đạt" làm tham chiếu test, mục lỗi nặng Claude sửa; (B) chấm đầu ra mô hình trên ~250 mục test: fine-tune vs zero-shot so cặp mù ngẫu nhiên thứ tự, kiểm định dấu. Ước ~0,65M token cả hai vai; đo thật bằng thử 20 mục. Ngưỡng "ổn" đề xuất: lỗi nặng <= 5% trên mẫu 300 (khoảng tin cậy ~±2,5 điểm khi p=5%). (6)(7) Không áp lực deadline/quota -> đề xuất bỏ mẫu con, dò siêu tham số trên dữ liệu đầy (K=3), đồng thời vẫn kiểm internet/Blackwell ở B4. Câu hỏi còn lại: cần vi->zh không; ngưỡng 5% có ổn; đồng ý cập nhật plan v0.2. Chưa sửa plan, chưa chạy gì.
+
+
+**Prompt 716:**
+> 1. Có cần hướng vi->zh không? Tui nghĩ cần để mô hình học được nhiều hơn, tự nhiên hơn. 2. Ngưỡng lỗi là gì, áp dụng ở bước nào vậy. Về menu "Turn on internet": bạn cứ tải mô hình về máy rồi tải mô hình và dữ liệu lên Kaggle như dataset (như đóng gói thư viện và đóng gói mô hình tui chụp hình).
+
+**Trả lời 716:** (1) Ghi nhận: cần cả hai hướng (khớp quyết định 30/10). Lưu ý trung thực: cả hai phía đích hiện đều là bản dịch máy (1688 đích vi do Gemma/Qwen; Tiki đích zh do Gemma/Qwen), nên "tự nhiên hơn" không được dữ liệu bảo đảm; ý tưởng dùng Tiki đảo chiều (nguồn zh dịch máy, đích vi bản địa) là kỹ thuật dịch ngược, chưa đo, để ngoài phạm vi; đánh giá và chọn siêu tham số tách hai hướng, trung bình theo hướng; kiểm dữ liệu vai A tăng thành 300 sp zh->vi + 200 sp vi->zh + 300 mảnh khác nhau (~0,5M token), cả hai vai ~0,8M token (ước tính). (2) Ngưỡng lỗi = tỉ lệ tối đa mục "lỗi nặng" chấp nhận để coi bộ dữ liệu là ổn; áp dụng ở vai A (kiểm dữ liệu), là cổng dừng/đi tiếp trước khi tốn GPU; ví dụ 12/300 = 4% (Wilson 95%: 2,3%-6,9%) đi tiếp, 25/300 = 8,3% dừng để tìm nguyên nhân; tính riêng từng hướng; khác với kiểm định dấu p<0,05 ở vai B. Mô hình Qwen3-4B và dữ liệu: đồng ý đóng gói thành Kaggle Dataset (như song-ngu-4-dong-goi-thu-vien/mo-hinh); gợi ý kiểm trước Add Input > Models xem Kaggle có sẵn Qwen3-4B không (chưa kiểm chứng) để khỏi tải ~8 GB trên mạng chậm; thư viện (transformers, peft, trl, accelerate) đóng gói wheel; PyTorch cho Blackwell kiểm ở B4. Chưa tải/upload gì, chờ lệnh "bắt đầu". Chưa sửa plan.
+
+
+**Prompt 717:**
+> (kèm ảnh Kaggle Add Input > Models tìm "Qwen3-4B": 129 kết quả, hiện Qwen 3 Embedding, Ministral 3, Qwen 3 Reranker, Qwen3-4B-SVG-Code-Generator...). 1. Ngưỡng 5% nha. 2. Hình như không có model rồi, bạn cứ làm theo tui nói nha (đóng gói thành dataset). 3. Bạn cần hỏi tui gì nữa không để hiểu rõ rồi cập nhật plan.
+
+**Trả lời 717:** Chốt ngưỡng lỗi nặng <= 5% (D5). Không còn câu hỏi chặn; cập nhật plan lên v0.2 tại `C:\Users\ADMIN\.claude\plans\enumerated-questing-crystal.md` (ghi đè v0.1, có nhật ký thay đổi). Nội dung chính: 11 quyết định D1-D11 (04/11/2026); quy trình B0-B10 (B0 đóng băng + đóng gói 3 Kaggle Dataset mô hình/thư viện/dữ liệu; B1 chia tập chung, test khóa 10%, pool 5 fold; B2 Claude kiểm dữ liệu vai A trên mẫu từ test: 300 sp zh->vi + 200 sp vi->zh + 300 mảnh khác nhau, cổng lỗi nặng <= 5% từng hướng từng bộ, Wilson 95%; B3 dựng mẫu, title nguồn trong chỉ dẫn mô tả cả hai nhánh; B4 bộ chấm + zero-shot, trung bình theo hướng, giải mã cố định; B5 chạy thử + đo tốc độ + kiểm tắt internet và Blackwell; B6 dò 6 cấu hình x K=3 trên dữ liệu đầy (bỏ mẫu con), chọn bằng val loss rồi sinh cho top; B7 kiểm trên pair; B8 K=5 từng bộ + 2 seed phụ; B9 Claude vai B so cặp mù ~250 mục + kiểm định dấu; B10 huấn luyện cuối + test khóa + báo cáo); tiêu chí "ổn" khóa trước B6; ngân sách ~1,1 tỷ token (~31 giờ nếu 10.000 token/giây, ~16 giờ nếu 20.000, ~10 giờ nếu 30.000), usage Claude ~0,8M token (ước tính). Mặc định em tự đặt: Qwen/Qwen3-4B tắt suy luận, title nguồn trong chỉ dẫn, pair không khử trùng dòng lặp, báo cáo đặt trong repo EDA, không đẩy HF. Chưa bắt đầu làm theo plan, chờ lệnh "bắt đầu". Không tạo file nào trong repo (chỉ cập nhật file plan).
+
+
+**Prompt 718:**
+> Ủa bản test khoảng 2k sản phẩm á, tui có thể đưa các mô hình khác chấm như Gemini Pro mà đúng ko. Bạn kiểm tra kĩ plan còn điều gì bất thường nữa không, đặc biệt cho tui hỏi về k-fold, mục đích bạn chạy là gì vậy, tại sao
+
+**Trả lời 718:** (1) Test ~2.550 sp (10%); Claude chỉ rà mẫu ~500 sp (B2) + ~250 mục (B9), không rà hết. Có thể đưa mô hình khác chấm (Gemini Pro, GPT...) và nên dùng như người chấm thứ hai để chấm toàn bộ ~2.550 sp ở vai B; CẢNH BÁO thiên vị cùng họ: Gemma (Google) tạo 49%/36% nhãn mô tả nên Gemini có thể ưu ái văn phong Gemma, làm tăng giả tạo mức hơn zero-shot của mô hình fine-tune; ưu tiên người chấm khác họ (Claude, GPT), Gemini chỉ phụ kèm kiểm đồng thuận (kappa) với Claude trên ~100 mục; cần biết anh có API/ngân sách Gemini không. (2) K-fold dùng ở B6 (K=3: chọn siêu tham số không phụ thuộc may rủi một tập kiểm) và B8 (K=5 từng bộ: mỗi sp trong pool được chấm đúng 1 lần ở trạng thái chưa thấy = ~23.000 sp bằng chỉ số tự động, phát hiện túi lỗi theo category/hướng, đo độ lệch giữa fold; Claude chỉ nhìn được ~250 mục). K-fold KHÔNG làm mô hình tốt hơn, KHÔNG chọn bộ hơn. Chi phí: k-fold chiếm ~635M/1,1 tỷ token (~55%): bỏ k-fold còn ~500M (~14 giờ thay vì ~31 giờ nếu 10.000 token/giây, ước tính); hạ B8 từ K=5 xuống K=3 tiết kiệm ~100M. (3) Bất thường còn lại trong plan v0.2: B0 đóng gói split.parquet trước khi B1 tạo ra nó (sai thứ tự); B9 nên dùng mục khác B2 để tránh neo (Claude đã thấy tham chiếu); rubric chấm của Claude phải dùng 4 điểm trung lập + ngoại lệ của so_cap_rubric (đơn vị, thương hiệu Latin, từ ngoại, từ đồng nghĩa) để không đếm biến thể vô hại thành lỗi; 3 fold dùng chọn siêu tham số lại nằm trong B8 nên số ổn định có lạc quan nhẹ (điểm chính lấy ở test khóa B10); mảnh khác nhau chỉ lấy từ sp căn hàng được (81,5%) nên hơi lệch về sp cấu trúc đơn giản; cổng 5% với n=200 (vi->zh) khoảng tin cậy rộng (~±3 điểm) nên quyết theo điểm quan sát và báo CI; câu hỏi cũ chưa đóng: điều khoản Gemini API về dùng đầu ra Gemma để huấn luyện (CLAUDE.md dòng 113). Chưa sửa plan, chờ anh đồng ý cập nhật v0.3.
+
+
+**Prompt 719:**
+> 1. Tui định gửi file csv lên cho Gemini Pro bản web chấm, có ổn ko. B9, B2 là gì vậy
+
+**Trả lời 719:** (1) Gemini Pro web chấm bằng CSV: làm được nếu theo quy trình: CSV chỉ có id, hướng, nguồn, bản dịch A/B đã đảo ngẫu nhiên (bỏ mọi cột nhãn Gemma/Qwen/judge), lô nhỏ ~50-100 dòng, dùng cùng rubric với Claude, bắt trả CSV/JSON có id, kiểm số dòng và id trả về khớp, xuống dòng trong mô tả thay bằng ký hiệu để khỏi vỡ CSV, UTF-8; hạn chế của bản web (chưa kiểm chứng giới hạn hiện tại): giới hạn kích thước/đầu ra, có thể tóm tắt thay vì chấm từng dòng, khó tái lập; vẫn có thiên vị cùng họ Google (Gemma) nên chỉ làm người chấm thứ hai, kiểm đồng thuận với Claude trên ~100 mục; kết quả lưu file trong thư mục dự án để em đọc, em có thể dựng CSV lô và script kiểm kết quả trả về. Thời điểm: vai B chỉ chấm được sau khi có đầu ra mô hình (sau B8/B10), vai A có thể làm sớm. (2) Làm rõ: B2 = Claude kiểm dữ liệu TRƯỚC huấn luyện (vai A, cổng lỗi nặng <= 5%, ~500 sp test + 300 mảnh khác nhau); B9 = Claude/Gemini chấm đầu ra mô hình SAU huấn luyện (vai B, fine-tune vs zero-shot, so cặp mù, kiểm định dấu); liệt kê B0-B10 một dòng mỗi bước kèm ví dụ minh họa. Chưa sửa plan.
+
+
+**Prompt 720:**
+> B2 tức là Claude kiểm test á hử, kiểm bao nhiêu. B9 mô hình zero shot là gì, sao phải có nó
+
+**Trả lời 720:** B2 kiểm DỮ LIỆU (bản dịch có sẵn trong bộ), mẫu lấy từ tập test (~20% test): 500 sp (300 zh->vi + 200 vi->zh), mỗi sp 1 title + 1 mô tả cụm = ~1.000 mục, cộng 300 mảnh khác nhau x 2 bản = 600 lượt chấm; làm rõ (đề xuất): tính tỉ lệ lỗi nặng riêng title và mô tả, mỗi cái <= 5% từng hướng. Lấy từ test để mục Đạt/được sửa làm tham chiếu chấm mô hình sau này. Zero-shot = Qwen3-4B nguyên bản chưa fine-tune, nhận cùng chỉ dẫn dịch, không ví dụ mẫu; cần làm mức sàn "trước khi học" để chứng minh fine-tune có tác dụng (điểm tuyệt đối vô nghĩa nếu không biết zero-shot được bao nhiêu), tiêu chí "ổn" của mô hình là thắng zero-shot (kiểm định dấu), và hiệu chuẩn bộ chấm ở B4. Chưa sửa plan.
+
+
+**Prompt 721:**
+> Tui chưa hiểu B2, sao phải kiểm, còn tập test khoảng 2k sản phẩm ở đâu
+
+**Trả lời 721:** Giải thích đơn giản: tập test CHƯA TỒN TẠI, sẽ được tạo ở B1 bằng cách cắt ngẫu nhiên (theo nhóm gần-trùng, phân tầng hướng x category) ~10% trong 25.575 sản phẩm của bộ trên HF (~2.550 sp, 1688 ~1.480 + Tiki ~1.070), lưu thành danh sách mã sản phẩm trong `split.parquet`; phần còn lại ~23.000 là pool 5 fold. B2 kiểm vì bản dịch trong bộ là dịch máy chưa ai kiểm; nếu lỗi nặng >5% thì huấn luyện sẽ học lỗi và tốn ~10-30 giờ GPU vô ích (ước tính), nên lấy mẫu 500 sp trong test (không phải cả bộ) kiểm trước làm cổng dừng/đi tiếp; lấy từ test để mục đã kiểm/sửa làm đáp án tham chiếu sau này. Chưa sửa plan, chưa tạo file.
+
+
+**Prompt 722:**
+> Bản dịch trong bộ do máy tạo ra (Gemma, Qwen, quy tắc). Chưa ai kiểm bản dịch nào. Ủa có judge rồi mà cũng phải kiểm lại hử
+
+**Trả lời 722:** Judge KHÔNG kiểm đúng/sai tuyệt đối, chỉ chọn bản tốt hơn trong hai ứng viên; hai bản đều sai thì vẫn chọn một. Judge chỉ nhìn các "cuộc đấu" (Gemma và Qwen khác nhau, cả hai không rỗng): mô tả cụm 17.170/441.842 mảnh (3,9%), pair 195.311/872.034 mảnh (22,4%, trong đó 31.510 chưa chấm); phần còn lại là hai mô hình dịch giống nhau, quy tắc/từ điển, hoặc thiếu ứng viên, chưa ai kiểm. Title judge đủ (20.353 judge_t1 + 5.021 tương đương + 201 không tranh chấp) nhưng vẫn là chọn một trong hai. README HF tự ghi chưa người kiểm chứng toàn bộ, không coi là gold. Độ đúng của Judge so với người chưa đo (không có gold). B2 là phép đo tuyệt đối độc lập đầu tiên (Claude, khác họ), chi phí ~0,5M token để bảo vệ ~30 giờ GPU (ước tính); B2 cũng là LLM nên không thay người kiểm. Chưa sửa plan.
+
+
+**Prompt 723:**
+> ~0,5M token Claude là bao nhiêu, tui chỉ có gói Claude Pro thôi, ko mua API đâu
+
+**Trả lời 723:** 0,5M token ~ 375.000 từ tiếng Anh (vài cuốn tiểu thuyết), nhưng là lượng chữ đọc/viết cần thiết, gói Pro còn tính việc đọc lại ngữ cảnh mỗi lượt nên mức tiêu thật có thể gấp vài lần; em không biết hạn mức Pro nên KHÔNG quy ra % được (chưa kiểm chứng cách Pro tính, và tin rằng Claude Code dùng chung hạn mức với claude.ai, anh kiểm trang Usage); cách đo thật: thử 20 mục nhìn thanh Weekly (đã dùng 17%). Cách giảm: phiên mới ngắn, lô 25 mục, chỉ ghi mã Đạt/Nhẹ/Nặng, chỉ sửa khi lỗi nặng, chia nhiều ngày/cửa sổ 5 giờ. Ba phương án: (1) v0.2 Claude làm hết ~0,8M; (2) hybrid khuyên dùng: Gemini Pro web chấm phần lớn B2 và B9, Claude chỉ hiệu chuẩn trên ~100 sp + 100 mảnh + 100 so cặp ~0,2M (rủi ro: Gemini cùng họ Gemma có thể bỏ sót lỗi của Gemma nên Claude kiểm đồng thuận); (3) tối thiểu: Claude chỉ cổng B2 mẫu nhỏ ~0,2M nhưng khoảng tin cậy rộng (n=150: ~±3,5 điểm; n=100: ~±4,3). Chờ anh chọn rồi cập nhật plan v0.3. Chưa sửa plan.
+
+
+**Prompt 724:**
+> Vậy chốt phương án 2, bạn cập nhật cẩn thận vào plan nhé. Sau khi cập nhật plan, vẫn phải kiểm tra kĩ lại còn thấy vấn đề gì ko. Tui sẽ compact để bạn chấm bằng Claude giảm usage vì phiên này quá dài, bạn soạn giúp tui nên compact những gì (đề xuất của tui: những việc đã thống nhất, việc đang làm dở và sẽ làm, những thông tin quan trọng)
+
+**Trả lời 724:** Chốt phương án 2 (D12, D13: Gemini Pro web chấm chính B2/B9, Claude Pro chỉ hiệu chuẩn ~0,2M token). Cập nhật plan lên v0.3 rồi v0.3.1 tại `C:\Users\ADMIN\.claude\plans\enumerated-questing-crystal.md` (kiểm từ khóa không còn câu lỗi thời trong thân). Soát lại phát hiện và đã sửa: (1) đơn vị tính lỗi mô tả phải là MẢNH, không phải cả mô tả (mô tả ~12 mảnh/sp nên tính "có >=1 lỗi nặng" sẽ vượt 5% oan); công thức lỗi pair = lỗi cụm + 0,048 x (chênh trên 300 mảnh khác nhau); (2) hiệu chỉnh Claude gộp chung mọi nhóm vì mẫu từng nhóm 40-60 mục quá nhiễu; (3) CSV mô tả đánh số mảnh theo dòng nguồn pair; (4) thêm sửa thứ tự B0/B1 (B1b), mẫu B9 tách khỏi B2, rubric bốn điểm trung lập + ngoại lệ, B2 song song B3-B5, vùng xám 5-6,5%, zero-shot cắt lời dẫn, báo điểm trên toàn test và tập đã kiểm, cỡ mẫu hiệu dụng của kiểm định dấu. Thêm một mục tóm tắt kế hoạch vào CLAUDE.md §5.3b (con trỏ tới file plan, D1-D13, số đo, quy tắc phiên) để phiên sau không mất ngữ cảnh. Soạn nội dung nên giữ khi compact. Chưa bắt đầu làm theo plan, không tạo script/dữ liệu nào ngoài file plan, CLAUDE.md, WALKTHROUGH.
+
+
+---
+
+**Prompt 725:** (sau compact) "Vậy giờ bạn sẽ làm gì trước, tui nghĩ bạn nên test Claude chấm thử 20 bộ coi sao. Kaggle hiện tui đang cho thành viên trong nhóm chạy nên chưa chạy trên đó được."
+
+**Trả lời 725:** Chưa chạy gì (chờ lệnh "bắt đầu"). Đề xuất thứ tự không cần GPU Kaggle: B1 chia tập (CPU, máy local) để lấy 20 mục thử từ tập test; dựng rubric_kiem.md và lay_mau_kiem.py; Claude chấm thử 20 mục + gửi Gemini 1 lô 20 dòng để đo % Weekly và kiểm quy trình CSV; sau đó B3, B4 (viết mã) và B2. Các bước cần GPU (B5 trở đi, chạy zero-shot) dời đến khi Kaggle rảnh. B0 đóng gói Dataset không cần phiên GPU nên có thể làm trong lúc chờ.
+
+---
+
+**Prompt 726:** "Bạn thực hiện từ bước 1 - 4 trước đi nha, chia việc cho vài mô hình Sonnet làm nữa, bạn sẽ là người ra quyết định, kiểm soát các mô hình ... Đặc biệt lúc chia tập Test, bạn làm thật cẩn thận, khóa cứng, không được phép để rò rĩ hay mô hình thấy dữ liệu test, đó là điều tối kị nên bạn làm thật kĩ"
+
+**Trả lời 726:** Opus tự làm B1 (chia tập), bộ kiểm rò rỉ, rubric; giao 3 Sonnet viết B3 `dung_mau.py`, B4 `cham_diem.py`, B2 `lay_mau_kiem.py` + `kiem_ket_qua.py`; Opus soát và kiểm độc lập từng phần. Mã ở `scripts/ft_train/` (README), đầu ra `data/processed/ft_run/` (đã thêm vào .gitignore), venv tạm ở scratchpad `ftvenv` (pandas, pyarrow, tokenizers, sacrebleu).
+- B1: bỏ mã MinHash cũ (bỏ xô ≥60 sp, `hash()` ngẫu nhiên theo phiên); dùng phép nối tập chính xác (kiểm khớp vét cạn), 6 góc nhìn cả hai phía ngôn ngữ (title 0,5; mô tả pair và cụm 0,7; 0,6 cho mô tả tạo nhóm 2.992 sp nên không dùng). Lần chạy khô đầu, bộ kiểm độc lập bắt được rò qua mô tả bản cụm → thêm 2 góc nhìn cụm. Khi kiểm mẫu B3 lại thấy rò kiểu tin đăng anh em ("Trà kỷ tử" Dược Liệu Tuệ Tâm, test, cùng sản phẩm với 3 sp pool 100/200/500gr) → thêm luật cùng thương hiệu + title chứa trong nhau ≥0,7, khóa lại v2 trước khi bất cứ thứ gì dùng test. Kết quả v2: test 2.558 sp (zh→vi 1.485, vi→zh 1.073), pool 23.017, 5 fold; `kiem_ro_ri.py` 0 vi phạm trên 8 góc kiểm + fold×fold; chạy lại không có `--ghi-de` bị từ chối; khóa bằng hash trong DU_LIEU_DONG_BANG.json.
+- B3: pool cụm 46.120 mẫu/16,2M token, pair 46.110/15,4M; loại 58/55 mô tả 1688 có thuộc tính biến thể >2.048 token; test ghi riêng test_khoa/. Kiểm độc lập: 0 giao, fold khớp, 0 title test trong văn bản pool.
+- B4: chrF++/chrF ký tự, kiểm số/Latin/chữ viết/số dòng/sinh lặp, cắt lời dẫn có quy tắc, macro theo hướng; test đạt.
+- B2: phát hiện nguồn mô tả bản cụm khác pair ở 18,3% sp (cụm có thêm thuộc tính) → M1 chấm theo nguồn cụm, M2 chỉ lấy sp nguồn trùng khớp (2.085 sp test). 1.600 mục, Gemini 53 lô, Claude 17 lô; lô thử 20 mục sẵn sàng. Test toàn bộ 5 file đạt.
+- Bước 3 (Claude chấm thử 20) chưa chấm: cần Nhật Anh ghi % Weekly trước khi em chấm.
+
+---
+
+**Prompt 727:** "Bạn cho chấm thứ 20 mục bằng claude để tui ước lượng usage nha"
+
+**Trả lời 727:** Claude (Opus 5.5, trong phiên đang mở) chấm mù lô thử 20 mục theo rubric_kiem.md (rà soát bằng LLM), ghi `data/processed/ft_run/test_khoa/kiem/ket_qua_claude/lo_000_thu20.jsonl`. Title: 5/10 Nặng, 1 Nhẹ, 4 Đạt (K00012 "trẻ sơ sinh không xương", K00006 sót "Bao Case", K00008 thiếu 北极 + "họa tiết cáo" là rõ; K00005, K00019 là lỗi thiếu, phụ thuộc cách đọc rubric). Mô tả: 1/157 mảnh Nặng (K00018 [11]). n quá nhỏ, chưa kết luận; là cảnh báo sớm cho cổng 5% ở title. Chờ Nhật Anh báo % Weekly và kết quả Gemini.
+
+---
+
+**Prompt 728:** "nãy 23, giờ lên 24%. Bạn chấm thử tiếp 40 mục đi để tui quan sát"
+
+**Trả lời 728:** Weekly 23% → 24% sau lô thử 20 mục (thanh chỉ hiện số nguyên nên còn thô). Claude (Opus 5.5) chấm mù thêm 40 mục (rà soát bằng LLM): lo_001 đủ 24 mục, lo_002 mới 16 mục đầu (lô này chưa đủ, phải chấm nốt thì kiem_ket_qua.py mới nhận). Lượt này: title 4/8 Nặng; mô tả 0/144 mảnh; mảnh khác nhau M2 0/22 Nặng, 6 Nhẹ. Cộng dồn 60 mục: title 9/18 Nặng (Wilson 95% ~29–71%), trong đó 5 lỗi rõ (K00006, K00008, K00012, K00096, K00133) và 4 lỗi thiếu từ khóa (K00005, K00019, K00046, K00067); mô tả 1/301 mảnh. Cần Nhật Anh quyết rubric có coi thiếu từ khóa kiểu dáng ở title là Nặng không. Chờ % Weekly mới và kết quả Gemini.
+
+---
+
+**Prompt 729:** "Bạn chấm tiếp 40 mục đi"
+
+**Trả lời 729:** Claude (Opus 5.5) chấm mù thêm 40 mục (rà soát bằng LLM): 8 mục cuối lo_002 (lô này đã đủ 24), lo_003 đủ 24, lo_004 mới 8 mục đầu. Lượt này: title 1/11 Nặng; mô tả 0/161 mảnh; M2 0/18 Nặng, 6 Nhẹ. Cộng dồn 100 mục: title 10/29 Nặng (Wilson 95% ~20–53%; zh→vi 8/16, vi→zh 2/13), trong đó 5 lỗi rõ và 5 lỗi thiếu từ khóa; mô tả 1/462 mảnh; M2 0/40 Nặng, 12 Nhẹ. Lỗi thuật ngữ lặp: 下游平台 "Nền tảng hạ nguồn", 独立站 "Trạm độc lập". Chờ % Weekly và kết quả Gemini.
+
+---
+
+**Prompt 730:** "Bạn chấm tiếp 80 mục đi"
+
+**Trả lời 730:** Claude (Opus 5.5) chấm mù thêm 80 mục (rà soát bằng LLM): 16 mục cuối lo_004 (lô đủ), lo_005 và lo_006 đủ, lo_007 mới 16 mục đầu (còn 8 mục, từ K00694). Lượt này: title 6/16 Nặng; mô tả 0/323 mảnh; M2 0/48 Nặng, 15 Nhẹ. Cộng dồn 180/400 mục: title 16/45 Nặng (35,6%, Wilson 95% ~23–50%), gồm 9 lỗi rõ (K00006, K00008, K00012, K00096, K00133, K00381, K00437, K00498, K00683) và 7 lỗi thiếu (K00005, K00019, K00046, K00067, K00161, K00420, K00654); 9/45 lỗi rõ = 20% (Wilson ~11–34%). Theo hướng: zh→vi 10/26, vi→zh 6/19, tức chênh lệch hướng thấy ở lượt trước không còn rõ. Mô tả 1/785 mảnh; M2 0/88 Nặng, 27 Nhẹ. Chờ % Weekly và kết quả Gemini.
+
+---
+
+**Prompt 731:** (kèm ảnh Gemini web, thanh chọn mô hình hiện "Flash Cao") "Chấm bằng Gemini Pro web có vẻ ko khả thi. Vậy giải pháp tiếp theo của bạn là gì nếu lỗi như vậy"
+
+**Trả lời 731:** Trong 8 dòng title nhìn thấy, Gemini chỉ đồng ý K00006 là Nặng; K00012 "trẻ sơ sinh không xương" bị cho Nhẹ vì lý do khác, K00005 Đạt, K00008 Nhẹ. Đề xuất: thử lại một lần đúng Gemini Pro (ảnh cho thấy đang chọn Flash); nếu vẫn bỏ sót K00012 thì bỏ Gemini làm người chấm chính theo quy tắc đã có trong plan; dùng Sonnet phiên mới chấm mù làm người chấm thứ hai cho title; chuyển trọng tâm sang xử lý title. Chưa sửa plan, chờ Nhật Anh chốt.
+
+---
+
+**Prompt 732:** "1. Tui đang thử Gemini đang chạy và chờ 2. Bạn thử chấm bằng Sonnet nha"
+
+**Trả lời 732:** Sonnet (phiên mới, mù, chỉ đọc rubric và lô) chấm 51 mục: 45 title Opus đã chấm + 5 mô tả ngẫu nhiên + K00018 (thêm chủ động). Lô ở `kiem/gui_sonnet/lo_doi_chieu.jsonl`, kết quả ở `kiem/ket_qua_sonnet/lo_doi_chieu.jsonl`. Title: Sonnet 6/45 Nặng, Opus 16/45; cả 6 mục của Sonnet đều nằm trong 16 mục của Opus; 10 mục lệch đều do Opus gắt hơn (thiếu từ khóa, 无骨, 收纳). Mô tả: cả hai chỉ thấy 1 mảnh Nặng, K00018 [11]. Rubric mơ hồ ở ranh giới Nhẹ/Nặng khi thiếu từ khóa; chờ Nhật Anh chốt và chờ kết quả Gemini Pro.
+
+---
+
+**Prompt 733:** (kèm 2 ảnh kết quả Gemini) "GEmini trả kết quả"
+
+**Trả lời 733:** Chép kết quả từ ảnh vào `kiem/ket_qua_gemini/lo_000_thu20.txt`, chạy `kiem_ket_qua.py --thu20` (lần đầu trên dữ liệu thật). Gemini: title 4/10 Nặng (K00006, K00008, K00012, K00019), mô tả 1/157 mảnh (K00018 [11]). Khớp Opus về Nặng ở 9/10 title (lệch K00005) và cả 10 mô tả; Sonnet trên cùng 10 title chỉ Nặng K00006. Ba bên khớp K00018 [11]. So với lần chạy trước (thanh chọn ghi Flash), K00008 và K00012 đổi từ Nhẹ sang Nặng, K00012 nêu lý do khác Opus. Chưa xác nhận được lần này đúng là Pro vì ảnh không hiện thanh chọn. Đề xuất cho Gemini chấm mẫu 200 title mới thay phần lớn việc của Claude, vẫn cần chốt rubric trước.
+
+---
+
+**Prompt 734:** "Cả Claude và Gemini dựa trên những tiêu chí nào để chấm vậy và chấm như thế nào vậy ( bạn đọc 2 bản dịch hay Claude lại dịch thêm 1 bản nữa), tui đổi qua Gemini pro ròi"
+
+**Trả lời 734:** Giải thích: cùng rubric `scripts/ft_train/rubric_kiem.md`; người chấm đọc nguồn và MỘT bản dịch có sẵn trong bộ dữ liệu, đối chiếu từng yếu tố, cho mức Đạt/Nhẹ/Nặng; không dịch thêm bản nào, không có bản tham chiếu, không đặt hai bản cạnh nhau (so cặp chỉ ở B9). Nêu giới hạn: Opus viết rubric và biết thiết kế mẫu, kiến thức về thương hiệu đến từ chính mô hình. Ghi nhận Nhật Anh đã đổi sang Gemini Pro.
+
+---
+
+**Prompt 735:** "Hiện tại usage weekly là 25%, đồng ý báo cáo tách hai tầng lỗi nặng và chấm 200 title mới (4 lô Gemini Pro, em chấm mù 40 title)"
+
+**Trả lời 735:** Weekly 23% → 25% sau 180 mục Opus + 51 mục Sonnet. Viết `scripts/ft_train/kiem_title.py` + test (đạt), rubric giữ nguyên: tách nặng lõi và nặng do thiếu theo mã lỗi. Dựng 4 lô 200 title chưa ai chấm (100 zh→vi, 100 vi→zh) ở `kiem/gui_gemini_title/`, chống dựng lại. Opus chấm mù 40 title (rà soát bằng LLM): 6/40 Nặng, 3 lõi, 3 do thiếu; ghi `kiem/ket_qua_claude_title/lo_t_doi_chieu.jsonl`. Hai tầng trên 45 title cũ: Opus lõi 9/45, Sonnet lõi 6/45, kappa lõi 0,76 (so với 0,44 khi tính cả thiếu). Cập nhật plan và README. Chờ Nhật Anh gửi 4 lô Gemini Pro.
+
+---
+
+**Prompt 736:** "Bạn chấm nốt 220 mục hiệu chuẩn còn lại luôn đi"
+
+**Trả lời 736:** Claude (Opus 5.5) chấm mù hết 220 mục còn lại (rà soát bằng LLM), đủ 400/400 mục ở 17 lô, bộ kiểm lô không lỗi. Kết quả toàn mẫu: title 26/100 Nặng (zh→vi 15/60, vi→zh 11/40), nặng lõi 14/100 (zh→vi 6/60, Wilson 4,7–20,1%; vi→zh 8/40, Wilson 10,5–34,8%); mô tả zh→vi 3/1.466 mảnh (K00018, K00810, K01216), vi→zh 0/282; M2 4/200 (K00867, K01149, K01455, K01535; cụm 2/100, pair 2/100). 45 title đầu 35,6%, 55 title sau 18,2%: chưa phân biệt được do ngẫu nhiên hay Opus nhẹ tay dần. Đổi nhãn báo cáo trong kiem_title.py; cập nhật plan. Chờ % Weekly và 4 lô Gemini Pro (có 59 title chung với Opus).
+
+---
+
+**Prompt 737:** "giờ là 27%. Gemini Pro suy luận" (kèm kết quả 200 title dán trực tiếp)
+
+**Trả lời 737:** Weekly 23% → 27% sau khoảng 490 mục. Lưu nguyên văn ở `kiem/ket_qua_gemini_title/tho_gemini_pro.txt`, tách đúng 4 lô (đủ 200 id, thứ tự khớp lô), chạy `kiem_title.py bao-cao` (rà soát bằng LLM). Gemini Pro: nặng 50/200 (zh→vi 41/100, vi→zh 9/100); nặng lõi 10/200 = 5%, Wilson 2,7–9,0% (zh→vi 6/100, Wilson 2,8–12,5%; vi→zh 4/100, Wilson 1,6–9,8%). Gemini không dùng mức Nhẹ lần nào, và có 9 ca Nặng trái chữ rubric. Trên 59 title chung với Opus: kappa nặng 0,41, kappa lõi 0,16; tỉ lệ lõi gần nhau (Opus 4/59, Gemini 5/59). Đề xuất: lấy tầng nặng lõi làm chỉ số cổng title; thử bộ lọc tự động tìm lỗi title (không tốn Weekly) trước khi quyết sửa hay giữ. Chờ Nhật Anh chốt.
+
+---
+
+**Prompt 738:** "Tui đồng ý. Ủa hiện tại bị vướng ở chỗ này nên chưa đi tiếp plan được phải ko, vì trước đó tui chỉ yêu cầu làm tới bước 4"
+
+**Trả lời 738:** Ghi D14: cổng title dùng nặng lõi. Viết và chạy `scripts/ft_train/loc_title.py` (chỉ đọc): gắn cờ 6.360/25.575 title; trên 277 title đã chấm bắt 14/26 title có lỗi lõi, 94 cờ thì 72 không ai chấm nặng, nên chỉ dùng để sàng. Áp công thức cổng: zh→vi 6% (vùng xám), vi→zh 4% (qua), nhưng kappa lõi 0,16 nên Gemini chưa đủ tin ở tầng lõi. Trả lời: bốn bước được giao đã xong; chỉ B6 trở đi bị chặn bởi cổng title; B0, B1b không bị chặn nhưng chưa làm vì chưa có lệnh; B5 chờ Kaggle rảnh. Đề xuất cho qua có điều kiện để dò siêu tham số, ghi rõ title chưa đạt. Chờ Nhật Anh chốt.
+
+---
+
+**Prompt 739:** (kèm ảnh Kaggle nlp-group3, GPU RTX Pro 6000) "làm B0, B1b (đóng gói lên Kaggle) ngay nha, Kaggle của tui đang rảnh, sửa đè lên note tui chụp hình á nha, tại có con 6000 pro, xong làm tiếp theo plan đi để chạy trên kaggle test thử. Làm theo hướng A đi, có cách nào dò Title nữa không"
+
+**Trả lời 739 (đang làm):** Chốt hướng A. Sao lưu nlp-group3 ở `notebooks/_sao_luu/nlp-group3_20261105_truoc_ghi_de/`. Viết `scripts/ft_train/dong_goi_kaggle.py`, `kaggle_train.py` + test. B0: notebook `ft-qwen3-4b-thu-vien`, `ft-qwen3-4b-mo-hinh` (Qwen/Qwen3-4B, revision 1cfa9a72) chạy xong trên Kaggle. B1b: Dataset riêng tư `ft-qwen3-4b-pool` CHỈ gồm mẫu pool (đổi so với plan cũ, không đưa parquet gốc và split lên, kiểm từng dòng không có mã test). B5: ghi đè nlp-group3 và chạy thử; lần 1 không thấy file (Kaggle tự giải nén .gz), lần 2, 3 tràn VRAM, lần 4 đạt sau khi chia lô theo ngân sách token và bật gradient checkpointing: loss kiểm 1,04 → 0,335, nạp lại checkpoint khớp, 3.883 token/giây, VRAM đỉnh 25,7 GB. Đang đo thêm các cấu hình lô để tăng tốc. Dò title: thêm cờ hieu_lech vào `loc_title.py` (thương hiệu title so với dòng thương hiệu trong mô tả).
+
+**Trả lời 739 (kết quả):** Đo tốc độ: bật checkpointing 3.750–3.820 token/giây (mọi cỡ lô), tắt checkpointing 5.770–5.870 (lô 4096 token, VRAM 52 GB; 6144 token, 74 GB). Chốt micro_bs 32, ngân sách 4096, không checkpoint. Dưới mức 10.000 của plan, ~1,19 tỷ token ≈ 56 giờ, chưa chạy B6, chờ Nhật Anh chọn cách giảm. Sinh thử 12 mẫu fold kiểm: chrF fine-tune 71,2, zero-shot 42,3 (mẫu rất nhỏ, chỉ 100 bước). Dò title: cờ hieu_lech gắn 1.396 title; trên 277 title đã chấm, 23 cờ thì 8 có lỗi lõi (35%, so với 9,4% toàn mẫu), bắt 8/26 lỗi lõi. Cập nhật plan.
+
+---
+
+**Prompt 740:** "Chạy lâu quá, bạn coi nguyên nhân, bước nào chạy lâu vậy"
+
+**Trả lời 740:** Đo trên Kaggle (`che_do=do_nguyen_nhan`, kết quả ở `ft_run/kaggle_nguyen_nhan/`). Không có nghẽn: GPU 94–99%, xung gần tối đa; tạo tensor 0,1%, đệm 0,9%, optimizer 1%; backward 61%, forward 38%. Suy luận gốc 23.530 token/giây, huấn luyện ~5.600–5.900. Lâu do khối lượng: ~92 lần chạy epoch × ~13M token; B6 ~33 giờ, B8 ~17 giờ. Ước tính cũ 10.000–30.000 token/giây là giả định quá lạc quan. Biến thể LoRA chỉ q/k/v/o nhanh hơn 32% (chưa kiểm chất lượng). Đề xuất: B6 loại sớm và so all-linear với q/k/v/o trên một fold. Chờ Nhật Anh chốt.
+
+---
+
+**Prompt 741:** "nếu Thêm B6 chỉ 2 epoch thì ~ 24h chạy hử"
+
+**Trả lời 741:** Làm rõ: ~24 giờ chỉ đúng khi gộp cả B6 loại sớm, B8 K=3, B6 2 epoch VÀ LoRA chỉ attention đạt chất lượng; LoRA hiện tại là ~31 giờ. Số này chỉ là giờ huấn luyện, chưa gồm sinh bản dịch để chấm. Đo B5: 2,7 giây/mẫu ở lô 4; một fold ~9.000 mẫu nên có thể đáng kể, cần đo ở lô lớn. Chi tiết 24,4 giờ: B6 ~9,8; B8 ~9,5; B7 ~2,8; B10 ~2,4.
+
+---
+
+**Prompt 742:** "Bạn coi có phương pháp nào giảm thời gian xuống nhưng rủi ro không quá cao ko, tui thắc mắc dò siêu tham số mà lâu dữ vậy, tui tưởng chỉ có 6-7 tiếng thoi chứ. Bạn kiểm tra kĩ lại cho tui nha"
+
+**Trả lời 742 (đang kiểm):** Kiểm lại ngân sách B6 trên `pool_cum.jsonl` thật, đo phương án trần token mô tả khi dò.
+
+**Trả lời 742 (kết quả):** Kiểm lại: 4 fold 13,06M token; 1 epoch 0,62 giờ, 3 epoch 1,85 giờ, 18 lần 33,4 giờ ở 5.873 token/giây, khớp số đã báo. Đề xuất dò loại dần trên 1 fold: vòng 1, 6 cấu hình + 1 cấu hình LoRA chỉ attention, mỗi cấu hình 1 epoch (~4,2 giờ); vòng 2, 2 cấu hình đầu chạy nốt 2 epoch (~2,5 giờ); chấm chrF cấu hình dẫn đầu (ước 0,5–1,5 giờ) → ~7–8 giờ. K-fold vẫn ở B8. Chạy fold thứ hai chỉ khi hòa trong sai số. Không chọn cắt token mô tả (trần 768 chỉ bớt 14% nhưng cắt 32% mô tả). Chờ Nhật Anh chốt, chưa sửa plan.
+
+---
+
+**Prompt 743:** "Tui đồng ý với Cách bạn đề xuất: dò loại dần trên 1 fold, ~7–8 giờ, K-fold giữ ở B8. Bạn sửa lại nhé, sửa cẩn thận"
+
+**Trả lời 743:** Plan lên v0.4: D14–D17, viết lại B6 (vòng 1: 7 cấu hình 1 epoch; vòng 2: 2 cấu hình đầu, thêm cấu hình lệch ≤1%, trần 3; vòng 3: chrF 1.000 mẫu, bootstrap), B8 lưu ý fold 0, ngân sách ~610M token ≈ 29 giờ. Viết `chay_b6` (lưu theo epoch, chạy tiếp, dừng có trật tự 8,5 giờ) + test. Chạy khói B6 trên Kaggle hai lần: lần 1 bắt lỗi lịch lr (26/30 bước) do gom micro-batch vượt 32 mẫu, sửa bằng `gom_buoc`; soát mã còn sửa lỗi chồng LoRA khi chạy tiếp. Chưa chạy B6 thật, chờ lệnh.
+
+---
+
+**Prompt 744:** "thời gian vẫn còn dài quá, có thể bạn thiết kế chỗ nào đó hơi nặng tay thật. Bạn kiểm tra kĩ lại plan cho tui nhé"
+
+**Trả lời 744:** Soát lại plan v0.4, thấy phần sau B6 thiết kế nặng tay: B8 chạy lại fold 0 đã có từ B6/B7; 4 lần seed phụ (~4,8 giờ); K=5 trên cả hai bộ giống nhau 99%; B10 huấn luyện lại toàn pool dù đó không phải mô hình cuối (D15, D2); B7 chạy 2 cấu hình; B9 2.000 dòng (~40 lần gửi); chấm chrF cả fold không kham được. Đề xuất: B7 1 cấu hình, B8 K=3 dùng lại fold 0 và bỏ seed phụ, B10 không huấn luyện lại (đo test bằng mô hình fold 0), B9 còn ~400 dòng (~8 lần gửi). Giờ huấn luyện ~29 → ~14; cả sinh bản dịch ước ~18–20 giờ. Mục tiêu (c) xong sau B6 + B7 ~9 giờ. Chờ Nhật Anh chốt, chưa sửa plan.
+
+---
+
+**Prompt 745:** "bạn kiểm tra sao cho đừng để rủi ro quá lớn là được chứ thời gian dài chạy đâu có đủ, có thể bị thừa mà không có tác dụng á"
+
+**Trả lời 745:** Áp dụng D18, plan lên v0.5: B7 1 cấu hình; B8 cụm chỉ chạy fold 1, 2, dùng lại fold 0, bỏ seed phụ, bản pair chạy thêm khi lệch (cắt thêm so với đề xuất trước); B10 không huấn luyện lại; B9 ~400 dòng; bỏ COMET. Thêm mục 4b với chốt chặn C1–C5 tự kiểm, vượt ngưỡng mới chạy thêm. Giờ huấn luyện ~29 → ~10,5–12; cả sinh ước ~14–20; mốc 1 (B6 + B7) ~9 giờ. Dọn mô tả cũ trong plan. Chưa chạy B6, chờ lệnh.
+
+---
+
+**Prompt 746:** "B6 là bạn chạy gì vậy, có phải chạy để chọn siêu tham số đúng ko. chạy xong B6 là xong plan chưa, ước tính chạy cả plan là bao nhiêu thời gian"
+
+**Trả lời 746:** Đúng, B6 chọn siêu tham số (lr, rank LoRA, số epoch, kiểu LoRA). Xong B6 chưa xong plan: còn B7, B8, đo test, B9, báo cáo. Ước tính cả plan ~14–20 giờ GPU (B6 ~7–8; B7 ~1,5–2; B8 ~3–5; đo test ~2–4), tối đa thêm ~10 giờ nếu chốt chặn bật; cộng ~8 lần gửi Gemini.
+
+---
+
+**Prompt 747:** "cái plan vẫn còn dài thời gian lắm, bạn kiểm tra kĩ lại coi có thừa, có quá tay chỗ nào hay có thể rút ngắn thời gian không"
+
+**Trả lời 747:** Còn cắt được. Đề xuất: B6 dò tuần tự (3 mức lr ở rank 16, rồi rank 64 và LoRA attention ở lr tốt nhất), bỏ epoch 3 (chỉ B6 từng dùng 3 epoch); B8 chỉ thêm 1 fold; đo test trên ~1.500 mẫu thay 5.116. Huấn luyện ~6,6 giờ, cả sinh ước ~8–11 giờ, mốc 1 ~6–7,5 giờ. Nêu rủi ro: bỏ sót tương tác lr × rank, không biết epoch 3 có giúp không, ước lượng độ ổn định từ 2 fold rất thô. Sàn nếu dò trên 25% dữ liệu: ~6–7 giờ nhưng rủi ro Nhật Anh từng lo. Chưa sửa plan, chờ chốt.
+
+---
+
+**Prompt 748:** "phần còn lại là sinh bản dịch, em chưa đo ở lô lớn, bạn sinh bản dịch gì vậy. Vì trên kaggle giới hạn 30 tiếng thôi á,"
+
+**Trả lời 748:** Giải thích: sinh bản dịch là cho mô hình đã fine-tune (và zero-shot) dịch thử câu nguồn để chấm chrF, B9; không tạo dữ liệu mới. Giới hạn 30 giờ: các lần chạy thử đã tốn ~0,7 giờ. Đề xuất mới theo giới hạn: áp dụng 3 chỗ cắt (2 epoch, dò tuần tự, test ~1.500 mẫu), giữ B8 K=3: ~10–13 giờ, còn dư cho chốt chặn và mô hình cuối. Chờ Nhật Anh chốt, hỏi 30 giờ là theo tuần và có dùng chung với nhóm không.
+
+---
+
+**Prompt 749:** "30 giờ 1 mình tui xài á, còn hơn 29 tiếng lận. Phương án giữa đó có rủi ro khi chỉ 1500 mẫu ko, có cần thiết không, plan đề xuất tới bây giờ bạn đã đề xuất cắt giảm những gì ròi và thời gian ước tính"
+
+**Trả lời 749:** Test 1.500 mẫu rủi ro thấp nhưng không cần thiết khi còn 29 giờ: đo test là phép đo một lần nên giữ đủ 5.116 mẫu. Tổng hợp các cắt giảm đã chốt và đề xuất. Sửa đề xuất: chỉ còn bỏ epoch 3; giữ đủ lưới 6 cấu hình và B8 K=3, test đầy. Ước ~12–17 giờ, chốt chặn bật hết ~22–27 giờ, trong quỹ 29 giờ. Chờ Nhật Anh chốt.
+
+---
+
+**Prompt 750:** "12-17h vẫn hơi dài, có phải mất thời gian nhất ở chỗ chạy để chọn siêu tham số không. Bjn coi plan có bước nào không hướng tới mục tiêu của tui không, có thể bỏ hoặc cắt giảm. Bạn kiểm tra kĩ lại có gì quá tay nữa ko"
+
+**Trả lời 750:** Đúng, B6 ~6–7 giờ, lớn nhất. Soát theo mục tiêu: B8 (~3–4 giờ) không trực tiếp phục vụ (b), (c): chỉ chạy cấu hình đã chọn nên không kiểm được thứ hạng, độ ổn định nằm ngoài hai mục tiêu; cấu hình LoRA attention (~0,5 giờ) cũng không phục vụ trực tiếp. Đề xuất bỏ cả hai mặc định, thay bằng đối chứng 2 cấu hình đầu ở fold 1 khi kết quả mâu thuẫn hoặc hòa khó chọn (+2,5 giờ), lưu ý như vậy không còn K-fold. Ước ~8,5–12,5 giờ, mốc 1 ~7–8,5 giờ. Tùy chọn loại ở nửa epoch bớt ~0,9 giờ, không đề xuất mặc định. Chờ Nhật Anh chốt.
+
+---
+
+**Prompt 751:** "thoi ko được bỏ k-fold và LoẢ attention. Gemini so với zero-shot, tức là tui gửi từng bộ csv cho Gemini chấm hử"
+
+**Trả lời 751:** Giữ K-fold (B8 K=3) và cấu hình LoRA attention. Plan v0.5.1 (D19): B6 tối đa 2 epoch, đủ lưới, test đủ 5.116 mẫu; ~9,1 giờ huấn luyện, ~12–17 giờ cả sinh. Sửa `SO_EPOCH_B6 = 2`, test đạt, chưa chạy khói lại. Giải thích B9: Nhật Anh gửi ~8 file CSV (~50 dòng mỗi file) cho Gemini; mỗi dòng có nguồn và hai bản dịch A, B đảo ngẫu nhiên, Gemini chọn A hơn, B hơn, ngang hay cả hai lỗi nặng; làm sau khi đo test, không phải bây giờ.
+
+---
+
+**Prompt 752:** "À tức là giờ plan đã tới B6 phải chạy trên kaggle phải ko, sau khi chạy xong B6 thì lại tiếp tục các bước tiếp theo trên kaggle hử, hay chạn 1 lần trên kaggle tới hết plan lun"
+
+**Trả lời 752:** Đúng, plan đang ở B6. Không chạy một lần tới hết: chia 3 phiên Kaggle (B6; B7 + B8; đo test), vì cần xem kết quả và bật chốt chặn giữa các phiên, mốc 1 cho phép dừng, và tập test chỉ gắn vào phiên đánh giá cuối (khóa test). Mã hiện mới có B6; B7, B8, đo test viết sau. Kaggle chạy trên máy chủ nên tắt máy vẫn chạy.
+
+---
+
+**Prompt 753:** "Vậy bạn bắt đầu chạy B6 nha, bạn làm cẩn thận lỡ giữa chừng bị gì vẫn ko bị mất kết quả, để tránh lãng phí thời gian chạy"
+
+**Trả lời 753 (đang làm):** Đổi B6 sang nhiều phiên tối đa 2,5 giờ, mỗi phiên tự dừng và lưu, phiên sau nối đầu ra phiên trước (kernel_sources chính notebook), có vân tay chống nối nhầm, tải kết quả nhẹ về máy sau mỗi phiên (`dong_goi_kaggle.py b6_tu_dong moi|tiep`). Đang chạy khói nối phiên (b6_thu rồi b6_thu_tiep, kết quả ở `ft_run/kaggle_b6_noi/`) trước khi đẩy B6 thật.
+
+**Prompt 754:** "Bạn đang chạy đúng không. Phiên này sắp đầy, bạn cho tui option sau lệnh compact để nó ko compact những thứ quan trọng, những việc đang làm dở và sẽ làm,..."
+
+**Trả lời 754:** Xác nhận trạng thái, soạn nội dung tham số cho /compact.
+
+**Trả lời 753 (tiếp):** Chạy khói nối phiên đạt: phiên 1 dừng ở bước 3, kết thúc bình thường; phiên mới đọc `/kaggle/input/nlp-group3/b6/b6_trang_thai.json`, chạy tiếp tới hết 17/17 bước, xong cả chọn vòng 2 và chrF. Đã đẩy B6 thật: `b6_tu_dong moi`, nhiều phiên tối đa 2,5 giờ, log ở `ft_run/kaggle_b6/tu_dong.log`.
+
+**Prompt 755:** "Bạn kiểm soát phiên chạy trên kaggle nha"
+
+**Trả lời 755:** Kiểm lúc 13:01: vòng tự động còn sống (dù thông báo nền ghi "stopped", tiến trình 14348, 10140 vẫn chạy). Phiên 1 (bản 20) COMPLETE, 9.003 giây, dừng có trật tự; xong lr5e-5_r16 0,40898, lr1e-4_r16 0,38999, lr2e-4_r16 0,37701, lr5e-5_r64 tới bước 790/929; log sạch; checkpoint còn trên Kaggle (`kernels files`). Phiên 2 (bản 21) RUNNING, đọc được log trực tiếp bằng `kernels logs -f`: có dòng "chay tiep tu", tiếp từ bước 790, lr5e-5_r64 xong 0,38085, 5.546 token/giây. Sửa `b6_tu_dong tiep`: tải kết quả phiên đã xong trước khi đẩy, B6 đã xong thì không đẩy (chỉ sửa `dong_goi_kaggle.py`, kiểm cú pháp, không đụng phiên đang chạy, chưa chạy thử nhánh này). Đặt canh nền báo khi phiên kết thúc, vòng lặp chết hoặc quá 2 giờ 50. Cập nhật plan (trạng thái, gio_toi_da 2,5, số đo). Ghi nhớ: batch thật trung bình ~40 mẫu, cao hơn danh nghĩa 32, giống nhau mọi cấu hình; lr cao nhất đang dẫn nên có thể chạm biên lưới, chờ đủ số.
+
+**Cập nhật 755 (tự động, không có prompt mới: bộ canh báo phiên 2 xong, 15:07):** Phiên 2 COMPLETE, dừng có trật tự, log sạch; phiên 3 (bản 22) đã nối, có dòng "chay tiep tu". Vòng 1 đủ 7 cấu hình, điểm loss: lr1e-4_r64 0,36798; lr2e-4_r64 0,37032; lr2e-4_r16 0,37701; lr5e-5_r64 0,38085; lr1e-4_r16 0,38999; lr5e-5_r16 0,40898; lr1e-4_r16_attn 0,44354 (7.781 token/giây, 11,8M tham số). Chọn vòng 2: lr1e-4_r64, lr2e-4_r64 (cấu hình thứ 3 lệch 2,5% nên không vào). Với rank 64, lr1e-4 tốt hơn lr2e-4 nên chưa thấy dấu hiệu chạm biên lưới lr. LoRA attention kém all-linear cùng lr, rank 13,7% về loss sau 1 epoch; theo luật nó không vào vòng 2 nên chưa có chrF, sẽ báo Nhật Anh quyết.
+
+**Prompt 756:** "Tiến trình tới đâu ròi, sao tui ko thấy tiến trình nào chạy"
+
+**Trả lời 756:** B6 đã xong, nên không còn tiến trình nào chạy (Kaggle COMPLETE, vòng lặp trên máy đã thoát). Log Kaggle phiên 3 kết thúc ở 3.791 giây, khoảng 16:10, nhưng máy tới 17:39 mới ghi nhận. Tổng 21.821 giây (~6,06 giờ) trên 3 phiên, không lỗi, không mất kết quả. Epoch 2: lr2e-4_r64 loss 0,35120, chrF 75,76, sinh lặp 1/1.000; lr1e-4_r64 loss 0,35874, chrF 75,51, sinh lặp 3/1.000; chênh chrF +0,33, CI 95% [-0,12; +0,81] chứa 0 nên hòa; loss và sinh lặp cùng nghiêng về lr2e-4_r64. Tốc độ sinh 0,33–0,37 giây/mẫu. Rút lại nhận xét "chưa thấy chạm biên lưới lr": sau 2 epoch lr2e-4 dẫn, nằm ở biên trên. Tải bản dịch đã sinh và adapter epoch 2 về `ft_run/kaggle_b6/ket_qua_cuoi/`. Dừng, chờ Nhật Anh duyệt trước khi viết mã B7 + B8.
+
+**Prompt 757:** "Tui đồng ý, bạn tiến hành làm đi, bạn làm cẩn thận sao cho đạt hiệu quả nha, chia việc cho Sonnet làm nữa, bạn kiểm soát và ra quyết định"
+
+**Trả lời 757 (đang làm):** Chốt lr2e-4_r64, 2 epoch; chấm thêm LoRA attention; viết mã B7 + B8 rồi chạy khói, khói đạt thì báo, chưa chạy thật. Đã lưu 9 adapter B6 sang notebook riêng `ft-qwen3-4b-b6-luu` (không GPU, 2,88 GiB), sha256 khớp bản trên máy, vì mỗi lần đẩy nlp-group3 thay đầu ra mới nhất. Em viết `chay_b78`, `b78_tu_dong` (nối phiên, 5 việc: attn, cum_f0, pair_f0, cum_f1, cum_f2). Sonnet viết `tong_hop_b78.py` và test (C1, C2, C3, túi lỗi category, kết luận attn), em đọc lại và tự chạy: 2 bộ test đạt. Chấm lại bản dịch B6 trên máy bằng đường mã mới ra đúng 75,7613 và 75,5119. Sonnet khác đọc mẫu ba chỉ số nghi ngờ, đang chạy. [ĐO] mô tả cụm: chrF dòng đã thấy ~98,5–99, dòng mới ~77–78.
+
+**Trả lời 757 (tiếp):** Sonnet đọc mẫu xong (rà soát bằng LLM, `ft_run/kaggle_b6/phan_tich_chi_so/BAO_CAO.md`), em kiểm lại bằng mã riêng, 5 bảng chéo khớp. Mô hình xấp xỉ mốc tham chiếu, chênh dưới 1,5 điểm: giu_so zh→vi mô tả 84,0 so với 83,6; giu_latin vi→zh title 64,8 so với 66,0; mô tả 78,0 so với 77,6; không bị cờ sai_chu_viet zh→vi 92,4 so với 93,6; vi→zh 90,4 so với 90,4. Phần lớn cờ là dương tính giả của bộ đo; lỗi thật ước 0–2,4% tùy chỉ số [ƯỚC], ví dụ "Đậu兰花", Batman thành 马斯克. Quyết định: B7 + B8 không phải chờ sửa bộ đo vì C1–C3 không dùng ba chỉ số này và bản dịch được lưu để chấm lại; sửa bộ đo trước khi đo test, làm trước phần mốc tham chiếu. Khói B7 + B8 đạt: phiên 1 (300 giây) dừng ở pair_f0 bước 3, kết thúc bình thường; phiên 2 (447 giây) có "chay tiep tu", chạy tới 16/16, không làm lại attn và cum_f0, xong 4 việc, xoá moi_nhat; `tong_hop_b78.py` chạy được trên trạng thái thật. Điểm trong khói không có ý nghĩa (320 mẫu train, 12 mẫu sinh). Chưa chạy thật, chờ lệnh. Ước ~4,7 giờ GPU [ƯỚC]. Đã cập nhật plan v0.5.2 (D20), README.
+
+**Prompt 758:** "Bạn tiến hành cho chạy và theo dõi nha"
+
+**Trả lời 758 (đang chạy):** Đẩy `b78_tu_dong moi` lúc 18:13, bản 25 RUNNING, log `ft_run/kaggle_b78/tu_dong.log`. Log phiên không có "chay tiep tu" nên là bắt đầu mới, không nối nhầm trạng thái khói. Đặt canh nền. Không sửa `cham_diem.py`, `kaggle_train.py` cho tới khi xong vì mỗi phiên đẩy lại mã từ đĩa.
+
+**Prompt 759:** "Bạn chạy xong B6 là chọn được siêu tham số rồi phải ko, cho tui biết bạn đã chọn bộ siêu tham số nào, giải thích"
+
+**Trả lời 759:** Đã có bộ dùng tiếp, mới chọn trên 1 fold bản cụm, B7 + B8 kiểm lại. Chọn lr 2e-4, rank 64 (alpha 128), LoRA mọi lớp tuyến tính, 2 epoch; phần còn lại là mặc định chưa dò. Lý do: rank 64 thắng rank 16 ở cả 3 mức lr theo loss; ở epoch 2, chrF lr 2e-4 và 1e-4 hòa, loss và sinh lặp nghiêng về lr 2e-4. Giới hạn: lr ở biên trên lưới; rank 16 chưa có chrF; chưa thử trên 2 epoch; LoRA attention chưa có chrF.
+
+**Prompt 760:** "Có nên tăng thêm epoch không, thời gian 1 epoch là bao nhiêu vậy"
+
+**Trả lời 760:** [ĐO] 1 epoch ~40 phút với rank 64 (2.406 giây gồm cả đo loss), ~38 phút rank 16, ~29 phút LoRA attention. Đề xuất: không đổi B7 + B8 đang chạy; sau đó thử một lần 3 epoch trên cụm fold 0 (~2,1 giờ, phải huấn luyện lại từ đầu vì lịch lr), chỉ đổi khi chrF thắng rõ, nhất là zh→vi. Chờ Nhật Anh quyết. Ghi bù Prompt 759 vì lượt trước quên ghi.
+
+**Prompt 761:** "các siêu tham số đó là đủ số lượng cho sau này fine-tune ròi phải ko, ý tui là sau này fine-tune LoRA thì chỉ có nhiêu đó tham số cần set thoi phải ko"
+
+**Trả lời 761:** Đủ để huấn luyện, nhưng còn nhóm thiết lập phải đổi theo mô hình (khuôn chat, token kết thúc, pad, tên lớp, kiểu số, ngân sách lô theo VRAM) và nhóm sinh bản dịch. Lưu ý: `max_new_tokens` hiện suy từ độ dài tham chiếu, extension không có tham chiếu nên phải đổi sang suy từ nguồn. Chỉ lr cần quét lại khi đổi mô hình; rank, epoch dùng làm điểm xuất phát.
+
+**Cập nhật 758 (tự động, không có prompt mới: bộ canh báo phiên 1 B7 + B8 xong, 20:46):** Phiên 1 (bản 25) COMPLETE, 9.002 giây, dừng có trật tự ở cum_f1 epoch 2 bước 192 của epoch; log sạch. LoRA attention epoch 1 chrF 71,54 so với lr1e-4_r16 73,89, chênh -2,20, CI 95% [-2,75; -1,65], kém rõ, sinh lặp 4 so với 2/1.000. cum_f0 chấm lại khớp B6 (`khop_b6` true), loss cả fold 0,3497. pair_f0 chrF 75,26, loss cả fold 0,3549, sinh lặp 0/1.000. Phiên 2 (bản 26) đã đẩy, ước xong khoảng 23:00.
+
+**Prompt 762:** "Bạn kiểm soát tiến trình chạy trên kaggle nha, mới xong tiến trình gì và chạy mới tiến trình gì á"
+
+**Trả lời 762:** Kiểm lúc 21:02: bản 26 RUNNING, vòng tự động trên máy còn sống, bộ canh đang chạy. Log trực tiếp có "chay tiep tu", cum_f1 chạy tiếp tới bước 1.400/1.800 (không làm lại từ đầu). Đã xong: attn, cum_f0, pair_f0, epoch 1 của cum_f1. Đang chạy: epoch 2 cum_f1. Còn lại: đo loss cả fold và chấm cum_f1, rồi cum_f2.
+
+**Prompt 763:** "Tui dừng tiến trình rồi"
+
+**Trả lời 763:** Nhật Anh hủy phiên 2 (bản 26) lúc khoảng 21:08, trạng thái CANCEL_ACKNOWLEDGED. Vòng tự động trên máy thấy phiên không hoàn tất nên tự dừng, không đẩy thêm. Em không chạy lại. Đầu ra mới nhất trên Kaggle vẫn là bản 25 (có trạng thái, adapter pair_f0, checkpoint cum_f1 kèm opt.pt ở bước 1.102). Mất phần chạy của phiên 2: khoảng 22 phút, từ bước 1.102 tới khoảng 1.500 của cum_f1. Chạy tiếp bằng `b78_tu_dong tiep` khi có lệnh, ước ~2,2 giờ. Chưa kiểm được việc phiên mới gắn đúng đầu ra bản 25 khi bản mới nhất bị hủy; `kernels files` đang trả bản 25 nên khả năng cao đúng, sẽ xác nhận bằng dòng "chay tiep tu" và số bước.
+
+**Prompt 764:** "Tui lộn plan rồi. Tui vừa bàn lại với nhóm và đưa ra rằng: khảo sát trọng số của các cột ( decription và Title) để mô hình biết cột nào có trọng số lớn để học, không biết kiến thức của tui vậy có đúng ko. Bạn cho tui ý kiến nhé"
+
+**Trả lời 764:** Đúng một phần: có thể đặt trọng số title và mô tả trong hàm loss, nhưng mô hình không có khái niệm cột và không tự biết trọng số, đó là thứ người huấn luyện đặt rồi thử bằng thí nghiệm. [ĐO, pool cụm fold 1–4, mô phỏng đúng cách chia lô, 929 bước khớp số chạy thật] title 49,9% số mẫu, 10,7% token đích, ~49,6% trọng số trong loss; mô tả 50,1%, 89,3%, ~50,4%. Tức hiện đã gần 1:1, title được nặng gấp ~4,6 lần so với tỉ lệ token. Đề xuất thí nghiệm trọng số title:mô tả 2:1 và 1:2 trên cụm fold 0, ~3 giờ, so bằng chrF từng nhóm và dòng mới, sau khi xong B8; lưu ý tăng trọng số title cũng tăng học lỗi title. Chưa chạy, chờ Nhật Anh và nhóm chốt ý nghĩa của "trọng số".
+
+**Prompt 765:** "Bạn làm rõ ý tưởng của tui trước đi, mấy cái trọng số đó là sao vậy"
+
+**Trả lời 765:** Giải thích trọng số trong loss bằng ví dụ hệ số môn thi và phép tính minh họa; tách với trọng số của mô hình (tham số LoRA) và mức độ ảnh hưởng của cột; diễn đạt lại ý tưởng thành câu hỏi "nên cho title và mô tả tỉ lệ bao nhiêu khi học". Chờ Nhật Anh xác nhận đúng ý nhóm.
+
+**Prompt 766:** "Mục tiêu cuối cùng: Khi huấn luyện, nên cho title và mô tả tỉ lệ bao nhiêu thì bản dịch tốt nhất, để mô hình không học lệnh. Bạn thấy đúng thì lưu mục tiêu này lại nha. Vậy thì bạn có đề xuất gì cho mục tiêu cuối cùng này không, cho tui biết nha, hiệu quả nhất mà đừng nặng tay, chạy lâu quá"
+
+**Trả lời 766:** Lưu mục tiêu (d) vào plan và ghi nhớ. Đề xuất dò loại dần: lưu đầu ra bản 25 sang notebook riêng; vòng 1 thử title:mô tả 3:1 và 1:3, mỗi tỉ lệ 1 epoch, so với 1:1 epoch 1 có sẵn trên cùng 1.000 mẫu (~1,6 giờ); vòng 2 chỉ chạy nốt epoch 2 cho tỉ lệ thắng rõ (~0,8 giờ), không có thì giữ 1:1. Tổng ~1,6–2,4 giờ. Đổi lại đề xuất cũ: làm thí nghiệm này trước, B8 sau, vì nếu đổi tỉ lệ thì B8 phải đo trên tỉ lệ mới. Giữ K-fold. Thử 3 epoch tạm gác. Chưa chạy, chờ duyệt.
+
+**Prompt 767:** "Bạn phải khảo sát riêng chứ phải ko, khảo sát bản pair ( cột Title và Description), khảo sát bản cụm ( cột Title và Description), xong mới biết được tỉ lệ chứ, đâu phải lúc nào cũng đẹp như 1:1 hay 1:2 gì đâu phải ko, lỡ phần trăm số lẻ"
+
+**Trả lời 767:** Đồng ý tách riêng từng bản và tỉ lệ có thể lẻ. Đã khảo sát không GPU [ĐO, % title]: loss hiện tại cụm 49,56, pair 50,26; token đích cụm 10,74, pair 10,86; tổng lượng lỗi fold 0 cụm 55,10, pair 56,45. Hai bản rất gần nhau, chênh theo hướng lớn hơn. Khảo sát chỉ cho ứng viên, không tự trả lời "tốt nhất". Đề xuất thay 3:1, 1:3 bằng ~11% và ~75% title, nội suy số lẻ rồi xác nhận; cụm trước, pair sau (~1,6 giờ mỗi bản, tối đa ~4,7 giờ). Sai số chrF khoảng ±0,5 nên số lẻ nhỏ không phân biệt được. Chưa chạy, chờ duyệt.
+
+**Prompt 768:** "Tui đề xuất khảo sát bằng K-fold, đưa qua mô hình baseline á, trước K-fold là những bước gì thì bạn có thể đề xuất"
+
+**Trả lời 768:** K-fold hợp lý vì tỉ lệ cần ổn định qua các fold, với baseline hiểu là Qwen3-4B + LoRA (zero-shot không huấn luyện nên không dùng được). Trước K-fold: khóa tiêu chí; lưu đầu ra bản 25; khảo sát dữ liệu (đã xong); viết, kiểm mã trọng số, chạy khói; dò thô 1 fold, mỗi bản ~1,5–1,6 giờ. K-fold đủ 3 mức × 2 bản × 3 fold ~26 giờ, vượt quỹ, nên chỉ K-fold mức hiện tại và ứng viên qua dò thô. Tổng cả đo test ~6,8 giờ (không có ứng viên) đến ~18,4 giờ (có ứng viên cả hai bản), sát quỹ 19,5–20 giờ. Đổi đề xuất cũ: B8 cụm là K-fold mức hiện tại nên không phí. Chưa chạy, chờ duyệt.
+
+**Prompt 769:** "Baseline hồi nãy tui bị nhầm, cảm ơn bạn đã nhắc. Vậy bạn lên plan này với k-fold và các bước trước và sau đó nhé, bạn kiếm tra kĩ sao cho tối ưu, hiệu quả, đừng thiết kế quá tay và đừng có xơ xài quá, /plan"
+
+**Trả lời 769:** Vào chế độ lập plan, viết mục 0 của plan (G0–G4), gửi duyệt; Nhật Anh chưa duyệt, hỏi thêm.
+
+**Prompt 770:** "ủa plan khảo sát trọng số này liên quan tới plan baseline chọn siêu tham số trước đó hử"
+
+**Trả lời 770:** Có liên quan: dùng lại bộ siêu tham số B6, mốc `cum_f0`, `pair_f0`, B8 cụm là K-fold mức hiện tại. Tỉ lệ là thêm một siêu tham số. Nêu giả định chưa kiểm: không dò lại lr, rank khi đổi tỉ lệ.
+
+**Prompt 771:** "Ủa tui tưởng sau khi khảo sat trọng số và có được bộ trọng số hoàn hảo ròi, xong sau đó mới đưa qua baseline chọn siêu tham số chứ"; hai câu chọn: "Kiểm lại lr nếu đổi"; "Giữ cả 3 nhưng bây giờ ưu tiên có được bộ trọng số để hướng về Mục tiêu cuối cùng: Khi huấn luyện, nên cho title và mô tả tỉ lệ bao nhiêu thì bản dịch tốt nhất, để mô hình không học lệnh, sau đó mới tới 2 mục tiêu kia, tui nghĩ như vậy mới đúng quy trình chứ, bạn phản biện với tui và giải thích nha"
+
+**Trả lời 771:** Đồng ý ưu tiên tỉ lệ trước vì đo ổn định và đo test phải dùng cấu hình cuối. Phản biện 3 điểm: tỉ lệ và siêu tham số ảnh hưởng lẫn nhau nên không có thứ tự duy nhất đúng, B6 không phí; tỉ lệ đo trên title chưa sửa nên cần so lại khi có title đã sửa; có thể không có tỉ lệ thắng rõ. Sửa plan theo ưu tiên.
+
+**Prompt 772:** "Vậy plan khảo sát bộ trọng số cho cột Title và Description chô 2 bộ (bản pair và bản cụm) để hướng về Mục tiêu cuối cùng: Khi huấn luyện, nên cho title và mô tả tỉ lệ bao nhiêu thì bản dịch tốt nhất, để mô hình không học lệnh về bên nào, là gì vậy"
+
+**Trả lời 772:** Giải thích plan thành 6 bước, tiêu chí "tốt nhất" và "không học lệch", ba kết quả có thể ra.
+
+**Prompt 773:** "sau 6 bước trên thì bạn sẽ cho tui được một bộ trọng số có thể đánh giá là ổn sau lần chạy đó phải ko"
+
+**Trả lời 773:** Đúng, có một tỉ lệ cho mỗi bản kèm bằng chứng; "ổn" là theo tiêu chí trên fold kiểm, không phải tốt nhất tuyệt đối, chưa qua test, phải so lại khi sửa title hoặc đổi mô hình. Nhật Anh duyệt plan rồi dừng lại hỏi tiếp.
+
+**Prompt 774:** "6 bước đó bạn cập nhật trong plan khảo sát trọng số cho..... chưa, nếu chưa thì cập nhật. Bạn kiểm tra kĩ từng bước xem có đang đúng với mục tiêu không, có bước nào chưa ổn hay đang bị quá tay không"
+
+**Trả lời 774:** Chưa đúng dạng 6 bước nên viết lại mục 0 (plan v0.6.1). Rà từng bước, sửa: bỏ dò thô 1 epoch bằng loss vì B6 đo được thứ hạng đảo giữa epoch 1 và 2 (lr 1e-4 thắng ở epoch 1, lr 2e-4 thắng ở epoch 2) và lệch loss 2,1% mà chrF hòa; thử đủ 2 epoch, so chrF, lần chạy thắng dùng làm fold 0 của K-fold; siết cổng fold 0 theo bootstrap; thêm zh→vi vào luật không học lệch; kiểm lr chỉ 1 mức, đủ 2 epoch, không phải chạy lại nếu đổi; dừng sớm ở fold 1; điểm nội suy thành tùy chọn. Tổng ~9,4–19,3 giờ, hoặc ~6,7 giờ nếu cụm không có tín hiệu và được duyệt bỏ pair. Chưa chạy, chờ duyệt.
+
+**Prompt 775:** "6 bước nào vậy, bước 2 bạn kêu lỗi chính nhưng chưa thấy bạn đề xuất xử lý"
+
+**Trả lời 775:** Liệt kê lại đủ 6 bước theo plan v0.6.1 và nói rõ cách xử lý bước 2: thay dò 1 epoch bằng loss thành chạy đủ 2 epoch, sinh và chấm 1.000 mẫu, so chrF với mốc đã có. Chưa chạy, chờ duyệt.
+
+**Prompt 776:** "6 bước ( bao gồm cách xử lý bước 2), bạn ước tính chạy trên kaggle con 6000 Pro trong bao lâu"
+
+**Trả lời 776:** [ƯỚC, dựa tốc độ đo trên RTX PRO 6000] riêng 6 bước: ~3 giờ (cụm không có tín hiệu, duyệt bỏ pair), ~5,8 giờ (cả hai bản không có ứng viên), ~12,2–12,8 giờ (một bản có ứng viên), ~17,8 giờ (cả hai). Thêm ~1,5 giờ đo test, và ~2,1 giờ B8 nếu không có ứng viên cụm. Chưa chạy, chờ duyệt.
+
+**Prompt 777:** "Bạn có đang bị quá tay phần nào không vậy, chứ chạy lâu quá"
+
+**Trả lời 777:** Có, nặng nhất là bản pair ở bước 5 (~5,6 giờ) và bước 2 (~2,7 giờ). Đề xuất cắt: pair chỉ thử 1 mức theo kết quả cụm (~1,3 giờ), không K-fold riêng pair, K-fold đủ K=3 trên cụm; riêng 6 bước còn ~4,4–10,8 giờ, tính cả test và B8 ~8–12,3 giờ. Đánh đổi: tỉ lệ pair chỉ có bằng chứng fold 0. Tùy chọn bỏ kiểm lr (-1,4 giờ). Chưa sửa plan, chờ Nhật Anh quyết.
+
+**Prompt 778:** "Bạn định xuất bỏ khảo sát với bản Pair hử, hay sao"
+
+**Trả lời 778:** Không bỏ pair, chỉ giảm số lần chạy. Nhưng 1 mức thì chưa đủ gọi là khảo sát riêng, nên đổi đề xuất: pair thử đủ 2 mức trên fold 0 như cụm, K-fold pair chỉ chạy khi mức thắng của pair khác cụm. Riêng 6 bước ~5,7–12,1 giờ (cộng ~5,6 giờ nếu K-fold pair). Chưa sửa plan, chờ Nhật Anh quyết.
+
+**Prompt 779:** "Tui giữ đề xuất B và giữ bước kiểm lại lr. Bạn hãy làm rõ lại plan cho tui, từng bước là gì, tại sao, mục tiêu của bước đó"
+
+**Trả lời 779:** Cập nhật plan v0.6.1 theo phương án B, giữ kiểm lr. Giải thích từng bước: làm gì, vì sao, mục tiêu. Tổng ~9,3–13,6 giờ GPU, pair K-fold riêng +~5,6 giờ. Chưa chạy, chờ lệnh.
+
+**Prompt 780:** "với 6 bước trên thì ước tính bao lâu"
+
+**Trả lời 780:** [ƯỚC] Riêng 6 bước: ~5,7 giờ GPU nếu không có ứng viên, ~12,1 giờ nếu có ứng viên cụm, ~12,7 giờ nếu chỉ pair có ứng viên, ~17,8 giờ nếu cụm và pair đều cần K-fold. Chưa chạy, chờ lệnh.
+
+**Prompt 781:** "6 bước trong plan là tối ưu và hiệu quả nhất cho việc khảo sát và chọn được bộ trọng số cho cột Titlr và Des ( bản cụm và bản pair) để hướng về Mục tiêu cuối cùng: Khi fine-tune sau này, nên cho title và mô tả tỉ lệ bao nhiêu thì bản dịch tốt nhất, để mô hình không học lệnh về bên nào phải ko"
+
+**Trả lời 781:** Không khẳng định được tối ưu nhất; là phương án cân bằng nhất em tìm được trong quỹ ~19,9 giờ. Đúng mục tiêu ở tách hai bản, so bằng bản dịch, K-fold, luật không học lệch. Giới hạn: chỉ 3 mức, cổng chặt có thể bỏ sót tác động nhỏ, title chưa sửa, tỉ lệ của Qwen3-4B chưa chắc dùng được cho mô hình khác. Đề xuất vẫn chạy bước 2 bản cụm trước để biết tỉ lệ có tác động không, sau khi sửa title hoặc đổi mô hình thì so lại nhanh ~1,4–2,8 giờ nếu tỉ lệ có tác động. Chưa chạy, chờ lệnh.
+
+**Prompt 782:** "data để làm từ bước 1 này, bạn sẽ lấy bản sau judge hay bản nào vậy, nói rõ cho tui biết"
+
+**Trả lời 782:** Dùng bản sau Judge: `bo_cum_chon_deepseek.parquet`, `bo_pair_chon_deepseek.parquet`, HF commit `82aa9c9`. Kiểm hash [ĐO]: hai file khớp `DU_LIEU_DONG_BANG.json`; `pool_cum.jsonl` (46.120 mẫu), `pool_pair.jsonl` (46.110 mẫu), 23.017 sp, khớp gói Kaggle `ft-qwen3-4b-pool`. Chỉ phần pool, không có tập test; title chưa sửa. Khi kiểm fold 0, train 37.123 mẫu cụm, 37.114 mẫu pair. Chưa chạy, chờ lệnh.
+
+**Prompt 783:** (ảnh notebook nlp-group3, GPU RTX Pro 6000) "Vậy bạn bắt đầu làm bước 1 nha, Sau khi có đầy đủ notebook cần thiết thì bạn tự động sửa đè lên notebook như hình tui gửi nha để có con 6000 Pro và tự động chạy, bạn phải làm sao theo dõi phiên chạy thật kĩ, tui tắt máy vẫn chạy bình thường, và tránh các lỗi đáng tiếc xảy ra, để tránh lãng phí thời gian chạy, tránh việc chạy xong hết mười mấy tiếng xong mới phát hiện ra lỗi, bạn chia việc cho Sonnet làm nữa nha, bạn sẽ kiểm soát và ra quyết định, đọc kĩ plan và bám sát mục tiêu: Khi fine-tune sau này, nên cho title và mô tả tỉ lệ bao nhiêu thì bản dịch tốt nhất, để mô hình không học lệnh về bên nào"
+
+**Trả lời 783 (đang làm):** Đổi phiên từ 2,5 giờ sang một phiên tối đa 7,5 giờ cho bước 2, dưới giới hạn Kaggle 9 hay 12 giờ, để tắt máy vẫn chạy hết (phiên chạy trên Kaggle, vòng lặp đẩy phiên mới nằm trên máy). Lưu đầu ra bản 25 sang `ft-qwen3-4b-b78-luu`, 1,97 GiB, kiểm: `cum_f1` bước 1.102, hash khớp bản tải về; xác nhận Kaggle gắn bản 25 chứ không phải bản 26 bị hủy. Mã mới trong `kaggle_train.py`: loss có trọng số, phép thử 1:1 trước khi chạy, chốt dừng khi chrF dưới 65 hoặc sinh lặp trên 5%, ghi thống kê clip gradient; `dong_goi_kaggle.py`: `tl_thu`, `tl_thu_tiep`, `tl_b2`, `chay_nhieu_phien`. Kiểm trên dữ liệu thật bắt được lỗi thiết kế của em: chuẩn hóa theo từng bước làm tỉ trọng title kẹt 14%–71%, vì 142/929 bước toàn title và 291/929 bước toàn mô tả; đã sửa bằng hệ số chung `he_chuan`, thêm test. Tỉ lệ thật: cụm 0,1203:1 (10,74%), 3,039:1 (75%); pair 0,1182:1 (10,86%), 2,959:1 (75%). Sonnet viết `tong_hop_ti_le.py` và rà độc lập mã, đang chạy.
+
+**Prompt 784:** "Ủa nhưng mà chỉ khảo sát trọng số thoi sao mà lâu dữ vậy bạn, tui tưởng chỉ 4-5 tiếng thoi chứ, bạn nói rõ cho tui biết nha"
+
+**Trả lời 784:** Khảo sát tỉ lệ phải huấn luyện thật: mỗi mức ~1,3–1,4 giờ [ĐO], 4 lần là ~5,5 giờ, tổng ~5,7 giờ nếu không có ứng viên, gần với 4–5 giờ anh nghĩ. Phần 12 giờ trở lên là K-fold, chỉ chạy khi có ứng viên, và em dừng hỏi trước. Muốn dưới 5 giờ thì pair thử 1 mức (~4,4 giờ) nhưng ít bằng chứng hơn. Giữ phương án B trừ khi anh đổi.
+
+**Prompt 785:** "Muốn biết một tỉ lệ có tốt không, phải huấn luyện thật ở tỉ lệ đó rồi chấm bản dịch. Đếm số trên dữ liệu thì không trả lời được. bạn huấn luyện như thế nào vậy ( bước này lâu phải ko)"
+
+**Trả lời 785:** Đúng, huấn luyện là phần lâu nhất, ~1,25 giờ mỗi lần trong ~1,35 giờ. Giải thích: gắn LoRA vào Qwen3-4B, ~1.840 bước, mỗi bước ~2,5 giây; mỗi bước đọc ~40 mẫu fold 1–4, tính lỗi có nhân trọng số title và mô tả, tính gradient, cập nhật 132 triệu tham số LoRA; đo loss sau mỗi epoch; sinh và chấm 1.000 mẫu fold 0, so với mức hiện tại.
+
+**Trả lời 783 (tiếp):** Sonnet viết xong `tong_hop_ti_le.py`, em tự chạy test đạt, mốc chấm lại khớp 75,7613 và 75,2587. Sonnet rà độc lập không thấy lỗi nghiêm trọng; sửa 2 chỗ: mất checkpoint giữa chừng thì dừng, phép thử 1:1 bắt cả NaN. Đẩy khói hai phần.
+
+**Prompt 786:** "Con số 12–18 giờ chỉ xảy ra khi có ứng viên phải chạy K-fold, và em sẽ dừng hỏi anh trước khi chạy phần đó. Khi nào xảy ra chuyện này vậy, dễ xảy ra ko chắc chỉ chạy mới biết, Còn Lần chạy sắp tới chỉ khoảng 5,7 giờ, là xong 6 bước chốt được bộ trọng số hay sao"
+
+**Trả lời 786:** 5,7 giờ chỉ xong 6 bước khi không có ứng viên, kết quả là giữ ~50%; có ứng viên thì mới xong bước 1–3, chưa chốt. Có ứng viên khi một mức thắng rõ theo khoảng tin cậy và không học lệch. Phán đoán nghiêng về khó xảy ra, không có số xác suất, phải chạy mới biết.
+
+**Prompt 787:** "Vậy bạn cứ theo dõi các phiên tự động trên Kaggle, bạn phải làm sao theo dõi phiên chạy thật kĩ, tui tắt máy vẫn chạy bình thường, và tránh các lỗi đáng tiếc xảy ra, để tránh lãng phí thời gian chạy, tránh việc chạy xong hết mười mấy tiếng xong mới phát hiện ra lỗi,"
+
+**Trả lời 787 (đang làm):** Viết bộ canh đọc log Kaggle mỗi 10 phút, đánh thức khi có mốc mới, lỗi, hoặc phiên đứng yên quá 30 phút. Ghi bù Prompt 786 (lượt trước ghi đã cập nhật nhưng thực tế chưa ghi). Khói đạt: phần 1 dừng ở cum_f0_p11 bước 3, phần 2 có "chay tiep tu", tới 17/17 và 16/16 bước, phép thử 1:1 khớp đúng 3,458291530609131, tỉ lệ thật đạt mục tiêu; điểm trong khói không có ý nghĩa. Trong khói ở mức 75%, 10/10 bước trộn bị clip nên phải theo dõi trên dữ liệu thật. Đẩy bước 2 thật lúc 23:20: `tl_b2 moi`, bản 29, RUNNING, log `ft_run/kaggle_tl/tu_dong.log`; không nối trạng thái khói; `w_title` 0,12029, tỉ trọng khi w=1 là 0,49652. Bộ canh bật. Ước xong khoảng 05:00 ngày 06/11.
+
+**Cập nhật 787 (tự động, không có prompt mới: phiên bước 2 xong 05:02 ngày 06/11):** Bản 29 COMPLETE, 20.421 giây, không lỗi, không bất thường. Tải về `ft_run/kaggle_tl/phien_1_20261105_231941/`, chạy `tong_hop_ti_le.py`, mốc tự chấm khớp. Chênh chrF theo câu so với ~50%: cụm 10,74% +0,11 [-0,39; +0,61], cụm 75% -0,06 [-0,51; +0,42], pair 10,86% -0,08 [-0,54; +0,36], pair 75% -0,58 [-0,99; -0,19]. Không mức nào qua cổng, kết luận theo tiêu chí đã khóa: giữ ~50% cho cả hai bản, bỏ qua bước 4, 5. Giới hạn: chỉ fold 0; clip cắt gần hết bước toàn title ở mức 75%. Tín hiệu chưa kiểm định: mức ~11% nâng mô tả dòng mới zh→vi ~1,9–2,3 điểm, title cụm +0,14, title pair -0,96. Cập nhật plan v0.6.2. Dừng, chờ lệnh cho hai mục tiêu còn lại.
+
+**Prompt 788:** "Bạn chạy xong rồi hử, chi tui bộ trọng số đi"
+
+**Trả lời 788:** Đọc lại `bao_cao_ti_le.md` và `tl_trang_thai.json` của bản 29. Bộ trọng số theo tiêu chí đã khóa, fold 0: cả hai bản đặt mỗi mẫu title và mô tả trọng số 1 : 1. Tỉ trọng thật trong loss [ĐO]: cụm 49,65% title : 50,35% mô tả; pair 50,30% : 49,70%. Đây là mức giữ lại vì không mức nào thắng rõ, không phải điểm tối ưu đã chứng minh; chỉ thử 3 mức, chưa có K-fold so sánh tỉ lệ. Plan ghi cụm 49,56, pair 50,26 là số cũ; sửa dòng đó theo số đo trong phiên. Chờ lệnh nối B8.
+
+**Prompt 789:** "sao bạn chọn bộ trọng số này vậy, tức là bộ trọng số này làm cho......... hay bạn train mô hình và đánh giá bản dịch thấy bọ này okk, hãy cho tui biết rõ nhé"
+
+**Trả lời 789:** Có train thật và chấm bản dịch thật, nhưng 1 : 1 không phải mức thắng. 1 : 1 là mức sẵn có từ đầu, được giữ vì hai mức thử (~11%, 75% title) không vượt được theo tiêu chí khóa trước. Đo: mỗi mức train 2 epoch trên fold 1–4, lr 2e-4, rank 64, sinh 1.000 bản dịch fold 0, chấm chrF với tham chiếu; không có người hay LLM đọc các bản dịch này. 1 : 1 không làm bản dịch tốt lên so với hai mức kia, chỉ là không có bằng chứng để đổi; riêng pair 75% kém rõ. Giải thích thêm: chrF ~11% của cụm cao hơn 1 : 1 (76,14 so với 75,76) nhưng chênh theo câu +0,11 [-0,39; +0,61] nên tính là hòa.
+
+**Prompt 790:** "Có nên thử tiếp các tỉ lệ khác không, ủa bạn gán cứng 1 tỉ lệ ròi cho chạy mô hình xhong đánh giá bản dịch hử, tui tưởng bạn đặt nó là tham số thay đổi liên tục"
+
+**Trả lời 790:** Đúng là gán cứng: trong một lần train w không đổi, đổi w giữa các lần train. Đây là siêu tham số như lr. Không để w tự học thẳng theo loss vì mô hình sẽ đẩy trọng số về phía loại loss thấp; chrF lại không lấy đạo hàm được. Có cách cân bằng tự động (uncertainty weighting, GradNorm) nhưng đích là cân loss, không phải chất lượng bản dịch. Ước tính thô [ƯỚC] từ loss epoch 2 ở 1 : 1: uncertainty weighting cho w ≈ 0,12 (cụm), 0,14 (pair), gần mức ~11% đã thử (0,120; 0,118). Đề xuất không thử thêm tỉ lệ lúc này: nửa khoảng tin cậy ~0,4–0,5 điểm, chênh tốt nhất đo được +0,11. Nếu muốn đi tiếp thì kiểm tín hiệu mô tả dòng mới zh→vi: bootstrap trên bản dịch đã có (0 GPU), rồi thêm ~11% trên fold 1 (~1,35 giờ) cùng B8. Chờ anh quyết.
+
+**Prompt 791:** "bạn làm bước 1 là làm gì vậy, giải thích, chạy trong bao lâu"
+
+**Trả lời 791:** Chưa chạy. Bước 1 không train, không dịch lại, chỉ tính trên bản dịch đã có của mức ~11% và 1 : 1 (fold 0; `sinh_ep2.jsonl` đã có trên máy, không đọc test): lấy khoảng 250 mô tả zh→vi mỗi bản, giữ phần dòng mới, chấm chrF từng sản phẩm, bootstrap 2.000 lần theo cặp để có khoảng 95% của chênh. Luật khóa trước: khoảng nằm hẳn trên 0 thì đề xuất bước 2; chứa 0 thì dừng, giữ 1 : 1. Giới hạn: tín hiệu thấy trên chính fold 0, nên qua bước 1 chỉ là đáng kiểm tiếp. Thời gian [ƯỚC]: 15–30 phút cả viết, kiểm mã và chạy, 0 GPU.
+
+**Prompt 792:** "Vậy bạn làm đi, bạn làm cẩn thận nha"
+
+**Trả lời 792 (đang làm, ghi trước khi xem số):** Luật khóa, riêng từng bản, so mức ~11% với 1 : 1. Chỉ số quyết định: chênh chrF trung bình theo sản phẩm trên dòng mới của mô tả zh→vi, bootstrap 2.000 lần, seed 42, dùng `bootstrap_chenh`. Khoảng 95% nằm hẳn trên 0 thì đề xuất bước 2, chứa 0 hoặc dưới 0 thì dừng. Chỉ so sản phẩm khớp dòng ở cả hai mức, báo số bị loại. Số phụ, không quyết định: chrF corpus dòng mới, dòng mới vi→zh, title, mô tả zh→vi toàn bộ, độ tập trung (bỏ 5 sản phẩm đầu, cuối). Corpus và chỉ số chính mâu thuẫn thì báo rõ, không tự chọn số đẹp hơn.
+
+**Trả lời 792 (tiếp, sau lần chạy đầu):** Luật khóa cho kết quả qua ở cả hai bản: cụm +1,43 [+0,54; +2,32], pair +1,36 [+0,57; +2,19]; số tái tạo khớp báo cáo cũ. Đọc các sản phẩm đổi nhiều nhất (rà soát bằng LLM): nhiều thay đổi lớn chỉ khác chữ hoa, chữ thường, và có sản phẩm trùng dòng. Thêm hai phép kiểm độ nhạy, ghi trước khi chạy: (1) chấm lại không phân biệt hoa thường; (2) bootstrap theo cụm sản phẩm chung dòng. Kết quả luật khóa giữ nguyên là qua, nhưng nếu khoảng ở (1) hoặc (2) chứa 0 thì em không đề xuất tốn GPU cho bước 2, vì tín hiệu khi đó có thể chỉ là cách viết hoa hoặc do sản phẩm trùng.
+
+**Trả lời 792 (kết quả):** `scripts/ft_train/kiem_dong_moi.py` + test 14/14, chạy 26 giây, 0 GPU, không đọc test; báo cáo `ft_run/kaggle_tl/phien_1_20261105_231941/tong_hop/kiem_dong_moi.{md,json}`. Không phân biệt hoa thường: cụm +1,44 [+0,76; +2,15], pair +0,95 [+0,27; +1,71]. Theo cụm chung dòng: cụm +1,43 [+0,39; +2,49] (237 cụm), pair +1,36 [+0,44; +2,25] (233 cụm). Cả hai cách cùng lúc: cụm +1,44 [+0,71; +2,12], pair +0,95 [+0,22; +1,69]. Nghi ngờ chữ hoa của em không đúng phần lớn: chỉ 18/268 (cụm), 9/250 (pair) dòng khác nhau là chỉ khác chữ hoa. Mô tả zh→vi toàn bộ cũng tăng: cụm +0,69 [+0,39; +1,00], pair +0,82 [+0,52; +1,16]. Dòng mới vi→zh chứa 0. Title: cụm zh→vi +0,24 [-0,86; +1,35] không mất; pair zh→vi -1,19 [-2,20; -0,25] mất thật. Tăng 103, giảm 67, bằng 76 sản phẩm ở cụm; 101, 56, 85 ở pair; trung vị 0. Kết luận: tín hiệu vượt sai số trên fold 0, đáng kiểm trên fold khác, chưa đổi 1 : 1. Đề xuất bước 2 cho cụm, trước khi đẩy phải lưu đầu ra bản 29 vì adapter ~11% chỉ còn ở đó. Chờ lệnh, chưa tốn GPU.
+
+**Prompt 793:** "Đề xuất bước 2, chỉ làm trên bản cụm giải  quyết cho vấn đề gì vậy, giải thích, lấy ví dụ"
+
+**Trả lời 793:** Bước 2 trả lời mức tăng +1,43 của ~11% là thật hay chỉ đúng với nhóm sản phẩm ở fold 0, nơi em đã phát hiện nó; từ đó quyết bản cụm giữ 1 : 1 hay đổi. Cách làm: train hai mô hình cùng cấu hình, chỉ khác tỉ lệ, trên phần còn lại, rồi cùng dịch fold 1 và so theo cặp. Làm cụm trước vì không mất title, còn pair đổi bằng title; không bỏ pair, kết quả pair giữ nguyên và quyết sau khi có kết quả cụm. Phần tốn thêm thật chỉ ~1,35 giờ vì B8 đằng nào cũng chạy. Chưa chạy, chờ lệnh.
+
+**Prompt 794:** "Vậy bạn tiến hành làm tự sửa đè lên notebook để có con 6000 nha, tự động chạy và kiếm soát phiên chạy luôn"
+
+**Trả lời 794 (đang làm):** Luật khóa trước khi chạy, bản cụm, mức ~11% trừ 1 : 1 trên fold 1: khoảng 95% của chênh dòng mới mô tả zh→vi theo sản phẩm nằm hẳn trên 0, và title không tụt quá 1 điểm chrF. Không đạt thì chốt 1 : 1, dừng hướng này. Đạt thì báo để chạy fold 2, đổi tỉ lệ chỉ khi đạt tiêu chí 3 fold. Thứ tự: lưu đầu ra bản 29, sửa mã, chạy khói, chạy thật `cum_f1`, `cum_f1_p11`, `cum_f2`.
+
+**Trả lời 794 (tiến độ):** Lưu bản 29 sang `ft-qwen3-4b-tl-luu`: 17 file, 1,97 GiB, đủ 4 adapter, hash bản dịch và trạng thái khớp bản trên máy. Kiểm trên máy: dấu vân tay khớp trạng thái gốc, `cum_f1` đúng bước 1.102. Khói 1 (bản 30): nối từ kho lưu, phép thử 1:1 khớp đúng 3,458291530609131, tới bước 1.105 vị trí lô 195, RTX PRO 6000. Khói 2 (bản 31, trạng thái riêng `thu_b8`): đủ 3 việc, mốc không có `w_title`, `cum_f1_p11` có `w_title`, cùng mẫu sinh giữa hai việc fold 1, chỉ mốc có loss cả fold, log không có lỗi. Đẩy phiên thật bản 32 bằng `dong_goi_kaggle.py b8f1 moi`, tiến trình độc lập, log `ft_run/kaggle_b8f1/tu_dong.log`, RUNNING; bộ canh bật. Log phiên thật 10:31: "chay tiep tu" từ `ft-qwen3-4b-b78-luu`, phép thử 1:1 khớp. Viết sẵn `kiem_fold_ti_le.py` theo luật khóa, test 15/15; kiểm công cụ bằng fold 0 ra đúng +1,43 [+0,54; +2,32]. Sửa `tong_hop_ti_le.chuan_bi_mau` nhận thêm tham số fold, mặc định vẫn fold 0, test vẫn đạt.
+
+**Cập nhật 794 (tự động, không có prompt mới: phiên xong 06/11, 13.079 giây ≈ 3,63 giờ, bản 32, không lỗi, không bất thường):** Kết quả ở `ft_run/kaggle_b8f1/phien_1_20261106_102741/`. Luật khóa fold 1, cụm, ~11% trừ 1 : 1: ĐẠT, dòng mới mô tả zh→vi +1,95 [+1,13; +2,82] (244 sp, 902 dòng), corpus 78,32 → 80,47; title hai hướng corpus 58,56 → 58,89, +0,33 [-0,64; +1,30]. Độ nhạy: không phân biệt hoa thường +1,89 [+1,19; +2,62]; theo 238 cụm +1,95 [+1,11; +2,76]; bỏ 5 sản phẩm tăng nhất còn +1,60; tăng 119, giảm 55, bằng 70. Mô tả zh→vi toàn bộ +0,84 [+0,54; +1,14]. Dòng mới vi→zh +0,90 [-0,16; +2,00], hòa. Tiêu chí 3 fold đã khóa, tới giờ: chrF chung corpus fold 0 75,76 → 76,14 (+0,38), fold 1 74,74 → 75,14 (+0,40); theo câu +0,11 [-0,39; +0,61] và +0,40 [-0,05; +0,85], cả hai khoảng vẫn chứa 0; không học lệch ở cả hai fold; cần fold 2. B8 mức 1 : 1: chrF 75,76, 74,74, 74,16, trung bình 74,89 ± 0,81; C1, C2, C3 không bật; tiêu chí ổn định so với zero-shot chưa đánh giá được. Túi lỗi lặp ở cả 3 fold: mô tả beauty, food, auto, home. Chưa đổi 1 : 1, chờ lệnh chạy `cum_f2_p11` (~1,35 giờ); trước khi đẩy phải lưu đầu ra bản 32.
+
+**Prompt 795:** "Kết quả của phiên mới chạy có đúng như bạn dự đoán và giúp ích gì ko, để tui biết có nên chạy fold2 ko"
+
+**Trả lời 795:** Đối chiếu với tin trả lời 793: em không dự đoán một con số, chỉ nêu hai kết cục kèm số giả định, và kết quả rơi vào kết cục 2 (lặp lại trên sản phẩm khác). Điều em lo là fold 0 đẹp hơn thực tế thì chưa xảy ra: fold 1 +1,95 [+1,13; +2,82] không thấp hơn fold 0 +1,43 [+0,54; +2,32]; title fold 1 +0,33 [-0,64; +1,30], fold 0 +0,14 [-0,99; +1,34]. Giúp được: tín hiệu không phải may rủi của một fold; có thêm B8 ở mức 1 : 1 (74,89 ± 0,81; C1–C3 không bật). Chưa giúp được: bộ trọng số chưa đổi; chrF chung chỉ +0,38, +0,40, theo câu vẫn chứa 0; chrF đo độ giống bản dịch máy; pair chưa kiểm trên fold khác. Đề xuất chạy `cum_f2_p11` (~1,35 giờ, quỹ còn ~10,1 giờ [ƯỚC]) vì đó là phần còn thiếu duy nhất để quyết đổi hay giữ; fold 2 lại là fold khó nhất ở mức 1 : 1 (dòng mới zh→vi 73,40). Nêu điểm yếu của tiêu chí đã khóa: với +0,38, +0,40, fold 2 chỉ cần chrF chung dương và không học lệch là gần như qua, nên đề xuất thêm trước khi chạy: dòng mới mô tả zh→vi fold 2 khoảng 95% nằm hẳn trên 0, title không tụt quá 1 điểm. Chưa chạy, chờ lệnh.
+
+**Prompt 796:** "Tui đồng ý chạy fold 2 với điều kiện thêm ở trên, bạn tự sửa đè lên notebook để có con 6000 nha, tự động chạy và kiếm soát phiên chạy luôn"
+
+**Trả lời 796 (đang làm, ghi trước khi có số):** Luật khóa cho bản cụm, mức ~11% (`p_title` 0.1074) so với 1 : 1. Đổi sang ~11% chỉ khi đạt đủ: (1) tiêu chí 3 fold cũ: chrF chung cao hơn ở cả 3 fold, chênh trung bình lớn hơn độ lệch chuẩn của chênh, không học lệch; (2) trên fold 2, khoảng 95% của chênh dòng mới mô tả zh→vi theo sản phẩm nằm hẳn trên 0; (3) trên fold 2, title hai hướng corpus không tụt quá 1 điểm. Thiếu một điều kiện thì chốt 1 : 1 cho bản cụm. Không đo test, không đọc test. Thứ tự: lưu đầu ra bản 32, thêm cấu hình `cum_f2_p11`, chạy khói, chạy thật, canh phiên, chấm bằng `kiem_fold_ti_le.py --fold 2`.
+
+**Trả lời 796 (tiến độ):** Lưu đầu ra bản 32 sang `ft-qwen3-4b-b8f1-luu`: 19 file, 1,97 GiB, 4 adapter (`pair_f0`, `cum_f1`, `cum_f1_p11`, `cum_f2`), hash bản dịch và trạng thái khớp bản trên máy. `dong_goi_kaggle.py` thêm `luu_b8f1`, `b8f2_thu`, `b8f2 moi|tiep`, cấu hình `cum_f2_p11` (trạng thái riêng `b8f2`, trần 3 giờ); `kaggle_train.py` không đổi. Kiểm công cụ chấm bằng mốc `cum_f2` so với chính nó: chênh đúng 0, mốc 74,16, luật báo không đạt. Khói bản 33, 284 giây: RTX PRO 6000, `khoa_test` sạch, phép thử 1:1 khớp, p thực 10,74%, 12 mẫu sinh nằm trong mẫu mốc, cùng cấu hình và lr với mốc. Đẩy phiên thật 16:50 ngày 06/11 bằng tiến trình độc lập, log `ft_run/kaggle_b8f2/tu_dong.log`, bộ canh bật.
+
+**Cập nhật 796 (tự động, không có prompt mới: phiên xong 06/11, 5.365 giây ≈ 1,49 giờ, bản 34, không lỗi, không bất thường):** Kết quả ở `ft_run/kaggle_b8f2/phien_1_20261106_165058/`. Bản cụm, ~11% trừ 1 : 1, fold 2: dòng mới mô tả zh→vi +2,69 [+1,76; +3,69] (244 sp, 911 dòng), corpus 73,40 → 76,79; không phân biệt hoa thường +2,08 [+1,28; +2,95]; theo 233 cụm +2,69 [+1,71; +3,69]; bỏ 5 sản phẩm tăng nhất còn +2,04; tăng 113, giảm 49, bằng 82. Title hai hướng corpus 60,33 → 60,67, +0,33 [-0,46; +1,16]; title zh→vi theo mục -0,38 [-1,35; +0,50]. Mô tả zh→vi toàn bộ +1,07 [+0,75; +1,41]. Dòng mới vi→zh +1,23 [+0,23; +2,35]. Tiêu chí 3 fold (`kiem_3fold_ti_le.py`, `tong_hop/kiem_3fold.json`): chrF chung +0,38, +0,40, +1,15, trung bình 0,64, độ lệch chuẩn 0,44; theo câu +0,11 [-0,39; +0,61], +0,40 [-0,05; +0,85], +0,59 [+0,16; +1,05]; không học lệch từng fold và theo trung bình (title +0,27, mô tả +1,02, zh→vi +0,61). KẾT LUẬN THEO LUẬT KHÓA: ĐẠT ĐỦ, bản cụm đổi sang tỉ trọng title 10,74% (w_title 0,1203, 0,1186, 0,1197 theo fold). Giới hạn: fold 2 tăng chung lớn chủ yếu do vi→zh (+1,88), zh→vi chỉ +0,43; khoảng bootstrap chỉ tính dao động do mẫu, không tính dao động do huấn luyện lại; chrF đo độ giống bản dịch máy; mới so 3 mức nên chưa chứng minh là tối ưu; pair chưa kiểm trên fold khác. Chưa kiểm lr, chưa chạy pair, chờ lệnh; trước lần đẩy kế phải lưu đầu ra bản 34.
+
+**Prompt 797:** "Vậy chạy thành công rồi, bộ trọng số thay đổi gì so với bộ cũ, và những việc tiếp theo là gì, giải thích"
+
+**Trả lời 797 (giải thích, không chạy gì thêm, không tốn GPU):** Phiên bản 34 thành công. Bộ trọng số: chỉ bản cụm đổi, tỉ trọng title trong loss từ 49,65% xuống 10,74%, mô tả từ 50,35% lên 89,26%; mỗi mẫu title từ 1 xuống ~0,12 (`w_title` 0,1203, 0,1186, 0,1197 theo fold), mỗi mẫu mô tả vẫn 1. Ví dụ 10 title + 10 mô tả: cũ 10 và 10, mới 1,2 và 10. Không bớt mẫu title; lr 2e-4, rank 64, 2 epoch, dữ liệu, cách đánh giá giữ nguyên. Bản pair vẫn 1 : 1 (title ~50,30%). Tác động [ĐO] trên 3 fold: dòng mới mô tả zh→vi +1,43, +1,95, +2,69; title hai hướng +0,14, +0,33, +0,33; chrF chung +0,38, +0,40, +1,15. Giới hạn đã báo: chưa chứng minh tối ưu, chrF so bản dịch máy, chưa đo test. Việc tiếp, chờ lệnh: lưu đầu ra bản 34 (0 GPU); kiểm lr 1e-4 ở ~11%, fold 0 (~1,4 giờ); pair fold 1 (~2,7 giờ), đạt mới hỏi fold 2 (~2,7 giờ); sửa bộ đo (0 GPU); lưu adapter, đo test một lần (~1,5 giờ); B9 Gemini ~8 lần gửi + Claude 50 dòng; báo cáo. Quỹ ~8,5 giờ [ƯỚC]. Nếu lr đổi thì pair phải chạy lại mốc, em tính lại quỹ và báo trước.
+
+**Prompt 798:** "tỉ trọng title 10,74% : mô tả 89,26%, chốt cái này đúng ko bạn"
+
+**Trả lời 798 (không chạy gì thêm):** Đúng, nhưng chỉ cho bản cụm: đạt đủ luật khóa trên 3 fold. Bản pair chưa chốt, đang giữ 1 : 1, không dùng con số này cho pair. Bước kiểm lr chỉ quyết định lr 2e-4 hay 1e-4, không đổi tỉ lệ; nếu lr đổi thì bản cụm cần báo lại vì K-fold 3 fold đo ở lr 2e-4. Số 10,74% là mức tốt nhất trong các mức đã thử (~11%, ~50%, 75%), không phải điểm tối ưu chính xác tới hai chữ số lẻ; mức này lấy từ tỉ lệ token đích. Tập test chưa đo, sau khi đo cũng không đổi tỉ lệ.
+
+**Prompt 799:** "Bạn nhớ lưu lại thông số các lần chạy nha, để sau này viết báo cáo tui sẽ lục lại để phản biện"
+
+**Cập nhật 799 (không chạy Kaggle, 0 GPU):** Viết `scripts/ft_train/nhat_ky_chay.py`, sinh `data/processed/ft_run/NHAT_KY_CHAY.md` (24.584 byte) và `NHAT_KY_CHAY.json` (69.634 byte) từ file kết quả đã tải về, không gõ tay, không đọc test. Nội dung: (1) 7 phiên Kaggle chính (bản 20, 21, 22, 25, 29, 32, 34) với giờ bắt đầu/kết thúc ICT, giây, GPU, phiên bản torch/transformers/peft, tổng 19,34 giờ GPU, kèm 14 phiên khói/B5 tách riêng; (2) thông số cố định đọc từ mã (alpha = 2 × rank, dropout 0,05, all-linear, AdamW weight_decay 0, clip 1,0, warmup 3% + cosine 2 epoch, micro_bs 32, ngân sách 4.096 token, max_len 2.048, seed 42, greedy); (3) thông số huấn luyện 18 việc (lr, rank, bước, mẫu, token, % title mục tiêu/thực/nếu w = 1, w_title, he_chuan, bước bị clip); (4) kết quả từng việc (loss, chrF chung, title, mô tả, zh→vi, vi→zh, dòng mới, sinh lặp, tốc độ); (5) loss theo hướng × loại; (6) 33 so sánh theo cặp kèm khoảng 95% và tiêu chí 3 fold; (7) ghi chú sự cố; (8) sha256 của dữ liệu HF, phép chia, 10 file mã, 12 file bản dịch và danh sách manifest kho lưu. Số trong nhật ký đối chiếu khớp với số đã báo (ví dụ title hai hướng corpus +0,14, +0,33, +0,33 ở cụm; -0,96 ở pair fold 0). Giới hạn đã ghi thẳng trong nhật ký: (a) mã `kaggle_train.py` bản cũ KHÔNG được lưu riêng, B6 và bản 25 chạy bằng bản trước lần sửa 23:06 ngày 05/11, chỉ bản 34 còn trong `notebooks/kaggle_api/nlp-group3`; bằng chứng đường mã mới tương đương cũ chỉ là phép thử w = 1 (3,4583 = 3,4583), chưa chạy lại cùng cấu hình bằng hai bản mã; (b) `cum_f1` chạy qua hai phiên (bản 25 rồi 32); (c) khoảng tin cậy không tính dao động do huấn luyện lại; (d) đầu ra bản 34 chưa lưu sang kho riêng; (e) thống kê clip gradient chưa có cho `cum_f0`, `pair_f0`, và `cum_f1` chỉ tính 698 bước cuối. Phát hiện thêm khi lập nhật ký [ĐO]: mốc 1 : 1 `cum_f2` bị clip 112/256 bước lô toàn title, còn `cum_f2_p11` chỉ 3/256, nên ở 1 : 1 các lô title đã bị cắt thường xuyên (đây là dữ kiện cho phần phản biện, chưa kết luận gì thêm). Đã thêm dòng vào `scripts/ft_train/README.md`; quy ước: chạy lại `nhat_ky_chay.py` sau mỗi phiên mới và thêm phiên vào `PHIEN_CHINH`, `NGUON_TRANG_THAI`.
+
+**Prompt 800:** "Vậy bạn bắt đầu làm bước 1, 2, 3 theo thứ tự trên nha. Khoảng 4,1 giờ, bạn tự canh phiên như lần trước. Xong bạn chấm theo luật khóa rồi dừng báo, chưa tự sang bước 4."
+
+**Khóa luật 800 (ghi TRƯỚC khi đẩy phiên Kaggle, không đổi sau khi thấy số):** Việc: (1) lưu đầu ra bản 34 sang notebook riêng `ft-qwen3-4b-b8f2-luu` (không GPU, kiểm hash); (2) `cum_f0_p11_lr1e4`: bản cụm, fold 0, p_title 0,1074, lr 1e-4, so với `cum_f0_p11` (lr 2e-4, đã có, chrF chung 76,14); (3) `pair_f1` (mốc 1 : 1) và `pair_f1_p11` (p_title 0,1086), bản pair, fold 1, lr 2e-4. Ba việc một phiên, trạng thái riêng `tl2`, trần 6 giờ, ước ~4,1 giờ [ƯỚC], ca_fold tắt. Mọi việc dùng cùng 1.000 mẫu chấm của fold đó. LUẬT LR (`kiem_fold_ti_le.py --luat lr`): đổi sang lr 1e-4 chỉ khi (a) cận dưới khoảng 95% của chênh chrF chung theo câu (lr 1e-4 trừ lr 2e-4, cùng mức ~11%) > 0, VÀ (b) không học lệch: title, mô tả, zh→vi chrF corpus không tụt quá 1 điểm, VÀ (c) sinh lặp của lr mới không quá 10 trên 1.000 mẫu [MẶC ĐỊNH]. Khoảng chứa 0 là hòa và giữ lr 2e-4. Lưu ý: fold 0 là fold đã dùng chọn lr ở B6 (1 : 1: lr 2e-4 hơn lr 1e-4 +0,33 [-0,12; +0,81], hòa theo luật), nên kiểm lại ở đây không độc lập hoàn toàn. LUẬT PAIR CỔNG FOLD 1 (`--luat pair`, ~11% trừ 1 : 1): "đạt" khi (a) cận dưới khoảng 95% của chênh dòng mới mô tả zh→vi theo sản phẩm > 0, (b) title hai hướng chrF corpus không tụt quá 1 điểm, (c) title zh→vi theo mục (chênh) không tụt quá 1 điểm; thêm (c) vì pair fold 0 đã cho title zh→vi -1,19 [-2,20; -0,25]. Không đạt thì chốt pair 1 : 1 và dừng hướng này. Đạt chỉ có nghĩa là em hỏi Nhật Anh có chạy fold 2 hay không (~2,7 giờ), KHÔNG tự đổi tỉ lệ pair và KHÔNG tự chạy fold 2. Điểm báo trước: pair fold 0 có chrF chung ~11% so 1 : 1 là -0,10 corpus (theo câu -0,08 [-0,54; +0,36]), trong khi tiêu chí 3 fold của cụm đòi chrF chung cao hơn ở cả 3 fold; nên nếu cổng fold 1 đạt, quyết định đổi tỉ lệ pair cuối cùng cần Nhật Anh duyệt cách áp tiêu chí, em không tự nới. Mọi kết quả chỉ là số chrF so bản dịch máy, trên fold kiểm, chưa đo test. Sau khi xong ba việc: chấm, báo, DỪNG; chưa sang bước 4 (pair fold 2). Công cụ chấm mở rộng (thêm `--nhanh`, `--luat`, `--ten`, theo câu + không học lệch) đã kiểm lại: chạy fold 0 ra đúng cụm +1,43 [+0,54; +2,32] và pair +1,36 [+0,57; +2,19] (title zh→vi -1,19), mẫu pair fold 1 đủ 1.000.
+
+**Prompt 801:** "Bạn cho tui các option sau lệnh compact để tui thực hiện nhé, sao cho hiểu ngữ cảnh hiện tại, việc đang làm dở và sẽ làm,..."
+
+**Trả lời 801 (không chạy gì, 0 GPU):** Đưa Nhật Anh một đoạn hướng dẫn để dán sau `/compact`, gồm: mục tiêu và quy tắc, trạng thái phiên Kaggle bản 36 đang chạy (PID 9144, log `ft_run/kaggle_tl2/tu_dong.log`, giám sát `giam_sat_tl.py` với `tl2_da_thay.txt`), luật khóa lr và pair đã ghi ở Prompt 800, việc làm ngay khi phiên xong (lưu đầu ra sang kho riêng trước, cần viết thêm lệnh `luu_tl2`; chấm bằng `kiem_fold_ti_le.py --luat lr|pair`; cập nhật `nhat_ky_chay.py`; báo rồi dừng), các cấm kỵ (không đẩy đè khi RUNNING, không đọc test, không tự chạy bước 4, không commit hay đẩy HF).

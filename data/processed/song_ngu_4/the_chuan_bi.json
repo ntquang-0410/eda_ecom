@@ -1,0 +1,76 @@
+{
+ "buoc": "song_ngu_4.chuan_bi",
+ "ngay_chay": "2026-10-24 22:47:28",
+ "nguon": {
+  "bang_cap": {
+   "file": "bang_cap.parquet",
+   "sha256": "ac4c79d8b829011c43ce470089a25625643db6cd41680799a95d879119becb5e"
+  },
+  "bo_1": {
+   "file": "bo_song_ngu_1_day_du_20261022_2126.parquet",
+   "sha256": "8c9f0458424790ff0b4345ebe5fa6d0271bc75711950d7be70d74f619bd53494"
+  },
+  "don_vi": {
+   "file": "don_vi_da_chon_20261022_2126.parquet",
+   "sha256": "5a79bb8c8f77f65a3018165542bea736e628031f71ae1cad4547beaf43b298a4"
+  },
+  "san_pham": {
+   "file": "bilingual_zh_vi.parquet",
+   "sha256": "b4e5ce75d5ae8af523235b5c23f5c7289e405a8230d879f11136afc938135a29"
+  }
+ },
+ "max_zh_xem": 80,
+ "max_trong_so_phan": 2000,
+ "cap_dung_bo_1": 403830,
+ "cap_ten_hang_vo_nghia": 6,
+ "cap_bo_1_cong_bo": 394662,
+ "cap_bo_1_cat_rieng_dua_vao": 9162,
+ "cap_bo_dai_khong_co_ban": 1326,
+ "cap": 402498,
+ "san_pham": 16342,
+ "cum": 16346,
+ "cum_can_goi": 16346,
+ "san_pham_nhieu_phan": 4,
+ "nguon_ten_vao": {
+  "nhap": 233195,
+  "tu_dien_p6": 167411,
+  "tu_dien_p6b": 1306,
+  "chep_nguyen": 524,
+  "moi": 62
+ },
+ "nguon_gt_vao": {
+  "nhap": 216354,
+  "quy_tac_co_khong": 55154,
+  "quy_tac_chep_nguyen": 49128,
+  "tu_dien_p7": 48881,
+  "quy_tac_ten_hang": 13872,
+  "moi": 7802,
+  "dai_giu_bo_1": 6037,
+  "quy_tac_khoang": 2566,
+  "quy_tac_ma_that": 2479,
+  "quy_tac_diem_anh": 153,
+  "quy_tac_ngay": 72
+ },
+ "truong_can_xuat": 457413,
+ "ky_tu_trung_can_xem": 2403687,
+ "san_pham_khong_co_tieu_de": 0,
+ "mau_thu": {
+  "san_pham": 200,
+  "cum": 200,
+  "cum_can_goi": 200,
+  "cap": 4802,
+  "truong_can_xuat": 5400,
+  "theo_danh_muc": {
+   "auto": 23,
+   "bags": 23,
+   "beauty": 22,
+   "electronics": 22,
+   "fashion": 22,
+   "food": 22,
+   "home": 22,
+   "mother_baby": 22,
+   "shoes": 22
+  },
+  "hat_giong": 20261024
+ }
+}

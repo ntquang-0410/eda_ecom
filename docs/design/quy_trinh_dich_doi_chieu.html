@@ -1,0 +1,296 @@
+<title>Quy trình dịch đối chiếu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: một cột; sơ đồ ở trên (cuộn ngang trong khung riêng), sau đó bảng ngưỡng và danh sách điểm đã sửa so với bản gốc */
+:root {
+  --bg: #f6f7f5;
+  --panel: #ffffff;
+  --ink: #1d2523;
+  --muted: #5d6763;
+  --line: #d9dfdb;
+  --accent: #0f6b5c;
+  --accent-soft: #e3f1ed;
+  --warn: #b85c00;
+  --warn-soft: #fdf0e1;
+  --f-body: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "Cascadia Mono", Consolas, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121615; --panel: #1a201e; --ink: #e6ebe8; --muted: #9aa5a0; --line: #2d3532;
+    --accent: #5cc2ad; --accent-soft: #17302b; --warn: #f0a556; --warn-soft: #3a2a17; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121615; --panel: #1a201e; --ink: #e6ebe8; --muted: #9aa5a0; --line: #2d3532;
+  --accent: #5cc2ad; --accent-soft: #17302b; --warn: #f0a556; --warn-soft: #3a2a17; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.55; margin: 0; }
+.wrap { max-width: 1100px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 56px; display: grid; gap: 28px; }
+h1, h2 { text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(24px, 4vw, 32px); font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 19px; font-weight: 700; }
+p { margin: 0; max-width: 74ch; }
+.eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.lede { color: var(--muted); }
+header { display: grid; gap: 10px; }
+section { display: grid; gap: 12px; min-width: 0; }
+code { font-family: var(--f-mono); font-size: 0.88em; overflow-wrap: anywhere; }
+.diagram { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+.diagram pre.mermaid { margin: 0; }
+.tablewrap { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 620px; }
+table.ct { min-width: 880px; }
+table.ct td ul { padding-left: 16px; gap: 5px; }
+table.ct td:first-child { white-space: nowrap; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; }
+tr:last-child td { border-bottom: 0; }
+ul { margin: 0; padding-left: 20px; display: grid; gap: 7px; }
+li { max-width: 78ch; }
+.was { color: var(--warn); font-weight: 600; }
+.ok { color: var(--accent); font-weight: 600; }
+.note { background: var(--warn-soft); color: var(--ink); border-radius: 8px; padding: 10px 14px; font-size: 14px; max-width: 80ch; }
+@media (max-width: 560px) { .wrap { padding-inline: 16px; } }
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Tiểu luận dịch máy Việt–Trung TMĐT · bước xử lý dữ liệu · bản chỉnh 09/10/2026</div>
+  <h1>Quy trình dịch lại và đối chiếu bản Alibaba</h1>
+  <p class="lede">Hai mô hình khác họ, tải trọng số về tự chạy, dịch độc lập từ tiếng Trung gốc, rồi so với bản Việt của Alibaba qua độ đồng thuận giữa ba nguồn và luật kiểm tự động. Quy trình dừng ở bước xuất bảng ba bản dịch cùng nhóm đối chiếu và mã luật trượt; không đọc mẫu bằng mắt, không chọn bản, và việc đánh giá tiếp (tính cosine) do anh làm bên ngoài. Chỉ pilot và khối 2 cần GPU (Kaggle hoặc Colab miễn phí); các khối còn lại chạy CPU trên máy, và quy trình không dùng API trả phí. Chưa chạy bước nào; sơ đồ là kế hoạch.</p>
+</header>
+
+<section aria-labelledby="sd">
+  <h2 id="sd">Sơ đồ</h2>
+  <div class="diagram">
+<pre class="mermaid">
+flowchart TD
+  subgraph sg0["0. Chuẩn bị (code, không tốn tiền)"]
+    A["Dữ liệu description sạch hiện tại <br/>16.342 sản phẩm → 405.275 cặp description <br/>(chỉ dữ liệu đã che thông tin cá nhân; không gồm title)"]
+    B["Gộp trùng, mỗi đơn vị dịch 1 lần, lưu bộ nhớ đệm: <br/>149.813 giá trị lẻ (tên, giá trị) <br/>+ 2.017 tên thuộc tính"]
+  end
+
+  subgraph sg1["1. Pilot một lần với hai mô hình, trên 4.291 cặp đã có nhãn đúng/sai"]
+    E["Chạy thử hai mô hình: Qwen3-8B và HY-MT1.5-7B <br/>Đo: độ chính xác và độ trùng lỗi giữa hai mô hình"]
+    F{"Hai mô hình khác họ, <br/>ít trùng lỗi, và chỗ bất đồng với <br/>Alibaba phần lớn là lỗi thật?"}
+    F1["Chưa đạt: dừng và xem lại hướng <br/>(đổi mô hình hoặc API trả phí <br/>chỉ khi anh quyết định riêng)"]
+  end
+
+  C{"Giá trị có trong từ điển đã duyệt? <br/>300 tên · 914 giá trị · 87 địa danh <br/>101 từ chung · 11 thuật ngữ · mã giấy tờ"}
+  D["Giữ bản từ điển hoặc chép nguyên mã <br/>(không gửi cho mô hình)"]
+
+  subgraph sg2["2. Dịch Trung → Việt độc lập (Colab hoặc Kaggle)"]
+    G["Mô hình A: Qwen3-8B → vi_A"]
+    H["Mô hình B: HY-MT1.5-7B → vi_B <br/>(giấy phép hạn chế đầu ra, xem lỗ hổng G)"]
+  end
+
+  subgraph sg3["3. Đối chiếu 3 nguồn: vi_cu (Alibaba), vi_A, vi_B (so sau khi xong bước tiếng Anh)"]
+    I{"So khớp sau chuẩn hoá <br/>(chữ hoa, dấu câu, dấu thanh, <br/>chrF ≥ ngưỡng chọn ở pilot)"}
+    J["Nhóm A: cả 3 giống nhau <br/>nhãn 3_dong_y"]
+    K["Nhóm A2: vi_cu trùng 1 trong 2 mô hình <br/>nhãn 2_tren_3"]
+    L["Nhóm B: vi_A = vi_B, khác vi_cu <br/>Ứng viên thay thế"]
+    M["Nhóm D: cả 3 khác nhau <br/>không tự quyết, chỉ ghi nhóm"]
+  end
+
+  subgraph sg4["4. Luật kiểm tự động (code P6, P7, P8)"]
+    N{"Bản mới qua luật? <br/>Số và đơn vị khớp (斤 → kg bằng một nửa; cờ 寸 · 两 · 万 · 丝) <br/>Không còn chữ Hán · không bị lược ý (tỉ lệ độ dài) <br/>Thuật ngữ đúng bảng · giữ chữ-số (XL, PPSU) · giữ dấu che [SĐT]"}
+    O["B1: vi_cu trượt luật, bản mới qua <br/>→ ứng viên dùng bản mới"]
+    P["B2: cả hai đều qua luật (chỉ khác văn phong) <br/>giữ vi_cu"]
+  end
+
+  subgraph sg5["5. Xuất kết quả (pipeline dừng ở đây)"]
+    X["Xuất bảng ba bản dịch (vi_cu, vi_A, vi_B) <br/>kèm nhóm đối chiếu, mã luật trượt, nguồn gốc bản dịch <br/>Không đọc mẫu bằng mắt, không chọn bản, không đổi dữ liệu <br/>Đánh giá tiếp (cosine) do anh làm ngoài pipeline"]
+  end
+
+  A --> B --> E --> F
+  F -- "Chưa đạt" --> F1
+  F -- "Đạt: chạy cả bộ" --> C
+  C -- "Có" --> D --> X
+  C -- "Chưa có" --> G
+  C -- "Chưa có" --> H
+  G --> I
+  H --> I
+  I -- "Cả 3 giống" --> J
+  I -- "vi_cu = 1 trong 2 mô hình" --> K
+  I -- "vi_A = vi_B khác vi_cu" --> L
+  I -- "Cả 3 khác nhau" --> M
+  J --> X
+  K --> X
+  L --> N
+  N -- "Bản mới qua, vi_cu trượt" --> O
+  N -- "Cả hai qua" --> P
+  N -- "Bản mới trượt" --> M
+  O --> X
+  M --> X
+  P --> X
+
+  classDef xanh fill:#d9f2e3,stroke:#2f8f5b,color:#10331f
+  classDef do fill:#fbdcdc,stroke:#c0392b,color:#3d0f0f
+  classDef vang fill:#fff2cc,stroke:#b8860b,color:#3d3000
+  classDef tim fill:#ead9f7,stroke:#7d3fb0,color:#2a0f40
+  classDef xam fill:#e4e9f0,stroke:#5b6b82,color:#1d2735
+  class A,B,E,G,H,X xam
+  class F,C,I,N xam
+  class D,J,K,P xanh
+  class F1 do
+  class L,O vang
+  class M tim
+</pre>
+  </div>
+</section>
+
+<section aria-labelledby="ct">
+  <h2 id="ct">Chi tiết từng khối: kỹ thuật, phương pháp và lỗi dễ sót đã rà</h2>
+  <p class="lede">Mỗi hàng ghi kỹ thuật dùng, vì sao chọn, và những chỗ dễ hở đã kiểm trước (kiểu lỗi 斤 đã lọt qua luật số cũ). Phần "đã làm" là phần đã có mã và đã thử trên câu tổng hợp; mọi thứ còn lại là kế hoạch.</p>
+  <div class="tablewrap">
+    <table class="ct">
+      <thead><tr><th>Khối</th><th>Kỹ thuật và phương pháp</th><th>Lỗi dễ sót đã rà, cách chặn</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>0. Chuẩn bị</b></td>
+          <td><ul>
+            <li>Đơn vị dịch gồm <b>giá trị lẻ</b> theo khoá (tên thuộc tính, giá trị), lấy từ bảng đã tách ở P1: <b>149.813</b> giá trị khác nhau (1,72 triệu ký tự Trung, 83% chỉ xuất hiện 1 lần); <b>tên thuộc tính</b>: 2.017 tên khác nhau (từ điển đã duyệt mới có 300, phần đuôi còn do Alibaba dịch). Nhóm hàng đi kèm làm ngữ cảnh. <b>Title không nằm trong quy trình này</b> (anh quyết định 06/10/2026: chỉ dành riêng cho description).</li>
+            <li>Bỏ cặp PII và PII_NSX; chỉ gửi dữ liệu đã qua P3.</li>
+            <li>Tra từ điển đã duyệt trước (tên, giá trị, địa danh, từ chung, thuật ngữ, mã chép nguyên); chỉ phần chưa có mới đưa cho mô hình.</li>
+            <li><b>Bộ nhớ đệm</b> theo khoá (giá trị, mô hình, phiên bản câu lệnh): chạy lại sau khi dữ liệu đổi chỉ dịch phần mới.</li>
+          </ul></td>
+          <td><ul>
+            <li>Cùng chữ khác nghĩa theo ngữ cảnh (苹果 là Apple ở dòng máy, là táo ở trái cây; 中; 米): khoá có tên thuộc tính; tách khoá nếu cùng giá trị ở nhóm hàng khác cho nghĩa khác.</li>
+            <li>Tách danh sách sai ở dấu phẩy trong ngoặc hoặc số thập phân: dùng bảng giá trị lẻ đã tách sẵn, không tách lại.</li>
+            <li>Lộ thông tin cá nhân: quét đầu vào bằng điện thoại, email, URL trước khi gửi.</li>
+            <li>Dữ liệu còn đổi do bước tiếng Anh của Quang: bộ nhớ đệm, và chỉ so khớp sau khi bước đó xong.</li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td><b>1. Pilot</b></td>
+          <td><ul>
+            <li>Chỉ chạy hai mô hình đã chọn (Qwen3-8B và HY-MT1.5-7B), không thử thêm ứng viên; pilot dùng để kiểm cổng, chọn ngưỡng chrF và đo độ trùng lỗi.</li>
+            <li>4.291 cặp có nhãn: một nửa để chỉnh ngưỡng, nửa còn lại chỉ để đánh giá, không nhìn khi chỉnh.</li>
+            <li>Đo độ chính xác và độ phủ của "bất đồng thì là lỗi", AUC, và <b>độ trùng lỗi</b> giữa hai mô hình (cả hai cùng sai khi Alibaba sai).</li>
+            <li>Khoảng tin cậy Wilson cho mọi tỉ lệ.</li>
+          </ul></td>
+          <td><ul>
+            <li>Nhãn do Claude gắn có thể lệch (anh đã xem mẫu 60 cặp tầng 1): ghi giới hạn này khi báo kết quả pilot, không đọc lại thêm bằng mắt.</li>
+            <li>Tập có nhãn là phần đuôi dài, không đại diện cho giá trị phổ biến: kết luận chỉ áp cho đuôi dài; phần phổ biến kiểm riêng bằng mẫu ngẫu nhiên.</li>
+            <li>Nhãn bỏ qua chữ Anh/pinyin chưa dịch: không tính chữ Latin là lỗi khi chấm pilot.</li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td><b>2. Dịch</b></td>
+          <td><ul>
+            <li>vLLM, bản nén 4-bit, <b>nhiệt độ 0</b>, lô sắp theo độ dài, ghi từng lô ra đĩa để chạy tiếp được.</li>
+            <li>Qwen3-8B: câu lệnh có tên thuộc tính, nhóm hàng và vài ví dụ lấy từ từ điển đã duyệt, chế độ không suy nghĩ, đầu ra JSON có ràng buộc.</li>
+            <li>HY-MT1.5-7B (anh chọn 09/10/2026): bản nén GPTQ-Int4 (bản FP8 không hợp T4), câu lệnh theo mẫu trên thẻ mô hình cho dịch từ tiếng Trung, dịch cả cụm "tên: giá trị" rồi tách sau dấu hai chấm; mô hình hỗ trợ can thiệp thuật ngữ và ngữ cảnh, nhưng từ điển chỉ đưa vào câu lệnh ở chế độ thử của pilot.</li>
+            <li>Không đưa bản Alibaba cho mô hình xem.</li>
+          </ul></td>
+          <td><ul>
+            <li>Mô hình thêm lời giải thích hoặc lặp vô hạn (bản Alibaba cũng từng ra "Walfgerger…"): kiểm tỉ lệ độ dài, lặp cụm, thẻ ngôn ngữ còn sót.</li>
+            <li>Mô hình dịch cả dấu che [SĐT] hoặc "sửa" số cho đẹp: luật dấu che và luật số ở khối 4.</li>
+            <li>Kết quả đổi giữa các lần chạy: nhiệt độ 0, ghi phiên bản mô hình, câu lệnh, tham số.</li>
+            <li>HY-MT1.5 khuyến nghị lấy mẫu (nhiệt độ 0,7, top-k 20, top-p 0,6, phạt lặp 1,05); dùng nhiệt độ 0 có thể dễ lặp cụm: đo lặp cụm ở pilot, và nếu cần thì dùng đúng tham số khuyến nghị kèm ghi lại hạt giống.</li>
+            <li>Hết phiên Colab: ghi từng lô, chạy tiếp từ lô cuối.</li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td><b>3. Đối chiếu</b></td>
+          <td><ul>
+            <li>Chuẩn hoá: Unicode NFC, chữ thường, bỏ dấu câu và dấu chấm cuối, "7,5" = "7.5", ×/x/* như nhau, cm = centimet, kg = ki-lô-gam, <b>thống nhất kiểu đặt dấu thanh</b> (hòa/hoà, thủy/thuỷ).</li>
+            <li>So từng giá trị lẻ. Hai mức: giống hệt sau chuẩn hoá; hoặc gần giống bằng chrF (chuỗi từ 6 ký tự trở xuống đòi giống hệt), kèm điều kiện tập số bằng nhau.</li>
+            <li>Bỏ phiếu 3 nguồn thành nhóm A, A2, B, D.</li>
+          </ul></td>
+          <td><ul>
+            <li>Khác dấu thanh kiểu cũ và mới tạo bất đồng giả: chuẩn hoá dấu thanh trước khi so.</li>
+            <li>chrF dao động mạnh với chuỗi ngắn: không dùng ngưỡng, đòi giống hệt.</li>
+            <li>Hai bản gần giống về chữ nhưng khác số (95 và 190): điều kiện số đứng trước chrF.</li>
+            <li>Chữ Latin Alibaba để nguyên mà mô hình dịch ra: bất đồng giả, nên so sau bước tiếng Anh, hoặc bỏ chữ Latin có sẵn trong câu Trung khỏi phép so.</li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td><b>4. Luật kiểm</b></td>
+          <td><ul>
+            <li>Biểu thức chính quy và bảng quy đổi đơn vị. Kiểm thuật ngữ: <b>tên thuộc tính và giá trị khớp nguyên giá trị</b> (khớp từng phần sẽ trúng nhầm khắp nơi, ví dụ "是"); chỉ 11 thuật ngữ chung, 87 địa danh và từ chung của tên hãng mới khớp theo cụm dài nhất trong câu.</li>
+            <li><b>Đã làm:</b> 斤 → kg phải bằng một nửa (<code>src/doi_chieu.py</code>, nối vào P8). Giữ nguyên số thì tự chia đôi; giá theo 斤 hoặc số lệch khác thì gắn DS10.</li>
+            <li>Đã có: số và đơn vị cơ bản, chữ Hán sót, dấu che, độ dài.</li>
+            <li>Sẽ thêm: chữ-số trong câu Trung (XL, 3XL, PPSU, G805) phải còn trong bản Việt; thuật ngữ theo từ điển; <b>bản dịch bị lược ý</b> (tỉ lệ độ dài Việt/Trung dưới cận dưới theo họ thuộc tính, chọn ở pilot, hoặc thiếu số và chữ-số).</li>
+          </ul></td>
+          <td><ul>
+            <li>公斤 (là kg) bị nhầm thành 斤, 千斤顶 (cái kích xe): đã loại bằng mẫu khớp và có thử.</li>
+            <li>Giá theo 斤 ("30元/斤", "30块钱一斤", "一斤30元") không được chia đôi vì số là tiền: gắn cờ, không tự sửa. Lỗi này em tự phát hiện khi rà 06/10 và đã sửa.</li>
+            <li>半斤, 两斤 (số Hán), "一斤半" (= 1,5 斤, cũng đã sửa sau khi rà), nhiều cỡ trong một giá trị, số thập phân dạng "57,5", khoảng "190-215", "dưới 90": đã có ca thử (30 ca đạt).</li>
+            <li><b>Đã làm, chỉ gắn cờ cho người xem</b> (nhãn <code>CB_*</code>, không sửa, không loại): 寸 (kiểm chữ có số, 1.177 giá trị khác nhau có "số + 寸", đa số dịch đúng là inch nên chỉ cờ khi viết cm hoặc "tấc/thốn"), 两 (50 g; cờ khi viết gram hoặc "lạng" vì lạng của Việt là 100 g), 万 (cờ khi giữ nguyên số: "5万次" thành "5 lần"), 丝 (độ dày túi nhựa 0,01 mm; 133 giá trị khác nhau, bản Alibaba dịch "lụa").</li>
+            <li>Không tính nhầm 尺寸, 尺码, 码 (kích cỡ), 丝袜 (tất), 万向轮 (bánh xe xoay) là đơn vị.</li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td><b>5. Xuất kết quả</b></td>
+          <td><ul>
+            <li>Xuất bảng <b>ba bản dịch</b> cho mỗi đơn vị: <code>vi_cu</code>, <code>vi_A</code>, <code>vi_B</code>, kèm <code>nhom_doi_chieu</code>, mã các luật bị trượt và nguồn gốc bản dịch (mô hình, phiên bản, câu lệnh, tham số, ngày).</li>
+            <li><b>Pipeline dừng ở đây.</b> Không đọc mẫu bằng mắt, không chọn bản nào, không đổi dữ liệu đã công bố; mọi file ghi ra là file mới, không ghi đè.</li>
+            <li>Đánh giá tiếp (tính cosine giữa các bản) do anh làm ngoài pipeline, trên bảng này.</li>
+          </ul></td>
+          <td><ul>
+            <li>Chưa có bước chọn bản, nên nhóm B1 chỉ là "ứng viên" chứ chưa phải bản đã được xác nhận đúng; <code>dung_cho_train</code> và mã loại giữ nguyên, kể cả 36.184 cặp <code>T2_CHUA_KIEM</code> (chưa có bước nào gỡ mã).</li>
+            <li>Cosine (bge-m3) đã đo trên các cặp có nhãn: AUC 0,57 đến 0,63, khó phân biệt bản đúng với bản sai, và gần như không thấy lỗi số hoặc đơn vị. Nên đọc kèm cột mã luật trượt, không dùng cosine một mình để kết luận bản nào đúng.</li>
+            <li>Bảng ba bản dịch còn đổi nếu bước tiếng Anh của Quang đổi bản Việt cũ: dịch trước được (bản dịch chỉ phụ thuộc chữ Trung), so khớp và xuất bảng sau khi bước đó xong.</li>
+          </ul></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section aria-labelledby="lh">
+  <h2 id="lh">Lỗ hổng đã rà (06/10) và cách vá</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th></th><th>Lỗ hổng</th><th>Cách vá</th><th>Trạng thái</th></tr></thead>
+      <tbody>
+        <tr><td><b>B</b></td><td>Tên thuộc tính ngoài từ điển (2.017 tên khác nhau, từ điển có 300) không được đối chiếu</td><td>Đưa tên thuộc tính vào đơn vị dịch</td><td>Đã vá trong thiết kế</td></tr>
+        <tr><td><b>F</b></td><td>Chưa có luật cho bản dịch bị lược ý</td><td>Luật tỉ lệ độ dài và chữ-số theo họ thuộc tính</td><td>Đã vá trong thiết kế, chưa có mã</td></tr>
+        <tr><td><b>G</b></td><td>Giấy phép HY-MT1.5 (Tencent HY Community License, mới đọc qua bản tóm tắt): cấm dùng đầu ra để cải thiện mô hình AI khác; không áp dụng ở EU, Anh, Hàn Quốc kể cả với đầu ra; phải ghi nhãn nội dung do máy tạo</td><td>Đọc nguyên văn <code>License.txt</code> và hỏi giảng viên trước khi dùng cột <code>vi_B</code> để huấn luyện hoặc công khai; ghi nguồn và điều khoản vào README; nếu giấy phép không cho thì anh quyết định thay mô hình</td><td>Còn mở: anh quyết định dùng HY-MT (09/10/2026), chờ đọc nguyên văn và hỏi giảng viên</td></tr>
+        <tr><td><b>H</b></td><td>Thứ tự với bước tiếng Anh của Quang</td><td>Dịch trước vẫn được (bản dịch chỉ phụ thuộc bản Trung, có bộ nhớ đệm); so khớp sau khi bước tiếng Anh xong</td><td>Đã chốt hướng, chờ Quang báo xong</td></tr>
+        <tr><td><b>Mã</b></td><td>Luật 斤: "一斤半" bị sửa sai, giá "30块钱一斤" bị chia đôi</td><td>Sửa trong <code>src/doi_chieu.py</code>, thêm 10 ca thử (nay 30/30 ca 斤 và 26/26 ca cảnh báo đạt)</td><td>Đã sửa</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">Các lỗ hổng A, D, E, I, J, K (đọc mẫu, ngưỡng, gộp theo cặp, đánh giá sau cùng, cờ thay đổi) đã bỏ cùng các khối đó khi pipeline được cắt, dừng ở bước xuất kết quả; lỗ hổng C (title) đã bỏ vì title ra khỏi phạm vi quy trình. Lịch sử còn trong WALKTHROUGH.</div>
+</section>
+
+<section aria-labelledby="dr">
+  <h2 id="dr">Đầu ra của quy trình và dùng cho các bước sau</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Đầu ra</th><th>Dùng cho bước sau</th></tr></thead>
+      <tbody>
+        <tr><td><b>Bảng ba bản dịch</b> (cột <code>vi_cu</code>, <code>vi_A</code>, <code>vi_B</code>, <code>nhom_doi_chieu</code>, mã luật trượt, nguồn gốc) cho description</td><td>Dữ liệu để tính cosine và các so sánh khác; nhìn được hai mô hình đồng ý với Alibaba ở đâu và bất đồng ở đâu</td></tr>
+        <tr><td><b>Thống kê theo nhóm</b> (số đơn vị ở nhóm A, A2, B1, B2, D)</td><td>Con số đầu tiên cho phân tích lỗi của máy dịch Alibaba, tính hoàn toàn bằng code</td></tr>
+        <tr><td><b>Bộ nhớ đệm và thẻ nguồn gốc</b> (mô hình, phiên bản, câu lệnh, tham số, ngày)</td><td>Chạy lại rẻ khi có dữ liệu crawl mới hoặc sau bước tiếng Anh của Quang; viết phương pháp rõ ràng trong báo cáo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">Quy trình chỉ chuẩn bị dữ liệu và dừng ở bước xuất bảng ba bản dịch: không đọc mẫu bằng mắt, không chọn bản. Chưa chia train, dev, test; việc chia để sau khi anh yêu cầu.</div>
+</section>
+
+<section aria-labelledby="sua">
+  <h2 id="sua">Đã sửa so với sơ đồ gốc</h2>
+  <ul>
+    <li><span class="was">Một mô hình dịch mới</span> thành <span class="ok">hai mô hình khác họ</span> (A và B), cộng bản Alibaba thành ba nguồn. Khi cả ba giống nhau thì tin cậy cao; khi hai mô hình đồng ý với nhau nhưng khác Alibaba thì mới là ứng viên thay thế.</li>
+    <li><span class="was">CometKiwi làm một bước quyết định</span> thành <span class="ok">đã gỡ khỏi quy trình</span>. Đã đo trên 4.291 cặp có nhãn: AUC 0,72–0,73, chưa đủ để quyết định, và hai tín hiệu mới (bất đồng giữa các bản dịch, luật kiểm tự động) nhắm thẳng vào lỗi cần bắt. Kết quả thử vẫn giữ làm tài liệu thí nghiệm (notebook, số đo, mục giải thích trong README).</li>
+    <li><span class="ok">Thêm bước chuẩn bị:</span> gộp trùng theo giá trị lẻ (405.275 cặp thuộc tính, còn 149.813 giá trị khác nhau), tra từ điển đã duyệt trước khi gửi cho mô hình, chỉ gửi dữ liệu đã che thông tin cá nhân.</li>
+    <li><span class="ok">Thêm pilot một lần</span> trên 4.291 cặp đã có nhãn trước khi chạy cả bộ, kể cả đo độ trùng lỗi giữa các mô hình.</li>
+    <li><span class="ok">Thêm luật kiểm tự động chạy bằng code</span> (số và đơn vị, chữ Hán còn sót, thuật ngữ, dấu che) để tách B1 (đáng thay) khỏi B2 (chỉ khác văn phong).</li>
+    <li><span class="was">Đọc mẫu bằng mắt, ngưỡng 80% và 50%, gộp theo cặp, chạy lại P8 đến P13, xuất desc_v2, cờ thay đổi và khối đánh giá sau cùng</span> thành <span class="ok">đã bỏ</span>: pipeline dừng ở bước xuất bảng ba bản dịch; đánh giá tiếp bằng cosine do anh làm ngoài pipeline.</li>
+    <li><span class="was">Thử nhiều mô hình ứng viên ở pilot</span> thành <span class="ok">chỉ dùng hai mô hình</span> (Qwen3-8B và HY-MT1.5-7B) theo quyết định của anh 09/10/2026; pilot chỉ kiểm cổng và chọn ngưỡng.</li>
+    <li><span class="ok">Giữ nguyên ý hay của sơ đồ gốc:</span> chỗ hai bản giống nhau thì giữ bản cũ, không phụ thuộc mô hình mới.</li>
+  </ul>
+</section>
+
+<section aria-labelledby="mo">
+  <h2 id="mo">Còn mở</h2>
+  <div class="note">Chưa code pipeline dịch và đối chiếu (khối 0 đến 5): đang chờ lệnh. Chỉ dùng hai mô hình do anh chọn (Qwen3-8B và HY-MT1.5-7B), kiểm ở pilot, không thử thêm ứng viên. Chờ xác nhận: giấy phép của HY-MT1.5 (đọc nguyên văn, hỏi giảng viên), bước tiếng Anh của Quang. Title đã ra khỏi phạm vi quy trình này. Ngưỡng so khớp chrF chọn ở pilot. Chưa chạy bước nào trên dữ liệu: dữ liệu còn đổi do bước tiếng Anh, nên luật 斤 mới nối vào P8 sẽ có tác dụng ở lần chạy lại pipeline tiếp theo. Luật cảnh báo 寸, 两, 万, 丝 mới chỉ gắn nhãn, chưa loại và chưa sửa cặp nào.</div>
+</section>
+</div>

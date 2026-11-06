@@ -1,0 +1,22 @@
+{
+ "cum": {
+  "san_pham": 13187,
+  "cap_ke_thua_khong_tra_duoc": 0,
+  "phan_bo": {
+   "gemma4": 7690,
+   "tu_dien_quy_tac": 5344,
+   "qwen3_14b_awq": 86,
+   "gemma4+qwen3_14b_awq": 67
+  }
+ },
+ "pair": {
+  "san_pham": 13187,
+  "phan_bo": {
+   "gemma4": 7605,
+   "tu_dien_quy_tac": 5365,
+   "gemma4+qwen3_14b_awq": 111,
+   "qwen3_14b_awq": 106
+  }
+ },
+ "pair_bang_cum": 0.9901
+}

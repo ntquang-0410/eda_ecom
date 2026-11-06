@@ -1,0 +1,96 @@
+{
+ "cap": 4802,
+ "cum": 200,
+ "san_pham": 200,
+ "A": {
+  "cum_theo_trang_thai": {
+   "ok": 200
+  },
+  "gia_tri_truot_luat": {
+   "latin_moi": 5,
+   "do_dai": 3,
+   "mat_viet": 2
+  },
+  "ten_truot_luat": {}
+ },
+ "B": {
+  "cum_theo_trang_thai": {
+   "ok": 200
+  },
+  "gia_tri_truot_luat": {
+   "latin_moi": 6,
+   "han_sot": 4,
+   "do_dai": 2,
+   "mat_viet": 1,
+   "lech_so_muc": 1
+  },
+  "ten_truot_luat": {}
+ },
+ "chon_A": {
+  "ten_nguon": {
+   "giu_nhap": 2792,
+   "khoa": 1996,
+   "sua_A": 13,
+   "dich_moi_A": 1
+  },
+  "gia_tri_nguon": {
+   "giu_nhap": 2309,
+   "khoa": 2208,
+   "sua_A": 179,
+   "dich_moi_A": 97,
+   "lui_nhap": 5,
+   "khong_co": 4
+  }
+ },
+ "chon_B": {
+  "ten_nguon": {
+   "giu_nhap": 2804,
+   "khoa": 1996,
+   "sua_B": 1,
+   "dich_moi_B": 1
+  },
+  "gia_tri_nguon": {
+   "giu_nhap": 2428,
+   "khoa": 2208,
+   "dich_moi_B": 92,
+   "sua_B": 63,
+   "khong_co": 9,
+   "lui_nhap": 2
+  }
+ },
+ "chon_AB": {
+  "ten_nguon": {
+   "giu_nhap": 2792,
+   "khoa": 1996,
+   "sua_A": 13,
+   "dich_moi_A": 1
+  },
+  "gia_tri_nguon": {
+   "giu_nhap": 2312,
+   "khoa": 2208,
+   "sua_A": 179,
+   "dich_moi_A": 97,
+   "khong_co": 3,
+   "dich_moi_B": 1,
+   "sua_B": 1,
+   "lui_nhap": 1
+  }
+ },
+ "sua_khong_ly_do": 27,
+ "cum_sua_nhieu": 0,
+ "dong_thuan_gia_tri": {
+  "ca_hai_giu_nhap": 2307,
+  "khoa": 2208,
+  "chi_A_sua": 132,
+  "ca_hai_sua_khac": 81,
+  "ca_hai_sua_giong": 63,
+  "chi_B_sua": 11
+ },
+ "dong_thuan_ten": {
+  "ca_hai_giu_nhap": 2791,
+  "khoa": 1996,
+  "chi_A_sua": 13,
+  "chi_B_sua": 1,
+  "ca_hai_sua_giong": 1
+ }
+}

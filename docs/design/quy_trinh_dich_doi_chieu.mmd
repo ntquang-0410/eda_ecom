@@ -1,0 +1,71 @@
+flowchart TD
+  subgraph sg0["0. Chuẩn bị (code, không tốn tiền)"]
+    A["Dữ liệu description sạch hiện tại <br/>16.342 sản phẩm → 405.275 cặp description <br/>(chỉ dữ liệu đã che thông tin cá nhân; không gồm title)"]
+    B["Gộp trùng, mỗi đơn vị dịch 1 lần, lưu bộ nhớ đệm: <br/>149.813 giá trị lẻ (tên, giá trị) <br/>+ 2.017 tên thuộc tính"]
+  end
+
+  subgraph sg1["1. Pilot một lần với hai mô hình, trên 4.291 cặp đã có nhãn đúng/sai"]
+    E["Chạy thử hai mô hình: Qwen3-8B và HY-MT1.5-7B <br/>Đo: độ chính xác và độ trùng lỗi giữa hai mô hình"]
+    F{"Hai mô hình khác họ, <br/>ít trùng lỗi, và chỗ bất đồng với <br/>Alibaba phần lớn là lỗi thật?"}
+    F1["Chưa đạt: dừng và xem lại hướng <br/>(đổi mô hình hoặc API trả phí <br/>chỉ khi anh quyết định riêng)"]
+  end
+
+  C{"Giá trị có trong từ điển đã duyệt? <br/>300 tên · 914 giá trị · 87 địa danh <br/>101 từ chung · 11 thuật ngữ · mã giấy tờ"}
+  D["Giữ bản từ điển hoặc chép nguyên mã <br/>(không gửi cho mô hình)"]
+
+  subgraph sg2["2. Dịch Trung → Việt độc lập (Colab hoặc Kaggle)"]
+    G["Mô hình A: Qwen3-8B → vi_A"]
+    H["Mô hình B: HY-MT1.5-7B → vi_B <br/>(giấy phép hạn chế đầu ra, xem lỗ hổng G)"]
+  end
+
+  subgraph sg3["3. Đối chiếu 3 nguồn: vi_cu (Alibaba), vi_A, vi_B (so sau khi xong bước tiếng Anh)"]
+    I{"So khớp sau chuẩn hoá <br/>(chữ hoa, dấu câu, dấu thanh, <br/>chrF ≥ ngưỡng chọn ở pilot)"}
+    J["Nhóm A: cả 3 giống nhau <br/>nhãn 3_dong_y"]
+    K["Nhóm A2: vi_cu trùng 1 trong 2 mô hình <br/>nhãn 2_tren_3"]
+    L["Nhóm B: vi_A = vi_B, khác vi_cu <br/>Ứng viên thay thế"]
+    M["Nhóm D: cả 3 khác nhau <br/>không tự quyết, chỉ ghi nhóm"]
+  end
+
+  subgraph sg4["4. Luật kiểm tự động (code P6, P7, P8)"]
+    N{"Bản mới qua luật? <br/>Số và đơn vị khớp (斤 → kg bằng một nửa; cờ 寸 · 两 · 万 · 丝) <br/>Không còn chữ Hán · không bị lược ý (tỉ lệ độ dài) <br/>Thuật ngữ đúng bảng · giữ chữ-số (XL, PPSU) · giữ dấu che [SĐT]"}
+    O["B1: vi_cu trượt luật, bản mới qua <br/>→ ứng viên dùng bản mới"]
+    P["B2: cả hai đều qua luật (chỉ khác văn phong) <br/>giữ vi_cu"]
+  end
+
+  subgraph sg5["5. Xuất kết quả (pipeline dừng ở đây)"]
+    X["Xuất bảng ba bản dịch (vi_cu, vi_A, vi_B) <br/>kèm nhóm đối chiếu, mã luật trượt, nguồn gốc bản dịch <br/>Không đọc mẫu bằng mắt, không chọn bản, không đổi dữ liệu <br/>Đánh giá tiếp (cosine) do anh làm ngoài pipeline"]
+  end
+
+  A --> B --> E --> F
+  F -- "Chưa đạt" --> F1
+  F -- "Đạt: chạy cả bộ" --> C
+  C -- "Có" --> D --> X
+  C -- "Chưa có" --> G
+  C -- "Chưa có" --> H
+  G --> I
+  H --> I
+  I -- "Cả 3 giống" --> J
+  I -- "vi_cu = 1 trong 2 mô hình" --> K
+  I -- "vi_A = vi_B khác vi_cu" --> L
+  I -- "Cả 3 khác nhau" --> M
+  J --> X
+  K --> X
+  L --> N
+  N -- "Bản mới qua, vi_cu trượt" --> O
+  N -- "Cả hai qua" --> P
+  N -- "Bản mới trượt" --> M
+  O --> X
+  M --> X
+  P --> X
+
+  classDef xanh fill:#d9f2e3,stroke:#2f8f5b,color:#10331f
+  classDef do fill:#fbdcdc,stroke:#c0392b,color:#3d0f0f
+  classDef vang fill:#fff2cc,stroke:#b8860b,color:#3d3000
+  classDef tim fill:#ead9f7,stroke:#7d3fb0,color:#2a0f40
+  classDef xam fill:#e4e9f0,stroke:#5b6b82,color:#1d2735
+  class A,B,E,G,H,X xam
+  class F,C,I,N xam
+  class D,J,K,P xanh
+  class F1 do
+  class L,O vang
+  class M tim

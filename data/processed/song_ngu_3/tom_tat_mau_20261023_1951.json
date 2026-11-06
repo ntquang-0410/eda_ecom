@@ -1,0 +1,27 @@
+{
+ "cum": 201,
+ "san_pham": 200,
+ "cap": 1365,
+ "A": {
+  "cum_theo_trang_thai": {
+   "ok": 201
+  },
+  "cap_co_ban_dich": 1365,
+  "cap_truot_luat_gia_tri": 12,
+  "cap_truot_luat_ten": 0,
+  "gia_tri_giong_ban_don_vi": 1177,
+  "ten_giong_ban_don_vi": 1019
+ },
+ "B": {
+  "cum_theo_trang_thai": {
+   "ok": 201
+  },
+  "cap_co_ban_dich": 1365,
+  "cap_truot_luat_gia_tri": 11,
+  "cap_truot_luat_ten": 0,
+  "gia_tri_giong_ban_don_vi": 1092,
+  "ten_giong_ban_don_vi": 772
+ },
+ "gia_tri_A_giong_B": 1107,
+ "cap_khong_co_o_bo_2": 4
+}

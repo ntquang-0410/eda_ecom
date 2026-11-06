@@ -1,0 +1,2 @@
+e8c5cfed878268e8f63cd8760f2dbd91f4c420f21107b76082d0378a42ffb9ba  description_pairs_zh_vi.parquet
+02596448b88093421305ea8bba4ca7ea2591b733eac7c46eace221e10c213331  provenance.json

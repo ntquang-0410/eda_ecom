@@ -1,0 +1,76 @@
+[{"stream_name":"stderr","time":4.311245386,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":4.311276826,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":4.311278746,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":4.311279956,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":4.649894699,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":4.649916769,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":4.649918519,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":4.649919599,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":8.75586543,"data":"Chỉ dịch 1,733 cụm trong danh sách (1,733 sản phẩm)\n"}
+,{"stream_name":"stdout","time":8.835961398,"data":"OFFLINE: thư viện /kaggle/input/song-ngu-4-dong-goi-thu-vien/thu_vien | mô hình /kaggle/input/song-ngu-4-dong-goi-mo-hinh/Qwen3-14B-AWQ | revision 31c69efc29464b6bb0aee1398b5a7b50a99340c3\n"}
+,{"stream_name":"stdout","time":8.835967248,"data":"Dữ liệu vào: /kaggle/input/song-ngu-4-cum-vao | thư mục ra: /kaggle/working/ra_cum_zv | đầu ra cũ: không có | số GPU: 1\n"}
+,{"stream_name":"stdout","time":8.841351198,"data":"Chạy OFFLINE: thư viện và mô hình lấy từ Dataset gắn vào notebook, không cần Internet.\n"}
+,{"stream_name":"stdout","time":40.011164579,"data":"Error in sitecustomize; set PYTHONVERBOSE for traceback:\r\n"}
+,{"stream_name":"stdout","time":40.011185149,"data":"ModuleNotFoundError: No module named 'wrapt'\r\n"}
+,{"stream_name":"stdout","time":46.283410078,"data":"vllm 0.32.0 | torch 2.13.0+cu130 | GPU 1 NVIDIA RTX PRO 6000 Blackwell Server Edition\r\n"}
+,{"stream_name":"stdout","time":107.136659364,"data":"[1 phút] B: (EngineCore pid=883) WARNING 10-26 12:27:30 [utils.py:333] Attempted to load weight layers.17.input_layernorm.weight with dtype torch.bfloat16 into parameter with dtype torch.float16\n"}
+,{"stream_name":"stdout","time":167.137934091,"data":"[2 phút] B: (EngineCore pid=883) INFO 10-26 12:28:28 [default_loader.py:501] Loading weights took 96.86 seconds\n"}
+,{"stream_name":"stdout","time":227.137481607,"data":"[3 phút] B: (EngineCore pid=883) INFO 10-26 12:29:21 [kernel_warmup.py:367] Running FlashInfer autotune with 16384 tokens and token buckets (1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 768, 1024, 1280, 1536, 1792, 2048, 2560, 3072, 3584,\n"}
+,{"stream_name":"stdout","time":287.137917115,"data":"[4 phút] B: Capturing CUDA graphs (FULL):  78%|███████▊  | 40/51 [00:14\u003c00:00, 35.44it/s]\n"}
+,{"stream_name":"stdout","time":347.138381972,"data":"[5 phút] B: 12:30:40 Nạp xong sau 248 giây; backend vllm\n"}
+,{"stream_name":"stdout","time":407.138925167,"data":"[6 phút] B: 12:30:40 Nạp xong sau 248 giây; backend vllm\n"}
+,{"stream_name":"stdout","time":467.139287985,"data":"[7 phút] B: 12:30:40 Nạp xong sau 248 giây; backend vllm\n"}
+,{"stream_name":"stdout","time":527.139708156,"data":"[8 phút] B: 12:33:57 qwen3_14b: xong 500/1,733 cụm (2.54 cụm/giây) | sai cấu trúc 4 | còn sót Hán 41 | hỏi lại 97, sửa được 58 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":587.140931969,"data":"[9 phút] B: 12:33:57 qwen3_14b: xong 500/1,733 cụm (2.54 cụm/giây) | sai cấu trúc 4 | còn sót Hán 41 | hỏi lại 97, sửa được 58 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":647.14058842,"data":"[10 phút] B: 12:33:57 qwen3_14b: xong 500/1,733 cụm (2.54 cụm/giây) | sai cấu trúc 4 | còn sót Hán 41 | hỏi lại 97, sửa được 58 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":707.141013896,"data":"[11 phút] B: 12:33:57 qwen3_14b: xong 500/1,733 cụm (2.54 cụm/giây) | sai cấu trúc 4 | còn sót Hán 41 | hỏi lại 97, sửa được 58 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":767.14159534,"data":"[12 phút] B: 12:33:57 qwen3_14b: xong 500/1,733 cụm (2.54 cụm/giây) | sai cấu trúc 4 | còn sót Hán 41 | hỏi lại 97, sửa được 58 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":827.141915197,"data":"[13 phút] B: 12:38:55 qwen3_14b: xong 1,000/1,733 cụm (2.02 cụm/giây) | sai cấu trúc 11 | còn sót Hán 75 | hỏi lại 197, sửa được 123 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":887.142326122,"data":"[14 phút] B: 12:38:55 qwen3_14b: xong 1,000/1,733 cụm (2.02 cụm/giây) | sai cấu trúc 11 | còn sót Hán 75 | hỏi lại 197, sửa được 123 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":947.142764165,"data":"[15 phút] B: 12:38:55 qwen3_14b: xong 1,000/1,733 cụm (2.02 cụm/giây) | sai cấu trúc 11 | còn sót Hán 75 | hỏi lại 197, sửa được 123 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1007.143602467,"data":"[16 phút] B: 12:38:55 qwen3_14b: xong 1,000/1,733 cụm (2.02 cụm/giây) | sai cấu trúc 11 | còn sót Hán 75 | hỏi lại 197, sửa được 123 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1067.14394141,"data":"[17 phút] B: 12:38:55 qwen3_14b: xong 1,000/1,733 cụm (2.02 cụm/giây) | sai cấu trúc 11 | còn sót Hán 75 | hỏi lại 197, sửa được 123 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1127.144114356,"data":"[18 phút] B: 12:38:55 qwen3_14b: xong 1,000/1,733 cụm (2.02 cụm/giây) | sai cấu trúc 11 | còn sót Hán 75 | hỏi lại 197, sửa được 123 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1187.14454639,"data":"[19 phút] B: 12:44:49 qwen3_14b: xong 1,500/1,733 cụm (1.77 cụm/giây) | sai cấu trúc 12 | còn sót Hán 116 | hỏi lại 296, sửa được 187 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1247.144975049,"data":"[20 phút] B: 12:44:49 qwen3_14b: xong 1,500/1,733 cụm (1.77 cụm/giây) | sai cấu trúc 12 | còn sót Hán 116 | hỏi lại 296, sửa được 187 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1307.145451453,"data":"[21 phút] B: 12:44:49 qwen3_14b: xong 1,500/1,733 cụm (1.77 cụm/giây) | sai cấu trúc 12 | còn sót Hán 116 | hỏi lại 296, sửa được 187 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1367.145894703,"data":"[22 phút] B: 12:44:49 qwen3_14b: xong 1,500/1,733 cụm (1.77 cụm/giây) | sai cấu trúc 12 | còn sót Hán 116 | hỏi lại 296, sửa được 187 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1426.946831993,"data":"[23 phút] B: (EngineCore pid=883) INFO 10-26 12:48:57 [core.py:1499] [shutdown] EngineCore: exiting busy loop\n"}
+,{"stream_name":"stdout","time":1426.946854183,"data":"--- B: mã thoát 0, 15 dòng cuối ---\n"}
+,{"stream_name":"stdout","time":1426.946856513,"data":"(EngineCore pid=883) INFO 10-26 12:30:39 [jit_monitor.py:84] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.\n"}
+,{"stream_name":"stdout","time":1426.946858073,"data":"(EngineCore pid=883) INFO 10-26 12:30:40 [core.py:395] init engine (profile, create kv cache, warmup model) took 129.65 s (compilation: 22.37 s)\n"}
+,{"stream_name":"stdout","time":1426.946859303,"data":"(EngineCore pid=883) INFO 10-26 12:30:40 [kernel.py:467] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native'])\n"}
+,{"stream_name":"stdout","time":1426.946865153,"data":"(MainProcess pid=477) INFO 10-26 12:30:40 [hf.py:648] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.\n"}
+,{"stream_name":"stdout","time":1426.946866473,"data":"12:30:40 Nạp xong sau 248 giây; backend vllm\n"}
+,{"stream_name":"stdout","time":1426.946867403,"data":"12:33:57 qwen3_14b: xong 500/1,733 cụm (2.54 cụm/giây) | sai cấu trúc 4 | còn sót Hán 41 | hỏi lại 97, sửa được 58 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1426.946868513,"data":"12:38:55 qwen3_14b: xong 1,000/1,733 cụm (2.02 cụm/giây) | sai cấu trúc 11 | còn sót Hán 75 | hỏi lại 197, sửa được 123 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1426.946869633,"data":"12:44:49 qwen3_14b: xong 1,500/1,733 cụm (1.77 cụm/giây) | sai cấu trúc 12 | còn sót Hán 116 | hỏi lại 296, sửa được 187 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1426.946870513,"data":"12:48:57 qwen3_14b: xong 1,733/1,733 cụm (1.58 cụm/giây) | sai cấu trúc 15 | còn sót Hán 133 | hỏi lại 352, sửa được 224 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1426.946871503,"data":"12:48:57 Kết thúc qwen3_14b | còn lại 0\n"}
+,{"stream_name":"stdout","time":1426.946872303,"data":"(MainProcess pid=477) INFO 10-26 12:48:57 [utils.py:628] [shutdown] Process manager: send sigterm to process EngineCore\n"}
+,{"stream_name":"stdout","time":1426.946873503,"data":"(EngineCore pid=883) INFO 10-26 12:48:57 [core.py:1454] [shutdown] EngineCore: trigger received signal=SIGTERM\n"}
+,{"stream_name":"stdout","time":1426.946874393,"data":"(EngineCore pid=883) INFO 10-26 12:48:57 [core.py:1635] [shutdown] EngineCore: start mode=abort timeout=0s\n"}
+,{"stream_name":"stdout","time":1426.946875513,"data":"(EngineCore pid=883) INFO 10-26 12:48:57 [core.py:1666] [shutdown] EngineCore: request processing complete; starting resource teardown\n"}
+,{"stream_name":"stdout","time":1426.946877013,"data":"(EngineCore pid=883) INFO 10-26 12:48:57 [core.py:1499] [shutdown] EngineCore: exiting busy loop\n"}
+,{"stream_name":"stdout","time":1427.003907313,"data":"A api_tuy_chon : chưa có kết quả\n"}
+,{"stream_name":"stdout","time":1427.003928403,"data":"B qwen3_14b: 1733/1733 cụm | trạng thái {'ok': 1718, 'loi_cau_truc': 15} | còn sót Hán 133 | hỏi lại 352, sửa được 224 | lý do lỗi {'khong_co_mang_json': 5, 'json_hong': 4, 'muc_4_thieu_v': 3, 'muc_25_thieu_v': 1, 'muc_24_thieu_v': 1}\n"}
+,{"stream_name":"stdout","time":1427.003931163,"data":"   thời gian 1345 giây | tốc độ 1.58 cụm/giây | API \n"}
+,{"stream_name":"stdout","time":1427.003932543,"data":"   ví dụ 814606515669#0 {\"1\": {\"c\": \"\", \"n\": \"Chất liệu\", \"v\": \"Sợi bông\"}, \"2\": {\"c\": \"\", \"n\": \"Thương hiệu\"}, \"3\": {\"c\": \"\", \"n\": \"Chức năng\", \"v\": \"Đa năng\"}, \"4\": {\"c\": \"\", \"n\": \"Đối tượng áp dụng\", \"v\": \"Nồi/Bát\"}, \"6\": {\"c\": \"\", \"n\": \"Bằng sáng chế\"}, \"7\": {\"c\": \"\", \"n\": \"Màu sắc\", \"v\": \"Nâng cấp làm dày - độ dày 1.5\n"}
+,{"stream_name":"stdout","time":1427.003942083,"data":"   ví dụ 793977004785#0 {\"1\": {\"c\": \"\", \"n\": \"Chất liệu\"}, \"2\": {\"c\": \"\", \"n\": \"Thương hiệu\"}, \"4\": {\"c\": \"\", \"n\": \"Có tay cầm hay không\", \"v\": \"Không có tay cầm\"}, \"5\": {\"c\": \"\", \"n\": \"Hình dạng\", \"v\": \"Hình tròn\"}, \"8\": {\"c\": \"\", \"v\": \"80ml (Tự kèm lỗ SS), 160ml (Tự kèm lỗ S)\"}, \"9\": {\"c\": \"\", \"n\": \"Màu sắc\", \"v\": \"Màu x\n"}
+,{"stream_name":"stdout","time":1427.003944373,"data":"\n"}
+,{"stream_name":"stdout","time":1427.003945153,"data":"Các file đầu ra (tab Output):\n"}
+,{"stream_name":"stdout","time":1427.003951343,"data":"  ra_cum_zv/log_B.log  64,807 byte\n"}
+,{"stream_name":"stdout","time":1427.003952313,"data":"  ra_cum_zv/qwen3_14b/lo_00000.parquet  367,360 byte\n"}
+,{"stream_name":"stdout","time":1427.003953043,"data":"  ra_cum_zv/qwen3_14b/lo_00001.parquet  463,032 byte\n"}
+,{"stream_name":"stdout","time":1427.003953763,"data":"  ra_cum_zv/qwen3_14b/lo_00002.parquet  533,658 byte\n"}
+,{"stream_name":"stdout","time":1427.003954473,"data":"  ra_cum_zv/qwen3_14b/lo_00003.parquet  286,033 byte\n"}
+,{"stream_name":"stdout","time":1427.003955303,"data":"  ra_cum_zv/the_qwen3_14b.json  922 byte\n"}
+,{"stream_name":"stderr","time":1428.43838878,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1428.43840794,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1428.52482649,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1428.52484024,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1428.88574252,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":1429.023474209,"data":"[NbConvertApp] Writing 43374 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":1430.165024837,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1430.568661296,"data":"[NbConvertApp] Writing 358236 bytes to __results__.html\n"}
+]

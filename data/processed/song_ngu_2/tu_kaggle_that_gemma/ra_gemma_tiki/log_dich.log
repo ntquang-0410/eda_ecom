@@ -1,0 +1,39 @@
+02:35:55 api_tuy_chon: tổng 13,518 đơn vị, đã có 0, còn 13,518
+02:35:55 Thử kết nối API: mô hình gemma-4-26b-a4b-it | khoá chỉ gửi tới generativelanguage.googleapis.com | giá ước {'vao_miss': 0.3, 'vao_hit': 0.3, 'ra': 1.2}
+02:35:56 Gọi thử: {"extra": {"reasoning_effort": "minimal"}, "giay": 1.1, "tra_loi": "**你好** (Nǐ hǎo) dịch sang tiếng Việt là:", "ky_tu_suy_luan": 0}
+02:35:58 Gọi thử khoá GEMINI_API_KEY_eVYg: 1.1 giây | '**你好** (Nǐ hǎo) dịch sang tiến'
+02:35:58 Gọi thử khoá GEMINI_API_KEY_rsqw: 1.0 giây | '**你好** (Nǐ hǎo) dịch sang tiến'
+02:35:58 Gọi thử khoá GEMINI_API_KEY_XIBA: 1.1 giây | '**你好** (Nǐ hǎo) dịch sang tiến'
+02:35:58 Gọi thử khoá GEMINI_API_KEY_XY2w: 1.0 giây | '**你好** (Nǐ hǎo) dịch sang tiến'
+02:35:58 Khoá dùng được: 5/5
+02:35:58 Kết quả gọi thử: chọn {"reasoning_effort": "minimal"}: '**你好** (Nǐ hǎo) dịch sang tiếng Việt là:' sau 1.1 giây
+02:36:03 Nạp xong sau 8 giây; backend api
+02:37:00 api_tuy_chon: xong 500/13,518 (8.64 đơn vị/giây; còn khoảng 0.4 giờ) | sót chữ Hán hỏi lại 8, sửa được 6 | trung bình 2.6 giây mỗi lần gọi | chi phí ước 0.0123 USD / ngân sách 8.0
+02:38:05 api_tuy_chon: xong 1,000/13,518 (8.15 đơn vị/giây; còn khoảng 0.4 giờ) | sót chữ Hán hỏi lại 0, sửa được 0 | trung bình 3.1 giây mỗi lần gọi | chi phí ước 0.0244 USD / ngân sách 8.0
+02:39:07 api_tuy_chon: xong 1,500/13,518 (8.12 đơn vị/giây; còn khoảng 0.4 giờ) | sót chữ Hán hỏi lại 1, sửa được 0 | trung bình 3.4 giây mỗi lần gọi | chi phí ước 0.0373 USD / ngân sách 8.0
+02:39:58 api_tuy_chon: xong 2,000/13,518 (8.51 đơn vị/giây; còn khoảng 0.4 giờ) | sót chữ Hán hỏi lại 2, sửa được 2 | trung bình 3.6 giây mỗi lần gọi | chi phí ước 0.0506 USD / ngân sách 8.0
+02:41:12 api_tuy_chon: xong 2,500/13,518 (8.07 đơn vị/giây; còn khoảng 0.4 giờ) | sót chữ Hán hỏi lại 3, sửa được 1 | trung bình 3.7 giây mỗi lần gọi | chi phí ước 0.0645 USD / ngân sách 8.0
+02:42:24 api_tuy_chon: xong 3,000/13,518 (7.85 đơn vị/giây; còn khoảng 0.4 giờ) | sót chữ Hán hỏi lại 4, sửa được 3 | trung bình 3.9 giây mỗi lần gọi | chi phí ước 0.0794 USD / ngân sách 8.0
+02:43:03 api_tuy_chon: xong 3,500/13,518 (8.33 đơn vị/giây; còn khoảng 0.3 giờ) | sót chữ Hán hỏi lại 2, sửa được 0 | trung bình 4.1 giây mỗi lần gọi | chi phí ước 0.0944 USD / ngân sách 8.0
+02:43:30 api_tuy_chon: xong 4,000/13,518 (8.95 đơn vị/giây; còn khoảng 0.3 giờ) | sót chữ Hán hỏi lại 1, sửa được 1 | trung bình 4.2 giây mỗi lần gọi | chi phí ước 0.1098 USD / ngân sách 8.0
+02:44:07 api_tuy_chon: xong 4,500/13,518 (9.29 đơn vị/giây; còn khoảng 0.3 giờ) | sót chữ Hán hỏi lại 10, sửa được 5 | trung bình 4.3 giây mỗi lần gọi | chi phí ước 0.1272 USD / ngân sách 8.0
+02:44:46 api_tuy_chon: xong 5,000/13,518 (9.54 đơn vị/giây; còn khoảng 0.2 giờ) | sót chữ Hán hỏi lại 1, sửa được 0 | trung bình 4.5 giây mỗi lần gọi | chi phí ước 0.1443 USD / ngân sách 8.0
+02:45:27 api_tuy_chon: xong 5,500/13,518 (9.74 đơn vị/giây; còn khoảng 0.2 giờ) | sót chữ Hán hỏi lại 3, sửa được 3 | trung bình 4.6 giây mỗi lần gọi | chi phí ước 0.1621 USD / ngân sách 8.0
+02:47:44 api_tuy_chon: xong 6,000/13,518 (8.55 đơn vị/giây; còn khoảng 0.2 giờ) | sót chữ Hán hỏi lại 1, sửa được 0 | trung bình 4.9 giây mỗi lần gọi | chi phí ước 0.1838 USD / ngân sách 8.0
+02:48:17 api_tuy_chon: xong 6,500/13,518 (8.85 đơn vị/giây; còn khoảng 0.2 giờ) | sót chữ Hán hỏi lại 2, sửa được 2 | trung bình 5.0 giây mỗi lần gọi | chi phí ước 0.2035 USD / ngân sách 8.0
+02:48:46 api_tuy_chon: xong 7,000/13,518 (9.16 đơn vị/giây; còn khoảng 0.2 giờ) | sót chữ Hán hỏi lại 3, sửa được 1 | trung bình 5.2 giây mỗi lần gọi | chi phí ước 0.2244 USD / ngân sách 8.0
+02:49:17 api_tuy_chon: xong 7,500/13,518 (9.43 đơn vị/giây; còn khoảng 0.2 giờ) | sót chữ Hán hỏi lại 2, sửa được 0 | trung bình 5.4 giây mỗi lần gọi | chi phí ước 0.2467 USD / ngân sách 8.0
+02:49:48 api_tuy_chon: xong 8,000/13,518 (9.69 đơn vị/giây; còn khoảng 0.2 giờ) | sót chữ Hán hỏi lại 2, sửa được 2 | trung bình 5.6 giây mỗi lần gọi | chi phí ước 0.2695 USD / ngân sách 8.0
+02:51:06 api_tuy_chon: xong 8,500/13,518 (9.41 đơn vị/giây; còn khoảng 0.1 giờ) | sót chữ Hán hỏi lại 1, sửa được 1 | trung bình 5.9 giây mỗi lần gọi | chi phí ước 0.2931 USD / ngân sách 8.0
+02:52:02 api_tuy_chon: xong 9,000/13,518 (9.38 đơn vị/giây; còn khoảng 0.1 giờ) | sót chữ Hán hỏi lại 2, sửa được 0 | trung bình 6.1 giây mỗi lần gọi | chi phí ước 0.3198 USD / ngân sách 8.0
+02:53:29 api_tuy_chon: xong 9,500/13,518 (9.07 đơn vị/giây; còn khoảng 0.1 giờ) | sót chữ Hán hỏi lại 4, sửa được 1 | trung bình 6.4 giây mỗi lần gọi | chi phí ước 0.3490 USD / ngân sách 8.0
+02:54:53 api_tuy_chon: xong 10,000/13,518 (8.84 đơn vị/giây; còn khoảng 0.1 giờ) | sót chữ Hán hỏi lại 6, sửa được 1 | trung bình 6.7 giây mỗi lần gọi | chi phí ước 0.3822 USD / ngân sách 8.0
+02:56:15 api_tuy_chon: xong 10,500/13,518 (8.66 đơn vị/giây; còn khoảng 0.1 giờ) | sót chữ Hán hỏi lại 13, sửa được 4 | trung bình 7.1 giây mỗi lần gọi | chi phí ước 0.4211 USD / ngân sách 8.0
+02:58:00 api_tuy_chon: xong 11,000/13,518 (8.35 đơn vị/giây; còn khoảng 0.1 giờ) | sót chữ Hán hỏi lại 7, sửa được 0 | trung bình 7.5 giây mỗi lần gọi | chi phí ước 0.4643 USD / ngân sách 8.0
+02:59:41 api_tuy_chon: xong 11,500/13,518 (8.11 đơn vị/giây; còn khoảng 0.1 giờ) | sót chữ Hán hỏi lại 19, sửa được 2 | trung bình 7.9 giây mỗi lần gọi | chi phí ước 0.5220 USD / ngân sách 8.0
+03:03:52 api_tuy_chon: xong 12,000/13,518 (7.19 đơn vị/giây; còn khoảng 0.1 giờ) | sót chữ Hán hỏi lại 14, sửa được 1 | trung bình 8.4 giây mỗi lần gọi | chi phí ước 0.5983 USD / ngân sách 8.0
+03:09:39 api_tuy_chon: xong 12,500/13,518 (6.20 đơn vị/giây; còn khoảng 0.0 giờ) | sót chữ Hán hỏi lại 23, sửa được 2 | trung bình 8.6 giây mỗi lần gọi | chi phí ước 0.7253 USD / ngân sách 8.0
+03:15:43 api_tuy_chon: xong 13,000/13,518 (5.46 đơn vị/giây; còn khoảng 0.0 giờ) | sót chữ Hán hỏi lại 17, sửa được 5 | trung bình 8.3 giây mỗi lần gọi | chi phí ước 0.8545 USD / ngân sách 8.0
+03:16:54 api_tuy_chon: xong 13,500/13,518 (5.51 đơn vị/giây; còn khoảng 0.0 giờ) | sót chữ Hán hỏi lại 0, sửa được 0 | trung bình 8.2 giây mỗi lần gọi | chi phí ước 0.8662 USD / ngân sách 8.0
+03:17:00 api_tuy_chon: xong 13,518/13,518 (5.50 đơn vị/giây; còn khoảng 0.0 giờ) | sót chữ Hán hỏi lại 0, sửa được 0 | trung bình 8.2 giây mỗi lần gọi | chi phí ước 0.8668 USD / ngân sách 8.0
+03:17:00 Kết thúc api_tuy_chon | còn lại 0

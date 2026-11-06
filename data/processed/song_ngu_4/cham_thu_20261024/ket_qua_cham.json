@@ -1,0 +1,2819 @@
+[
+{
+"muc": 1,
+"tang": "S8",
+"pair_id": 162390,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Brand name should be kept in Latin characters as per context",
+"B": ""
+},
+"luat_A": "mat_viet",
+"luat_B": "mat_viet",
+"nhan": {
+"A": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 2,
+"tang": "S5",
+"pair_id": 190260,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 3,
+"tang": "S1",
+"pair_id": 22193,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Song thấu kính is unnatural in Vietnamese",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 4,
+"tang": "S5",
+"pair_id": 136410,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 5,
+"tang": "S1",
+"pair_id": 263167,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 means solid color, not pure color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 6,
+"tang": "S1",
+"pair_id": 306242,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is solid color/plain color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 7,
+"tang": "S1",
+"pair_id": 30930,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is solid color, not pure color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 8,
+"tang": "S8",
+"pair_id": 697,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "记忆棉 is memory foam, not rubber",
+"B": ""
+},
+"luat_A": "latin_moi",
+"luat_B": "",
+"nhan": {
+"nhap": "D",
+"A": "N"
+},
+"hon": "nhap"
+},
+{
+"muc": 9,
+"tang": "S1",
+"pair_id": 393558,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "低帮 is low-top",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "S"
+},
+"hon": "A"
+},
+{
+"muc": 10,
+"tang": "S5",
+"pair_id": 5540,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N"
+},
+"hon": "ngang"
+},
+{
+"muc": 11,
+"tang": "S1",
+"pair_id": 343412,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "N",
+"nhap": "S"
+},
+"hon": "A"
+},
+{
+"muc": 12,
+"tang": "S5",
+"pair_id": 115847,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 13,
+"tang": "S1",
+"pair_id": 113388,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 means solid color, not pure color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 14,
+"tang": "S4",
+"pair_id": 161329,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 15,
+"tang": "S5",
+"pair_id": 60468,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 16,
+"tang": "S7",
+"pair_id": 129392,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "七分袖 is 3/4 sleeve, commonly called 'tay lỡ' in VN",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"B": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 17,
+"tang": "S8",
+"pair_id": 41186,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "mat_viet",
+"luat_B": "",
+"nhan": {
+"nhap": "D",
+"A": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 18,
+"tang": "S4",
+"pair_id": 256178,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 19,
+"tang": "S5",
+"pair_id": 355102,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 20,
+"tang": "S1",
+"pair_id": 355716,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 21,
+"tang": "S5",
+"pair_id": 358502,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N"
+},
+"hon": "ngang"
+},
+{
+"muc": 22,
+"tang": "S7",
+"pair_id": 88749,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": "The original value is a list of items, and the translation should reflect that with the same number of items and order"
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "S",
+"B": "N"
+},
+"hon": "B"
+},
+{
+"muc": 23,
+"tang": "S4",
+"pair_id": 162382,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 24,
+"tang": "S5",
+"pair_id": 190472,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 25,
+"tang": "S1",
+"pair_id": 2689,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "0多种 is a placeholder meaning various sizes/types",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "N",
+"nhap": "S"
+},
+"hon": "A"
+},
+{
+"muc": 26,
+"tang": "S5",
+"pair_id": 382117,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 27,
+"tang": "S1",
+"pair_id": 254828,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is solid color, not pure color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 28,
+"tang": "S5",
+"pair_id": 40011,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 29,
+"tang": "S1",
+"pair_id": 162059,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "涤纶 is Polyester, not plastic",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "S",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 30,
+"tang": "S1",
+"pair_id": 193008,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "棉 is cotton",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 31,
+"tang": "S7",
+"pair_id": 16158,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "S",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 32,
+"tang": "S5",
+"pair_id": 255905,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 33,
+"tang": "S5",
+"pair_id": 382666,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 34,
+"tang": "S4",
+"pair_id": 164111,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 35,
+"tang": "S5",
+"pair_id": 76956,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": "draft_v is correct"
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 36,
+"tang": "S1",
+"pair_id": 328545,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is solid color, not pure color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 37,
+"tang": "S1",
+"pair_id": 343382,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "玩具羽毛球 is badminton toy",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 38,
+"tang": "S7",
+"pair_id": 144984,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": "The Vietnamese draft is more descriptive and accurate for the aroma description"
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"B": "S"
+},
+"hon": "A"
+},
+{
+"muc": 39,
+"tang": "S5",
+"pair_id": 135569,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 40,
+"tang": "S5",
+"pair_id": 45513,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N"
+},
+"hon": "ngang"
+},
+{
+"muc": 41,
+"tang": "S1",
+"pair_id": 4043,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "芳香 is fragrance/scent, not just 'thơm'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 42,
+"tang": "S1",
+"pair_id": 56943,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 means solid color, not pure color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 43,
+"tang": "S1",
+"pair_id": 8359,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "多镜头 is multi-lens, not multi-lens (thấu kính is more formal but đa ống kính is standard)",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 44,
+"tang": "S1",
+"pair_id": 272996,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 45,
+"tang": "S4",
+"pair_id": 258405,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D",
+"B": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 46,
+"tang": "S5",
+"pair_id": 112700,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 47,
+"tang": "S7",
+"pair_id": 263174,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "新款丝瓜络 refers to the new model/style of loofah",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"B": "S"
+},
+"hon": "A"
+},
+{
+"muc": 48,
+"tang": "S1",
+"pair_id": 51710,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D",
+"A": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 49,
+"tang": "S6",
+"pair_id": 122031,
+"truong": "ten",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 50,
+"tang": "S7",
+"pair_id": 164121,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "Translated bedsheet/fitted sheet distinction",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"B": "N"
+},
+"hon": "A"
+},
+{
+"muc": 51,
+"tang": "S7",
+"pair_id": 218160,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "套头款 refers to a pullover style",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"B": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 52,
+"tang": "S1",
+"pair_id": 250542,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 means solid color, not just pure color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 53,
+"tang": "S5",
+"pair_id": 313089,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 54,
+"tang": "S7",
+"pair_id": 100920,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "Translated based on context",
+"B": "translated from Chinese product name"
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "N",
+"B": "S"
+},
+"hon": "A"
+},
+{
+"muc": 55,
+"tang": "S5",
+"pair_id": 281106,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 56,
+"tang": "S1",
+"pair_id": 127696,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Cotton is more natural for clothing than 'Bông'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 57,
+"tang": "S1",
+"pair_id": 357159,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "tay cầm is more common for baby bottles than cán",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 58,
+"tang": "S1",
+"pair_id": 255464,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Removed 'Nhựa' as Polyester is a synthetic fiber, not plastic",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "S",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 59,
+"tang": "S1",
+"pair_id": 115377,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "麻花 refers to a braided/twisted pattern, not curly hair",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "S",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 60,
+"tang": "S5",
+"pair_id": 189108,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N"
+},
+"hon": "ngang"
+},
+{
+"muc": 61,
+"tang": "S5",
+"pair_id": 239332,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N"
+},
+"hon": "ngang"
+},
+{
+"muc": 62,
+"tang": "S1",
+"pair_id": 207016,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 in fashion context is solid color, 'Màu thuần' is less natural than 'Trơn'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 63,
+"tang": "S1",
+"pair_id": 129385,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Cotton is more natural for fashion than 'Bông'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D",
+"A": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 64,
+"tang": "S1",
+"pair_id": 382672,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 is solid color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 65,
+"tang": "S4",
+"pair_id": 286998,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 66,
+"tang": "S1",
+"pair_id": 51702,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 is solid color, not just 'pure color'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 67,
+"tang": "S8",
+"pair_id": 61404,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Refined to match product type in title",
+"B": ""
+},
+"luat_A": "latin_moi",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 68,
+"tang": "S4",
+"pair_id": 161334,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "N",
+"nhap": "D"
+},
+"hon": "nhap"
+},
+{
+"muc": 69,
+"tang": "S7",
+"pair_id": 103783,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "N",
+"B": "D"
+},
+"hon": "B"
+},
+{
+"muc": 70,
+"tang": "S7",
+"pair_id": 357828,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "喂奶奶嘴 is a typo in Chinese for 喂奶嘴 (baby nipple), translated accordingly",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "D",
+"A": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 71,
+"tang": "S1",
+"pair_id": 267600,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "黄鸭 is yellow duck, not goldfish",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "N",
+"nhap": "S"
+},
+"hon": "A"
+},
+{
+"muc": 72,
+"tang": "S1",
+"pair_id": 5535,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 73,
+"tang": "S4",
+"pair_id": 112563,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "D",
+"nhap": "N"
+},
+"hon": "B"
+},
+{
+"muc": 74,
+"tang": "S5",
+"pair_id": 295896,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 75,
+"tang": "S1",
+"pair_id": 127705,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 refers to solid color, not 'màu thuần'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 76,
+"tang": "S1",
+"pair_id": 382657,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "网纱 is mesh, not voile",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 77,
+"tang": "S1",
+"pair_id": 129389,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 in fashion context is solid color/plain",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 78,
+"tang": "S1",
+"pair_id": 306258,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "小白鞋 refers to a style of plain white shoes, not 'small white shoes'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "S",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 79,
+"tang": "S5",
+"pair_id": 77491,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 80,
+"tang": "S1",
+"pair_id": 286995,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "棉 is Cotton, not Bông",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 81,
+"tang": "S4",
+"pair_id": 40015,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"B": "D"
+},
+"hon": "B"
+},
+{
+"muc": 82,
+"tang": "S1",
+"pair_id": 124882,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Cotton is more natural for clothing than 'Bông'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 83,
+"tang": "S5",
+"pair_id": 60469,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 84,
+"tang": "S5",
+"pair_id": 34047,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N"
+},
+"hon": "ngang"
+},
+{
+"muc": 85,
+"tang": "S7",
+"pair_id": 183599,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "单边免提 refers to single-ear hands-free mode",
+"B": "单边免提 is one-sided hands-free, not one-sided earphones"
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"B": "N"
+},
+"hon": "A"
+},
+{
+"muc": 86,
+"tang": "S4",
+"pair_id": 124883,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 87,
+"tang": "S1",
+"pair_id": 313091,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "揭阳 is Jieyang (Triết Dương), not Khiết Dương",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "S",
+"nhap": "S"
+},
+"hon": "ngang"
+},
+{
+"muc": 88,
+"tang": "S1",
+"pair_id": 51709,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "休闲旅行 is casual travel, not camping/picnic",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "N"
+},
+"hon": "ngang"
+},
+{
+"muc": 89,
+"tang": "S1",
+"pair_id": 51703,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "N"
+},
+"hon": "A"
+},
+{
+"muc": 90,
+"tang": "S5",
+"pair_id": 252181,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 91,
+"tang": "S7",
+"pair_id": 70225,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "Translated for clarity: AKF Perilla Cleansing Milk",
+"B": "AKF紫苏净颜洗面奶 is a product name, not a description; the Vietnamese translation should be a direct translation of the product name"
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"B": "N"
+},
+"hon": "A"
+},
+{
+"muc": 92,
+"tang": "S1",
+"pair_id": 23250,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "单镜头 is single lens",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 93,
+"tang": "S8",
+"pair_id": 386859,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "mat_viet",
+"luat_B": "",
+"nhan": {
+"nhap": "D",
+"A": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 94,
+"tang": "S7",
+"pair_id": 112564,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 95,
+"tang": "S4",
+"pair_id": 272463,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 96,
+"tang": "S1",
+"pair_id": 117984,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 in fashion context is solid color/plain",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 97,
+"tang": "S7",
+"pair_id": 23260,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "颜色分类 is color classification but the values are product variants; converted inch from 寸",
+"B": "draft_v is incorrect: 2.2寸G30, 2.4寸G30, 2.4寸G30高清单录, 2.4寸G30高清双录 should be translated as 2.2 inch G30, 2.4 inch G30, 2.4 inch G30 cao cấp đơn ghi, 2.4 inch G30 cao cấp ghi kép"
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"B": "S"
+},
+"hon": "A"
+},
+{
+"muc": 98,
+"tang": "S6",
+"pair_id": 23260,
+"truong": "ten",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "颜色分类 is color classification but the values are product variants; converted inch from 寸",
+"B": "draft_v is incorrect: 2.2寸G30, 2.4寸G30, 2.4寸G30高清单录, 2.4寸G30高清双录 should be translated as 2.2 inch G30, 2.4 inch G30, 2.4 inch G30 cao cấp đơn ghi, 2.4 inch G30 cao cấp ghi kép"
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "N",
+"nhap": "D"
+},
+"hon": "nhap"
+},
+{
+"muc": 99,
+"tang": "S1",
+"pair_id": 699,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 100,
+"tang": "S7",
+"pair_id": 21507,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "Translated from Chinese context",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"B": "N"
+},
+"hon": "A"
+},
+{
+"muc": 101,
+"tang": "S1",
+"pair_id": 317223,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 is solid color, not just 'pure color'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 102,
+"tang": "S7",
+"pair_id": 64410,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "Translated from Chinese name",
+"B": "The value contains Chinese characters and pinyin"
+},
+"luat_A": "",
+"luat_B": "han_sot",
+"nhan": {
+"B": "S",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 103,
+"tang": "S1",
+"pair_id": 200755,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 104,
+"tang": "S1",
+"pair_id": 306231,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "小白鞋 refers to a style of plain white shoes, not 'small white shoes'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "S"
+},
+"hon": "A"
+},
+{
+"muc": 105,
+"tang": "S4",
+"pair_id": 281107,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 106,
+"tang": "S5",
+"pair_id": 195154,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 107,
+"tang": "S1",
+"pair_id": 124891,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 means solid color/plain, not 'màu thuần'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 108,
+"tang": "S1",
+"pair_id": 102842,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "其他 means 'Other', not '7 days'",
+"B": "Other is a component here, not 7 days"
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "S"
+},
+"hon": "A"
+},
+{
+"muc": 109,
+"tang": "S1",
+"pair_id": 318807,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "布面 is fabric/cloth, not just 'surface fabric'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 110,
+"tang": "S1",
+"pair_id": 130452,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "拼接款 refers to patchwork/panel design, not color matching",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "S"
+},
+"hon": "A"
+},
+{
+"muc": 111,
+"tang": "S7",
+"pair_id": 384106,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": "拼色 is 'Màu sắc kết hợp', not 'Màu sắc kết dính'"
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "N",
+"B": "S"
+},
+"hon": "A"
+},
+{
+"muc": 112,
+"tang": "S1",
+"pair_id": 130458,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 113,
+"tang": "S7",
+"pair_id": 356832,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "喂奶奶嘴 is a typo in Chinese for 喂奶嘴 (baby nipple)",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"B": "D",
+"A": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 114,
+"tang": "S1",
+"pair_id": 4047,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D",
+"A": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 115,
+"tang": "S1",
+"pair_id": 156392,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 is solid color, not pure color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 116,
+"tang": "S1",
+"pair_id": 151273,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 is solid color, not pure color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 117,
+"tang": "S1",
+"pair_id": 393545,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is solid color, not just 'color'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 118,
+"tang": "S1",
+"pair_id": 76935,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "通用 in electronics context means universal/compatible, not 'summary'",
+"B": "draft_v is correct"
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "N",
+"nhap": "S"
+},
+"hon": "A"
+},
+{
+"muc": 119,
+"tang": "S1",
+"pair_id": 117630,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is solid color, not just 'pure color'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 120,
+"tang": "S7",
+"pair_id": 21532,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "Translated Chinese to Vietnamese",
+"B": "Đã dịch toàn bộ nội dung"
+},
+"luat_A": "latin_moi",
+"luat_B": "",
+"nhan": {
+"B": "N",
+"A": "N"
+},
+"hon": "ngang"
+},
+{
+"muc": 121,
+"tang": "S4",
+"pair_id": 254819,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D",
+"B": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 122,
+"tang": "S4",
+"pair_id": 258419,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D",
+"B": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 123,
+"tang": "S7",
+"pair_id": 281124,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "单排扣 is single-breasted/button row",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"B": "S"
+},
+"hon": "A"
+},
+{
+"muc": 124,
+"tang": "S1",
+"pair_id": 153414,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 means solid color, not pure color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 125,
+"tang": "S2",
+"pair_id": 897,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "皮革 is leather, 'da thuộc' is tanned leather, 'da' is more general and natural for e-commerce",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 126,
+"tang": "S6",
+"pair_id": 61399,
+"truong": "ten",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D",
+"A": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 127,
+"tang": "S5",
+"pair_id": 87018,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 128,
+"tang": "S1",
+"pair_id": 162052,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "无印风 refers to Muji-style/minimalist, not 'no brand'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 129,
+"tang": "S6",
+"pair_id": 140657,
+"truong": "ten",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "口感 refers to taste/mouthfeel, not eating",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 130,
+"tang": "S5",
+"pair_id": 153413,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 131,
+"tang": "S5",
+"pair_id": 197584,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 132,
+"tang": "S8",
+"pair_id": 156407,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Converted kg from 千克",
+"B": ""
+},
+"luat_A": "do_dai",
+"luat_B": "",
+"nhan": {
+"nhap": "D",
+"A": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 133,
+"tang": "S8",
+"pair_id": 189106,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Converted mAh for better e-commerce style",
+"B": ""
+},
+"luat_A": "do_dai",
+"luat_B": "",
+"nhan": {
+"nhap": "N",
+"A": "D"
+},
+"hon": "A"
+},
+{
+"muc": 134,
+"tang": "S5",
+"pair_id": 384127,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"nhap": "N"
+},
+"hon": "ngang"
+},
+{
+"muc": 135,
+"tang": "S1",
+"pair_id": 142291,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "罐 refers to a jar/can, not a box (盒)",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+},
+{
+"muc": 136,
+"tang": "S1",
+"pair_id": 292465,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "D"
+},
+"hon": "ngang"
+},
+{
+"muc": 137,
+"tang": "S6",
+"pair_id": 356834,
+"truong": "ten",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "",
+"nhan": {
+"A": "D",
+"nhap": "N"
+},
+"hon": "A"
+}
+]

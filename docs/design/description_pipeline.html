@@ -214,7 +214,7 @@ section { display: grid; gap: 14px; }
       <div><div class="k">Làm gì</div><p>Cặp có tên liên hệ (联系方式, 电话, 微信, 联系人) gắn mã PII. Cặp tên/địa chỉ nhà sản xuất (生产厂家, 生产厂商, 厂址, 公司, 制造商, 供货商, 工厂...) gắn mã PII_NSX. Trong các cặp còn lại, che số điện thoại, URL, email, ID WeChat/QQ bằng nhãn [电话]/[SĐT], [URL], [EMAIL], [联系方式]/[LIÊN HỆ] ở cả hai phía. Bản công bố bỏ hẳn cặp PII, PII_NSX và cột shop.</p></div>
       <div><div class="k">Vì sao ở đây</div><p>Phải xong trước mọi bước gửi dữ liệu ra LLM (P6, P7, P10) và trước khi công bố dữ liệu (charter §6).</p></div>
     </div>
-    <div class="ex"><span class="in">662300541992: 产品厂家联系方式: 138****1990</span><span class="arrow">→</span><span class="out">cặp không dùng cho train, ly_do = PII</span></div>
+    <div class="ex"><span class="in">662300541992: 产品厂家联系方式: 13805921990</span><span class="arrow">→</span><span class="out">cặp không dùng cho train, ly_do = PII</span></div>
     <div class="res">29 cặp PII, 1.567 cặp PII_NSX; che 98 giá trị zh và 94 giá trị vi. Quét lại bản công bố: không còn số điện thoại, email, URL hay ID liên hệ.</div>
     <div class="nogate">Không có cổng: che theo hướng thận trọng. Chuỗi giống số điện thoại cũng bị che dù có thể là mã hàng; chấp nhận mất rất ít dữ liệu để chắc chắn không lộ thông tin.</div>
   </div></li>

@@ -1,0 +1,107 @@
+{
+ "mo_hinh": "api_tuy_chon",
+ "phien_ban_cau_lenh": "cum-vi_zh-v2-2026-10-23",
+ "huong": "vi_zh",
+ "loai": "cum",
+ "bat_dau": "2026-10-24 01:05:49",
+ "tong": 201,
+ "da_co_truoc": 0,
+ "chi_mau_thu": true,
+ "tham_so": {
+  "temperature": 0.0,
+  "repetition_penalty": 1.0,
+  "max_tokens": "min(tran, 512 + 2*ky_tu + 30*so_muc)",
+  "hoi_lai": 1
+ },
+ "backend": "api",
+ "repo": "gemma-4-26b-a4b-it",
+ "sha_repo": "api (không có mã phiên bản; ghi ngày gọi ở bat_dau)",
+ "loi_vllm": null,
+ "phien_ban": {
+  "api": "gemma-4-26b-a4b-it",
+  "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+  "song_song": 20,
+  "nhan_theo_luong": true,
+  "giay_cho": 300,
+  "extra_body": {
+   "reasoning_effort": "minimal"
+  }
+ },
+ "rpm": 20,
+ "toi_da_yeu_cau": 15000,
+ "ngan_sach_usd": 8.0,
+ "dem": {
+  "xong": 201,
+  "loi_cau_truc": 0,
+  "con_sot_viet": 0,
+  "hoi_lai": 3,
+  "sua_duoc": 3,
+  "loi_api": 0
+ },
+ "toc_do_cum_giay": 0.9,
+ "api": {
+  "yeu_cau": 131,
+  "thu_lai": 45,
+  "loi_api": 1,
+  "loi_trong_noi_dung": 0,
+  "het_gio": 0,
+  "het_ngan_sach": 0,
+  "het_toi_da_goi": 0,
+  "het_quota_ngay": 0,
+  "token_vao": 170298,
+  "token_ra": 13348,
+  "token_suy_luan": 0,
+  "giay_cac_lan_goi": 372.7313485145569,
+  "chi_phi_uoc_usd": 0.06711,
+  "model_tra_ve": [
+   "gemma-4-26b-a4b-it"
+  ],
+  "theo_khoa": {
+   "GEMINI_API_KEY_aoCw": {
+    "yeu_cau_thanh_cong": 19,
+    "loi": 10,
+    "giay_trung_binh": 2.2,
+    "trang_thai": "con_dung_duoc"
+   },
+   "GEMINI_API_KEY_XY2w": {
+    "yeu_cau_thanh_cong": 22,
+    "loi": 6,
+    "giay_trung_binh": 3.9,
+    "trang_thai": "con_dung_duoc"
+   },
+   "GEMINI_API_KEY_rsqw": {
+    "yeu_cau_thanh_cong": 30,
+    "loi": 9,
+    "giay_trung_binh": 2.9,
+    "trang_thai": "con_dung_duoc"
+   },
+   "GEMINI_API_KEY_eVYg": {
+    "yeu_cau_thanh_cong": 31,
+    "loi": 9,
+    "giay_trung_binh": 3.2,
+    "trang_thai": "con_dung_duoc"
+   },
+   "GEMINI_API_KEY_XIBA": {
+    "yeu_cau_thanh_cong": 25,
+    "loi": 9,
+    "giay_trung_binh": 2.2,
+    "trang_thai": "con_dung_duoc"
+   }
+  },
+  "goi_thu": [
+   {
+    "extra": {
+     "reasoning_effort": "minimal"
+    },
+    "giay": 1.1,
+    "tra_loi": "**你好** (Nǐ hǎo) dịch sang tiếng Việt là:",
+    "ky_tu_suy_luan": 0
+   }
+  ],
+  "loi_cuoi": "HTTP 500: [{\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"Internal error encountered.\",\n    \"status\": \"INTERNAL\"\n  }\n}\n]"
+ },
+ "ket_thuc": "2026-10-24 01:09:35",
+ "dung_vi_het_gio": false,
+ "con_lai": 0,
+ "giay": 226
+}

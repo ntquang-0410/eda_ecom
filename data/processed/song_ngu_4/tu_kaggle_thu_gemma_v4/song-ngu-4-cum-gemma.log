@@ -1,0 +1,71 @@
+[{"stream_name":"stderr","time":8.509082607,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.509160177,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.509168908,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.509172477,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.195264699,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.195306888,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.195312038,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.195315489,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.400587011,"data":"Giờ UTC hiện tại: 0h (giờ Việt Nam 7h, miền Đông Mỹ 20h).\n"}
+,{"stream_name":"stderr","time":10.401407501,"data":"/tmp/ipykernel_16/2420864422.py:2: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n"}
+,{"stream_name":"stderr","time":10.401431231,"data":"  _h = datetime.datetime.utcnow().hour\n"}
+,{"stream_name":"stderr","time":10.401434981,"data":"\n"}
+,{"stream_name":"stderr","time":10.401437221,"data":"/tmp/ipykernel_16/2420864422.py:2: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n"}
+,{"stream_name":"stderr","time":10.401439671,"data":"  _h = datetime.datetime.utcnow().hour\n"}
+,{"stream_name":"stdout","time":10.60160821,"data":"Dữ liệu vào: /kaggle/input/datasets/trinhnhatanh/song-ngu-4-cum-vao | thư mục ra: /kaggle/working/ra_cum_zv_thu | đầu ra cũ: không có | số GPU: 0\n"}
+,{"stream_name":"stdout","time":12.908436037,"data":"Đã nạp 5 khoá Gemini: ['GEMINI_API_KEY_aoCw', 'GEMINI_API_KEY_eVYg', 'GEMINI_API_KEY_rsqw', 'GEMINI_API_KEY_XIBA', 'GEMINI_API_KEY_XY2w']\n"}
+,{"stream_name":"stdout","time":12.908469457,"data":"  không nạp được GEMINI_API_KEY -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140615812 and label GEMINI_API_KEY.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":12.908475567,"data":"  không nạp được GEMINI_API_KEY_2 -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140615812 and label GEMINI_API_KEY_2.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":12.908479977,"data":"  không nạp được GEMINI_API_KEY_3 -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140615812 and label GEMINI_API_KEY_3.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":12.949631845,"data":"Có kết nối Internet (HTTP 404 ).\n"}
+,{"stream_name":"stdout","time":73.179390994,"data":"[1 phút] A: 00:28:36 Nạp xong sau 4 giây; backend api\n"}
+,{"stream_name":"stdout","time":133.179375102,"data":"[2 phút] A: 00:30:09 api_tuy_chon: xong 50/200 cụm (0.54 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":193.180124938,"data":"[3 phút] A: 00:30:09 api_tuy_chon: xong 50/200 cụm (0.54 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":253.180974322,"data":"[4 phút] A: 00:32:21 api_tuy_chon: xong 100/200 cụm (0.45 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 4, sửa được 4 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":313.181615051,"data":"[5 phút] A: 00:32:21 api_tuy_chon: xong 100/200 cụm (0.45 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 4, sửa được 4 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":373.182114166,"data":"[6 phút] A: 00:32:21 api_tuy_chon: xong 100/200 cụm (0.45 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 4, sửa được 4 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":433.182663139,"data":"[7 phút] A: 00:32:21 api_tuy_chon: xong 100/200 cụm (0.45 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 4, sửa được 4 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":493.183097105,"data":"[8 phút] A: 00:32:21 api_tuy_chon: xong 100/200 cụm (0.45 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 4, sửa được 4 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":553.183148573,"data":"[9 phút] A: 00:36:55 api_tuy_chon: xong 150/200 cụm (0.30 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 8, sửa được 8 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":613.183906175,"data":"[10 phút] A: 00:36:55 api_tuy_chon: xong 150/200 cụm (0.30 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 8, sửa được 8 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":673.184513515,"data":"[11 phút] A: 00:36:55 api_tuy_chon: xong 150/200 cụm (0.30 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 8, sửa được 8 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":733.185055835,"data":"[12 phút] A: 00:36:55 api_tuy_chon: xong 150/200 cụm (0.30 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 8, sửa được 8 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":792.98617148,"data":"[13 phút] A: 00:40:41 Kết thúc api_tuy_chon | còn lại 0\n"}
+,{"stream_name":"stdout","time":792.98620287,"data":"--- A: mã thoát 0, 15 dòng cuối ---\n"}
+,{"stream_name":"stdout","time":792.98620738,"data":"00:28:33 api_tuy_chon: tổng 200 cụm, đã có 0, còn 200 | câu lệnh cum-zh_vi-v4-2026-10-25\n"}
+,{"stream_name":"stdout","time":792.98621081,"data":"00:28:33 Thử kết nối API: mô hình gemma-4-26b-a4b-it | khoá chỉ gửi tới generativelanguage.googleapis.com | giá ước {'vao_miss': 0.3, 'vao_hit': 0.3, 'ra': 1.2}\n"}
+,{"stream_name":"stdout","time":792.98621414,"data":"00:28:35 Gọi thử: {\"extra\": {\"reasoning_effort\": \"minimal\"}, \"giay\": 1.3, \"tra_loi\": \"**你好** (Nǐ hǎo) dịch sang tiếng Việt là:\", \"ky_tu_suy_luan\": 0}\n"}
+,{"stream_name":"stdout","time":792.98621981,"data":"00:28:36 Gọi thử khoá GEMINI_API_KEY_eVYg: 1.3 giây | '**你好** (Nǐ hǎo) dịch sang tiến'\n"}
+,{"stream_name":"stdout","time":792.98622512,"data":"00:28:36 Gọi thử khoá GEMINI_API_KEY_rsqw: 1.3 giây | '**你好** (Nǐ hǎo) dịch sang tiến'\n"}
+,{"stream_name":"stdout","time":792.98623003,"data":"00:28:36 Gọi thử khoá GEMINI_API_KEY_XIBA: 1.1 giây | '**你好** (Nǐ hǎo) dịch sang tiến'\n"}
+,{"stream_name":"stdout","time":792.98623514,"data":"00:28:36 Gọi thử khoá GEMINI_API_KEY_XY2w: 1.4 giây | '**你好** (Nǐ hǎo) dịch sang tiến'\n"}
+,{"stream_name":"stdout","time":792.98623991,"data":"00:28:36 Khoá dùng được: 5/5\n"}
+,{"stream_name":"stdout","time":792.98624481,"data":"00:28:36 Kết quả gọi thử: chọn {\"reasoning_effort\": \"minimal\"}: '**你好** (Nǐ hǎo) dịch sang tiếng Việt là:' sau 1.3 giây\n"}
+,{"stream_name":"stdout","time":792.986264869,"data":"00:28:36 Nạp xong sau 4 giây; backend api\n"}
+,{"stream_name":"stdout","time":792.98626904,"data":"00:30:09 api_tuy_chon: xong 50/200 cụm (0.54 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":792.986273269,"data":"00:32:21 api_tuy_chon: xong 100/200 cụm (0.45 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 4, sửa được 4 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":792.986277429,"data":"00:36:55 api_tuy_chon: xong 150/200 cụm (0.30 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 8, sửa được 8 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":792.98628106,"data":"00:40:41 api_tuy_chon: xong 200/200 cụm (0.28 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 12, sửa được 12 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":792.986284749,"data":"00:40:41 Kết thúc api_tuy_chon | còn lại 0\n"}
+,{"stream_name":"stdout","time":793.668750902,"data":"A api_tuy_chon: 200/200 cụm | trạng thái {'ok': 200} | còn sót Hán 0 | hỏi lại 12, sửa được 12 | lý do lỗi {}\n"}
+,{"stream_name":"stdout","time":793.668791582,"data":"   thời gian 729 giây | tốc độ 0.276 cụm/giây | API {'yeu_cau': 217, 'thu_lai': 148, 'loi_api': 0, 'token_vao': 589570, 'token_ra': 126427}\n"}
+,{"stream_name":"stdout","time":793.668796472,"data":"   ví dụ 851885595304#0 {\"1\": {\"c\": \"\", \"n\": \"Chất liệu\"}, \"2\": {\"c\": \"\", \"n\": \"Thương hiệu\"}, \"4\": {\"c\": \"\", \"n\": \"Có tay cầm hay không\", \"v\": \"Không có tay cầm\"}, \"5\": {\"c\": \"\", \"n\": \"Hình dạng\", \"v\": \"Hình mỏ vịt\"}, \"9\": {\"c\": \"\", \"n\": \"Màu sắc\", \"v\": \"Màu cà phê\"}, \"_thua\": 0}\n"}
+,{"stream_name":"stdout","time":793.668806602,"data":"   ví dụ 1072998065652#0 {\"1\": {\"c\": \"\", \"n\": \"Chất liệu\", \"v\": \"Thép không gỉ\"}, \"2\": {\"c\": \"\", \"n\": \"Thương hiệu\"}, \"3\": {\"c\": \"\", \"n\": \"Loại dụng cụ\", \"v\": \"Cốc nước/Cốc tập uống\"}, \"4\": {\"c\": \"\", \"n\": \"Có tay cầm hay không\", \"v\": \"Không có tay cầm\"}, \"5\": {\"c\": \"\", \"n\": \"Độ tuổi áp dụng\", \"v\": \"Thông dụng\"}, \"6\": {\"c\": \n"}
+,{"stream_name":"stdout","time":793.668812952,"data":"B qwen3_14b : chưa có kết quả\n"}
+,{"stream_name":"stdout","time":793.668815092,"data":"\n"}
+,{"stream_name":"stdout","time":793.668816982,"data":"Các file đầu ra (tab Output):\n"}
+,{"stream_name":"stdout","time":793.668818932,"data":"  ra_cum_zv_thu/api_tuy_chon/lo_00000.parquet  41,290 byte\n"}
+,{"stream_name":"stdout","time":793.668821582,"data":"  ra_cum_zv_thu/api_tuy_chon/lo_00001.parquet  55,566 byte\n"}
+,{"stream_name":"stdout","time":793.668824632,"data":"  ra_cum_zv_thu/api_tuy_chon/lo_00002.parquet  70,596 byte\n"}
+,{"stream_name":"stdout","time":793.668827802,"data":"  ra_cum_zv_thu/api_tuy_chon/lo_00003.parquet  82,228 byte\n"}
+,{"stream_name":"stdout","time":793.668831132,"data":"  ra_cum_zv_thu/log_A.log  1,725 byte\n"}
+,{"stream_name":"stdout","time":793.668835002,"data":"  ra_cum_zv_thu/the_api_tuy_chon.json  2,362 byte\n"}
+,{"stream_name":"stderr","time":796.42312172,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":796.423191079,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":796.630986507,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":796.631054487,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":797.415519419,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":797.483702985,"data":"[NbConvertApp] Writing 23896 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":799.889631415,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":800.404451401,"data":"[NbConvertApp] Writing 328258 bytes to __results__.html\n"}
+]

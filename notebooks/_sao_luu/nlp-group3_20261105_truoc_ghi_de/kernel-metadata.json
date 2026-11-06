@@ -1,0 +1,28 @@
+{
+  "id": "trinhnhatanh/nlp-group3",
+  "id_no": 134234906,
+  "title": "nlp-group3",
+  "code_file": "nlp-group3.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "trinhnhatanh/song-ngu-4-cum-vao"
+  ],
+  "kernel_sources": [
+    "trinhnhatanh/song-ngu-4-dong-goi-thu-vien",
+    "trinhnhatanh/song-ngu-4-dong-goi-mo-hinh"
+  ],
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-3"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:00377cd1b3d470a605bc5b0ceca79969e369644e9b36802242a1c70e627372f9",
+  "machine_shape": "NvidiaRtxPro6000"
+}

@@ -1,0 +1,15 @@
+17:43:25 api_tuy_chon: tổng 200 cụm, đã có 0, còn 200 | câu lệnh cum-zh_vi-v3-2026-10-25
+17:43:25 Thử kết nối API: mô hình gemma-4-26b-a4b-it | khoá chỉ gửi tới generativelanguage.googleapis.com | giá ước {'vao_miss': 0.3, 'vao_hit': 0.3, 'ra': 1.2}
+17:43:26 Gọi thử: {"extra": {"reasoning_effort": "minimal"}, "giay": 1.0, "tra_loi": "**你好** (Nǐ hǎo) dịch sang tiếng Việt là:", "ky_tu_suy_luan": 0}
+17:43:29 Gọi thử khoá GEMINI_API_KEY_eVYg: 3.2 giây | '**你好** (Nǐ hǎo) dịch sang tiến'
+17:43:29 Gọi thử khoá GEMINI_API_KEY_rsqw: 2.7 giây | '**你好** (Nǐ hǎo) dịch sang tiến'
+17:43:29 Gọi thử khoá GEMINI_API_KEY_XIBA: 1.3 giây | '**你好** (Nǐ hǎo) dịch sang tiến'
+17:43:29 Gọi thử khoá GEMINI_API_KEY_XY2w: 1.2 giây | '**你好** (Nǐ hǎo) dịch sang tiến'
+17:43:29 Khoá dùng được: 5/5
+17:43:29 Kết quả gọi thử: chọn {"reasoning_effort": "minimal"}: '**你好** (Nǐ hǎo) dịch sang tiếng Việt là:' sau 1.0 giây
+17:43:29 Nạp xong sau 6 giây; backend api
+17:45:50 api_tuy_chon: xong 50/200 cụm (0.36 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 1, sửa được 1 | lỗi API 0
+17:50:46 api_tuy_chon: xong 100/200 cụm (0.23 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 3, sửa được 3 | lỗi API 0
+17:56:31 api_tuy_chon: xong 150/200 cụm (0.19 cụm/giây) | sai cấu trúc 0 | còn sót Hán 0 | hỏi lại 8, sửa được 8 | lỗi API 0
+17:59:22 api_tuy_chon: xong 200/200 cụm (0.21 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 11, sửa được 10 | lỗi API 0
+17:59:22 Kết thúc api_tuy_chon | còn lại 0

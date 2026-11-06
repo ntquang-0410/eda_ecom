@@ -1,0 +1,100 @@
+{
+ "cap_vao": 402498,
+ "cap_giu": 401692,
+ "cap_bo_khong_co_ban": 806,
+ "cach_chon": "AB",
+ "nhat_quan": {
+  "gia_tri": {
+   "独立站:Trạm độc lập": 7,
+   "镜头:thấu kính": 1,
+   "无印风:Phong cách không nhãn hiệu": 2,
+   "拉链:Ngăn kéo": 1,
+   "厚底:Đế độn mũi": 3,
+   "套头:Xỏ chân": 1,
+   "日式:Phong cách tối giản Nhật": 2,
+   "中筒:Thân trung": 10,
+   "短筒:Thân ngắn": 7
+  },
+  "gia_tri_bi_luat_chan": 0,
+  "ten": 75
+ },
+ "cum_gemma": {
+  "ok": 16314,
+  "loi_cau_truc": 31,
+  "chua_dich": 1
+ },
+ "nguon_ten": {
+  "giu_nhap": 232189,
+  "khoa": 169241,
+  "sua_A": 942,
+  "lui_nhap": 63,
+  "dich_moi_A": 49,
+  "khong_co": 13,
+  "sua_B": 1
+ },
+ "nguon_gia_tri": {
+  "giu_nhap": 199841,
+  "khoa": 178373,
+  "sua_A": 15665,
+  "dich_moi_A": 7004,
+  "lui_nhap": 801,
+  "khong_co": 797,
+  "sua_B": 17
+ },
+ "nguon_ban_dich": {
+  "giu_ban_dich_don_vi": 206673,
+  "tu_dien_quy_tac": 172338,
+  "gemma_sua": 15664,
+  "dich_moi": 6999,
+  "qwen_sua": 18
+ },
+ "do_tin_cay_cap": {
+  "cao": 188362,
+  "vua": 188086,
+  "thap": 25244
+ },
+ "luat_truot_gia_tri_gemma": {
+  "latin_moi": 702,
+  "mat_viet": 592,
+  "do_dai": 218,
+  "han_sot": 59,
+  "lech_so_muc": 51,
+  "mat_ma": 45,
+  "lech_so": 28,
+  "jin_sai": 25,
+  "jin_can": 5,
+  "loi_thua": 2,
+  "lo_ngu_canh": 2
+ },
+ "luat_truot_ten_gemma": {
+  "mat_viet": 52,
+  "han_sot": 13,
+  "latin_moi": 13,
+  "do_dai": 11,
+  "mat_ma": 5,
+  "lech_so": 4
+ },
+ "sua_khong_ly_do": 2907,
+ "cum_sua_nhieu": 0,
+ "gia_tri_khac_bo_1": 22710,
+ "ten_khac_bo_1": 988,
+ "cum_qwen": {
+  "chua_dich": 14613,
+  "ok": 1718,
+  "loi_cau_truc": 15
+ },
+ "qwen_thay_gemma_gia_tri": 17,
+ "qwen_thay_gemma_ten": 1,
+ "qwen_dich_moi_khong_dung": 12,
+ "san_pham": 16342,
+ "san_pham_mat_cap": 736,
+ "san_pham_khong_con_cap_nao": 0,
+ "do_tin_cay_san_pham": {
+  "thap": 12020,
+  "vua": 4322
+ },
+ "nhan": "20261026_2123",
+ "thu_muc_gemma": "data\\processed\\song_ngu_4\\tu_kaggle_that_gemma_gop",
+ "thu_muc_qwen": "data\\processed\\song_ngu_4\\that_qwen_du_phong",
+ "giay": 146
+}

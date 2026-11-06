@@ -1,0 +1,2195 @@
+{
+"1": {
+"tang": "S1",
+"pair_id": 290354,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "棉 in clothing context is Cotton, not Bông",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"2": {
+"tang": "S7",
+"pair_id": 144984,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"3": {
+"tang": "S7",
+"pair_id": 112564,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"4": {
+"tang": "S8",
+"pair_id": 156407,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Converted kg from 千克",
+"B": ""
+},
+"luat_A": "do_dai",
+"luat_B": ""
+},
+"5": {
+"tang": "S5",
+"pair_id": 40009,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"6": {
+"tang": "S4",
+"pair_id": 254819,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"7": {
+"tang": "S7",
+"pair_id": 281124,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"8": {
+"tang": "S4",
+"pair_id": 40015,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"9": {
+"tang": "S1",
+"pair_id": 122299,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"10": {
+"tang": "S3",
+"pair_id": 23250,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap",
+"B"
+],
+"ly_do": {
+"A": "镜头 (camera) = ống kính",
+"B": "draft_v 'Đơn thấu kính' is incorrect: '单镜头' is 'Đơn ống kính'"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"11": {
+"tang": "S1",
+"pair_id": 345577,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Website độc lập is the correct term for 独立站 per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"12": {
+"tang": "S8",
+"pair_id": 162390,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Brand name should be kept in Latin characters as per context",
+"B": ""
+},
+"luat_A": "mat_viet",
+"luat_B": "mat_viet"
+},
+"13": {
+"tang": "S5",
+"pair_id": 32403,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"14": {
+"tang": "S7",
+"pair_id": 21507,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"15": {
+"tang": "S6",
+"pair_id": 63875,
+"truong": "ten",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"16": {
+"tang": "S4",
+"pair_id": 161329,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"17": {
+"tang": "S5",
+"pair_id": 93939,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"18": {
+"tang": "S8",
+"pair_id": 189106,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Converted mAh for better e-commerce style",
+"B": ""
+},
+"luat_A": "do_dai",
+"luat_B": ""
+},
+"19": {
+"tang": "S1",
+"pair_id": 287020,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"20": {
+"tang": "S2",
+"pair_id": 193015,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Màu trơn is the correct term for 纯色 (solid color)",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"21": {
+"tang": "S5",
+"pair_id": 281106,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"22": {
+"tang": "S5",
+"pair_id": 10581,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"23": {
+"tang": "S1",
+"pair_id": 129385,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"24": {
+"tang": "S7",
+"pair_id": 263174,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "新款丝瓜络 is a product style/version, not a color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"25": {
+"tang": "S7",
+"pair_id": 88749,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "Translated according to glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"26": {
+"tang": "S1",
+"pair_id": 382680,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "低帮 is low collar, not low body",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"27": {
+"tang": "S1",
+"pair_id": 64863,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"28": {
+"tang": "S1",
+"pair_id": 249460,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Website độc lập used per glossary",
+"B": "The draft used 'Trạm độc lập' which is incorrect; it should be 'Website độc lập'"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"29": {
+"tang": "S2",
+"pair_id": 117630,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 refers to solid color, not just 'pure color'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"30": {
+"tang": "S5",
+"pair_id": 142251,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"31": {
+"tang": "S5",
+"pair_id": 130479,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"32": {
+"tang": "S5",
+"pair_id": 9188,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"33": {
+"tang": "S1",
+"pair_id": 134411,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "香草 (vanilla) is not herb (thảo mộc)",
+"B": "The draft correctly translates the product variants"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"34": {
+"tang": "S5",
+"pair_id": 6523,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"35": {
+"tang": "S1",
+"pair_id": 200747,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 is 'solid color', not 'pure color'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"36": {
+"tang": "S6",
+"pair_id": 124924,
+"truong": "ten",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"37": {
+"tang": "S5",
+"pair_id": 222288,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"38": {
+"tang": "S1",
+"pair_id": 393567,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "独立站 is 'Website độc lập' per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"39": {
+"tang": "S5",
+"pair_id": 345564,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"40": {
+"tang": "S5",
+"pair_id": 200837,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"41": {
+"tang": "S5",
+"pair_id": 141152,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"42": {
+"tang": "S2",
+"pair_id": 124891,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is plain color, not pure color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"43": {
+"tang": "S1",
+"pair_id": 190267,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Website độc lập is the correct term for 独立站",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"44": {
+"tang": "S2",
+"pair_id": 317223,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 is 'Màu trơn' per glossary",
+"B": "pure color is a standard term"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"45": {
+"tang": "S2",
+"pair_id": 234928,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "莓茶 is Trà dây according to glossary",
+"B": "莓茶 is 莓茶 (vine tea), not 草莓 (strawberry)"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"46": {
+"tang": "S1",
+"pair_id": 292491,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "独立站 is Website độc lập",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"47": {
+"tang": "S1",
+"pair_id": 122004,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 is solid color, not just 'màu thuần'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"48": {
+"tang": "S5",
+"pair_id": 303985,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"49": {
+"tang": "S1",
+"pair_id": 117979,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "绣花 is embroidery, not flower embroidery",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"50": {
+"tang": "S7",
+"pair_id": 384106,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": "拼色 is 'Màu sắc kết hợp', not 'Màu sắc kết dính'"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"51": {
+"tang": "S1",
+"pair_id": 357159,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "tay cầm is more common for baby products than cán",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"52": {
+"tang": "S5",
+"pair_id": 45446,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"53": {
+"tang": "S5",
+"pair_id": 114952,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"54": {
+"tang": "S1",
+"pair_id": 121995,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "棉 is Cotton",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"55": {
+"tang": "S1",
+"pair_id": 328545,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is 'solid color', not 'pure color'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"56": {
+"tang": "S1",
+"pair_id": 127724,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Website độc lập is the correct term for 独立站",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"57": {
+"tang": "S1",
+"pair_id": 114961,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Website độc lập is the correct term for 独立站",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"58": {
+"tang": "S8",
+"pair_id": 162052,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "无印风 is Phong cách Muji per glossary",
+"B": ""
+},
+"luat_A": "latin_moi|mat_viet",
+"luat_B": ""
+},
+"59": {
+"tang": "S1",
+"pair_id": 65235,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Corrected 'Trạm độc lập' to 'Website độc lập' per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"60": {
+"tang": "S1",
+"pair_id": 117649,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Translated 独立站 to Website độc lập per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"61": {
+"tang": "S4",
+"pair_id": 161334,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"62": {
+"tang": "S5",
+"pair_id": 218162,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"63": {
+"tang": "S1",
+"pair_id": 1022,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "条 is a classifier for long objects like towels, 'Sợi' is for thread, 'Cái' is more natural for a towel",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"64": {
+"tang": "S5",
+"pair_id": 357275,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"65": {
+"tang": "S7",
+"pair_id": 21532,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "Translated Chinese to Vietnamese",
+"B": "The value contains Chinese characters and needs to be translated"
+},
+"luat_A": "latin_moi",
+"luat_B": ""
+},
+"66": {
+"tang": "S4",
+"pair_id": 256178,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"67": {
+"tang": "S1",
+"pair_id": 93929,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Website độc lập is the correct term for 独立站 per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"68": {
+"tang": "S1",
+"pair_id": 97587,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Website độc lập is the correct term for 独立站",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"69": {
+"tang": "S1",
+"pair_id": 234944,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "莓茶 is Trà dây",
+"B": "莓茶 is 莓茶 (vine tea), not 草莓 (strawberry)"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"70": {
+"tang": "S7",
+"pair_id": 129392,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "七分袖 is 3/4 sleeve, commonly called 'tay lỡ' in VN fashion",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"71": {
+"tang": "S1",
+"pair_id": 99883,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Website độc lập used instead of Trạm độc lập per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"72": {
+"tang": "S3",
+"pair_id": 22193,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "镜头 refers to lens, not thấu kính",
+"B": "draft_v 'Song thấu kính' is incorrect: '镜头' is 'ống kính', not 'thấu kính'"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"73": {
+"tang": "S3",
+"pair_id": 10573,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"B",
+"A"
+],
+"ly_do": {
+"A": "镜头 (camera) = ống kính",
+"B": "draft_v 'Đơn thấu kính' is incorrect: '单镜头' is 'Đơn ống kính'"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"74": {
+"tang": "S1",
+"pair_id": 215005,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Website độc lập is the correct term for 独立站",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"75": {
+"tang": "S4",
+"pair_id": 164111,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"76": {
+"tang": "S1",
+"pair_id": 65234,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Corrected brand name to Birantang to match item 2",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"77": {
+"tang": "S6",
+"pair_id": 23260,
+"truong": "ten",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Translated color classification as product variants; converted inch to inch",
+"B": "draft_n is incorrect: '颜色分类' is 'Phân loại màu sắc'"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"78": {
+"tang": "S2",
+"pair_id": 115379,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "遵循 glossary: 独立站 -> Website độc lập",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"79": {
+"tang": "S1",
+"pair_id": 706,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Translated all Chinese platform names to Latin/Vietnamese",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"80": {
+"tang": "S1",
+"pair_id": 376261,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is 'solid color' in fashion context",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"81": {
+"tang": "S1",
+"pair_id": 267571,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"82": {
+"tang": "S1",
+"pair_id": 130466,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "拼接 is patchwork/paneling, not color matching",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"83": {
+"tang": "S2",
+"pair_id": 190461,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 is 'solid color', not 'pure color'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"84": {
+"tang": "S5",
+"pair_id": 376278,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"85": {
+"tang": "S1",
+"pair_id": 343382,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"86": {
+"tang": "S1",
+"pair_id": 313091,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "揭阳 is Yết Dương",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"87": {
+"tang": "S1",
+"pair_id": 273009,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Website độc lập for 独立站",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"88": {
+"tang": "S1",
+"pair_id": 124882,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "棉 is Cotton",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"89": {
+"tang": "S5",
+"pair_id": 249465,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"90": {
+"tang": "S4",
+"pair_id": 258405,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"91": {
+"tang": "S1",
+"pair_id": 21050,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Website độc lập is the correct term for 独立站",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"92": {
+"tang": "S7",
+"pair_id": 356832,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "喂奶奶嘴 is a typo in Chinese for 喂奶嘴 (baby nipple)",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"93": {
+"tang": "S1",
+"pair_id": 272474,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"94": {
+"tang": "S5",
+"pair_id": 117653,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"95": {
+"tang": "S4",
+"pair_id": 162382,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"96": {
+"tang": "S2",
+"pair_id": 292482,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is solid color, not 'màu thuần'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"97": {
+"tang": "S2",
+"pair_id": 238830,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is 'Màu trơn' per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"98": {
+"tang": "S1",
+"pair_id": 249444,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "咨询客服 is better translated as 'Liên hệ chăm sóc khách hàng' in e-commerce context",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"99": {
+"tang": "S1",
+"pair_id": 324259,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 is 'Màu trơn' per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"100": {
+"tang": "S1",
+"pair_id": 281104,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"101": {
+"tang": "S7",
+"pair_id": 23260,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "Translated color classification as product variants; converted inch to inch",
+"B": "draft_n is incorrect: '颜色分类' is 'Phân loại màu sắc'"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"102": {
+"tang": "S7",
+"pair_id": 103783,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"103": {
+"tang": "S1",
+"pair_id": 189108,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Website độc lập used per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"104": {
+"tang": "S7",
+"pair_id": 218160,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "套头款 refers to a pullover style, not just a general style",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"105": {
+"tang": "S7",
+"pair_id": 100920,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": "translated from Chinese product name"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"106": {
+"tang": "S2",
+"pair_id": 10580,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "独立站 = Website độc lập per glossary",
+"B": "draft_v 'Trạm độc lập' is incorrect: '独立站' is 'Website độc lập'"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"107": {
+"tang": "S7",
+"pair_id": 357828,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "喂奶奶嘴 is a typo in Chinese for 喂奶嘴 (baby nipple)",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"108": {
+"tang": "S1",
+"pair_id": 63524,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Website độc lập is the correct term per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"109": {
+"tang": "S2",
+"pair_id": 69402,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Website độc lập is the correct translation for 独立站 per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"110": {
+"tang": "S6",
+"pair_id": 356834,
+"truong": "ten",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "尺寸大小 is size, not large/small. Fixed the translation of '雪雾白手柄' and '垫片'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"111": {
+"tang": "S1",
+"pair_id": 21492,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Trạm độc lập -> Website độc lập",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"112": {
+"tang": "S1",
+"pair_id": 306258,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "小白鞋 is Giày trắng per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"113": {
+"tang": "S1",
+"pair_id": 328564,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "独立站 -> Website độc lập",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"114": {
+"tang": "S1",
+"pair_id": 35837,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "纯色 refers to solid color, not pure color",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"115": {
+"tang": "S1",
+"pair_id": 23131,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Website độc lập is the correct term for 独立站",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"116": {
+"tang": "S1",
+"pair_id": 393558,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "低帮 is 'Cổ thấp' per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"117": {
+"tang": "S2",
+"pair_id": 161339,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is 'solid color', not 'pure color'",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"118": {
+"tang": "S5",
+"pair_id": 115838,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"119": {
+"tang": "S1",
+"pair_id": 207016,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is 'Màu trơn' per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"120": {
+"tang": "S5",
+"pair_id": 117976,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"121": {
+"tang": "S1",
+"pair_id": 100911,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Website độc lập is the correct term per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"122": {
+"tang": "S1",
+"pair_id": 382657,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "网纱 is mesh, not chiffon/voan",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"123": {
+"tang": "S5",
+"pair_id": 249453,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"124": {
+"tang": "S1",
+"pair_id": 142291,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "罐 refers to a jar/can, not a box (盒)",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"125": {
+"tang": "S5",
+"pair_id": 106383,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"126": {
+"tang": "S1",
+"pair_id": 292465,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "棉 is Cotton",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"127": {
+"tang": "S5",
+"pair_id": 707,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"128": {
+"tang": "S1",
+"pair_id": 112852,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"129": {
+"tang": "S2",
+"pair_id": 67621,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Website độc lập is the correct term for 独立站 per glossary",
+"B": "The draft_v uses 'Trạm độc lập' (independent station) for 独立站 (independent site), but the correct translation is 'Website độc lập' (independent website)."
+},
+"luat_A": "",
+"luat_B": ""
+},
+"130": {
+"tang": "S4",
+"pair_id": 162052,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "无印风 is Phong cách Muji per glossary",
+"B": ""
+},
+"luat_A": "latin_moi|mat_viet",
+"luat_B": ""
+},
+"131": {
+"tang": "S5",
+"pair_id": 134084,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"132": {
+"tang": "S2",
+"pair_id": 254828,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "纯色 is 'Màu trơn' per glossary",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"133": {
+"tang": "S2",
+"pair_id": 46330,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "拉链暗袋 is a specific bag part: hidden zipper pocket",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"134": {
+"tang": "S7",
+"pair_id": 16158,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"135": {
+"tang": "S5",
+"pair_id": 231975,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"136": {
+"tang": "S7",
+"pair_id": 70225,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "",
+"B": "AKF紫苏净颜洗面奶 is a product name, not a generic term for the product category"
+},
+"luat_A": "",
+"luat_B": ""
+},
+"137": {
+"tang": "S1",
+"pair_id": 124910,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "独立站 is Website độc lập",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"138": {
+"tang": "S1",
+"pair_id": 118004,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Website độc lập is the correct term for 独立站",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"139": {
+"tang": "S8",
+"pair_id": 61404,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "Refined translation for beauty product names",
+"B": ""
+},
+"luat_A": "latin_moi",
+"luat_B": ""
+},
+"140": {
+"tang": "S5",
+"pair_id": 222285,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"141": {
+"tang": "S5",
+"pair_id": 197592,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"142": {
+"tang": "S7",
+"pair_id": 164121,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"143": {
+"tang": "S7",
+"pair_id": 64410,
+"truong": "gia_tri",
+"thu_tu": [
+"A",
+"B"
+],
+"ly_do": {
+"A": "The draft was missing the brand name Jiumeitang and the specific ingredient Astaxanthin",
+"B": ""
+},
+"luat_A": "",
+"luat_B": "do_dai|han_sot"
+},
+"144": {
+"tang": "S4",
+"pair_id": 258419,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"nhap"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"145": {
+"tang": "S1",
+"pair_id": 151276,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "Translated Chinese characters",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"146": {
+"tang": "S6",
+"pair_id": 140657,
+"truong": "ten",
+"thu_tu": [
+"A",
+"nhap"
+],
+"ly_do": {
+"A": "口感 refers to taste/mouthfeel, not eating",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"147": {
+"tang": "S1",
+"pair_id": 4051,
+"truong": "gia_tri",
+"thu_tu": [
+"nhap",
+"A"
+],
+"ly_do": {
+"A": "",
+"B": ""
+},
+"luat_A": "",
+"luat_B": ""
+},
+"148": {
+"tang": "S7",
+"pair_id": 183599,
+"truong": "gia_tri",
+"thu_tu": [
+"B",
+"A"
+],
+"ly_do": {
+"A": "单边免提 refers to single-ear hands-free mode",
+"B": "单边免提 is one-sided hands-free, not one-sided earphones"
+},
+"luat_A": "",
+"luat_B": ""
+}
+}

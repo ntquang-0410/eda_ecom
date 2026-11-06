@@ -68,7 +68,26 @@ def day(api):
     print(f"OK: 4 file mới có mặt; {len(truoc)} mục cũ giữ nguyên.")
 
 
+def readme(api):
+    """Chỉ thay README_desc(nhatanh).md (file của chính mình, đã có trên HF); mọi file khác phải giữ nguyên."""
+    d = DICH + "README_desc(nhatanh).md"
+    print("Đăng nhập HF:", api.whoami()["name"])
+    info = api.dataset_info(REPO)
+    truoc = {f.path: f for f in api.list_repo_tree(REPO, repo_type="dataset", revision=info.sha, recursive=True)}
+    assert d in truoc, f"chưa có {d} trên HF"
+    c = api.create_commit(repo_id=REPO, repo_type="dataset", parent_commit=info.sha,
+                          operations=[CommitOperationAdd(path_in_repo=d, path_or_fileobj=str(FILES[d]))],
+                          commit_message="Update README_desc(nhatanh).md: giai thich do bge-m3 va CometKiwi")
+    print("Commit:", c.commit_url)
+    sau = {f.path: f for f in api.list_repo_tree(REPO, repo_type="dataset", recursive=True)}
+    assert set(sau) == set(truoc), "danh sách file thay đổi"
+    assert sau[d].size == FILES[d].stat().st_size
+    khac = [p for p, f in truoc.items() if p != d and getattr(f, "size", None) is not None and sau[p].size != f.size]
+    assert not khac, f"file khác bị đổi: {khac}"
+    print(f"OK: chỉ {d} được thay ({sau[d].size} byte); {len(truoc) - 1} mục khác giữ nguyên.")
+
+
 if __name__ == "__main__":
     # Token: lấy từ phiên đăng nhập `hf auth login` hoặc biến môi trường HF_TOKEN do người chạy tự đặt
     api = HfApi()
-    {"kiem": kiem, "day": day}[sys.argv[1]](api)
+    {"kiem": kiem, "day": day, "readme": readme}[sys.argv[1]](api)

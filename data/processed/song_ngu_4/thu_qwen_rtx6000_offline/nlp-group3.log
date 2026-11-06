@@ -1,0 +1,55 @@
+[{"stream_name":"stderr","time":4.660548265,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":4.660585815,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":4.660587495,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":4.660588595,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":4.977830443,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":4.977848943,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":4.977850533,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":4.977851503,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":7.698317539,"data":"OFFLINE: thư viện /kaggle/input/song-ngu-4-dong-goi-thu-vien/thu_vien | mô hình /kaggle/input/song-ngu-4-dong-goi-mo-hinh/Qwen3-14B-AWQ | revision 31c69efc29464b6bb0aee1398b5a7b50a99340c3\n"}
+,{"stream_name":"stdout","time":7.698338859,"data":"Dữ liệu vào: /kaggle/input/song-ngu-4-cum-vao | thư mục ra: /kaggle/working/ra_cum_zv_thu | đầu ra cũ: không có | số GPU: 1\n"}
+,{"stream_name":"stdout","time":7.703135609,"data":"Chạy OFFLINE: thư viện và mô hình lấy từ Dataset gắn vào notebook, không cần Internet.\n"}
+,{"stream_name":"stdout","time":44.92032106,"data":"Error in sitecustomize; set PYTHONVERBOSE for traceback:\r\n"}
+,{"stream_name":"stdout","time":44.92034197,"data":"ModuleNotFoundError: No module named 'wrapt'\r\n"}
+,{"stream_name":"stdout","time":50.340405151,"data":"vllm 0.32.0 | torch 2.13.0+cu130 | GPU 1 NVIDIA RTX PRO 6000 Blackwell Server Edition\r\n"}
+,{"stream_name":"stdout","time":111.24414318,"data":"[1 phút] B: (EngineCore pid=824) WARNING 10-26 11:26:39 [utils.py:333] Attempted to load weight layers.14.mlp.down_proj.scales with dtype torch.bfloat16 into parameter with dtype torch.float16\n"}
+,{"stream_name":"stdout","time":171.244568184,"data":"[2 phút] B: (EngineCore pid=824) WARNING 10-26 11:27:40 [utils.py:333] Attempted to load weight layers.9.mlp.down_proj.scales with dtype torch.bfloat16 into parameter with dtype torch.float16\n"}
+,{"stream_name":"stdout","time":231.244898458,"data":"[3 phút] B: Capturing CUDA graphs (PIECEWISE):  22%|██▏       | 11/51 [00:20\u003c00:26,  1.52it/s]\n"}
+,{"stream_name":"stdout","time":291.245375382,"data":"[4 phút] B: Capturing CUDA graphs (FULL):  78%|███████▊  | 40/51 [00:18\u003c00:00, 35.26it/s]\n"}
+,{"stream_name":"stdout","time":351.245817945,"data":"[5 phút] B: 11:30:02 Nạp xong sau 261 giây; backend vllm\n"}
+,{"stream_name":"stdout","time":411.046652617,"data":"[6 phút] B: (EngineCore pid=824) INFO 10-26 11:31:23 [core.py:1499] [shutdown] EngineCore: exiting busy loop\n"}
+,{"stream_name":"stdout","time":411.046670337,"data":"--- B: mã thoát 0, 15 dòng cuối ---\n"}
+,{"stream_name":"stdout","time":411.046672287,"data":"(EngineCore pid=824) INFO 10-26 11:30:00 [model_runner.py:1127] Graph capturing finished in 44 secs, took 0.21 GiB\n"}
+,{"stream_name":"stdout","time":411.046673697,"data":"(EngineCore pid=824) INFO 10-26 11:30:00 [gpu_worker.py:971] CUDA graph pool memory: 0.21 GiB (actual), 0.52 GiB (estimated), difference: 0.31 GiB (142.7%).\n"}
+,{"stream_name":"stdout","time":411.046675297,"data":"(EngineCore pid=824) INFO 10-26 11:30:00 [gpu_worker.py:1034] Free memory on device (94.43/94.97 GiB) on startup. Desired GPU memory utilization is (0.9, 85.47 GiB). Actual usage is 10.28 GiB for consumed memory (weights + non-torch), 2.55 GiB for peak activation, and 0.21 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=77605960397` (72.28 GiB) to fit into requested memory, or `--kv-cache-memory=87218040320` (81.23 GiB) to fully utilize gpu memory. Current kv cache memory in use is 72.64 GiB.\n"}
+,{"stream_name":"stdout","time":411.046683407,"data":"(EngineCore pid=824) INFO 10-26 11:30:01 [jit_monitor.py:84] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.\n"}
+,{"stream_name":"stdout","time":411.046684517,"data":"(EngineCore pid=824) INFO 10-26 11:30:02 [core.py:395] init engine (profile, create kv cache, warmup model) took 129.81 s (compilation: 22.42 s)\n"}
+,{"stream_name":"stdout","time":411.046685437,"data":"(EngineCore pid=824) INFO 10-26 11:30:02 [kernel.py:467] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native'])\n"}
+,{"stream_name":"stdout","time":411.046686317,"data":"(MainProcess pid=418) INFO 10-26 11:30:02 [hf.py:648] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.\n"}
+,{"stream_name":"stdout","time":411.046687227,"data":"11:30:02 Nạp xong sau 261 giây; backend vllm\n"}
+,{"stream_name":"stdout","time":411.046688037,"data":"11:31:23 qwen3_14b: xong 200/200 cụm (2.47 cụm/giây) | sai cấu trúc 0 | còn sót Hán 4 | hỏi lại 14, sửa được 11 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":411.046689177,"data":"11:31:23 Kết thúc qwen3_14b | còn lại 0\n"}
+,{"stream_name":"stdout","time":411.046689997,"data":"(MainProcess pid=418) INFO 10-26 11:31:23 [utils.py:628] [shutdown] Process manager: send sigterm to process EngineCore\n"}
+,{"stream_name":"stdout","time":411.046691387,"data":"(EngineCore pid=824) INFO 10-26 11:31:23 [core.py:1454] [shutdown] EngineCore: trigger received signal=SIGTERM\n"}
+,{"stream_name":"stdout","time":411.046692207,"data":"(EngineCore pid=824) INFO 10-26 11:31:23 [core.py:1635] [shutdown] EngineCore: start mode=abort timeout=0s\n"}
+,{"stream_name":"stdout","time":411.046692987,"data":"(EngineCore pid=824) INFO 10-26 11:31:23 [core.py:1666] [shutdown] EngineCore: request processing complete; starting resource teardown\n"}
+,{"stream_name":"stdout","time":411.046693797,"data":"(EngineCore pid=824) INFO 10-26 11:31:23 [core.py:1499] [shutdown] EngineCore: exiting busy loop\n"}
+,{"stream_name":"stdout","time":412.024555227,"data":"A api_tuy_chon : chưa có kết quả\n"}
+,{"stream_name":"stdout","time":412.024579417,"data":"B qwen3_14b: 200/200 cụm | trạng thái {'ok': 200} | còn sót Hán 4 | hỏi lại 14, sửa được 11 | lý do lỗi {}\n"}
+,{"stream_name":"stdout","time":412.024581457,"data":"   thời gian 342 giây | tốc độ 2.47 cụm/giây | API \n"}
+,{"stream_name":"stdout","time":412.024582667,"data":"   ví dụ 851885595304#0 {\"1\": {\"c\": \"\", \"n\": \"Chất liệu\"}, \"2\": {\"c\": \"\", \"n\": \"Thương hiệu\"}, \"4\": {\"c\": \"\", \"n\": \"Có tay cầm hay không\", \"v\": \"Không có tay cầm\"}, \"5\": {\"c\": \"\", \"n\": \"Hình dạng\", \"v\": \"Hình mỏ vịt\"}, \"9\": {\"c\": \"\", \"n\": \"Màu sắc\", \"v\": \"Màu cà phê\"}, \"_thua\": 0}\n"}
+,{"stream_name":"stdout","time":412.024586187,"data":"   ví dụ 1072998065652#0 {\"1\": {\"c\": \"\", \"n\": \"Chất liệu\", \"v\": \"Thép không gỉ\"}, \"2\": {\"c\": \"\", \"n\": \"Thương hiệu\"}, \"3\": {\"c\": \"\", \"n\": \"Loại dụng cụ\", \"v\": \"Cốc nước/Cốc tập uống\"}, \"4\": {\"c\": \"\", \"n\": \"Có tay cầm hay không\", \"v\": \"Không có tay cầm\"}, \"5\": {\"c\": \"\", \"n\": \"Độ tuổi áp dụng\", \"v\": \"Thông dụng\"}, \"6\": {\"c\": \n"}
+,{"stream_name":"stdout","time":412.024596497,"data":"\n"}
+,{"stream_name":"stdout","time":412.024597597,"data":"Các file đầu ra (tab Output):\n"}
+,{"stream_name":"stdout","time":412.024598697,"data":"  ra_cum_zv_thu/log_B.log  64,433 byte\n"}
+,{"stream_name":"stdout","time":412.024599447,"data":"  ra_cum_zv_thu/qwen3_14b/lo_00000.parquet  172,437 byte\n"}
+,{"stream_name":"stdout","time":412.024600297,"data":"  ra_cum_zv_thu/the_qwen3_14b.json  913 byte\n"}
+,{"stream_name":"stderr","time":413.388470794,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":413.388487924,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":413.466866083,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":413.466878203,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":413.804380823,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":413.941583332,"data":"[NbConvertApp] Writing 24323 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":415.089494559,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":415.496901378,"data":"[NbConvertApp] Writing 335992 bytes to __results__.html\n"}
+]

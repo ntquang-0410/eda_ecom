@@ -1,0 +1,15 @@
+{
+ "id": "trinhnhatanh/ft-qwen3-4b-thu-vien",
+ "title": "ft-qwen3-4b-thu-vien",
+ "code_file": "ft-qwen3-4b-thu-vien.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": false,
+ "enable_tpu": false,
+ "enable_internet": true,
+ "dataset_sources": [],
+ "competition_sources": [],
+ "kernel_sources": [],
+ "model_sources": []
+}

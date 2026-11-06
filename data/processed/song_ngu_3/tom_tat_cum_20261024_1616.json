@@ -1,0 +1,55 @@
+{
+ "cap_tong": 87139,
+ "cap_co_ban_cuoi": 87112,
+ "cap_khong_co_ban_cuoi": 27,
+ "nguon_gia_tri": {
+  "khoa": 72850,
+  "giu_nhap": 12096,
+  "sua_A": 2073,
+  "dich_moi_A": 49,
+  "khong_co": 27,
+  "sua_B": 25,
+  "lui_nhap": 12,
+  "dich_moi_B": 7
+ },
+ "nguon_ten": {
+  "khoa": 85803,
+  "giu_nhap": 1116,
+  "sua_A": 219,
+  "dich_moi_A": 1
+ },
+ "dong_thuan": {
+  "khoa": 72850,
+  "ca_hai_giu_nhap": 11848,
+  "chi_A_sua": 1679,
+  "chi_B_sua": 291,
+  "ca_hai_sua_giong": 229,
+  "ca_hai_sua_khac": 214,
+  "chi_mot_mo_hinh_giu_nhap": 28
+ },
+ "sua_khong_ly_do": 361,
+ "cum_sua_nhieu": 16,
+ "gia_tri_khac_don_vi": 2465,
+ "ten_khac_don_vi": 298,
+ "cum_A": {
+  "ok": 13206,
+  "loi_cau_truc": 2
+ },
+ "cum_B": {
+  "ok": 13204,
+  "loi_cau_truc": 4
+ },
+ "san_pham": 13187,
+ "san_pham_mat_cap": 25,
+ "san_pham_khong_con_cap_nao": 0,
+ "do_tin_cay_cap": {
+  "cao": 76820,
+  "vua": 8967,
+  "thap": 1325
+ },
+ "do_tin_cay_san_pham": {
+  "cao": 6979,
+  "vua": 4982,
+  "thap": 1226
+ }
+}

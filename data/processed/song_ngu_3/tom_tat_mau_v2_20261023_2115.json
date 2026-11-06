@@ -1,0 +1,49 @@
+{
+ "cum": 201,
+ "san_pham": 200,
+ "cap": 1365,
+ "A": {
+  "cum_theo_trang_thai": {
+   "ok": 201
+  }
+ },
+ "B": {
+  "cum_theo_trang_thai": {
+   "ok": 201
+  }
+ },
+ "chon_A": {
+  "ten_nguon": {
+   "khoa": 1341,
+   "giu_nhap": 21,
+   "sua_A": 3
+  },
+  "gia_tri_nguon": {
+   "khoa": 1133,
+   "giu_nhap": 195,
+   "sua_A": 33,
+   "dich_moi_A": 3,
+   "khong_co": 1
+  },
+  "gia_tri_khac_don_vi": 44,
+  "ten_khac_don_vi": 7
+ },
+ "chon_AB": {
+  "ten_nguon": {
+   "khoa": 1341,
+   "giu_nhap": 21,
+   "sua_A": 3
+  },
+  "gia_tri_nguon": {
+   "khoa": 1133,
+   "giu_nhap": 195,
+   "sua_A": 33,
+   "dich_moi_A": 3,
+   "khong_co": 1
+  },
+  "gia_tri_khac_don_vi": 44,
+  "ten_khac_don_vi": 7
+ },
+ "sua_khong_ly_do": 6,
+ "cum_sua_nhieu": 0
+}

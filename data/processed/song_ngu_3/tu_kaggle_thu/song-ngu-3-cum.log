@@ -1,0 +1,102 @@
+[{"stream_name":"stderr","time":6.745984725,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.7460497759999996,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.746056149,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.746059904,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.34629502,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.346339745,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.34634537,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.346349321,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":8.679946583,"data":"Dữ liệu vào: /kaggle/input/datasets/trinhnhatanh/song-ngu-3-cum-vao | thư mục ra: /kaggle/working/ra_cum_thu | đầu ra cũ: không có | số GPU: 2\n"}
+,{"stream_name":"stdout","time":9.880096617,"data":"Đã nạp 5 khoá Gemini: ['GEMINI_API_KEY_aoCw', 'GEMINI_API_KEY_eVYg', 'GEMINI_API_KEY_rsqw', 'GEMINI_API_KEY_XIBA', 'GEMINI_API_KEY_XY2w']\n"}
+,{"stream_name":"stdout","time":9.880131209,"data":"  không nạp được GEMINI_API_KEY -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140388654 and label GEMINI_API_KEY.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":9.880139103,"data":"  không nạp được GEMINI_API_KEY_2 -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140388654 and label GEMINI_API_KEY_2.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":9.880144352,"data":"  không nạp được GEMINI_API_KEY_3 -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140388654 and label GEMINI_API_KEY_3.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":9.949675661,"data":"Có kết nối tới Google (HTTP 404 ).\n"}
+,{"stream_name":"stdout","time":121.673204818,"data":"vllm 0.32.0 | torch 2.13.0+cu130 | GPU 2\r\n"}
+,{"stream_name":"stdout","time":183.008044244,"data":"[1 phút] A: 12:36:28 Thử kết nối API: mô hình gemma-4-26b-a4b-it | khoá chỉ gửi tới generativelanguage.googleapis.com | giá ước {'vao_miss': 0.3, 'vao_hit': 0.3, 'ra': 1.2}\n"}
+,{"stream_name":"stdout","time":183.008096855,"data":"[1 phút] B: (Worker_TP0 pid=248) INFO 10-23 12:37:14 [base_loader.py:82] Initializing model took 0.852400 seconds\n"}
+,{"stream_name":"stdout","time":243.010235643,"data":"[2 phút] A: 12:38:14 Nạp xong sau 107 giây; backend api\n"}
+,{"stream_name":"stdout","time":243.010435123,"data":"[2 phút] B: (Worker_TP1 pid=249) INFO 10-23 12:38:15 [monitor.py:40] [backbone] Starting torch.compile\n"}
+,{"stream_name":"stdout","time":303.013355962,"data":"[3 phút] A: 12:38:14 Nạp xong sau 107 giây; backend api\n"}
+,{"stream_name":"stdout","time":303.013393226,"data":"[3 phút] B: Capturing CUDA graphs (PIECEWISE):   8%|▊         | 4/51 [00:03\u003c00:29,  1.58it/s]\n"}
+,{"stream_name":"stdout","time":363.014117891,"data":"[4 phút] A: 12:39:57 api_tuy_chon: xong 50/201 cụm (0.49 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 4, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":363.014162728,"data":"[4 phút] B: Capturing CUDA graphs (FULL):  11%|█▏        | 4/35 [00:01\u003c00:08,  3.69it/s]\n"}
+,{"stream_name":"stdout","time":423.018889266,"data":"[5 phút] A: 12:39:57 api_tuy_chon: xong 50/201 cụm (0.49 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 4, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":423.01896394,"data":"[5 phút] B: (Worker_TP0 pid=248) WARNING 10-23 12:40:39 [jit_monitor.py:140] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config\n"}
+,{"stream_name":"stdout","time":483.022265107,"data":"[6 phút] A: 12:42:09 api_tuy_chon: xong 100/201 cụm (0.43 cụm/giây) | sai cấu trúc 0 | còn sót Việt 5 | hỏi lại 6, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":483.022353284,"data":"[6 phút] B: (Worker_TP0 pid=248) WARNING 10-23 12:40:39 [jit_monitor.py:140] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config\n"}
+,{"stream_name":"stdout","time":543.025904244,"data":"[7 phút] A: 12:42:09 api_tuy_chon: xong 100/201 cụm (0.43 cụm/giây) | sai cấu trúc 0 | còn sót Việt 5 | hỏi lại 6, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":543.025999777,"data":"[7 phút] B: (Worker_TP0 pid=248) WARNING 10-23 12:40:39 [jit_monitor.py:140] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config\n"}
+,{"stream_name":"stdout","time":603.023001063,"data":"[8 phút] A: 12:42:09 api_tuy_chon: xong 100/201 cụm (0.43 cụm/giây) | sai cấu trúc 0 | còn sót Việt 5 | hỏi lại 6, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":603.023047581,"data":"[8 phút] B: (MainProcess pid=147) WARNING 10-23 12:43:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 249\n"}
+,{"stream_name":"stdout","time":663.025133188,"data":"[9 phút] A: 12:45:07 api_tuy_chon: xong 150/201 cụm (0.36 cụm/giây) | sai cấu trúc 0 | còn sót Việt 7 | hỏi lại 8, sửa được 2 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":663.025194561,"data":"[9 phút] B: (MainProcess pid=147) WARNING 10-23 12:43:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 249\n"}
+,{"stream_name":"stdout","time":723.026180195,"data":"[10 phút] A: 12:45:07 api_tuy_chon: xong 150/201 cụm (0.36 cụm/giây) | sai cấu trúc 0 | còn sót Việt 7 | hỏi lại 8, sửa được 2 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":723.026250459,"data":"[10 phút] B: (MainProcess pid=147) WARNING 10-23 12:43:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 249\n"}
+,{"stream_name":"stdout","time":783.028174216,"data":"[11 phút] A: 12:45:07 api_tuy_chon: xong 150/201 cụm (0.36 cụm/giây) | sai cấu trúc 0 | còn sót Việt 7 | hỏi lại 8, sửa được 2 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":783.028245325,"data":"[11 phút] B: (MainProcess pid=147) WARNING 10-23 12:43:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 249\n"}
+,{"stream_name":"stdout","time":843.029579937,"data":"[12 phút] A: 12:45:07 api_tuy_chon: xong 150/201 cụm (0.36 cụm/giây) | sai cấu trúc 0 | còn sót Việt 7 | hỏi lại 8, sửa được 2 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":843.029629722,"data":"[12 phút] B: (MainProcess pid=147) WARNING 10-23 12:43:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 249\n"}
+,{"stream_name":"stdout","time":902.834640549,"data":"[13 phút] A: 12:49:21 Kết thúc api_tuy_chon | còn lại 0\n"}
+,{"stream_name":"stdout","time":902.834739922,"data":"[13 phút] B: (MainProcess pid=147) WARNING 10-23 12:43:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 249\n"}
+,{"stream_name":"stdout","time":902.834746978,"data":"--- A: mã thoát 0, 15 dòng cuối ---\n"}
+,{"stream_name":"stdout","time":902.834751224,"data":"12:36:28 Thử kết nối API: mô hình gemma-4-26b-a4b-it | khoá chỉ gửi tới generativelanguage.googleapis.com | giá ước {'vao_miss': 0.3, 'vao_hit': 0.3, 'ra': 1.2}\n"}
+,{"stream_name":"stdout","time":902.834755924,"data":"12:37:38 Gọi thử: {\"extra\": {\"reasoning_effort\": \"minimal\"}, \"giay\": 69.8, \"tra_loi\": \"**你好** (Nǐ hǎo) dịch sang tiếng Việt là:\", \"ky_tu_suy_luan\": 0}\n"}
+,{"stream_name":"stdout","time":902.834761298,"data":"12:37:39 Gọi thử khoá GEMINI_API_KEY_eVYg: 1.4 giây | '**你好** (Nǐ hǎo) dịch sang tiến'\n"}
+,{"stream_name":"stdout","time":902.834765514,"data":"12:37:39 Gọi thử khoá GEMINI_API_KEY_rsqw: 1.0 giây | '**你好** (Nǐ hǎo) dịch sang tiến'\n"}
+,{"stream_name":"stdout","time":902.83476952,"data":"12:38:04 Gọi thử khoá GEMINI_API_KEY_XIBA: 26.3 giây | '**你好** (Nǐ hǎo) dịch sang tiến'\n"}
+,{"stream_name":"stdout","time":902.834773551,"data":"12:38:14 Gọi thử khoá GEMINI_API_KEY_XY2w: 37.0 giây | '**你好** (Nǐ hǎo) dịch sang tiến'\n"}
+,{"stream_name":"stdout","time":902.834777744,"data":"12:38:14 Khoá dùng được: 5/5\n"}
+,{"stream_name":"stdout","time":902.834781928,"data":"12:38:14 Kết quả gọi thử: chọn {\"reasoning_effort\": \"minimal\"}: '**你好** (Nǐ hǎo) dịch sang tiếng Việt là:' sau 69.8 giây\n"}
+,{"stream_name":"stdout","time":902.834814667,"data":"12:38:14 Nạp xong sau 107 giây; backend api\n"}
+,{"stream_name":"stdout","time":902.834820075,"data":"12:39:57 api_tuy_chon: xong 50/201 cụm (0.49 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 4, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":902.834825315,"data":"12:42:09 api_tuy_chon: xong 100/201 cụm (0.43 cụm/giây) | sai cấu trúc 0 | còn sót Việt 5 | hỏi lại 6, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":902.834830584,"data":"12:45:07 api_tuy_chon: xong 150/201 cụm (0.36 cụm/giây) | sai cấu trúc 0 | còn sót Việt 7 | hỏi lại 8, sửa được 2 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":902.834835287,"data":"12:48:55 api_tuy_chon: xong 200/201 cụm (0.31 cụm/giây) | sai cấu trúc 0 | còn sót Việt 10 | hỏi lại 16, sửa được 7 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":902.834840091,"data":"12:49:21 api_tuy_chon: xong 201/201 cụm (0.30 cụm/giây) | sai cấu trúc 0 | còn sót Việt 10 | hỏi lại 16, sửa được 7 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":902.834844392,"data":"12:49:21 Kết thúc api_tuy_chon | còn lại 0\n"}
+,{"stream_name":"stdout","time":902.83485016,"data":"--- B: mã thoát 0, 15 dòng cuối ---\n"}
+,{"stream_name":"stdout","time":902.834854049,"data":"(Worker_TP0 pid=248) WARNING 10-23 12:40:39 [jit_monitor.py:140] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":902.834859691,"data":"12:43:33 qwen3_14b: xong 201/201 cụm (1.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 9 | hỏi lại 13, sửa được 4 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":902.834863947,"data":"12:43:33 Kết thúc qwen3_14b | còn lại 0\n"}
+,{"stream_name":"stdout","time":902.834867804,"data":"(MainProcess pid=147) INFO 10-23 12:43:33 [utils.py:628] [shutdown] Process manager: send sigterm to process EngineCore\n"}
+,{"stream_name":"stdout","time":902.834894684,"data":"(EngineCore pid=240) INFO 10-23 12:43:33 [core.py:1454] [shutdown] EngineCore: trigger received signal=SIGTERM\n"}
+,{"stream_name":"stdout","time":902.834901056,"data":"(EngineCore pid=240) INFO 10-23 12:43:33 [core.py:1635] [shutdown] EngineCore: start mode=abort timeout=0s\n"}
+,{"stream_name":"stdout","time":902.834905311,"data":"(EngineCore pid=240) INFO 10-23 12:43:33 [core.py:1666] [shutdown] EngineCore: request processing complete; starting resource teardown\n"}
+,{"stream_name":"stdout","time":902.834911642,"data":"(EngineCore pid=240) INFO 10-23 12:43:33 [core.py:1499] [shutdown] EngineCore: exiting busy loop\n"}
+,{"stream_name":"stdout","time":902.834916271,"data":"(EngineCore pid=240) INFO 10-23 12:43:33 [multiproc_executor.py:479] [shutdown] Executor: waiting for worker exit count=2\n"}
+,{"stream_name":"stdout","time":902.834921036,"data":"(Worker_TP0 pid=248) INFO 10-23 12:43:33 [multiproc_executor.py:843] Parent process exited, terminating worker queues\n"}
+,{"stream_name":"stdout","time":902.834958439,"data":"(MainProcess pid=147) WARNING 10-23 12:43:38 [utils.py:648] [shutdown] Process manager: force killing remaining processes count=1\n"}
+,{"stream_name":"stdout","time":902.834973784,"data":"(MainProcess pid=147) WARNING 10-23 12:43:38 [utils.py:653] [shutdown] Process manager: force killing remaining process EngineCore pid 240\n"}
+,{"stream_name":"stdout","time":902.834978163,"data":"(MainProcess pid=147) WARNING 10-23 12:43:38 [system_utils.py:225] [shutdown] force killing sub process python pid 245\n"}
+,{"stream_name":"stdout","time":902.834982351,"data":"(MainProcess pid=147) WARNING 10-23 12:43:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP0 pid 248\n"}
+,{"stream_name":"stdout","time":902.834986582,"data":"(MainProcess pid=147) WARNING 10-23 12:43:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 249\n"}
+,{"stream_name":"stdout","time":903.595841647,"data":"A api_tuy_chon: 201/201 cụm | trạng thái {'ok': 201} | còn sót Việt 10 | hỏi lại 16, sửa được 7 | lý do lỗi {}\n"}
+,{"stream_name":"stdout","time":903.595881503,"data":"   thời gian 774 giây | tốc độ 0.301 cụm/giây | API {'yeu_cau': 222, 'thu_lai': 142, 'loi_api': 0, 'token_vao': 184420, 'token_ra': 37889}\n"}
+,{"stream_name":"stdout","time":903.595887738,"data":"   ví dụ 279642940#0 [{\"i\": 1, \"n\": \"产品是否有保修?\", \"v\": \"否\"}, {\"i\": 2, \"n\": \"品牌\", \"v\": \"Jary\"}]\n"}
+,{"stream_name":"stdout","time":903.595893134,"data":"   ví dụ 279677567#0 [{\"i\": 1, \"n\": \"品牌\", \"v\": \"Tree Hut\"}, {\"i\": 2, \"n\": \"产品是否有保修？\", \"v\": \"否\"}]\n"}
+,{"stream_name":"stdout","time":903.595898168,"data":"B qwen3_14b: 201/201 cụm | trạng thái {'ok': 201} | còn sót Việt 9 | hỏi lại 13, sửa được 4 | lý do lỗi {}\n"}
+,{"stream_name":"stdout","time":903.595903171,"data":"   thời gian 425 giây | tốc độ 1.143 cụm/giây | API \n"}
+,{"stream_name":"stdout","time":903.59590786,"data":"   ví dụ 279642940#0 [{\"i\": 1, \"n\": \"产品是否保修？\", \"v\": \"否\"}, {\"i\": 2, \"n\": \"品牌\", \"v\": \"Jary\"}]\n"}
+,{"stream_name":"stdout","time":903.595912698,"data":"   ví dụ 279677567#0 [{\"i\": 1, \"n\": \"品牌\", \"v\": \"Tree Hut\"}, {\"i\": 2, \"n\": \"产品是否提供保修？\", \"v\": \"不\"}]\n"}
+,{"stream_name":"stdout","time":903.595917843,"data":"\n"}
+,{"stream_name":"stdout","time":903.595921936,"data":"Các file đầu ra (tab Output):\n"}
+,{"stream_name":"stdout","time":903.59592575,"data":"  ra_cum_thu/api_tuy_chon/lo_00000.parquet  9,600 byte\n"}
+,{"stream_name":"stdout","time":903.595930299,"data":"  ra_cum_thu/api_tuy_chon/lo_00001.parquet  11,430 byte\n"}
+,{"stream_name":"stdout","time":903.595947052,"data":"  ra_cum_thu/api_tuy_chon/lo_00002.parquet  13,124 byte\n"}
+,{"stream_name":"stdout","time":903.595953065,"data":"  ra_cum_thu/api_tuy_chon/lo_00003.parquet  23,931 byte\n"}
+,{"stream_name":"stdout","time":903.595961419,"data":"  ra_cum_thu/api_tuy_chon/lo_00004.parquet  14,240 byte\n"}
+,{"stream_name":"stdout","time":903.59596396,"data":"  ra_cum_thu/log_A.log  1,853 byte\n"}
+,{"stream_name":"stdout","time":903.595966214,"data":"  ra_cum_thu/log_B.log  122,236 byte\n"}
+,{"stream_name":"stdout","time":903.59596849,"data":"  ra_cum_thu/qwen3_14b/lo_00000.parquet  35,382 byte\n"}
+,{"stream_name":"stdout","time":903.595970862,"data":"  ra_cum_thu/the_api_tuy_chon.json  2,331 byte\n"}
+,{"stream_name":"stdout","time":903.59597318,"data":"  ra_cum_thu/the_qwen3_14b.json  882 byte\n"}
+,{"stream_name":"stderr","time":906.509727066,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":906.50978339,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":906.701213357,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":906.701246626,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":907.511064753,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":907.598163304,"data":"[NbConvertApp] Writing 26562 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":910.349009382,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":910.964787467,"data":"[NbConvertApp] Writing 327693 bytes to __results__.html\n"}
+]

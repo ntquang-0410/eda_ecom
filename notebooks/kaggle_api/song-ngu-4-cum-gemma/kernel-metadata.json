@@ -1,0 +1,18 @@
+{
+ "id": "trinhnhatanh/song-ngu-4-cum-gemma",
+ "title": "song-ngu-4-cum-gemma",
+ "code_file": "song-ngu-4-cum-gemma-kaggle.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": false,
+ "enable_tpu": false,
+ "enable_internet": true,
+ "dataset_sources": [
+  "trinhnhatanh/song-ngu-4-cum-vao",
+  "trinhnhatanh/song-ngu-4-cum-ra-cu"
+ ],
+ "competition_sources": [],
+ "kernel_sources": [],
+ "model_sources": []
+}

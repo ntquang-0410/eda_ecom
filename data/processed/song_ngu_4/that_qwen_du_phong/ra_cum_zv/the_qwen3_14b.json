@@ -1,0 +1,42 @@
+{
+ "mo_hinh": "qwen3_14b",
+ "phien_ban_cau_lenh": "cum-zh_vi-v4b-2026-10-25",
+ "huong": "zh_vi",
+ "loai": "cum_zv",
+ "bat_dau": "2026-10-26 12:26:32",
+ "tong": 1733,
+ "da_co_truoc": 0,
+ "chi_mau_thu": false,
+ "tham_so": {
+  "temperature": 0.0,
+  "repetition_penalty": 1.0,
+  "max_tokens": "min(tran, 512 + 2*ky_tu_nhap + 4*ky_tu_trung_can + 40*so_truong)",
+  "hoi_lai": 1
+ },
+ "backend": "vllm",
+ "repo": "Qwen/Qwen3-14B-AWQ",
+ "sha_repo": "31c69efc29464b6bb0aee1398b5a7b50a99340c3",
+ "loi_vllm": null,
+ "phien_ban": {
+  "vllm": "0.32.0",
+  "tensor_parallel": 1,
+  "enforce_eager": false,
+  "quantization": "tu_nhan"
+ },
+ "rpm": 0,
+ "toi_da_yeu_cau": 0,
+ "ngan_sach_usd": 0.0,
+ "dem": {
+  "xong": 1733,
+  "loi_cau_truc": 15,
+  "con_sot_han": 133,
+  "hoi_lai": 352,
+  "sua_duoc": 224,
+  "loi_api": 0
+ },
+ "toc_do_cum_giay": 1.58,
+ "ket_thuc": "2026-10-26 12:48:57",
+ "dung_vi_het_gio": false,
+ "con_lai": 0,
+ "giay": 1345
+}

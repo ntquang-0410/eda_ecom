@@ -1,0 +1,460 @@
+{
+ "_note": "Provenance card of the build that produced description_pairs_zh_vi.parquet. Keys are Vietnamese; see README.md, section 'Provenance file'. API key names and Kaggle paths were removed before publishing.",
+ "buoc": "hoan_tat (5, 6b, 7)",
+ "ngay_chay": "2026-10-22 21:26:31",
+ "nguong": {
+  "tau": 60.0,
+  "kappa": 0.5,
+  "kappa_ngan": 0.35,
+  "delta": 0.25,
+  "uu_tien": "A",
+  "chi_doi_khi_truot": true,
+  "do_dai_ngan": 6,
+  "do_dai_zh_ngan": 8,
+  "ghi_chu": "tạm; chọn từ phân bố điểm, không có nhãn đúng sai. delta là chênh điểm CometKiwi để bỏ mô hình ưu tiên (từ 15/10/2026). Luật lap_tu từ 21/10/2026: phép tỉ lệ từ không trùng bỏ qua danh sách có số mục khớp nguồn"
+ },
+ "khoang_do_dai_viet_tren_trung": {
+  "0": [
+   1.0,
+   35.414999999999054
+  ],
+  "1": [
+   1.0,
+   9.0
+  ],
+  "2": [
+   1.1666666666666667,
+   7.738131313131321
+  ],
+  "3": [
+   1.1428571428571428,
+   5.530607843137256
+  ],
+  "4": [
+   1.0151515151515151,
+   4.616750622200092
+  ]
+ },
+ "mo_hinh": {
+  "A": "api_tuy_chon",
+  "B": "qwen3_14b"
+ },
+ "jin_tu_doi": {
+  "ghi_chu": "bước 5a: bản Việt giữ số 斤 mà viết 'cân' được đổi ra kg (chia đôi) khi chắc chắn; số đơn vị đã đổi",
+  "A": 211,
+  "B": 347
+ },
+ "co_dinh": {
+  "ghi_chu": "bước 6c, anh duyệt 21/10/2026: tên trong P6 (mục anh đã duyệt) dùng bản từ điển; giá trị trong bảng co_khong dùng bảng, không có thì giá trị trong P7 đã duyệt dùng P7; độ tin cậy cao. Thương hiệu trong ten_hang_vo_nghia bị cất riêng",
+  "ten_hang_vo_nghia": [
+   "是"
+  ],
+  "tu_dien_ten": {
+   "file": "P6_ten_thuoc_tinh_editted.csv",
+   "sha256": "5ecc3a0b95f1cf9df7025f90494caf240bc98f8d46667c3f6ee3e2c90b3c6407",
+   "so_muc_da_duyet": 119
+  },
+  "tu_dien_ten_bo_sung": {
+   "file": "P6b_ten_thuoc_tinh_bo_sung_editted.csv",
+   "sha256": "29a7090b6dcacc5ed7931fc623f39b4bd60f11f4c61aa3852c8779029c3df617",
+   "so_muc_da_duyet": 7
+  },
+  "tu_dien_gia_tri": {
+   "file": "P7_gia_tri_editted.csv",
+   "sha256": "1269c9456acaca1ae3eb76ccfea6122dd9fef88db12d1d27f5b7e19aa201f955",
+   "so_muc_da_duyet": 280
+  },
+  "co_khong": {
+   "是": "Có",
+   "否": "Không",
+   "有": "Có",
+   "无": "Không có",
+   "没有": "Không có",
+   "支持": "Hỗ trợ",
+   "不支持": "Không hỗ trợ"
+  },
+  "don_vi": {
+   "quy_tac_co_khong": {
+    "don_vi": 385,
+    "cap": 55154
+   },
+   "quy_tac_diem_anh": {
+    "don_vi": 14,
+    "cap": 153
+   },
+   "quy_tac_khoang": {
+    "don_vi": 80,
+    "cap": 2566
+   },
+   "tu_dien_p6": {
+    "don_vi": 119,
+    "cap": 167686
+   },
+   "tu_dien_p6b": {
+    "don_vi": 7,
+    "cap": 1306
+   },
+   "tu_dien_p7": {
+    "don_vi": 628,
+    "cap": 48881
+   }
+  }
+ },
+ "chuan_bi": {
+  "buoc": "chuan_bi (1-3)",
+  "ngay_chay": "2026-10-15 16:58:07",
+  "file_cap": "data/cleaned/1688/bilingual_zh_vi_desc_pairs.parquet",
+  "sha256_file_cap": "48F11FF3C7661BF17791AE286001C82C8C7B8420518D6FD5CCA841CF49A0D447",
+  "so_cap": 405275,
+  "ma_loai_ban_dau": {
+   "T2_CHUA_KIEM": 36184,
+   "DS07": 2762,
+   "DS09_dai": 74,
+   "RONG": 1369,
+   "DS10": 554,
+   "DS17": 110,
+   "DS03": 62,
+   "DS25": 2,
+   "DS18": 3
+  },
+  "trang_thai_vao": {
+   "dung": 403830,
+   "van_loai": 1371,
+   "cho_xem": 74
+  },
+  "dinh_tuyen_cap_dung": {
+   "mo_hinh": 338273,
+   "chep_nguyen": 49128,
+   "ten_hang": 13878,
+   "ma_that": 2479,
+   "ngay": 72
+  },
+  "don_vi": {
+   "ten": 1980,
+   "gia_tri": 41707,
+   "ky_tu_trung_gia_tri": 2387310
+  },
+  "khop_voi_ban_v1_phan_quy_tac": {
+   "ma_that": 1.0,
+   "ten_hang": 1.0
+  },
+  "giay_to_kem": [
+   "don_vi_can_dich.parquet",
+   "dich.py",
+   "cham_kiwi.py",
+   "cau_hinh_kaggle.json"
+  ]
+ },
+ "kaggle": {
+  "the_api_tuy_chon_phien_1": {
+   "mo_hinh": "api_tuy_chon",
+   "phien_ban_cau_lenh": "v2-2026-10-10",
+   "bat_dau": "2026-10-16 00:34:49",
+   "tong": 43687,
+   "da_co_truoc": 0,
+   "thu": 0,
+   "tham_so": {
+    "temperature": 0.0,
+    "repetition_penalty": 1.0,
+    "max_tokens": "min(8192, 3*len+64+2048)",
+    "max_model_len": 12288,
+    "hoi_lai_khi_sot_han": 1
+   },
+   "ngan_sach_usd": 2.0,
+   "toi_da_yeu_cau": 15000,
+   "rpm": 20,
+   "backend": "api",
+   "repo": "gemma-4-26b-a4b-it",
+   "sha_repo": "api (không có mã phiên bản; ghi ngày gọi ở bat_dau)",
+   "loi_vllm": null,
+   "phien_ban": {
+    "api": "gemma-4-26b-a4b-it",
+    "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+    "song_song": 20,
+    "nhan_theo_luong": true,
+    "giay_cho": 300,
+    "extra_body": {
+     "reasoning_effort": "minimal"
+    }
+   },
+   "gpu": "khong_co",
+   "gop": {
+    "yeu_cau_gop": 1956,
+    "don_vi_gop": 38500,
+    "yeu_cau_gop_loi_api": 53,
+    "don_vi_di_rieng": 0,
+    "don_vi_roi_ve_rieng": 10
+   },
+   "da_dich_phien_nay": 37815,
+   "toc_do_don_vi_giay": 10.439,
+   "hoi_lai_vi_sot_han": 271,
+   "hoi_lai_sua_duoc": 199,
+   "api": {
+    "yeu_cau": 2183,
+    "thu_lai": 145,
+    "loi_api": 2,
+    "loi_trong_noi_dung": 0,
+    "het_gio": 0,
+    "het_ngan_sach": 57,
+    "het_toi_da_goi": 0,
+    "het_quota_ngay": 0,
+    "token_vao": 2414571,
+    "token_ra": 1125233,
+    "token_suy_luan": 0,
+    "giay_cac_lan_goi": 25189.154791116714,
+    "chi_phi_uoc_usd": 2.07465,
+    "model_tra_ve": [
+     "gemma-4-26b-a4b-it"
+    ],
+    "so_khoa": 5,
+    "loi_cuoi": "HTTP 0: luồng kết thúc không có finish_reason (bị cắt giữa chừng)",
+    "tra_loi_rong": 0,
+    "luong_bi_cat": 25
+   },
+   "dung_vi_het_ngan_sach": true,
+   "ket_thuc": "2026-10-16 01:35:17",
+   "dung_vi_het_gio": false,
+   "con_lai": 5872,
+   "giay": 3629
+  },
+  "the_api_tuy_chon_phien_2": {
+   "mo_hinh": "api_tuy_chon",
+   "phien_ban_cau_lenh": "v2-2026-10-10",
+   "bat_dau": "2026-10-16 02:58:26",
+   "tong": 43687,
+   "da_co_truoc": 37815,
+   "thu": 0,
+   "tham_so": {
+    "temperature": 0.0,
+    "repetition_penalty": 1.0,
+    "max_tokens": "min(8192, 3*len+64+2048)",
+    "max_model_len": 12288,
+    "hoi_lai_khi_sot_han": 1
+   },
+   "ngan_sach_usd": 8.0,
+   "toi_da_yeu_cau": 15000,
+   "rpm": 20,
+   "backend": "api",
+   "repo": "gemma-4-26b-a4b-it",
+   "sha_repo": "api (không có mã phiên bản; ghi ngày gọi ở bat_dau)",
+   "loi_vllm": null,
+   "phien_ban": {
+    "api": "gemma-4-26b-a4b-it",
+    "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+    "song_song": 20,
+    "nhan_theo_luong": true,
+    "giay_cho": 300,
+    "extra_body": {
+     "reasoning_effort": "minimal"
+    }
+   },
+   "gpu": "khong_co",
+   "gop": {
+    "yeu_cau_gop": 546,
+    "don_vi_gop": 5415,
+    "yeu_cau_gop_loi_api": 1,
+    "don_vi_di_rieng": 457,
+    "don_vi_roi_ve_rieng": 21
+   },
+   "da_dich_phien_nay": 5847,
+   "toc_do_don_vi_giay": 1.155,
+   "hoi_lai_vi_sot_han": 118,
+   "hoi_lai_sua_duoc": 59,
+   "api": {
+    "yeu_cau": 1141,
+    "thu_lai": 364,
+    "loi_api": 6,
+    "loi_trong_noi_dung": 0,
+    "het_gio": 0,
+    "het_ngan_sach": 0,
+    "het_toi_da_goi": 0,
+    "het_quota_ngay": 0,
+    "token_vao": 1812839,
+    "token_ra": 1623723,
+    "token_suy_luan": 0,
+    "giay_cac_lan_goi": 34792.10961031914,
+    "chi_phi_uoc_usd": 2.49232,
+    "model_tra_ve": [
+     "gemma-4-26b-a4b-it"
+    ],
+    "so_khoa": 5,
+    "luong_bi_cat": 142,
+    "loi_cuoi": "HTTP 0: luồng kết thúc không có finish_reason (bị cắt giữa chừng)",
+    "tra_loi_rong": 0
+   },
+   "ket_thuc": "2026-10-16 04:22:52",
+   "dung_vi_het_gio": false,
+   "con_lai": 25,
+   "giay": 5067
+  },
+  "the_kaggle_cham_kiwi_a": {
+   "che_do": "that",
+   "gpu": 2,
+   "ngay": "2026-10-16 06:49:06",
+   "api_tuy_chon": {
+    "da_dich": 43662,
+    "da_cham": 43662,
+    "the": {},
+    "uoc_ca_bo": "chưa đo được"
+   },
+   "hy_mt15_7b": "removed: HY-MT1.5-7B was an earlier model-B candidate; none of its output is in this release"
+  },
+  "the_kaggle_qwen3_14b": {
+   "che_do": "that",
+   "gpu": 2,
+   "ngay": "2026-10-21 13:53:48",
+   "api_tuy_chon": {
+    "da_dich": 0,
+    "da_cham": 0,
+    "the": {},
+    "uoc_ca_bo": "chưa đo được"
+   },
+   "qwen3_14b": {
+    "da_dich": 43687,
+    "da_cham": 43687,
+    "the": {
+     "mo_hinh": "qwen3_14b",
+     "phien_ban_cau_lenh": "v2-2026-10-10",
+     "bat_dau": "2026-10-21 09:25:27",
+     "tong": 43687,
+     "da_co_truoc": 0,
+     "thu": 0,
+     "tham_so": {
+      "temperature": 0.0,
+      "repetition_penalty": 1.0,
+      "max_tokens": "min(4096, 3*len+64)",
+      "max_model_len": 12288,
+      "hoi_lai_khi_sot_han": 1
+     },
+     "backend": "vllm",
+     "repo": "Qwen/Qwen3-14B-AWQ",
+     "sha_repo": "31c69efc29464b6bb0aee1398b5a7b50a99340c3",
+     "loi_vllm": null,
+     "phien_ban": {
+      "vllm": "0.32.0",
+      "tensor_parallel": 2,
+      "enforce_eager": false,
+      "quantization": "tu_nhan"
+     },
+     "gpu": "Tesla T4",
+     "da_dich_phien_nay": 43687,
+     "toc_do_don_vi_giay": 2.96,
+     "hoi_lai_vi_sot_han": 3343,
+     "hoi_lai_sua_duoc": 1684,
+     "ket_thuc": "2026-10-21 13:35:24",
+     "dung_vi_het_gio": false,
+     "con_lai": 0,
+     "giay": 14998
+    },
+    "uoc_ca_bo": "4.1 giờ cho cả 43,687 đơn vị"
+   }
+  },
+  "the_kiwi_api_tuy_chon": {
+   "mo_hinh_cham": "Unbabel/wmt22-cometkiwi-da",
+   "ban_dich_cua": "api_tuy_chon",
+   "bat_dau": "2026-10-16 06:31:07",
+   "can_cham": 43662,
+   "da_co_truoc": 0,
+   "da_cham_phien_nay": 43662,
+   "ket_thuc": "2026-10-16 06:45:34",
+   "giay": 868
+  },
+  "the_kiwi_qwen3_14b": {
+   "mo_hinh_cham": "Unbabel/wmt22-cometkiwi-da",
+   "ban_dich_cua": "qwen3_14b",
+   "bat_dau": "2026-10-21 13:37:50",
+   "can_cham": 43687,
+   "da_co_truoc": 0,
+   "da_cham_phien_nay": 43687,
+   "ket_thuc": "2026-10-21 13:53:13",
+   "giay": 925
+  },
+  "the_qwen3_14b": {
+   "mo_hinh": "qwen3_14b",
+   "phien_ban_cau_lenh": "v2-2026-10-10",
+   "bat_dau": "2026-10-21 09:25:27",
+   "tong": 43687,
+   "da_co_truoc": 0,
+   "thu": 0,
+   "tham_so": {
+    "temperature": 0.0,
+    "repetition_penalty": 1.0,
+    "max_tokens": "min(4096, 3*len+64)",
+    "max_model_len": 12288,
+    "hoi_lai_khi_sot_han": 1
+   },
+   "backend": "vllm",
+   "repo": "Qwen/Qwen3-14B-AWQ",
+   "sha_repo": "31c69efc29464b6bb0aee1398b5a7b50a99340c3",
+   "loi_vllm": null,
+   "phien_ban": {
+    "vllm": "0.32.0",
+    "tensor_parallel": 2,
+    "enforce_eager": false,
+    "quantization": "tu_nhan"
+   },
+   "gpu": "Tesla T4",
+   "da_dich_phien_nay": 43687,
+   "toc_do_don_vi_giay": 2.96,
+   "hoi_lai_vi_sot_han": 3343,
+   "hoi_lai_sua_duoc": 1684,
+   "ket_thuc": "2026-10-21 13:35:24",
+   "dung_vi_het_gio": false,
+   "con_lai": 0,
+   "giay": 14998
+  }
+ },
+ "don_vi": {
+  "tong": 43687,
+  "giu": 37907,
+  "cach_chon": {
+   "khac_chu_cung_nghia_A": 14937,
+   "gan_giong_A": 10866,
+   "giong_het": 6917,
+   "chi_A": 2024,
+   "uu_tien_duoi_san_A": 1258,
+   "chi_B": 672,
+   "tu_dien_p7": 628,
+   "quy_tac_co_khong": 385,
+   "tu_dien_p6": 119,
+   "quy_tac_khoang": 80,
+   "quy_tac_diem_anh": 14,
+   "tu_dien_p6b": 7
+  },
+  "ly_do_cat": {
+   "khac_nhieu_diem_khong_du": 3277,
+   "gan_giong_diem_thap": 1053,
+   "mot_ban_qua_luat_diem_thap": 951,
+   "ca_hai_truot": 499
+  }
+ },
+ "cap": {
+  "giu": 394662,
+  "cat_rieng": 10613,
+  "do_tin_cay": {
+   "cao": 188708,
+   "vua": 187755,
+   "thap": 18199
+  },
+  "cach_chon": {
+   "giong_het": 90157,
+   "khac_chu_cung_nghia_A": 86082,
+   "quy_tac_co_khong": 55154,
+   "quy_tac_chep_nguyen": 49125,
+   "tu_dien_p7": 48881,
+   "gan_giong_A": 31541,
+   "quy_tac_ten_hang": 13872,
+   "chi_B": 5451,
+   "uu_tien_duoi_san_A": 4937,
+   "chi_A": 4192,
+   "quy_tac_khoang": 2566,
+   "quy_tac_ma_that": 2479,
+   "quy_tac_diem_anh": 153,
+   "quy_tac_ngay": 72
+  }
+ },
+ "file": {
+  "published": "description_pairs_zh_vi.parquet",
+  "build_tag": "20261022_2126"
+ }
+}

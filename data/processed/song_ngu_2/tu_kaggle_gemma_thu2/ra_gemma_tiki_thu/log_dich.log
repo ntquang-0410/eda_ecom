@@ -1,0 +1,28 @@
+02:19:29 api_tuy_chon: tổng 200 đơn vị, đã có 0, còn 200
+02:19:29 Thử kết nối API: mô hình gemma-4-26b-a4b-it | khoá chỉ gửi tới generativelanguage.googleapis.com | giá ước {'vao_miss': 0.3, 'vao_hit': 0.3, 'ra': 1.2}
+02:19:32 Gọi thử: {"extra": {"reasoning_effort": "minimal"}, "giay": 2.9, "tra_loi": "", "ky_tu_suy_luan": 0, "loi": "HTTP 500: [{\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"Internal error encountered.\",\n    \"status\": \"INTERNAL\"\n  }\n}\n]"}
+02:19:34 Gọi thử: {"extra": {"reasoning_effort": "minimal"}, "giay": 2.1, "tra_loi": "**你好** (Nǐ hǎo) dịch sang tiếng Việt là:", "ky_tu_suy_luan": 0}
+02:19:37 Gọi thử khoá GEMINI_API_KEY_aoCw: 2.1 giây | '**你好** (Nǐ hǎo) dịch sang tiến'
+02:19:37 Gọi thử khoá GEMINI_API_KEY_rsqw: 2.9 giây | lỗi HTTP 500: [{
+  "error": {
+    "code": 500,
+    "message": "Internal error encountered.",
+    "status": "INTERNAL"
+  }
+}
+
+02:19:37 Gọi thử khoá GEMINI_API_KEY_XIBA: 1.9 giây | '**你好** (Nǐ hǎo) dịch sang tiến'
+02:19:37 Gọi thử khoá GEMINI_API_KEY_XY2w: 3.0 giây | lỗi HTTP 500: [{
+  "error": {
+    "code": 500,
+    "message": "Internal error encountered.",
+    "status": "INTERNAL"
+  }
+}
+
+02:19:37 Khoá dùng được: 5/5
+02:19:37 Kết quả gọi thử: chọn {"reasoning_effort": "minimal"}: '**你好** (Nǐ hǎo) dịch sang tiếng Việt là:' sau 2.1 giây
+02:19:42 Nạp xong sau 13 giây; backend api
+02:19:54 api_tuy_chon: xong 100/200 (8.00 đơn vị/giây; còn khoảng 0.0 giờ) | sót chữ Hán hỏi lại 1, sửa được 1 | trung bình 4.9 giây mỗi lần gọi | chi phí ước 0.0034 USD / ngân sách 8.0
+02:20:34 api_tuy_chon: xong 200/200 (3.83 đơn vị/giây; còn khoảng 0.0 giờ) | sót chữ Hán hỏi lại 1, sửa được 0 | trung bình 6.5 giây mỗi lần gọi | chi phí ước 0.0107 USD / ngân sách 8.0
+02:20:34 Kết thúc api_tuy_chon | còn lại 0

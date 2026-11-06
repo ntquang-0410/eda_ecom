@@ -1,0 +1,29 @@
+04:20:57 kiwi api_tuy_chon: cần chấm 13,518 (đã có 0)
+/tmp/env_kiwi/lib/python3.11/site-packages/torchmetrics/utilities/imports.py:23: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound, get_distribution
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:00<00:00,  4.04it/s]Fetching 5 files: 100%|██████████| 5/5 [00:05<00:00,  1.16s/it]Fetching 5 files: 100%|██████████| 5/5 [00:05<00:00,  1.16s/it]
+Lightning automatically upgraded your loaded checkpoint from v1.8.2 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../tmp/hf_cache/hub/models--Unbabel--wmt22-cometkiwi-da/snapshots/1ad785194e391eebc6c53e2d0776cada8f83179a/checkpoints/model.ckpt`
+Encoder model frozen.
+/tmp/env_kiwi/lib/python3.11/site-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/tmp/env_kiwi/lib/python3.11/site-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+04:21:55 kiwi api_tuy_chon: 5,000/13,518
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/tmp/env_kiwi/lib/python3.11/site-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+04:23:05 kiwi api_tuy_chon: 10,000/13,518
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/tmp/env_kiwi/lib/python3.11/site-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+[W1023 04:24:52.171325655 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 536870912 bytes (free: 149749760, total: 15636037632).
+04:25:30 kiwi api_tuy_chon: 13,518/13,518

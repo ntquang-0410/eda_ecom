@@ -1,0 +1,23 @@
+{
+ "buoc": "song_ngu_3.chuan_bi_v2",
+ "ngay_chay": "2026-10-23 20:34:22",
+ "sha256_bang_cap": "78b5a1249c05584d7a6045b07436a25bd4463d2915a8a61633065d3ca6006be5",
+ "bo_2": "bo_song_ngu_2_day_du_20261023_1656.parquet",
+ "cap": 87139,
+ "cum": 13208,
+ "san_pham": 13187,
+ "ten_khoa": 85803,
+ "ten_nhap": 1335,
+ "ten_dich_moi": 1,
+ "gia_tri_khoa": 72850,
+ "gia_tri_nhap": 14206,
+ "gia_tri_dich_moi": 83,
+ "gia_tri_khoa_doi_gr": 284,
+ "san_pham_khong_co_tieu_de": 0,
+ "mau_thu": {
+  "san_pham": 200,
+  "cum": 201,
+  "cap": 1365,
+  "truong_can_xuat": 256
+ }
+}

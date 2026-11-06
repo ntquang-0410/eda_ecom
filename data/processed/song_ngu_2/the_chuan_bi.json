@@ -1,0 +1,42 @@
+{
+ "buoc": "song_ngu_2.chuan_bi (1-3)",
+ "ngay_chay": "2026-10-23 09:15:06",
+ "file_nguon": "tiki_eda.parquet",
+ "sha256_file_nguon": "7af2a2620b8ca2def3b80762cb8f99196bfe7c64baeaeaa8b99d974df570d3bd",
+ "so_san_pham": 13200,
+ "so_cap": 89300,
+ "so_cap_goc_truoc_lam_sach": 89325,
+ "dau_ngan_gia_tri": ", ",
+ "split_nguon_san_pham": {
+  "train": 10566,
+  "test": 1328,
+  "dev": 1306
+ },
+ "trang_thai_vao": {
+  "dung": 87267,
+  "van_loai": 2033
+ },
+ "ly_do_van_loai": {
+  "to_chuc": 1952,
+  "lien_he": 81
+ },
+ "dinh_tuyen_cap_dung": {
+  "mo_hinh": 66152,
+  "ten_hang": 13126,
+  "do_luong": 4418,
+  "chep_nguyen": 2125,
+  "ma_model": 1307,
+  "co_chu": 139
+ },
+ "don_vi": {
+  "ten": 830,
+  "gia_tri": 12688,
+  "ky_tu_viet_gia_tri": 1040898
+ },
+ "giay_to_kem": [
+  "don_vi_can_dich.parquet",
+  "dich.py",
+  "cham_kiwi.py",
+  "cau_hinh_kaggle.json"
+ ]
+}

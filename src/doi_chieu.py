@@ -114,6 +114,23 @@ def kiem_jin(z, v):
     return "da_sua", v
 
 
+# Bản Việt giữ số 斤 và viết đơn vị "cân" (hoặc "jin", "斤"): người Việt hiểu "cân" là kg nên sai gấp đôi (thêm 22/10/2026, bộ song ngữ 1).
+CAN_VI = re.compile(rf"({_SO}(?:{_NOI_VI}{_SO})?)\s*(?:cân|jin|斤)(?![a-zà-ỹ])", re.I)
+
+
+def doi_can(z, v):
+    """Đổi "N cân" của bản Việt thành "N/2 kg" khi chắc chắn. Trả bản đã đổi, hoặc None nếu không đổi được hoặc không cần đổi.
+    Chỉ đổi khi: câu Trung có 斤 làm đơn vị, KHÔNG có giá tính theo 斤 (đổi giá sai thì sai tiền), và sau khi viết lại đơn vị thành kg
+    thì kiem_jin xác nhận các số khớp một đối một với số 斤 và cần chia đôi (da_sua). Không còn chữ "cân" nào sau khi đổi."""
+    if "斤" not in z or not CAN_VI.search(v) or GIA_JIN.search(z):
+        return None
+    v2 = CAN_VI.sub(lambda m: f"{m.group(1)} kg", v)
+    tt, v3 = kiem_jin(z, v2)
+    if tt != "da_sua" or CAN_VI.search(v3):
+        return None
+    return v3
+
+
 # ---------------------------------------------------------------- cảnh báo đơn vị (chỉ gắn cờ)
 _NUM_VI = r"\d+(?:[.,]\d+)?"
 CUN_ZH = re.compile(rf"({_SO})\s*寸")

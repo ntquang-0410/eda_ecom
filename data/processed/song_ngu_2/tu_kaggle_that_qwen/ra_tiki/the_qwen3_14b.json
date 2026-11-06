@@ -1,0 +1,35 @@
+{
+ "mo_hinh": "qwen3_14b",
+ "phien_ban_cau_lenh": "vi_zh-v1-2026-10-22",
+ "huong": "vi_zh",
+ "bat_dau": "2026-10-23 03:52:32",
+ "tong": 13518,
+ "da_co_truoc": 0,
+ "thu": 0,
+ "tham_so": {
+  "temperature": 0.0,
+  "repetition_penalty": 1.0,
+  "max_tokens": "min(4096, 3*len+64)",
+  "max_model_len": 12288,
+  "hoi_lai_khi_sot_han": 1
+ },
+ "backend": "vllm",
+ "repo": "Qwen/Qwen3-14B-AWQ",
+ "sha_repo": "31c69efc29464b6bb0aee1398b5a7b50a99340c3",
+ "loi_vllm": null,
+ "phien_ban": {
+  "vllm": "0.32.0",
+  "tensor_parallel": 2,
+  "enforce_eager": false,
+  "quantization": "tu_nhan"
+ },
+ "gpu": "Tesla T4",
+ "da_dich_phien_nay": 13518,
+ "toc_do_don_vi_giay": 9.715,
+ "hoi_lai_vi_sot_han": 128,
+ "hoi_lai_sua_duoc": 70,
+ "ket_thuc": "2026-10-23 04:19:41",
+ "dung_vi_het_gio": false,
+ "con_lai": 0,
+ "giay": 1629
+}

@@ -1,0 +1,85 @@
+01:32:48 api_tuy_chon: tổng 13,208 cụm, đã có 0, còn 13,208 | câu lệnh v2
+01:32:48 Thử kết nối API: mô hình gemma-4-26b-a4b-it | khoá chỉ gửi tới generativelanguage.googleapis.com | giá ước {'vao_miss': 0.3, 'vao_hit': 0.3, 'ra': 1.2}
+01:32:49 Gọi thử: {"extra": {"reasoning_effort": "minimal"}, "giay": 0.9, "tra_loi": "**你好** (Nǐ hǎo) dịch sang tiếng Việt là:", "ky_tu_suy_luan": 0}
+01:32:50 Gọi thử khoá GEMINI_API_KEY_eVYg: 1.2 giây | '**你好** (Nǐ hǎo) dịch sang tiến'
+01:32:50 Gọi thử khoá GEMINI_API_KEY_rsqw: 0.4 giây | lỗi HTTP 500: [{
+  "error": {
+    "code": 500,
+    "message": "Internal error encountered.",
+    "status": "INTERNAL"
+  }
+}
+
+01:32:50 Gọi thử khoá GEMINI_API_KEY_XIBA: 0.9 giây | '**你好** (Nǐ hǎo) dịch sang tiến'
+01:32:50 Gọi thử khoá GEMINI_API_KEY_XY2w: 1.2 giây | '**你好** (Nǐ hǎo) dịch sang tiến'
+01:32:50 Khoá dùng được: 5/5
+01:32:50 Kết quả gọi thử: chọn {"reasoning_effort": "minimal"}: '**你好** (Nǐ hǎo) dịch sang tiếng Việt là:' sau 0.9 giây
+01:32:50 Nạp xong sau 4 giây; backend api
+01:33:06 api_tuy_chon: xong 200/13,208 cụm (12.13 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:33:20 api_tuy_chon: xong 400/13,208 cụm (13.24 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:34:03 api_tuy_chon: xong 600/13,208 cụm (8.15 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:35:03 api_tuy_chon: xong 800/13,208 cụm (5.99 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:35:29 api_tuy_chon: xong 1,000/13,208 cụm (6.27 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:35:46 api_tuy_chon: xong 1,200/13,208 cụm (6.82 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:36:15 api_tuy_chon: xong 1,400/13,208 cụm (6.81 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:36:32 api_tuy_chon: xong 1,600/13,208 cụm (7.20 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:37:40 api_tuy_chon: xong 1,800/13,208 cụm (6.19 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:38:46 api_tuy_chon: xong 2,000/13,208 cụm (5.61 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:39:17 api_tuy_chon: xong 2,200/13,208 cụm (5.68 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:41:41 api_tuy_chon: xong 2,400/13,208 cụm (4.51 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:46:53 api_tuy_chon: xong 2,600/13,208 cụm (3.08 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:48:17 api_tuy_chon: xong 2,800/13,208 cụm (3.02 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:51:20 api_tuy_chon: xong 3,000/13,208 cụm (2.70 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+01:53:16 api_tuy_chon: xong 3,200/13,208 cụm (2.61 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 0, sửa được 0 | lỗi API 0
+02:01:21 api_tuy_chon: xong 3,400/13,208 cụm (1.99 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 2, sửa được 2 | lỗi API 0
+02:03:00 api_tuy_chon: xong 3,600/13,208 cụm (1.99 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 2, sửa được 2 | lỗi API 0
+02:09:47 api_tuy_chon: xong 3,800/13,208 cụm (1.71 cụm/giây) | sai cấu trúc 0 | còn sót Việt 1 | hỏi lại 4, sửa được 3 | lỗi API 0
+02:12:23 api_tuy_chon: xong 4,000/13,208 cụm (1.69 cụm/giây) | sai cấu trúc 0 | còn sót Việt 1 | hỏi lại 6, sửa được 5 | lỗi API 0
+02:15:10 api_tuy_chon: xong 4,200/13,208 cụm (1.65 cụm/giây) | sai cấu trúc 0 | còn sót Việt 1 | hỏi lại 6, sửa được 5 | lỗi API 0
+02:17:29 api_tuy_chon: xong 4,400/13,208 cụm (1.64 cụm/giây) | sai cấu trúc 0 | còn sót Việt 2 | hỏi lại 7, sửa được 5 | lỗi API 0
+02:20:48 api_tuy_chon: xong 4,600/13,208 cụm (1.60 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 8, sửa được 5 | lỗi API 0
+02:24:57 api_tuy_chon: xong 4,800/13,208 cụm (1.53 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 9, sửa được 6 | lỗi API 0
+02:27:37 api_tuy_chon: xong 5,000/13,208 cụm (1.52 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 9, sửa được 6 | lỗi API 0
+02:29:45 api_tuy_chon: xong 5,200/13,208 cụm (1.52 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 9, sửa được 6 | lỗi API 0
+02:30:32 api_tuy_chon: xong 5,400/13,208 cụm (1.56 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 9, sửa được 6 | lỗi API 0
+02:34:51 api_tuy_chon: xong 5,600/13,208 cụm (1.50 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 9, sửa được 6 | lỗi API 0
+02:38:01 api_tuy_chon: xong 5,800/13,208 cụm (1.48 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 9, sửa được 6 | lỗi API 0
+02:40:54 api_tuy_chon: xong 6,000/13,208 cụm (1.47 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 9, sửa được 6 | lỗi API 0
+02:45:05 api_tuy_chon: xong 6,200/13,208 cụm (1.43 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 9, sửa được 6 | lỗi API 0
+02:50:47 api_tuy_chon: xong 6,400/13,208 cụm (1.37 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 9, sửa được 6 | lỗi API 0
+02:56:27 api_tuy_chon: xong 6,600/13,208 cụm (1.32 cụm/giây) | sai cấu trúc 0 | còn sót Việt 3 | hỏi lại 9, sửa được 6 | lỗi API 0
+03:01:55 api_tuy_chon: xong 6,800/13,208 cụm (1.27 cụm/giây) | sai cấu trúc 0 | còn sót Việt 4 | hỏi lại 10, sửa được 6 | lỗi API 0
+03:07:21 api_tuy_chon: xong 7,000/13,208 cụm (1.23 cụm/giây) | sai cấu trúc 0 | còn sót Việt 4 | hỏi lại 10, sửa được 6 | lỗi API 0
+03:14:36 api_tuy_chon: xong 7,200/13,208 cụm (1.18 cụm/giây) | sai cấu trúc 0 | còn sót Việt 4 | hỏi lại 10, sửa được 6 | lỗi API 0
+03:22:17 api_tuy_chon: xong 7,400/13,208 cụm (1.13 cụm/giây) | sai cấu trúc 0 | còn sót Việt 4 | hỏi lại 13, sửa được 9 | lỗi API 0
+03:26:27 api_tuy_chon: xong 7,600/13,208 cụm (1.11 cụm/giây) | sai cấu trúc 0 | còn sót Việt 4 | hỏi lại 13, sửa được 9 | lỗi API 0
+03:34:16 api_tuy_chon: xong 7,800/13,208 cụm (1.07 cụm/giây) | sai cấu trúc 0 | còn sót Việt 4 | hỏi lại 13, sửa được 9 | lỗi API 0
+03:40:30 api_tuy_chon: xong 8,000/13,208 cụm (1.04 cụm/giây) | sai cấu trúc 0 | còn sót Việt 5 | hỏi lại 14, sửa được 9 | lỗi API 0
+03:50:20 api_tuy_chon: xong 8,200/13,208 cụm (0.99 cụm/giây) | sai cấu trúc 0 | còn sót Việt 5 | hỏi lại 14, sửa được 9 | lỗi API 0
+03:59:06 api_tuy_chon: xong 8,400/13,208 cụm (0.96 cụm/giây) | sai cấu trúc 0 | còn sót Việt 5 | hỏi lại 14, sửa được 9 | lỗi API 0
+04:05:26 api_tuy_chon: xong 8,600/13,208 cụm (0.94 cụm/giây) | sai cấu trúc 0 | còn sót Việt 6 | hỏi lại 15, sửa được 9 | lỗi API 0
+04:12:22 api_tuy_chon: xong 8,800/13,208 cụm (0.92 cụm/giây) | sai cấu trúc 0 | còn sót Việt 6 | hỏi lại 19, sửa được 13 | lỗi API 0
+04:20:43 api_tuy_chon: xong 9,000/13,208 cụm (0.89 cụm/giây) | sai cấu trúc 0 | còn sót Việt 6 | hỏi lại 19, sửa được 13 | lỗi API 0
+04:27:15 api_tuy_chon: xong 9,200/13,208 cụm (0.88 cụm/giây) | sai cấu trúc 0 | còn sót Việt 6 | hỏi lại 22, sửa được 16 | lỗi API 0
+04:37:15 api_tuy_chon: xong 9,400/13,208 cụm (0.85 cụm/giây) | sai cấu trúc 0 | còn sót Việt 6 | hỏi lại 23, sửa được 17 | lỗi API 0
+04:43:19 api_tuy_chon: xong 9,600/13,208 cụm (0.84 cụm/giây) | sai cấu trúc 0 | còn sót Việt 6 | hỏi lại 24, sửa được 18 | lỗi API 0
+04:51:32 api_tuy_chon: xong 9,800/13,208 cụm (0.82 cụm/giây) | sai cấu trúc 0 | còn sót Việt 6 | hỏi lại 24, sửa được 18 | lỗi API 0
+05:00:10 api_tuy_chon: xong 10,000/13,208 cụm (0.80 cụm/giây) | sai cấu trúc 0 | còn sót Việt 6 | hỏi lại 24, sửa được 18 | lỗi API 0
+05:08:16 api_tuy_chon: xong 10,200/13,208 cụm (0.79 cụm/giây) | sai cấu trúc 0 | còn sót Việt 8 | hỏi lại 26, sửa được 18 | lỗi API 0
+05:18:28 api_tuy_chon: xong 10,400/13,208 cụm (0.77 cụm/giây) | sai cấu trúc 0 | còn sót Việt 8 | hỏi lại 27, sửa được 19 | lỗi API 0
+05:29:00 api_tuy_chon: xong 10,600/13,208 cụm (0.75 cụm/giây) | sai cấu trúc 0 | còn sót Việt 8 | hỏi lại 28, sửa được 20 | lỗi API 0
+05:37:07 api_tuy_chon: xong 10,800/13,208 cụm (0.74 cụm/giây) | sai cấu trúc 0 | còn sót Việt 9 | hỏi lại 29, sửa được 20 | lỗi API 0
+05:46:45 api_tuy_chon: xong 11,000/13,208 cụm (0.72 cụm/giây) | sai cấu trúc 0 | còn sót Việt 12 | hỏi lại 33, sửa được 21 | lỗi API 0
+05:55:18 api_tuy_chon: xong 11,200/13,208 cụm (0.71 cụm/giây) | sai cấu trúc 0 | còn sót Việt 12 | hỏi lại 33, sửa được 21 | lỗi API 0
+06:08:16 api_tuy_chon: xong 11,400/13,208 cụm (0.69 cụm/giây) | sai cấu trúc 0 | còn sót Việt 12 | hỏi lại 34, sửa được 22 | lỗi API 0
+06:18:47 api_tuy_chon: xong 11,600/13,208 cụm (0.68 cụm/giây) | sai cấu trúc 0 | còn sót Việt 13 | hỏi lại 36, sửa được 23 | lỗi API 0
+06:31:20 api_tuy_chon: xong 11,800/13,208 cụm (0.66 cụm/giây) | sai cấu trúc 0 | còn sót Việt 14 | hỏi lại 41, sửa được 27 | lỗi API 0
+06:40:35 api_tuy_chon: xong 12,000/13,208 cụm (0.65 cụm/giây) | sai cấu trúc 0 | còn sót Việt 14 | hỏi lại 42, sửa được 28 | lỗi API 0
+06:51:47 api_tuy_chon: xong 12,200/13,208 cụm (0.64 cụm/giây) | sai cấu trúc 1 | còn sót Việt 14 | hỏi lại 44, sửa được 29 | lỗi API 0
+07:02:24 api_tuy_chon: xong 12,400/13,208 cụm (0.63 cụm/giây) | sai cấu trúc 2 | còn sót Việt 14 | hỏi lại 47, sửa được 31 | lỗi API 0
+07:18:15 api_tuy_chon: xong 12,600/13,208 cụm (0.61 cụm/giây) | sai cấu trúc 2 | còn sót Việt 14 | hỏi lại 51, sửa được 35 | lỗi API 0
+07:31:51 api_tuy_chon: xong 12,800/13,208 cụm (0.59 cụm/giây) | sai cấu trúc 2 | còn sót Việt 16 | hỏi lại 54, sửa được 37 | lỗi API 0
+07:42:15 api_tuy_chon: xong 13,000/13,208 cụm (0.59 cụm/giây) | sai cấu trúc 2 | còn sót Việt 17 | hỏi lại 56, sửa được 38 | lỗi API 0
+08:02:41 api_tuy_chon: xong 13,200/13,208 cụm (0.56 cụm/giây) | sai cấu trúc 2 | còn sót Việt 21 | hỏi lại 62, sửa được 40 | lỗi API 0
+08:03:23 api_tuy_chon: xong 13,208/13,208 cụm (0.56 cụm/giây) | sai cấu trúc 2 | còn sót Việt 21 | hỏi lại 62, sửa được 40 | lỗi API 0
+08:03:23 Kết thúc api_tuy_chon | còn lại 0

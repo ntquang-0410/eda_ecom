@@ -1,0 +1,138 @@
+[{"stream_name":"stderr","time":8.28917625,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.28925764,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.28926575,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.289269635,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.917567073,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.917607369,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.917613749000001,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.917618338,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.93516265,"data":"Dữ liệu vào: /kaggle/input/datasets/trinhnhatanh/song-ngu-3-cum-vao | thư mục ra: /kaggle/working/ra_cum_v2_thu | đầu ra cũ: không có | số GPU: 2\n"}
+,{"stream_name":"stdout","time":11.518814015,"data":"Đã nạp 5 khoá Gemini: ['GEMINI_API_KEY_aoCw', 'GEMINI_API_KEY_eVYg', 'GEMINI_API_KEY_rsqw', 'GEMINI_API_KEY_XIBA', 'GEMINI_API_KEY_XY2w']\n"}
+,{"stream_name":"stdout","time":11.51884659,"data":"  không nạp được GEMINI_API_KEY -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140388654 and label GEMINI_API_KEY.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":11.518853734,"data":"  không nạp được GEMINI_API_KEY_2 -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140388654 and label GEMINI_API_KEY_2.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":11.518858249,"data":"  không nạp được GEMINI_API_KEY_3 -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140388654 and label GEMINI_API_KEY_3.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":11.55213114,"data":"Có kết nối tới Google (HTTP 404 ).\n"}
+,{"stream_name":"stdout","time":238.310465567,"data":"vllm 0.32.0 | torch 2.13.0+cu130 | GPU 2\r\n"}
+,{"stream_name":"stdout","time":299.464751416,"data":"[1 phút] A: }\n"}
+,{"stream_name":"stdout","time":299.464813063,"data":"[1 phút] B: (Worker_TP0 pid=252) INFO 10-23 13:43:37 [base_loader.py:82] Initializing model took 0.796777 seconds\n"}
+,{"stream_name":"stdout","time":359.467467846,"data":"[2 phút] A: 13:44:13 Nạp xong sau 82 giây; backend api\n"}
+,{"stream_name":"stdout","time":359.46765964,"data":"[2 phút] B: (Worker_TP0 pid=252) INFO 10-23 13:44:38 [monitor.py:40] [backbone] Starting torch.compile\n"}
+,{"stream_name":"stdout","time":419.47022313,"data":"[3 phút] A: 13:44:13 Nạp xong sau 82 giây; backend api\n"}
+,{"stream_name":"stdout","time":419.470323498,"data":"[3 phút] B: Capturing CUDA graphs (PIECEWISE):  14%|█▎        | 7/51 [00:04\u003c00:21,  2.07it/s]\n"}
+,{"stream_name":"stdout","time":479.471388686,"data":"[4 phút] A: 13:46:23 api_tuy_chon: xong 50/201 cụm (0.39 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":479.471425091,"data":"[4 phút] B: Capturing CUDA graphs (FULL):  23%|██▎       | 8/35 [00:02\u003c00:07,  3.85it/s]\n"}
+,{"stream_name":"stdout","time":539.47470498,"data":"[5 phút] A: 13:46:23 api_tuy_chon: xong 50/201 cụm (0.39 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":539.474758274,"data":"[5 phút] B: (Worker_TP0 pid=252) WARNING 10-23 13:47:01 [jit_monitor.py:140] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config\n"}
+,{"stream_name":"stdout","time":599.477788098,"data":"[6 phút] A: 13:46:23 api_tuy_chon: xong 50/201 cụm (0.39 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":599.477825883,"data":"[6 phút] B: (Worker_TP0 pid=252) WARNING 10-23 13:47:01 [jit_monitor.py:140] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config\n"}
+,{"stream_name":"stdout","time":659.47685535,"data":"[7 phút] A: 13:46:23 api_tuy_chon: xong 50/201 cụm (0.39 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":659.476905356,"data":"[7 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":719.478760195,"data":"[8 phút] A: 13:46:23 api_tuy_chon: xong 50/201 cụm (0.39 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":719.478834389,"data":"[8 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":779.480086702,"data":"[9 phút] A: 13:46:23 api_tuy_chon: xong 50/201 cụm (0.39 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":779.480132107,"data":"[9 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":839.480912677,"data":"[10 phút] A: 13:52:33 api_tuy_chon: xong 100/201 cụm (0.20 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":839.480967916,"data":"[10 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":899.482462317,"data":"[11 phút] A: 13:52:33 api_tuy_chon: xong 100/201 cụm (0.20 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":899.482521472,"data":"[11 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":959.483891107,"data":"[12 phút] A: 13:52:33 api_tuy_chon: xong 100/201 cụm (0.20 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":959.483955912,"data":"[12 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1019.486232708,"data":"[13 phút] A: 13:52:33 api_tuy_chon: xong 100/201 cụm (0.20 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1019.486296178,"data":"[13 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1079.486860391,"data":"[14 phút] A: 13:52:33 api_tuy_chon: xong 100/201 cụm (0.20 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1079.486917993,"data":"[14 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1139.488421229,"data":"[15 phút] A: 13:52:33 api_tuy_chon: xong 100/201 cụm (0.20 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1139.488470754,"data":"[15 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1199.489773378,"data":"[16 phút] A: 13:52:33 api_tuy_chon: xong 100/201 cụm (0.20 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1199.489833106,"data":"[16 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1259.491342293,"data":"[17 phút] A: 13:52:33 api_tuy_chon: xong 100/201 cụm (0.20 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1259.491400856,"data":"[17 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1319.49293926,"data":"[18 phút] A: 13:52:33 api_tuy_chon: xong 100/201 cụm (0.20 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1319.492997688,"data":"[18 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1379.494613469,"data":"[19 phút] A: 14:01:40 api_tuy_chon: xong 150/201 cụm (0.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1379.49467877,"data":"[19 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1439.496266382,"data":"[20 phút] A: 14:01:40 api_tuy_chon: xong 150/201 cụm (0.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1439.4963394,"data":"[20 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1499.497593734,"data":"[21 phút] A: 14:01:40 api_tuy_chon: xong 150/201 cụm (0.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1499.497650243,"data":"[21 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1559.499809176,"data":"[22 phút] A: 14:01:40 api_tuy_chon: xong 150/201 cụm (0.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1559.499874255,"data":"[22 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1619.501235276,"data":"[23 phút] A: 14:01:40 api_tuy_chon: xong 150/201 cụm (0.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1619.50132879,"data":"[23 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1679.502869693,"data":"[24 phút] A: 14:01:40 api_tuy_chon: xong 150/201 cụm (0.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1679.502922085,"data":"[24 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1739.503844054,"data":"[25 phút] A: 14:01:40 api_tuy_chon: xong 150/201 cụm (0.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1739.50389828,"data":"[25 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1799.504913133,"data":"[26 phút] A: 14:01:40 api_tuy_chon: xong 150/201 cụm (0.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1799.504981666,"data":"[26 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1859.506184076,"data":"[27 phút] A: 14:01:40 api_tuy_chon: xong 150/201 cụm (0.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1859.506256753,"data":"[27 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1919.507866849,"data":"[28 phút] A: 14:01:40 api_tuy_chon: xong 150/201 cụm (0.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1919.507910987,"data":"[28 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":1979.509721657,"data":"[29 phút] A: 14:01:40 api_tuy_chon: xong 150/201 cụm (0.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":1979.509788752,"data":"[29 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":2039.511348284,"data":"[30 phút] A: 14:01:40 api_tuy_chon: xong 150/201 cụm (0.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2039.511389973,"data":"[30 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":2099.315647522,"data":"[31 phút] A: 14:13:34 Kết thúc api_tuy_chon | còn lại 0\n"}
+,{"stream_name":"stdout","time":2099.315688973,"data":"[31 phút] B: (MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":2099.315696406,"data":"--- A: mã thoát 0, 15 dòng cuối ---\n"}
+,{"stream_name":"stdout","time":2099.315702307,"data":"  }\n"}
+,{"stream_name":"stdout","time":2099.31570746,"data":"}\n"}
+,{"stream_name":"stdout","time":2099.31572136,"data":"\n"}
+,{"stream_name":"stdout","time":2099.315726679,"data":"13:44:13 Gọi thử khoá GEMINI_API_KEY_rsqw: 79.1 giây | '**你好** (Nǐ hǎo) dịch sang tiến'\n"}
+,{"stream_name":"stdout","time":2099.315731515,"data":"13:44:13 Gọi thử khoá GEMINI_API_KEY_XIBA: 0.9 giây | '**你好** (Nǐ hǎo) dịch sang tiến'\n"}
+,{"stream_name":"stdout","time":2099.315736014,"data":"13:44:13 Gọi thử khoá GEMINI_API_KEY_XY2w: 23.4 giây | '**你好** (Nǐ hǎo) dịch sang tiến'\n"}
+,{"stream_name":"stdout","time":2099.315740733,"data":"13:44:13 Khoá dùng được: 5/5\n"}
+,{"stream_name":"stdout","time":2099.315745175,"data":"13:44:13 Kết quả gọi thử: chọn {\"reasoning_effort\": \"minimal\"}: '**你好** (Nǐ hǎo) dịch sang tiếng Việt là:' sau 0.9 giây\n"}
+,{"stream_name":"stdout","time":2099.315750556,"data":"13:44:13 Nạp xong sau 82 giây; backend api\n"}
+,{"stream_name":"stdout","time":2099.315754733,"data":"13:46:23 api_tuy_chon: xong 50/201 cụm (0.39 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2099.315759717,"data":"13:52:33 api_tuy_chon: xong 100/201 cụm (0.20 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2099.315764768,"data":"14:01:40 api_tuy_chon: xong 150/201 cụm (0.14 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 1, sửa được 1 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2099.315769312,"data":"14:12:56 api_tuy_chon: xong 200/201 cụm (0.12 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 3, sửa được 3 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2099.31577353,"data":"14:13:34 api_tuy_chon: xong 201/201 cụm (0.11 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 3, sửa được 3 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2099.315778022,"data":"14:13:34 Kết thúc api_tuy_chon | còn lại 0\n"}
+,{"stream_name":"stdout","time":2099.315782836,"data":"--- B: mã thoát 0, 15 dòng cuối ---\n"}
+,{"stream_name":"stdout","time":2099.315787528,"data":"(Worker_TP0 pid=252) WARNING 10-23 13:47:01 [jit_monitor.py:140] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":2099.315793545,"data":"13:49:33 qwen3_14b: xong 201/201 cụm (1.31 cụm/giây) | sai cấu trúc 0 | còn sót Việt 0 | hỏi lại 4, sửa được 4 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2099.315798524,"data":"13:49:33 Kết thúc qwen3_14b | còn lại 0\n"}
+,{"stream_name":"stdout","time":2099.31580461,"data":"(MainProcess pid=146) INFO 10-23 13:49:33 [utils.py:628] [shutdown] Process manager: send sigterm to process EngineCore\n"}
+,{"stream_name":"stdout","time":2099.315808887,"data":"(EngineCore pid=244) INFO 10-23 13:49:33 [core.py:1454] [shutdown] EngineCore: trigger received signal=SIGTERM\n"}
+,{"stream_name":"stdout","time":2099.315812723,"data":"(EngineCore pid=244) INFO 10-23 13:49:33 [core.py:1635] [shutdown] EngineCore: start mode=abort timeout=0s\n"}
+,{"stream_name":"stdout","time":2099.315817461,"data":"(EngineCore pid=244) INFO 10-23 13:49:33 [core.py:1666] [shutdown] EngineCore: request processing complete; starting resource teardown\n"}
+,{"stream_name":"stdout","time":2099.31582161,"data":"(EngineCore pid=244) INFO 10-23 13:49:33 [core.py:1499] [shutdown] EngineCore: exiting busy loop\n"}
+,{"stream_name":"stdout","time":2099.31582598,"data":"(EngineCore pid=244) INFO 10-23 13:49:33 [multiproc_executor.py:479] [shutdown] Executor: waiting for worker exit count=2\n"}
+,{"stream_name":"stdout","time":2099.315835397,"data":"(Worker_TP0 pid=252) INFO 10-23 13:49:33 [multiproc_executor.py:843] Parent process exited, terminating worker queues\n"}
+,{"stream_name":"stdout","time":2099.315840681,"data":"(MainProcess pid=146) WARNING 10-23 13:49:38 [utils.py:648] [shutdown] Process manager: force killing remaining processes count=1\n"}
+,{"stream_name":"stdout","time":2099.315844948,"data":"(MainProcess pid=146) WARNING 10-23 13:49:38 [utils.py:653] [shutdown] Process manager: force killing remaining process EngineCore pid 244\n"}
+,{"stream_name":"stdout","time":2099.315850238,"data":"(MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process python pid 249\n"}
+,{"stream_name":"stdout","time":2099.315854577,"data":"(MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP0 pid 252\n"}
+,{"stream_name":"stdout","time":2099.315859559,"data":"(MainProcess pid=146) WARNING 10-23 13:49:38 [system_utils.py:225] [shutdown] force killing sub process VLLM::Worker_TP1 pid 253\n"}
+,{"stream_name":"stdout","time":2101.622665702,"data":"A api_tuy_chon: 201/201 cụm | trạng thái {'ok': 201} | còn sót Việt 0 | hỏi lại 3, sửa được 3 | lý do lỗi {}\n"}
+,{"stream_name":"stdout","time":2101.622710605,"data":"   thời gian 1843 giây | tốc độ 0.114 cụm/giây | API {'yeu_cau': 131, 'thu_lai': 242, 'loi_api': 2, 'token_vao': 170298, 'token_ra': 13348}\n"}
+,{"stream_name":"stdout","time":2101.622716526,"data":"   ví dụ 279642940#0 {\"_thua\": 0}\n"}
+,{"stream_name":"stdout","time":2101.62272088,"data":"   ví dụ 279677567#0 {\"_thua\": 0}\n"}
+,{"stream_name":"stdout","time":2101.622725021,"data":"B qwen3_14b: 201/201 cụm | trạng thái {'ok': 201} | còn sót Việt 0 | hỏi lại 4, sửa được 4 | lý do lỗi {}\n"}
+,{"stream_name":"stdout","time":2101.622737201,"data":"   thời gian 402 giây | tốc độ 1.307 cụm/giây | API \n"}
+,{"stream_name":"stdout","time":2101.622741639,"data":"   ví dụ 279642940#0 {\"_thua\": 0}\n"}
+,{"stream_name":"stdout","time":2101.622763033,"data":"   ví dụ 279677567#0 {\"_thua\": 0}\n"}
+,{"stream_name":"stdout","time":2101.622768326,"data":"\n"}
+,{"stream_name":"stdout","time":2101.622772647,"data":"Các file đầu ra (tab Output):\n"}
+,{"stream_name":"stdout","time":2101.622776947,"data":"  ra_cum_v2_thu/api_tuy_chon/lo_00000.parquet  7,551 byte\n"}
+,{"stream_name":"stdout","time":2101.622781834,"data":"  ra_cum_v2_thu/api_tuy_chon/lo_00001.parquet  9,797 byte\n"}
+,{"stream_name":"stdout","time":2101.622786426,"data":"  ra_cum_v2_thu/api_tuy_chon/lo_00002.parquet  12,193 byte\n"}
+,{"stream_name":"stdout","time":2101.622790389,"data":"  ra_cum_v2_thu/api_tuy_chon/lo_00003.parquet  32,790 byte\n"}
+,{"stream_name":"stdout","time":2101.622794366,"data":"  ra_cum_v2_thu/api_tuy_chon/lo_00004.parquet  22,234 byte\n"}
+,{"stream_name":"stdout","time":2101.622798395,"data":"  ra_cum_v2_thu/log_A.log  2,212 byte\n"}
+,{"stream_name":"stdout","time":2101.622802178,"data":"  ra_cum_v2_thu/log_B.log  122,255 byte\n"}
+,{"stream_name":"stdout","time":2101.622806804,"data":"  ra_cum_v2_thu/qwen3_14b/lo_00000.parquet  38,197 byte\n"}
+,{"stream_name":"stdout","time":2101.622811642,"data":"  ra_cum_v2_thu/the_api_tuy_chon.json  2,489 byte\n"}
+,{"stream_name":"stdout","time":2101.622815551,"data":"  ra_cum_v2_thu/the_qwen3_14b.json  881 byte\n"}
+,{"stream_name":"stderr","time":2105.139817781,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2105.139879421,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2105.378912167,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2105.37894994,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2106.30578027,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":2106.406245308,"data":"[NbConvertApp] Writing 31547 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":2109.362681559,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2110.055417694,"data":"[NbConvertApp] Writing 333495 bytes to __results__.html\n"}
+]

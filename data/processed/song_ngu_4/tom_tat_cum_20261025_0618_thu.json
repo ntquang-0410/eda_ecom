@@ -1,0 +1,55 @@
+{
+ "cap_vao": 4802,
+ "cap_giu": 4797,
+ "cap_bo_khong_co_ban": 5,
+ "cum_gemma": {
+  "ok": 200
+ },
+ "nguon_ten": {
+  "giu_nhap": 2786,
+  "khoa": 1996,
+  "sua_A": 19,
+  "dich_moi_A": 1
+ },
+ "nguon_gia_tri": {
+  "giu_nhap": 2385,
+  "khoa": 2208,
+  "sua_A": 105,
+  "dich_moi_A": 96,
+  "khong_co": 5,
+  "lui_nhap": 3
+ },
+ "nguon_ban_dich": {
+  "giu_ban_dich_don_vi": 2472,
+  "tu_dien_quy_tac": 2124,
+  "gemma_sua": 105,
+  "dich_moi": 96
+ },
+ "do_tin_cay_cap": {
+  "cao": 2285,
+  "vua": 2197,
+  "thap": 315
+ },
+ "luat_truot_gia_tri_gemma": {
+  "latin_moi": 3,
+  "do_dai": 3,
+  "lech_so_muc": 1,
+  "han_sot": 1,
+  "mat_viet": 1
+ },
+ "luat_truot_ten_gemma": {},
+ "sua_khong_ly_do": 22,
+ "cum_sua_nhieu": 0,
+ "gia_tri_khac_bo_1": 201,
+ "ten_khac_bo_1": 20,
+ "san_pham": 200,
+ "san_pham_mat_cap": 5,
+ "san_pham_khong_con_cap_nao": 0,
+ "do_tin_cay_san_pham": {
+  "thap": 158,
+  "vua": 42
+ },
+ "nhan": "20261025_0618_thu",
+ "thu_muc_gemma": "data\\processed\\song_ngu_4\\tu_kaggle_thu_gemma_v3",
+ "giay": 1
+}

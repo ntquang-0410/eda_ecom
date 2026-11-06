@@ -1,0 +1,2 @@
+0177e2b233d260dc024e0abe3797e91f11ddab714557368eb46e0a7ee30e78fc  description_pairs_vi_zh.parquet
+e94dfa5b022fed793543040e374b80efe67f813dd93d447144283e142cfb72e6  provenance.json

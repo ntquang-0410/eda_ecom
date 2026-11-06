@@ -1,0 +1,1127 @@
+#1 [food] SP 1085854
+  NGỮ CẢNH: Thương hiệu: Twister; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 12 tháng; Hướng dẫn bảo quản: Bảo quản nơi khô ráo, thoáng mát; Hướng dẫn sử dụng: Dùng trực tiếp; Sản phẩm có được bảo hành không?: Không; Lưu ý: Bao bì thay đổi theo từng đợt; Xuất xứ (Made in): Việt Nam
+  >> Hướng dẫn bảo quản: Bảo quản nơi khô ráo, thoáng mát
+  Bản 1: 置于干燥、阴凉处保存
+  Bản 2: 请置于干燥、凉爽处保存
+
+#2 [auto] SP 111655014
+  NGỮ CẢNH: Thương hiệu: Promatch; Xuất xứ thương hiệu: Trung Quốc; Xuất xứ (Made in): Trung Quốc; Quy cách đóng gói: 11x14x14 cm; Model: A990052330; Chất liệu: Nhựa, thép; Hướng dẫn sử dụng: sử dụng điện 1 chiều DC trong dải điện áp từ 10-110V; Trọng lượng sản phẩm: 0.7kg; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Tem bảo hành; Thời gian bảo hành: 6 Tháng
+  >> Hướng dẫn sử dụng: sử dụng điện 1 chiều DC trong dải điện áp từ 10-110V
+  Bản 1: 使用 10-110V 电压范围内的直流电 DC
+  Bản 2: (không có ở bộ 2)
+
+#3 [auto] SP 111655014
+  NGỮ CẢNH: Thương hiệu: Promatch; Xuất xứ thương hiệu: Trung Quốc; Xuất xứ (Made in): Trung Quốc; Quy cách đóng gói: 11x14x14 cm; Model: A990052330; Chất liệu: Nhựa, thép; Hướng dẫn sử dụng: sử dụng điện 1 chiều DC trong dải điện áp từ 10-110V; Trọng lượng sản phẩm: 0.7kg; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Tem bảo hành; Thời gian bảo hành: 6 Tháng
+  >> Hình thức bảo hành: Tem bảo hành
+  Bản 1: 保修标签
+  Bản 2: 保修贴
+
+#4 [mother_baby] SP 11341362
+  NGỮ CẢNH: Thành phần: Tham khảo mô tả; Khối lượng (kg): 0.9; Thương hiệu: Vinamilk; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam
+  >> Thành phần: Tham khảo mô tả
+  Bản 1: 参考描述
+  Bản 2: 详见描述
+
+#5 [mother_baby] SP 113459561
+  NGỮ CẢNH: Thương hiệu: Toys House; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Trung Quốc; Kích thước: KÍch thước Hộp 33.5x16.5x30cm; Sản phẩm có được bảo hành không?: Không; màu sắc: màu xanh
+  >> Kích thước: KÍch thước Hộp 33.5x16.5x30cm
+  Bản 1: 盒子尺寸 33.5x16.5x30cm
+  Bản 2: 盒装尺寸 33.5x16.5x30cm
+
+#6 [beauty] SP 116114197
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Có; Thời gian bảo hành: 12 Tháng; Hình thức bảo hành: Hóa đơn; Thương hiệu: KOBI; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Ấn Độ; Hạn sử dụng: 2 năm kể từ ngày sản xuất; Dung tích: 10ml, 30ml
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票
+  Bản 2: 发票保修
+
+#7 [auto] SP 125425768
+  NGỮ CẢNH: Chất liệu: NHỰA ABS; Thương hiệu: Andes; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Model: Andes 139; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 12 Tháng; Màu sắc: Trắng Bóng, Trắng Hồng Bóng, Vàng bóng, Xanh Dương Nhám Viền Vàng, Xan
+  >> Màu sắc: Trắng Bóng, Trắng Hồng Bóng, Vàng bóng, Xanh Dương Nhám Viền Vàng, Xanh Lính Nhám, xám chuột mờ, Đen Nhám Viền Vàng, Đen bóng, Đỏ Đô Bóng, Đỏ đô nhám, đen nhám
+  Bản 1: 亮白色, 亮粉白, 亮黄色, 金边磨砂蓝色, 磨砂军绿色, 哑光鼠灰色, 金边磨砂黑色, 亮黑色, 亮酒红色, 哑光酒红色, 磨砂黑色
+  Bản 2: 亮白, 亮粉白, 亮金, 哑光蓝金边, 哑光军绿, 哑光鼠灰色, 哑光黑金边, 亮黑, 亮深红, 哑光深红, 哑光黑
+
+#8 [mother_baby] SP 126022179
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Không; Thương hiệu: YOULI; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Youlo: Dán L 42, Dán M46, Dán S 54, Quần L42, Quần M44, Quần XL40, Quần XXL36
+  >> Youlo: Dán L 42, Dán M46, Dán S 54, Quần L42, Quần M44, Quần XL40, Quần XXL36, Quần XXXL34
+  Bản 1: 纸尿裤 L 42, 纸尿裤 M 46, 纸尿裤 S 54, 拉拉裤 L 42, 拉拉裤 M 44, 拉拉裤 XL 40, 拉拉裤 XXL 36, 拉拉裤 XXXL 34
+  Bản 2: 贴身L 42, 贴身M46, 贴身S 54, 裤子L42, 裤子M44, 裤子XL40, 裤子XXL36, 裤子XXXL34
+
+#9 [beauty] SP 1313881
+  NGỮ CẢNH: Thương hiệu: Sunplay; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Việt Nam; Thành phần: Water, Ethylhexyl Methoxycinnamate, Glycerin, Dipropylene Glycol, Ison; Hạn sử dụng: 3 năm; Loại da phù hợp: Da khô, da thường
+  >> Thành phần: Water, Ethylhexyl Methoxycinnamate, Glycerin, Dipropylene Glycol, Isononyl Isononanoate, Cetyl Alcohol, Polymethylsilsesquioxane, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Glycol Dimethacrylate Crosspolymer, Camellia Sinensis (Green Tea) Leaf Extract, Ceramide NP, Sodium Acetylated Hyaluronate, Ascorbyl Tetraisopalmitate, Arginine, Sodium Hyaluronate, Propylene Glycol, Butylene Glycol, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Ethylhexyl Triazone, Polyglyceryl-10 Pentaisostearate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Polystyrene, Xanthan Gum, Polyvinyl Alcohol, Triethanolamine, Disodium EDTA, Phenoxyethanol, Fragrance.
+  Bản 1: 水, Ethylhexyl Methoxycinnamate, 甘油, 二丙二醇, 异壬酸异壬酯, 鲸蜡醇, 聚甲基硅氧烷, Diethylamino Hydroxybenzoyl Hexyl Benzoate, 乙二醇二甲基丙烯酸酯交联聚合物, 茶Camellia Sinensis (绿茶) 叶提取物, 神经酰胺 NP, 乙酰化透明质酸钠, 抗坏血酸四异棕榈酸酯, 精氨酸, 透明质酸钠, 丙二醇, 丁二醇, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Ethylhexyl Triazone, 十万六千聚甘油酯, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, 聚苯乙烯, 黄原胶, 聚乙烯醇, 三乙醇胺, EDTA 二钠, 苯氧乙醇, 香精
+  Bản 2: 水, Ethylhexyl Methoxycinnamate, 甘油, 二丙二醇, 异壬酸异壬酯, 鲸蜡醇, 聚甲基硅倍半氧化物, Diethylamino Hydroxybenzoyl Hexyl Benzoate, 乙二醇二甲基丙烯酸酯交联聚合物, 茶叶提取物, 神经酰胺 NP, 乙酰化透明质酸钠, 抗坏血酸四异棕榈酸酯, 精氨酸, 透明质酸钠, 丙二醇, 丁二醇, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Ethylhexyl Triazone, 十万六聚糖-10 异硬脂酸酯, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, 聚苯乙烯, 黄原胶, 聚乙烯醇, 三乙醇胺, 二钠 EDTA, 苯氧乙醇, 香精
+
+#10 [beauty] SP 1313881
+  NGỮ CẢNH: Thương hiệu: Sunplay; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Việt Nam; Thành phần: Water, Ethylhexyl Methoxycinnamate, Glycerin, Dipropylene Glycol, Ison; Hạn sử dụng: 3 năm; Loại da phù hợp: Da khô, da thường
+  >> Loại da phù hợp: Da khô, da thường
+  Bản 1: 干性皮肤, 普通肤质
+  Bản 2: 干性皮肤, 中性皮肤
+
+#11 [home] SP 131407865
+  NGỮ CẢNH: Dung tích: 500ml; Thương hiệu: HG FURNITURE H i G; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Gỗ; Xuất xứ (Made in): Việt Nam; Sản phẩm có được bảo hành không?: Không; MAU SẮC: NÂU., TRẮNG., VÀNG NHAT., ĐEN.; kích thước: 100*40*75cm, 100*50*75cm
+  >> MAU SẮC: NÂU., TRẮNG., VÀNG NHAT., ĐEN.
+  Bản 1: 棕色, 白色, 淡黄色, 黑色
+  Bản 2: 棕色., 白色., 香槟金., 黑色.
+
+#12 [auto] SP 1338759
+  NGỮ CẢNH: Thương hiệu: Auto Quốc Tế; Xuất xứ thương hiệu: Trung Quốc; Xuất xứ (Made in): Trung Quốc; Model: TDDYH001D; Hướng dẫn sử dụng: Hướng dẫn sử dụng: mắc vào phía sau lưng ghế. Dùng các khóa cố định để
+  >> Hướng dẫn sử dụng: Hướng dẫn sử dụng: mắc vào phía sau lưng ghế. Dùng các khóa cố định để cố định sản phẩm và đặt đồ dùng vào
+  Bản 1: 使用说明：挂在座椅靠背后部。使用固定扣固定产品并将物品放入其中
+  Bản 2: 使用说明：挂在座椅背面。使用固定扣固定产品并将物品放入其中
+
+#13 [food] SP 138101958
+  NGỮ CẢNH: Thương hiệu: Gạo Ông Cua; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 6 tháng kể từ ngày sản xuất; Hướng dẫn bảo quản: Bảo quản nơi khô ráo thoáng mát tránh ánh nắng mặt trời. Cột kín miệng; Hướng dẫn sử dụng: Vo gạo trước khi nấu - Nấu cơm theo tỷ lệ 1 chén gạo khoảng 0.9 - 1 ch; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 10Kg; Thành phần: 100% gạo trắng thơm ST25
+  >> Thương hiệu: Gạo Ông Cua
+  Bản 1: Ông Cua 大米
+  Bản 2: Gạo Ông Cua
+
+#14 [food] SP 138101958
+  NGỮ CẢNH: Thương hiệu: Gạo Ông Cua; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 6 tháng kể từ ngày sản xuất; Hướng dẫn bảo quản: Bảo quản nơi khô ráo thoáng mát tránh ánh nắng mặt trời. Cột kín miệng; Hướng dẫn sử dụng: Vo gạo trước khi nấu - Nấu cơm theo tỷ lệ 1 chén gạo khoảng 0.9 - 1 ch; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 10Kg; Thành phần: 100% gạo trắng thơm ST25
+  >> Hướng dẫn bảo quản: Bảo quản nơi khô ráo thoáng mát tránh ánh nắng mặt trời. Cột kín miệng sau khi đã mở gói gạo. Nên sử dụng hết sản phẩm sau 15 ngày mở túi để cơm được ngon hơn.
+  Bản 1: 请存放在阴凉干燥处，避免阳光直射。米袋开封后请密封保存。建议在开袋后15天内食用完毕，以保证米饭口感更佳。
+  Bản 2: 请存放在阴凉干燥处，避免阳光直射。开袋后请密封。建议在开袋后15天内食用完毕，以保持米饭的最佳口感。
+
+#15 [food] SP 138101958
+  NGỮ CẢNH: Thương hiệu: Gạo Ông Cua; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 6 tháng kể từ ngày sản xuất; Hướng dẫn bảo quản: Bảo quản nơi khô ráo thoáng mát tránh ánh nắng mặt trời. Cột kín miệng; Hướng dẫn sử dụng: Vo gạo trước khi nấu - Nấu cơm theo tỷ lệ 1 chén gạo khoảng 0.9 - 1 ch; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 10Kg; Thành phần: 100% gạo trắng thơm ST25
+  >> Hướng dẫn sử dụng: Vo gạo trước khi nấu - Nấu cơm theo tỷ lệ 1 chén gạo khoảng 0.9 - 1 chén nước ( Điều chỉnh lượng nước cho phù hợp, nên nấu ít nước để giữ vị tinh tế của cơm) - Nấu đến khi cơm chín ( khoảng 25 phút) sau đó chờ khoảng 10 phút để cơm ráo, không cần xới xáo. Lưu ý: Không nên mở nắp hoặc đảo cơm trong khi nấu.
+  Bản 1: 煮饭前先淘米 - 按比例煮饭：约1杯米配0.9 - 1杯水（可根据需要调整水量，建议少放水以保持米饭的细腻口感）- 煮至米饭熟透（约25分钟），然后静置约10分钟待米饭水分收干，无需翻动。注意：煮饭过程中请勿开盖或搅拌米饭。
+  Bản 2: 使用说明: 煮饭前先淘米 - 按比例煮饭，约1杯米配0.9 - 1杯水 (根据需要调整水量，建议少放水以保持米饭的细腻口感) - 煮至米饭熟透 (约25分钟)，然后静置约10分钟使米饭干爽，无需翻动。注意: 烹饪过程中请勿开盖或翻动米饭。
+
+#16 [food] SP 141651020
+  NGỮ CẢNH: Thành phần: Hộp gồm: Hạt macca, hạt óc chó đỏ, hạt óc chó vàng, hạt điều và hạnh n; Thời gian bảo hành: 7 Ngày; Thương hiệu: Fonut; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 1 năm; Hướng dẫn bảo quản: Bảo quản phòng mát hoặc ngăn mát tủ lạnh; Hướng dẫn sử dụng: Dùng để ăn liền. Dùng xay bột ngũ cốc hay làm sữa; Sản phẩm có được bảo hành không?: Có; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 500gr; Hình thức bảo hành: Hóa đơn
+  >> Thành phần: Hộp gồm: Hạt macca, hạt óc chó đỏ, hạt óc chó vàng, hạt điều và hạnh nhân
+  Bản 1: 盒装包含：澳洲坚果、红核桃仁、黄核桃仁、腰果和杏仁
+  Bản 2: 盒装包括：澳洲果仁, 红核桃, 黄核桃, 腰果和杏仁
+
+#17 [food] SP 141651020
+  NGỮ CẢNH: Thành phần: Hộp gồm: Hạt macca, hạt óc chó đỏ, hạt óc chó vàng, hạt điều và hạnh n; Thời gian bảo hành: 7 Ngày; Thương hiệu: Fonut; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 1 năm; Hướng dẫn bảo quản: Bảo quản phòng mát hoặc ngăn mát tủ lạnh; Hướng dẫn sử dụng: Dùng để ăn liền. Dùng xay bột ngũ cốc hay làm sữa; Sản phẩm có được bảo hành không?: Có; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 500gr; Hình thức bảo hành: Hóa đơn
+  >> Hướng dẫn bảo quản: Bảo quản phòng mát hoặc ngăn mát tủ lạnh
+  Bản 1: 存放在阴凉处或冰箱冷藏室
+  Bản 2: 置于阴凉处或冰箱冷藏室保存
+
+#18 [food] SP 141651020
+  NGỮ CẢNH: Thành phần: Hộp gồm: Hạt macca, hạt óc chó đỏ, hạt óc chó vàng, hạt điều và hạnh n; Thời gian bảo hành: 7 Ngày; Thương hiệu: Fonut; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 1 năm; Hướng dẫn bảo quản: Bảo quản phòng mát hoặc ngăn mát tủ lạnh; Hướng dẫn sử dụng: Dùng để ăn liền. Dùng xay bột ngũ cốc hay làm sữa; Sản phẩm có được bảo hành không?: Có; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 500gr; Hình thức bảo hành: Hóa đơn
+  >> Hướng dẫn sử dụng: Dùng để ăn liền. Dùng xay bột ngũ cốc hay làm sữa
+  Bản 1: 用于即食。用于研磨谷物粉或制作牛奶
+  Bản 2: 可直接食用。也可用于研磨谷物粉或制作牛奶
+
+#19 [food] SP 141651020
+  NGỮ CẢNH: Thành phần: Hộp gồm: Hạt macca, hạt óc chó đỏ, hạt óc chó vàng, hạt điều và hạnh n; Thời gian bảo hành: 7 Ngày; Thương hiệu: Fonut; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 1 năm; Hướng dẫn bảo quản: Bảo quản phòng mát hoặc ngăn mát tủ lạnh; Hướng dẫn sử dụng: Dùng để ăn liền. Dùng xay bột ngũ cốc hay làm sữa; Sản phẩm có được bảo hành không?: Có; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 500gr; Hình thức bảo hành: Hóa đơn
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票保修
+  Bản 2: 发票
+
+#20 [beauty] SP 144698002
+  NGỮ CẢNH: Thương hiệu: Lana; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Hạn sử dụng: 3 năm; Loại da phù hợp: Mọi loại da; Sản phẩm có được bảo hành không?: Có; Thời gian bảo hành: 7 Ngày; Hình thức bảo hành: Hóa đơn
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票
+  Bản 2: 发票保修
+
+#21 [home] SP 144764032
+  NGỮ CẢNH: Thương hiệu: OEM; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Sản phẩm có được bảo hành không?: Không; Variation: chuông 743
+  >> Variation: chuông 743
+  Bản 1: 743 铃铛
+  Bản 2: 铃铛 743
+
+#22 [food] SP 155156873
+  NGỮ CẢNH: Thương hiệu: THANG - HT COFFEE; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 6 tháng; Hướng dẫn bảo quản: Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp mặt trời. L; Hướng dẫn sử dụng: Cho khoảng 25gr cà phê bột vào phin, nén chặt vừa bột cà phê trong phi; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 2000 g; Thành phần: 100% hạt cà phê Robusta, Arabica.
+  >> Hướng dẫn bảo quản: Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp mặt trời. Luôn đóng kín túi cà phê sau khi sử dụng và không sử dụng sản phẩm khi có mùi lạ, ẩm mốc.
+  Bản 1: 请存放在干燥、阴凉处，避免阳光直射。使用后请务必密封咖啡袋，若产品出现异味或发霉，请勿食用。
+  Bản 2: 储存在干燥、凉爽处，避免阳光直射。使用后请务必密封咖啡袋，若产品有异味或发霉请勿使用。
+
+#23 [food] SP 155156873
+  NGỮ CẢNH: Thương hiệu: THANG - HT COFFEE; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 6 tháng; Hướng dẫn bảo quản: Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp mặt trời. L; Hướng dẫn sử dụng: Cho khoảng 25gr cà phê bột vào phin, nén chặt vừa bột cà phê trong phi; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 2000 g; Thành phần: 100% hạt cà phê Robusta, Arabica.
+  >> Hướng dẫn sử dụng: Cho khoảng 25gr cà phê bột vào phin, nén chặt vừa bột cà phê trong phin Rót 50ml nước nóng 92*C tới 98*C vào, đợi 2-3 phút cho bột cà phệ ngấm nước và nở đều. Rót thêm 50ml nước nóng 92*C tới 98*C, đợi cà phê chảy xong. Thêm đường/ sữa/ đá tùy sở thích và thưởng thức.
+  Bản 1: 使用说明 将约 25gr 咖啡粉放入滤杯，将咖啡粉压实。倒入 50ml 92*C 至 98*C 的热水，等待 2-3 分钟让咖啡粉充分浸泡并均匀膨胀。再倒入 50ml 92*C 至 98*C 的热水，等待咖啡流尽。根据个人喜好加入糖/牛奶/冰块即可享用。
+  Bản 2: 将约25克咖啡粉放入滤杯中，适度压紧。倒入50毫升92°C至98°C的热水，等待2-3分钟让咖啡粉充分浸泡并均匀膨胀。再次倒入50毫升92°C至98°C的热水，等待咖啡液滴滤完毕。根据个人口味加入糖、牛奶或冰块即可享用。
+
+#24 [food] SP 155156873
+  NGỮ CẢNH: Thương hiệu: THANG - HT COFFEE; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 6 tháng; Hướng dẫn bảo quản: Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp mặt trời. L; Hướng dẫn sử dụng: Cho khoảng 25gr cà phê bột vào phin, nén chặt vừa bột cà phê trong phi; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 2000 g; Thành phần: 100% hạt cà phê Robusta, Arabica.
+  >> Thành phần: 100% hạt cà phê Robusta, Arabica.
+  Bản 1: 100% 罗布斯塔咖啡豆, 阿拉比卡咖啡豆。
+  Bản 2: 100% Robusta, Arabica 咖啡豆
+
+#25 [food] SP 168291009
+  NGỮ CẢNH: Thương hiệu: Chip Star; Xuất xứ thương hiệu: Nhật Bản; Hạn sử dụng: 1 năm; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Nhật Bản; Chip Star: Vị Muối
+  >> Chip Star: Vị Muối
+  Bản 1: 原味盐味
+  Bản 2: 咸味
+
+#26 [electronics] SP 174593834
+  NGỮ CẢNH: Thương hiệu: PIX-LINK; Xuất xứ thương hiệu: Trung Quốc; Độ phân giải quang học: 1600; Tính năng: Dùng pin sạc tiện lợi; Model: 103BL; Lưu ý: Tránh tiếp xúc trực tiếp với nhiệt độ cao; Chất liệu: abs; Xuất xứ (Made in): Trung Quốc; Sản phẩm có được bảo hành không?: Không; Màu sắc: Bạc Bluetooth, Trắng Bluetooth, hồng, Đen Bluetooth
+  >> Tính năng: Dùng pin sạc tiện lợi
+  Bản 1: 充电电池使用方便
+  Bản 2: 使用充电电池，方便快捷
+
+#27 [electronics] SP 174593834
+  NGỮ CẢNH: Thương hiệu: PIX-LINK; Xuất xứ thương hiệu: Trung Quốc; Độ phân giải quang học: 1600; Tính năng: Dùng pin sạc tiện lợi; Model: 103BL; Lưu ý: Tránh tiếp xúc trực tiếp với nhiệt độ cao; Chất liệu: abs; Xuất xứ (Made in): Trung Quốc; Sản phẩm có được bảo hành không?: Không; Màu sắc: Bạc Bluetooth, Trắng Bluetooth, hồng, Đen Bluetooth
+  >> Màu sắc: Bạc Bluetooth, Trắng Bluetooth, hồng, Đen Bluetooth
+  Bản 1: 蓝牙银, 蓝牙白, 粉色, 蓝牙黑
+  Bản 2: 蓝牙银色, 蓝牙白色, 粉色, 蓝牙黑色
+
+#28 [home] SP 176598081
+  NGỮ CẢNH: Thương hiệu: LocknLock; Xuất xứ thương hiệu: Hàn Quốc; Chất liệu: Thân: thép không gỉ Nắp: PP và thép không gỉ Gioăng: silicone; Model: LHC4274; Kích thước (Dài x Rộng x Cao): 73 x 73 x 207 mm; Xuất xứ (Made in): Trung Quốc; Màu sắc: Xanh Navy; Trọng lượng sản phẩm: 0.324 kg; Sản phẩm có được bảo hành không?: Không; Màu: Mint, Navy, Trắng
+  >> Chất liệu: Thân: thép không gỉ Nắp: PP và thép không gỉ Gioăng: silicone
+  Bản 1: 杯身: 不锈钢 杯盖: PP 和不锈钢 密封圈: 硅胶
+  Bản 2: 主体：不锈钢，盖子：PP和不锈钢，密封圈：硅胶
+
+#29 [home] SP 178946120
+  NGỮ CẢNH: Thương hiệu: OEM; Xuất xứ thương hiệu: Hàn Quốc; Hướng dẫn bảo quản: Hướng dẫn Bảo dưỡng lưới che nắng Lưới che nắng 100% HDPE là một loại ; Hướng dẫn sử dụng: Hướng dẫn Bảo dưỡng lưới che nắng Lưới che nắng 100% HDPE là một loại ; Kích thước (Dài x Rộng x Cao): 2MX1M; Xuất xứ (Made in): Hàn Quốc; Trọng lượng sản phẩm: 0.5; Sản phẩm có được bảo hành không?: Không
+  >> Hướng dẫn sử dụng: Hướng dẫn Bảo dưỡng lưới che nắng Lưới che nắng 100% HDPE là một loại lưới sợi tròn dệt công nghiệp được làm từ Polyethylene mật độ cao, và kết hợp các chất ổn định Ultra Violet (UV) và các chất phụ gia tạo màu. Trong quá trình sản xuất có thể xảy ra các lỗi không hoàn hảo. Những điểm không hoàn hảo này chỉ mang tính thẩm mỹ và sẽ không ảnh hưởng hoặc cản trở đến hoạt động của tuổi thọ của vải bóng hoặc chức năng mà nó đã được thiết kế. Lưới che nắng nên được lắp đặt chắc chắn và kín để giảm gió thổi vào lưới che nắng. Nếu việc lắp đặt lưới lỏng lẻo và cẩu thả sẽ gây hỏng sớm do sự cố cơ học. Đây không phải là sự cố do tia cực tím và không được bảo hành. Lưới có thể bị bẩn theo thời gian. Cần cẩn thận để tránh các Hóa chất có thể chứa Chất tẩy trắng, hoặc các Hóa chất nông nghiệp khác có chứa Lưu huỳnh và hoặc Halogens (clo Brom). Các Hóa chất này có thể tấn công các chất ổn định UV trong sợi lưới, do đó làm giảm Tuổi thọ của sản phẩm và ảnh hưởng đến bảo hành. Danh sách các hóa chất có thể gây ra các tương tác sau đây chỉ là một số ví dụ và không đầy đủ. Các hóa chất đó có thể bao gồm: thuốc trừ sâu, kim loại, oxit kim loại và muối kim loại, tất cả các halogen và các hợp chất hóa học có chứa halogen hoặc lưu huỳnh ở tất cả các trạng thái oxy hóa của chúng. Cần chú ý tránh tiếp xúc với xăng, dầu v.v. Khi làm sạch tấm lưới, chúng tôi khuyên bạn nên sử dụng chất lỏng rửa bát nhẹ với việc sử dụng vòi nước áp suất thấp và bàn chải mềm. Chúng tôi không khuyến khích sử dụng nước áp suất cao để làm sạch lưới. Bảo hành lưới không được bảo hành bởi những hư hỏng do bão, mưa đá, động đất, hư hỏng cơ học do chim hoặc động vật khác gây ra, lửa, ánh sáng, v.v. Một lần nữa, đây không phải là danh sách đầy đủ và nó chỉ mang tính chất tham khảo. Nếu bạn tháo tấm lưới che nắng, hãy đảm bảo rằng nó khô hoàn toàn và được cất giữ ở nơi khô ráo tránh xa chuột, và những loại tương tự, tốt nhất là cất trong túi bảo vệ.
+  Bản 1: 遮阳网保养指南：100% HDPE 遮阳网是一种由高密度聚乙烯制成的工业编织圆纤维网，并结合了紫外线 (UV) 稳定剂和着色添加剂。在生产过程中可能会出现一些瑕疵。这些瑕疵仅出于美观考虑，不会影响或阻碍遮阳网织物的寿命或其设计功能。遮阳网应安装牢固且紧密，以减少吹入网内的风力。如果安装松动或草率，可能会因机械故障导致过早损坏。这不属于紫外线引起的问题，且不在保修范围内。网可能会随着时间的推移而变脏。需小心避免接触可能含有漂白剂的化学品，或其他含有硫或卤素（氯、溴）的农业化学品。这些化学品可能会侵蚀网纤维中的 UV 稳定剂，从而缩短产品寿命并影响保修。可能引起此类相互作用的化学品列表仅为部分示例，并不完整。这些化学品可能包括：杀虫剂、金属、金属氧化物和金属盐、所有卤素以及所有氧化状态下含有卤素或硫的化合物。需注意避免接触汽油、油类等。清洁网片时，我们建议使用温和的洗洁精配合低压水龙头和软刷进行清洗。我们不建议使用高压水清洗网。遮阳网保修不包括因风暴、冰雹、地震、鸟类或其他动物造成的机械损坏、火灾、光照等引起的损坏。再次声明，这并非完整列表，仅供参考。如果您拆卸遮阳网，请确保其完全干燥并存放在干燥、远离鼠类及类似生物的地方，最好存放在保护袋中。
+  Bản 2: 遮阳网保养指南 100% HDPE 遮阳网是一种由高密度聚乙烯制成的工业编织圆纤维网，并结合了紫外线 (UV) 稳定剂和着色添加剂。在生产过程中可能会出现一些瑕疵。这些瑕疵仅出于美观考虑，不会影响或阻碍遮阳网织物的寿命或其设计功能。遮阳网应安装牢固且紧密，以减少吹入网内的风力。如果安装松动或粗糙，会导致机械故障引起的过早损坏。这不属于紫外线问题，且不在保修范围内。网可能会随着时间的推移而变脏。需小心避免接触可能含有漂白剂的化学品，或其他含有硫或卤素（氯、溴）的农业化学品。这些化学品可能会侵蚀网纤维中的 UV 稳定剂，从而缩短产品寿命并影响保修。下列可能引起此类反应的化学品列表仅为部分示例，并不完整。这些化学品可能包括：杀虫剂、金属、金属氧化物和金属盐、所有卤素以及所有氧化态的含卤素或含硫的化合物。需注意避免接触汽油、油类等。清洁网片时，我们建议使用温和的洗洁精，配合低压水龙头和软刷进行清洗。我们不建议使用高压水清洗网。遮阳网保修不包括因风暴、冰雹、地震、鸟类或其他动物造成的机械损坏、火灾、光照等引起的损坏。再次声明，这并非完整列表，仅供参考。如果您拆卸遮阳网，请确保其完全干燥并存放在干燥、远离鼠类及类似生物的地方，最好存放在保护袋中。
+
+#30 [home] SP 178946120
+  NGỮ CẢNH: Thương hiệu: OEM; Xuất xứ thương hiệu: Hàn Quốc; Hướng dẫn bảo quản: Hướng dẫn Bảo dưỡng lưới che nắng Lưới che nắng 100% HDPE là một loại ; Hướng dẫn sử dụng: Hướng dẫn Bảo dưỡng lưới che nắng Lưới che nắng 100% HDPE là một loại ; Kích thước (Dài x Rộng x Cao): 2MX1M; Xuất xứ (Made in): Hàn Quốc; Trọng lượng sản phẩm: 0.5; Sản phẩm có được bảo hành không?: Không
+  >> Hướng dẫn bảo quản: Hướng dẫn Bảo dưỡng lưới che nắng Lưới che nắng 100% HDPE là một loại lưới sợi tròn dệt công nghiệp được làm từ Polyethylene mật độ cao, và kết hợp các chất ổn định Ultra Violet (UV) và các chất phụ gia tạo màu. Trong quá trình sản xuất có thể xảy ra các lỗi không hoàn hảo. Những điểm không hoàn hảo này chỉ mang tính thẩm mỹ và sẽ không ảnh hưởng hoặc cản trở đến hoạt động của tuổi thọ của vải bóng hoặc chức năng mà nó đã được thiết kế. Lưới che nắng nên được lắp đặt chắc chắn và kín để giảm gió thổi vào lưới che nắng. Nếu việc lắp đặt lưới lỏng lẻo và cẩu thả sẽ gây hỏng sớm do sự cố cơ học. Đây không phải là sự cố do tia cực tím và không được bảo hành. Lưới có thể bị bẩn theo thời gian. Cần cẩn thận để tránh các Hóa chất có thể chứa Chất tẩy trắng, hoặc các Hóa chất nông nghiệp khác có chứa Lưu huỳnh và hoặc Halogens (clo Brom). Các Hóa chất này có thể tấn công các chất ổn định UV trong sợi lưới, do đó làm giảm Tuổi thọ của sản phẩm và ảnh hưởng đến bảo hành. Danh sách các hóa chất có thể gây ra các tương tác sau đây chỉ là một số ví dụ và không đầy đủ. Các hóa chất đó có thể bao gồm: thuốc trừ sâu, kim loại, oxit kim loại và muối kim loại, tất cả các halogen và các hợp chất hóa học có chứa halogen hoặc lưu huỳnh ở tất cả các trạng thái oxy hóa của chúng. Cần chú ý tránh tiếp xúc với xăng, dầu v.v. Khi làm sạch tấm lưới, chúng tôi khuyên bạn nên sử dụng chất lỏng rửa bát nhẹ với việc sử dụng vòi nước áp suất thấp và bàn chải mềm. Chúng tôi không khuyến khích sử dụng nước áp suất cao để làm sạch lưới. Bảo hành lưới không được bảo hành bởi những hư hỏng do bão, mưa đá, động đất, hư hỏng cơ học do chim hoặc động vật khác gây ra, lửa, ánh sáng, v.v. Một lần nữa, đây không phải là danh sách đầy đủ và nó chỉ mang tính chất tham khảo. Nếu bạn tháo tấm lưới che nắng, hãy đảm bảo rằng nó khô hoàn toàn và được cất giữ ở nơi khô ráo tránh xa chuột, và những loại tương tự, tốt nhất là cất trong túi bảo vệ.
+  Bản 1: 遮阳网保养指南 100% HDPE 遮阳网是一种由高密度聚乙烯制成的工业编织圆纤维网，并结合了紫外线 (UV) 稳定剂和着色添加剂。在生产过程中可能会出现一些瑕疵。这些瑕疵仅出于美观考虑，不会影响或阻碍遮阳网织物的寿命或其设计功能。遮阳网应安装牢固且紧密，以减少吹入网内的风力。如果安装松动或粗糙，会导致机械故障引起的过早损坏。这不属于紫外线问题，且不在保修范围内。网可能会随着时间的推移而变脏。需小心避免接触可能含有漂白剂的化学品，或其他含有硫或卤素（氯、溴）的农业化学品。这些化学品可能会侵蚀网纤维中的 UV 稳定剂，从而缩短产品寿命并影响保修。可能引起此类反应的化学品列表仅为部分示例，并不完整。这些化学品可能包括：杀虫剂、金属、金属氧化物和金属盐、所有卤素以及所有氧化状态下含有卤素或硫的化学化合物。需注意避免接触汽油、油类等。清洁网片时，我们建议使用温和的洗洁精，配合低压水龙头和软刷进行清洗。我们不建议使用高压水清洗网。遮阳网保修不包括因风暴、冰雹、地震、鸟类或其他动物造成的机械损坏、火灾、光照等引起的损坏。再次声明，这并非完整列表，仅供参考。如果您拆卸遮阳网，请确保其完全干燥并存放在干燥、远离鼠类及类似生物的地方，最好存放在保护袋中。
+  Bản 2: 遮阳网保养指南：100% HDPE 遮阳网是一种由高密度聚乙烯制成的工业编织圆纤维网，并结合了紫外线 (UV) 稳定剂和着色添加剂。在生产过程中可能会出现不完美之处。这些不完美之处仅出于美观考虑，不会影响或阻碍遮阳网织物的寿命或其设计功能。遮阳网应安装牢固且紧密，以减少吹入遮阳网的风。如果安装松动或草率，可能会因机械故障而导致过早损坏。这并非紫外线引起的问题，且不在保修范围内。网可能会随着时间的推移而变脏。需小心避免接触可能含有漂白剂的化学品，或其他含有硫或卤素（氯、溴）的农业化学品。这些化学品可能会侵蚀网纤维中的 UV 稳定剂，从而缩短产品寿命并影响保修。可能引起此类相互作用的化学品列表仅为部分示例，并不完整。这些化学品可能包括：杀虫剂、金属、金属氧化物和金属盐、所有卤素以及所有氧化状态下含有卤素或硫的化学化合物。需注意避免接触汽油、油等。清洁网片时，我们建议使用温和的洗洁精，配合低压水龙头和软刷进行清洗。我们不建议使用高压水清洗网。遮阳网保修不包括因风暴、冰雹、地震、鸟类或其他动物造成的机械损坏、火灾、光照等引起的损坏。再次声明，这并非完整列表，仅供参考。如果您拆卸遮阳网，请确保其完全干燥并存放在干燥、远离老鼠及类似生物的地方，最好存放在保护袋中。
+
+#31 [food] SP 180316436
+  NGỮ CẢNH: Thời gian bảo hành: 6 Tháng; Thương hiệu: Hanvet; Xuất xứ thương hiệu: Việt Nam; Sản phẩm có được bảo hành không?: Có; Xuất xứ (Made in): Việt Nam; Hình thức bảo hành: Hóa đơn
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票保修
+  Bản 2: 发票
+
+#32 [beauty] SP 182755104
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Có; Thời gian bảo hành: 3 Ngày; Hình thức bảo hành: Tem bảo hành; Thương hiệu: Kiss Me; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Trung Quốc; Thành phần: Talc, Mica, Dimethicone, Titanium Diox,...; Hạn sử dụng: 5 năm kể từ NSX; Màu: Màu Nâu Tự Nhiên, Màu Nâu Xám
+  >> Hình thức bảo hành: Tem bảo hành
+  Bản 1: 保修贴
+  Bản 2: 保修标签
+
+#33 [food] SP 186312553
+  NGỮ CẢNH: Thương hiệu: LeeLong Coffee; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 12 tháng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Anh, Việt Nam; Trọng lượng sản phẩm: 500 gram; Quy cách đóng gói: Quy cách đóng gói: dạng bột pha phin (1 túi 500 gram). Vui lòng vào sh; Kích xay: Pha V60, Pha coldbrew, Pha máy, Pha phin
+  >> Quy cách đóng gói: Quy cách đóng gói: dạng bột pha phin (1 túi 500 gram). Vui lòng vào shop chọn sản phẩm nguyên hạt chưa xay sẽ rẻ hơn. Nếu bạn muốn xay mịn pha máy, xay thô pha ColdBrew, xay vừa pha Drip nhớ chat với shop khi đặt hàng.
+  Bản 1: 包装规格：粉末状滤泡冲泡型（1 袋 500 gram）。请进入店铺选择未研磨的原豆产品，价格会更便宜。如果您需要研磨成细粉用于咖啡机、粗研磨用于冷萃（ColdBrew）或中度研磨用于手冲（Drip），请在下单时咨询客服。
+  Bản 2: 包装规格：细粉/滤杯粉 (1袋500克)。请进入店铺选择未研磨的原豆，价格会更便宜。如果您需要研磨成用于咖啡机的细粉、用于冷萃的粗粉或用于手冲的适中研磨度，请在下单时咨询客服。
+
+#34 [food] SP 186312553
+  NGỮ CẢNH: Thương hiệu: LeeLong Coffee; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 12 tháng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Anh, Việt Nam; Trọng lượng sản phẩm: 500 gram; Quy cách đóng gói: Quy cách đóng gói: dạng bột pha phin (1 túi 500 gram). Vui lòng vào sh; Kích xay: Pha V60, Pha coldbrew, Pha máy, Pha phin
+  >> Kích xay: Pha V60, Pha coldbrew, Pha máy, Pha phin
+  Bản 1: V60手冲, 冷萃, 意式咖啡机, 滤杯
+  Bản 2: V60 冲煮, 冷萃冲煮, 咖啡机冲煮, 滤杯冲煮
+
+#35 [beauty] SP 186517279
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Không; Đối tượng: Người trưởng thành; Thương hiệu: Chong Kun Dang; Xuất xứ thương hiệu: Hàn Quốc; Xuất xứ (Made in): Hàn Quốc; Thành phần: Hồng Sâm Hàn Quốc, Nhưng Hưu , 20 loại thảo mộc; Hạn sử dụng: 3 năm kể từ NSX
+  >> Thành phần: Hồng Sâm Hàn Quốc, Nhưng Hưu , 20 loại thảo mộc
+  Bản 1: 韩国红参, 牛膝, 20种草本植物
+  Bản 2: 韩国红参, 补骨脂, 20种草本植物
+
+#36 [home] SP 187950505
+  NGỮ CẢNH: Thương hiệu: A; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Ruột gối: Gòn Bông sợi nhân tạo cực mịn (Fiber) mềm mại, thoáng mát Vỏ; Hướng dẫn bảo quản: Giặt với nước ấm nhỏ hơn 40 độ C Giặt máy ở chế độ nhẹ, sau khi giặt p; Hướng dẫn sử dụng: Vỗ nhẹ trước mỗi lần sử dụng để ruột gối trải đều và xốp hơn, mang lại; Kích thước (Dài x Rộng x Cao): 35x50cm; Xuất xứ (Made in): Việt Nam; Sản phẩm có được bảo hành không?: Không; Phân Loại: 1 cặp gối + 1 cặp vỏ, 1 gối + 1 vỏ
+  >> Chất liệu: Ruột gối: Gòn Bông sợi nhân tạo cực mịn (Fiber) mềm mại, thoáng mát Vỏ gối: Vải polyester rất thoáng mát và hút mồ hôi tốt
+  Bản 1: 枕芯：极细超软人造纤维棉 (Fiber)，透气舒适；枕套：聚酯纤维面料，透气性好且吸汗
+  Bản 2: 枕芯: 柔软透气的超细纤维人造棉 (Fiber) 枕套: 透气吸汗性良好的聚酯纤维面料
+
+#37 [home] SP 187950505
+  NGỮ CẢNH: Thương hiệu: A; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Ruột gối: Gòn Bông sợi nhân tạo cực mịn (Fiber) mềm mại, thoáng mát Vỏ; Hướng dẫn bảo quản: Giặt với nước ấm nhỏ hơn 40 độ C Giặt máy ở chế độ nhẹ, sau khi giặt p; Hướng dẫn sử dụng: Vỗ nhẹ trước mỗi lần sử dụng để ruột gối trải đều và xốp hơn, mang lại; Kích thước (Dài x Rộng x Cao): 35x50cm; Xuất xứ (Made in): Việt Nam; Sản phẩm có được bảo hành không?: Không; Phân Loại: 1 cặp gối + 1 cặp vỏ, 1 gối + 1 vỏ
+  >> Hướng dẫn bảo quản: Giặt với nước ấm nhỏ hơn 40 độ C Giặt máy ở chế độ nhẹ, sau khi giặt phơi khô ngay, không để ẩm ướt quá lâu. Không phơi trực tiếp ngoài nắng mà phơi trong bóng râm. Chỉ thỉnh thoảng đem phơi nắng để bay hết hơi ẩm.
+  Bản 1: 使用低于 40°C 的温水清洗。使用洗衣机轻柔模式清洗，洗后立即晾干，切勿长时间保持潮湿。请勿直接在阳光下暴晒，应在阴凉处晾晒。仅在需要时偶尔晒太阳以彻底去除水分。
+  Bản 2: 使用低于40摄氏度的温水清洗；使用轻柔模式机洗，洗后立即晾干，切勿长时间潮湿；请勿在阳光下直晒，应在阴凉处晾干；仅在需要时偶尔晒太阳以彻底去除水分
+
+#38 [home] SP 187950505
+  NGỮ CẢNH: Thương hiệu: A; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Ruột gối: Gòn Bông sợi nhân tạo cực mịn (Fiber) mềm mại, thoáng mát Vỏ; Hướng dẫn bảo quản: Giặt với nước ấm nhỏ hơn 40 độ C Giặt máy ở chế độ nhẹ, sau khi giặt p; Hướng dẫn sử dụng: Vỗ nhẹ trước mỗi lần sử dụng để ruột gối trải đều và xốp hơn, mang lại; Kích thước (Dài x Rộng x Cao): 35x50cm; Xuất xứ (Made in): Việt Nam; Sản phẩm có được bảo hành không?: Không; Phân Loại: 1 cặp gối + 1 cặp vỏ, 1 gối + 1 vỏ
+  >> Hướng dẫn sử dụng: Vỗ nhẹ trước mỗi lần sử dụng để ruột gối trải đều và xốp hơn, mang lại trải nghiệm tốt nhất Không sử dụng bột giặt hoặc chất tẩy mạnh Không sử dụng gối khi chưa khô hoàn toàn Nếu lâu ngày không sử dụng, nên bọc trong túi sau đó cất giữ cẩn thận ở nơi khô thoáng. Nên vệ sinh gối thường xuyên, đối với phần ruột gối, không nên để tình trạng ẩm ướt trong thời gian dài.
+  Bản 1: 每次使用前轻轻拍打，使枕芯分布更均匀、更蓬松，以获得最佳体验；请勿使用洗衣粉或强力漂白剂；在枕头完全干燥前请勿使用；若长期不使用，应装入袋中并妥善存放在干燥通风处；建议定期清洁枕头，对于枕芯部分，切勿长时间处于潮湿状态
+  Bản 2: 每次使用前轻轻拍打，使枕芯分布更均匀、更蓬松，从而获得最佳体验。请勿使用洗衣粉或强力漂白剂。枕头未完全干燥前请勿使用。如果长时间不使用，应装入袋中并妥善存放在干燥通风处。建议定期清洁枕头，对于枕芯部分，不应长时间处于潮湿状态。
+
+#39 [beauty] SP 189570925
+  NGỮ CẢNH: Thương hiệu: Sagami; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Nhật Bản; Hạn sử dụng: 5 năm kể từ ngày sản xuất; Sản phẩm có được bảo hành không?: Có; Thời gian bảo hành: 7 Ngày; Hình thức bảo hành: Điện tử
+  >> Hình thức bảo hành: Điện tử
+  Bản 1: 电子
+  Bản 2: 电子保修
+
+#40 [home] SP 190707199
+  NGỮ CẢNH: Thương hiệu: MINIIN; Xuất xứ thương hiệu: Trung Quốc; Hướng dẫn sử dụng: Đệm ngồi 3D silicon thoáng khí, đàn hồi tốt, Nệm lót ghế chất liệu mềm; Chất liệu: Silicon; Xuất xứ (Made in): Trung Quốc; Sản phẩm có được bảo hành không?: Không
+  >> Hướng dẫn sử dụng: Đệm ngồi 3D silicon thoáng khí, đàn hồi tốt, Nệm lót ghế chất liệu mềm mại chống đau mỏi - Chính hãng MINIIN (Giao mẫu ngẫu nhiên)
+  Bản 1: 3D硅胶透气高弹坐垫, 柔软防痛椅垫 - MINIIN正品 (随机发货)
+  Bản 2: 3D硅胶透气弹力坐垫，柔软材质防酸痛垫 - MINIIN正品 (随机发货)
+
+#41 [food] SP 191299407
+  NGỮ CẢNH: Thành phần: Củ sen; Thương hiệu: Dược Liệu Tuệ Tâm; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 12 tháng kể từ ngày sản xuất; Hướng dẫn bảo quản: Để nơi khô thoáng hoặc ngăn mát tủ lạnh; Hướng dẫn sử dụng: Mỗi lần 2-3 muổng khuấy đều bột củ sen với nước nguội cho bột tan, sau; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 200gr
+  >> Thương hiệu: Dược Liệu Tuệ Tâm
+  Bản 1: Tuệ Tâm 药材
+  Bản 2: Dược Liệu Tuệ Tâm
+
+#42 [food] SP 191299407
+  NGỮ CẢNH: Thành phần: Củ sen; Thương hiệu: Dược Liệu Tuệ Tâm; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 12 tháng kể từ ngày sản xuất; Hướng dẫn bảo quản: Để nơi khô thoáng hoặc ngăn mát tủ lạnh; Hướng dẫn sử dụng: Mỗi lần 2-3 muổng khuấy đều bột củ sen với nước nguội cho bột tan, sau; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 200gr
+  >> Hướng dẫn bảo quản: Để nơi khô thoáng hoặc ngăn mát tủ lạnh
+  Bản 1: 置于阴凉干燥处或冷藏
+  Bản 2: 置于干燥通风处或冰箱冷藏
+
+#43 [food] SP 191299407
+  NGỮ CẢNH: Thành phần: Củ sen; Thương hiệu: Dược Liệu Tuệ Tâm; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 12 tháng kể từ ngày sản xuất; Hướng dẫn bảo quản: Để nơi khô thoáng hoặc ngăn mát tủ lạnh; Hướng dẫn sử dụng: Mỗi lần 2-3 muổng khuấy đều bột củ sen với nước nguội cho bột tan, sau; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 200gr
+  >> Hướng dẫn sử dụng: Mỗi lần 2-3 muổng khuấy đều bột củ sen với nước nguội cho bột tan, sau đó thêm nước nóng vào cho bột sánh lại là dùng được
+  Bản 1: 每次取2-3勺莲藕粉与冷水搅拌均匀使粉末溶解，然后加入热水使其变得浓稠即可食用
+  Bản 2: 每次取2-3勺莲藕粉与凉水搅拌至溶解，随后加入热水搅拌至浓稠即可食用
+
+#44 [beauty] SP 194107868
+  NGỮ CẢNH: Lưu ý: Bao bì sản phẩm thay đổi theo từng đợt nhập hàng; Sản phẩm có được bảo hành không?: Không; Thương hiệu: Hazeline; Xuất xứ thương hiệu: Mỹ; Xuất xứ (Made in): Việt Nam; Hạn sử dụng: 30 tháng kể từ ngày sản xuất
+  >> Lưu ý: Bao bì sản phẩm thay đổi theo từng đợt nhập hàng
+  Bản 1: 产品包装随进货批次而变化
+  Bản 2: 产品包装随每批进货情况而变化
+
+#45 [home] SP 196851813
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Không; Thương hiệu: Office Chill; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Mẫu: Cao Cấp, Cao Cấp - Đen, Cơ Bản, Tiêu Chuẩn
+  >> Mẫu: Cao Cấp, Cao Cấp - Đen, Cơ Bản, Tiêu Chuẩn
+  Bản 1: 高端, 高端 - 黑色, 基础款, 标准款
+  Bản 2: 高级, 高级-黑色, 基础, 标准
+
+#46 [auto] SP 197851348
+  NGỮ CẢNH: Thương hiệu: Đại Nam Sport; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Trung Quốc; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 3 Tháng
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票保修
+  Bản 2: 发票
+
+#47 [electronics] SP 197966450
+  NGỮ CẢNH: Thương hiệu: HXSJ; Xuất xứ thương hiệu: Trung Quốc; Kích thước: 11*6.4cm; Độ phân giải quang học: 1600dpi; Tính năng: Kết nối đa thiết bị; Model: A882; Lưu ý: Sản phẩm dùng 2pin AA; Chất liệu: Tổng hợp; Xuất xứ (Made in): Trung Quốc; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 6 Tháng; Màu Sắc: Đen, Đỏ
+  >> Lưu ý: Sản phẩm dùng 2pin AA
+  Bản 1: 产品使用2pin AA电池
+  Bản 2: 产品使用2节AA电池
+
+#48 [electronics] SP 197966450
+  NGỮ CẢNH: Thương hiệu: HXSJ; Xuất xứ thương hiệu: Trung Quốc; Kích thước: 11*6.4cm; Độ phân giải quang học: 1600dpi; Tính năng: Kết nối đa thiết bị; Model: A882; Lưu ý: Sản phẩm dùng 2pin AA; Chất liệu: Tổng hợp; Xuất xứ (Made in): Trung Quốc; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 6 Tháng; Màu Sắc: Đen, Đỏ
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票保修
+  Bản 2: 发票
+
+#49 [auto] SP 203863927
+  NGỮ CẢNH: Thương hiệu: VARTA; Xuất xứ thương hiệu: Đức; Xuất xứ (Made in): Hàn Quốc; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng; Sản phẩm có được bảo hành không?: Không
+  >> Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng
+  Bản 1: 卖家配送给买家
+  Bản 2: 卖家配送
+
+#50 [auto] SP 208108116
+  NGỮ CẢNH: Phanh: Phanh Đĩa; Loại chìa khóa: Smartkey; Năm ra mắt: 2022; Thương hiệu: Honda; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Việt Nam; Model: Vision; Phương thức giao hàng Seller Delivery: Khách hàng đến lấy hàng tại nhà bán; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 3 Năm; Cao Cấp: Xanh Đen 2025
+  >> Loại chìa khóa: Smartkey
+  Bản 1: Smartkey
+  Bản 2: 智能钥匙
+
+#51 [auto] SP 208108116
+  NGỮ CẢNH: Phanh: Phanh Đĩa; Loại chìa khóa: Smartkey; Năm ra mắt: 2022; Thương hiệu: Honda; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Việt Nam; Model: Vision; Phương thức giao hàng Seller Delivery: Khách hàng đến lấy hàng tại nhà bán; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 3 Năm; Cao Cấp: Xanh Đen 2025
+  >> Phương thức giao hàng Seller Delivery: Khách hàng đến lấy hàng tại nhà bán
+  Bản 1: 买家到卖家处自提
+  Bản 2: 客户到卖家处自提
+
+#52 [electronics] SP 209386109
+  NGỮ CẢNH: Thời gian pin: Pin Earbuds: 30mAH*2 - Hộp sạc pin: 300mAH; Bluetooth: V5.3; Thương hiệu: FIRO; Xuất xứ thương hiệu: Việt Nam; Thời gian sạc: Thời gian chơi: ~5 giờ - Thời gian sạc: ~1,5 giờ - Thời gian chờ: 80 g; Kích thước: Kích thước đóng gói: 12cm*11cm*5cm; Độ nhạy: 10-15 mét; Model: FIRO FI5 Pro2; Loại Jack cắm: Type C; Lưu ý: Vỏ hộp chúng tôi có thể thay đổi tùy vào từng đợt sản xuất từ nhà máy.; Xuất xứ (Made in): Trung Quốc; Cổng sạc: Type C; Trọng lượng sản phẩm: 50gram; Tần số: 20Hz-20kHz; Sản phẩm có được bảo hành không?: Không; Màu sắc: FIRO FI5 Pro2 White
+  >> Lưu ý: Vỏ hộp chúng tôi có thể thay đổi tùy vào từng đợt sản xuất từ nhà máy.
+  Bản 1: 我们的包装盒可能会根据工厂的每批生产情况而有所变化。
+  Bản 2: 包装盒外观可能会根据工厂的不同生产批次而有所变化。
+
+#53 [electronics] SP 209386109
+  NGỮ CẢNH: Thời gian pin: Pin Earbuds: 30mAH*2 - Hộp sạc pin: 300mAH; Bluetooth: V5.3; Thương hiệu: FIRO; Xuất xứ thương hiệu: Việt Nam; Thời gian sạc: Thời gian chơi: ~5 giờ - Thời gian sạc: ~1,5 giờ - Thời gian chờ: 80 g; Kích thước: Kích thước đóng gói: 12cm*11cm*5cm; Độ nhạy: 10-15 mét; Model: FIRO FI5 Pro2; Loại Jack cắm: Type C; Lưu ý: Vỏ hộp chúng tôi có thể thay đổi tùy vào từng đợt sản xuất từ nhà máy.; Xuất xứ (Made in): Trung Quốc; Cổng sạc: Type C; Trọng lượng sản phẩm: 50gram; Tần số: 20Hz-20kHz; Sản phẩm có được bảo hành không?: Không; Màu sắc: FIRO FI5 Pro2 White
+  >> Trọng lượng sản phẩm: 50gram
+  Bản 1: 50gram
+  Bản 2: 50克
+
+#54 [auto] SP 223830741
+  NGỮ CẢNH: Chiều cao khuyến nghị: Từ 1.2m - 1.4m; Phuộc: Không; Màu sắc: Xanh, kem, trắng ,nâu; Thắng xe: Nhôm; Thương hiệu: Thống Nhất; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Model: LD24.01.2023; Tải trọng tối đa: 150 kg; Hướng dẫn sử dụng: Khách hàng sử dụng chiếc lục lăng để vặn ghi đông xe - Khách hàng nên ; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 5 Năm; Màu Sắc: Kem, Màu Nâu, Màu trắng, Màu xanh
+  >> Thương hiệu: Thống Nhất
+  Bản 1: Thống Nhất
+  Bản 2: 统一
+
+#55 [auto] SP 223830741
+  NGỮ CẢNH: Chiều cao khuyến nghị: Từ 1.2m - 1.4m; Phuộc: Không; Màu sắc: Xanh, kem, trắng ,nâu; Thắng xe: Nhôm; Thương hiệu: Thống Nhất; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Model: LD24.01.2023; Tải trọng tối đa: 150 kg; Hướng dẫn sử dụng: Khách hàng sử dụng chiếc lục lăng để vặn ghi đông xe - Khách hàng nên ; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 5 Năm; Màu Sắc: Kem, Màu Nâu, Màu trắng, Màu xanh
+  >> Hướng dẫn sử dụng: Khách hàng sử dụng chiếc lục lăng để vặn ghi đông xe - Khách hàng nên rửa xe khi bị bẩn - Không nên để xe ngoài mưa trong thời gian dài - Nên tra nhớt vào xích lip thường xuyên để tăng tuổi thọ và độ bôi trơn bền bỉ
+  Bản 1: 客户使用内六角扳手拧紧车把 - 车辆脏污时应进行清洗 - 不宜长时间将车辆置于雨中 - 应定期为链条上油以延长使用寿命并保持持久润滑
+  Bản 2: 客户使用内六角扳手来拧紧车把 - 车辆脏污时建议清洗车辆 - 不建议长时间将车辆停放在雨中 - 应定期为链条上油以增加使用寿命和持久润滑度
+
+#56 [auto] SP 223830741
+  NGỮ CẢNH: Chiều cao khuyến nghị: Từ 1.2m - 1.4m; Phuộc: Không; Màu sắc: Xanh, kem, trắng ,nâu; Thắng xe: Nhôm; Thương hiệu: Thống Nhất; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Model: LD24.01.2023; Tải trọng tối đa: 150 kg; Hướng dẫn sử dụng: Khách hàng sử dụng chiếc lục lăng để vặn ghi đông xe - Khách hàng nên ; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 5 Năm; Màu Sắc: Kem, Màu Nâu, Màu trắng, Màu xanh
+  >> Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng
+  Bản 1: 卖家配送给客户
+  Bản 2: 卖家配送给买家
+
+#57 [electronics] SP 22760568
+  NGỮ CẢNH: Thương hiệu: VR Shinecon; Phụ kiện đi kèm: 01 Kính thực tế ảo; Sản phẩm có được bảo hành không?: Có; Thời gian bảo hành: 3 Tháng
+  >> Phụ kiện đi kèm: 01 Kính thực tế ảo
+  Bản 1: 01 个虚拟现实眼镜
+  Bản 2: 01 VR眼镜
+
+#58 [mother_baby] SP 243043908
+  NGỮ CẢNH: Họa tiết: Không; Thương hiệu: UBMOM; Xuất xứ thương hiệu: Korea; Xuất xứ (Made in): Korea; Sản phẩm có được bảo hành không?: Không; Màu sắc: Hồng, Vàng, Xanh; Size: L, M, S, Y
+  >> Màu sắc: Hồng, Vàng, Xanh
+  Bản 1: 粉红色, 黄色, 蓝色
+  Bản 2: 粉色, 黄色, 蓝色
+
+#59 [mother_baby] SP 247427699
+  NGỮ CẢNH: Thành phần: Tham khảo mô tả; Khối lượng (kg): 0.8; Thương hiệu: NAN; Xuất xứ thương hiệu: Thụy Sỹ; Xuất xứ (Made in): Thụy Sỹ; Hạn sử dụng: 24 tháng từ ngày sản xuất; Sản phẩm có được bảo hành không?: Không
+  >> Thành phần: Tham khảo mô tả
+  Bản 1: 详见描述
+  Bản 2: 参考描述
+
+#60 [auto] SP 247787266
+  NGỮ CẢNH: Thương hiệu: Ekokemika; Xuất xứ thương hiệu: Italia; Xuất xứ (Made in): Italia; Model: X10-1; Hướng dẫn sử dụng: Hướng dẫn sử dụng: Phun đều dung dịch đã được pha loãng lên toàn thân ; Sản phẩm có được bảo hành không?: Không
+  >> Hướng dẫn sử dụng: Hướng dẫn sử dụng: Phun đều dung dịch đã được pha loãng lên toàn thân xe (xem phần tỷ lệ pha loãng) phun từ dưới lên trên, chờ bụi bẩn tan ra (30s vào mùa hè, 1p30 vào mùa đông), xịt kỹ lại lần lượt từ trên bằng vòi áp lực cao. Dung dịch cũng phù hợp với các hệ thống rửa ít bọt Tỷ lệ pha loãng: Sử dụng với bình phun bọt: 1:70 đến 1:90 Sử dụng với súng phun tạo bọt: Tỷ lệ 1:6-1:7 ( pha 130-160ml với 1lts nước) Sử dụng với bơm định lựong hoăc bình xịt tay: 1,2%-1,4%
+  Bản 1: 使用说明: 将稀释后的溶液均匀喷洒在全车身（参见稀释比例），由下而上喷洒，等待污垢溶解（夏季 30s，冬季 1分30s），然后使用高压喷嘴从上往下仔细冲洗。该溶液也适用于低泡沫清洗系统。稀释比例: 使用泡沫喷壶时: 1:70 至 1:90; 使用泡沫喷枪时: 比例 1:6-1:7 (将 130-160ml 混合于 1lts 水中); 使用定量泵或手动喷雾器时: 1.2%-1.4%
+  Bản 2: 使用说明：将稀释后的溶液均匀喷洒在全车身（参见稀释比例），由下而上喷洒，等待污垢溶解（夏季30秒，冬季1分30秒），然后依次使用高压水枪从上往下彻底冲洗。该溶液也适用于低泡沫清洗系统。稀释比例：配合泡沫喷壶使用：1:70 至 1:90；配合泡沫喷枪使用：比例 1:6-1:7（将 130-160ml 混合于 1L 水中）；配合定量泵或手动喷雾器使用：1.2%-1.4%
+
+#61 [home] SP 249222634
+  NGỮ CẢNH: Thương hiệu: ongtre; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Sản phẩm có được bảo hành không?: Không; Chất liệu: Cói, Lục bình; Kích thước: 100cm, 120cm, 60cm, 80cm
+  >> Chất liệu: Cói, Lục bình
+  Bản 1: 草编, 水葫芦
+  Bản 2: 藤编, 水葫芦
+
+#62 [auto] SP 251451954
+  NGỮ CẢNH: Chiều cao khuyến nghị: Từ 1.4m - 1.6m; Phuộc: Có; Màu sắc: xám, xanh; Thắng xe: vành-cụm; Thương hiệu: Aima; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Model: Aima Venus 26 inch; Tải trọng tối đa: 100kg; Hướng dẫn sử dụng: Khách hàng nhận xe về lắp giỏ xe bằng 4 chiếc ốc mà shop đã lắp sẵn ở ; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 1 Năm; Màu: ghi xám, xanh
+  >> Thắng xe: vành-cụm
+  Bản 1: 轮圈-组件
+  Bản 2: 轮毂组件
+
+#63 [auto] SP 251451954
+  NGỮ CẢNH: Chiều cao khuyến nghị: Từ 1.4m - 1.6m; Phuộc: Có; Màu sắc: xám, xanh; Thắng xe: vành-cụm; Thương hiệu: Aima; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Model: Aima Venus 26 inch; Tải trọng tối đa: 100kg; Hướng dẫn sử dụng: Khách hàng nhận xe về lắp giỏ xe bằng 4 chiếc ốc mà shop đã lắp sẵn ở ; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 1 Năm; Màu: ghi xám, xanh
+  >> Hướng dẫn sử dụng: Khách hàng nhận xe về lắp giỏ xe bằng 4 chiếc ốc mà shop đã lắp sẵn ở giỏ xe và sử dụng được ngay - Khách hàng sử dụng chiếc lục lăng để vặn ghi đông xe - Khách hàng nên rửa xe khi bị bẩn - Không nên để xe ngoài mưa trong thời gian dài - Nên tra nhớt vào xích lip thường xuyên để tăng tuổi thọ và độ bôi trơn bền bỉ.
+  Bản 1: 客户收到车后，使用店铺已预装在车筐上的4颗螺丝即可安装车筐并立即使用 - 客户使用内六角扳手拧紧车把 - 车脏时建议清洗车辆 - 不建议长时间将车停放在雨中 - 应定期为链条上油，以增加使用寿命并保持持久润滑。
+  Bản 2: 客户收到车后，使用店铺已预装在车篮上的4颗螺丝即可安装车篮并立即使用 - 客户使用内六角扳手来拧紧车把 - 车辆脏污时应进行清洗 - 不建议长时间将车辆停放在雨中 - 应定期为链条上油，以延长使用寿命并保持持久润滑。
+
+#64 [auto] SP 251451954
+  NGỮ CẢNH: Chiều cao khuyến nghị: Từ 1.4m - 1.6m; Phuộc: Có; Màu sắc: xám, xanh; Thắng xe: vành-cụm; Thương hiệu: Aima; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Model: Aima Venus 26 inch; Tải trọng tối đa: 100kg; Hướng dẫn sử dụng: Khách hàng nhận xe về lắp giỏ xe bằng 4 chiếc ốc mà shop đã lắp sẵn ở ; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 1 Năm; Màu: ghi xám, xanh
+  >> Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng
+  Bản 1: 卖家配送给买家
+  Bản 2: 卖家送货上门
+
+#65 [auto] SP 251904410
+  NGỮ CẢNH: Dòng xe sử dụng: Winner, Exciter, Satria, Raider, Sonic, Dream, Wave, Future, Sirius, T; Thương hiệu: CATTA; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Model: SÊN-428H-VÀNG; Hướng dẫn sử dụng: Sên 10 ly vàng - Sên 428H thương hiệu CATTA Spare Parts chất lượng cao; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 12 Tháng; Loại: 102L, 106L, 108L, 116L, 122L
+  >> Model: SÊN-428H-VÀNG
+  Bản 1: 金色-428H-链条
+  Bản 2: 428H金色链条
+
+#66 [auto] SP 251904410
+  NGỮ CẢNH: Dòng xe sử dụng: Winner, Exciter, Satria, Raider, Sonic, Dream, Wave, Future, Sirius, T; Thương hiệu: CATTA; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Model: SÊN-428H-VÀNG; Hướng dẫn sử dụng: Sên 10 ly vàng - Sên 428H thương hiệu CATTA Spare Parts chất lượng cao; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 12 Tháng; Loại: 102L, 106L, 108L, 116L, 122L
+  >> Hướng dẫn sử dụng: Sên 10 ly vàng - Sên 428H thương hiệu CATTA Spare Parts chất lượng cao phù hợp với nhiều dòng xe máy phổ biến trên thị trường hiện nay: Exciter, Winner, Raider Fi, Satria 150 Fi, Sonic, Sirius, Taurus, Dream, Wave, Future, Axelo,... Độ bền sên 10 ly CATTA: > 30.000 KM
+  Bản 1: 10mm金色链条 - CATTA Spare Parts品牌高品质428H链条，适用于目前市场上多种热门摩托车车型：Exciter, Winner, Raider Fi, Satria 150 Fi, Sonic, Sirius, Taurus, Dream, Wave, Future, Axelo,... CATTA 10mm链条耐用度：> 30,000 KM
+  Bản 2: 10mm 金色链条 - CATTA Spare Parts 品牌 428H 高品质链条，适用于目前市场上多种流行摩托车车型：Exciter, Winner, Raider Fi, Satria 150 Fi, Sonic, Sirius, Taurus, Dream, Wave, Future, Axelo,... CATTA 10mm 链条耐用度：> 30.000 KM
+
+#67 [auto] SP 251904410
+  NGỮ CẢNH: Dòng xe sử dụng: Winner, Exciter, Satria, Raider, Sonic, Dream, Wave, Future, Sirius, T; Thương hiệu: CATTA; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Model: SÊN-428H-VÀNG; Hướng dẫn sử dụng: Sên 10 ly vàng - Sên 428H thương hiệu CATTA Spare Parts chất lượng cao; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 12 Tháng; Loại: 102L, 106L, 108L, 116L, 122L
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票保修
+  Bản 2: 发票
+
+#68 [beauty] SP 252402756
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Không; Thương hiệu: Durex; Xuất xứ (Made in): Thái Lan; Hạn sử dụng: Xem trên vỏ bao bì
+  >> Hạn sử dụng: Xem trên vỏ bao bì
+  Bản 1: 见包装外壳
+  Bản 2: 见外包装
+
+#69 [electronics] SP 271952834
+  NGỮ CẢNH: Thương hiệu: WIWU; Xuất xứ thương hiệu: Hong Kong; Độ phân giải quang học: 2400dpi; Tính năng: Kết nối đa thiết bị; Model: Chuột không dây bluetooth 5.1 trong suốt lộ cơ hiệu WiWU Crystal Wirel; Xuất xứ (Made in): Hong Kong; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 3 Tháng; Chọn màu: Xanh, Đen
+  >> Model: Chuột không dây bluetooth 5.1 trong suốt lộ cơ hiệu WiWU Crystal Wireless Magetic Mouse WM105
+  Bản 1: WIWU Crystal 透明机械感蓝牙 5.1 无线鼠标 WM105
+  Bản 2: WiWU Crystal Wireless Magetic Mouse WM105 透明机械感蓝牙5.1无线鼠标
+
+#70 [electronics] SP 271952834
+  NGỮ CẢNH: Thương hiệu: WIWU; Xuất xứ thương hiệu: Hong Kong; Độ phân giải quang học: 2400dpi; Tính năng: Kết nối đa thiết bị; Model: Chuột không dây bluetooth 5.1 trong suốt lộ cơ hiệu WiWU Crystal Wirel; Xuất xứ (Made in): Hong Kong; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 3 Tháng; Chọn màu: Xanh, Đen
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票保修
+  Bản 2: 发票
+
+#71 [auto] SP 272302433
+  NGỮ CẢNH: Thương hiệu: Thống Nhất; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Model: MTB26-02; Tải trọng tối đa: 150; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 5 Năm; Màu sắc: Màu Ghi, Màu Đỏ, Màu đen, Xanh dương
+  >> Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng
+  Bản 1: 卖家配送
+  Bản 2: 卖家配送给买家
+
+#72 [auto] SP 273467903
+  NGỮ CẢNH: Thương hiệu: ROYALBABY; Xuất xứ thương hiệu: Trung Quốc; Xuất xứ (Made in): Trung Quốc; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 1 Năm
+  >> Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng
+  Bản 1: 卖家配送给买家
+  Bản 2: 卖家配送
+
+#73 [auto] SP 273720155
+  NGỮ CẢNH: Thương hiệu: FUHACHI; Xuất xứ thương hiệu: Đài Loan; Xuất xứ (Made in): Đài Loan; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 12 Tháng
+  >> Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng
+  Bản 1: 卖家配送给买家
+  Bản 2: 卖家配送
+
+#74 [electronics] SP 274030062
+  NGỮ CẢNH: Thương hiệu: SanDisk; Xuất xứ thương hiệu: Mỹ; Xuất xứ (Made in): Trung Quốc; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Tem bảo hành; Thời gian bảo hành: 36 Tháng; Dung lượng: 128GB, 256GB, 512GB
+  >> Hình thức bảo hành: Tem bảo hành
+  Bản 1: 保修标签
+  Bản 2: 保修贴
+
+#75 [home] SP 274171126
+  NGỮ CẢNH: Thương hiệu: MINIIN; Xuất xứ thương hiệu: Việt Nam; Model: MỚI NHẤT; Kích thước (Dài x Rộng x Cao): Kích thước: 28x47x20cm; Chất liệu: Chất liệu: Vải Cation, khung thép sơn tĩnh điện; Xuất xứ (Made in): Trung Quốc; Sản phẩm có được bảo hành không?: Không; Màu: Họa tiết ngẫu nhiên, màu xám
+  >> Chất liệu: Chất liệu: Vải Cation, khung thép sơn tĩnh điện
+  Bản 1: 材质: Cation面料, 静电喷涂钢架
+  Bản 2: 材质: 卡登布, 静电喷涂钢架
+
+#76 [home] SP 274171126
+  NGỮ CẢNH: Thương hiệu: MINIIN; Xuất xứ thương hiệu: Việt Nam; Model: MỚI NHẤT; Kích thước (Dài x Rộng x Cao): Kích thước: 28x47x20cm; Chất liệu: Chất liệu: Vải Cation, khung thép sơn tĩnh điện; Xuất xứ (Made in): Trung Quốc; Sản phẩm có được bảo hành không?: Không; Màu: Họa tiết ngẫu nhiên, màu xám
+  >> Màu: Họa tiết ngẫu nhiên, màu xám
+  Bản 1: 随机花纹, 灰色
+  Bản 2: 随机图案, 灰色
+
+#77 [auto] SP 274679278
+  NGỮ CẢNH: Chất liệu: Bên trong EPS & Vỏ PC & Vải Nylon; Thương hiệu: WAHAMA; Xuất xứ thương hiệu: Trung Quốc; Xuất xứ (Made in): Trung Quốc; Model: Musion; Sản phẩm có được bảo hành không?: Không; Màu Sắc: Carbon 3D, Hồng đen, Trắng Hồng, Trắng Đỏ, Xanh đen, Đen Vàng, Đen đuô
+  >> Chất liệu: Bên trong EPS & Vỏ PC & Vải Nylon
+  Bản 1: 内层 EPS & 外壳 PC & 尼龙面料
+  Bản 2: 内层 EPS & 外壳 PC & 尼龙织物
+
+#78 [auto] SP 274679278
+  NGỮ CẢNH: Chất liệu: Bên trong EPS & Vỏ PC & Vải Nylon; Thương hiệu: WAHAMA; Xuất xứ thương hiệu: Trung Quốc; Xuất xứ (Made in): Trung Quốc; Model: Musion; Sản phẩm có được bảo hành không?: Không; Màu Sắc: Carbon 3D, Hồng đen, Trắng Hồng, Trắng Đỏ, Xanh đen, Đen Vàng, Đen đuô
+  >> Màu Sắc: Carbon 3D, Hồng đen, Trắng Hồng, Trắng Đỏ, Xanh đen, Đen Vàng, Đen đuôi đỏ, Đen đỏ, đen trắng
+  Bản 1: Carbon 3D, 粉黑, 白粉, 白红, 蓝黑, 黑黄, 黑红尾, 黑红, 黑白
+  Bản 2: 3D碳纤维, 粉黑, 白粉, 白红, 蓝黑, 黑黄, 黑红尾, 黑红, 黑白
+
+#79 [auto] SP 275118022
+  NGỮ CẢNH: Thương hiệu: Ultra Thin; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Sản phẩm có được bảo hành không?: Không; Dòng Xe: Bạt Che Kính Lái, Toyota Alphard, Toyota Avanza Premio, Toyota Camry, 
+  >> Dòng Xe: Bạt Che Kính Lái, Toyota Alphard, Toyota Avanza Premio, Toyota Camry, Toyota Corolla Altis, Toyota Corolla Cross, Toyota Fortuner, Toyota Hilux, Toyota Innova, Toyota Land Cruiser, Toyota Land Cruiser Prado, Toyota Raize, Toyota Veloz Cross, Toyota Vios, Toyota Yaris
+  Bản 1: 挡风玻璃遮阳帘, Toyota Alphard, Toyota Avanza Premio, Toyota Camry, Toyota Corolla Altis, Toyota Corolla Cross, Toyota Fortuner, Toyota Hilux, Toyota Innova, Toyota Land Cruiser, Toyota Land Cruiser Prado, Toyota Raize, Toyota Veloz Cross, Toyota Vios, Toyota Yaris
+  Bản 2: 前挡风玻璃遮阳帘, Toyota Alphard, Toyota Avanza Premio, Toyota Camry, Toyota Corolla Altis, Toyota Corolla Cross, Toyota Fortuner, Toyota Hilux, Toyota Innova, Toyota Land Cruiser, Toyota Land Cruiser Prado, Toyota Raize, Toyota Veloz Cross, Toyota Vios, Toyota Yaris
+
+#80 [auto] SP 275198810
+  NGỮ CẢNH: Thương hiệu: Ultra Thin; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Sản phẩm có được bảo hành không?: Không; Loại: Da Vân Carbon, Nhung Lông Cừu; Đời xe: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
+  >> Loại: Da Vân Carbon, Nhung Lông Cừu
+  Bản 1: 碳纤维纹理皮, 羊绒
+  Bản 2: 碳纤维纹皮革, 羊羔绒
+
+#81 [auto] SP 275204436
+  NGỮ CẢNH: Thương hiệu: Ultra Thin; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Sản phẩm có được bảo hành không?: Không; Loại: Da Vân Carbon, Nhung Lông Cừu; Đời xe: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
+  >> Loại: Da Vân Carbon, Nhung Lông Cừu
+  Bản 1: 碳纤维纹理皮, 羊绒
+  Bản 2: 碳纤维纹皮革, 羊羔绒
+
+#82 [electronics] SP 275207303
+  NGỮ CẢNH: Thời gian pin: 7 ngày sử dụng; Thương hiệu: DTNO.1; Xuất xứ thương hiệu: China; Thời gian sạc: 2-3 tiếng; Phụ kiện đi kèm: Dây sạc và hướng dẫn sử dụng bằng tiếng Việt; Model: DT5Mate; Xuất xứ (Made in): China; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 12 Tháng
+  >> Thời gian pin: 7 ngày sử dụng
+  Bản 1: 7天使用
+  Bản 2: 7天使用量
+
+#83 [electronics] SP 275207303
+  NGỮ CẢNH: Thời gian pin: 7 ngày sử dụng; Thương hiệu: DTNO.1; Xuất xứ thương hiệu: China; Thời gian sạc: 2-3 tiếng; Phụ kiện đi kèm: Dây sạc và hướng dẫn sử dụng bằng tiếng Việt; Model: DT5Mate; Xuất xứ (Made in): China; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 12 Tháng
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票
+  Bản 2: 发票保修
+
+#84 [electronics] SP 275273234
+  NGỮ CẢNH: Thời gian pin: 48h; Thương hiệu: MAI DUY; Xuất xứ thương hiệu: Việt Nam; Thời gian sạc: 4h; Chất liệu mặt: nhựa cao cấp; Độ chịu nước: ip67; Kích thước mặt: 1.44; Phụ kiện đi kèm: hộp ,cáp sạc,que trọc sim; Model: c80; Xuất xứ (Made in): China / Vietnam; Trọng lượng sản phẩm: 0.2; Cảm ứng: có; Hỗ trợ đàm thoại: Có; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 6 Tháng; Màu sắc: màu hồng, màu xanh, màu đen
+  >> Phụ kiện đi kèm: hộp ,cáp sạc,que trọc sim
+  Bản 1: 盒 ,充电线, 取卡针
+  Bản 2: 盒子, 充电线, 取卡针
+
+#85 [electronics] SP 275273234
+  NGỮ CẢNH: Thời gian pin: 48h; Thương hiệu: MAI DUY; Xuất xứ thương hiệu: Việt Nam; Thời gian sạc: 4h; Chất liệu mặt: nhựa cao cấp; Độ chịu nước: ip67; Kích thước mặt: 1.44; Phụ kiện đi kèm: hộp ,cáp sạc,que trọc sim; Model: c80; Xuất xứ (Made in): China / Vietnam; Trọng lượng sản phẩm: 0.2; Cảm ứng: có; Hỗ trợ đàm thoại: Có; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 6 Tháng; Màu sắc: màu hồng, màu xanh, màu đen
+  >> Màu sắc: màu hồng, màu xanh, màu đen
+  Bản 1: 粉色, 蓝色, 黑色
+  Bản 2: 粉红色, 蓝色, 黑色
+
+#86 [mother_baby] SP 275297893
+  NGỮ CẢNH: Thành phần: Tham khảo mô tả; Khối lượng (kg): 0.85; Thương hiệu: Grow; Xuất xứ thương hiệu: Mỹ; Xuất xứ (Made in): Singapore; Hạn sử dụng: 36 tháng kể từ ngày sản xuất; Sản phẩm có được bảo hành không?: Không
+  >> Thành phần: Tham khảo mô tả
+  Bản 1: 参考描述
+  Bản 2: 详见描述
+
+#87 [home] SP 275506778
+  NGỮ CẢNH: Thương hiệu: LoveMama; Xuất xứ thương hiệu: Việt Nam; Chất liệu: CHẤT LIỆU GA CHỐNG THẤM HỌA TIẾT MÈO Vải Cotton thun mềm mại thoáng má; Hướng dẫn bảo quản: HƯỚNG DẪN SỬ DỤNG GA CHỐNG THẤM HỌA TIẾT MÈO Ga chun bo 4 góc, bọc như; Hướng dẫn sử dụng: HƯỚNG DẪN SỬ DỤNG GA CHỐNG THẤM HỌA TIẾT MÈO Sản phẩm bọc trực tiếp và; Model: LM10_01_gachongtham_lovemama; Kích thước (Dài x Rộng x Cao): Đầy đủ kích thước yêu cầu; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 0.4; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 6 Tháng; Chọn kích thước Ga: 1m2x2m, 1m4x2m, 1m6x2m, 1m8x2m, 1mx2m, 2m2x2m, 2mx2m; chiều cao nệm: 10cm, 20cm, 30cm
+  >> Chất liệu: CHẤT LIỆU GA CHỐNG THẤM HỌA TIẾT MÈO Vải Cotton thun mềm mại thoáng mát, không gây nóng bí hơi, không có tiếng sột soạt Vải Cotton thun cao cấp sợi vải 1A (loại tốt nhất)
+  Bản 1: 猫咪图案防水床笠材质：柔软透气的棉氨纤维面料，不闷热，无摩擦声。优质1A级棉氨纤维面料（最高级别）
+  Bản 2: 猫咪图案防水床笠材质 柔软透气的棉氨布，不闷热，无摩擦声 高级棉氨布 1A纤维（顶级）
+
+#88 [home] SP 275506778
+  NGỮ CẢNH: Thương hiệu: LoveMama; Xuất xứ thương hiệu: Việt Nam; Chất liệu: CHẤT LIỆU GA CHỐNG THẤM HỌA TIẾT MÈO Vải Cotton thun mềm mại thoáng má; Hướng dẫn bảo quản: HƯỚNG DẪN SỬ DỤNG GA CHỐNG THẤM HỌA TIẾT MÈO Ga chun bo 4 góc, bọc như; Hướng dẫn sử dụng: HƯỚNG DẪN SỬ DỤNG GA CHỐNG THẤM HỌA TIẾT MÈO Sản phẩm bọc trực tiếp và; Model: LM10_01_gachongtham_lovemama; Kích thước (Dài x Rộng x Cao): Đầy đủ kích thước yêu cầu; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 0.4; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 6 Tháng; Chọn kích thước Ga: 1m2x2m, 1m4x2m, 1m6x2m, 1m8x2m, 1mx2m, 2m2x2m, 2mx2m; chiều cao nệm: 10cm, 20cm, 30cm
+  >> Hướng dẫn bảo quản: HƯỚNG DẪN SỬ DỤNG GA CHỐNG THẤM HỌA TIẾT MÈO Ga chun bo 4 góc, bọc như ga bình thường. Giặt được bằng máy giặt, có hướng dẫn sử dụng và bảo hành ở bao bì sản phẩm.
+  Bản 1: 猫咪图案防水床笠使用指南 四角床笠式，像普通床单一样包裹。可用洗衣机清洗，产品包装上有使用说明和保修信息。
+  Bản 2: 猫咪图案防水床笠使用指南：四角松紧带设计，像普通床笠一样包裹。可用洗衣机清洗，产品包装内附有使用说明和保修卡。
+
+#89 [home] SP 275506778
+  NGỮ CẢNH: Thương hiệu: LoveMama; Xuất xứ thương hiệu: Việt Nam; Chất liệu: CHẤT LIỆU GA CHỐNG THẤM HỌA TIẾT MÈO Vải Cotton thun mềm mại thoáng má; Hướng dẫn bảo quản: HƯỚNG DẪN SỬ DỤNG GA CHỐNG THẤM HỌA TIẾT MÈO Ga chun bo 4 góc, bọc như; Hướng dẫn sử dụng: HƯỚNG DẪN SỬ DỤNG GA CHỐNG THẤM HỌA TIẾT MÈO Sản phẩm bọc trực tiếp và; Model: LM10_01_gachongtham_lovemama; Kích thước (Dài x Rộng x Cao): Đầy đủ kích thước yêu cầu; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 0.4; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 6 Tháng; Chọn kích thước Ga: 1m2x2m, 1m4x2m, 1m6x2m, 1m8x2m, 1mx2m, 2m2x2m, 2mx2m; chiều cao nệm: 10cm, 20cm, 30cm
+  >> Hướng dẫn sử dụng: HƯỚNG DẪN SỬ DỤNG GA CHỐNG THẤM HỌA TIẾT MÈO Sản phẩm bọc trực tiếp vào nện, không cần thêm lớp ga nào phủ lên trên. Ga nằm trực tiếp. Bảo quản nơi khô ráo thoáng mát, trong tủ quần cáo. Giặt ga trong máy giặt, nhiệt độ sấy dưới 40 độ C
+  Bản 1: 猫咪图案防水床笠使用指南：产品直接包裹在床垫上，无需额外铺设床单。床笠直接铺设。请存放在衣柜等干燥通风处。可用洗衣机清洗，烘干温度需低于40°C
+  Bản 2: 猫咪图案防水床笠使用指南 产品直接包裹在床垫上，无需额外铺设床单。床笠直接铺设。保存在衣柜内干燥通风处。使用洗衣机清洗床笠，烘干温度需低于 40 度 C
+
+#90 [home] SP 275506778
+  NGỮ CẢNH: Thương hiệu: LoveMama; Xuất xứ thương hiệu: Việt Nam; Chất liệu: CHẤT LIỆU GA CHỐNG THẤM HỌA TIẾT MÈO Vải Cotton thun mềm mại thoáng má; Hướng dẫn bảo quản: HƯỚNG DẪN SỬ DỤNG GA CHỐNG THẤM HỌA TIẾT MÈO Ga chun bo 4 góc, bọc như; Hướng dẫn sử dụng: HƯỚNG DẪN SỬ DỤNG GA CHỐNG THẤM HỌA TIẾT MÈO Sản phẩm bọc trực tiếp và; Model: LM10_01_gachongtham_lovemama; Kích thước (Dài x Rộng x Cao): Đầy đủ kích thước yêu cầu; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 0.4; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 6 Tháng; Chọn kích thước Ga: 1m2x2m, 1m4x2m, 1m6x2m, 1m8x2m, 1mx2m, 2m2x2m, 2mx2m; chiều cao nệm: 10cm, 20cm, 30cm
+  >> Kích thước (Dài x Rộng x Cao): Đầy đủ kích thước yêu cầu
+  Bản 1: 提供所有所需尺寸
+  Bản 2: 齐全所需尺寸
+
+#91 [food] SP 275597210
+  NGỮ CẢNH: Thương hiệu: Bibica; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 12 tháng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 180g; Độ tuổi phù hợp: Không; Vị: Cốm, Dâu
+  >> Độ tuổi phù hợp: Không
+  Bản 1: 无
+  Bản 2: 不适用
+
+#92 [food] SP 275597210
+  NGỮ CẢNH: Thương hiệu: Bibica; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 12 tháng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 180g; Độ tuổi phù hợp: Không; Vị: Cốm, Dâu
+  >> Vị: Cốm, Dâu
+  Bản 1: 糯米, 草莓
+  Bản 2: 糯米香, 草莓
+
+#93 [auto] SP 275597805
+  NGỮ CẢNH: Dòng xe sử dụng: Phù hợp với các dòng xe máy phân khối 200-500cc: SH300i, Vespa GTS, Ya; Chất liệu: Pin Lithium LifePO4; Thương hiệu: DZM; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Model: BP110; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Tem bảo hành; Thời gian bảo hành: 2 Năm
+  >> Chất liệu: Pin Lithium LifePO4
+  Bản 1: LifePO4锂电池
+  Bản 2: 磷酸铁锂电池 (LifePO4)
+
+#94 [auto] SP 275597805
+  NGỮ CẢNH: Dòng xe sử dụng: Phù hợp với các dòng xe máy phân khối 200-500cc: SH300i, Vespa GTS, Ya; Chất liệu: Pin Lithium LifePO4; Thương hiệu: DZM; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Model: BP110; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Tem bảo hành; Thời gian bảo hành: 2 Năm
+  >> Hình thức bảo hành: Tem bảo hành
+  Bản 1: 保修标签
+  Bản 2: 保修贴
+
+#95 [electronics] SP 275606157
+  NGỮ CẢNH: Thương hiệu: Gucase; Xuất xứ thương hiệu: Hong Kong; Xuất xứ (Made in): Hong Kong / China; Sản phẩm có được bảo hành không?: Không; Công suất: Sạc nhanh 20W; Lựa chọn: Bộ sạc gồm củ sạc + cáp sạc, Cáp sạc 20W, Củ sạc 20W
+  >> Xuất xứ thương hiệu: Hong Kong
+  Bản 1: 中国香港
+  Bản 2: 香港
+
+#96 [electronics] SP 275606157
+  NGỮ CẢNH: Thương hiệu: Gucase; Xuất xứ thương hiệu: Hong Kong; Xuất xứ (Made in): Hong Kong / China; Sản phẩm có được bảo hành không?: Không; Công suất: Sạc nhanh 20W; Lựa chọn: Bộ sạc gồm củ sạc + cáp sạc, Cáp sạc 20W, Củ sạc 20W
+  >> Lựa chọn: Bộ sạc gồm củ sạc + cáp sạc, Cáp sạc 20W, Củ sạc 20W
+  Bản 1: 充电套装（充电头 + 数据线）, 20W 数据线, 20W 充电头
+  Bản 2: 充电器套装包括充电头 + 充电线, 20W 充电线, 20W 充电头
+
+#97 [auto] SP 275798415
+  NGỮ CẢNH: Chất liệu: Nhựa ABS; Thương hiệu: Mai Lee; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Trung Quốc; Model: LY-5509; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 1 Tháng
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票
+  Bản 2: 发票保修
+
+#98 [electronics] SP 275831091
+  NGỮ CẢNH: Thương hiệu: wekome; Xuất xứ thương hiệu: Hong Kong; Xuất xứ (Made in): Hong Kong / China; Sản phẩm có được bảo hành không?: Không; Chọn màu: Hồng pastel, Màu Xanh, Màu Đen, Vàng gold; Chọn dòng máy: S22, S22 Plus, S22 Ultra
+  >> Xuất xứ (Made in): Hong Kong / China
+  Bản 1: 中国香港 / 中国
+  Bản 2: 香港 / 中国
+
+#99 [beauty] SP 275926329
+  NGỮ CẢNH: Lưu ý: HƯỚNG DẪN SỬ DỤNG: + Làm ướt tóc và cơ thể. + Cho 1 lượng sản phẩm vừa; Sản phẩm có được bảo hành không?: Không; Thương hiệu: Romano; Xuất xứ (Made in): Việt Nam; Hạn sử dụng: 3 NĂM; Phân Loại: Passion, Vision
+  >> Lưu ý: HƯỚNG DẪN SỬ DỤNG: + Làm ướt tóc và cơ thể. + Cho 1 lượng sản phẩm vừa đủ lên tóc và cơ thể, gội đầu và mát-xa toàn thân, sau đó tắm sạch lại với nước. HẠN SỬ DỤNG: + 3 năm kể từ ngày sản xuất. HƯỚNG DẪN BẢO QUẢN: + Bảo quản: nơi khô ráo thoáng mát. + Không bảo quản nơi có nhiệt độ quá cao hoặc quá thấp, tránh ánh sáng trực tiếp.
+  Bản 1: 使用说明: + 弄湿头发和身体。 + 取适量产品涂抹于头发和身体，洗头并按摩全身，然后用清水冲洗干净。 使用期限: + 自生产之日起3年。 保管指南: + 保管方式: 存放在阴凉干燥处。 + 请勿存放在温度过高或过低的地方，避免阳光直射。
+  Bản 2: 使用说明：+ 弄湿头发和身体。+ 取适量产品涂抹于头发和身体，洗头并按摩全身，然后用清水冲洗干净。保质期：+ 自生产之日起3年。保养指南：+ 存放方式：存放在阴凉干燥处。+ 请勿存放在温度过高或过低的地方，避免阳光直射。
+
+#100 [electronics] SP 276105959
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Không; Thương hiệu: Kai Nguyễn; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Đài Loan; Mẫu: Capy gõ mõ 80/30, Chó bull 80/30, Corgi cute. 80/30, Corgi work 80/30,
+  >> Mẫu: Capy gõ mõ 80/30, Chó bull 80/30, Corgi cute. 80/30, Corgi work 80/30, Hacker Bí ẩn, KhủngLong Cute 80/30, Mèo Đen Ngầu, Nitendo 1, SpiderMan 80/30, nitendo 2, Ếch Xanh 80/30
+  Bản 1: Capy敲木鱼 80/30, 牛头犬 80/30, 可爱Corgi 80/30, Corgi工作 80/30, 神秘黑客, 可爱恐龙 80/30, 酷黑猫, Nitendo 1, SpiderMan 80/30, nitendo 2, 绿青蛙 80/30
+  Bản 2: Capy敲木鱼 80/30, 牛头犬 80/30, 可爱Corgi 80/30, Corgi工作 80/30, 神秘黑客, 可爱恐龙 80/30, 酷炫黑猫, Nitendo 1, SpiderMan 80/30, nitendo 2, 青蛙 80/30
+
+#101 [home] SP 276155057
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Không; Thương hiệu: Office Chill; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Vải: Vải Cotton nhung kim cương kháng khuẩn, thoáng khí - Viền: Viền m; Kích thước (Dài x Rộng x Cao): 200cm X 90cm; Xuất xứ (Made in): Việt Nam / Hàn Quốc / Ấn Độ / Trung Quốc,...; Trọng lượng sản phẩm: 200gr; Chọn Phiên Bản: Cá Heo, Kẻ Sọc, Nai Sừng Tấm, Xám Đơn Giản
+  >> Chất liệu: Vải: Vải Cotton nhung kim cương kháng khuẩn, thoáng khí - Viền: Viền may 3 lớp chắc chắn, bo góc thẩm mỹ. - Ruột: Chần bông lụa lông vũ nhân tạo microfiber, công nghệ lắp đầy và định hình 100% đầy đặn, không vón cục, mềm mại đàn hồi cao.
+  Bản 1: 面料：抗菌透气钻石绒棉布 - 包边：三层缝合加固包边，美观圆角设计 - 内芯：超细纤维人造羽绒丝绵，100%填充定型技术，饱满不结块，柔软且高弹性。
+  Bản 2: 面料：抗菌透气钻石绒棉布 - 包边：坚固的三层缝边，美观的圆角设计 - 内芯：超细纤维人造羽绒丝绵，100%填充定型技术，饱满不结块，柔软且高弹性。
+
+#102 [home] SP 276155057
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Không; Thương hiệu: Office Chill; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Vải: Vải Cotton nhung kim cương kháng khuẩn, thoáng khí - Viền: Viền m; Kích thước (Dài x Rộng x Cao): 200cm X 90cm; Xuất xứ (Made in): Việt Nam / Hàn Quốc / Ấn Độ / Trung Quốc,...; Trọng lượng sản phẩm: 200gr; Chọn Phiên Bản: Cá Heo, Kẻ Sọc, Nai Sừng Tấm, Xám Đơn Giản
+  >> Chọn Phiên Bản: Cá Heo, Kẻ Sọc, Nai Sừng Tấm, Xám Đơn Giản
+  Bản 1: 海豚, 条纹, 梅鹿, 简约灰
+  Bản 2: 海豚, 条纹, 驯鹿, 简约灰
+
+#103 [electronics] SP 276246546
+  NGỮ CẢNH: Bluetooth: Có; Thương hiệu: Xiaomi; Xuất xứ thương hiệu: Trung Quốc; Xuất xứ (Made in): China; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 6 Tháng; Chọn Màu: Màu Trắng, Màu Đen, Màu Hồng
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票
+  Bản 2: 发票保修
+
+#104 [home] SP 276291448
+  NGỮ CẢNH: Thương hiệu: GUANG MING; Xuất xứ thương hiệu: Trung Quốc; Chất liệu: Thép, nhựa; Hướng dẫn bảo quản: Nơi khô thoáng; Hướng dẫn sử dụng: Treo vạn vật, cực kỳ đa năng; Model: Đinh 4 Chân Đóng Tường Treo Khung Ảnh; Kích thước (Dài x Rộng x Cao): 4 x 2 x 1 cm; Xuất xứ (Made in): Trung Quốc; Trọng lượng sản phẩm: 10gr; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 7 Ngày; Phân Loại: COMBO 2 Đinh 3 Chân Nhỏ, COMBO 2 Đinh Móc-L Lớn, COMBO 2 Đinh Móc-M Vừ
+  >> Hướng dẫn bảo quản: Nơi khô thoáng
+  Bản 1: 阴凉干燥处
+  Bản 2: 干燥通风处
+
+#105 [home] SP 276291448
+  NGỮ CẢNH: Thương hiệu: GUANG MING; Xuất xứ thương hiệu: Trung Quốc; Chất liệu: Thép, nhựa; Hướng dẫn bảo quản: Nơi khô thoáng; Hướng dẫn sử dụng: Treo vạn vật, cực kỳ đa năng; Model: Đinh 4 Chân Đóng Tường Treo Khung Ảnh; Kích thước (Dài x Rộng x Cao): 4 x 2 x 1 cm; Xuất xứ (Made in): Trung Quốc; Trọng lượng sản phẩm: 10gr; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 7 Ngày; Phân Loại: COMBO 2 Đinh 3 Chân Nhỏ, COMBO 2 Đinh Móc-L Lớn, COMBO 2 Đinh Móc-M Vừ
+  >> Hướng dẫn sử dụng: Treo vạn vật, cực kỳ đa năng
+  Bản 1: 可悬挂万物，功能极其强大
+  Bản 2: 可悬挂各种物品, 功能极其强大
+
+#106 [home] SP 276291448
+  NGỮ CẢNH: Thương hiệu: GUANG MING; Xuất xứ thương hiệu: Trung Quốc; Chất liệu: Thép, nhựa; Hướng dẫn bảo quản: Nơi khô thoáng; Hướng dẫn sử dụng: Treo vạn vật, cực kỳ đa năng; Model: Đinh 4 Chân Đóng Tường Treo Khung Ảnh; Kích thước (Dài x Rộng x Cao): 4 x 2 x 1 cm; Xuất xứ (Made in): Trung Quốc; Trọng lượng sản phẩm: 10gr; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 7 Ngày; Phân Loại: COMBO 2 Đinh 3 Chân Nhỏ, COMBO 2 Đinh Móc-L Lớn, COMBO 2 Đinh Móc-M Vừ
+  >> Model: Đinh 4 Chân Đóng Tường Treo Khung Ảnh
+  Bản 1: 四脚墙钉挂相框钉
+  Bản 2: (không có ở bộ 2)
+
+#107 [home] SP 276291448
+  NGỮ CẢNH: Thương hiệu: GUANG MING; Xuất xứ thương hiệu: Trung Quốc; Chất liệu: Thép, nhựa; Hướng dẫn bảo quản: Nơi khô thoáng; Hướng dẫn sử dụng: Treo vạn vật, cực kỳ đa năng; Model: Đinh 4 Chân Đóng Tường Treo Khung Ảnh; Kích thước (Dài x Rộng x Cao): 4 x 2 x 1 cm; Xuất xứ (Made in): Trung Quốc; Trọng lượng sản phẩm: 10gr; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 7 Ngày; Phân Loại: COMBO 2 Đinh 3 Chân Nhỏ, COMBO 2 Đinh Móc-L Lớn, COMBO 2 Đinh Móc-M Vừ
+  >> Phân Loại: COMBO 2 Đinh 3 Chân Nhỏ, COMBO 2 Đinh Móc-L Lớn, COMBO 2 Đinh Móc-M Vừa, COMBO 2 Đinh Sao
+  Bản 1: 2个小三脚钉组合, 2个大L型挂钩钉组合, 2个中M型挂钩钉组合, 2个星形钉组合
+  Bản 2: (không có ở bộ 2)
+
+#108 [home] SP 276328451
+  NGỮ CẢNH: Thương hiệu: FuNu; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Vải tuyn; Kích thước: 1.6m x 2m 1.8m x 2m 2m x 2.2m; Model: Cao cấp; Kích thước (Dài x Rộng x Cao): 30*25*5; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 0.4kg; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 12 Tháng; Chọn Màu: Màu Hồng, Màu xanh, Trắng Trơn
+  >> Chất liệu: Vải tuyn
+  Bản 1: 网眼布
+  Bản 2: 网纱布
+
+#109 [home] SP 276328451
+  NGỮ CẢNH: Thương hiệu: FuNu; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Vải tuyn; Kích thước: 1.6m x 2m 1.8m x 2m 2m x 2.2m; Model: Cao cấp; Kích thước (Dài x Rộng x Cao): 30*25*5; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 0.4kg; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 12 Tháng; Chọn Màu: Màu Hồng, Màu xanh, Trắng Trơn
+  >> Kích thước: 1.6m x 2m 1.8m x 2m 2m x 2.2m
+  Bản 1: 1.6m x 2m, 1.8m x 2m, 2m x 2.2m
+  Bản 2: 1.6m x 2m 1.8m x 2m 2m x 2.2m
+
+#110 [home] SP 276328451
+  NGỮ CẢNH: Thương hiệu: FuNu; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Vải tuyn; Kích thước: 1.6m x 2m 1.8m x 2m 2m x 2.2m; Model: Cao cấp; Kích thước (Dài x Rộng x Cao): 30*25*5; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 0.4kg; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 12 Tháng; Chọn Màu: Màu Hồng, Màu xanh, Trắng Trơn
+  >> Model: Cao cấp
+  Bản 1: 高级
+  Bản 2: 高端款
+
+#111 [home] SP 276328451
+  NGỮ CẢNH: Thương hiệu: FuNu; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Vải tuyn; Kích thước: 1.6m x 2m 1.8m x 2m 2m x 2.2m; Model: Cao cấp; Kích thước (Dài x Rộng x Cao): 30*25*5; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 0.4kg; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 12 Tháng; Chọn Màu: Màu Hồng, Màu xanh, Trắng Trơn
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票保修
+  Bản 2: 发票
+
+#112 [home] SP 276328451
+  NGỮ CẢNH: Thương hiệu: FuNu; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Vải tuyn; Kích thước: 1.6m x 2m 1.8m x 2m 2m x 2.2m; Model: Cao cấp; Kích thước (Dài x Rộng x Cao): 30*25*5; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 0.4kg; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 12 Tháng; Chọn Màu: Màu Hồng, Màu xanh, Trắng Trơn
+  >> Chọn Màu: Màu Hồng, Màu xanh, Trắng Trơn
+  Bản 1: 粉色, 蓝色, 素白色
+  Bản 2: 粉红色, 蓝色, 纯白色
+
+#113 [food] SP 276568883
+  NGỮ CẢNH: Thương hiệu: FTAKY; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 12 tháng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 500g; phân loại: 1 hủ 500g, 1kg 2 hủ 500g, gói 100g dùng thử
+  >> phân loại: 1 hủ 500g, 1kg 2 hủ 500g, gói 100g dùng thử
+  Bản 1: 1罐 500g, 1kg 2罐 500g, 100g 试用装
+  Bản 2: 1罐 500g, 1kg (2罐 500g), 100g试用装
+
+#114 [food] SP 276717407
+  NGỮ CẢNH: Thương hiệu: VietTin Mart; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 6 tháng; Hướng dẫn bảo quản: Nơi khô ráo, thoáng mát hoặc bảo quản tủ lạnh. Tránh ánh nắng mặt trời; Hướng dẫn sử dụng: sử dụng trực tiếp và đậy kín khi không sử dụng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Thành phần: khoai tây, trứng muối, phomai bột,...
+  >> Hướng dẫn bảo quản: Nơi khô ráo, thoáng mát hoặc bảo quản tủ lạnh. Tránh ánh nắng mặt trời trực tiếp
+  Bản 1: 干燥、凉爽处或冷藏保存。避免阳光直射
+  Bản 2: 置于阴凉干燥处或冷藏保存。避免阳光直射
+
+#115 [food] SP 276717407
+  NGỮ CẢNH: Thương hiệu: VietTin Mart; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 6 tháng; Hướng dẫn bảo quản: Nơi khô ráo, thoáng mát hoặc bảo quản tủ lạnh. Tránh ánh nắng mặt trời; Hướng dẫn sử dụng: sử dụng trực tiếp và đậy kín khi không sử dụng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Thành phần: khoai tây, trứng muối, phomai bột,...
+  >> Hướng dẫn sử dụng: sử dụng trực tiếp và đậy kín khi không sử dụng
+  Bản 1: 直接使用，不使用时请盖紧
+  Bản 2: 直接食用，不使用时请密封
+
+#116 [food] SP 276717407
+  NGỮ CẢNH: Thương hiệu: VietTin Mart; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 6 tháng; Hướng dẫn bảo quản: Nơi khô ráo, thoáng mát hoặc bảo quản tủ lạnh. Tránh ánh nắng mặt trời; Hướng dẫn sử dụng: sử dụng trực tiếp và đậy kín khi không sử dụng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Thành phần: khoai tây, trứng muối, phomai bột,...
+  >> Thành phần: khoai tây, trứng muối, phomai bột,...
+  Bản 1: 土豆, 咸蛋黄, 干酪粉,...
+  Bản 2: 土豆, 咸蛋黄, 芝士粉,...
+
+#117 [auto] SP 277539617
+  NGỮ CẢNH: Chất liệu: 100% Thép chống gỉ siêu bền; Thương hiệu: D Danido; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Trung Quốc; Model: Khóa phanh đĩa xe máy; Hướng dẫn sử dụng: Sử dụng khóa phanh đĩa xe máy, chống trộm; Sản phẩm có được bảo hành không?: Không; Loại: Khóa phanh đĩa xe máy siêu bền
+  >> Hướng dẫn sử dụng: Sử dụng khóa phanh đĩa xe máy, chống trộm
+  Bản 1: 用于摩托车碟刹锁，防盗
+  Bản 2: 使用摩托车碟刹锁，防盗
+
+#118 [food] SP 277568723
+  NGỮ CẢNH: Thành phần: 100% quả mơ; Thương hiệu: HERITAGE; Xuất xứ thương hiệu: Thái Lan; Hạn sử dụng: 12 tháng từ ngày sản xuất; Hướng dẫn bảo quản: bảo quản nơi khô mát, tránh ánh nắng trực tiếp. bảo quản tốt nhất ở nh; Hướng dẫn sử dụng: HDSD: Mơ khô ăn như mứt hoặc thêm mơ thái lát để ngũ cốc nóng hoặc lạn; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Thái Lan; Trọng lượng sản phẩm: 1kg; chọn khối lượng: 1kg, gói 100gr, hũ 300gr, hũ 500gr
+  >> Thành phần: 100% quả mơ
+  Bản 1: 100% 杏
+  Bản 2: 100% 杏果
+
+#119 [food] SP 277568723
+  NGỮ CẢNH: Thành phần: 100% quả mơ; Thương hiệu: HERITAGE; Xuất xứ thương hiệu: Thái Lan; Hạn sử dụng: 12 tháng từ ngày sản xuất; Hướng dẫn bảo quản: bảo quản nơi khô mát, tránh ánh nắng trực tiếp. bảo quản tốt nhất ở nh; Hướng dẫn sử dụng: HDSD: Mơ khô ăn như mứt hoặc thêm mơ thái lát để ngũ cốc nóng hoặc lạn; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Thái Lan; Trọng lượng sản phẩm: 1kg; chọn khối lượng: 1kg, gói 100gr, hũ 300gr, hũ 500gr
+  >> Hướng dẫn bảo quản: bảo quản nơi khô mát, tránh ánh nắng trực tiếp. bảo quản tốt nhất ở nhiệt độ dưới 25oC
+  Bản 1: 请存放于阴凉干燥处，避免阳光直射。在 25°C 以下温度保存最佳
+  Bản 2: 保存在阴凉干燥处，避免阳光直射。最佳保存温度在25°C以下
+
+#120 [food] SP 277568723
+  NGỮ CẢNH: Thành phần: 100% quả mơ; Thương hiệu: HERITAGE; Xuất xứ thương hiệu: Thái Lan; Hạn sử dụng: 12 tháng từ ngày sản xuất; Hướng dẫn bảo quản: bảo quản nơi khô mát, tránh ánh nắng trực tiếp. bảo quản tốt nhất ở nh; Hướng dẫn sử dụng: HDSD: Mơ khô ăn như mứt hoặc thêm mơ thái lát để ngũ cốc nóng hoặc lạn; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Thái Lan; Trọng lượng sản phẩm: 1kg; chọn khối lượng: 1kg, gói 100gr, hũ 300gr, hũ 500gr
+  >> Hướng dẫn sử dụng: HDSD: Mơ khô ăn như mứt hoặc thêm mơ thái lát để ngũ cốc nóng hoặc lạnh. Thêm mơ khô vào gà hay rau hầm sẽ giúp món ăn hấp dẫn hơn . Mơ pha nước giải nhiệt, giải khát, kèm da-ua, kem các loại…vừa đẹp vừa giá trị dinh dưỡng…
+  Bản 1: 使用说明: 干杏可以像果酱一样食用, 或将切片杏加入热食或冷食的谷物中。在炖鸡或炖菜中加入干杏会使菜肴更具吸引力。杏可以调制成清热解渴的饮料, 搭配酸奶, 冰淇淋等各类食品…既美观又具营养价值…
+  Bản 2: 食用方法：干杏可像果酱一样食用，或将切片杏加入热食或冷食谷物中。将干杏加入鸡肉或炖菜中会使菜肴更具吸引力。杏也可用于调制解暑饮料、清凉饮品，搭配酸奶、冰淇淋等……既美观又具营养价值
+
+#121 [food] SP 277568723
+  NGỮ CẢNH: Thành phần: 100% quả mơ; Thương hiệu: HERITAGE; Xuất xứ thương hiệu: Thái Lan; Hạn sử dụng: 12 tháng từ ngày sản xuất; Hướng dẫn bảo quản: bảo quản nơi khô mát, tránh ánh nắng trực tiếp. bảo quản tốt nhất ở nh; Hướng dẫn sử dụng: HDSD: Mơ khô ăn như mứt hoặc thêm mơ thái lát để ngũ cốc nóng hoặc lạn; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Thái Lan; Trọng lượng sản phẩm: 1kg; chọn khối lượng: 1kg, gói 100gr, hũ 300gr, hũ 500gr
+  >> chọn khối lượng: 1kg, gói 100gr, hũ 300gr, hũ 500gr
+  Bản 1: 1kg, 100g袋装, 300g罐装, 500g罐装
+  Bản 2: 1kg, 100gr袋装, 300gr罐装, 500gr罐装
+
+#122 [mother_baby] SP 277596967
+  NGỮ CẢNH: Thành phần: Tham khảo mô tả; Inbound Policy (days): 180; Khối lượng (kg): 0.9; Thương hiệu: GrowPlus; Xuất xứ thương hiệu: Singapore; Xuất xứ (Made in): Singapore
+  >> Thành phần: Tham khảo mô tả
+  Bản 1: 参考描述
+  Bản 2: 详见描述
+
+#123 [home] SP 277740559
+  NGỮ CẢNH: Thương hiệu: Elmich; Xuất xứ thương hiệu: Czech Republic; Xuất xứ (Made in): Trung Quốc; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Phiếu bảo hành; Thời gian bảo hành: 6 Tháng; Kích cỡ: EL8382LB (Xanh nhạt), EL8382MB (Navy), EL8382MW (Trắng)
+  >> Xuất xứ thương hiệu: Czech Republic
+  Bản 1: 捷克
+  Bản 2: 捷克共和国
+
+#124 [home] SP 277779493
+  NGỮ CẢNH: Thương hiệu: GUANG MING; Xuất xứ thương hiệu: Trung Quốc; Chất liệu: PVC, acrylic, thép; Hướng dẫn bảo quản: Nơi khô thoáng; Hướng dẫn sử dụng: Đinh Móc Treo Khung Tranh Ảnh; Model: Đinh Móc Treo Khung Tranh Ảnh; Kích thước (Dài x Rộng x Cao): 6 x 6 x 1; Xuất xứ (Made in): Trung Quốc; Trọng lượng sản phẩm: 10gr; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 7 Ngày; Phân Loại: COMBO-5 Đinh Dán Treo Tranh, Đinh Dán Treo Tranh
+  >> Hướng dẫn bảo quản: Nơi khô thoáng
+  Bản 1: 干燥通风处
+  Bản 2: 阴凉干燥处
+
+#125 [home] SP 277779493
+  NGỮ CẢNH: Thương hiệu: GUANG MING; Xuất xứ thương hiệu: Trung Quốc; Chất liệu: PVC, acrylic, thép; Hướng dẫn bảo quản: Nơi khô thoáng; Hướng dẫn sử dụng: Đinh Móc Treo Khung Tranh Ảnh; Model: Đinh Móc Treo Khung Tranh Ảnh; Kích thước (Dài x Rộng x Cao): 6 x 6 x 1; Xuất xứ (Made in): Trung Quốc; Trọng lượng sản phẩm: 10gr; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 7 Ngày; Phân Loại: COMBO-5 Đinh Dán Treo Tranh, Đinh Dán Treo Tranh
+  >> Hướng dẫn sử dụng: Đinh Móc Treo Khung Tranh Ảnh
+  Bản 1: 相框挂钉
+  Bản 2: 相框挂钩钉
+
+#126 [home] SP 277779493
+  NGỮ CẢNH: Thương hiệu: GUANG MING; Xuất xứ thương hiệu: Trung Quốc; Chất liệu: PVC, acrylic, thép; Hướng dẫn bảo quản: Nơi khô thoáng; Hướng dẫn sử dụng: Đinh Móc Treo Khung Tranh Ảnh; Model: Đinh Móc Treo Khung Tranh Ảnh; Kích thước (Dài x Rộng x Cao): 6 x 6 x 1; Xuất xứ (Made in): Trung Quốc; Trọng lượng sản phẩm: 10gr; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 7 Ngày; Phân Loại: COMBO-5 Đinh Dán Treo Tranh, Đinh Dán Treo Tranh
+  >> Model: Đinh Móc Treo Khung Tranh Ảnh
+  Bản 1: 相框挂钉
+  Bản 2: 相框挂钩钉
+
+#127 [home] SP 277779493
+  NGỮ CẢNH: Thương hiệu: GUANG MING; Xuất xứ thương hiệu: Trung Quốc; Chất liệu: PVC, acrylic, thép; Hướng dẫn bảo quản: Nơi khô thoáng; Hướng dẫn sử dụng: Đinh Móc Treo Khung Tranh Ảnh; Model: Đinh Móc Treo Khung Tranh Ảnh; Kích thước (Dài x Rộng x Cao): 6 x 6 x 1; Xuất xứ (Made in): Trung Quốc; Trọng lượng sản phẩm: 10gr; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 7 Ngày; Phân Loại: COMBO-5 Đinh Dán Treo Tranh, Đinh Dán Treo Tranh
+  >> Trọng lượng sản phẩm: 10gr
+  Bản 1: 10g
+  Bản 2: 10gr
+
+#128 [home] SP 277779493
+  NGỮ CẢNH: Thương hiệu: GUANG MING; Xuất xứ thương hiệu: Trung Quốc; Chất liệu: PVC, acrylic, thép; Hướng dẫn bảo quản: Nơi khô thoáng; Hướng dẫn sử dụng: Đinh Móc Treo Khung Tranh Ảnh; Model: Đinh Móc Treo Khung Tranh Ảnh; Kích thước (Dài x Rộng x Cao): 6 x 6 x 1; Xuất xứ (Made in): Trung Quốc; Trọng lượng sản phẩm: 10gr; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 7 Ngày; Phân Loại: COMBO-5 Đinh Dán Treo Tranh, Đinh Dán Treo Tranh
+  >> Phân Loại: COMBO-5 Đinh Dán Treo Tranh, Đinh Dán Treo Tranh
+  Bản 1: COMBO-5 挂画无痕钉, 挂画无痕钉
+  Bản 2: (không có ở bộ 2)
+
+#129 [food] SP 278011991
+  NGỮ CẢNH: Thương hiệu: Cát Hải; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 24 tháng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Loại: Can 2 Lít Cốt Nhâm, Can 2 Lít Hạng 1, Chai 1 Lít Hạng 1
+  >> Loại: Can 2 Lít Cốt Nhâm, Can 2 Lít Hạng 1, Chai 1 Lít Hạng 1
+  Bản 1: 2升特级原汁桶装, 2升一级桶装, 1升一级瓶装
+  Bản 2: 2升浓缩酱罐装, 2升一级品罐装, 1升一级品瓶装
+
+#130 [food] SP 278131760
+  NGỮ CẢNH: Thương hiệu: ROCKCAFE; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 24 Tháng; Hướng dẫn bảo quản: Bảo quản nơi khô ráo tráng ánh nắng trực tiếp.; Hướng dẫn sử dụng: Uống nóng : Pha 1 gói với 80ml nước sôi, khuấy đều và thưởng thức. Uốn; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 1200 gram
+  >> Hướng dẫn sử dụng: Uống nóng : Pha 1 gói với 80ml nước sôi, khuấy đều và thưởng thức. Uống đá : Pha 2 gói với 80ml nước nóng, khuấy đều rồi thêm đá để có ngay một ly cà phê mát lạnh sảng khoái.
+  Bản 1: 热饮：将1包加入80ml沸水，搅拌均匀后即可享用。冰饮：将2包加入80ml热水，搅拌均匀后加入冰块，即可享用一杯清爽冰凉的咖啡。
+  Bản 2: 热饮：将1包冲入80ml沸水，搅拌均匀后享用。冰饮：将2包冲入80ml热水，搅拌均匀后加入冰块，即可享用一杯清爽冰凉的咖啡。
+
+#131 [food] SP 278131760
+  NGỮ CẢNH: Thương hiệu: ROCKCAFE; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 24 Tháng; Hướng dẫn bảo quản: Bảo quản nơi khô ráo tráng ánh nắng trực tiếp.; Hướng dẫn sử dụng: Uống nóng : Pha 1 gói với 80ml nước sôi, khuấy đều và thưởng thức. Uốn; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 1200 gram
+  >> Trọng lượng sản phẩm: 1200 gram
+  Bản 1: 1200 gram
+  Bản 2: 1200克
+
+#132 [food] SP 278610311
+  NGỮ CẢNH: Thương hiệu: TAOKAENOI; Xuất xứ thương hiệu: Thái Lan; Hạn sử dụng: 15 tháng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Thái Lan; Độ tuổi phù hợp: Không
+  >> Độ tuổi phù hợp: Không
+  Bản 1: 不适用
+  Bản 2: 无
+
+#133 [home] SP 278627182
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Không; Thương hiệu: PEAFLO; Xuất xứ thương hiệu: Việt Nam; Kích thước (Dài x Rộng x Cao): 25x25cm; Chất liệu: Sơi len; Xuất xứ (Made in): Trung Quốc / Singapore / Việt Nam; Quy cách đóng gói: 10 cái/set; Tính năng: Khăn lau tay, lau chén dĩa, lau nhà bếp
+  >> Tính năng: Khăn lau tay, lau chén dĩa, lau nhà bếp
+  Bản 1: 擦手巾, 洗碗布, 厨房清洁
+  Bản 2: 洗手巾, 洗碗巾, 厨房抹布
+
+#134 [home] SP 278675947
+  NGỮ CẢNH: Thương hiệu: OEM; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Sản phẩm có được bảo hành không?: Không; CHỌN MẪU: Lưới đôi (Inox 201), Táo tròn - Đơn, Táo vuông - Đôi, Táo vuông - Đơn
+  >> CHỌN MẪU: Lưới đôi (Inox 201), Táo tròn - Đơn, Táo vuông - Đôi, Táo vuông - Đơn
+  Bản 1: 双层网 (Inox 201), 圆形苹果 - 单个, 方形苹果 - 双个, 方形苹果 - 单个
+  Bản 2: 双层网 (Inox 201), 圆形苹果 - 单层, 方形苹果 - 双层, 方形苹果 - 单层
+
+#135 [electronics] SP 278811888
+  NGỮ CẢNH: Thương hiệu: UGREEN; Xuất xứ thương hiệu: Trung Quốc; Độ phân giải quang học: 5000dpi; Model: 55375; Lưu ý: Vỏ hộp được khui ra để dán tem bảo hành; Xuất xứ (Made in): Trung Quốc; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Tem bảo hành; Thời gian bảo hành: 12 Tháng
+  >> Lưu ý: Vỏ hộp được khui ra để dán tem bảo hành
+  Bản 1: 包装盒已拆封以贴上保修标签
+  Bản 2: 包装盒已拆封以粘贴保修标签
+
+#136 [home] SP 278947574
+  NGỮ CẢNH: Thương hiệu: TIEN ANH HOUSE; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Trung Quốc; Sản phẩm có được bảo hành không?: Không; Màu: bạc, đen, đèn cầy bóng cao, đồng; khác: 01 cái, combo 2 cái
+  >> khác: 01 cái, combo 2 cái
+  Bản 1: 01 个, 2 个组合装
+  Bản 2: 1个, 2个组合装
+
+#137 [auto] SP 278951548
+  NGỮ CẢNH: Phanh: CBS; Thương hiệu: Honda; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Việt Nam; Phương thức giao hàng Seller Delivery: Khách hàng đến lấy hàng tại nhà bán; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 3 Năm
+  >> Phương thức giao hàng Seller Delivery: Khách hàng đến lấy hàng tại nhà bán
+  Bản 1: 买家到卖家处自提
+  Bản 2: 客户到卖家处自提
+
+#138 [auto] SP 278951959
+  NGỮ CẢNH: Phanh: ABS; Thương hiệu: Honda; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Việt Nam; Phương thức giao hàng Seller Delivery: Khách hàng đến lấy hàng tại nhà bán; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 3 Năm; Màu sắc: Xanh Đen Đỏ, Xám Đen Đỏ
+  >> Phương thức giao hàng Seller Delivery: Khách hàng đến lấy hàng tại nhà bán
+  Bản 1: 客户到卖家处自提
+  Bản 2: 买家到卖家处自提
+
+#139 [home] SP 278965759
+  NGỮ CẢNH: Thương hiệu: Elmich; Xuất xứ thương hiệu: Czech Republic; Model: PME9310; Xuất xứ (Made in): China; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Tem bảo hành; Thời gian bảo hành: 1 Năm; Màu Sắc: PME9310AW - Màu Trắng, PME9310PG - Xanh Pastel
+  >> Xuất xứ thương hiệu: Czech Republic
+  Bản 1: 捷克
+  Bản 2: 捷克共和国
+
+#140 [home] SP 278965759
+  NGỮ CẢNH: Thương hiệu: Elmich; Xuất xứ thương hiệu: Czech Republic; Model: PME9310; Xuất xứ (Made in): China; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Tem bảo hành; Thời gian bảo hành: 1 Năm; Màu Sắc: PME9310AW - Màu Trắng, PME9310PG - Xanh Pastel
+  >> Hình thức bảo hành: Tem bảo hành
+  Bản 1: 保修贴
+  Bản 2: 保修标签
+
+#141 [auto] SP 278971006
+  NGỮ CẢNH: Phanh: Phanh Đĩa; Thương hiệu: Ally; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Phương thức giao hàng Seller Delivery: Khách hàng đến lấy hàng tại nhà bán; Sản phẩm có được bảo hành không?: Không; Màu: Trắng, Xám Chì, Xám Xi Măng, Đen Mờ, Đen bóng, Đỏ Đun
+  >> Phương thức giao hàng Seller Delivery: Khách hàng đến lấy hàng tại nhà bán
+  Bản 1: 客户到卖家处自提
+  Bản 2: 买家到卖家处自提
+
+#142 [auto] SP 278971006
+  NGỮ CẢNH: Phanh: Phanh Đĩa; Thương hiệu: Ally; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Phương thức giao hàng Seller Delivery: Khách hàng đến lấy hàng tại nhà bán; Sản phẩm có được bảo hành không?: Không; Màu: Trắng, Xám Chì, Xám Xi Măng, Đen Mờ, Đen bóng, Đỏ Đun
+  >> Màu: Trắng, Xám Chì, Xám Xi Măng, Đen Mờ, Đen bóng, Đỏ Đun
+  Bản 1: 白色, 石墨灰, 水泥灰, 哑光黑, 亮黑, 酒红
+  Bản 2: 白色, 石墨灰, 水泥灰, 哑光黑, 亮黑色, 酒红色
+
+#143 [home] SP 279019636
+  NGỮ CẢNH: Thương hiệu: ANKAN; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Viền ngoài: Cây song mây già thân đặc, dẻo dai, bền bỉ. Bề mặt: Vỏ tra; Hướng dẫn bảo quản: Bảo quản nơi khô ráo để tăng thêm tuổi thọ sản phẩm; Hướng dẫn sử dụng: Có thể sử dụng ngay; Model: Lót ly khảm trai cao cấp; Kích thước (Dài x Rộng x Cao): Đường kính 30cm, dày 0.2 cm; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 100gram; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Phiếu bảo hành; Thời gian bảo hành: 1 Tháng; Chọn Kiểu Dáng: Hoa 5 cánh, Hoa 6 cánh, Hoa 7 cánh, Hoa 8 cánh, Hoa Cẩm Tú Cầu
+  >> Chất liệu: Viền ngoài: Cây song mây già thân đặc, dẻo dai, bền bỉ. Bề mặt: Vỏ trai/ốc tự nhiên tạo hiệu ứng ánh xà cừ lấp lánh khi gặp ánh sáng.
+  Bản 1: 外圈: 老藤材质，身实且韧，经久耐用。表面: 天然贝壳/珍珠母贝，遇光呈现闪烁的珍珠光泽。
+  Bản 2: 外圈：老藤，质地坚实、韧性强、耐用。表面：天然贝壳/螺壳，在光线下呈现闪烁的珍珠光泽。
+
+#144 [home] SP 279019636
+  NGỮ CẢNH: Thương hiệu: ANKAN; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Viền ngoài: Cây song mây già thân đặc, dẻo dai, bền bỉ. Bề mặt: Vỏ tra; Hướng dẫn bảo quản: Bảo quản nơi khô ráo để tăng thêm tuổi thọ sản phẩm; Hướng dẫn sử dụng: Có thể sử dụng ngay; Model: Lót ly khảm trai cao cấp; Kích thước (Dài x Rộng x Cao): Đường kính 30cm, dày 0.2 cm; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 100gram; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Phiếu bảo hành; Thời gian bảo hành: 1 Tháng; Chọn Kiểu Dáng: Hoa 5 cánh, Hoa 6 cánh, Hoa 7 cánh, Hoa 8 cánh, Hoa Cẩm Tú Cầu
+  >> Model: Lót ly khảm trai cao cấp
+  Bản 1: 高级贝壳镶嵌杯垫
+  Bản 2: 高端螺钿杯垫
+
+#145 [home] SP 279019636
+  NGỮ CẢNH: Thương hiệu: ANKAN; Xuất xứ thương hiệu: Việt Nam; Chất liệu: Viền ngoài: Cây song mây già thân đặc, dẻo dai, bền bỉ. Bề mặt: Vỏ tra; Hướng dẫn bảo quản: Bảo quản nơi khô ráo để tăng thêm tuổi thọ sản phẩm; Hướng dẫn sử dụng: Có thể sử dụng ngay; Model: Lót ly khảm trai cao cấp; Kích thước (Dài x Rộng x Cao): Đường kính 30cm, dày 0.2 cm; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 100gram; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Phiếu bảo hành; Thời gian bảo hành: 1 Tháng; Chọn Kiểu Dáng: Hoa 5 cánh, Hoa 6 cánh, Hoa 7 cánh, Hoa 8 cánh, Hoa Cẩm Tú Cầu
+  >> Trọng lượng sản phẩm: 100gram
+  Bản 1: 100gram
+  Bản 2: 100克
+
+#146 [mother_baby] SP 279133330
+  NGỮ CẢNH: Họa tiết: Không; Khối lượng (kg): 0.8574999999999999; Thương hiệu: PLAYPLUS; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Kích thước: 16 x 11 x 4 cm; Sản phẩm có được bảo hành không?: Không; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng
+  >> Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng
+  Bản 1: 卖家送货上门
+  Bản 2: 卖家配送给买家
+
+#147 [mother_baby] SP 279164937
+  NGỮ CẢNH: Họa tiết: Không; Khối lượng (kg): 0.455; Thương hiệu: Majorette; Xuất xứ thương hiệu: Thái Lan; Xuất xứ (Made in): Thái Lan; Kích thước: 18 x 14 x 5.5 cm; Sản phẩm có được bảo hành không?: Không; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng
+  >> Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng
+  Bản 1: 卖家送货给客户
+  Bản 2: 卖家配送给买家
+
+#148 [auto] SP 279231635
+  NGỮ CẢNH: Dòng xe sử dụng: Phù hợp cho các động cơ ô tô, xe tải, xe môtô gắn máy.; Thương hiệu: AISIN; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Nhật Bản; Model: SCPM50A1LPK; Sản phẩm có được bảo hành không?: Không
+  >> Dòng xe sử dụng: Phù hợp cho các động cơ ô tô, xe tải, xe môtô gắn máy.
+  Bản 1: 适用于汽车、卡车、摩托车发动机。
+  Bản 2: 适用于汽车发动机、卡车、摩托车。
+
+#149 [auto] SP 279337299
+  NGỮ CẢNH: Phanh: Phanh Đĩa; Thương hiệu: Yamaha; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Việt Nam; Phương thức giao hàng Seller Delivery: Khách hàng đến lấy hàng tại nhà bán; Sản phẩm có được bảo hành không?: Không; Màu: Cao Cấp-Bạc Nhám, Cao Cấp-Trắng Bóng, Cao Cấp-Đen Nhám, Tiêu Chuẩn-Xám
+  >> Phương thức giao hàng Seller Delivery: Khách hàng đến lấy hàng tại nhà bán
+  Bản 1: 客户到卖家处自提
+  Bản 2: 买家到卖家处自提
+
+#150 [auto] SP 279337299
+  NGỮ CẢNH: Phanh: Phanh Đĩa; Thương hiệu: Yamaha; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Việt Nam; Phương thức giao hàng Seller Delivery: Khách hàng đến lấy hàng tại nhà bán; Sản phẩm có được bảo hành không?: Không; Màu: Cao Cấp-Bạc Nhám, Cao Cấp-Trắng Bóng, Cao Cấp-Đen Nhám, Tiêu Chuẩn-Xám
+  >> Màu: Cao Cấp-Bạc Nhám, Cao Cấp-Trắng Bóng, Cao Cấp-Đen Nhám, Tiêu Chuẩn-Xám Xanh, Tiêu Chuẩn-Đen Bóng, Tiêu Chuẩn-Đỏ Bóng
+  Bản 1: 高端-哑光银, 高端-亮白色, 高端-哑光黑, 标准-灰蓝色, 标准-亮黑色, 标准-亮红色
+  Bản 2: 高级-哑光银, 高级-亮白色, 高级-哑光黑, 标准-蓝灰色, 标准-亮黑色, 标准-亮红色
+
+#151 [mother_baby] SP 279574064
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Không; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng; Họa tiết: Không; Khối lượng (kg): 0.21; Thương hiệu: Majorette; Xuất xứ (Made in): Thái Lan; Kích thước: 15.5 x 10.5 x 4 cm
+  >> Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng
+  Bản 1: 卖家配送给买家
+  Bản 2: 卖家配送
+
+#152 [food] SP 279599994
+  NGỮ CẢNH: Thương hiệu: HỒNG HOA ORGANIC CARE; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 2 năm; Hướng dẫn sử dụng: * CÁCH DÙNG: - Pha 1 gói với 130ml nước ấm nóng 70 độ C, ngày dùng 2 -; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Quy cách: Hộp 25gói x 25gam, Tách 05gói dùng thử, Tách 10gói dùng thử
+  >> Thương hiệu: HỒNG HOA ORGANIC CARE
+  Bản 1: HỒNG HOA 有机护理
+  Bản 2: HỒNG HOA ORGANIC CARE
+
+#153 [food] SP 279599994
+  NGỮ CẢNH: Thương hiệu: HỒNG HOA ORGANIC CARE; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 2 năm; Hướng dẫn sử dụng: * CÁCH DÙNG: - Pha 1 gói với 130ml nước ấm nóng 70 độ C, ngày dùng 2 -; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Quy cách: Hộp 25gói x 25gam, Tách 05gói dùng thử, Tách 10gói dùng thử
+  >> Hướng dẫn sử dụng: * CÁCH DÙNG: - Pha 1 gói với 130ml nước ấm nóng 70 độ C, ngày dùng 2 - 3 lần. - Dùng ăn sáng có thể pha 2 gói với 180ml nước ấm nóng 70 độ C. - Đau Dạ Dày # 2 ly mỗi ngày - Đại Tràng, Táo Bón # 2 ly mỗi ngày - Trào ngược dạ dày, ợ chua, nóng rát ly mỗi ngày.
+  Bản 1: * 使用方法：- 用1包冲泡130ml 70°C的热温水，每日使用2-3次。- 用于早餐可以冲泡2包配180ml 70°C的热温水。- 胃痛 # 每日2杯 - 大肠、便秘 # 每日2杯 - 胃食管反流、烧心、灼热感 # 每日1杯。
+  Bản 2: * 使用方法: - 用130ml 70°C 温热水冲泡1包，每天使用 2 - 3 次。 - 用于早餐时可使用 2 包冲泡 180ml 70°C 温热水。 - 胃痛 # 每天 2 杯 - 大肠, 便秘 # 每天 2 杯 - 胃食管反流, 烧心, 灼热感 每天 1 杯。
+
+#154 [food] SP 279599994
+  NGỮ CẢNH: Thương hiệu: HỒNG HOA ORGANIC CARE; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 2 năm; Hướng dẫn sử dụng: * CÁCH DÙNG: - Pha 1 gói với 130ml nước ấm nóng 70 độ C, ngày dùng 2 -; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Quy cách: Hộp 25gói x 25gam, Tách 05gói dùng thử, Tách 10gói dùng thử
+  >> Quy cách: Hộp 25gói x 25gam, Tách 05gói dùng thử, Tách 10gói dùng thử
+  Bản 1: 25包 x 25克盒装, 拆分 05包试用装, 拆分 10包试用装
+  Bản 2: 盒装 25包 x 25克, 分装 05包试用装, 分装 10包试用装
+
+#155 [beauty] SP 279664092
+  NGỮ CẢNH: Thương hiệu: PALMERS; Xuất xứ thương hiệu: Mỹ; Xuất xứ (Made in): Mỹ; Hạn sử dụng: 5 năm; Loại da phù hợp: Da khô, da thường; Sản phẩm có được bảo hành không?: Không; Dung tích Dưỡng thể: 250ml
+  >> Loại da phù hợp: Da khô, da thường
+  Bản 1: 干性皮肤, 中性皮肤
+  Bản 2: 干性皮肤, 普通肤质
+
+#156 [mother_baby] SP 279681597
+  NGỮ CẢNH: Họa tiết: Không; Khối lượng (kg): 0.2625; Thương hiệu: BLOKEES; Xuất xứ (Made in): Trung Quốc; Kích thước: 12 x 11 x 6.5 cm; Sản phẩm có được bảo hành không?: Không; Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng
+  >> Phương thức giao hàng Seller Delivery: Nhà bán giao hàng cho khách hàng
+  Bản 1: 卖家配送给客户
+  Bản 2: 卖家配送给买家
+
+#157 [food] SP 279697162
+  NGỮ CẢNH: Thương hiệu: LYLYSHOP; Xuất xứ thương hiệu: Việt Nam; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Trung Quốc; khác: MÁY+2MDAY+2QUASUI
+  >> khác: MÁY+2MDAY+2QUASUI
+  Bản 1: 机器+2MDAY+2QUASUI
+  Bản 2: 机器+2天+过水
+
+#158 [electronics] SP 279700174
+  NGỮ CẢNH: Thương hiệu: Tiankeplus; Xuất xứ thương hiệu: Trung Quốc; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Điện tử; Thời gian bảo hành: 6 Tháng; Đèn: Có kèm đèn, Không kèm đèn
+  >> Đèn: Có kèm đèn, Không kèm đèn
+  Bản 1: 含灯, 不含灯
+  Bản 2: 带灯, 不带灯
+
+#159 [beauty] SP 279703844
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Có; Thời gian bảo hành: 2 Năm; Hình thức bảo hành: Phiếu bảo hành; Thương hiệu: Homedics; Xuất xứ thương hiệu: Mỹ; Xuất xứ (Made in): Trung Quốc; Model: MAYMASSAGEBONGMATEYE200; Kích thước: THÔNG SỐ VÀ ĐẶC ĐIỂM SẢN PHẨM Tên sản phẩm: Máy massage làm mờ vết thâ; Trọng lượng sản phẩm: 1kg
+  >> Kích thước: THÔNG SỐ VÀ ĐẶC ĐIỂM SẢN PHẨM Tên sản phẩm: Máy massage làm mờ vết thâm bọng mắt HoMedics EYE-200 Mã sản phẩm: EYE-200 Thương hiệu: HoMedics Chức năng: Massage, làm ấm và liệu pháp ánh sáng đỏ. Công nghệ: Rung siêu âm kết hợp nhiệt ấm và ánh sáng đỏ. Nguồn điện: Pin sạc tích hợp. Thiết kế: Dạng cầm tay nhỏ gọn, dễ sử dụng. Kích thước sản phẩm: Khoảng 13 × 3 × 3 cm. Kích thước đóng gói: Khoảng 21 x 11 x 4 cm Kích thước set sàn: 26 x 16 x 9 cm Trọng lượng sản phẩm: Khoảng 140 g. Trọng lượng set sàn: khoảng 624g Màu sắc: Trắng. Thời gian tự động tắt: Khoảng 5 phút. Số chế độ: 3 chế độ/chức năng massage.
+  Bản 1: 产品参数与特点 产品名称: HoMedics EYE-200 眼袋黑眼圈按摩仪 产品型号: EYE-200 品牌: HoMedics 功能: 按摩、加热及红光疗法 技术: 超声波振动结合热敷与红光电源: 内置充电电池 设计: 便携式手持设计，易于使用 产品尺寸: 约 13 × 3 × 3 cm 包装尺寸: 约 21 x 11 x 4 cm 展示盒尺寸: 26 x 16 x 9 cm 产品重量: 约 140 g 展示盒重量: 约 624g 颜色: 白色 自动关机时间: 约 5 分钟 模式数量: 3 种按摩模式/功能
+  Bản 2: 产品参数与特点 产品名称：HoMedics EYE-200 眼袋黑眼圈按摩仪 产品代码：EYE-200 品牌：HoMedics 功能：按摩、加热及红光疗法。 技术：超声波振动结合温热与红光。 电源：内置充电电池。 设计：便携式手持设计，易于使用。 产品尺寸：约 13 × 3 × 3 cm。 包装尺寸：约 21 x 11 x 4 cm 展示架尺寸：26 x 16 x 9 cm 产品重量：约 140 g。 展示架重量：约 624g 颜色：白色。 自动关机时间：约 5 分钟。 模式数量：3种按摩模式/功能。
+
+#160 [food] SP 279734940
+  NGỮ CẢNH: Thương hiệu: Baka; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 18 tháng; Hướng dẫn bảo quản: Nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp; Hướng dẫn sử dụng: Pha nóng Cho một gói cà phê hòa tan Sữa dừa Già Làng vào ly. Thêm lượn; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 600g
+  >> Hướng dẫn bảo quản: Nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp
+  Bản 1: 干燥、阴凉处，避免阳光直射
+  Bản 2: 置于干燥、凉爽处，避免阳光直射
+
+#161 [food] SP 279734940
+  NGỮ CẢNH: Thương hiệu: Baka; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 18 tháng; Hướng dẫn bảo quản: Nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp; Hướng dẫn sử dụng: Pha nóng Cho một gói cà phê hòa tan Sữa dừa Già Làng vào ly. Thêm lượn; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 600g
+  >> Hướng dẫn sử dụng: Pha nóng Cho một gói cà phê hòa tan Sữa dừa Già Làng vào ly. Thêm lượng nước nóng theo hướng dẫn trên bao bì. Khuấy đều và thưởng thức. Pha lạnh Hòa tan cà phê với một lượng nước nóng vừa đủ, sau đó thêm đá để có một ly cà phê sữa dừa mát lạnh. Có thể điều chỉnh lượng nước và đá theo khẩu vị để thưởng thức vị cà phê đậm hơn hoặc dịu hơn.
+  Bản 1: 热饮冲调：将一包 Già Làng 椰奶即溶咖啡放入杯中。按照包装上的说明加入适量热水。搅拌均匀即可享用。冷饮冲调：用适量热水溶解咖啡，然后加入冰块，即可得到一杯清凉的椰奶咖啡。可以根据口味调整水量和冰量，以获得更浓郁或更柔和的咖啡味。
+  Bản 2: 热饮：将一包 Già Làng 椰奶速溶咖啡放入杯中。按照包装上的说明加入适量热水。搅拌均匀即可享用。冷饮：用适量热水溶解咖啡，然后加入冰块，即可享用一杯清凉的椰奶咖啡。可以根据口味调整水量和冰块量，以获得更浓郁或更柔和的咖啡味。
+
+#162 [electronics] SP 32291496
+  NGỮ CẢNH: Thương hiệu: Xundd; Thương hiệu thiết bị phù hợp: Apple iPhone; Sản phẩm có được bảo hành không?: Không; dòng máy: iphone 11; màu sắc: viền đen
+  >> màu sắc: viền đen
+  Bản 1: 黑边
+  Bản 2: 黑色边框
+
+#163 [electronics] SP 32427899
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Không; Thương hiệu: Kaku; Xuất xứ thương hiệu: Hong Kong; Thương hiệu thiết bị phù hợp: Samsung; Xuất xứ (Made in): Hong Kong; màu sắc: nâu
+  >> Xuất xứ thương hiệu: Hong Kong
+  Bản 1: 中国香港
+  Bản 2: 香港
+
+#164 [electronics] SP 32427899
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Không; Thương hiệu: Kaku; Xuất xứ thương hiệu: Hong Kong; Thương hiệu thiết bị phù hợp: Samsung; Xuất xứ (Made in): Hong Kong; màu sắc: nâu
+  >> Xuất xứ (Made in): Hong Kong
+  Bản 1: 中国香港
+  Bản 2: 香港
+
+#165 [food] SP 38151252
+  NGỮ CẢNH: Thương hiệu: Calbee; Xuất xứ thương hiệu: Nhật Bản; Kích thước: Gói 600 gram Ngũ cốc Calbee Nhật Bản có chứa rất nhiều loại hạt và trá; Hạn sử dụng: HSD in trên vỏ sản phẩm; Hướng dẫn bảo quản: Bảo quản nơi khô ráo, tránh ánh sáng trực tiếp.; Hướng dẫn sử dụng: Cách sử dụng ngũ cốc như sau Dùng ăn trực tiếp hoặc pha với sữa đều ng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Nhật Bản; Màu: Nâu, Trắng, Đỏ; Trọng lượng: 600g, 700g, 750g
+  >> Kích thước: Gói 600 gram Ngũ cốc Calbee Nhật Bản có chứa rất nhiều loại hạt và trái cây có giá trị dinh dưỡng cao, không thêm gia vị mà tận dụng những hương vị vốn có của loại trái cây đó. Ngũ cốc sấy khô Calbee hàng Nhật nội địa bạn luôn yên tâm về chất lượng cũng như giá trị dinh dưỡng đã được công bố. Giàu canxi, chất xơ và các loại Vitamin B6, Vitamin A, Vitamin D, Vitamin B12 và cả Axit Folic rất tốt cho bà bầu và những bà mẹ đang cho con bú.
+  Bản 1: 600克装 Calbee 日本谷物含有多种高营养价值的坚果和水果，不添加调味剂，充分利用水果本身的天然风味。日本本土 Calbee 干燥谷物，质量与公布的营养价值均可放心食用。富含钙、膳食纤维以及维生素 B6、维生素 A、维生素 D、维生素 B12 和叶酸，非常适合孕妇及哺乳期妇女。
+  Bản 2: 600克装日本 Calbee 谷物片含有多种营养价值极高的坚果和水果，不添加调味剂，而是利用水果本身的天然风味。日本本土 Calbee 干燥谷物片，您可以对已公布的质量及营养价值完全放心。富含钙、纤维以及维生素 B6、维生素 A、维生素 D、维生素 B12 和叶酸，非常适合孕妇及哺乳期妇女。
+
+#166 [food] SP 38151252
+  NGỮ CẢNH: Thương hiệu: Calbee; Xuất xứ thương hiệu: Nhật Bản; Kích thước: Gói 600 gram Ngũ cốc Calbee Nhật Bản có chứa rất nhiều loại hạt và trá; Hạn sử dụng: HSD in trên vỏ sản phẩm; Hướng dẫn bảo quản: Bảo quản nơi khô ráo, tránh ánh sáng trực tiếp.; Hướng dẫn sử dụng: Cách sử dụng ngũ cốc như sau Dùng ăn trực tiếp hoặc pha với sữa đều ng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Nhật Bản; Màu: Nâu, Trắng, Đỏ; Trọng lượng: 600g, 700g, 750g
+  >> Hạn sử dụng: HSD in trên vỏ sản phẩm
+  Bản 1: 有效期见产品外壳
+  Bản 2: 保质期见产品外包装
+
+#167 [food] SP 38151252
+  NGỮ CẢNH: Thương hiệu: Calbee; Xuất xứ thương hiệu: Nhật Bản; Kích thước: Gói 600 gram Ngũ cốc Calbee Nhật Bản có chứa rất nhiều loại hạt và trá; Hạn sử dụng: HSD in trên vỏ sản phẩm; Hướng dẫn bảo quản: Bảo quản nơi khô ráo, tránh ánh sáng trực tiếp.; Hướng dẫn sử dụng: Cách sử dụng ngũ cốc như sau Dùng ăn trực tiếp hoặc pha với sữa đều ng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Nhật Bản; Màu: Nâu, Trắng, Đỏ; Trọng lượng: 600g, 700g, 750g
+  >> Hướng dẫn bảo quản: Bảo quản nơi khô ráo, tránh ánh sáng trực tiếp.
+  Bản 1: 请置于干燥处，避免阳光直射。
+  Bản 2: 请存放在干燥处，避免阳光直射。
+
+#168 [food] SP 38151252
+  NGỮ CẢNH: Thương hiệu: Calbee; Xuất xứ thương hiệu: Nhật Bản; Kích thước: Gói 600 gram Ngũ cốc Calbee Nhật Bản có chứa rất nhiều loại hạt và trá; Hạn sử dụng: HSD in trên vỏ sản phẩm; Hướng dẫn bảo quản: Bảo quản nơi khô ráo, tránh ánh sáng trực tiếp.; Hướng dẫn sử dụng: Cách sử dụng ngũ cốc như sau Dùng ăn trực tiếp hoặc pha với sữa đều ng; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Nhật Bản; Màu: Nâu, Trắng, Đỏ; Trọng lượng: 600g, 700g, 750g
+  >> Hướng dẫn sử dụng: Cách sử dụng ngũ cốc như sau Dùng ăn trực tiếp hoặc pha với sữa đều ngon. Khi pha với sữa có thể dùng lạnh và nóng đều ngon , tùy ý thích của bạn. Pha bột với sữa hoặc sữa đậu nành không đường, dung lượng khoảng 1 muỗng 8,5g cho 100ml Bột ngũ cốc Calbee của Nhật nội địalà sản phẩm giàu dinh dưỡng tốt cho mọi lứa tuổi đặc biệt là trẻ nhỏ kén ăn, người đang muốn giảm cân, người bệnh, người già ăn uống kém.
+  Bản 1: 五谷杂粮使用方法如下：可直接食用或搭配牛奶冲泡，味道均佳。搭配牛奶冲泡时，冷热皆宜，随您喜好。用牛奶或无糖豆奶冲泡，比例约为每 100ml 加入 1 勺 8.5g 粉末。日本本土 Calbee 五谷粉是营养丰富的产品，适合所有年龄段，特别是挑食的幼儿、想要减肥的人群、病人以及食欲不佳的老年人。
+  Bản 2: 谷物食用方法如下：可直接食用或搭配牛奶食用，味道极佳。搭配牛奶时，可根据个人喜好选择冷饮或热饮。将粉末与牛奶或无糖豆奶混合，建议比例约为每 100ml 搭配 1 勺（8.5g）。日本本土 Calbee 谷物粉是富含营养的产品，适合所有年龄段，特别是挑食的小孩、想要减肥的人士、病人以及食欲不佳的老年人。
+
+#169 [auto] SP 48890249
+  NGỮ CẢNH: Thương hiệu: Bosch; Xuất xứ thương hiệu: Đức; Xuất xứ (Made in): Trung Quốc; Chất liệu: Lưỡi cao su; Trọng lượng sản phẩm: 0.200; Hướng dẫn bảo quản: Tránh tiếp xúc với lửa và hóa chất; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 12 Tháng; Kích cỡ: 17" (425mm), 18" (450mm), 20" (500mm), 21" (530mm)
+  >> Chất liệu: Lưỡi cao su
+  Bản 1: 橡胶刮条
+  Bản 2: 橡胶刮片
+
+#170 [auto] SP 48890249
+  NGỮ CẢNH: Thương hiệu: Bosch; Xuất xứ thương hiệu: Đức; Xuất xứ (Made in): Trung Quốc; Chất liệu: Lưỡi cao su; Trọng lượng sản phẩm: 0.200; Hướng dẫn bảo quản: Tránh tiếp xúc với lửa và hóa chất; Sản phẩm có được bảo hành không?: Có; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 12 Tháng; Kích cỡ: 17" (425mm), 18" (450mm), 20" (500mm), 21" (530mm)
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票
+  Bản 2: 发票保修
+
+#171 [beauty] SP 51732037
+  NGỮ CẢNH: Thương hiệu: NeoVision; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Việt Nam; Sản phẩm có được bảo hành không?: Có; Thời gian bảo hành: 1 Tháng; Hình thức bảo hành: Hóa đơn
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票保修
+  Bản 2: 发票
+
+#172 [electronics] SP 52065697
+  NGỮ CẢNH: Thương hiệu: Onjess; Xuất xứ thương hiệu: Trung Quốc; Thương hiệu thiết bị phù hợp: Samsung; Sản phẩm có được bảo hành không?: Không; Màu sắc: Nâu, Vàng, Xanh, Đen, Đỏ
+  >> Màu sắc: Nâu, Vàng, Xanh, Đen, Đỏ
+  Bản 1: 棕色, 金色, 蓝色, 黑色, 红色
+  Bản 2: 棕色, 黄色, 蓝色, 黑色, 红色
+
+#173 [food] SP 55619928
+  NGỮ CẢNH: Thương hiệu: SK FOOD; Xuất xứ thương hiệu: Việt Nam; Hướng dẫn bảo quản: Nơi thoáng mát, tránh ánh nắng mặt trời. Dùng không hết có thể đóng kí; Hướng dẫn sử dụng: Dùng trực tiếp, không cần chế biến; Sản phẩm có được bảo hành không?: Không; Quy cách đóng gói: Hũ
+  >> Hướng dẫn bảo quản: Nơi thoáng mát, tránh ánh nắng mặt trời. Dùng không hết có thể đóng kín miệng nắp để dùng lần sau. Không sử dụng sản phẩm đã hết hạn sử dụng
+  Bản 1: 阴凉处，避免阳光直射。未用完可密封盖好以便下次使用。请勿使用过期产品
+  Bản 2: 置于阴凉处，避免阳光直射。如未食用完，可密封盖子以便下次使用。请勿食用过期产品
+
+#174 [food] SP 55619928
+  NGỮ CẢNH: Thương hiệu: SK FOOD; Xuất xứ thương hiệu: Việt Nam; Hướng dẫn bảo quản: Nơi thoáng mát, tránh ánh nắng mặt trời. Dùng không hết có thể đóng kí; Hướng dẫn sử dụng: Dùng trực tiếp, không cần chế biến; Sản phẩm có được bảo hành không?: Không; Quy cách đóng gói: Hũ
+  >> Quy cách đóng gói: Hũ
+  Bản 1: 罐
+  Bản 2: 罐装
+
+#175 [beauty] SP 59179372
+  NGỮ CẢNH: Sản phẩm có được bảo hành không?: Không; Hạn sử dụng: 31/10/2027; Thương hiệu: NeilMed; Xuất xứ thương hiệu: Mỹ; Xuất xứ (Made in): Mỹ; Model: Sinus Rinse
+  >> Hạn sử dụng: 31/10/2027
+  Bản 1: 31/10/2027
+  Bản 2: 2027/10/31
+
+#176 [food] SP 59197175
+  NGỮ CẢNH: Dung tích: 110ml; Thương hiệu: VPMilk; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 8 tháng kể từ ngày sản xuất; Hướng dẫn bảo quản: Có thể bảo quản ở nhiệt độ thường. Tránh ánh nắng trực tiếp của mặt tr; Hướng dẫn sử dụng: Lắc đều trước khi uống Uống hết một lần sau khi mở hộp Ngon hơn khi uố; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam
+  >> Hướng dẫn bảo quản: Có thể bảo quản ở nhiệt độ thường. Tránh ánh nắng trực tiếp của mặt trời
+  Bản 1: 可在常温下保存。避免阳光直射
+  Bản 2: 可常温保存。避免阳光直射
+
+#177 [food] SP 59197175
+  NGỮ CẢNH: Dung tích: 110ml; Thương hiệu: VPMilk; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 8 tháng kể từ ngày sản xuất; Hướng dẫn bảo quản: Có thể bảo quản ở nhiệt độ thường. Tránh ánh nắng trực tiếp của mặt tr; Hướng dẫn sử dụng: Lắc đều trước khi uống Uống hết một lần sau khi mở hộp Ngon hơn khi uố; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam
+  >> Hướng dẫn sử dụng: Lắc đều trước khi uống Uống hết một lần sau khi mở hộp Ngon hơn khi uống lạnh Nên dùng từ 2 - 3 hộp mỗi ngày
+  Bản 1: 饮用前请摇匀，开封后请一次性饮用完毕，冷藏饮用口感更佳，建议每天饮用2 - 3盒
+  Bản 2: 饮用前摇匀 开盖后请一次性饮用完毕 冷饮口感更佳 建议每天饮用 2 - 3 盒
+
+#178 [food] SP 59289032
+  NGỮ CẢNH: Quy cách đóng gói: Đóng dạng túi, hộp rất tiện lợi. Thích hợp làm quà tặng người thân; Thành phần: Thành phần chủ yếu lạc, vừng và mạch nha. Không sử dụng chất bảo quản,; Thương hiệu: Toàn Mỹ; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 6 tháng kể từ ngày sản xuất; Hướng dẫn bảo quản: Bảo quản nơi thoáng mát tránh ánh nắng trực tiếp; Hướng dẫn sử dụng: Sản phầm ăn liền; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 380gr
+  >> Quy cách đóng gói: Đóng dạng túi, hộp rất tiện lợi. Thích hợp làm quà tặng người thân
+  Bản 1: 袋装、盒装，非常方便。适合作为礼物送给亲人
+  Bản 2: 袋装、盒装，非常方便。适合作为亲友礼物
+
+#179 [food] SP 59289032
+  NGỮ CẢNH: Quy cách đóng gói: Đóng dạng túi, hộp rất tiện lợi. Thích hợp làm quà tặng người thân; Thành phần: Thành phần chủ yếu lạc, vừng và mạch nha. Không sử dụng chất bảo quản,; Thương hiệu: Toàn Mỹ; Xuất xứ thương hiệu: Việt Nam; Hạn sử dụng: 6 tháng kể từ ngày sản xuất; Hướng dẫn bảo quản: Bảo quản nơi thoáng mát tránh ánh nắng trực tiếp; Hướng dẫn sử dụng: Sản phầm ăn liền; Sản phẩm có được bảo hành không?: Không; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 380gr
+  >> Hướng dẫn bảo quản: Bảo quản nơi thoáng mát tránh ánh nắng trực tiếp
+  Bản 1: 请存放在阴凉通风处，避免阳光直射
+  Bản 2: 请存放在阴凉处，避免阳光直射
+
+#180 [beauty] SP 63914574
+  NGỮ CẢNH: Ngày sản xuất: 2025-12-11 12:54:22; Thương hiệu: Enya; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Đài Loan; Thành phần: Xem trên vỏ hộp; Hạn sử dụng: 5 Năm kể từ ngày sản xuất; Loại da phù hợp: Tất cả các loại da; Sản phẩm có được bảo hành không?: Có; Thời gian bảo hành: 3 Tháng; Hình thức bảo hành: Hóa đơn
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票
+  Bản 2: 发票保修
+
+#181 [food] SP 66948974
+  NGỮ CẢNH: Dung tích: 750 ml; Thương hiệu: Ladofoods; Xuất xứ thương hiệu: Việt Nam; Kích thước: 28 x19 x35 cm; Hạn sử dụng: Không qui định thời gian sử dụng Ngày sản xuất : in trên nắp bao bì; Hướng dẫn bảo quản: Bảo quản nơi thoáng mát, không để gần nguồn nóng hoặc dưới ánh sáng tr; Hướng dẫn sử dụng: Uống ngon hơn khi ướp lạnh từ 16 độ C đến 18 độ C; Sản phẩm có được bảo hành không?: Không; Lưu ý: Bao bì sản phẩm có thể thay đổi theo đợt nhập hàng và năm sản xuất.; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 750 ml; Giống nho: 100% Shiraz
+  >> Hạn sử dụng: Không qui định thời gian sử dụng Ngày sản xuất : in trên nắp bao bì
+  Bản 1: 未规定使用期限 生产日期：印在包装盖上
+  Bản 2: 未规定保质期 生产日期：印在包装盖上
+
+#182 [food] SP 66948974
+  NGỮ CẢNH: Dung tích: 750 ml; Thương hiệu: Ladofoods; Xuất xứ thương hiệu: Việt Nam; Kích thước: 28 x19 x35 cm; Hạn sử dụng: Không qui định thời gian sử dụng Ngày sản xuất : in trên nắp bao bì; Hướng dẫn bảo quản: Bảo quản nơi thoáng mát, không để gần nguồn nóng hoặc dưới ánh sáng tr; Hướng dẫn sử dụng: Uống ngon hơn khi ướp lạnh từ 16 độ C đến 18 độ C; Sản phẩm có được bảo hành không?: Không; Lưu ý: Bao bì sản phẩm có thể thay đổi theo đợt nhập hàng và năm sản xuất.; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 750 ml; Giống nho: 100% Shiraz
+  >> Hướng dẫn bảo quản: Bảo quản nơi thoáng mát, không để gần nguồn nóng hoặc dưới ánh sáng trực tiếp của mặt trời. Sau khi mở nắp nên bảo quản lạnh và sử dụng hết trong 48h.
+  Bản 1: 请存放在阴凉处，远离热源或阳光直射。开盖后应冷藏并在48小时内饮用完毕。
+  Bản 2: 保存在阴凉处，远离热源或阳光直射。开盖后应冷藏并在48小时内用完。
+
+#183 [food] SP 66948974
+  NGỮ CẢNH: Dung tích: 750 ml; Thương hiệu: Ladofoods; Xuất xứ thương hiệu: Việt Nam; Kích thước: 28 x19 x35 cm; Hạn sử dụng: Không qui định thời gian sử dụng Ngày sản xuất : in trên nắp bao bì; Hướng dẫn bảo quản: Bảo quản nơi thoáng mát, không để gần nguồn nóng hoặc dưới ánh sáng tr; Hướng dẫn sử dụng: Uống ngon hơn khi ướp lạnh từ 16 độ C đến 18 độ C; Sản phẩm có được bảo hành không?: Không; Lưu ý: Bao bì sản phẩm có thể thay đổi theo đợt nhập hàng và năm sản xuất.; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 750 ml; Giống nho: 100% Shiraz
+  >> Hướng dẫn sử dụng: Uống ngon hơn khi ướp lạnh từ 16 độ C đến 18 độ C
+  Bản 1: 冷藏至16°C至18°C时饮用口感更佳
+  Bản 2: 冰镇 16°C 至 18°C 时饮用口感更佳
+
+#184 [food] SP 66948974
+  NGỮ CẢNH: Dung tích: 750 ml; Thương hiệu: Ladofoods; Xuất xứ thương hiệu: Việt Nam; Kích thước: 28 x19 x35 cm; Hạn sử dụng: Không qui định thời gian sử dụng Ngày sản xuất : in trên nắp bao bì; Hướng dẫn bảo quản: Bảo quản nơi thoáng mát, không để gần nguồn nóng hoặc dưới ánh sáng tr; Hướng dẫn sử dụng: Uống ngon hơn khi ướp lạnh từ 16 độ C đến 18 độ C; Sản phẩm có được bảo hành không?: Không; Lưu ý: Bao bì sản phẩm có thể thay đổi theo đợt nhập hàng và năm sản xuất.; Xuất xứ (Made in): Việt Nam; Trọng lượng sản phẩm: 750 ml; Giống nho: 100% Shiraz
+  >> Lưu ý: Bao bì sản phẩm có thể thay đổi theo đợt nhập hàng và năm sản xuất.
+  Bản 1: 产品包装可能会根据进货批次和生产年份而有所变化。
+  Bản 2: 产品包装可能会根据进货批次和生产年份有所变化。
+
+#185 [beauty] SP 8959289
+  NGỮ CẢNH: Thương hiệu: Sunplay; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Việt Nam; Thành phần: Water, Ethylhexyl Methoxycinnamate, Butylene Glycol, Phenyl Trimethico; Hạn sử dụng: 3 năm; Loại da phù hợp: Da khô, da thường
+  >> Thành phần: Water, Ethylhexyl Methoxycinnamate, Butylene Glycol, Phenyl Trimethicone, thoxycinnamate Titanium Dioxide, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Methyl Methacrylate Crosspolymer, Sodium Hyaluronate, Magnesium Ascorbyl Phosphate, Pevari Powder, Bis-PEG-18 Methyl Ether Dimethyl Silane, Acrylates Copolymer, Polyglyceryl-2 Triisostearate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Polystyrene, Glycol Dimethacrylate Crosspolymer, Silica, Alumina, Synthetic Fluorphlogopite, Tin Oxide, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Polysorbate 60, Ammonium Acryloyldimethyltaurate/VP Copolymer, PEG-12 Dimethicone, Polyvinyl Alcohol, Triethanolamine, Xanthan Gum, Gum, Disodium EDTA, Phenoxyethanol, Ethylhexylglycerin, BHT, Fragrance, CI 42090, CI 73360.
+  Bản 1: 水, Ethylhexyl Methoxycinnamate, Butylene Glycol, Phenyl Trimethicone, thoxycinnamate Titanium Dioxide, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Methyl Methacrylate Crosspolymer, Sodium Hyaluronate, Magnesium Ascorbyl Phosphate, Pevari Powder, Bis-PEG-18 Methyl Ether Dimethyl Silane, Acrylates Copolymer, Polyglyceryl-2 Triisostearate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Polystyrene, Glycol Dimethacrylate Crosspolymer, Silica, Alumina, Synthetic Fluorphlogopite, Tin Oxide, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Polysorbate 60, Ammonium Acryloyldimethyltaurate/VP Copolymer, PEG-12 Dimethicone, Polyvinyl Alcohol, Triethanolamine, Xanthan Gum, Gum, Disodium EDTA, Phenoxyethanol, Ethylhexylglycerin, BHT, 香料, CI 42090, CI 73360
+  Bản 2: 水, Ethylhexyl Methoxycinnamate, Butylene Glycol, Phenyl Trimethicone, thoxycinnamate Titanium Dioxide, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Methyl Methacrylate Crosspolymer, Sodium Hyaluronate, Magnesium Ascorbyl Phosphate, Pevari Powder, Bis-PEG-18 Methyl Ether Dimethyl Silane, Acrylates Copolymer, Polyglyceryl-2 Triisostearate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Polystyrene, Glycol Dimethacrylate Crosspolymer, Silica, Alumina, Synthetic Fluorphlogopite, Tin Oxide, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Polysorbate 60, Ammonium Acryloyldimethyltaurate/VP Copolymer, PEG-12 Dimethicone, Polyvinyl Alcohol, Triethanolamine, Xanthan Gum, Gum, Disodium EDTA, Phenoxyethanol, Ethylhexylglycerin, BHT, 香精, CI 42090, CI 73360
+
+#186 [beauty] SP 8959289
+  NGỮ CẢNH: Thương hiệu: Sunplay; Xuất xứ thương hiệu: Nhật Bản; Xuất xứ (Made in): Việt Nam; Thành phần: Water, Ethylhexyl Methoxycinnamate, Butylene Glycol, Phenyl Trimethico; Hạn sử dụng: 3 năm; Loại da phù hợp: Da khô, da thường
+  >> Loại da phù hợp: Da khô, da thường
+  Bản 1: 干性皮肤, 普通肤质
+  Bản 2: 干性皮肤, 中性皮肤
+
+#187 [electronics] SP 91092735
+  NGỮ CẢNH: Thương hiệu: GREENCASE; Xuất xứ thương hiệu: Việt Nam; Xuất xứ (Made in): Hong Kong; Sản phẩm có được bảo hành không?: Không; Dòng máy: Galaxy A52 5G, Galaxy A72 5G
+  >> Xuất xứ (Made in): Hong Kong
+  Bản 1: 香港
+  Bản 2: 中国香港
+
+#188 [food] SP 94262909
+  NGỮ CẢNH: Thương hiệu: bio pharmachemie; Xuất xứ thương hiệu: Việt Nam; Sản phẩm có được bảo hành không?: Có; Xuất xứ (Made in): Việt Nam; Hình thức bảo hành: Hóa đơn; Thời gian bảo hành: 6 Tháng
+  >> Hình thức bảo hành: Hóa đơn
+  Bản 1: 发票保修
+  Bản 2: 发票

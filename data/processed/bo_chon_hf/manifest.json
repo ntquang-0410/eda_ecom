@@ -1,0 +1,55 @@
+{
+  "dataset_status": "reviewed_by_deepseek_and_assistant_with_one_uncertain_context_item",
+  "rows_each": 25575,
+  "columns_by_method": {
+    "cum": [
+      "product_id",
+      "source",
+      "category",
+      "title_zh",
+      "title_vi",
+      "description_zh",
+      "description_vi",
+      "judge_chon_title",
+      "judge_chon_description"
+    ],
+    "pair": [
+      "product_id",
+      "source",
+      "category",
+      "title_zh",
+      "title_vi",
+      "description_zh",
+      "description_vi",
+      "judge_chon_title",
+      "judge_chon_description"
+    ]
+  },
+  "pre_cleanup_revision": "126a564f88c72ac7feb2d4cc79e7183348f5aad9",
+  "files": {
+    "bo_cum_chon_deepseek.parquet": {
+      "bytes": 12962921,
+      "sha256": "e0a625b2c1159133af24a8ae43c3ec4af4911ada68e10cf392920b8e49a20def",
+      "rows": 25575
+    },
+    "bo_pair_chon_deepseek.parquet": {
+      "bytes": 12567124,
+      "sha256": "d4535c62ed1e3692f1563143d10c5c612aaec30d5e574eb9969ef003c627230d",
+      "rows": 25575
+    },
+    "bo_cum_danh_dau.parquet": {
+      "bytes": 344171,
+      "sha256": "945c441f213c0442c788110b836d8aca51f0b36fa7b1e70b87fc2957c38840c6",
+      "rows": 25575
+    },
+    "bo_pair_danh_dau.parquet": {
+      "bytes": 364865,
+      "sha256": "12b66f24e4bc3718e6c784a927c50c4f0a02c84c1079791bb96734a984bddc24",
+      "rows": 25575
+    },
+    "README.md": {
+      "bytes": 2771,
+      "sha256": "c22dbe10437ac376bfbe94934958ebe2588ddc99573e5977b59f651fab62a04e"
+    }
+  }
+}

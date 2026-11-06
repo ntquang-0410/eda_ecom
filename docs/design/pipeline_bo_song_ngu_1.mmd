@@ -1,0 +1,41 @@
+flowchart TD
+  A["1. Nạp file cặp description desc_v1 <br/>(laptop)"]
+  B["2. Chọn cặp thuộc tính <br/>giữ phía Trung, bỏ hẳn tiếng Việt cũ"]
+  C{"3. Phân loại và gộp trùng"}
+  N["Chép nguyên hoặc quy tắc <br/>(mã, tên hãng, ngày) <br/>không cần mô hình"]
+  D["4a. DeepSeek V4.1 Flash <br/>API NVIDIA, chạy từ Kaggle <br/>→ bản A"]
+  E["4b. HY-MT1.5-7B <br/>hai GPU T4 trên Kaggle <br/>→ bản B"]
+  F["5. Luật kiểm từng bản (laptop)"]
+  Q["6a. Chấm điểm CometKiwi <br/>cho từng bản Việt (Kaggle)"]
+  G{"6b. Chọn một bản Việt <br/>cho mỗi dòng Trung (laptop)"}
+  H["Giữ · tin cậy cao hoặc vừa"]
+  I["Giữ · tin cậy thấp"]
+  J["Cất riêng"]
+  K["7. Bản đầy đủ (nội bộ) <br/>18 cột: Trung gốc, Việt đã chọn, <br/>hai bản thô, điểm số"]
+  K2["7. Bản công bố <br/>9 cột: Trung gốc, Việt đã chọn, <br/>độ tin cậy, không có bản thô"]
+  M["7. File cất riêng <br/>và thẻ nguồn gốc"]
+
+  A --> B --> C
+  C -- "Không cần dịch" --> N
+  C -- "Cần dịch" --> D
+  C -- "Cần dịch" --> E
+  D --> F
+  E --> F
+  F --> Q --> G
+  G -- "Hai bản giống nhau hoặc cùng nghĩa: lấy bản điểm cao hơn" --> H
+  G -- "Chỉ một bản đạt: lấy bản đó" --> I
+  G -- "Không bản nào đạt điểm sàn, hoặc đều hỏng" --> J
+  N --> K
+  H --> K
+  I --> K
+  J --> M
+  K --> K2
+
+  classDef xanh fill:#d9f2e3,stroke:#2f8f5b,color:#10331f
+  classDef vang fill:#fff2cc,stroke:#b8860b,color:#3d3000
+  classDef tim fill:#ead9f7,stroke:#7d3fb0,color:#2a0f40
+  classDef xam fill:#e4e9f0,stroke:#5b6b82,color:#1d2735
+  class A,B,C,D,E,F,Q,G,N,K,K2 xam
+  class H xanh
+  class I vang
+  class J,M tim

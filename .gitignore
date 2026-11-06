@@ -15,14 +15,16 @@ data/interim/
 data/release/desc_v1_tai_len_hf/
 data/eda/description/_thu_gia/
 
-# Bản notebook đã chạy (chứa dòng dữ liệu mẫu), sinh bởi scripts/notebook/run_desc_pipeline.py
-notebooks/*.da_chay.ipynb
-
-# Ket qua va du lieu trung gian cua judge (31/10/2026): KHONG commit (xem HUONG_DAN_JUDGE.md muc 15)
+# Bộ song ngữ thứ nhất: dữ liệu sinh ra (dịch máy, điểm), không commit; notebook đã chạy chứa dòng dữ liệu mẫu
+data/processed/song_ngu_1/
+# Kết quả judge (điểm chấm bản dịch theo cụm): dữ liệu sinh ra, không commit
 data/processed/judge/
+# Bộ làm sạch cho fine-tune (dẫn xuất từ bộ chính thức v2): dữ liệu sinh ra, không commit
 data/processed/ft_clean/
+# Kết quả so cặp mù Gemma/Qwen: dữ liệu sinh ra, không commit
 data/processed/so_cap/
+# Hai bộ cuối do judge chọn Gemma/Qwen (cụm, pair): dữ liệu sinh ra, không commit
 data/processed/bo_chon/
-data/processed/song_ngu_*/
-data/snapshot/title_candidates/
-data/snapshot/bilingual_official_v2/
+# Đầu ra fine-tune (phép chia, mẫu, tập test khóa, kết quả chấm): dữ liệu sinh ra, không commit
+data/processed/ft_run/
+notebooks/*.da_chay.ipynb

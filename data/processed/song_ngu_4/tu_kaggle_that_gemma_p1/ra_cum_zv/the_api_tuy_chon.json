@@ -1,0 +1,107 @@
+{
+ "mo_hinh": "api_tuy_chon",
+ "phien_ban_cau_lenh": "cum-zh_vi-v4b-2026-10-25",
+ "huong": "zh_vi",
+ "loai": "cum_zv",
+ "bat_dau": "2026-10-25 00:54:57",
+ "tong": 16346,
+ "da_co_truoc": 0,
+ "chi_mau_thu": false,
+ "tham_so": {
+  "temperature": 0.0,
+  "repetition_penalty": 1.0,
+  "max_tokens": "min(tran, 512 + 2*ky_tu_nhap + 4*ky_tu_trung_can + 40*so_truong)",
+  "hoi_lai": 1
+ },
+ "backend": "api",
+ "repo": "gemma-4-26b-a4b-it",
+ "sha_repo": "api (không có mã phiên bản; ghi ngày gọi ở bat_dau)",
+ "loi_vllm": null,
+ "phien_ban": {
+  "api": "gemma-4-26b-a4b-it",
+  "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+  "song_song": 20,
+  "nhan_theo_luong": true,
+  "giay_cho": 300,
+  "extra_body": {
+   "reasoning_effort": "minimal"
+  }
+ },
+ "rpm": 20,
+ "toi_da_yeu_cau": 40000,
+ "ngan_sach_usd": 20.0,
+ "dem": {
+  "xong": 6117,
+  "loi_cau_truc": 14,
+  "con_sot_han": 28,
+  "hoi_lai": 382,
+  "sua_duoc": 350,
+  "loi_api": 83
+ },
+ "toc_do_cum_giay": 0.154,
+ "api": {
+  "yeu_cau": 6496,
+  "thu_lai": 6977,
+  "loi_api": 8,
+  "loi_trong_noi_dung": 0,
+  "het_gio": 83,
+  "het_ngan_sach": 0,
+  "het_toi_da_goi": 0,
+  "het_quota_ngay": 0,
+  "token_vao": 14995912,
+  "token_ra": 2736814,
+  "token_suy_luan": 0,
+  "giay_cac_lan_goi": 61846.83525419235,
+  "chi_phi_uoc_usd": 7.78295,
+  "model_tra_ve": [
+   "gemma-4-26b-a4b-it"
+  ],
+  "theo_khoa": {
+   "GEMINI_API_KEY_aoCw": {
+    "yeu_cau_thanh_cong": 1287,
+    "loi": 1375,
+    "giay_trung_binh": 9.4,
+    "trang_thai": "con_dung_duoc"
+   },
+   "GEMINI_API_KEY_XY2w": {
+    "yeu_cau_thanh_cong": 1395,
+    "loi": 1425,
+    "giay_trung_binh": 9.8,
+    "trang_thai": "con_dung_duoc"
+   },
+   "GEMINI_API_KEY_rsqw": {
+    "yeu_cau_thanh_cong": 1350,
+    "loi": 1441,
+    "giay_trung_binh": 9.4,
+    "trang_thai": "con_dung_duoc"
+   },
+   "GEMINI_API_KEY_XIBA": {
+    "yeu_cau_thanh_cong": 1210,
+    "loi": 1340,
+    "giay_trung_binh": 9.5,
+    "trang_thai": "con_dung_duoc"
+   },
+   "GEMINI_API_KEY_eVYg": {
+    "yeu_cau_thanh_cong": 1249,
+    "loi": 1403,
+    "giay_trung_binh": 9.5,
+    "trang_thai": "con_dung_duoc"
+   }
+  },
+  "goi_thu": [
+   {
+    "extra": {
+     "reasoning_effort": "minimal"
+    },
+    "giay": 0.9,
+    "tra_loi": "**你好** (Nǐ hǎo) dịch sang tiếng Việt là:",
+    "ky_tu_suy_luan": 0
+   }
+  ],
+  "loi_cuoi": "HTTP 429: [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-"
+ },
+ "ket_thuc": "2026-10-25 11:56:55",
+ "dung_vi_het_gio": true,
+ "con_lai": 10229,
+ "giay": 39720
+}

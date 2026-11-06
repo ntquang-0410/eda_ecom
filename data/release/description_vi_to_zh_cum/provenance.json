@@ -1,0 +1,204 @@
+{
+ "_note": "Provenance card of the build that produced the two tables of this folder. Keys are Vietnamese; see README.md, section 'Provenance file'. API key names, test calls and Kaggle paths were removed before publishing.",
+ "ban_dung": {
+  "nhan": "20261024_1616",
+  "bang_cap": "description_pairs_vi_zh_ctx.parquet",
+  "bang_san_pham": "description_products_vi_zh.parquet"
+ },
+ "nguon": {
+  "file": "data/cleaned/tiki/tiki_eda.parquet",
+  "sha256": "7af2a2620b8ca2def3b80762cb8f99196bfe7c64baeaeaa8b99d974df570d3bd",
+  "ban_dich_don_vi_dung_lam_nhap": {
+   "thu_muc": "data/description_vi_to_zh/",
+   "nhan_ban": "20261023_1656",
+   "sha256_file_cap": "0177e2b233d260dc024e0abe3797e91f11ddab714557368eb46e0a7ee30e78fc"
+  }
+ },
+ "chuan_bi": {
+  "ngay_chay": "2026-10-23 20:34:22",
+  "cap": 87139,
+  "cum": 13208,
+  "san_pham": 13187,
+  "ten_khoa": 85803,
+  "ten_nhap": 1335,
+  "ten_dich_moi": 1,
+  "gia_tri_khoa": 72850,
+  "gia_tri_nhap": 14206,
+  "gia_tri_dich_moi": 83,
+  "gia_tri_khoa_doi_gr": 284,
+  "san_pham_khong_co_tieu_de": 0,
+  "mau_thu": {
+   "san_pham": 200,
+   "cum": 201,
+   "cap": 1365,
+   "truong_can_xuat": 256
+  }
+ },
+ "cau_lenh_he_thong_v2": "You are a professional e-commerce translator. You receive the attribute list of ONE product from the Vietnamese site Tiki.vn and must produce its Simplified Chinese version, in the style of Chinese e-commerce listings (Taobao, 1688).\nInput: the product title (context only, never translate it) and a JSON array of items. Each item has \"i\" (item number), \"n\" (attribute name, Vietnamese) and \"v\" (attribute value, Vietnamese), and may also have:\n- \"n_zh\" / \"v_zh\": the FIXED Chinese translation of that field, already reviewed by a person. Never output these fields and never change them; use them only as context.\n- \"draft_n\" / \"draft_v\": a DRAFT Chinese translation of that field, made WITHOUT seeing the rest of the product.\nYour task, for every field that is not fixed:\n- If it has a draft: check the draft against the Vietnamese and against the WHOLE product (the title and all other items). Keep the draft EXACTLY as it is when it is correct. Change it ONLY when: the context shows its meaning is wrong (for example a colour, size, part, flavour, material or product type that the title or the other items make clear); it leaves Vietnamese words or ordinary English words untranslated (materials, sizes, nutrients, countries, for example Nylon -> 尼龙, Free Size -> 均码, PROTEIN -> 蛋白质, Taiwan -> 台湾); it writes the gram unit as \"gr\" or \"gram\" (write \"g\"); or it drops or adds meaning. Never rewrite a correct draft only to change the style or word choice.\n- If it has no draft: translate it.\nOutput ONLY a JSON array, with no markdown, no code fence and no explanation. Output one object for each item that has at least one non-fixed field, in the same order: {\"i\": item number, \"n\": Chinese name (only when the name is not fixed), \"v\": Chinese value (only when the value is not fixed), \"c\": \"\" when you kept the draft(s) unchanged, otherwise a short English reason for the change}.\nRules for every field you output:\n- Simplified Chinese only. No Vietnamese word and no Vietnamese letter with diacritics, except the name of a small place, a herb, a plant or a local dish whose Chinese name you are not sure of: keep that name exactly as written instead of guessing.\n- Keep numbers, units, model codes, letter sizes (S, M, XL) and Latin-letter brand names exactly. Never translate or transliterate a Latin-letter brand name.\n- A list separated by \", \" stays a list with the same number of items, in the same order, separated by \", \".\n- Do not put the attribute name or a label before a value unless the Vietnamese value itself starts with it. Do not add information that is not in the Vietnamese.\nExample input items:\n[{\"i\": 1, \"n\": \"Thương hiệu\", \"v\": \"Andes\", \"n_zh\": \"品牌\", \"v_zh\": \"Andes\"}, {\"i\": 2, \"n\": \"Loại\", \"v\": \"Mũ bảo hiểm 3/4\", \"n_zh\": \"类型\", \"draft_v\": \"3/4头盔\"}, {\"i\": 3, \"n\": \"Màu sắc\", \"v\": \"Hồng, Đen nhám\", \"n_zh\": \"颜色\", \"draft_v\": \"红色, 磨砂黑\"}]\nExample output:\n[{\"i\": 2, \"v\": \"3/4头盔\", \"c\": \"\"}, {\"i\": 3, \"v\": \"粉色, 磨砂黑\", \"c\": \"Hồng is pink (粉色), not red\"}]",
+ "phien_ban_cau_lenh": "cum-vi_zh-v2-2026-10-23",
+ "chay": {
+  "gemma_4": {
+   "mo_hinh": "api_tuy_chon",
+   "phien_ban_cau_lenh": "cum-vi_zh-v2-2026-10-23",
+   "huong": "vi_zh",
+   "loai": "cum",
+   "bat_dau": "2026-10-24 01:32:48",
+   "tong": 13208,
+   "da_co_truoc": 0,
+   "chi_mau_thu": false,
+   "tham_so": {
+    "temperature": 0.0,
+    "repetition_penalty": 1.0,
+    "max_tokens": "min(tran, 512 + 2*ky_tu + 30*so_muc)",
+    "hoi_lai": 1
+   },
+   "backend": "api",
+   "repo": "gemma-4-26b-a4b-it",
+   "sha_repo": "api (không có mã phiên bản; ghi ngày gọi ở bat_dau)",
+   "loi_vllm": null,
+   "phien_ban": {
+    "api": "gemma-4-26b-a4b-it",
+    "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+    "song_song": 20,
+    "nhan_theo_luong": true,
+    "giay_cho": 300,
+    "extra_body": {
+     "reasoning_effort": "minimal"
+    }
+   },
+   "rpm": 20,
+   "toi_da_yeu_cau": 30000,
+   "ngan_sach_usd": 12.0,
+   "dem": {
+    "xong": 13208,
+    "loi_cau_truc": 2,
+    "con_sot_viet": 21,
+    "hoi_lai": 62,
+    "sua_duoc": 40,
+    "loi_api": 0
+   },
+   "toc_do_cum_giay": 0.564,
+   "api": {
+    "yeu_cau": 7997,
+    "thu_lai": 3941,
+    "loi_api": 1,
+    "loi_trong_noi_dung": 0,
+    "het_gio": 0,
+    "het_ngan_sach": 0,
+    "het_toi_da_goi": 0,
+    "het_quota_ngay": 0,
+    "token_vao": 10654879,
+    "token_ra": 832912,
+    "token_suy_luan": 0,
+    "giay_cac_lan_goi": 24428.01850748062,
+    "chi_phi_uoc_usd": 4.19596,
+    "model_tra_ve": [
+     "gemma-4-26b-a4b-it"
+    ],
+    "so_khoa": 5,
+    "luong_bi_cat": 1
+   },
+   "ket_thuc": "2026-10-24 08:03:23",
+   "dung_vi_het_gio": false,
+   "con_lai": 0,
+   "giay": 23437
+  },
+  "qwen3_14b": {
+   "mo_hinh": "qwen3_14b",
+   "phien_ban_cau_lenh": "cum-vi_zh-v2-2026-10-23",
+   "huong": "vi_zh",
+   "loai": "cum",
+   "bat_dau": "2026-10-24 01:27:43",
+   "tong": 13208,
+   "da_co_truoc": 0,
+   "chi_mau_thu": false,
+   "tham_so": {
+    "temperature": 0.0,
+    "repetition_penalty": 1.0,
+    "max_tokens": "min(tran, 512 + 2*ky_tu + 30*so_muc)",
+    "hoi_lai": 1
+   },
+   "backend": "vllm",
+   "repo": "Qwen/Qwen3-14B-AWQ",
+   "sha_repo": "31c69efc29464b6bb0aee1398b5a7b50a99340c3",
+   "loi_vllm": null,
+   "phien_ban": {
+    "vllm": "0.32.0",
+    "tensor_parallel": 2,
+    "enforce_eager": false,
+    "quantization": "tu_nhan"
+   },
+   "rpm": 0,
+   "toi_da_yeu_cau": 0,
+   "ngan_sach_usd": 0.0,
+   "dem": {
+    "xong": 13208,
+    "loi_cau_truc": 4,
+    "con_sot_viet": 10,
+    "hoi_lai": 300,
+    "sua_duoc": 287,
+    "loi_api": 0
+   },
+   "toc_do_cum_giay": 1.375,
+   "ket_thuc": "2026-10-24 04:11:52",
+   "dung_vi_het_gio": false,
+   "con_lai": 0,
+   "giay": 9850
+  }
+ },
+ "ghep": {
+  "cap_tong": 87139,
+  "cap_co_ban_cuoi": 87112,
+  "cap_khong_co_ban_cuoi": 27,
+  "nguon_gia_tri": {
+   "khoa": 72850,
+   "giu_nhap": 12096,
+   "sua_A": 2073,
+   "dich_moi_A": 49,
+   "khong_co": 27,
+   "sua_B": 25,
+   "lui_nhap": 12,
+   "dich_moi_B": 7
+  },
+  "nguon_ten": {
+   "khoa": 85803,
+   "giu_nhap": 1116,
+   "sua_A": 219,
+   "dich_moi_A": 1
+  },
+  "dong_thuan": {
+   "khoa": 72850,
+   "ca_hai_giu_nhap": 11848,
+   "chi_A_sua": 1679,
+   "chi_B_sua": 291,
+   "ca_hai_sua_giong": 229,
+   "ca_hai_sua_khac": 214,
+   "chi_mot_mo_hinh_giu_nhap": 28
+  },
+  "sua_khong_ly_do": 361,
+  "cum_sua_nhieu": 16,
+  "gia_tri_khac_don_vi": 2465,
+  "ten_khac_don_vi": 298,
+  "cum_A": {
+   "ok": 13206,
+   "loi_cau_truc": 2
+  },
+  "cum_B": {
+   "ok": 13204,
+   "loi_cau_truc": 4
+  },
+  "san_pham": 13187,
+  "san_pham_mat_cap": 25,
+  "san_pham_khong_con_cap_nao": 0,
+  "do_tin_cay_cap": {
+   "cao": 76820,
+   "vua": 8967,
+   "thap": 1325
+  },
+  "do_tin_cay_san_pham": {
+   "cao": 6979,
+   "vua": 4982,
+   "thap": 1226
+  }
+ }
+}

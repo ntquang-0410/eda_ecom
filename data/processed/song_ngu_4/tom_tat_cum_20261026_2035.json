@@ -1,0 +1,85 @@
+{
+ "cap_vao": 402498,
+ "cap_giu": 401692,
+ "cap_bo_khong_co_ban": 806,
+ "cach_chon": "AB",
+ "cum_gemma": {
+  "ok": 16314,
+  "loi_cau_truc": 31,
+  "chua_dich": 1
+ },
+ "nguon_ten": {
+  "giu_nhap": 232114,
+  "khoa": 169241,
+  "sua_A": 1017,
+  "lui_nhap": 63,
+  "dich_moi_A": 49,
+  "khong_co": 13,
+  "sua_B": 1
+ },
+ "nguon_gia_tri": {
+  "giu_nhap": 199863,
+  "khoa": 178342,
+  "sua_A": 15670,
+  "dich_moi_A": 7005,
+  "lui_nhap": 804,
+  "khong_co": 797,
+  "sua_B": 17
+ },
+ "nguon_ban_dich": {
+  "giu_ban_dich_don_vi": 206701,
+  "tu_dien_quy_tac": 172304,
+  "gemma_sua": 15669,
+  "dich_moi": 7000,
+  "qwen_sua": 18
+ },
+ "do_tin_cay_cap": {
+  "cao": 188353,
+  "vua": 188095,
+  "thap": 25244
+ },
+ "luat_truot_gia_tri_gemma": {
+  "latin_moi": 702,
+  "mat_viet": 592,
+  "do_dai": 218,
+  "han_sot": 59,
+  "lech_so_muc": 51,
+  "mat_ma": 45,
+  "lech_so": 28,
+  "jin_sai": 25,
+  "jin_can": 5,
+  "loi_thua": 2,
+  "lo_ngu_canh": 2
+ },
+ "luat_truot_ten_gemma": {
+  "mat_viet": 52,
+  "han_sot": 13,
+  "latin_moi": 13,
+  "do_dai": 11,
+  "mat_ma": 5,
+  "lech_so": 4
+ },
+ "sua_khong_ly_do": 2907,
+ "cum_sua_nhieu": 0,
+ "gia_tri_khac_bo_1": 22687,
+ "ten_khac_bo_1": 1062,
+ "cum_qwen": {
+  "chua_dich": 14613,
+  "ok": 1718,
+  "loi_cau_truc": 15
+ },
+ "qwen_thay_gemma_gia_tri": 17,
+ "qwen_thay_gemma_ten": 1,
+ "qwen_dich_moi_khong_dung": 12,
+ "san_pham": 16342,
+ "san_pham_mat_cap": 736,
+ "san_pham_khong_con_cap_nao": 0,
+ "do_tin_cay_san_pham": {
+  "thap": 12020,
+  "vua": 4322
+ },
+ "nhan": "20261026_2035",
+ "thu_muc_gemma": "data\\processed\\song_ngu_4\\tu_kaggle_that_gemma_gop",
+ "thu_muc_qwen": "data\\processed\\song_ngu_4\\that_qwen_du_phong",
+ "giay": 137
+}

@@ -1,0 +1,754 @@
+{
+"1": {
+"pair_id": 58728,
+"khoa": "1=cum"
+},
+"2": {
+"pair_id": 50225,
+"khoa": "1=cum"
+},
+"3": {
+"pair_id": 50228,
+"khoa": "1=don_vi"
+},
+"4": {
+"pair_id": 85238,
+"khoa": "1=cum"
+},
+"5": {
+"pair_id": 21228,
+"khoa": "1=don_vi"
+},
+"6": {
+"pair_id": 82561,
+"khoa": "1=cum"
+},
+"7": {
+"pair_id": 41764,
+"khoa": "1=cum"
+},
+"8": {
+"pair_id": 24939,
+"khoa": "1=don_vi"
+},
+"9": {
+"pair_id": 82030,
+"khoa": "1=cum"
+},
+"10": {
+"pair_id": 82032,
+"khoa": "1=cum"
+},
+"11": {
+"pair_id": 74020,
+"khoa": "1=cum"
+},
+"12": {
+"pair_id": 55143,
+"khoa": "1=cum"
+},
+"13": {
+"pair_id": 62067,
+"khoa": "1=cum"
+},
+"14": {
+"pair_id": 62070,
+"khoa": "1=don_vi"
+},
+"15": {
+"pair_id": 62071,
+"khoa": "1=cum"
+},
+"16": {
+"pair_id": 63880,
+"khoa": "1=cum"
+},
+"17": {
+"pair_id": 63885,
+"khoa": "1=don_vi"
+},
+"18": {
+"pair_id": 63886,
+"khoa": "1=don_vi"
+},
+"19": {
+"pair_id": 63890,
+"khoa": "1=don_vi"
+},
+"20": {
+"pair_id": 14012,
+"khoa": "1=cum"
+},
+"21": {
+"pair_id": 7950,
+"khoa": "1=don_vi"
+},
+"22": {
+"pair_id": 71570,
+"khoa": "1=cum"
+},
+"23": {
+"pair_id": 71571,
+"khoa": "1=don_vi"
+},
+"24": {
+"pair_id": 71575,
+"khoa": "1=cum"
+},
+"25": {
+"pair_id": 71270,
+"khoa": "1=cum"
+},
+"26": {
+"pair_id": 33130,
+"khoa": "1=cum"
+},
+"27": {
+"pair_id": 33136,
+"khoa": "1=cum"
+},
+"28": {
+"pair_id": 7825,
+"khoa": "1=don_vi"
+},
+"29": {
+"pair_id": 7291,
+"khoa": "1=cum"
+},
+"30": {
+"pair_id": 7290,
+"khoa": "1=don_vi"
+},
+"31": {
+"pair_id": 64544,
+"khoa": "1=don_vi"
+},
+"32": {
+"pair_id": 14291,
+"khoa": "1=cum"
+},
+"33": {
+"pair_id": 65903,
+"khoa": "1=don_vi"
+},
+"34": {
+"pair_id": 65904,
+"khoa": "1=cum"
+},
+"35": {
+"pair_id": 82770,
+"khoa": "1=cum"
+},
+"36": {
+"pair_id": 74904,
+"khoa": "1=cum"
+},
+"37": {
+"pair_id": 74905,
+"khoa": "1=don_vi"
+},
+"38": {
+"pair_id": 74906,
+"khoa": "1=cum"
+},
+"39": {
+"pair_id": 82970,
+"khoa": "1=cum"
+},
+"40": {
+"pair_id": 2905,
+"khoa": "1=don_vi"
+},
+"41": {
+"pair_id": 61415,
+"khoa": "1=cum"
+},
+"42": {
+"pair_id": 61418,
+"khoa": "1=cum"
+},
+"43": {
+"pair_id": 61419,
+"khoa": "1=don_vi"
+},
+"44": {
+"pair_id": 10839,
+"khoa": "1=don_vi"
+},
+"45": {
+"pair_id": 79481,
+"khoa": "1=cum"
+},
+"46": {
+"pair_id": 50455,
+"khoa": "1=don_vi"
+},
+"47": {
+"pair_id": 31830,
+"khoa": "1=don_vi"
+},
+"48": {
+"pair_id": 31834,
+"khoa": "1=don_vi"
+},
+"49": {
+"pair_id": 55516,
+"khoa": "1=don_vi"
+},
+"50": {
+"pair_id": 42267,
+"khoa": "1=cum"
+},
+"51": {
+"pair_id": 42273,
+"khoa": "1=don_vi"
+},
+"52": {
+"pair_id": 37638,
+"khoa": "1=cum"
+},
+"53": {
+"pair_id": 37643,
+"khoa": "1=cum"
+},
+"54": {
+"pair_id": 42523,
+"khoa": "1=don_vi"
+},
+"55": {
+"pair_id": 42528,
+"khoa": "1=cum"
+},
+"56": {
+"pair_id": 42529,
+"khoa": "1=cum"
+},
+"57": {
+"pair_id": 35486,
+"khoa": "1=cum"
+},
+"58": {
+"pair_id": 87220,
+"khoa": "1=don_vi"
+},
+"59": {
+"pair_id": 17524,
+"khoa": "1=don_vi"
+},
+"60": {
+"pair_id": 49629,
+"khoa": "1=don_vi"
+},
+"61": {
+"pair_id": 76776,
+"khoa": "1=don_vi"
+},
+"62": {
+"pair_id": 50408,
+"khoa": "1=cum"
+},
+"63": {
+"pair_id": 50414,
+"khoa": "1=don_vi"
+},
+"64": {
+"pair_id": 50415,
+"khoa": "1=don_vi"
+},
+"65": {
+"pair_id": 49908,
+"khoa": "1=don_vi"
+},
+"66": {
+"pair_id": 49909,
+"khoa": "1=cum"
+},
+"67": {
+"pair_id": 49911,
+"khoa": "1=don_vi"
+},
+"68": {
+"pair_id": 84229,
+"khoa": "1=don_vi"
+},
+"69": {
+"pair_id": 34119,
+"khoa": "1=cum"
+},
+"70": {
+"pair_id": 34122,
+"khoa": "1=don_vi"
+},
+"71": {
+"pair_id": 44376,
+"khoa": "1=cum"
+},
+"72": {
+"pair_id": 53104,
+"khoa": "1=don_vi"
+},
+"73": {
+"pair_id": 50138,
+"khoa": "1=don_vi"
+},
+"74": {
+"pair_id": 31134,
+"khoa": "1=don_vi"
+},
+"75": {
+"pair_id": 76489,
+"khoa": "1=don_vi"
+},
+"76": {
+"pair_id": 76492,
+"khoa": "1=cum"
+},
+"77": {
+"pair_id": 43970,
+"khoa": "1=cum"
+},
+"78": {
+"pair_id": 43976,
+"khoa": "1=don_vi"
+},
+"79": {
+"pair_id": 45328,
+"khoa": "1=cum"
+},
+"80": {
+"pair_id": 46171,
+"khoa": "1=cum"
+},
+"81": {
+"pair_id": 54193,
+"khoa": "1=cum"
+},
+"82": {
+"pair_id": 38628,
+"khoa": "1=cum"
+},
+"83": {
+"pair_id": 38636,
+"khoa": "1=cum"
+},
+"84": {
+"pair_id": 31740,
+"khoa": "1=don_vi"
+},
+"85": {
+"pair_id": 31749,
+"khoa": "1=cum"
+},
+"86": {
+"pair_id": 86769,
+"khoa": "1=cum"
+},
+"87": {
+"pair_id": 3088,
+"khoa": "1=cum"
+},
+"88": {
+"pair_id": 3089,
+"khoa": "1=don_vi"
+},
+"89": {
+"pair_id": 3090,
+"khoa": "1=cum"
+},
+"90": {
+"pair_id": 3092,
+"khoa": "1=cum"
+},
+"91": {
+"pair_id": 58893,
+"khoa": "1=don_vi"
+},
+"92": {
+"pair_id": 58894,
+"khoa": "1=don_vi"
+},
+"93": {
+"pair_id": 48970,
+"khoa": "1=don_vi"
+},
+"94": {
+"pair_id": 48978,
+"khoa": "1=don_vi"
+},
+"95": {
+"pair_id": 30572,
+"khoa": "1=cum"
+},
+"96": {
+"pair_id": 30576,
+"khoa": "1=cum"
+},
+"97": {
+"pair_id": 51394,
+"khoa": "1=cum"
+},
+"98": {
+"pair_id": 36402,
+"khoa": "1=don_vi"
+},
+"99": {
+"pair_id": 16198,
+"khoa": "1=don_vi"
+},
+"100": {
+"pair_id": 29075,
+"khoa": "1=cum"
+},
+"101": {
+"pair_id": 3206,
+"khoa": "1=cum"
+},
+"102": {
+"pair_id": 3210,
+"khoa": "1=cum"
+},
+"103": {
+"pair_id": 27335,
+"khoa": "1=cum"
+},
+"104": {
+"pair_id": 2657,
+"khoa": "1=cum"
+},
+"105": {
+"pair_id": 2658,
+"khoa": "1=don_vi"
+},
+"106": {
+"pair_id": 2659,
+"khoa": "1=cum"
+},
+"107": {
+"pair_id": 2666,
+"khoa": "1=cum"
+},
+"108": {
+"pair_id": 867,
+"khoa": "1=cum"
+},
+"109": {
+"pair_id": 868,
+"khoa": "1=cum"
+},
+"110": {
+"pair_id": 869,
+"khoa": "1=don_vi"
+},
+"111": {
+"pair_id": 874,
+"khoa": "1=don_vi"
+},
+"112": {
+"pair_id": 876,
+"khoa": "1=don_vi"
+},
+"113": {
+"pair_id": 63489,
+"khoa": "1=don_vi"
+},
+"114": {
+"pair_id": 68185,
+"khoa": "1=don_vi"
+},
+"115": {
+"pair_id": 68186,
+"khoa": "1=don_vi"
+},
+"116": {
+"pair_id": 68189,
+"khoa": "1=cum"
+},
+"117": {
+"pair_id": 55190,
+"khoa": "1=don_vi"
+},
+"118": {
+"pair_id": 68162,
+"khoa": "1=don_vi"
+},
+"119": {
+"pair_id": 68166,
+"khoa": "1=don_vi"
+},
+"120": {
+"pair_id": 68167,
+"khoa": "1=don_vi"
+},
+"121": {
+"pair_id": 68171,
+"khoa": "1=cum"
+},
+"122": {
+"pair_id": 17454,
+"khoa": "1=cum"
+},
+"123": {
+"pair_id": 198,
+"khoa": "1=cum"
+},
+"124": {
+"pair_id": 1276,
+"khoa": "1=don_vi"
+},
+"125": {
+"pair_id": 1277,
+"khoa": "1=cum"
+},
+"126": {
+"pair_id": 1278,
+"khoa": "1=cum"
+},
+"127": {
+"pair_id": 1281,
+"khoa": "1=cum"
+},
+"128": {
+"pair_id": 1285,
+"khoa": "1=cum"
+},
+"129": {
+"pair_id": 67576,
+"khoa": "1=cum"
+},
+"130": {
+"pair_id": 66645,
+"khoa": "1=cum"
+},
+"131": {
+"pair_id": 66648,
+"khoa": "1=cum"
+},
+"132": {
+"pair_id": 61615,
+"khoa": "1=cum"
+},
+"133": {
+"pair_id": 1240,
+"khoa": "1=cum"
+},
+"134": {
+"pair_id": 7122,
+"khoa": "1=cum"
+},
+"135": {
+"pair_id": 36053,
+"khoa": "1=cum"
+},
+"136": {
+"pair_id": 78771,
+"khoa": "1=don_vi"
+},
+"137": {
+"pair_id": 44200,
+"khoa": "1=don_vi"
+},
+"138": {
+"pair_id": 46585,
+"khoa": "1=cum"
+},
+"139": {
+"pair_id": 6559,
+"khoa": "1=cum"
+},
+"140": {
+"pair_id": 6563,
+"khoa": "1=cum"
+},
+"141": {
+"pair_id": 52430,
+"khoa": "1=cum"
+},
+"142": {
+"pair_id": 52432,
+"khoa": "1=cum"
+},
+"143": {
+"pair_id": 1389,
+"khoa": "1=don_vi"
+},
+"144": {
+"pair_id": 1392,
+"khoa": "1=don_vi"
+},
+"145": {
+"pair_id": 1395,
+"khoa": "1=cum"
+},
+"146": {
+"pair_id": 21724,
+"khoa": "1=cum"
+},
+"147": {
+"pair_id": 20185,
+"khoa": "1=cum"
+},
+"148": {
+"pair_id": 42651,
+"khoa": "1=cum"
+},
+"149": {
+"pair_id": 43444,
+"khoa": "1=cum"
+},
+"150": {
+"pair_id": 43446,
+"khoa": "1=cum"
+},
+"151": {
+"pair_id": 26030,
+"khoa": "1=don_vi"
+},
+"152": {
+"pair_id": 72810,
+"khoa": "1=cum"
+},
+"153": {
+"pair_id": 72813,
+"khoa": "1=cum"
+},
+"154": {
+"pair_id": 72816,
+"khoa": "1=don_vi"
+},
+"155": {
+"pair_id": 17256,
+"khoa": "1=don_vi"
+},
+"156": {
+"pair_id": 25400,
+"khoa": "1=cum"
+},
+"157": {
+"pair_id": 72625,
+"khoa": "1=don_vi"
+},
+"158": {
+"pair_id": 40763,
+"khoa": "1=cum"
+},
+"159": {
+"pair_id": 84452,
+"khoa": "1=don_vi"
+},
+"160": {
+"pair_id": 72292,
+"khoa": "1=don_vi"
+},
+"161": {
+"pair_id": 72293,
+"khoa": "1=don_vi"
+},
+"162": {
+"pair_id": 27537,
+"khoa": "1=don_vi"
+},
+"163": {
+"pair_id": 38229,
+"khoa": "1=cum"
+},
+"164": {
+"pair_id": 38231,
+"khoa": "1=cum"
+},
+"165": {
+"pair_id": 59976,
+"khoa": "1=cum"
+},
+"166": {
+"pair_id": 59977,
+"khoa": "1=don_vi"
+},
+"167": {
+"pair_id": 59978,
+"khoa": "1=don_vi"
+},
+"168": {
+"pair_id": 59979,
+"khoa": "1=don_vi"
+},
+"169": {
+"pair_id": 44503,
+"khoa": "1=cum"
+},
+"170": {
+"pair_id": 44507,
+"khoa": "1=cum"
+},
+"171": {
+"pair_id": 83295,
+"khoa": "1=don_vi"
+},
+"172": {
+"pair_id": 33975,
+"khoa": "1=don_vi"
+},
+"173": {
+"pair_id": 63027,
+"khoa": "1=don_vi"
+},
+"174": {
+"pair_id": 63030,
+"khoa": "1=don_vi"
+},
+"175": {
+"pair_id": 11570,
+"khoa": "1=don_vi"
+},
+"176": {
+"pair_id": 65619,
+"khoa": "1=don_vi"
+},
+"177": {
+"pair_id": 65620,
+"khoa": "1=cum"
+},
+"178": {
+"pair_id": 66856,
+"khoa": "1=don_vi"
+},
+"179": {
+"pair_id": 66861,
+"khoa": "1=cum"
+},
+"180": {
+"pair_id": 10994,
+"khoa": "1=cum"
+},
+"181": {
+"pair_id": 58986,
+"khoa": "1=cum"
+},
+"182": {
+"pair_id": 58987,
+"khoa": "1=cum"
+},
+"183": {
+"pair_id": 58988,
+"khoa": "1=cum"
+},
+"184": {
+"pair_id": 58990,
+"khoa": "1=don_vi"
+},
+"185": {
+"pair_id": 9792,
+"khoa": "1=don_vi"
+},
+"186": {
+"pair_id": 9794,
+"khoa": "1=cum"
+},
+"187": {
+"pair_id": 29490,
+"khoa": "1=don_vi"
+},
+"188": {
+"pair_id": 66516,
+"khoa": "1=don_vi"
+}
+}

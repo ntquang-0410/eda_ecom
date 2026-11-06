@@ -1,0 +1,106 @@
+{
+ "mo_hinh": "api_tuy_chon",
+ "phien_ban_cau_lenh": "cum-zh_vi-v2-2026-10-24",
+ "huong": "zh_vi",
+ "loai": "cum_zv",
+ "bat_dau": "2026-10-24 15:51:09",
+ "tong": 200,
+ "da_co_truoc": 0,
+ "chi_mau_thu": true,
+ "tham_so": {
+  "temperature": 0.0,
+  "repetition_penalty": 1.0,
+  "max_tokens": "min(tran, 512 + 2*ky_tu_nhap + 4*ky_tu_trung_can + 40*so_truong)",
+  "hoi_lai": 1
+ },
+ "backend": "api",
+ "repo": "gemma-4-26b-a4b-it",
+ "sha_repo": "api (không có mã phiên bản; ghi ngày gọi ở bat_dau)",
+ "loi_vllm": null,
+ "phien_ban": {
+  "api": "gemma-4-26b-a4b-it",
+  "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+  "song_song": 20,
+  "nhan_theo_luong": true,
+  "giay_cho": 300,
+  "extra_body": {
+   "reasoning_effort": "minimal"
+  }
+ },
+ "rpm": 20,
+ "toi_da_yeu_cau": 2000,
+ "ngan_sach_usd": 2.0,
+ "dem": {
+  "xong": 200,
+  "loi_cau_truc": 0,
+  "con_sot_han": 0,
+  "hoi_lai": 6,
+  "sua_duoc": 6,
+  "loi_api": 0
+ },
+ "toc_do_cum_giay": 0.241,
+ "api": {
+  "yeu_cau": 211,
+  "thu_lai": 169,
+  "loi_api": 0,
+  "loi_trong_noi_dung": 0,
+  "het_gio": 0,
+  "het_ngan_sach": 0,
+  "het_toi_da_goi": 0,
+  "het_quota_ngay": 0,
+  "token_vao": 486959,
+  "token_ra": 120116,
+  "token_suy_luan": 0,
+  "giay_cac_lan_goi": 6357.090191364288,
+  "chi_phi_uoc_usd": 0.29023,
+  "model_tra_ve": [
+   "gemma-4-26b-a4b-it"
+  ],
+  "theo_khoa": {
+   "GEMINI_API_KEY_rsqw": {
+    "yeu_cau_thanh_cong": 33,
+    "loi": 29,
+    "giay_trung_binh": 29.3,
+    "trang_thai": "con_dung_duoc"
+   },
+   "GEMINI_API_KEY_XY2w": {
+    "yeu_cau_thanh_cong": 39,
+    "loi": 20,
+    "giay_trung_binh": 31.4,
+    "trang_thai": "con_dung_duoc"
+   },
+   "GEMINI_API_KEY_XIBA": {
+    "yeu_cau_thanh_cong": 46,
+    "loi": 41,
+    "giay_trung_binh": 34.5,
+    "trang_thai": "con_dung_duoc"
+   },
+   "GEMINI_API_KEY_aoCw": {
+    "yeu_cau_thanh_cong": 46,
+    "loi": 37,
+    "giay_trung_binh": 30.4,
+    "trang_thai": "con_dung_duoc"
+   },
+   "GEMINI_API_KEY_eVYg": {
+    "yeu_cau_thanh_cong": 42,
+    "loi": 41,
+    "giay_trung_binh": 26.3,
+    "trang_thai": "con_dung_duoc"
+   }
+  },
+  "goi_thu": [
+   {
+    "extra": {
+     "reasoning_effort": "minimal"
+    },
+    "giay": 17.5,
+    "tra_loi": "**你好** (Nǐ hǎo) dịch sang tiếng Việt là:",
+    "ky_tu_suy_luan": 0
+   }
+  ]
+ },
+ "ket_thuc": "2026-10-24 16:05:46",
+ "dung_vi_het_gio": false,
+ "con_lai": 0,
+ "giay": 878
+}

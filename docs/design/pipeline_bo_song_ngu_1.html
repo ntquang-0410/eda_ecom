@@ -1,0 +1,462 @@
+<title>Quy trình bộ song ngữ thứ nhất</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: một cột. Sơ đồ ngắn ở trên (cuộn ngang trong khung riêng), bên dưới là bảng từng bước với kỹ thuật xử lý chi tiết. */
+:root {
+  --bg: #f6f7f5;
+  --panel: #ffffff;
+  --ink: #1d2523;
+  --muted: #5d6763;
+  --line: #d9dfdb;
+  --accent: #0f6b5c;
+  --accent-soft: #e3f1ed;
+  --warn: #b85c00;
+  --warn-soft: #fdf0e1;
+  --f-body: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "Cascadia Mono", Consolas, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121615; --panel: #1a201e; --ink: #e6ebe8; --muted: #9aa5a0; --line: #2d3532;
+    --accent: #5cc2ad; --accent-soft: #17302b; --warn: #f0a556; --warn-soft: #3a2a17; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121615; --panel: #1a201e; --ink: #e6ebe8; --muted: #9aa5a0; --line: #2d3532;
+  --accent: #5cc2ad; --accent-soft: #17302b; --warn: #f0a556; --warn-soft: #3a2a17; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.55; margin: 0; }
+.wrap { max-width: 1100px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 56px; display: grid; gap: 28px; }
+h1, h2 { text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(24px, 4vw, 32px); font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 19px; font-weight: 700; }
+p { margin: 0; max-width: 74ch; }
+.eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.lede { color: var(--muted); }
+header { display: grid; gap: 10px; }
+section { display: grid; gap: 12px; min-width: 0; }
+code { font-family: var(--f-mono); font-size: 0.88em; overflow-wrap: anywhere; }
+.diagram { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+.diagram pre.mermaid { margin: 0; }
+.tablewrap { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 620px; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; }
+tr:last-child td { border-bottom: 0; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+li { max-width: 78ch; }
+.ok { color: var(--accent); font-weight: 600; }
+.was { color: var(--warn); font-weight: 600; }
+.note { background: var(--warn-soft); color: var(--ink); border-radius: 8px; padding: 10px 14px; font-size: 14px; max-width: 80ch; }
+@media (max-width: 560px) { .wrap { padding-inline: 16px; } }
+
+.steps { display: grid; gap: 14px; }
+.step { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; display: grid; gap: 10px; min-width: 0; }
+.step h3 { margin: 0; font-size: 16px; font-weight: 700; }
+.step .k { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
+.step .cols { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.step .cols > div { min-width: 0; }
+.ex { background: var(--accent-soft); border-radius: 6px; padding: 8px 12px; font-size: 14px; }
+.step table { min-width: 520px; font-size: 13.5px; }
+.where { display: inline-block; font-size: 12px; font-weight: 600; color: var(--accent); background: var(--accent-soft); border-radius: 4px; padding: 1px 8px; margin-left: 6px; vertical-align: 2px; }
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Tiểu luận dịch máy Việt–Trung TMĐT · hướng mới, ý 1 · cập nhật 13/10/2026</div>
+  <h1>Quy trình bộ song ngữ thứ nhất</h1>
+  <p class="lede">Lấy chữ Trung của description 1688, bỏ hẳn bản Việt của Alibaba, cho hai mô hình dịch độc lập, kiểm tự động rồi chọn một bản Việt cho mỗi cặp thuộc tính. Chỉ dành cho description. Mọi bước chạy bằng code, không đọc mẫu bằng mắt, không dùng API trả phí (DeepSeek gọi qua API miễn phí của NVIDIA).</p>
+  <p class="lede"><b>Hiện trạng:</b> mã đã viết xong, bộ thử 64/64 ca đạt, các bước trên laptop đã chạy trên dữ liệu thật. Phần chạy trên Kaggle đã chạy thử 2 lần (200 đơn vị mỗi lần), đã sửa các lỗi tìm ra, đang chờ lần thử thứ 3. <b>Chưa chạy cả bộ.</b> Ý 2 (Tiki) và ý 3 (gộp hai bộ) chưa làm, chờ lệnh.</p>
+</header>
+
+<section aria-labelledby="doi">
+  <h2 id="doi">Thay đổi so với bản vẽ 09/10</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Chỗ đổi</th><th>Trước</th><th>Bây giờ</th><th>Lý do</th></tr></thead>
+      <tbody>
+        <tr><td>Mô hình A</td><td>Qwen3-8B</td><td>DeepSeek V4.1 Flash, gọi API của NVIDIA</td><td>Qwen3-8B là baseline cho việc huấn luyện sau này nên giữ ra ngoài dữ liệu (anh Nhật Anh chốt 10/10). Qwen3-8B vẫn còn trong mã, đổi lại được bằng một dòng</td></tr>
+        <tr><td>Bản mô hình HY-MT</td><td>Bản nén GPTQ 4-bit</td><td>Bản đầy đủ, chia ra hai GPU T4</td><td>Bản GPTQ không chạy được trên vLLM 0.31; đường lùi chỉ được 0,3 đơn vị/giây (khoảng 41 giờ cả bộ)</td></tr>
+        <tr><td>Câu lệnh HY-MT</td><td>Mẫu dịch có ngữ cảnh (nhóm hàng, tên thuộc tính)</td><td>Mẫu dịch thường của hãng, không kèm ngữ cảnh</td><td>Mẫu có ngữ cảnh làm mô hình dịch luôn cả phần ngữ cảnh và bỏ mất phần cần dịch</td></tr>
+        <tr><td>Sót chữ Hán</td><td>Chỉ bắt ở bước 5</td><td>Hỏi lại mô hình một lần ngay lúc dịch</td><td>Lần thử 1, Qwen3-8B sót chữ Hán ở 33/200 câu</td></tr>
+        <tr><td>Luật kiểm</td><td></td><td>Thêm <code>lo_ngu_canh</code> và <code>bi_cat</code></td><td>Bắt lỗi dịch lẫn ngữ cảnh và bản dịch bị cắt vì hết số token</td></tr>
+        <tr><td>Đầu vào</td><td>File description đã làm sạch</td><td>File cặp desc_v1</td><td>File cặp giữ đủ mã loại và nhãn để chọn cặp</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section aria-labelledby="sd">
+  <h2 id="sd">Sơ đồ</h2>
+  <div class="diagram">
+<pre class="mermaid">
+flowchart TD
+  A["1. Nạp file cặp description desc_v1 <br/>(laptop)"]
+  B["2. Chọn cặp thuộc tính <br/>giữ phía Trung, bỏ hẳn tiếng Việt cũ"]
+  C{"3. Phân loại và gộp trùng"}
+  N["Chép nguyên hoặc quy tắc <br/>(mã, tên hãng, ngày) <br/>không cần mô hình"]
+  D["4a. DeepSeek V4.1 Flash <br/>API NVIDIA, chạy từ Kaggle <br/>→ bản A"]
+  E["4b. HY-MT1.5-7B <br/>hai GPU T4 trên Kaggle <br/>→ bản B"]
+  F["5. Luật kiểm từng bản (laptop)"]
+  Q["6a. Chấm điểm CometKiwi <br/>cho từng bản Việt (Kaggle)"]
+  G{"6b. Chọn một bản Việt <br/>cho mỗi dòng Trung (laptop)"}
+  H["Giữ · tin cậy cao hoặc vừa"]
+  I["Giữ · tin cậy thấp"]
+  J["Cất riêng"]
+  K["7. Bản đầy đủ (nội bộ) <br/>18 cột: Trung gốc, Việt đã chọn, <br/>hai bản thô, điểm số"]
+  K2["7. Bản công bố <br/>9 cột: Trung gốc, Việt đã chọn, <br/>độ tin cậy, không có bản thô"]
+  M["7. File cất riêng <br/>và thẻ nguồn gốc"]
+
+  A --> B --> C
+  C -- "Không cần dịch" --> N
+  C -- "Cần dịch" --> D
+  C -- "Cần dịch" --> E
+  D --> F
+  E --> F
+  F --> Q --> G
+  G -- "Hai bản giống nhau hoặc cùng nghĩa: lấy bản điểm cao hơn" --> H
+  G -- "Chỉ một bản đạt: lấy bản đó" --> I
+  G -- "Không bản nào đạt điểm sàn, hoặc đều hỏng" --> J
+  N --> K
+  H --> K
+  I --> K
+  J --> M
+  K --> K2
+
+  classDef xanh fill:#d9f2e3,stroke:#2f8f5b,color:#10331f
+  classDef vang fill:#fff2cc,stroke:#b8860b,color:#3d3000
+  classDef tim fill:#ead9f7,stroke:#7d3fb0,color:#2a0f40
+  classDef xam fill:#e4e9f0,stroke:#5b6b82,color:#1d2735
+  class A,B,C,D,E,F,Q,G,N,K,K2 xam
+  class H xanh
+  class I vang
+  class J,M tim
+</pre>
+  </div>
+  <p class="lede">Thứ tự trên sơ đồ là thứ tự logic. Thứ tự chạy thật: laptop chạy bước 1 đến 3, Kaggle chạy bước 4 và 6a, laptop chạy tiếp bước 5, 6b và 7. Kết quả cuối giống nhau vì bước 5 không đổi đầu vào của bước 6a.</p>
+</section>
+
+<section aria-labelledby="ch">
+  <h2 id="ch">Các điểm đã chốt</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Điểm</th><th>Quyết định</th></tr></thead>
+      <tbody>
+        <tr><td><b>Đầu vào</b></td><td>Phía Trung của file cặp <code>bilingual_zh_vi_desc_pairs(nhatanh).parquet</code> (bản desc_v1 đã công bố). Vì bỏ bản Việt, các mã loại do lỗi bản Việt không còn lý do giữ, nên phía Trung của những cặp đó dùng lại được (bảng ở bước 2).</td></tr>
+        <tr><td><b>Đơn vị dịch</b></td><td>Mỗi giá trị khác nhau dịch một lần, nguyên cả chuỗi (danh sách nối bằng dấu ", " dịch nguyên một lượt, có luật đếm số mục). Tên thuộc tính dịch riêng. Đây là mặc định em chọn vì chưa có trả lời, đổi được.</td></tr>
+        <tr><td><b>Hai mô hình</b></td><td>A = DeepSeek V4.1 Flash (API NVIDIA, không cần GPU). B = HY-MT1.5-7B (bản đầy đủ, hai GPU T4 trên Kaggle). Hai mô hình chạy cùng lúc.</td></tr>
+        <tr><td><b>Hai bản thành một</b></td><td>So hai bản bằng chrF (chuỗi từ 6 ký tự trở xuống đòi giống hệt) và chấm điểm từng bản bằng CometKiwi, để chọn bản và cứu cặp cùng nghĩa khác chữ.</td></tr>
+        <tr><td><b>Từ điển</b></td><td>Không đưa vào lúc dịch. Chỉ dùng để gắn cờ ở bước kiểm với các mục đã duyệt.</td></tr>
+        <tr><td><b>Bảng đầu ra</b></td><td>Bảng cặp, xuất thành hai file: <b>bản đầy đủ nội bộ</b> (18 cột) và <b>bản công bố</b> (9 cột). Không lưu bảng dòng mô tả ghép; khi cần thì ghép lại từ bảng cặp.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section aria-labelledby="ct">
+  <h2 id="ct">Từng bước và kỹ thuật xử lý</h2>
+  <p class="lede">Mỗi bước có: làm gì, cách làm, ví dụ, và chỗ dễ sai. Ví dụ dùng sản phẩm thật 787913363971 (nhóm hàng auto, 12 cặp). Bản dịch trong ví dụ ở bước 4 và 6 là minh hoạ, không phải đầu ra thật. Số liệu ở bước 1 đến 3 là số chạy thật ngày 13/10/2026.</p>
+  <div class="steps">
+
+    <article class="step">
+      <h3>Bước 1. Mở dữ liệu <span class="where">laptop · chuan_bi.py</span></h3>
+      <p><b>Làm gì:</b> mở file cặp description. Chỉ đọc, không sửa. Không cần bản đã xử lý tiếng Anh: bước tiếng Anh của Quang chỉ sửa phía Việt, mà phía Việt bị bỏ từ bước 2.</p>
+      <div class="cols">
+        <div><div class="k">Cách làm</div><ul>
+          <li>Ghi "dấu vân tay" của file (SHA-256) vào thẻ nguồn gốc. Nhìn dấu vân tay là biết kết quả chạy trên đúng bản dữ liệu nào.</li>
+          <li>Kiểm file có đủ các cột cần dùng và <code>pair_id</code> không trùng. Thiếu cột hoặc trùng thì dừng và báo.</li>
+        </ul></div>
+        <div><div class="k">Dễ sai ở đâu</div><ul>
+          <li>File nguồn bị sửa sau khi đã dịch: dấu vân tay khác đi thì không dùng lại kết quả cũ.</li>
+        </ul></div>
+      </div>
+      <div class="ex"><b>Số thật:</b> 405.275 cặp. SHA-256 bắt đầu bằng <code>48F11FF3C7661BF1</code>.</div>
+    </article>
+
+    <article class="step">
+      <h3>Bước 2. Chọn cặp và bỏ chữ Việt cũ <span class="where">laptop · chuan_bi.py</span></h3>
+      <p><b>Làm gì:</b> chỉ giữ chữ Trung, vứt hẳn chữ Việt của Alibaba để mô hình không "nhìn lén" bản cũ. Tiếng Việt cũ không được dùng ở bước nào về sau, kể cả bước chọn bản. Quyết định cặp nào dùng, cặp nào bỏ theo mã loại.</p>
+      <div class="cols">
+        <div><div class="k">Cách làm</div><ul>
+          <li>Lọc theo mã loại (lý do cặp từng bị loại ở bản v1), bảng bên dưới.</li>
+          <li>Quét lại chữ Trung tìm số điện thoại, email, đường link bằng mẫu nhận dạng trước khi gửi đi. Còn sót thì loại.</li>
+        </ul></div>
+        <div><div class="k">Dễ sai ở đâu</div><ul>
+          <li>Gặp mã loại lạ chưa có trong bảng: mã dừng và báo, không tự đoán.</li>
+          <li>Một cặp có thể mang nhiều mã nên các con số trong bảng cộng lại không bằng tổng.</li>
+        </ul></div>
+      </div>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Nhóm</th><th>Mã loại (số cặp)</th><th>Ý nghĩa</th><th>Xử lý</th></tr></thead>
+        <tbody>
+          <tr><td>Vẫn loại</td><td><code>RONG</code> (1.369), <code>DS25</code> (2), <code>PII</code>, <code>PII_NSX</code> (0 trong file này)</td><td>Giá trị rỗng, trùng trong cùng sản phẩm, thông tin cá nhân</td><td>Bỏ</td></tr>
+          <tr><td>Nhận lại</td><td><code>T2_CHUA_KIEM</code> (36.184), <code>DS07</code> (2.762), <code>DS10</code> (554), <code>DS17</code> (110), <code>DS03</code> (62), <code>DS18</code> (3)</td><td>Lỗi nằm ở bản Việt cũ (chưa kiểm được, lệch số, chuỗi dài sai, danh sách lệch thứ tự, địa danh sai)</td><td>Dùng lại phía Trung</td></tr>
+          <tr><td>Cần xem</td><td><code>DS09_dai</code> (74)</td><td>Tên hãng hoặc công ty dài bất thường</td><td>Cất riêng, chờ xem</td></tr>
+        </tbody>
+      </table></div>
+      <div class="ex"><b>Số thật:</b> dùng 403.830 cặp, vẫn loại 1.371, cất riêng chờ xem 74, quét lại không còn sót thông tin cá nhân. Sản phẩm 787913363971 có 3 cặp mang mã <code>T2_CHUA_KIEM</code> (<code>规格: 200g/罐</code>, <code>种类: 汽车清洁软胶</code>, <code>装箱数量: 140罐</code>), cả 3 được dùng lại.</div>
+    </article>
+
+    <article class="step">
+      <h3>Bước 3. Phân loại: cái nào cần dịch, cái nào không, rồi gộp trùng <span class="where">laptop · dinh_tuyen.py, chuan_bi.py</span></h3>
+      <p><b>Làm gì:</b> giá trị nào không cần mô hình thì xử lý bằng quy tắc cố định cho nhanh và nhất quán. Phần còn lại gộp trùng rồi mới gửi mô hình. Các quy tắc lấy lại từ pipeline làm sạch để giữ cùng quy ước với bộ đã công bố.</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Kiểu giá trị</th><th>Xử lý</th><th>Ví dụ thật</th><th>Số cặp</th></tr></thead>
+        <tbody>
+          <tr><td>Không có chữ Hán</td><td>Chép nguyên</td><td><code>hjs200g</code>, <code>48*34*33cm</code>, <code>30kg</code></td><td class="num">49.128</td></tr>
+          <tr><td>Mã thật (số giấy phép, số đăng ký...)</td><td>Chép nguyên, thêm chú thích tỉnh</td><td><code>粤妆20161271</code> thành <code>粤妆20161271 (Quảng Đông)</code></td><td class="num">2.479</td></tr>
+          <tr><td>Tên hãng (品牌)</td><td>Chuyển pinyin bằng <code>pypinyin</code>; từ chung (其他, 通用...) theo bảng đã duyệt</td><td><code>和洁士</code> thành <code>Hejieshi</code></td><td class="num">13.878</td></tr>
+          <tr><td>Ngày</td><td>Đổi thành ngày/tháng/năm</td><td><code>2023年05月24日</code> thành <code>24/05/2023</code></td><td class="num">72</td></tr>
+          <tr><td>Còn lại</td><td>Gửi mô hình</td><td><code>汽车清洁软胶</code></td><td class="num">338.273</td></tr>
+        </tbody>
+      </table></div>
+      <div class="cols">
+        <div><div class="k">Gộp trùng</div><ul>
+          <li>Khoá gộp là (tên thuộc tính, cả chuỗi giá trị). Mỗi giá trị khác nhau dịch một lần rồi trả về từng cặp.</li>
+          <li>Tên thuộc tính có chữ Hán dịch riêng, mỗi tên một lần.</li>
+          <li>Dấu che thông tin cá nhân đổi sang dạng Việt trước khi gửi: <code>[电话]</code> thành <code>[SĐT]</code>, <code>[联系方式]</code> thành <code>[LIÊN HỆ]</code>.</li>
+          <li><b>Số thật:</b> 338.273 cặp gộp còn 41.707 giá trị (2,39 triệu chữ Trung) cộng 1.980 tên thuộc tính, tổng 43.687 đơn vị gửi mô hình.</li>
+          <li><b>Kiểm:</b> phần đi theo quy tắc khớp 100% với bản v1 ở cả mã thật và tên hãng.</li>
+        </ul></div>
+        <div><div class="k">Dễ sai ở đâu</div><ul>
+          <li>Một giá trị có ở nhiều nhóm hàng chỉ được gửi với nhóm hàng gặp nhiều nhất. Chữ đổi nghĩa theo nhóm hàng (苹果 là Apple ở điện thoại, là quả táo ở trái cây) <b>chưa được xử lý</b>.</li>
+          <li>Giữ chú thích tỉnh cho mã thật là mặc định em chọn vì chưa có trả lời.</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="step">
+      <h3>Bước 4. Dịch bằng hai mô hình <span class="where">Kaggle · dich.py, notebook song-ngu-1-kaggle</span></h3>
+      <p><b>Làm gì:</b> hai mô hình dịch độc lập từng đơn vị chữ Trung sang tiếng Việt, chạy cùng lúc. DeepSeek V4.1 Flash cho ra "bản A", HY-MT1.5-7B cho ra "bản B".</p>
+      <div class="cols">
+        <div><div class="k">Cách làm</div><ul>
+          <li><b>Bản A, DeepSeek:</b> gọi API kiểu OpenAI của NVIDIA (<code>deepseek-ai/deepseek-v4.1-flash</code>), 8 yêu cầu cùng lúc, nhận kết quả theo luồng. Gặp lỗi quá hạn mức (429) hoặc lỗi máy chủ thì chờ rồi thử lại. Khoá lấy từ Kaggle Secrets, không in, không ghi vào file nào. Gọi thử một câu trước khi chạy; hỏng thì bỏ qua A để không phí cả lần chạy.</li>
+          <li><b>Câu lệnh A:</b> nêu nhóm hàng và tên thuộc tính, kèm luật (dịch hết chữ Hán, địa danh dùng tên Việt, giữ số, mã, đơn vị, giữ số mục của danh sách) và 4 ví dụ không lấy từ dữ liệu.</li>
+          <li><b>Bản B, HY-MT:</b> bản đầy đủ chia ra hai GPU T4 bằng vLLM, chạy thẳng không chụp CUDA graph (chụp graph bị lỗi trên mô hình này). vLLM hỏng thì lùi về transformers 4-bit (rất chậm). Câu lệnh là mẫu dịch thường của hãng, không kèm ngữ cảnh.</li>
+          <li>Nhiệt độ 0 để chạy lại ra cùng kết quả. HY-MT dùng hệ số phạt lặp 1,05.</li>
+          <li>Bản dịch còn sót chữ Hán thì hỏi lại mô hình một lần, giữ bản ít chữ Hán hơn, ghi vào cột <code>dich_lai</code>.</li>
+          <li><b>Không mất kết quả:</b> lô nào xong ghi file ngay (B 2.000 đơn vị một lô, A 400). Tự dừng trước giới hạn giờ của Kaggle. Chạy bằng Save &amp; Run All. Chạy phiên bản sau, gắn đầu ra phiên bản trước vào, thì chỉ dịch phần còn thiếu. Đơn vị gọi API lỗi không được ghi nên lần sau tự dịch lại.</li>
+          <li>Thẻ của từng mô hình ghi tên mô hình, cách chạy, phiên bản câu lệnh (<code>v2-2026-10-10</code>), tham số, tốc độ và số lần gọi API.</li>
+        </ul></div>
+        <div><div class="k">Dễ sai ở đâu</div><ul>
+          <li>HY-MT không có ngữ cảnh nên vài chữ bị hiểu sai: <code>车缝线</code> (đường may máy) ra "Đường may trên xe hơi", <code>鞋内长</code> ra "Phần bên trong giày" (mất "chiều dài"). Bước 6 chọn giữa hai bản để bù.</li>
+          <li>Mô hình thêm lời giải thích, lặp từ, hoặc tự "sửa" con số: bước 5 bắt.</li>
+          <li>Hạn mức của API miễn phí chưa biết: nếu thấp thì A chạy rất lâu. Giảm số yêu cầu cùng lúc khi gặp 429.</li>
+          <li>DeepSeek có thể có chế độ suy luận mặc định, tốn thời gian và token. Có ô cấu hình để thêm tuỳ chọn tắt, chưa biết đúng tên tuỳ chọn.</li>
+          <li>Kaggle có thể không gọi ra được API NVIDIA (lần thử 2 bị quá giờ chờ). Phương án dự phòng: chạy A trên laptop rồi gộp.</li>
+        </ul></div>
+      </div>
+      <div class="ex"><b>Ví dụ (minh hoạ):</b> nhóm hàng <code>auto</code>, thuộc tính <code>种类</code>, giá trị <code>汽车清洁软胶</code>. Bản A có thể ra "Keo mềm làm sạch xe hơi", bản B có thể ra "Gel mềm vệ sinh ô tô".</div>
+    </article>
+
+    <article class="step">
+      <h3>Bước 5. Kiểm tự động từng bản dịch <span class="where">laptop · luat_kiem.py</span></h3>
+      <p><b>Làm gì:</b> dùng luật viết bằng code để bắt lỗi rõ ràng trong từng bản dịch, trước khi so hai bản. Hai mức: "trượt" (lỗi nặng, bản đó coi như hỏng) và "cờ nhắc" (chỉ ghi chú, không loại).</p>
+      <div class="cols">
+        <div><div class="k">Luật trượt</div><ul>
+          <li><code>rong</code>: bản dịch rỗng. <code>han_sot</code>: còn chữ Hán.</li>
+          <li><code>loi_thua</code>: có "Dịch:", "Translation", ký hiệu định dạng, phần suy nghĩ, hoặc xuống dòng khi chữ Trung không có.</li>
+          <li><code>lo_ngu_canh</code>: dịch luôn phần ngữ cảnh ("Tên thuộc tính", "Thể loại sản phẩm"...) hoặc tự gắn nhãn "Xxx: " ở đầu khi chữ Trung không có dấu hai chấm.</li>
+          <li><code>lap_tu</code>: một cụm từ lặp liên tiếp từ 4 lần.</li>
+          <li><code>lech_so</code>: số trong chữ Trung phải còn ở bản Việt (cho phép bỏ dấu tách hàng nghìn, 万 đổi ra số đầy đủ). <code>jin_sai</code>: 斤 (0,5 kg) quy đổi sai, ví dụ <code>承重150斤</code> phải ra 75 kg.</li>
+          <li><code>mat_ma</code>: mã có số hoặc từ 2 chữ hoa (<code>XL</code>, <code>G805</code>) phải còn ở bản Việt.</li>
+          <li><code>lech_so_muc</code>: danh sách phải giữ đủ số mục.</li>
+          <li><code>mat_dau_che</code>: mất dấu che <code>[SĐT]</code>, <code>[LIÊN HỆ]</code>...</li>
+          <li><code>do_dai</code>: bản Việt quá ngắn hoặc quá dài so với chữ Trung. Khoảng bình thường lấy từ chính dữ liệu, theo từng nhóm độ dài (phân vị 0,5% và 99,5%).</li>
+          <li><code>bi_cat</code>: mô hình dừng vì hết số token, bản dịch bị cắt giữa chừng.</li>
+        </ul></div>
+        <div><div class="k">Cờ nhắc (không loại)</div><ul>
+          <li><code>CB_cun</code> 寸 (inch hay cm), <code>CB_luong</code> 两 (50 g; lạng của Việt là 100 g), <code>CB_van</code> 万, <code>CB_ty</code> 丝 (0,01 mm). <code>jin_xem</code>: 斤 cần xem.</li>
+          <li><code>so_thua</code>: bản Việt có số mà chữ Trung không có.</li>
+          <li><code>mat_tu_latin</code>: mất từ tiếng Anh thường. <code>latin_la</code>: có chữ Latin không phải âm tiết Việt (nghi pinyin hoặc tiếng Anh lạ).</li>
+          <li><code>khac_tu_dien</code>: trái với từ điển đã duyệt.</li>
+        </ul>
+        <div class="k" style="margin-top:12px">Dễ sai ở đâu</div><ul>
+          <li>公斤 (kg), 千斤顶 (cái kích), 尺寸, 丝袜, 万向轮 không phải đơn vị cần đổi: đã loại bằng mẫu khớp, có thử.</li>
+          <li>Giá theo 斤 như "30元/斤" là tiền, không chia đôi: chỉ gắn cờ.</li>
+        </ul></div>
+      </div>
+      <div class="ex"><b>Ví dụ (minh hoạ):</b> <code>承重: 150斤</code>. Bản A "Tải trọng 75 kg" qua luật. Bản B "Tải trọng 150 kg" trượt <code>jin_sai</code>.</div>
+    </article>
+
+    <article class="step">
+      <h3>Bước 6. Chọn một bản Việt cho mỗi dòng Trung <span class="where">6a Kaggle · cham_kiwi.py; 6b laptop · chon_ban.py</span></h3>
+      <p><b>Làm gì:</b> hai mô hình cho ra hai bản Việt cho mỗi dòng chữ Trung. Bộ song ngữ chỉ có một cột Việt, nên bước này chọn bản đứng cạnh chữ Trung, bằng cách so hai bản với nhau và chấm điểm từng bản theo chữ Trung gốc. Không bản nào đạt thì cất riêng.</p>
+      <div class="cols">
+        <div><div class="k">Cách làm</div><ul>
+          <li><b>6a. Chấm điểm CometKiwi</b> (<code>Unbabel/wmt22-cometkiwi-da</code>): ước lượng chất lượng bản dịch mà không cần bản chuẩn. Đưa chữ Trung và từng bản Việt vào, ra điểm 0 đến 1. Chấm cả hai bản, chạy trên Kaggle trong môi trường Python riêng (ghim numpy dưới 2, pandas dưới 2.3, pyarrow dưới 18), cần token Hugging Face.</li>
+          <li><b>6b. Chuẩn hoá trước khi so:</b> chữ thường, bỏ dấu câu, "7,5" bằng "7.5", × bằng x, "hòa" bằng "hoà", khoảng cách trước đơn vị.</li>
+          <li><b>Điểm chrF</b> (tự viết): so hai bản theo cụm 1 đến 6 ký tự, 0 đến 100. Chuỗi từ 6 ký tự trở xuống đòi giống hệt sau chuẩn hoá.</li>
+          <li><b>Ba ngưỡng, đang để tạm:</b> τ = 60 (chrF đủ giống), κ = 0,5 (điểm sàn CometKiwi), δ = 0,05 (mức chênh điểm đáng kể). Mã xuất sẵn bảng độ nhạy 25 tổ hợp κ, τ và bảng phân bố điểm để chọn lại; chọn lại chỉ cần chạy lại bước cuối trên laptop, không phải chạy lại Kaggle.</li>
+        </ul></div>
+        <div><div class="k">Dễ sai ở đâu</div><ul>
+          <li>chrF đo giống chữ, không đo giống nghĩa. CometKiwi đo nghĩa nên cứu được cặp cùng nghĩa khác chữ (trường hợp 3).</li>
+          <li><b>Lần thử 2:</b> điểm CometKiwi của HY-MT trên 200 đơn vị có trung bình 0,658, trung vị 0,681; 43/200 dưới 0,5. Với κ = 0,5, khoảng 1/5 bản B tự nó dưới điểm sàn, nên κ phải chọn từ phân bố thật.</li>
+          <li>CometKiwi ít nhạy với lỗi số và đơn vị: luật bước 5 vẫn là chốt chặn chính.</li>
+          <li>Nếu cả hai mô hình cùng dịch sai thì chrF vẫn cao. Điểm sàn κ chặn được một phần.</li>
+        </ul></div>
+      </div>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Trường hợp</th><th>Xử lý</th><th>Độ tin cậy</th></tr></thead>
+        <tbody>
+          <tr><td>1. Giống hệt sau chuẩn hoá, cả hai qua luật, điểm từ κ trở lên</td><td>Giữ</td><td>Cao</td></tr>
+          <tr><td>2. Cả hai qua luật, chrF từ τ trở lên</td><td>Giữ bản điểm CometKiwi cao hơn. Chênh dưới δ thì chọn bản ít cờ nhắc hơn, rồi bản dài hơn, rồi bản A</td><td>Vừa</td></tr>
+          <tr><td>3. Cả hai qua luật, chrF dưới τ</td><td>Cả hai từ κ trở lên và chênh dưới δ: coi là hai cách dịch đúng khác chữ, giữ bản cao hơn. Một bản cao hơn rõ (chênh từ δ) và đạt κ: lấy bản đó. Còn lại: cất riêng</td><td>Vừa hoặc thấp</td></tr>
+          <tr><td>4. Chỉ một bản qua luật</td><td>Giữ bản đó nếu điểm từ κ trở lên, ngược lại cất riêng</td><td>Thấp</td></tr>
+          <tr><td>5. Cả hai trượt luật</td><td>Cất riêng</td><td>Không dùng</td></tr>
+        </tbody>
+      </table></div>
+      <div class="ex"><b>Ví dụ (minh hoạ):</b> <code>种类: 汽车清洁软胶</code>, bản A "Keo mềm làm sạch xe hơi", bản B "Gel mềm vệ sinh ô tô". Cả hai qua luật nhưng chrF thấp. CometKiwi chấm 0,86 và 0,88 thì là trường hợp 3: giữ bản B. Chấm 0,86 và 0,41 thì lấy bản A.</div>
+    </article>
+
+    <article class="step">
+      <h3>Bước 7. Xuất kết quả <span class="where">laptop · hoan_tat.py</span></h3>
+      <p><b>Làm gì:</b> xuất hai file từ cùng một bảng cặp (mỗi cặp một dòng), cộng file cất riêng, thẻ nguồn gốc và các bảng để chọn ngưỡng.</p>
+      <div class="cols">
+        <div><div class="k">Cách làm</div><ul>
+          <li><b>Bản đầy đủ</b> <code>bo_song_ngu_1_day_du_*.parquet</code> (18 cột, nội bộ): chữ Trung, bản Việt đã chọn, hai bản thô, các điểm, mã luật.</li>
+          <li><b>Bản công bố</b> <code>bo_song_ngu_1_cong_bo_*.parquet</code> (9 cột): <code>pair_id</code>, <code>product_id</code>, <code>category</code>, <code>nhom_trung</code>, <code>name_zh</code>, <code>gia_tri_zh</code>, <code>name_vi</code>, <code>gia_tri_vi</code>, <code>do_tin_cay</code>. Sinh bằng hàm chọn cột cố định từ bản đầy đủ nên luôn cùng nguồn. Không có hai cột bản thô.</li>
+          <li><b>File cất riêng</b> <code>cat_rieng_*</code>, kèm lý do, mã luật và điểm.</li>
+          <li><b>Bảng phụ:</b> <code>don_vi_da_chon_*</code> (theo đơn vị), <code>do_nhay_nguong_*.csv</code>, <code>phan_bo_diem_*.csv</code>.</li>
+          <li><b>Thẻ nguồn gốc</b> <code>the_nguon_goc_*.json</code>: mô hình, phiên bản câu lệnh, tham số, ngày chạy, SHA-256 của dữ liệu nguồn, ba ngưỡng, thẻ của từng lần chạy Kaggle.</li>
+          <li>Tên file có ngày giờ, không ghi đè file cũ. Chưa chia train, dev, test (cột <code>nhom_trung</code> để dành).</li>
+        </ul></div>
+        <div><div class="k">Dễ sai ở đâu</div><ul>
+          <li><code>pair_id</code> chỉ là số đếm, đổi theo dữ liệu nguồn: thẻ nguồn gốc ghi SHA-256 để biết số thuộc phiên bản nào.</li>
+          <li>Sửa tay một file thì hai file lệch nhau: không sửa tay, luôn sinh lại.</li>
+          <li>Cột <code>gia_tri_vi</code> của bản công bố có thể là bản HY-MT hoặc DeepSeek, nên điểm giấy phép ở mục "Còn mở" vẫn áp dụng. Bản công bố hiện không có cột nguồn của bản được chọn; bản đầy đủ có.</li>
+        </ul></div>
+      </div>
+      <div class="ex"><b>Ví dụ:</b> sản phẩm 787913363971 có 12 cặp. Nếu 11 cặp được giữ và 1 cặp bị cất riêng thì mỗi file có 11 dòng của sản phẩm này, dòng còn lại nằm trong file cất riêng.</div>
+    </article>
+
+  </div>
+</section>
+
+<section aria-labelledby="thu">
+  <h2 id="thu">Kết quả các lần chạy thử trên Kaggle (200 đơn vị mỗi lần, GPU T4 x2)</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Phần</th><th>Lần 1 (09/10)</th><th>Lần 2 (10/10)</th><th>Đã sửa cho lần 3</th></tr></thead>
+      <tbody>
+        <tr><td>Mô hình A</td><td>Qwen3-8B bản nén AWQ chạy được trên vLLM, 2,41 đơn vị/giây, nhưng sót chữ Hán 33/200 câu và dịch sai nặng (广东 ra "Việt Nam")</td><td>Đã đổi sang DeepSeek qua API: <span class="was">quá giờ chờ</span>, không dịch được câu nào</td><td>Nhận theo luồng, chờ tối đa 300 giây, gọi thử trước khi chạy</td></tr>
+        <tr><td>Mô hình B, HY-MT</td><td>Bản GPTQ không chạy trên vLLM; đường lùi 0,30 đơn vị/giây. Dịch lẫn ngữ cảnh ở nhiều danh sách</td><td>Câu lệnh mới <span class="ok">hết dịch lẫn ngữ cảnh</span>, 0 câu sót chữ Hán. vLLM hai GPU <span class="was">lỗi lúc chụp CUDA graph</span>, lại lùi: 0,25 đơn vị/giây (ước 48,7 giờ)</td><td>Chạy vLLM thẳng, không chụp graph</td></tr>
+        <tr><td>CometKiwi</td><td><span class="was">Không chạy</span>: thiếu thư viện đọc file parquet</td><td><span class="ok">Chạy được</span>: 200 đơn vị trong 43 giây</td><td>Không cần sửa</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section aria-labelledby="cot">
+  <h2 id="cot">Các cột của bảng cặp</h2>
+  <p class="lede">Hai file xuất ra từ cùng một bảng: bản đầy đủ nội bộ (18 cột) và bản công bố (9 cột có chữ "có" ở cột "Công bố").</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Nhóm</th><th>Cột</th><th>Ý nghĩa</th><th>Công bố</th></tr></thead>
+      <tbody>
+        <tr><td>Khoá và nguồn</td><td><code>pair_id</code></td><td>Số thứ tự cặp, khoá nối giữa các bước</td><td><b>có</b></td></tr>
+        <tr><td></td><td><code>product_id</code>, <code>category</code></td><td>Mã sản phẩm và nhóm hàng</td><td><b>có</b></td></tr>
+        <tr><td></td><td><code>nhom_trung</code></td><td>Nhóm sản phẩm giống nhau (để chia tập sau này)</td><td><b>có</b></td></tr>
+        <tr><td></td><td><code>ly_do_goc</code></td><td>Mã loại ở bản v1, để biết cặp nào được nhận lại</td><td>không</td></tr>
+        <tr><td>Bộ song ngữ</td><td><code>name_zh</code>, <code>gia_tri_zh</code></td><td>Chữ Trung gốc</td><td><b>có</b></td></tr>
+        <tr><td></td><td><code>name_vi</code>, <code>gia_tri_vi</code></td><td>Bản Việt cuối cùng đã chọn</td><td><b>có</b></td></tr>
+        <tr><td>Kiểm tra</td><td><code>gia_tri_vi_A</code>, <code>gia_tri_vi_B</code></td><td>Hai bản thô (A là DeepSeek V4.1 Flash, B là HY-MT1.5-7B)</td><td>không</td></tr>
+        <tr><td></td><td><code>cach_chon</code></td><td>Cách chọn: giống hệt, gần giống, khác chữ cùng nghĩa, điểm vượt, chỉ A hoặc chỉ B qua luật, hoặc quy tắc</td><td>không</td></tr>
+        <tr><td></td><td><code>do_tin_cay</code></td><td>cao, vừa hoặc thấp</td><td><b>có</b></td></tr>
+        <tr><td></td><td><code>chrf_ab</code></td><td>Điểm chrF giữa hai bản, 0 đến 100 (trống nếu không qua mô hình)</td><td>không</td></tr>
+        <tr><td></td><td><code>diem_kiwi_A</code>, <code>diem_kiwi_B</code></td><td>Điểm CometKiwi của từng bản, 0 đến 1</td><td>không</td></tr>
+        <tr><td></td><td><code>luat_truot</code></td><td>Mã luật trượt, ghi rõ bản nào (ví dụ <code>A:lap_tu</code>); trống nếu cả hai qua</td><td>không</td></tr>
+        <tr><td></td><td><code>co_nhac</code></td><td>Cờ nhắc của bản được chọn (<code>CB_cun</code>, <code>latin_la</code>, <code>khac_tu_dien</code>...)</td><td>không</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Mô hình, phiên bản câu lệnh, ngày chạy, SHA-256 của nguồn và các ngưỡng nằm trong <b>thẻ nguồn gốc</b>, không lặp ở từng dòng.</p>
+</section>
+
+<section aria-labelledby="vd">
+  <h2 id="vd">Ví dụ bảng cặp</h2>
+  <p class="lede">Phía Trung lấy từ sản phẩm thật 787913363971 (nhóm auto, 12 cặp). Phía Việt, điểm số và các mã là <b>minh hoạ</b>, không phải đầu ra thật.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Cột</th><th>Dòng A: cặp qua hai mô hình</th><th>Dòng B: cặp đi theo quy tắc</th></tr></thead>
+      <tbody>
+        <tr><td><code>pair_id</code>, <code>product_id</code>, <code>category</code></td><td>73, 787913363971, auto</td><td>69, 787913363971, auto</td></tr>
+        <tr><td><code>name_zh</code>, <code>gia_tri_zh</code></td><td>种类, 汽车清洁软胶</td><td>品牌, 和洁士</td></tr>
+        <tr><td><code>name_vi</code>, <code>gia_tri_vi</code></td><td>Loại, Gel mềm vệ sinh ô tô</td><td>Thương hiệu, Hejieshi</td></tr>
+        <tr><td><code>gia_tri_vi_A</code></td><td>Keo mềm làm sạch xe hơi</td><td>(trống)</td></tr>
+        <tr><td><code>gia_tri_vi_B</code></td><td>Gel mềm vệ sinh ô tô</td><td>(trống)</td></tr>
+        <tr><td><code>cach_chon</code></td><td>khác chữ cùng nghĩa, chọn B theo điểm</td><td>quy tắc (tên hãng sang pinyin)</td></tr>
+        <tr><td><code>do_tin_cay</code></td><td>vừa</td><td>cao</td></tr>
+        <tr><td><code>chrf_ab</code></td><td>12,1</td><td>(trống)</td></tr>
+        <tr><td><code>diem_kiwi_A</code>, <code>diem_kiwi_B</code></td><td>0,86 và 0,88</td><td>(trống)</td></tr>
+        <tr><td><code>luat_truot</code>, <code>co_nhac</code></td><td>(trống, cả hai qua luật)</td><td>(trống)</td></tr>
+        <tr><td><code>ly_do_goc</code></td><td>T2_CHUA_KIEM (được nhận lại)</td><td>(trống)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section aria-labelledby="tg">
+  <h2 id="tg">Thời gian đo được</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Phần</th><th>Đo được</th><th>Ghi chú</th></tr></thead>
+      <tbody>
+        <tr><td>Bước 1 đến 3 trên laptop</td><td class="num">9 giây</td><td>Chạy thật trên đủ dữ liệu</td></tr>
+        <tr><td>Bước 5 đến 7 trên laptop</td><td class="num">92 giây</td><td>Thử bằng bản dịch giả đủ 43.687 đơn vị</td></tr>
+        <tr><td>HY-MT, transformers 4-bit (đường lùi)</td><td class="num">0,25 đến 0,30 đơn vị/giây</td><td>Ước 41 đến 49 giờ cả bộ, không dùng được</td></tr>
+        <tr><td>HY-MT, vLLM hai GPU, chạy thẳng</td><td>chưa đo</td><td>Chờ lần thử 3</td></tr>
+        <tr><td>DeepSeek qua API</td><td>chưa đo</td><td>Hạn mức của bản miễn phí chưa biết</td></tr>
+        <tr><td>CometKiwi</td><td class="num">200 đơn vị trong 43 giây</td><td>Kể cả tải mô hình; chưa ước cả bộ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="lede">Mỗi lần chạy Kaggle tối đa 12 giờ. Notebook dừng phần dịch sau 9 giờ để kịp chấm điểm và lưu; chưa xong thì chạy phiên bản sau để làm tiếp.</p>
+</section>
+
+<section aria-labelledby="ma">
+  <h2 id="ma">Mã nguồn</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>File</th><th>Việc</th></tr></thead>
+      <tbody>
+        <tr><td><code>src/song_ngu_1/cau_hinh.py</code></td><td>Đường dẫn, mã loại, tên hai mô hình, ba ngưỡng, cột bản công bố</td></tr>
+        <tr><td><code>src/song_ngu_1/chuan_bi.py</code>, <code>dinh_tuyen.py</code></td><td>Bước 1 đến 3</td></tr>
+        <tr><td><code>src/song_ngu_1/kaggle/dich.py</code></td><td>Bước 4 (API, vLLM, transformers; ghi từng lô, chạy tiếp)</td></tr>
+        <tr><td><code>src/song_ngu_1/kaggle/cham_kiwi.py</code></td><td>Bước 6a</td></tr>
+        <tr><td><code>src/song_ngu_1/luat_kiem.py</code>, <code>chon_ban.py</code>, <code>van_ban.py</code>, <code>hoan_tat.py</code></td><td>Bước 5, 6b, 7 (chuẩn hoá, chrF)</td></tr>
+        <tr><td><code>notebooks/song-ngu-1-kaggle.ipynb</code></td><td>Notebook Kaggle: cài môi trường, đọc Secrets, chạy dịch và chấm điểm</td></tr>
+        <tr><td><code>scripts/song_ngu_1/</code></td><td><code>chay_chuan_bi.py</code>, <code>chay_hoan_tat.py</code>, <code>test_song_ngu_1.py</code> (64 ca thử)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Hướng dẫn chạy nằm ở mục "BỘ SONG NGỮ THỨ NHẤT: HƯỚNG DẪN CHẠY (CPU VÀ GPU)" cuối file <code>README.md</code>. <b>Mã hiện chỉ có trên máy của Nhật Anh, chưa đẩy lên GitHub.</b></p>
+</section>
+
+<section aria-labelledby="tt">
+  <h2 id="tt">Ghi chú khi dùng cho Title</h2>
+  <p class="lede">Quy trình này viết cho description (cặp tên thuộc tính và giá trị). Các chỗ sau gắn với description, dùng cho title sẽ phải đổi.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Phần</th><th>Gắn với description ở chỗ nào</th></tr></thead>
+      <tbody>
+        <tr><td>Bước 1 đến 3 (<code>chuan_bi.py</code>)</td><td>Đọc file cặp với các cột <code>name_zh</code>, <code>gia_tri_zh</code>, <code>nhan</code>, <code>ly_do</code> và các mã loại của desc_v1. Đơn vị là (tên thuộc tính, giá trị) và tên thuộc tính.</td></tr>
+        <tr><td>Định tuyến (<code>dinh_tuyen.py</code>)</td><td>Tên hãng nhận ra qua tên thuộc tính 品牌, mã thật qua nhãn <code>chep_ma</code>. Title không có tên thuộc tính nên các quy tắc này không dùng nguyên được.</td></tr>
+        <tr><td>Câu lệnh A (<code>dich.py</code>)</td><td>Nói "attribute NAME" và "attribute VALUE", kèm tên thuộc tính. Title cần câu lệnh riêng. Câu lệnh HY-MT là mẫu dịch thường nên dùng được.</td></tr>
+        <tr><td>Luật kiểm</td><td><code>lech_so_muc</code> dựa vào danh sách nối bằng ", " của giá trị. Các luật còn lại (chữ Hán sót, số, mã, lặp, độ dài theo phân vị của chính dữ liệu, lẫn ngữ cảnh) không phụ thuộc description.</td></tr>
+        <tr><td>Đầu ra (<code>hoan_tat.py</code>)</td><td>Bảng theo cặp thuộc tính, 18 và 9 cột. Title sẽ có cột khác.</td></tr>
+        <tr><td>Dùng lại nguyên được</td><td>Phần gọi mô hình, ghi từng lô, chạy tiếp, chấm CometKiwi, chuẩn hoá, chrF, cách chọn 5 trường hợp.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section aria-labelledby="mo">
+  <h2 id="mo">Còn mở</h2>
+  <div class="note"><b>Giấy phép HY-MT1.5:</b> mới đọc bản tóm tắt: cấm dùng đầu ra để cải thiện mô hình AI khác, không áp dụng ở EU, Anh, Hàn Quốc. Cần đọc nguyên văn và hỏi giảng viên trước khi dùng để huấn luyện hoặc công khai. <b>API NVIDIA và DeepSeek:</b> trang ghi là bản thử ("Prototype"), việc dùng được ghi log; chưa đọc được điều khoản về dựng bộ dữ liệu và dùng đầu ra để huấn luyện (trọng số DeepSeek theo giấy phép MIT). <b>CometKiwi:</b> giấy phép CC BY-NC-SA 4.0, chưa đọc kỹ ảnh hưởng đến việc công bố cột điểm. <b>Ngưỡng</b> τ, κ, δ: đang để tạm, chọn sau khi có phân bố điểm thật. <b>DS09_dai</b> (74 cặp): cần xem. <b>Hai mặc định chưa được xác nhận:</b> dịch nguyên chuỗi giá trị, giữ chú thích tỉnh cho mã thật. <b>Chưa kiểm trên Kaggle:</b> vLLM chạy thẳng cho HY-MT, gọi API DeepSeek, tốc độ và hạn mức thật (lần thử 3). <b>Baseline:</b> Qwen3-8B để làm mốc so sánh khi huấn luyện sau này, nên giữ ngoài dữ liệu; tập kiểm tra lúc đó cần độc lập với bộ này (chưa chia tập).</div>
+</section>
+</div>

@@ -1,0 +1,638 @@
+[{"stream_name":"stderr","time":9.265383484000001,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.265478125,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.26548574,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.26548996,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.09327583,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.093332986,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.093337402,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.093340229,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":11.51539466,"data":"Giờ UTC hiện tại: 2h (giờ Việt Nam 9h, miền Đông Mỹ 22h).\n"}
+,{"stream_name":"stderr","time":11.51641721,"data":"/tmp/ipykernel_16/2420864422.py:2: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n"}
+,{"stream_name":"stderr","time":11.516457792,"data":"  _h = datetime.datetime.utcnow().hour\n"}
+,{"stream_name":"stderr","time":11.516474341,"data":"\n"}
+,{"stream_name":"stderr","time":11.516478569,"data":"/tmp/ipykernel_16/2420864422.py:2: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n"}
+,{"stream_name":"stderr","time":11.516483616,"data":"  _h = datetime.datetime.utcnow().hour\n"}
+,{"stream_name":"stdout","time":14.792854625,"data":"Phần 2/4: 4,033 cụm của 4,032 sản phẩm (chưa trừ cụm đã dịch)\n"}
+,{"stream_name":"stdout","time":14.79292058,"data":"Dữ liệu vào: /kaggle/input/datasets/trinhnhatanh/song-ngu-4-cum-vao | thư mục ra: /kaggle/working/ra_cum_zv | đầu ra cũ: ['/kaggle/input/datasets/trinhnhatanh/song-ngu-4-cum-ra-cu'] | số GPU: 0\n"}
+,{"stream_name":"stdout","time":16.049445348,"data":"Đã nạp 5 khoá Gemini: ['GEMINI_API_KEY_aoCw', 'GEMINI_API_KEY_eVYg', 'GEMINI_API_KEY_rsqw', 'GEMINI_API_KEY_XIBA', 'GEMINI_API_KEY_XY2w']\n"}
+,{"stream_name":"stdout","time":16.049519257,"data":"  không nạp được GEMINI_API_KEY -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140881695 and label GEMINI_API_KEY.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":16.049529842,"data":"  không nạp được GEMINI_API_KEY_2 -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140881695 and label GEMINI_API_KEY_2.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":16.049535167,"data":"  không nạp được GEMINI_API_KEY_3 -\u003e BackendError: Unexpected response from the service. Response: {'errors': ['No user secrets exist for kernel id 140881695 and label GEMINI_API_KEY_3.'], 'error': {'code': 5}, 'wasSuccessful': False}.\n"}
+,{"stream_name":"stdout","time":16.089160789,"data":"Có kết nối Internet (HTTP 404 ).\n"}
+,{"stream_name":"stdout","time":76.327445345,"data":"[1 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":136.327504356,"data":"[2 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":196.328075219,"data":"[3 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":256.328658632,"data":"[4 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":316.329356313,"data":"[5 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":376.329756773,"data":"[6 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":436.330551296,"data":"[7 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":496.330953137,"data":"[8 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":556.331769098,"data":"[9 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":616.333037099,"data":"[10 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":676.333945997,"data":"[11 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":736.334926649,"data":"[12 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":796.335789383,"data":"[13 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":856.337002256,"data":"[14 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":916.337536332,"data":"[15 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":976.338160058,"data":"[16 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1036.339240952,"data":"[17 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1096.341130385,"data":"[18 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1156.341379075,"data":"[19 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1216.341598367,"data":"[20 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1276.342262437,"data":"[21 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1336.34226889,"data":"[22 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1396.342829426,"data":"[23 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1456.343166413,"data":"[24 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1516.344028346,"data":"[25 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1576.344212641,"data":"[26 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1636.34496207,"data":"[27 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1696.345584787,"data":"[28 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1756.3462229,"data":"[29 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1816.34638864,"data":"[30 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1876.347127197,"data":"[31 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1936.3478493,"data":"[32 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":1996.34864113,"data":"[33 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":2056.34900389,"data":"[34 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":2116.349750109,"data":"[35 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":2176.350364877,"data":"[36 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":2236.350982709,"data":"[37 phút] A: 02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":2296.351455435,"data":"[38 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2356.352203554,"data":"[39 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2416.352777954,"data":"[40 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2476.353593503,"data":"[41 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2536.354374464,"data":"[42 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2596.354987447,"data":"[43 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2656.35540995,"data":"[44 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2716.356136195,"data":"[45 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2776.356788944,"data":"[46 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2836.357376262,"data":"[47 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2896.35826915,"data":"[48 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":2956.359093475,"data":"[49 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3016.359512503,"data":"[50 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3076.360017176,"data":"[51 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3136.360454021,"data":"[52 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3196.361251255,"data":"[53 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3256.361596464,"data":"[54 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3316.362184835,"data":"[55 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3376.362914287,"data":"[56 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3436.363261935,"data":"[57 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3496.364111829,"data":"[58 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3556.364568063,"data":"[59 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3616.365335234,"data":"[60 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3676.365678737,"data":"[61 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3736.3662391,"data":"[62 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3796.36672812,"data":"[63 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3856.367221807,"data":"[64 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3916.368061804,"data":"[65 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":3976.368312411,"data":"[66 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4036.369009199,"data":"[67 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4096.369378565,"data":"[68 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4156.369956258,"data":"[69 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4216.370491271,"data":"[70 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4276.372669421,"data":"[71 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4336.372964215,"data":"[72 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4396.37380324,"data":"[73 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4456.374205624,"data":"[74 phút] A: 03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4516.375440682,"data":"[75 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4576.375077228,"data":"[76 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4636.37531348,"data":"[77 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4696.375985693,"data":"[78 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4756.376500632,"data":"[79 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4816.376931885,"data":"[80 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4876.377570982,"data":"[81 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4936.378162107,"data":"[82 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":4996.378928607,"data":"[83 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5056.379693789,"data":"[84 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5116.380048601,"data":"[85 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5176.380691908,"data":"[86 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5236.381230215,"data":"[87 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5296.382181732,"data":"[88 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5356.382173423,"data":"[89 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5416.383080583,"data":"[90 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5476.384039992,"data":"[91 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5536.384169578,"data":"[92 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5596.384704428,"data":"[93 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5656.385014662,"data":"[94 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5716.385485714,"data":"[95 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5776.386012287,"data":"[96 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5836.387706372,"data":"[97 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5896.388837644,"data":"[98 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":5956.387763062,"data":"[99 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6016.388275177,"data":"[100 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6076.389344166,"data":"[101 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6136.389387557,"data":"[102 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6196.390065438,"data":"[103 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6256.391464276,"data":"[104 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6316.391847238,"data":"[105 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6376.391580096,"data":"[106 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6436.392295745,"data":"[107 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6496.392950747,"data":"[108 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6556.393522047,"data":"[109 phút] A: 03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6616.394155364,"data":"[110 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6676.394573366,"data":"[111 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6736.395440457,"data":"[112 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6796.396145521,"data":"[113 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6856.396664966,"data":"[114 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6916.398289337,"data":"[115 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":6976.398434307,"data":"[116 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7036.400126237,"data":"[117 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7096.400311687,"data":"[118 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7156.399891338,"data":"[119 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7216.400568597,"data":"[120 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7276.402141105,"data":"[121 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7336.403006283,"data":"[122 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7396.403588841,"data":"[123 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7456.403762761,"data":"[124 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7516.404021534,"data":"[125 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7576.404224327,"data":"[126 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7636.404706496,"data":"[127 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7696.40540632,"data":"[128 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7756.406099441,"data":"[129 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7816.406566407,"data":"[130 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7876.407015618,"data":"[131 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7936.407706286,"data":"[132 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":7996.408462378,"data":"[133 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8056.408771907,"data":"[134 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8116.409653358,"data":"[135 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8176.409731407,"data":"[136 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8236.410109462,"data":"[137 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8296.410811148,"data":"[138 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8356.411250855,"data":"[139 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8416.411770766,"data":"[140 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8476.41276727,"data":"[141 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8536.412835166,"data":"[142 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8596.413490231,"data":"[143 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8656.41403291,"data":"[144 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8716.414721069,"data":"[145 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8776.415075694,"data":"[146 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8836.415526834,"data":"[147 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8896.416203763,"data":"[148 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":8956.416726883,"data":"[149 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9016.417104826,"data":"[150 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9076.417653842,"data":"[151 phút] A: 04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9136.418169342,"data":"[152 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9196.418853071,"data":"[153 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9256.419546429,"data":"[154 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9316.420230325,"data":"[155 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9376.421155129,"data":"[156 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9436.421519024,"data":"[157 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9496.42201804,"data":"[158 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9556.422336292,"data":"[159 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9616.422788414,"data":"[160 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9676.423590129,"data":"[161 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9736.424004045,"data":"[162 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9796.424411534,"data":"[163 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9856.425338229,"data":"[164 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9916.425828089,"data":"[165 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":9976.426483598,"data":"[166 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10036.426961658,"data":"[167 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10096.427621245,"data":"[168 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10156.428143552,"data":"[169 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10216.429342592,"data":"[170 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10276.429946388,"data":"[171 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10336.429880511,"data":"[172 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10396.431145863,"data":"[173 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10456.431153975,"data":"[174 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10516.43225068,"data":"[175 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10576.432542552,"data":"[176 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10636.433200527,"data":"[177 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10696.433429805,"data":"[178 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10756.434302483,"data":"[179 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10816.434533114,"data":"[180 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10876.435257199,"data":"[181 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10936.436278691,"data":"[182 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":10996.436276966,"data":"[183 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11056.436643939,"data":"[184 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11116.437413015,"data":"[185 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11176.437798251,"data":"[186 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11236.438927581,"data":"[187 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11296.438762353,"data":"[188 phút] A: 04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11356.439360684,"data":"[189 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11416.439980352,"data":"[190 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11476.440409886,"data":"[191 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11536.441143458,"data":"[192 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11596.441702753,"data":"[193 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11656.442103253,"data":"[194 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11716.44276051,"data":"[195 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11776.443053315,"data":"[196 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11836.44404525,"data":"[197 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11896.444002868,"data":"[198 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":11956.444941586,"data":"[199 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12016.445056437,"data":"[200 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12076.446026663,"data":"[201 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12136.44623314,"data":"[202 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12196.446970752,"data":"[203 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12256.447219876,"data":"[204 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12316.447813993,"data":"[205 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12376.448197484,"data":"[206 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12436.449376641,"data":"[207 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12496.449549187,"data":"[208 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12556.449958036,"data":"[209 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12616.45042094,"data":"[210 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12676.451119979,"data":"[211 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12736.451502655,"data":"[212 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12796.451839916,"data":"[213 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12856.452662102,"data":"[214 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12916.45311353,"data":"[215 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":12976.453685161,"data":"[216 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13036.454541602,"data":"[217 phút] A: 05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13096.455153059,"data":"[218 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13156.455764794,"data":"[219 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13216.456093063,"data":"[220 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13276.456805621,"data":"[221 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13336.457323825,"data":"[222 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13396.458632169,"data":"[223 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13456.458345007,"data":"[224 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13516.459294871,"data":"[225 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13576.459687955,"data":"[226 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13636.460152619,"data":"[227 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13696.461074172,"data":"[228 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13756.46159258,"data":"[229 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13816.463098781,"data":"[230 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13876.463620928,"data":"[231 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13936.463367067,"data":"[232 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":13996.464562551,"data":"[233 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14056.464598932,"data":"[234 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14116.465311585,"data":"[235 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14176.466033261,"data":"[236 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14236.467262621,"data":"[237 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14296.472341423,"data":"[238 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14356.467794057,"data":"[239 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14416.468026059,"data":"[240 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14476.468767029,"data":"[241 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14536.469188287,"data":"[242 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14596.469912933,"data":"[243 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14656.470837312,"data":"[244 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14716.471276917,"data":"[245 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14776.471220524,"data":"[246 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14836.472756627,"data":"[247 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14896.474544881,"data":"[248 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":14956.474568831,"data":"[249 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15016.475545767,"data":"[250 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15076.476195683,"data":"[251 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15136.476824489,"data":"[252 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15196.477973463,"data":"[253 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15256.478190627,"data":"[254 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15316.479819393,"data":"[255 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15376.480818646,"data":"[256 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15436.48102981,"data":"[257 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15496.482391632,"data":"[258 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15556.483894611,"data":"[259 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15616.482951527,"data":"[260 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15676.483262354,"data":"[261 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15736.483242552,"data":"[262 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15796.484039384,"data":"[263 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15856.484673731,"data":"[264 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15916.485066332,"data":"[265 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":15976.48594817,"data":"[266 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16036.48605423,"data":"[267 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16096.486433889,"data":"[268 phút] A: 06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16156.487070114,"data":"[269 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16216.488199526,"data":"[270 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16276.487922012,"data":"[271 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16336.489136964,"data":"[272 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16396.489444199,"data":"[273 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16456.489824999,"data":"[274 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16516.49030081,"data":"[275 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16576.490719821,"data":"[276 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16636.491847966,"data":"[277 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16696.492041683,"data":"[278 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16756.492435486,"data":"[279 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16816.49277829,"data":"[280 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16876.493549,"data":"[281 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16936.495769183,"data":"[282 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":16996.49603172,"data":"[283 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17056.497033569,"data":"[284 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17116.498231485,"data":"[285 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17176.498774137,"data":"[286 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17236.49949844,"data":"[287 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17296.498917504,"data":"[288 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17356.499773724,"data":"[289 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17416.500756434,"data":"[290 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17476.501429233,"data":"[291 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17536.502335869,"data":"[292 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17596.503293899,"data":"[293 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17656.503046526,"data":"[294 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17716.504192841,"data":"[295 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17776.504546509,"data":"[296 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17836.765706487,"data":"[297 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17896.506924586,"data":"[298 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":17956.507257164,"data":"[299 phút] A: 06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18016.507619819,"data":"[300 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18076.508574438,"data":"[301 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18136.509556319,"data":"[302 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18196.511341361,"data":"[303 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18256.510746847,"data":"[304 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18316.511223504,"data":"[305 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18376.511323354,"data":"[306 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18436.512792812,"data":"[307 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18496.514971741,"data":"[308 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18556.514427149,"data":"[309 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18616.515499751,"data":"[310 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18676.516939803,"data":"[311 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18736.516636247,"data":"[312 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18796.519140371,"data":"[313 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18856.518042481,"data":"[314 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18916.518735822,"data":"[315 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":18976.519807356,"data":"[316 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19036.521110867,"data":"[317 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19096.520840184,"data":"[318 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19156.522547121,"data":"[319 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19216.524120941,"data":"[320 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19276.525091298,"data":"[321 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19336.523699432,"data":"[322 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19396.525815725,"data":"[323 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19456.525868721,"data":"[324 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19516.525786624,"data":"[325 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19576.528444812,"data":"[326 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19636.52824221,"data":"[327 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19696.52919573,"data":"[328 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19756.529739936,"data":"[329 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19816.529761032,"data":"[330 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19876.531013751,"data":"[331 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19936.53130452,"data":"[332 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":19996.533852806,"data":"[333 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20056.532931354,"data":"[334 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20116.534249911,"data":"[335 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20176.536869183,"data":"[336 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20236.538052333,"data":"[337 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20296.537504805,"data":"[338 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20356.538873536,"data":"[339 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20416.538501348,"data":"[340 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20476.537901772,"data":"[341 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20536.538249557,"data":"[342 phút] A: 07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20596.539004378,"data":"[343 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20656.541906063,"data":"[344 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20716.541195046,"data":"[345 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20776.541989694,"data":"[346 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20836.542821866,"data":"[347 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20896.544332343,"data":"[348 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":20956.544230118,"data":"[349 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21016.545101028,"data":"[350 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21076.546425544,"data":"[351 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21136.547502637,"data":"[352 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21196.548385204,"data":"[353 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21256.550021085,"data":"[354 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21316.550655118,"data":"[355 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21376.551038664,"data":"[356 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21436.552213468,"data":"[357 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21496.555013701,"data":"[358 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21556.555760774,"data":"[359 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21616.554300228,"data":"[360 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21676.55514877,"data":"[361 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21736.555822048,"data":"[362 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21796.555670434,"data":"[363 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21856.557478544,"data":"[364 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21916.55757421,"data":"[365 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":21976.559744125,"data":"[366 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22036.559808696,"data":"[367 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22096.559938954,"data":"[368 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22156.561008798,"data":"[369 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22216.56182012,"data":"[370 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22276.562426174,"data":"[371 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22336.564413507,"data":"[372 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22396.564262331,"data":"[373 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22456.564485131,"data":"[374 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22516.566012683,"data":"[375 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22576.566403218,"data":"[376 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22636.569109827,"data":"[377 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22696.567950329,"data":"[378 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22756.569328388,"data":"[379 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22816.569560671,"data":"[380 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22876.569917557,"data":"[381 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22936.571623778,"data":"[382 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":22996.572296402,"data":"[383 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23056.573096965,"data":"[384 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23116.574479411,"data":"[385 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23176.574717076,"data":"[386 phút] A: 08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23236.575199292,"data":"[387 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23296.577268433,"data":"[388 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23356.57879147,"data":"[389 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23416.577304759,"data":"[390 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23476.578922519,"data":"[391 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23536.57888317,"data":"[392 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23596.579261998,"data":"[393 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23656.579905507,"data":"[394 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23716.580827958,"data":"[395 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23776.581679209,"data":"[396 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23836.582301815,"data":"[397 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23896.583161329,"data":"[398 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":23956.584198411,"data":"[399 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24016.58471934,"data":"[400 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24076.58653003,"data":"[401 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24136.586003735,"data":"[402 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24196.586730554,"data":"[403 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24256.589370225,"data":"[404 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24316.588690387,"data":"[405 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24376.589096405,"data":"[406 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24436.589869172,"data":"[407 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24496.58988984,"data":"[408 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24556.591111769,"data":"[409 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24616.592555891,"data":"[410 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24676.592688449,"data":"[411 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24736.59316468,"data":"[412 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24796.593062222,"data":"[413 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24856.593549567,"data":"[414 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24916.597269002,"data":"[415 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":24976.59586135,"data":"[416 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25036.596408868,"data":"[417 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25096.597322344,"data":"[418 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25156.597945426,"data":"[419 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25216.599074054,"data":"[420 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25276.600874037,"data":"[421 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25336.600842039,"data":"[422 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25396.601217746,"data":"[423 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25456.601679996,"data":"[424 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25516.602723859,"data":"[425 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25576.604380996,"data":"[426 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25636.603834679,"data":"[427 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25696.604383665,"data":"[428 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25756.605749949,"data":"[429 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25816.605977413,"data":"[430 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25876.607308217,"data":"[431 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25936.607930041,"data":"[432 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":25996.609326945,"data":"[433 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26056.609903077,"data":"[434 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26116.610539511,"data":"[435 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26176.610847319,"data":"[436 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26236.612840982,"data":"[437 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26296.612930718,"data":"[438 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26356.613913009,"data":"[439 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26416.614429348,"data":"[440 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26476.616011376,"data":"[441 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26536.616505672,"data":"[442 phút] A: 08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26596.617370631,"data":"[443 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26656.618106562,"data":"[444 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26716.619185063,"data":"[445 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26776.619156358,"data":"[446 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26836.620437762,"data":"[447 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26896.620846722,"data":"[448 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":26956.621268409,"data":"[449 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27016.624188208,"data":"[450 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27076.623220571,"data":"[451 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27136.624012372,"data":"[452 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27196.624898879,"data":"[453 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27256.625768639,"data":"[454 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27316.628534594,"data":"[455 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27376.627261535,"data":"[456 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27436.628345063,"data":"[457 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27496.628697066,"data":"[458 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27556.629071389,"data":"[459 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27616.630371204,"data":"[460 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27676.630821289,"data":"[461 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27736.632447756,"data":"[462 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27796.634425342,"data":"[463 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27856.633064757,"data":"[464 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27916.63564636,"data":"[465 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":27976.634053256,"data":"[466 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28036.637456765,"data":"[467 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28096.637043489,"data":"[468 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28156.638719495,"data":"[469 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28216.637438139,"data":"[470 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28276.639810255,"data":"[471 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28336.639287241,"data":"[472 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28396.640729263,"data":"[473 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28456.6408034,"data":"[474 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28516.643842053,"data":"[475 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28576.642594735,"data":"[476 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28636.643663704,"data":"[477 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28696.643323249,"data":"[478 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28756.644656427,"data":"[479 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28816.644507961,"data":"[480 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28876.647460235,"data":"[481 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28936.646271676,"data":"[482 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":28996.646226045,"data":"[483 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29056.648324878,"data":"[484 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29116.649571657,"data":"[485 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29176.649782474,"data":"[486 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29236.651820755,"data":"[487 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29296.651351259,"data":"[488 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29356.651761965,"data":"[489 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29416.652936331,"data":"[490 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29476.653463384,"data":"[491 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29536.655825871,"data":"[492 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29596.654914071,"data":"[493 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29656.655443483,"data":"[494 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29716.656556742,"data":"[495 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29776.657449122,"data":"[496 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29836.657991566,"data":"[497 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29896.658826052,"data":"[498 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":29956.659930243,"data":"[499 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30016.663368987,"data":"[500 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30076.662477691,"data":"[501 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30136.662214039,"data":"[502 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30196.662439257,"data":"[503 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30256.664259309,"data":"[504 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30316.664410607,"data":"[505 phút] A: 09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30376.664719602,"data":"[506 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30436.665799573,"data":"[507 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30496.669338062,"data":"[508 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30556.667169264,"data":"[509 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30616.669819621,"data":"[510 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30676.670270956,"data":"[511 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30736.66939244,"data":"[512 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30796.669584882,"data":"[513 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30856.672509803,"data":"[514 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30916.671802593,"data":"[515 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":30976.671829019,"data":"[516 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31036.674308773,"data":"[517 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31096.67433479,"data":"[518 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31156.675880123,"data":"[519 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31216.675843871,"data":"[520 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31276.678535308,"data":"[521 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31336.67613035,"data":"[522 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31396.679518151,"data":"[523 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31456.677696905,"data":"[524 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31516.679863171,"data":"[525 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31576.680057485,"data":"[526 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31636.681002904,"data":"[527 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31696.684916148,"data":"[528 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31756.68040507,"data":"[529 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31816.681514329,"data":"[530 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31876.684104475,"data":"[531 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31936.687513573,"data":"[532 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":31996.685013141,"data":"[533 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32056.684518483,"data":"[534 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32116.690561429,"data":"[535 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32176.686132745,"data":"[536 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32236.686911288,"data":"[537 phút] A: 10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.489748208,"data":"[538 phút] A: 11:21:42 Kết thúc api_tuy_chon | còn lại 0\n"}
+,{"stream_name":"stdout","time":32296.489803081,"data":"--- A: mã thoát 0, 15 dòng cuối ---\n"}
+,{"stream_name":"stdout","time":32296.489808578,"data":"02:24:15 Nạp xong sau 3 giây; backend api\n"}
+,{"stream_name":"stdout","time":32296.48981225,"data":"03:01:28 api_tuy_chon: xong 200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 1 | hỏi lại 13, sửa được 13 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.489816218,"data":"03:38:13 api_tuy_chon: xong 400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 31, sửa được 29 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.489819888,"data":"04:13:41 api_tuy_chon: xong 600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 51, sửa được 49 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.48982344,"data":"04:55:28 api_tuy_chon: xong 800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 0 | còn sót Hán 3 | hỏi lại 72, sửa được 70 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.489826659,"data":"05:32:44 api_tuy_chon: xong 1,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 86, sửa được 82 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.489829946,"data":"06:01:48 api_tuy_chon: xong 1,200/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 7 | hỏi lại 93, sửa được 89 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.489833088,"data":"06:52:16 api_tuy_chon: xong 1,400/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 115, sửa được 110 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.489836443,"data":"07:23:14 api_tuy_chon: xong 1,600/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 8 | hỏi lại 127, sửa được 122 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.489840044,"data":"08:06:21 api_tuy_chon: xong 1,800/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 146, sửa được 141 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.489843411,"data":"08:51:00 api_tuy_chon: xong 2,000/2,513 cụm (0.09 cụm/giây) | sai cấu trúc 1 | còn sót Hán 9 | hỏi lại 159, sửa được 154 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.489846616,"data":"09:46:40 api_tuy_chon: xong 2,200/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 10 | hỏi lại 178, sửa được 172 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.489861867,"data":"10:50:11 api_tuy_chon: xong 2,400/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 1 | còn sót Hán 11 | hỏi lại 190, sửa được 183 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.489866504,"data":"11:21:42 api_tuy_chon: xong 2,513/2,513 cụm (0.08 cụm/giây) | sai cấu trúc 4 | còn sót Hán 13 | hỏi lại 205, sửa được 194 | lỗi API 0\n"}
+,{"stream_name":"stdout","time":32296.489869223,"data":"11:21:42 Kết thúc api_tuy_chon | còn lại 0\n"}
+,{"stream_name":"stdout","time":32297.071757195,"data":"A api_tuy_chon: 8785/4033 cụm | trạng thái {'ok': 8766, 'loi_cau_truc': 19} | còn sót Hán 41 | hỏi lại 599, sửa được 555 | lý do lỗi {'muc_8_thieu_n': 10, 'muc_6_thieu_n': 4, 'muc_7_thieu_n': 3, 'json_hong': 1, 'muc_4_thieu_n': 1}\n"}
+,{"stream_name":"stdout","time":32297.071800211,"data":"   thời gian 32249 giây | tốc độ 0.078 cụm/giây | API {'yeu_cau': 2723, 'thu_lai': 6601, 'loi_api': 0, 'token_vao': 8420406, 'token_ra': 1975731}\n"}
+,{"stream_name":"stdout","time":32297.071806172,"data":"   ví dụ 1078019985360#0 {\"1\": {\"c\": \"\", \"n\": \"Thương hiệu\"}, \"2\": {\"c\": \"\", \"n\": \"Chất liệu mặt giày\"}, \"3\": {\"c\": \"\", \"n\": \"Chất liệu lớp lót\", \"v\": \"Khác\"}, \"4\": {\"c\": \"\", \"n\": \"Chất liệu lót giày\", \"v\": \"Khác\"}, \"5\": {\"c\": \"\", \"n\": \"Kiểu ủng thời trang\", \"v\": \"Khác\"}, \"6\": {\"c\": \"\", \"n\": \"Chức năng\", \"v\": \"Khác\"}, \"7\": \n"}
+,{"stream_name":"stdout","time":32297.071814979,"data":"   ví dụ 669489247746#0 {\"1\": {\"c\": \"\", \"n\": \"Thương hiệu\"}, \"2\": {\"c\": \"\", \"v\": \"Mùa xuân\"}, \"3\": {\"c\": \"\", \"n\": \"Cấp độ\", \"v\": \"Cấp 1\"}, \"4\": {\"c\": \"Lục trà is translated as Trà xanh in common Vietnamese e-commerce context\", \"n\": \"Nguyên liệu và thành phần\", \"v\": \"Trà xanh\"}, \"5\": {\"c\": \"\", \"n\": \"Xuất xứ\", \"v\": \"Quý Châu\n"}
+,{"stream_name":"stdout","time":32297.071822618,"data":"B qwen3_14b : chưa có kết quả\n"}
+,{"stream_name":"stdout","time":32297.071826771,"data":"\n"}
+,{"stream_name":"stdout","time":32297.071830135,"data":"Các file đầu ra (tab Output):\n"}
+,{"stream_name":"stdout","time":32297.071833833,"data":"  ra_cum_zv/api_tuy_chon/lo_00000.parquet  183,170 byte\n"}
+,{"stream_name":"stdout","time":32297.071837235,"data":"  ra_cum_zv/api_tuy_chon/lo_00001.parquet  186,933 byte\n"}
+,{"stream_name":"stdout","time":32297.071839726,"data":"  ra_cum_zv/api_tuy_chon/lo_00002.parquet  205,842 byte\n"}
+,{"stream_name":"stdout","time":32297.071842453,"data":"  ra_cum_zv/api_tuy_chon/lo_00003.parquet  207,541 byte\n"}
+,{"stream_name":"stdout","time":32297.07184488,"data":"  ra_cum_zv/api_tuy_chon/lo_00004.parquet  205,753 byte\n"}
+,{"stream_name":"stdout","time":32297.071847317,"data":"  ra_cum_zv/api_tuy_chon/lo_00005.parquet  208,244 byte\n"}
+,{"stream_name":"stdout","time":32297.07184967,"data":"  ra_cum_zv/api_tuy_chon/lo_00006.parquet  219,306 byte\n"}
+,{"stream_name":"stdout","time":32297.071852092,"data":"  ra_cum_zv/api_tuy_chon/lo_00007.parquet  216,095 byte\n"}
+,{"stream_name":"stdout","time":32297.071854439,"data":"  ra_cum_zv/api_tuy_chon/lo_00008.parquet  231,082 byte\n"}
+,{"stream_name":"stdout","time":32297.071857037,"data":"  ra_cum_zv/api_tuy_chon/lo_00009.parquet  244,015 byte\n"}
+,{"stream_name":"stdout","time":32297.071859416,"data":"  ra_cum_zv/api_tuy_chon/lo_00010.parquet  251,922 byte\n"}
+,{"stream_name":"stdout","time":32297.071861854,"data":"  ra_cum_zv/api_tuy_chon/lo_00011.parquet  244,315 byte\n"}
+,{"stream_name":"stdout","time":32297.07194068,"data":"  ra_cum_zv/api_tuy_chon/lo_00012.parquet  174,195 byte\n"}
+,{"stream_name":"stdout","time":32297.071958528,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00000.parquet  71,620 byte\n"}
+,{"stream_name":"stdout","time":32297.071963488,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00001.parquet  88,082 byte\n"}
+,{"stream_name":"stdout","time":32297.071966128,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00002.parquet  91,863 byte\n"}
+,{"stream_name":"stdout","time":32297.071968509,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00003.parquet  97,711 byte\n"}
+,{"stream_name":"stdout","time":32297.071971119,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00004.parquet  95,385 byte\n"}
+,{"stream_name":"stdout","time":32297.071973527,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00005.parquet  101,092 byte\n"}
+,{"stream_name":"stdout","time":32297.07197602,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00006.parquet  103,198 byte\n"}
+,{"stream_name":"stdout","time":32297.071978481,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00007.parquet  104,305 byte\n"}
+,{"stream_name":"stdout","time":32297.071980853,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00008.parquet  107,896 byte\n"}
+,{"stream_name":"stdout","time":32297.071983225,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00009.parquet  110,492 byte\n"}
+,{"stream_name":"stdout","time":32297.071985674,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00010.parquet  118,093 byte\n"}
+,{"stream_name":"stdout","time":32297.07198804,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00011.parquet  115,855 byte\n"}
+,{"stream_name":"stdout","time":32297.071990635,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00012.parquet  115,392 byte\n"}
+,{"stream_name":"stdout","time":32297.07199304,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00013.parquet  124,165 byte\n"}
+,{"stream_name":"stdout","time":32297.071995744,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00014.parquet  125,865 byte\n"}
+,{"stream_name":"stdout","time":32297.071998144,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00015.parquet  138,363 byte\n"}
+,{"stream_name":"stdout","time":32297.072000602,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00016.parquet  141,059 byte\n"}
+,{"stream_name":"stdout","time":32297.072002967,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00017.parquet  142,278 byte\n"}
+,{"stream_name":"stdout","time":32297.072005323,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00018.parquet  154,159 byte\n"}
+,{"stream_name":"stdout","time":32297.072007666,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00019.parquet  148,978 byte\n"}
+,{"stream_name":"stdout","time":32297.072010237,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00020.parquet  156,059 byte\n"}
+,{"stream_name":"stdout","time":32297.072012636,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00021.parquet  163,363 byte\n"}
+,{"stream_name":"stdout","time":32297.072015104,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00022.parquet  161,226 byte\n"}
+,{"stream_name":"stdout","time":32297.072017622,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00023.parquet  163,338 byte\n"}
+,{"stream_name":"stdout","time":32297.072020549,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00024.parquet  161,758 byte\n"}
+,{"stream_name":"stdout","time":32297.072023908,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00025.parquet  169,431 byte\n"}
+,{"stream_name":"stdout","time":32297.072027364,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00026.parquet  178,120 byte\n"}
+,{"stream_name":"stdout","time":32297.072031009,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00027.parquet  175,018 byte\n"}
+,{"stream_name":"stdout","time":32297.072034632,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00028.parquet  174,105 byte\n"}
+,{"stream_name":"stdout","time":32297.072038746,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00029.parquet  173,463 byte\n"}
+,{"stream_name":"stdout","time":32297.072042201,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00030.parquet  178,146 byte\n"}
+,{"stream_name":"stdout","time":32297.072049441,"data":"  ra_cum_zv/api_tuy_chon/lo_cu0_lo_00031.parquet  75,131 byte\n"}
+,{"stream_name":"stdout","time":32297.072052784,"data":"  ra_cum_zv/log_A.log  3,152 byte\n"}
+,{"stream_name":"stdout","time":32297.07205613,"data":"  ra_cum_zv/the_api_tuy_chon.json  2,393 byte\n"}
+,{"stream_name":"stderr","time":32300.782054397,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":32300.782096171,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":32301.058348193,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":32301.058390099,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":32302.077255927,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":32302.24368976,"data":"[NbConvertApp] Writing 107909 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":32305.462839713,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":32306.190103615,"data":"[NbConvertApp] Writing 408760 bytes to __results__.html\n"}
+]

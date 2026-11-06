@@ -1,0 +1,29 @@
+{
+ "buoc": "song_ngu_3.chuan_bi",
+ "ngay_chay": "2026-10-23 19:08:14",
+ "file_bang_cap": "bang_cap.parquet",
+ "sha256_bang_cap": "78b5a1249c05584d7a6045b07436a25bd4463d2915a8a61633065d3ca6006be5",
+ "cap_nguon": 89300,
+ "cap_bo_vi_van_loai": 2033,
+ "cap_bo_vi_rieng_tu": 128,
+ "cap_dua_vao": 87139,
+ "san_pham": 13187,
+ "cum": 13208,
+ "san_pham_nhieu_phan": 15,
+ "max_ky_tu_phan": 2500,
+ "mau_thu": {
+  "san_pham": 200,
+  "cum": 201,
+  "cap": 1365,
+  "theo_danh_muc": {
+   "auto": 34,
+   "beauty": 34,
+   "electronics": 33,
+   "food": 33,
+   "home": 33,
+   "mother_baby": 33
+  },
+  "hat_giong": 20261023
+ },
+ "phien_ban_cau_lenh": "cum-vi_zh-v1-2026-10-23"
+}

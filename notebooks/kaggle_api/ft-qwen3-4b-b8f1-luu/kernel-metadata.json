@@ -1,0 +1,17 @@
+{
+ "id": "trinhnhatanh/ft-qwen3-4b-b8f1-luu",
+ "title": "ft-qwen3-4b-b8f1-luu",
+ "code_file": "ft-qwen3-4b-b8f1-luu.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": false,
+ "enable_tpu": false,
+ "enable_internet": false,
+ "dataset_sources": [],
+ "competition_sources": [],
+ "kernel_sources": [
+  "trinhnhatanh/nlp-group3"
+ ],
+ "model_sources": []
+}

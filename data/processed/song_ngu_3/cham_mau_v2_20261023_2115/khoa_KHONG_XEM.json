@@ -1,0 +1,282 @@
+{
+"1": {
+"pair_id": 50225,
+"truong": "v",
+"nguon_v2": "khong_co",
+"ly_do_sua": "Translated for clarity and professional e-commerce style",
+"khoa": "1=v2"
+},
+"2": {
+"pair_id": 82030,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "The draft contained incorrect translations for chemical names and used '十万六聚糖' instead of '聚甘油酯'; kept original English for complex chemical ingredients to ensure accuracy as per professional e-commerce standards.",
+"khoa": "1=don_vi"
+},
+"3": {
+"pair_id": 74020,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Vàng nhạt is light yellow (淡黄色), not champagne gold (香槟金)",
+"khoa": "1=don_vi"
+},
+"4": {
+"pair_id": 62071,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "",
+"khoa": "1=v2"
+},
+"5": {
+"pair_id": 63880,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Hạt macca is Macadamia (夏威夷果), not Australian nuts (澳洲果仁)",
+"khoa": "1=don_vi"
+},
+"6": {
+"pair_id": 71571,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "gr changed to g",
+"khoa": "1=don_vi"
+},
+"7": {
+"pair_id": 71270,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Added '原味' to better reflect 'Vị Muối' in snack context, though '咸味' is acceptable, '原味盐味' is more natural for potato chips",
+"khoa": "1=v2"
+},
+"8": {
+"pair_id": 33136,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Simplified the color descriptions to match e-commerce style and removed redundant '色' (color) suffix",
+"khoa": "1=don_vi"
+},
+"9": {
+"pair_id": 7825,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Changed 'Nắp' (Lid) to '盖子' for better flow, though draft was acceptable",
+"khoa": "1=don_vi"
+},
+"10": {
+"pair_id": 65903,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "gram -> g",
+"khoa": "1=don_vi"
+},
+"11": {
+"pair_id": 65904,
+"truong": "n",
+"nguon_v2": "sua_A",
+"ly_do_sua": "",
+"khoa": "1=v2"
+},
+"12": {
+"pair_id": 82770,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Nhưng Hưu is Deer Antler (鹿茸), not Psoralea corylifolia (补骨脂)",
+"khoa": "1=v2"
+},
+"13": {
+"pair_id": 31830,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "2pin is not a standard way to describe battery quantity in Chinese; changed to 2节 (2 pieces) for clarity",
+"khoa": "1=v2"
+},
+"14": {
+"pair_id": 3302,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "In the context of musical instruments, 'string' is translated as '弦' rather than '绳' (rope).",
+"khoa": "1=don_vi"
+},
+"15": {
+"pair_id": 87220,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Hồng is pink (粉色), not pinkish red (粉红色)",
+"khoa": "1=don_vi"
+},
+"16": {
+"pair_id": 49629,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Changed 1lts to 1L",
+"khoa": "1=v2"
+},
+"17": {
+"pair_id": 50408,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "vành-cụm refers to rim brakes (圈刹) in bicycle context, not hub assembly",
+"khoa": "1=don_vi"
+},
+"18": {
+"pair_id": 49908,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Translated Vietnamese 'SÊN' (chain) and 'VÀNG' (gold) to Chinese",
+"khoa": "1=don_vi"
+},
+"19": {
+"pair_id": 37352,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Keep brand/color name in English as per rules",
+"khoa": "1=don_vi"
+},
+"20": {
+"pair_id": 76489,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Cation is a type of fabric, translated as 卡登面料",
+"khoa": "1=don_vi"
+},
+"21": {
+"pair_id": 45328,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Bạt che kính lái refers to a windshield cover/mat, but in the context of the title (Bạt phủ xe - car cover), it is a part of the cover or a specific type; changed '遮阳帘' (sunshade curtain) to '遮罩' (cover) to better match the product type 'Bạt phủ'.",
+"khoa": "1=v2"
+},
+"22": {
+"pair_id": 38628,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "7天使用量 is awkward, changed to 7天续航 (7 days battery life)",
+"khoa": "1=v2"
+},
+"23": {
+"pair_id": 31739,
+"truong": "n",
+"nguon_v2": "sua_A",
+"ly_do_sua": "",
+"khoa": "1=don_vi"
+},
+"24": {
+"pair_id": 31740,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "",
+"khoa": "1=v2"
+},
+"25": {
+"pair_id": 31744,
+"truong": "n",
+"nguon_v2": "sua_A",
+"ly_do_sua": "",
+"khoa": "1=v2"
+},
+"26": {
+"pair_id": 3090,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Changed 40 độ C to 40℃",
+"khoa": "1=v2"
+},
+"27": {
+"pair_id": 58894,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Cốm in this context refers to green rice flakes/matcha flavor, not sticky rice (糯米)",
+"khoa": "1=v2"
+},
+"28": {
+"pair_id": 2659,
+"truong": "v",
+"nguon_v2": "dich_moi_A",
+"ly_do_sua": "The draft was missing, translated based on context",
+"khoa": "1=v2"
+},
+"29": {
+"pair_id": 2666,
+"truong": "v",
+"nguon_v2": "dich_moi_A",
+"ly_do_sua": "Translated the specific product variations",
+"khoa": "1=v2"
+},
+"30": {
+"pair_id": 68186,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "",
+"khoa": "1=don_vi"
+},
+"31": {
+"pair_id": 54174,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Ghi Sám is dark grey/charcoal grey, not just grey",
+"khoa": "1=don_vi"
+},
+"32": {
+"pair_id": 68171,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Changed gr to g",
+"khoa": "1=don_vi"
+},
+"33": {
+"pair_id": 1285,
+"truong": "v",
+"nguon_v2": "dich_moi_A",
+"ly_do_sua": "Translated 'Đinh Dán Treo Tranh' to '挂画无痕钉' (no-drill picture hanging nail) to better fit the product context",
+"khoa": "1=v2"
+},
+"34": {
+"pair_id": 67576,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Keep L as unit and keep specific product grades/types as per context",
+"khoa": "1=don_vi"
+},
+"35": {
+"pair_id": 72816,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Changed gram unit from '克' to 'g' to match rules",
+"khoa": "1=v2"
+},
+"36": {
+"pair_id": 59976,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "gram -> g",
+"khoa": "1=v2"
+},
+"37": {
+"pair_id": 58987,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Changed 48小时 to 48h to match unit style",
+"khoa": "1=don_vi"
+},
+"38": {
+"pair_id": 81360,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "nguyên chất means pure (纯), not clean (纯净)",
+"khoa": "1=don_vi"
+},
+"39": {
+"pair_id": 24320,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Keep Size as per rules",
+"khoa": "1=don_vi"
+},
+"40": {
+"pair_id": 9792,
+"truong": "v",
+"nguon_v2": "sua_A",
+"ly_do_sua": "Keep ingredients in original Latin/English as per standard e-commerce practice for chemical names, and translated 'Fragrance' to 'Fragrance' to maintain consistency with the original list's Latin-based structure, but the draft had '香料' which is Chinese; however, the instruction says 'Never translate or transliterate a Latin-letter brand name' and implies keeping technical terms if they are part of a standard list, but since the draft had '香料', I will revert to the original English 'Fragrance' to match the rest of the list's style.",
+"khoa": "1=don_vi"
+}
+}

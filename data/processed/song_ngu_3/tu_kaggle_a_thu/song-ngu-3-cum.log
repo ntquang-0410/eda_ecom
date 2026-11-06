@@ -1,0 +1,30 @@
+[{"stream_name":"stderr","time":7.485972019,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":7.486026943,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":8.646890729,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.646930429,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.646935126,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.646939287,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.41837836,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.418415287,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.418420742,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.418425383,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":11.810053417,"data":"Dữ liệu vào: /kaggle/input/datasets/trinhnhatanh/song-ngu-3-cum-vao | thư mục ra: /kaggle/working/ra_cum_v2_thu | đầu ra cũ: không có | số GPU: 0\n"}
+,{"stream_name":"stdout","time":12.310520108,"data":"Đã nạp 0 khoá Gemini: []\n"}
+,{"stream_name":"stdout","time":12.310556506,"data":"  không nạp được GEMINI_API_KEY_aoCw -\u003e ConnectionError: Connection error trying to communicate with service.\n"}
+,{"stream_name":"stdout","time":12.3105628,"data":"  không nạp được GEMINI_API_KEY_eVYg -\u003e ConnectionError: Connection error trying to communicate with service.\n"}
+,{"stream_name":"stdout","time":12.310568385,"data":"  không nạp được GEMINI_API_KEY_rsqw -\u003e ConnectionError: Connection error trying to communicate with service.\n"}
+,{"stream_name":"stdout","time":12.310573491,"data":"!! Không có khoá Gemini: BỎ QUA mô hình A ở lần chạy này, vẫn chạy B. Muốn chạy A: mở notebook trên web, Save Version \u003e Save \u0026 Run All (Commit).\n"}
+,{"stream_name":"stdout","time":12.346907187,"data":"Có kết nối tới Google (HTTP 404 ).\n"}
+,{"stream_name":"stdout","time":14.979071816,"data":"A api_tuy_chon : chưa có kết quả\n"}
+,{"stream_name":"stdout","time":14.979109631,"data":"B qwen3_14b : chưa có kết quả\n"}
+,{"stream_name":"stdout","time":14.979115797,"data":"\n"}
+,{"stream_name":"stdout","time":14.979119654,"data":"Các file đầu ra (tab Output):\n"}
+,{"stream_name":"stderr","time":18.319204918,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":18.319247646,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":18.524132861,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":18.52416225,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":19.429672868,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":19.521343465,"data":"[NbConvertApp] Writing 17489 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":22.737899051,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":23.398288131,"data":"[NbConvertApp] Writing 320290 bytes to __results__.html\n"}
+]
