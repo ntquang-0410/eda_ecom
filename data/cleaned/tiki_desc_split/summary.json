@@ -1,0 +1,23 @@
+{
+  "products": 13200,
+  "attribute_rows": 89325,
+  "description_rows": 13200,
+  "description_tokens": 5230013.9,
+  "description_chars": {
+    "mean": 1426.4,
+    "p50": 1226,
+    "p95": 3048,
+    "max": 15651
+  },
+  "description_tokens_est": {
+    "mean": 396.2,
+    "p95": 846.7,
+    "max": 4347.5
+  },
+  "split": {
+    "train": 10491,
+    "dev": 1386,
+    "test": 1323
+  },
+  "note": "Tiki description_zh is empty; target_text is intentionally empty."
+}
