@@ -107,13 +107,12 @@ cells = [
         "print('loaded in', round(time.time()-t0,1), 's')\n"
     ),
     code(
-        "hyp_hits = sorted(Path('/kaggle/input').rglob('hyp_natural_seed42.parquet'))\n"
-        "print('hyp hits', [str(x) for x in hyp_hits[:2]])\n"
-        "HYP = hyp_hits[0].parent if hyp_hits else None\n"
-        "assert HYP is not None, 'không thấy hypothesis'\n"
+        "hyp_files = sorted(Path('/kaggle/input').rglob('hyp_*.parquet'))\n"
+        "print('hyp files', [str(x) for x in hyp_files])\n"
+        "assert hyp_files, 'không thấy hypothesis'\n"
         "OUT = Path('/kaggle/working/scores'); OUT.mkdir(parents=True, exist_ok=True)\n"
         "metrics = {}\n"
-        "for path in sorted(HYP.glob('hyp_*.parquet')):\n"
+        "for path in hyp_files:\n"
         "    df = pd.read_parquet(path).drop_duplicates('eval_id')\n"
         "    config = str(df['config'].iloc[0]); seed = int(df['seed'].iloc[0])\n"
         "    for dataset in ['1688','tiki']:\n"
@@ -165,7 +164,7 @@ metadata = {
                         "nadsa091/tiki-offline-wheels",
                         "nadsa091/tiki-comet-wheels",
                         "nadsa091/comet-offline-shards",
-                        "nadsa091/tiki-weight-hyps"],
+                        "nadsa091/tiki-weight-hyps", "nadsa091/tiki-weight-hyps-seed123"],
     "competition_sources": ["arc-prize-2026-arc-agi-3"],
     "kernel_sources": [],
     "model_sources": ["qwen-lm/qwen-3/Transformers/4b/1"],
