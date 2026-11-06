@@ -1,0 +1,27 @@
+{
+  "id": "nadsa091/tiki-description-bt",
+  "title": "Tiki Description BT 4 Models",
+  "code_file": "desc_bt.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "nadsa091/tiki-description-input",
+    "nadsa091/tiki-4model-eval",
+    "nadsa091/tiki-offline-wheels"
+  ],
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-3"
+  ],
+  "kernel_sources": [],
+  "model_sources": [
+    "qwen-lm/qwen-3/Transformers/0.6b/1",
+    "qwen-lm/qwen-3/Transformers/1.7b/1",
+    "qwen-lm/qwen-3/Transformers/4b/1",
+    "qwen-lm/qwen-3/Transformers/8b/1"
+  ],
+  "machine_shape": "NvidiaRtxPro6000"
+}
