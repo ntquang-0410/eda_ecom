@@ -215,6 +215,12 @@ def main() -> int:
         natural_tiki = float(natural["tiki_macro"].iloc[0]) if len(natural) else None
         natural_1688 = float(natural["macro_1688"].iloc[0]) if len(natural) else None
         candidates = table[table["config"] != "natural"].copy()
+        # chỉ so các cấu hình có đủ số seed như natural (trừ chế độ interim)
+        if not args.interim:
+            seed_counts = df.groupby("config")["seed"].nunique()
+            max_seeds = int(seed_counts.max()) if len(seed_counts) else 0
+            eligible = seed_counts[seed_counts >= max_seeds].index
+            candidates = candidates[candidates["config"].isin(eligible)]
         # guardrail 1688: không thấp hơn natural quá 0.01
         if natural_1688 is not None:
             candidates = candidates[candidates["macro_1688"] >= natural_1688 - 0.01]
