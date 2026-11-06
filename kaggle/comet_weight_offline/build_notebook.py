@@ -41,20 +41,21 @@ cells = [
     ),
     code(
         "# tìm checkpoint + HF cache; đặt biến môi trường offline trước khi import HF\n"
-        "INPUT_COMET = Path('/kaggle/input/comet-offline-models')\n"
+        "FILES = Path('/kaggle/input/comet-offline-files')\n"
         "WORK = Path('/kaggle/working/comet'); WORK.mkdir(parents=True, exist_ok=True)\n"
-        "if (INPUT_COMET / 'checkpoints/wmt22-da/checkpoints/model.ckpt').exists():\n"
-        "    COMET_BASE = INPUT_COMET\n"
-        "elif (INPUT_COMET / 'comet-offline.zip').exists():\n"
-        "    with zipfile.ZipFile(INPUT_COMET / 'comet-offline.zip') as zf:\n"
-        "        zf.extractall(WORK)\n"
-        "    COMET_BASE = WORK\n"
-        "else:\n"
-        "    raise SystemExit('không thấy checkpoint COMET')\n"
-        "# copy HF cache nhỏ sang working để tránh ghi vào input read-only\n"
+        "if not (FILES / 'wmt22-da.ckpt').exists():\n"
+        "    print('input dirs', [p.name for p in Path('/kaggle/input').iterdir()])\n"
+        "    raise SystemExit('không thấy checkpoint COMET trong /kaggle/input/comet-offline-files')\n"
+        "for name in ['wmt22-da','wmt20-qe']:\n"
+        "    d = WORK / f'checkpoints/{name}/checkpoints'; d.mkdir(parents=True, exist_ok=True)\n"
+        "    ck = d / 'model.ckpt'\n"
+        "    if not ck.exists(): ck.symlink_to(FILES / f'{name}.ckpt')\n"
+        "    hp = WORK / f'checkpoints/{name}/hparams.yaml'\n"
+        "    if not hp.exists(): hp.symlink_to(FILES / f'{name}.hparams.yaml')\n"
         "if not (WORK / 'hf').exists():\n"
-        "    import shutil\n"
-        "    shutil.copytree(COMET_BASE / 'hf', WORK / 'hf')\n"
+        "    with zipfile.ZipFile(FILES / 'xlm-roberta-large.zip') as zf:\n"
+        "        zf.extractall(WORK)\n"
+        "COMET_BASE = WORK\n"
         "os.environ['HF_HOME'] = str(WORK / 'hf')\n"
         "os.environ['TRANSFORMERS_OFFLINE'] = '1'\n"
         "os.environ['HF_HUB_OFFLINE'] = '1'\n"
@@ -148,7 +149,7 @@ metadata = {
     "dataset_sources": ["nadsa091/tiki-4model-eval",
                         "nadsa091/tiki-offline-wheels",
                         "nadsa091/tiki-comet-wheels",
-                        "nadsa091/comet-offline-models",
+                        "nadsa091/comet-offline-files",
                         "nadsa091/tiki-weight-hyps"],
     "competition_sources": ["arc-prize-2026-arc-agi-3"],
     "kernel_sources": [],
