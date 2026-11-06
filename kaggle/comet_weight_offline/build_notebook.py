@@ -42,7 +42,7 @@ cells = [
     code(
         "# tìm checkpoint + HF cache; đặt biến môi trường offline trước khi import HF\n"
         "INPUT = Path('/kaggle/input')\n"
-        "WORK = Path('/kaggle/working/comet'); WORK.mkdir(parents=True, exist_ok=True)\n"
+        "WORK = Path('/kaggle/working/comet_data'); WORK.mkdir(parents=True, exist_ok=True)\n"
         "print('input dirs', [p.name for p in INPUT.iterdir()])\n"
         "part_hits = sorted(INPUT.rglob('wmt22-da.ckpt.part.aa'))\n"
         "single_hits = sorted(INPUT.rglob('wmt22-da.ckpt'))\n"
