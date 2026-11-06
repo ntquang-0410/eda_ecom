@@ -3,7 +3,7 @@
 ## Giao thức
 
 - Qwen3-4B LoRA, 5M token/run, 625 optimizer step
-- 5 cấu hình × 2 seed (42, 123)
+- 5 cấu hình × 1 seed (interim)
 - eval cố định: 1688 title 300 / attr 300 / desc 150; Tiki title 300 / attr 300
 - 1688: COMET-da có reference; Tiki: COMET-QE không reference
 - paired bootstrap 2.000 lần theo eval_id
@@ -82,10 +82,9 @@
 
 ## Kết luận
 
-**natural** — 2 seed không cùng dấu
+**title_heavy** — title_heavy hơn natural +0.0457 COMET-QE Tiki (CI +0.0271..+0.0649), interim 1 seed, 1688 không giảm quá 0,01
 
-Không có bằng chứng đủ mạnh rằng gán weight làm tăng chất lượng.
-Giữ phân bố token tự nhiên (desc ~64%).
+Dùng weight của `title_heavy`; xem bảng trên để biết stratum nào tăng và stratum nào phải giữ guardrail.
 
 ## Đọc kết quả
 

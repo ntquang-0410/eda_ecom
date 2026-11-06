@@ -131,6 +131,7 @@ def seed_consistency(df: pd.DataFrame) -> dict:
             diff = (means[config] - means["natural"]).dropna()
             out[f"{config}::{dataset}::{pair_type}"] = {
                 "seed_diffs": {str(k): round(float(v), 4) for k, v in diff.items()},
+                "n_seeds": int(len(diff)),
                 "same_sign": bool(len(diff) >= 2 and ((diff > 0).all() or (diff < 0).all())),
             }
     return out
