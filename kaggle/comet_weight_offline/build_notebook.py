@@ -1,0 +1,159 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Notebook chấm COMET offline (không internet) cho 5 cấu hình weight."""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / "kaggle" / "comet_weight_offline"
+OUT.mkdir(parents=True, exist_ok=True)
+
+
+def code(source: str) -> dict:
+    return {"cell_type": "code", "execution_count": None, "metadata": {},
+            "outputs": [], "source": source.splitlines(keepends=True)}
+
+
+cells = [
+    {"cell_type": "markdown", "metadata": {}, "source": [
+        "# COMET offline — 5 cấu hình weight\n",
+        "\n",
+        "- không internet\n",
+        "- dùng checkpoint + XLM-R cache đã attach\n",
+        "- 1688: COMET-da; Tiki: COMET-QE\n"]},
+    code(
+        "import os, sys, subprocess, zipfile, json, time\n"
+        "from pathlib import Path\n"
+        "\n"
+        "# cài wheel offline trước khi import comet\n"
+        "WHEELS = Path('/kaggle/input/tiki-comet-wheels')\n"
+        "if WHEELS.exists():\n"
+        "    subprocess.run([sys.executable, '-m', 'pip', 'install', '--no-index',\n"
+        "                    '--find-links', str(WHEELS), '--no-deps',\n"
+        "                    'unbabel-comet==2.2.7', 'pytorch-lightning==2.6.6',\n"
+        "                    'torchmetrics==1.9.0', 'lightning-utilities==0.15.3',\n"
+        "                    'entmax==1.3', 'sacrebleu==2.6.0',\n"
+        "                    'jsonargparse', 'pyyaml'], check=False)\n"
+        "print('wheels done')\n"
+    ),
+    code(
+        "# tìm checkpoint + HF cache; đặt biến môi trường offline trước khi import HF\n"
+        "INPUT_COMET = Path('/kaggle/input/comet-offline-models')\n"
+        "WORK = Path('/kaggle/working/comet'); WORK.mkdir(parents=True, exist_ok=True)\n"
+        "if (INPUT_COMET / 'checkpoints/wmt22-da/checkpoints/model.ckpt').exists():\n"
+        "    COMET_BASE = INPUT_COMET\n"
+        "elif (INPUT_COMET / 'comet-offline.zip').exists():\n"
+        "    with zipfile.ZipFile(INPUT_COMET / 'comet-offline.zip') as zf:\n"
+        "        zf.extractall(WORK)\n"
+        "    COMET_BASE = WORK\n"
+        "else:\n"
+        "    raise SystemExit('không thấy checkpoint COMET')\n"
+        "# copy HF cache nhỏ sang working để tránh ghi vào input read-only\n"
+        "if not (WORK / 'hf').exists():\n"
+        "    import shutil\n"
+        "    shutil.copytree(COMET_BASE / 'hf', WORK / 'hf')\n"
+        "os.environ['HF_HOME'] = str(WORK / 'hf')\n"
+        "os.environ['TRANSFORMERS_OFFLINE'] = '1'\n"
+        "os.environ['HF_HUB_OFFLINE'] = '1'\n"
+        "print('comet base', COMET_BASE)\n"
+        "print('checkpoint MB', round((COMET_BASE/'checkpoints/wmt22-da/checkpoints/model.ckpt').stat().st_size/1e6,1))\n"
+    ),
+    code(
+        "# patch COMET XLM-R cho transformers 5.x (add_pooling_layer=False trả 2 tuple)\n"
+        "import comet\n"
+        "p = Path(comet.__file__).parent / 'encoders/xlmr.py'\n"
+        "s = p.read_text()\n"
+        "old = '''        last_hidden_states, _, all_layers = self.model(\\n"
+        "            input_ids=input_ids,\\n"
+        "            attention_mask=attention_mask,\\n"
+        "            output_hidden_states=True,\\n"
+        "            return_dict=False,\\n"
+        "        )'''\n"
+        "new = '''        outputs = self.model(\\n"
+        "            input_ids=input_ids,\\n"
+        "            attention_mask=attention_mask,\\n"
+        "            output_hidden_states=True,\\n"
+        "            return_dict=False,\\n"
+        "        )\\n"
+        "        if len(outputs) == 3:\\n"
+        "            last_hidden_states, _, all_layers = outputs\\n"
+        "        else:\\n"
+        "            last_hidden_states, all_layers = outputs'''\n"
+        "if old in s:\n"
+        "    p.write_text(s.replace(old, new)); print('patched')\n"
+        "else:\n"
+        "    print('patch already applied or source differs')\n"
+    ),
+    code(
+        "import torch, pandas as pd, numpy as np\n"
+        "from comet import load_from_checkpoint\n"
+        "print('gpu', torch.cuda.get_device_name(0), round(torch.cuda.get_device_properties(0).total_memory/1e9,1), 'GB')\n"
+        "t0=time.time()\n"
+        "da = load_from_checkpoint(str(ROOT/'checkpoints/wmt22-da/checkpoints/model.ckpt'), local_files_only=True)\n"
+        "qe = load_from_checkpoint(str(ROOT/'checkpoints/wmt20-qe/checkpoints/model.ckpt'), local_files_only=True)\n"
+        "print('loaded in', round(time.time()-t0,1), 's')\n"
+    ),
+    code(
+        "HYP = Path('/kaggle/input/tiki-weight-hyps')\n"
+        "OUT = Path('/kaggle/working/scores'); OUT.mkdir(parents=True, exist_ok=True)\n"
+        "metrics = {}\n"
+        "for path in sorted(HYP.glob('hyp_*.parquet')):\n"
+        "    df = pd.read_parquet(path).drop_duplicates('eval_id')\n"
+        "    config = str(df['config'].iloc[0]); seed = int(df['seed'].iloc[0])\n"
+        "    for dataset in ['1688','tiki']:\n"
+        "        part = df[df['dataset']==dataset].copy()\n"
+        "        part = part[part['hypothesis'].astype(str).str.strip().ne('')]\n"
+        "        if dataset=='1688':\n"
+        "            part = part[part['reference'].astype(str).str.strip().ne('')]\n"
+        "            data=[{'src':str(s),'mt':str(m),'ref':str(r)} for s,m,r in zip(part.source,part.hypothesis,part.reference)]\n"
+        "            out=da.predict(data, batch_size=8, gpus=1)\n"
+        "            import sacrebleu\n"
+        "            bleu=sacrebleu.corpus_bleu(part.hypothesis.tolist(),[part.reference.tolist()],tokenize='zh').score\n"
+        "            chrf=sacrebleu.corpus_chrf(part.hypothesis.tolist(),[part.reference.tolist()]).score/100\n"
+        "            extra={'bleu':round(float(bleu),4),'chrf':round(float(chrf),4)}\n"
+        "        else:\n"
+        "            data=[{'src':str(s),'mt':str(m)} for s,m in zip(part.source,part.hypothesis)]\n"
+        "            out=qe.predict(data, batch_size=8, gpus=1)\n"
+        "            extra={}\n"
+        "        part['score']=np.asarray(out.scores,dtype=float)\n"
+        "        part['config']=config; part['seed']=seed; part['dataset']=dataset\n"
+        "        part[['eval_id','pair_type','score','config','seed','dataset']].to_parquet(OUT/f'scores_{config}_seed{seed}_{dataset}.parquet',index=False)\n"
+        "        key=f'{config}::{seed}::{dataset}'\n"
+        "        metrics[key]={'system_score':round(float(out.system_score),4),'n':int(len(part)),**extra}\n"
+        "        print(key, metrics[key], flush=True)\n"
+        "(OUT/'comet_scores.json').write_text(json.dumps(metrics,ensure_ascii=False,indent=2),encoding='utf-8')\n"
+        "print(json.dumps(metrics,ensure_ascii=False,indent=2))\n"
+    ),
+]
+
+notebook = {"cells": cells,
+            "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
+                         "language_info": {"name": "python", "version": "3.11"}},
+            "nbformat": 4, "nbformat_minor": 5}
+(OUT / "comet.ipynb").write_text(json.dumps(notebook, ensure_ascii=False, indent=1), encoding="utf-8")
+
+metadata = {
+    "id": "nadsa091/tiki-weight-comet-offline",
+    "title": "Tiki Weight COMET Offline",
+    "code_file": "comet.ipynb",
+    "language": "python",
+    "kernel_type": "notebook",
+    "is_private": True,
+    "enable_gpu": True,
+    "enable_tpu": False,
+    "enable_internet": False,
+    "dataset_sources": ["nadsa091/tiki-4model-eval",
+                        "nadsa091/tiki-offline-wheels",
+                        "nadsa091/tiki-comet-wheels",
+                        "nadsa091/comet-offline-models",
+                        "nadsa091/tiki-weight-hyps"],
+    "competition_sources": ["arc-prize-2026-arc-agi-3"],
+    "kernel_sources": [],
+    "model_sources": ["qwen-lm/qwen-3/Transformers/4b/1"],
+    "machine_shape": "NvidiaRtxPro6000",
+}
+(OUT / "kernel-metadata.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8")
+print("wrote", OUT)
