@@ -1,11 +1,11 @@
 {
   "rows": 118688,
-  "tokens_million": 4.859,
+  "tokens_million": 4.707,
   "group_share": {
-    "1688_attribute": 0.6618,
-    "1688_title": 0.1548,
-    "tiki_attribute": 0.083,
-    "tiki_title": 0.1004
+    "1688_attribute": 0.651,
+    "1688_title": 0.1598,
+    "tiki_attribute": 0.0856,
+    "tiki_title": 0.1036
   },
   "configs": {
     "natural": null,
@@ -22,9 +22,9 @@
       "tiki_attribute": 0.15
     },
     "attr_heavy": {
-      "1688_title": 0.15,
-      "1688_attribute": 0.45,
-      "tiki_title": 0.15,
+      "1688_title": 0.1,
+      "1688_attribute": 0.6,
+      "tiki_title": 0.05,
       "tiki_attribute": 0.25
     },
     "tiki_heavy": {

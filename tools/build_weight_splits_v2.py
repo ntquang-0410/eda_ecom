@@ -107,7 +107,7 @@ def normalize(df: pd.DataFrame) -> pd.DataFrame:
     if "tokens_est" not in df.columns:
         df["tokens_est"] = [token_est(s, t) for s, t in zip(df["source_text"], df["target_text"])]
     df["tokens_est"] = pd.to_numeric(df["tokens_est"], errors="coerce").fillna(0.0)
-    df["eff_tokens"] = df["tokens_est"].clip(lower=1.0)
+    df["eff_tokens"] = df["tokens_est"].clip(lower=1.0, upper=960.0)
     df["src_chars"] = df["source_text"].map(compact_len)
     df["tgt_chars"] = df["target_text"].map(compact_len)
     return df
@@ -119,8 +119,8 @@ CONFIGS_A = {
                  "tiki_title": 0.25, "tiki_attribute": 0.25},
     "title_heavy": {"1688_title": 0.40, "1688_attribute": 0.20,
                     "tiki_title": 0.25, "tiki_attribute": 0.15},
-    "attr_heavy": {"1688_title": 0.15, "1688_attribute": 0.45,
-                   "tiki_title": 0.15, "tiki_attribute": 0.25},
+    "attr_heavy": {"1688_title": 0.10, "1688_attribute": 0.60,
+                   "tiki_title": 0.05, "tiki_attribute": 0.25},
     "tiki_heavy": {"1688_title": 0.10, "1688_attribute": 0.20,
                    "tiki_title": 0.30, "tiki_attribute": 0.40},
 }
@@ -130,8 +130,8 @@ CONFIGS_B = {
                  "tiki_title": 0.25, "tiki_description": 0.25},
     "title_heavy": {"1688_title": 0.40, "1688_description": 0.10,
                     "tiki_title": 0.40, "tiki_description": 0.10},
-    "desc_heavy": {"1688_title": 0.10, "1688_description": 0.40,
-                   "tiki_title": 0.10, "tiki_description": 0.40},
+    "desc_heavy": {"1688_title": 0.02, "1688_description": 0.55,
+                   "tiki_title": 0.03, "tiki_description": 0.40},
     "tiki_heavy": {"1688_title": 0.10, "1688_description": 0.15,
                    "tiki_title": 0.35, "tiki_description": 0.40},
 }
