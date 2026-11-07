@@ -1,0 +1,30 @@
+{
+  "dataset": "B",
+  "raw_rows": 59209,
+  "empty_dropped": 1532,
+  "rows_full": 57999,
+  "rows_units": 57406,
+  "dedup_removed": 485,
+  "chunked_parents": 626,
+  "tokens_million": 15.71,
+  "group_share": {
+    "1688_description": 0.5257,
+    "1688_title": 0.0479,
+    "tiki_description": 0.3954,
+    "tiki_title": 0.0311
+  },
+  "group_rows": {
+    "1688_description": 16819,
+    "1688_title": 16133,
+    "tiki_description": 11397,
+    "tiki_title": 13057
+  },
+  "split": {
+    "train": 49166,
+    "dev": 4169,
+    "test": 4071
+  },
+  "empty": 0,
+  "qc_ok": 57406,
+  "eval_rows": 900
+}
