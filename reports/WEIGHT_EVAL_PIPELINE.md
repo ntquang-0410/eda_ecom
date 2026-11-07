@@ -36,12 +36,12 @@ title_heavy  : title 30%, attr 30%, desc 15%, tiki 25%
 
 ```bash
 # seed 42
-kaggle kernels push -p kaggle/tpu_weight_seed42_v3
+kaggle kernels push -p archive/kaggle_legacy/tpu_weight_seed42_v3
 kaggle kernels status ntquang0410/tiki-weight-tpu-v3-seed42
 kaggle kernels output ntquang0410/tiki-weight-tpu-v3-seed42 -p /tmp/opencode/weight_runs
 
 # seed 123 (sau khi seed 42 xong)
-kaggle kernels push -p kaggle/tpu_weight_seed123
+kaggle kernels push -p archive/kaggle_legacy/tpu_weight_seed123
 ```
 
 Notebook tự chạy smoke 2 step trên 8 chip trước; nếu smoke qua mới chạy full.

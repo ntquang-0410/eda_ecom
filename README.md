@@ -1,5 +1,11 @@
 # E-commerce Song Ngữ Trung–Việt (1688)
 
+> **Cấu trúc repo (2026-11-07):** xem `PROJECT_STRUCTURE.md` và `docs/INDEX.md`.
+> Kernel/experiment cũ đã chuyển vào `archive/kaggle_legacy/`; report cũ vào
+> `archive/reports_v3|v5/`. Dataset canonical cho Tiki/1688:
+> `https://huggingface.co/datasets/ntquang0410/tiki-4model-eval`.
+
+
 Pipeline xử lý dữ liệu sản phẩm thương mại điện tử Trung Quốc → Việt Nam:
 
 1. **CADO** — làm sạch từ tiếng Anh dư thừa trong `title_zh` / `description_zh` và

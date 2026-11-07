@@ -1,5 +1,10 @@
 # Kaggle setup — Plan B 4-model Back-Translation
 
+
+> **2026-11-07:** kernel/experiment cũ đã chuyển vào
+> `archive/kaggle_legacy/`. Kernel đang dùng: `rtx_pro_6000*`,
+> `comet_weight_offline`, `rtx_bt_desc*`. Xem `PROJECT_STRUCTURE.md`.
+
 Thư mục này chuẩn bị connection, dataset package và config cho 4 Qwen3 model.
 
 ## 1. Credentials
