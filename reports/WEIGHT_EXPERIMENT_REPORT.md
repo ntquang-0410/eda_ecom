@@ -5,11 +5,6 @@
 > Ví dụ A natural: attr 88,6% thay vì 65,1%; title 3,3% thay vì 16%.
 > Kết quả chỉ nên xem là tham khảo; A/B sẽ chạy lại bằng quota-based sampling.
 
-> **CẢNH BÁO KỸ THUẬT (2026-11-07):** báo cáo này dùng sampler cũ
-> `p_i ∝ w_g * t_i`; token share thực tế bị lệch do `sum(t_i²)`.
-> Ví dụ A natural: attr 88,6% thay vì 65,1%; title 3,3% thay vì 16%.
-> Kết quả chỉ nên xem là tham khảo; A/B sẽ chạy lại bằng quota-based sampling.
-
 
 **Ngày:** 2026-11-07  
 **Model:** Qwen3-4B + LoRA  
