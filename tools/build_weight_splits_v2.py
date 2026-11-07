@@ -79,7 +79,7 @@ def load_b(pairs: Path, tiki_desc: Path | None) -> tuple[pd.DataFrame, pd.DataFr
             "origin": "bt",
             "qc_status": "pre_eda",
             "qty_status": "", "qty_weight": 1.0,
-            "token_est": pred["tokens_est"],
+            "tokens_est": pred["tokens_est"],
             "token_source": "raw_bt",
         })
         desc["group"] = "tiki_description"

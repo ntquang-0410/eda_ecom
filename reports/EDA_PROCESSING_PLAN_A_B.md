@@ -25,26 +25,39 @@ Nhóm:
 
 ### B — title + description
 
-Cần raw BT 4B/8B từ kernel:
+Đã tải raw BT 4B:
 
 ```text
-nadsa091/tiki-description-bt-4b-8b
+bt_desc_v1/qwen3-4b/predictions.parquet   13.200 dòng
 ```
 
-Hiện chưa tải được vì Kaggle token hiện tại trả 401. Khi có token:
-
-```text
-bt_desc_v1/qwen3-4b/predictions.parquet
-bt_desc_v1/qwen3-8b/predictions.parquet
-```
-
-Sau đó tạo:
+Đã tạo:
 
 ```text
 data/cleaned/weight_splits_v2/B_title_description.parquet
 data/cleaned/weight_splits_v2/eval_B.parquet
 data/cleaned/weight_splits_v2/meta_B.json
 ```
+
+Thống kê:
+
+```text
+rows           : 59.209
+effective token: 14,598M
+eval           : 900 dòng
+empty target   : 1.150 dòng (raw 4B, chưa lọc)
+```
+
+Phân bố natural:
+
+| Nhóm | Token share |
+|---|---:|
+| 1688_description | 56,57% |
+| tiki_description | 34,93% |
+| 1688_title | 5,15% |
+| tiki_title | 3,34% |
+
+Lưu ý: 8B mới có 11.900/13.200 dòng do time budget; B dùng 4B nên không cần 8B.
 
 ---
 

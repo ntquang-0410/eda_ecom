@@ -1,0 +1,98 @@
+{
+  "A": {
+    "rows": 118688,
+    "tokens_million": 4.707,
+    "group_tokens": {
+      "1688_attribute": 3064320,
+      "1688_title": 752144,
+      "tiki_title": 487867,
+      "tiki_attribute": 402847
+    },
+    "group_share": {
+      "1688_attribute": 0.651,
+      "1688_title": 0.1598,
+      "tiki_title": 0.1036,
+      "tiki_attribute": 0.0856
+    },
+    "split": {
+      "train": 103807,
+      "dev": 7561,
+      "test": 7320
+    },
+    "configs": {
+      "natural": null,
+      "balanced": {
+        "1688_title": 0.25,
+        "1688_attribute": 0.25,
+        "tiki_title": 0.25,
+        "tiki_attribute": 0.25
+      },
+      "title_heavy": {
+        "1688_title": 0.4,
+        "1688_attribute": 0.2,
+        "tiki_title": 0.25,
+        "tiki_attribute": 0.15
+      },
+      "attr_heavy": {
+        "1688_title": 0.1,
+        "1688_attribute": 0.6,
+        "tiki_title": 0.05,
+        "tiki_attribute": 0.25
+      },
+      "tiki_heavy": {
+        "1688_title": 0.1,
+        "1688_attribute": 0.2,
+        "tiki_title": 0.3,
+        "tiki_attribute": 0.4
+      }
+    }
+  },
+  "B": {
+    "rows": 59209,
+    "tokens_million": 14.598,
+    "group_tokens": {
+      "1688_description": 8258465,
+      "tiki_description": 5099780,
+      "1688_title": 752144,
+      "tiki_title": 487867
+    },
+    "group_share": {
+      "1688_description": 0.5657,
+      "tiki_description": 0.3493,
+      "1688_title": 0.0515,
+      "tiki_title": 0.0334
+    },
+    "split": {
+      "train": 50544,
+      "dev": 4408,
+      "test": 4257
+    },
+    "configs": {
+      "natural": null,
+      "balanced": {
+        "1688_title": 0.25,
+        "1688_description": 0.25,
+        "tiki_title": 0.25,
+        "tiki_description": 0.25
+      },
+      "title_heavy": {
+        "1688_title": 0.4,
+        "1688_description": 0.1,
+        "tiki_title": 0.4,
+        "tiki_description": 0.1
+      },
+      "desc_heavy": {
+        "1688_title": 0.02,
+        "1688_description": 0.55,
+        "tiki_title": 0.03,
+        "tiki_description": 0.4
+      },
+      "tiki_heavy": {
+        "1688_title": 0.1,
+        "1688_description": 0.15,
+        "tiki_title": 0.35,
+        "tiki_description": 0.4
+      }
+    }
+  }
+}

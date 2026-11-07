@@ -77,7 +77,24 @@ tiki_title
 tiki_description
 ```
 
-Tập B đang chờ raw BT 4B đủ 13.200 description. Dự kiến description chiếm ~90% token (1688 desc ~45–49%, Tiki desc ~45–48%), title chỉ ~7%.
+Tập B đã đủ raw BT 4B:
+
+```text
+rows           : 59.209
+effective token: 14,598M
+eval           : 900 dòng
+```
+
+Phân bố natural:
+
+| Nhóm | Token share |
+|---|---:|
+| 1688_description | 56,57% |
+| tiki_description | 34,93% |
+| 1688_title | 5,15% |
+| tiki_title | 3,34% |
+
+Description chiếm ~91,5% token; title chỉ ~8,5%.
 
 ---
 
