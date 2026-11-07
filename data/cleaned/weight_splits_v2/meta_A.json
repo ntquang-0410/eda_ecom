@@ -1,0 +1,38 @@
+{
+  "rows": 118688,
+  "tokens_million": 4.859,
+  "group_share": {
+    "1688_attribute": 0.6618,
+    "1688_title": 0.1548,
+    "tiki_attribute": 0.083,
+    "tiki_title": 0.1004
+  },
+  "configs": {
+    "natural": null,
+    "balanced": {
+      "1688_title": 0.25,
+      "1688_attribute": 0.25,
+      "tiki_title": 0.25,
+      "tiki_attribute": 0.25
+    },
+    "title_heavy": {
+      "1688_title": 0.4,
+      "1688_attribute": 0.2,
+      "tiki_title": 0.25,
+      "tiki_attribute": 0.15
+    },
+    "attr_heavy": {
+      "1688_title": 0.15,
+      "1688_attribute": 0.45,
+      "tiki_title": 0.15,
+      "tiki_attribute": 0.25
+    },
+    "tiki_heavy": {
+      "1688_title": 0.1,
+      "1688_attribute": 0.2,
+      "tiki_title": 0.3,
+      "tiki_attribute": 0.4
+    }
+  },
+  "eval_rows": 1200
+}
