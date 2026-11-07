@@ -47,7 +47,8 @@ tiki_attribute
 Thống kê hiện tại:
 
 ```text
-rows           : 118.688
+rows           : 118.477 (đã dedup exact pair)
+raw rows       : 118.688
 effective token: 4,707M
 eval           : 1.200 dòng
 ```
@@ -56,10 +57,10 @@ Phân bố natural:
 
 | Nhóm | Token share |
 |---|---:|
-| 1688_attribute | 65,10% |
+| 1688_attribute | 65,11% |
 | 1688_title | 15,98% |
-| tiki_title | 10,36% |
-| tiki_attribute | 8,56% |
+| tiki_title | 10,37% |
+| tiki_attribute | 8,55% |
 
 ### Tập B — title + description
 

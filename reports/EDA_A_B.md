@@ -1,5 +1,8 @@
 # EDA — bộ A (title+attribute) và B (title+description)
 
+> **Cập nhật:** A trong file này là bản trước dedup. Bản dedup + EDA lại A:
+> `reports/EDA_A_DEDUP.md`. B không đổi.
+
 **Ngày:** 2026-11-07  
 **Nguồn:** dữ liệu trước EDA/processing; B dùng raw BT 4B cho Tiki description.
 

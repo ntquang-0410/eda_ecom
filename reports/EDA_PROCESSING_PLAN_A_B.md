@@ -12,7 +12,8 @@
 Đã có:
 
 ```text
-data/cleaned/weight_splits_v2/A_title_attribute.parquet   118.688 dòng
+data/cleaned/weight_splits_v2/A_title_attribute.parquet   118.477 dòng (đã dedup)
+data/cleaned/weight_splits_v2/A_title_attribute_raw.parquet 118.688 dòng (raw)
 data/cleaned/weight_splits_v2/eval_A.parquet              1.200 dòng
 data/cleaned/weight_splits_v2/meta_A.json
 ```
