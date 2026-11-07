@@ -28,7 +28,7 @@ def build(suite: str) -> None:
             text = text.replace(
                 "hyp_files = sorted(Path('/kaggle/input').rglob('hyp_*.parquet'))",
                 "hyp_files = sorted(p for p in Path('/kaggle/input').rglob('hyp_*.parquet')\n"
-                "                   if f'/{SUITE}/' in str(p))")
+                "                   if f'_{SUITE}_' in p.name)")
             cell["source"] = text.splitlines(keepends=True)
 
     folder = ROOT / "kaggle" / f"comet_ab_{suite.lower()}"
