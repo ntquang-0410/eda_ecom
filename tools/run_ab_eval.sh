@@ -2,6 +2,8 @@
 # Chấm COMET + Gemma + aggregate cho một suite A/B đã tải hypothesis.
 # Dùng: bash tools/run_ab_eval.sh A
 set -euo pipefail
+export USE_TF=0
+export USE_FLAX=0
 SUITE=${1:?dùng A hoặc B}
 LOWER=$(echo "$SUITE" | tr 'A-Z' 'a-z')
 ROOT=/content/eda_ecom

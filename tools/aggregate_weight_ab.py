@@ -103,7 +103,7 @@ def main() -> int:
         base = scores[base_key]
         merged = part.merge(base, on="eval_id", suffixes=("_cfg", "_base"))
         diff = (merged["score_cfg"] - merged["score_base"]).to_numpy()
-        boot[config] = paired_bootstrap(diff)
+        boot[f"{config}::seed{seed}"] = paired_bootstrap(diff)
 
     comet_raw = {}
     if args.comet_json and Path(args.comet_json).exists():
@@ -153,8 +153,8 @@ def main() -> int:
 
     lines += ["", "## Paired bootstrap vs baseline", "",
               "| config | n | ΔCOMET | CI 95% | P(win) |", "|---|---:|---:|---|---:|"]
-    for config, info in sorted(boot.items(), key=lambda x: -x[1]["mean_diff"]):
-        lines.append(f"| {config} | {info['n']} | {info['mean_diff']:+.3f} | "
+    for name, info in sorted(boot.items(), key=lambda x: -x[1]["mean_diff"]):
+        lines.append(f"| {name} | {info['n']} | {info['mean_diff']:+.3f} | "
                      f"[{info['ci_low']:+.3f}, {info['ci_high']:+.3f}] | {info['p_win']:.3f} |")
 
     if gemma_mean:

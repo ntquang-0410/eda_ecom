@@ -326,10 +326,11 @@ def main() -> int:
         return clients[key]
 
     pending = rows
-    attempt = 0
+    # đếm số lần THẤT BẠI LIÊN TIẾP, không phải tổng số batch,
+    # để chấm được toàn bộ input dài mà vẫn dừng khi API hỏng.
+    failures = 0
     batch_index = len(list(batch_dir.glob("batch_*.json")))
-    while pending and attempt < args.max_retries * 4:
-        attempt += 1
+    while pending and failures < args.max_retries * 4:
         batch = pending[:args.batch_size]
         prompt = build_prompt(batch)
         key = pool.acquire()
@@ -358,7 +359,9 @@ def main() -> int:
             # dòng thiếu trong batch -> đẩy lại đầu hàng đợi
             missing = [r for r in batch if str(r["id"]) not in got_ids]
             pending = missing + pending[len(batch):]
+            failures = 0 if (got_ids & want_ids) else failures + 1
         except Exception as error:  # noqa: BLE001
+            failures += 1
             kind = classify_error(error)
             pool.penalize(key, str(error), kind)
             if kind == "other":
