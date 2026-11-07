@@ -176,75 +176,74 @@ eff_tokens = min(tokens_est, 960)
 - `960`: trần token khi train; dòng dài hơn bị cắt khi encode.
 - Dùng `eff_tokens` để lập kế hoạch sampling.
 
-### 4.2. Công thức weight
+### 4.2. Quota-based sampling (bản đã sửa)
 
-Với cấu hình `c`, nhóm `g` có tỷ lệ token mục tiêu `s_g` (ví dụ 0,25 = 25%).
+Không dùng xác suất `p_i ∝ w_g * t_i` nữa.
 
-Trước hết tính tổng token hiện có của từng nhóm:
+Lý do: nếu chọn dòng với xác suất tỷ lệ `t_i`, token thực tế của nhóm tỷ lệ với
+`sum(t_i²)`, không phải `sum(t_i)`. Câu dài bị chọn quá nhiều, làm token share
+thực tế lệch khỏi mục tiêu và phá phân bố độ dài.
 
-```text
-M_g = sum(eff_tokens của mọi dòng thuộc nhóm g)
-```
-
-Hệ số nhóm:
+Cách đúng:
 
 ```text
-w_g = s_g / M_g
+budget B = 4.000.000 token
+với mỗi nhóm g:
+    T_g = s_g * B
+    pool_g = tất cả dòng thuộc nhóm g
+    lặp:
+        chọn đều ngẫu nhiên 1 dòng từ pool_g (có hoàn lại)
+        cộng eff_tokens
+    dừng khi tổng >= T_g
 ```
 
-Xác suất chọn dòng `i`:
+Sau đó gộp các nhóm, xáo trộn và chia thành 500 step ~8.000 token.
+
+Điểm quan trọng:
+
+- Trong mỗi nhóm, mọi dòng có xác suất **như nhau**.
+- Câu ngắn vẫn xuất hiện với tần suất tự nhiên.
+- Group token share đạt đúng `s_g` (sai số chỉ là overshoot của dòng cuối).
+- Không còn hiện tượng câu dài `t_i²` áp đảo.
+
+### 4.3. Bằng chứng: sampler cũ lệch rất mạnh
+
+Mô phỏng 4M token trên chính dữ liệu A/B:
+
+| Tập | Config | Nhóm | Target | Sampler cũ | Quota mới |
+|---|---|---|---:|---:|---:|
+| A | natural | 1688_attribute | 65,1% | **88,6%** | 65,1% |
+| A | natural | 1688_title | 16,0% | **3,3%** | 16,0% |
+| A | natural | tiki_title | 10,4% | **2,1%** | 10,4% |
+| A | natural | tiki_attribute | 8,6% | 6,1% | 8,6% |
+| A | balanced | 1688_attribute | 25% | **53,9%** | 25% |
+| A | balanced | 1688_title | 25% | **8,3%** | 25% |
+| A | balanced | tiki_title | 25% | **7,9%** | 25% |
+| A | balanced | tiki_attribute | 25% | 29,9% | 25% |
+| B | natural | 1688_description | 56,6% | **65,3%** | 56,6% |
+| B | natural | 1688_title | 5,2% | **0,5%** | 5,2% |
+| B | natural | tiki_title | 3,3% | **0,3%** | 3,3% |
+| B | natural | tiki_description | 34,9% | 34,0% | 34,9% |
+
+Vì vậy toàn bộ kết quả weight cũ (5 cấu hình 4B) chỉ nên xem là **tham khảo**;
+phải chạy lại bằng quota sampler mới.
+
+### 4.3b. Ví dụ quota — tập A, `tiki_heavy`
+
+Với budget 4M:
 
 ```text
-p_i = (w_group(i) * eff_tokens_i) / sum_j (w_group(j) * eff_tokens_j)
+1688_title      10% -> 400.000 token
+1688_attribute  20% -> 800.000 token
+tiki_title      30% -> 1.200.000 token
+tiki_attribute  40% -> 1.600.000 token
 ```
 
-Nói đơn giản:
+Trong nhóm `tiki_attribute`, ta chọn đều các dòng (kể cả dòng 1 token) cho đến
+khi đủ 1,6M token. Không nhân thêm `t_i`, nên dòng attribute ngắn không bị loại.
 
-```text
-dòng dài có nhiều token -> dễ được chọn
-nhóm được weight cao -> hệ số nhóm lớn -> dễ được chọn
-```
-
-Sau đó lấy mẫu **có hoàn lại** đến khi tổng `eff_tokens` đạt budget:
-
-```text
-budget = 4.000.000 token
-steps  = 500 optimizer step
-mỗi step ~ 8.000 token
-```
-
-### 4.3. Ví dụ tính tay — tập A
-
-Natural token share:
-
-```text
-1688_title       15,98%
-1688_attribute   65,10%
-tiki_title       10,36%
-tiki_attribute    8,56%
-```
-
-Với `tiki_heavy`, hệ số nhóm là:
-
-```text
-1688_title       0,63
-1688_attribute   0,31
-tiki_title       2,90
-tiki_attribute   4,67
-```
-
-Áp dụng cho 4 dòng thật ở trên:
-
-| Dòng | eff_tokens | Hệ số tiki_heavy | Trọng số tương đối |
-|---|---:|---:|---:|
-| 1688 title | 49,2 | 0,63 | 31,0 |
-| 1688 attribute | 4,2 | 0,31 | 1,3 |
-| tiki title | 41,7 | 2,90 | 120,9 |
-| tiki attribute | 14,7 | 4,67 | 68,6 |
-
-Tức là `tiki_heavy` không chỉ “tăng Tiki” chung chung: nó làm **Tiki attribute 14,7 token** có trọng số cao hơn hẳn **1688 attribute 4,2 token**, dù dòng 1688 attribute ngắn hơn.
-
-Đây là lý do phải dùng `eff_tokens`, không dùng `count()` số dòng.
+Với B `balanced`, mỗi nhóm nhận 1.000.000 token; title 49 token và description
+400 token đều được chọn theo tần suất dòng thật, không theo `t_i`.
 
 ### 4.4. Vì sao cố định 500 step?
 
@@ -476,6 +475,6 @@ python tools/build_weight_splits_v2.py \
 ## 12. Tóm tắt một câu
 
 ```text
-Mỗi cấu hình chỉ đổi tỷ lệ token lấy từ 4 nhóm; dòng dài đóng góp nhiều hơn dòng ngắn;
+Mỗi cấu hình chia quota token cho 4 nhóm; trong nhóm sample đều có hoàn lại;
 mọi cấu hình cùng 4M token, 500 step, cùng eval — để chênh lệch chỉ còn do weight.
 ```
