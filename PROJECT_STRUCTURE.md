@@ -19,6 +19,9 @@ data/
     1688/               1688 đã clean/align
     pairs_dedup/        pair table 1688 + 4 Tiki model
     weight_eval/        eval set weight + train view
+    weight_splits_v2/   A/B split trước EDA + eval_A/eval_B + meta
+    processed_A/        units.parquet cho survey A (quota)
+    processed_B/        units.parquet cho survey B (quota)
     tiki_desc_split/    attribute/description split mới
     bt_tiki/            BT title/attribute v5 (4 model)
     bt_tiki_desc/       BT description đang hoàn thiện
@@ -29,18 +32,27 @@ tools/
   split_tiki_description.py
   process_bt_desc.py
   build_weight_eval_sets.py
+  dedup_weight_A.py / eda_weight_A_dedup.py
+  process_weight_ab.py / eda_processed_ab.py
+  quota_sampling.py
   train_weight_gpu.py / tpu_weight_train.py
+  train_weight_quota_gpu.py
   score_comet_weight.py
   build_judge_input_multi.py / gemma_judge*.py
-  aggregate_weight_eval.py / report_credit.py
+  aggregate_weight_eval.py / aggregate_weight_ab.py / report_credit.py
+  watch_ab_survey.sh
 
 kaggle/                 kernel đang dùng
   rtx_pro_6000*         weight experiment
+  weight_ab_a/          survey A (quota, 5 config)
+  weight_ab_b/          survey B (quota, 5 config)
   comet_weight_offline  COMET offline
   rtx_bt_desc*          BT description
   configs/, kernel/, notify/
 
 reports/
+  EDA_A_B.md / EDA_A_DEDUP.md / EDA_PROCESSED_A_B.md
+  WEIGHT_SURVEY_TECHNIQUE_A_B.md
   WEIGHT_EVAL_FINAL.md
   WEIGHT_EVAL.md
   WEIGHT_EVAL_PIPELINE.md
