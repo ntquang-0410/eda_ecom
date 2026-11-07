@@ -1,0 +1,29 @@
+{
+  "rows": 13200,
+  "good_provider": 8823,
+  "qc_ok": 8775,
+  "qc_ok_rate": 0.6648,
+  "empty": 1760,
+  "short": 1770,
+  "untranslated": 2502,
+  "no_cjk": 3975,
+  "ratio_bad": 1865,
+  "identical": 15,
+  "input_truncated": 444,
+  "number_mismatch": 7897,
+  "boilerplate": 13199,
+  "source_chars_mean": 1426.4,
+  "target_chars_mean": 544.1,
+  "cjk_ratio_mean": 0.4637,
+  "dedup_removed": 726,
+  "chunked_products": 279,
+  "units": 8563,
+  "train_units": 6841,
+  "split": {
+    "train": 6841,
+    "dev": 871,
+    "test": 851
+  },
+  "token_million": 4.951,
+  "boilerplate_in_train": 8563
+}
