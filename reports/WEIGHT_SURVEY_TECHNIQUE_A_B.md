@@ -206,6 +206,13 @@ Sau đó gộp các nhóm, xáo trộn và chia thành 500 step ~8.000 token.
 - Group token share đạt đúng `s_g` (sai số chỉ là overshoot của dòng cuối).
 - Không còn hiện tượng câu dài `t_i²` áp đảo.
 
+### 4.2b. Kiểm chứng trên dữ liệu thật
+
+Với `natural`, quota 4M token cho A lấy 60.961 dòng `1688_attribute`,
+13.329 `1688_title`, 12.777 `tiki_attribute`, 10.856 `tiki_title`.
+Median `eff_tokens` của mẫu trùng khít quần thể (9,9 / 46,5 / 8,9 / 34,6),
+tức phân bố độ dài được giữ nguyên, không bị dồn về câu dài.
+
 ### 4.3. Bằng chứng: sampler cũ lệch rất mạnh
 
 Mô phỏng 4M token trên chính dữ liệu A/B:

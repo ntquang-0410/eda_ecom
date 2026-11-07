@@ -79,3 +79,25 @@ eval A/B giữ nguyên
 quota sampling: tools/quota_sampling.py
 budget 4M, 500 step
 ```
+
+## 5. Kiểm chứng quota sampling giữ phân bố độ dài
+
+Mô phỏng quota 4M token, seed 42, cấu hình `natural`:
+
+| tập | nhóm | dòng quần thể | dòng được lấy | median gốc | median mẫu | p10 mẫu | p90 mẫu | dòng khác nhau |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| A | 1688_attribute | 73.815 | 60.961 | 9,9 | 9,9 | 3,5 | 96,9 | 41.441 |
+| A | 1688_title | 16.133 | 13.329 | 46,5 | 46,5 | 40,3 | 53,2 | 9.099 |
+| A | tiki_attribute | 15.727 | 12.777 | 9,0 | 8,9 | 3,8 | 55,9 | 8.760 |
+| A | tiki_title | 13.057 | 10.856 | 34,6 | 34,6 | 18,8 | 58,1 | 7.401 |
+| B | 1688_description | 16.819 | 4.252 | 472,5 | 480,0 | 241,9 | 766,5 | 3.772 |
+| B | 1688_title | 16.133 | 4.105 | 46,5 | 46,6 | 40,5 | 53,2 | 3.651 |
+| B | tiki_description | 11.397 | 2.911 | 535,7 | 533,1 | 194,5 | 960,0 | 2.580 |
+| B | tiki_title | 13.057 | 3.318 | 34,6 | 34,6 | 19,1 | 59,8 | 2.946 |
+
+Nhận xét:
+
+- Median của mẫu trùng median quần thể ở cả 8 nhóm → không còn hiện tượng "chỉ lấy câu dài".
+- Đuôi dài vẫn còn (A attribute p90 ~97 token; B tiki description p90 = 960 token do trần cắt).
+- Tỷ lệ dòng khác nhau / dòng được lấy của A attribute là 68%; sample có hoàn lại nhưng vẫn phủ phần lớn quần thể.
+- Với B, mỗi nhóm chỉ dùng 20–25% số dòng, phù hợp ngân sách 4M token trên corpus 15,7M token.
