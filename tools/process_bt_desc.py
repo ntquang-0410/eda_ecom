@@ -26,11 +26,11 @@ CJK_RE = re.compile(r"[\u4e00-\u9fff]")
 VI_RE = re.compile(r"[ăâêôơưđ]|[áàảãạấầẩẫậắằẳẵặéèẻẽẹếềểễệíìỉĩịóòỏõọốồổỗộớờởỡợúùủũụứừửữựýỳỷỹỵ]", re.I)
 NUM_RE = re.compile(r"\d+(?:[.,]\d+)?")
 SPACE = re.compile(r"\s+")
-BOILER_RE = re.compile(r"^\s*Giá sản phẩm trên Tiki đã bao gồm thuế.*?(?:\.{2,}|…+)\s*", re.I | re.S)
+BOILER_RE = re.compile(r"Giá sản phẩm trên Tiki đã bao gồm thuế.*?(?:\.{2,}|…+)", re.I | re.S)
 
 
 def clean_source(text) -> str:
-    return BOILER_RE.sub("", str(text or ""), count=1).strip()
+    return BOILER_RE.sub("", str(text or "")).strip()
 
 
 def clean_target(text) -> str:
@@ -38,16 +38,14 @@ def clean_target(text) -> str:
     if not t:
         return ""
     parts = re.split(r"(?<=[。！？])", t)
-    while parts:
-        head = parts[0]
-        if re.search(r"(Tiki|TikTok)", head, re.I) and re.search(r"(价格|税费|费用|运费|税)", head):
-            parts.pop(0)
+    kept = []
+    for part in parts:
+        if re.search(r"(Tiki|TikTok)", part, re.I) and re.search(r"(价格|税费|费用|运费|税)", part):
             continue
-        if head.startswith("此外") and re.search(r"(费用|税费|运费|进口税)", head):
-            parts.pop(0)
+        if part.startswith("此外") and re.search(r"(费用|税费|运费|进口税)", part):
             continue
-        break
-    return "".join(parts).strip()
+        kept.append(part)
+    return "".join(kept).strip()
 
 
 def compact_len(text) -> int:
