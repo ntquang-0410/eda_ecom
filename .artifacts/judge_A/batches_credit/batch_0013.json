@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000141",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing 'bảo vệ toàn diện' and repetitive phrasing."
+  },
+  {
+    "id": "j000142",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000143",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'timer' as 'wristwatch' (手表)."
+  },
+  {
+    "id": "j000144",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000145",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000146",
+    "rating": "A",
+    "score": 7,
+    "note": "Missing 'for dry skin' (Dành Cho Da Khô)."
+  },
+  {
+    "id": "j000147",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000148",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing 'bảo vệ toàn diện' and repetitive phrasing."
+  },
+  {
+    "id": "j000149",
+    "rating": "C",
+    "score": 1,
+    "note": "Severe repetition and missing key product details."
+  },
+  {
+    "id": "j000150",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'timer' as 'wristwatch' (手表)."
+  },
+  {
+    "id": "j000151",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'ready-made' as 'customizable' (可定做)."
+  },
+  {
+    "id": "j000152",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000153",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation of brand name."
+  },
+  {
+    "id": "j000154",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing '2-piece set' and hallucinated 'backpack' (双肩包)."
+  },
+  {
+    "id": "j000155",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'Set of 5' as 'No. 5' (5号)."
+  },
+  {
+    "id": "j000156",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000157",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000158",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000159",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000160",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Untranslated Vietnamese name."
+  }
+]

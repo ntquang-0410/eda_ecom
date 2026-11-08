@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000161",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000162",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice: '煮' (boil) vs '焖' (steep)."
+  },
+  {
+    "id": "j000163",
+    "rating": "A",
+    "score": 7,
+    "note": "Keyword-style translation, slightly awkward phrasing."
+  },
+  {
+    "id": "j000164",
+    "rating": "BB",
+    "score": 5,
+    "note": "Multiple color errors and hallucinated names."
+  },
+  {
+    "id": "j000165",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect."
+  },
+  {
+    "id": "j000166",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Untranslated 'cam' and some color inaccuracies."
+  },
+  {
+    "id": "j000167",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000168",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect."
+  },
+  {
+    "id": "j000169",
+    "rating": "A",
+    "score": 7,
+    "note": "Missing 'for dry skin' (Dành Cho Da Khô)."
+  },
+  {
+    "id": "j000170",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect."
+  },
+  {
+    "id": "j000171",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect."
+  },
+  {
+    "id": "j000172",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect."
+  },
+  {
+    "id": "j000173",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect."
+  },
+  {
+    "id": "j000174",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect."
+  },
+  {
+    "id": "j000175",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Source and hypothesis are identical."
+  },
+  {
+    "id": "j000176",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect."
+  },
+  {
+    "id": "j000177",
+    "rating": "A",
+    "score": 7,
+    "note": "Last item is truncated."
+  },
+  {
+    "id": "j000178",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect."
+  },
+  {
+    "id": "j000179",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect."
+  },
+  {
+    "id": "j000180",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Hallucinated 'crystal' for 'silver' in bow descriptions."
+  }
+]
