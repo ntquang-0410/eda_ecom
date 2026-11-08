@@ -5,10 +5,11 @@
 Mỗi suite (A, B) có thư mục score riêng vì tên file
 `scores_<config>_seed<seed>_<dataset>.parquet` trùng nhau giữa A và B.
 
+Điểm 1688 = COMET-da (có reference), Tiki = COMET-QE (không reference).
+Hai thang điểm khác nhau nên KHÔNG lấy trung bình gộp; báo cáo riêng từng
+dataset + từng stratum, paired bootstrap theo eval_id.
+
 Output:
-  - bảng COMET trung bình theo config và theo stratum
-  - paired bootstrap vs config baseline (natural)
-  - Gemma credit trung bình (nếu có)
   - markdown + summary json
 """
 
@@ -43,14 +44,11 @@ def paired_bootstrap(diff: np.ndarray, n: int = 4000, seed: int = 42) -> dict:
 
 
 def load_scores(path: Path) -> dict[tuple[str, int], pd.DataFrame]:
-    """Trả về {(config, seed): frame gồm tất cả dataset}."""
     frames = []
     for score_file in sorted(path.glob("scores_*.parquet")):
-        match = PATTERN.match(score_file.name)
-        if not match:
+        if not PATTERN.match(score_file.name):
             continue
-        frame = pd.read_parquet(score_file)
-        frames.append(frame)
+        frames.append(pd.read_parquet(score_file))
     if not frames:
         raise FileNotFoundError(f"không có scores_*.parquet trong {path}")
     df = pd.concat(frames, ignore_index=True)
@@ -63,20 +61,25 @@ def load_gemma(path: Path | None) -> dict[str, float]:
         return {}
     data = json.loads(path.read_text(encoding="utf-8"))
     strata = data.get("summary", {}).get("by_stratum", {})
-    out = {}
-    for key, value in strata.items():
-        out[key] = float(value.get("mean", float("nan")))
-    return out
+    return {key: float(value.get("mean", float("nan"))) for key, value in strata.items()}
 
 
 def mean_table(df: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for config, part in df.groupby("config"):
-        row = {"config": config, "n": len(part), "comet": part["score"].mean()}
+        row = {"config": config, "n": len(part)}
+        for dataset, cell in part.groupby("dataset"):
+            row[dataset] = cell["score"].mean()
         for (dataset, pair_type), cell in part.groupby(["dataset", "pair_type"]):
             row[f"{dataset}_{pair_type}"] = cell["score"].mean()
         rows.append(row)
-    return pd.DataFrame(rows).sort_values("comet", ascending=False).reset_index(drop=True)
+    return pd.DataFrame(rows).sort_values("1688", ascending=False).reset_index(drop=True)
+
+
+def fmt(value) -> str:
+    if value is None or (isinstance(value, float) and np.isnan(value)):
+        return "-"
+    return f"{value:.3f}"
 
 
 def main() -> int:
@@ -100,77 +103,81 @@ def main() -> int:
         base_key = (args.baseline, seed)
         if config == args.baseline or base_key not in scores:
             continue
-        base = scores[base_key]
-        merged = part.merge(base, on="eval_id", suffixes=("_cfg", "_base"))
-        diff = (merged["score_cfg"] - merged["score_base"]).to_numpy()
-        boot[f"{config}::seed{seed}"] = paired_bootstrap(diff)
+        merged = part.merge(scores[base_key], on="eval_id", suffixes=("_cfg", "_base"))
+        info = {}
+        for name, subset in [("all", merged),
+                             ("1688", merged[merged["dataset_cfg"] == "1688"]),
+                             ("tiki", merged[merged["dataset_cfg"] == "tiki"])]:
+            diff = (subset["score_cfg"] - subset["score_base"]).to_numpy()
+            info[name] = paired_bootstrap(diff)
+        boot[f"{config}::seed{seed}"] = info
 
     comet_raw = {}
     if args.comet_json and Path(args.comet_json).exists():
         comet_raw = json.loads(Path(args.comet_json).read_text(encoding="utf-8"))
 
-    # gộp gemma: key dạng config::dataset::pair_type
-    gemma_cfg: dict[str, float] = {}
-    gemma_rows = {}
+    gemma_rows, gemma_cfg = {}, {}
     for key, value in gemma.items():
         parts = key.split("::")
         if len(parts) != 3:
             continue
-        config, dataset, pair_type = parts
-        gemma_rows[(config, dataset, pair_type)] = value
-        gemma_cfg.setdefault(config, []).append(value)
-    gemma_mean = {k: float(np.mean(v)) for k, v in gemma_cfg.items()}
+        gemma_rows[tuple(parts)] = value
+        gemma_cfg.setdefault(parts[0], []).append(value)
 
     summary = {
         "suite": args.suite,
         "baseline": args.baseline,
         "configs": table.to_dict("records"),
         "bootstrap_vs_baseline": boot,
-        "gemma_mean": gemma_mean,
+        "gemma_mean": {k: float(np.mean(v)) for k, v in gemma_cfg.items()},
         "gemma_by_stratum": {f"{k[0]}::{k[1]}::{k[2]}": v for k, v in gemma_rows.items()},
         "comet_raw": comet_raw,
-        "n_scores": {f"{c}::{s}": int(len(p)) for (c, s), p in scores.items()},
     }
     Path(args.summary).parent.mkdir(parents=True, exist_ok=True)
     Path(args.summary).write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    cols = [c for c in table.columns if c in ("config", "comet", "n")]
-    strata = [c for c in table.columns if c not in ("config", "comet", "n")]
+    strata = [c for c in table.columns if "_" in c and c not in ("1688", "tiki")]
     lines = [
         f"# Weight survey {args.suite} — quota sampler",
         "",
-        f"Baseline: `{args.baseline}`. Score: COMET-da cho 1688, COMET-QE cho Tiki.",
+        f"Baseline: `{args.baseline}`. 1688 = COMET-da, Tiki = COMET-QE.",
+        "Hai thang điểm khác nhau nên báo cáo riêng, không lấy trung bình gộp.",
         "Paired bootstrap 4.000 lần trên eval_id dùng chung.",
         "",
         "## COMET",
         "",
-        "| config | n | COMET | " + " | ".join(s for s in strata) + " |",
-        "|---|---:|---:|" + "---:|" * len(strata),
+        "| config | n | 1688 (da) | Tiki (qe) | " + " | ".join(strata) + " |",
+        "|---|---:|---:|---:|" + "---:|" * len(strata),
     ]
     for _, row in table.iterrows():
-        cells = " | ".join(f"{row[s]:.2f}" for s in strata)
-        lines.append(f"| {row['config']} | {int(row['n'])} | **{row['comet']:.2f}** | {cells} |")
+        cells = " | ".join(fmt(row[s]) for s in strata)
+        lines.append(f"| {row['config']} | {int(row['n'])} | **{fmt(row.get('1688'))}** | "
+                     f"**{fmt(row.get('tiki'))}** | {cells} |")
 
     lines += ["", "## Paired bootstrap vs baseline", "",
-              "| config | n | ΔCOMET | CI 95% | P(win) |", "|---|---:|---:|---|---:|"]
-    for name, info in sorted(boot.items(), key=lambda x: -x[1]["mean_diff"]):
-        lines.append(f"| {name} | {info['n']} | {info['mean_diff']:+.3f} | "
-                     f"[{info['ci_low']:+.3f}, {info['ci_high']:+.3f}] | {info['p_win']:.3f} |")
+              "| config | Δ1688 | CI 95% | P(win) | ΔTiki | CI 95% | P(win) |",
+              "|---|---:|---|---:|---:|---|---:|"]
+    for name, info in sorted(boot.items(), key=lambda x: -(x[1]["1688"]["mean_diff"] or 0)):
+        a, t = info["1688"], info["tiki"]
+        lines.append(f"| {name} | {a['mean_diff']:+.4f} | "
+                     f"[{a['ci_low']:+.4f}, {a['ci_high']:+.4f}] | {a['p_win']:.3f} | "
+                     f"{t['mean_diff']:+.4f} | [{t['ci_low']:+.4f}, {t['ci_high']:+.4f}] | "
+                     f"{t['p_win']:.3f} |")
 
-    if gemma_mean:
-        lines += ["", "## Gemma credit (1..9)", "", "| config | mean |", "|---|---:|"]
-        for config, value in sorted(gemma_mean.items(), key=lambda x: -x[1]):
-            lines.append(f"| {config} | {value:.2f} |")
+    if gemma_cfg:
+        lines += ["", "## Gemma credit (1..9, mẫu 50 eval_id/stratum/config)", "",
+                  "| config | mean | n stratum |", "|---|---:|---:|"]
+        for config, values in sorted(gemma_cfg.items(), key=lambda x: -np.mean(x[1])):
+            lines.append(f"| {config} | {np.mean(values):.2f} | {len(values)} |")
     else:
         lines += ["", "_Chưa có Gemma score._"]
 
     if comet_raw:
-        lines += ["", "## COMET system score (raw)", "",
+        lines += ["", "### COMET system score (raw)", "",
                   "| key | system | BLEU | chrF |", "|---|---:|---:|---:|"]
         for key, value in sorted(comet_raw.items()):
-            lines.append(f"| {key} | {value.get('system_score', float('nan')):.2f} | "
-                         f"{value.get('bleu', float('nan')):.2f} | "
-                         f"{value.get('chrf', float('nan')):.2f} |")
+            lines.append(f"| {key} | {value.get('system_score', float('nan')):.3f} | "
+                         f"{fmt(value.get('bleu'))} | {fmt(value.get('chrf'))} |")
 
     Path(args.out).write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))

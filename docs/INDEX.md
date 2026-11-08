@@ -2,6 +2,8 @@
 
 Các báo cáo đang dùng:
 
+- `reports/WEIGHT_SURVEY_A_B.md` — **kết quả chính**: A giữ natural, B chọn balanced/title_heavy
+- `reports/WEIGHT_SURVEY_A.md` / `WEIGHT_SURVEY_B.md` — bảng COMET chi tiết từng suite
 - `reports/WEIGHT_SURVEY_TECHNIQUE_A_B.md` — kỹ thuật quota sampling cho A/B
 - `reports/EDA_A_B.md` / `EDA_A_DEDUP.md` — EDA split A/B trước processing
 - `reports/EDA_PROCESSED_A_B.md` — EDA sau processing (units dùng để train)
