@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000201",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000202",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of technical terms."
+  },
+  {
+    "id": "j000203",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missing 'whitening' (làm trắng), key feature lost."
+  },
+  {
+    "id": "j000204",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000205",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor omission: 'winter' (đông) is missing."
+  },
+  {
+    "id": "j000206",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000207",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct numbers and units."
+  },
+  {
+    "id": "j000208",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missing 'Sủi Da' (cuticle pusher) and untranslated brand name."
+  },
+  {
+    "id": "j000209",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000210",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000211",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000212",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'set of 5' as '5-stage' (5级)."
+  },
+  {
+    "id": "j000213",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000214",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000215",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'cleanser' (Sữa Rửa Mặt) as 'face cream' (面霜)."
+  },
+  {
+    "id": "j000216",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000217",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation of 'flat shoes'."
+  },
+  {
+    "id": "j000218",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000219",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000220",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  }
+]

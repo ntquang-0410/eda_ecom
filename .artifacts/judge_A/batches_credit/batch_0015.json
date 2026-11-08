@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000181",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000182",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000183",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct transliteration."
+  },
+  {
+    "id": "j000184",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'Cúc' (Daisy) as '向日葵' (Sunflower)."
+  },
+  {
+    "id": "j000185",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'xanh' (green) as '蓝' (blue)."
+  },
+  {
+    "id": "j000186",
+    "rating": "AA",
+    "score": 8,
+    "note": "Meaning preserved, slightly awkward phrasing at the end."
+  },
+  {
+    "id": "j000187",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000188",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000189",
+    "rating": "B",
+    "score": 4,
+    "note": "Awkward phrasing; 'không nặng tóc' mistranslated as '不重质'."
+  },
+  {
+    "id": "j000190",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000191",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000192",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000193",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor style issue with '灰暖'."
+  },
+  {
+    "id": "j000194",
+    "rating": "AA",
+    "score": 8,
+    "note": "Correct, though slightly concise."
+  },
+  {
+    "id": "j000195",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000196",
+    "rating": "AA",
+    "score": 8,
+    "note": "Meaning preserved, slightly compressed style."
+  },
+  {
+    "id": "j000197",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'tam giác vuông' (right triangle) as '方形' (square)."
+  },
+  {
+    "id": "j000198",
+    "rating": "A",
+    "score": 7,
+    "note": "Missing 'cashmere' (羊绒) translation."
+  },
+  {
+    "id": "j000199",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000200",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate translation of source."
+  }
+]
