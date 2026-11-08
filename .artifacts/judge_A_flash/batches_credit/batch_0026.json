@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000521",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and accurate translation."
+  },
+  {
+    "id": "j000522",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and concise."
+  },
+  {
+    "id": "j000523",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation, cleanly omitted source noise digit."
+  },
+  {
+    "id": "j000524",
+    "rating": "C",
+    "score": 1,
+    "note": "Severe hallucination with repeated degenerate text."
+  },
+  {
+    "id": "j000525",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Critical mistranslation of black tea (妃子笑) as Tieguanyin (铁观音)."
+  },
+  {
+    "id": "j000526",
+    "rating": "AA",
+    "score": 8,
+    "note": "Acceptable, though '竹木' would be more accurate than '竹子'."
+  },
+  {
+    "id": "j000527",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly repetitive wording, but all information is preserved."
+  },
+  {
+    "id": "j000528",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good e-commerce keywords, minor nuance differences with domestic/cross-border."
+  },
+  {
+    "id": "j000529",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missed '前' in standard product name '前男友面膜'."
+  },
+  {
+    "id": "j000530",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and accurate."
+  },
+  {
+    "id": "j000531",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000532",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate transliteration of the source color list."
+  },
+  {
+    "id": "j000533",
+    "rating": "B",
+    "score": 4,
+    "note": "Hallucinated phrases including '低至100' and '小众高颜值'."
+  },
+  {
+    "id": "j000534",
+    "rating": "CC",
+    "score": 2,
+    "note": "Severe mistranslation of the brand/product name."
+  },
+  {
+    "id": "j000535",
+    "rating": "A",
+    "score": 7,
+    "note": "Meaning preserved, slight omission of full protection concept."
+  },
+  {
+    "id": "j000536",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural e-commerce title."
+  },
+  {
+    "id": "j000537",
+    "rating": "B",
+    "score": 4,
+    "note": "Hallucinated '芒果' and awkwardly phrased storage instruction."
+  },
+  {
+    "id": "j000538",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and faithful translation."
+  },
+  {
+    "id": "j000539",
+    "rating": "B",
+    "score": 4,
+    "note": "Missed 'sừng' (horn) and mistranslated 'răng thưa' (wide-tooth) as '稀有齿'."
+  },
+  {
+    "id": "j000540",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct, natural e-commerce title."
+  }
+]

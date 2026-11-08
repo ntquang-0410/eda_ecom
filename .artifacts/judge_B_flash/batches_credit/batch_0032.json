@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000641",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and complete translation with precise specifications and details."
+  },
+  {
+    "id": "j000642",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated handbag/shoulder bag as backpack (双肩包) and missed 'two-piece set'."
+  },
+  {
+    "id": "j000643",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and natural e-commerce title translation."
+  },
+  {
+    "id": "j000644",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated table clamp as desk mat, lamp neck as 'need', and screw bulb as tail light."
+  },
+  {
+    "id": "j000645",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Noticeable keyword repetitions, flashlight mistranslated as battery light, SIÊU HOT untranslated."
+  },
+  {
+    "id": "j000646",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation matching standard e-commerce attribute terminology."
+  },
+  {
+    "id": "j000647",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated roll-on deodorant (lăn nách/Roll On) as spray (喷雾) throughout."
+  },
+  {
+    "id": "j000648",
+    "rating": "BB",
+    "score": 5,
+    "note": "Several attribute mistranslations: 远程控制 for remote control, 套装 for socks, 桌子内 for drawer."
+  },
+  {
+    "id": "j000649",
+    "rating": "CC",
+    "score": 2,
+    "note": "Pandan leaf mistranslated as pineapple leaf (菠萝叶) and 叶网."
+  },
+  {
+    "id": "j000650",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor inaccuracy with 免检 and hallucinated 高颜值, but overall usable."
+  },
+  {
+    "id": "j000651",
+    "rating": "AA",
+    "score": 8,
+    "note": "Complete and clear translation; slight awkwardness using 溶解咖啡 instead of 速溶咖啡."
+  },
+  {
+    "id": "j000652",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate technical specifications with minor terminology variations."
+  },
+  {
+    "id": "j000653",
+    "rating": "B",
+    "score": 4,
+    "note": "Multiple attribute mistranslations including 空气 for slit, 涤纶 for spandex, and 连接风."
+  },
+  {
+    "id": "j000654",
+    "rating": "A",
+    "score": 7,
+    "note": "Good translation, though ultra-fine line (nét kẻ siêu mịn) was omitted."
+  },
+  {
+    "id": "j000655",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and naturally phrased e-commerce product description."
+  },
+  {
+    "id": "j000656",
+    "rating": "A",
+    "score": 7,
+    "note": "Understands e-commerce jargon well; minor word choice differences."
+  },
+  {
+    "id": "j000657",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and complete translation of features and legal notices."
+  },
+  {
+    "id": "j000658",
+    "rating": "A",
+    "score": 7,
+    "note": "Mostly accurate, slightly awkward phrasing for '6 in 1' (6在1的 instead of 六合一)."
+  },
+  {
+    "id": "j000659",
+    "rating": "B",
+    "score": 4,
+    "note": "Multiple mistranslations: desk corner as 角度, instant as 一曲音乐, and deskpad described as 不刺脚."
+  },
+  {
+    "id": "j000660",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Concise, precise, and completely natural translation."
+  }
+]
