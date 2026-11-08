@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000301",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate, though '一级水过滤芯' is usually '1号滤芯' in water purifier terminology."
+  },
+  {
+    "id": "j000302",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and accurate e-commerce title translation."
+  },
+  {
+    "id": "j000303",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000304",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'sương mù' as '雾霾' and 'Giá Rẻ' (cheap) as '小众'."
+  },
+  {
+    "id": "j000305",
+    "rating": "AA",
+    "score": 8,
+    "note": "'无' or '否' is often more natural than '不' in product options."
+  },
+  {
+    "id": "j000306",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Omitted the main product noun 'Xe đạp' (自行车)."
+  },
+  {
+    "id": "j000307",
+    "rating": "BB",
+    "score": 5,
+    "note": "Literal translation; missed the standard term '卸妆水' for 'Nước tẩy trang'."
+  },
+  {
+    "id": "j000308",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Proper name and volume correctly retained."
+  },
+  {
+    "id": "j000309",
+    "rating": "A",
+    "score": 7,
+    "note": "'洁面水' is usable but '卸妆水' is the standard translation for 'Nước tẩy trang'."
+  },
+  {
+    "id": "j000310",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'蒸' (steam) is a mistranslation of steeping/soaking instant noodles with hot water."
+  },
+  {
+    "id": "j000311",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000312",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Omitted material 'sừng' (horn comb) and 'xuất Nhật' is export to Japan."
+  },
+  {
+    "id": "j000313",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000314",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000315",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent and natural e-commerce search keywords."
+  },
+  {
+    "id": "j000316",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000317",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Hallucinated '半透明' (semi-transparent) not present in the source."
+  },
+  {
+    "id": "j000318",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent and accurate safety instruction translation."
+  },
+  {
+    "id": "j000319",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Inappropriate classifier '筒' for 'Hũ' (jar/bottle of bird's nest)."
+  },
+  {
+    "id": "j000320",
+    "rating": "AA",
+    "score": 8,
+    "note": "Fluent title; '懒人' at the end would be better as '懒人鞋'."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000401",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and natural e-commerce title translation."
+  },
+  {
+    "id": "j000402",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Several mistranslations: 汉波丽 vs 韩泊莉, 潮汕 vs 汕头, 薄荷味润唇膏 vs 凡士林润唇膏."
+  },
+  {
+    "id": "j000403",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good, '铝金属表壳' is more customary than '铝边'."
+  },
+  {
+    "id": "j000404",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000405",
+    "rating": "A",
+    "score": 7,
+    "note": "Transliteration missing for Hateli; slightly repetitive but understandable."
+  },
+  {
+    "id": "j000406",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Repeated 美白面膜 in keywords, 漂白 for Làm trắng is unnatural, missed brand HUNMUI/韩伦美羽."
+  },
+  {
+    "id": "j000407",
+    "rating": "CCC",
+    "score": 3,
+    "note": "'hoa Cúc' mistranslated as 向日葵 (sunflower) instead of 雏菊/菊花."
+  },
+  {
+    "id": "j000408",
+    "rating": "AA",
+    "score": 8,
+    "note": "'双层脚垫/脚垫' is more accurate for car mats than '双层地毯'."
+  },
+  {
+    "id": "j000409",
+    "rating": "AAA",
+    "score": 9,
+    "note": "All attributes translated accurately and naturally."
+  },
+  {
+    "id": "j000410",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and standard translation."
+  },
+  {
+    "id": "j000411",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor punctuation/spacing awkwardness, meaning fully preserved."
+  },
+  {
+    "id": "j000412",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed 'đũi' (linen/crepe cotton); '一级货' is slightly literal but acceptable."
+  },
+  {
+    "id": "j000413",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated kẻ lông mày (eyebrow pencil) as 眼线笔 (eyeliner) throughout."
+  },
+  {
+    "id": "j000414",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'nối' as 连体, 'khe hở' as 有孔, 'túi' as 门襟."
+  },
+  {
+    "id": "j000415",
+    "rating": "AA",
+    "score": 8,
+    "note": "Natural e-commerce style, accurate to the source."
+  },
+  {
+    "id": "j000416",
+    "rating": "AA",
+    "score": 8,
+    "note": "'香港盐焗粉' or '椒盐粉' would be better than '盐烤粉'."
+  },
+  {
+    "id": "j000417",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 流行元素 (鸟巢 vs 图腾), 产地 (云霓 vs 温岭), 指尖形状 vs 鞋头形状."
+  },
+  {
+    "id": "j000418",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed brand Lenzing (兰精), missed fitted sheet (ga bọc đệm/床笠)."
+  },
+  {
+    "id": "j000419",
+    "rating": "CCC",
+    "score": 3,
+    "note": "'Sủi da' is a dead skin pusher (死皮推/钢推), mistranslated as 气泡器, missed brand Kềm Nghĩa."
+  },
+  {
+    "id": "j000420",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title."
+  }
+]

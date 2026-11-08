@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000381",
+    "rating": "AA",
+    "score": 8,
+    "note": "Translates correctly and naturally, slight variations from reference but accurate."
+  },
+  {
+    "id": "j000382",
+    "rating": "B",
+    "score": 4,
+    "note": "Dây đeo Vải Dệt mistranslated as 皮带 (leather belt) instead of 编织表带."
+  },
+  {
+    "id": "j000383",
+    "rating": "AA",
+    "score": 8,
+    "note": "Overall accurate and complete; Sữa Tắm dưỡng da translated as 护肤乳 instead of 沐浴露."
+  },
+  {
+    "id": "j000384",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Left 'kipkhỉ' untranslated (should be 猴子包 / Kipling monkey)."
+  },
+  {
+    "id": "j000385",
+    "rating": "A",
+    "score": 7,
+    "note": "Slightly clumsy phrasing (旅行小包迷你箱), but accurately conveys meaning."
+  },
+  {
+    "id": "j000386",
+    "rating": "A",
+    "score": 7,
+    "note": "Clear and mostly accurate; spam keywords at the end translated literally."
+  },
+  {
+    "id": "j000387",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and well-structured translation."
+  },
+  {
+    "id": "j000388",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'tam giác vuông' (right-angled triangle) as '方形' (square/rectangular)."
+  },
+  {
+    "id": "j000389",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor mistranslation: 'dưa lưới' is cantaloupe/muskmelon, translated as 黄瓜 (cucumber)."
+  },
+  {
+    "id": "j000390",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Left 'SIÊU HOT' untranslated; minor repetitive SEO keyword clutter translated literally."
+  },
+  {
+    "id": "j000391",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent, accurate translation of product specs and e-commerce details."
+  },
+  {
+    "id": "j000392",
+    "rating": "A",
+    "score": 7,
+    "note": "Understandable and captures all key details, slightly unpolished phrasing."
+  },
+  {
+    "id": "j000393",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor slip: 'Màu mơ' translated as '梦色' instead of '杏色'."
+  },
+  {
+    "id": "j000394",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and natural translation."
+  },
+  {
+    "id": "j000395",
+    "rating": "BB",
+    "score": 5,
+    "note": "Number mistranslated: '1 triệu đồng' (1 million) translated as '10 万越南盾' (100k)."
+  },
+  {
+    "id": "j000396",
+    "rating": "AA",
+    "score": 8,
+    "note": "Well translated spec sheet, accurately captures product terms."
+  },
+  {
+    "id": "j000397",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Obsidian left untranslated; repetitive phrasing in Chinese."
+  },
+  {
+    "id": "j000398",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor redundancy, but all key information correctly translated."
+  },
+  {
+    "id": "j000399",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Đà Lạt mistranslated as 芽庄 (Nha Trang); Pour-Over / Pha phin mapping confused."
+  },
+  {
+    "id": "j000400",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and preserves full source structure and parameters."
+  }
+]
