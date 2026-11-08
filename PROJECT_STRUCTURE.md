@@ -77,6 +77,20 @@ Không xoá archive; chỉ move để root gọn.
 https://huggingface.co/datasets/ntquang0410/tiki-4model-eval
 ```
 
+Layout trên HF (refactor 2026-11-08):
+
+```text
+README.md / INDEX.md
+code/                 script + requirements
+docs/                 migration, TIKI_DESC, WEIGHT_SPLITS, RUN_ON_RTX6000
+data/1688/            train/dev/test + tokenized
+data/pairs/           pair table dedup
+data/bt/              title_attribute/ + description/{processed,raw}
+data/weight/          eval/ + splits_v2/ + processed_A|B/ + survey_ab/
+data/tiki_desc_split/
+reports/              báo cáo + figures/{eda_ab,eda_a_dedup,processed_ab,desc_bt}
+```
+
 Bản cập nhật 2026-11-08 có thêm:
 
 ```text
