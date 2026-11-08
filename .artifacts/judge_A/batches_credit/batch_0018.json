@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000241",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural e-commerce style."
+  },
+  {
+    "id": "j000242",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000243",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missed 'for dry skin' (干皮)."
+  },
+  {
+    "id": "j000244",
+    "rating": "A",
+    "score": 7,
+    "note": "Phrasing 'TPU 热塑性' is slightly awkward."
+  },
+  {
+    "id": "j000245",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000246",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000247",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'ex-boyfriend' as 'old boyfriend'."
+  },
+  {
+    "id": "j000248",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact and accurate mapping."
+  },
+  {
+    "id": "j000249",
+    "rating": "C",
+    "score": 1,
+    "note": "Untranslated Vietnamese."
+  },
+  {
+    "id": "j000250",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000251",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000252",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000253",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000254",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000255",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000256",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Hallucinated 'magnetic'; 'lamp' translated as 'ornament'."
+  },
+  {
+    "id": "j000257",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000258",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000259",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000260",
+    "rating": "BB",
+    "score": 5,
+    "note": "Terminology error: 'Pixiu' mistranslated as 'Treasure pig'."
+  }
+]

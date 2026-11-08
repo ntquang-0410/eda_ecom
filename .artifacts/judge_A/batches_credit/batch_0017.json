@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000221",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated fish sauce (nước mắm) as soy sauce (酱油)."
+  },
+  {
+    "id": "j000222",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing 'makeup remover'; 'micellar water' translated too literally."
+  },
+  {
+    "id": "j000223",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000224",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000225",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Brand name and several flavor terms are inaccurate."
+  },
+  {
+    "id": "j000226",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural for e-commerce."
+  },
+  {
+    "id": "j000227",
+    "rating": "BB",
+    "score": 5,
+    "note": "Cereal mistranslated as milkshake; missing 'almond'."
+  },
+  {
+    "id": "j000228",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000229",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated Pandan leaf as Pineapple leaf."
+  },
+  {
+    "id": "j000230",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000231",
+    "rating": "B",
+    "score": 4,
+    "note": "Multiple ingredient errors: cereal to milkshake, missing almond, sesame to bean."
+  },
+  {
+    "id": "j000232",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000233",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000234",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000235",
+    "rating": "AA",
+    "score": 8,
+    "note": "Meaning preserved, slightly repetitive style."
+  },
+  {
+    "id": "j000236",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'Feizixiao' and 'lychee' (to peach)."
+  },
+  {
+    "id": "j000237",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'Feizixiao' as 'Tie Guan Yin' and 'lychee' as 'peach'."
+  },
+  {
+    "id": "j000238",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000239",
+    "rating": "AA",
+    "score": 8,
+    "note": "Correct, minor style choices."
+  },
+  {
+    "id": "j000240",
+    "rating": "AA",
+    "score": 8,
+    "note": "Meaning preserved, though 'car cover' is slightly narrowed to 'sunshade'."
+  }
+]

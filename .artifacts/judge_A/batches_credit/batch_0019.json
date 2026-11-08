@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000261",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000262",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000263",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000264",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missing '年' for year, but meaning is clear."
+  },
+  {
+    "id": "j000265",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000266",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Untranslated word 'cam'."
+  },
+  {
+    "id": "j000267",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000268",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000269",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Wrong tea type (Tie Guan Yin) and flavor (peach)."
+  },
+  {
+    "id": "j000270",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000271",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000272",
+    "rating": "B",
+    "score": 4,
+    "note": "Wrong tool: '气泡器' (aerator) instead of cuticle pusher."
+  },
+  {
+    "id": "j000273",
+    "rating": "BB",
+    "score": 5,
+    "note": "Incorrect size: 'each piece' instead of 'whole image'."
+  },
+  {
+    "id": "j000274",
+    "rating": "CC",
+    "score": 2,
+    "note": "Many color errors, missing items, and repetitions."
+  },
+  {
+    "id": "j000275",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and complete."
+  },
+  {
+    "id": "j000276",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Wrong city name: '义奥' instead of '义乌' (Yiwu)."
+  },
+  {
+    "id": "j000277",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000278",
+    "rating": "BB",
+    "score": 5,
+    "note": "Wrong design: '耳夹式' (clip-on) instead of '入耳' (in-ear)."
+  },
+  {
+    "id": "j000279",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000280",
+    "rating": "AA",
+    "score": 8,
+    "note": "Literal translation; '纯色' might be better for e-commerce."
+  }
+]
