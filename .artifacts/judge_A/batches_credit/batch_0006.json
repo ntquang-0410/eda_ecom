@@ -1,0 +1,62 @@
+[
+  {
+    "id": "j000061",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Pudding mistranslated as Mousse; duplicate translation for the last two items."
+  },
+  {
+    "id": "j000062",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missing 'cm被芯' in the final item."
+  },
+  {
+    "id": "j000063",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Hard Tailor' mistranslated as '硬尾'; '不重头发' is awkward."
+  },
+  {
+    "id": "j000064",
+    "rating": "BB",
+    "score": 5,
+    "note": "'Nghĩa Ô' as '义奥'; 'nhẫn' as '手镯'; 'đồ chơi phát sáng' as '小夜灯'."
+  },
+  {
+    "id": "j000065",
+    "rating": "AA",
+    "score": 8,
+    "note": "'防偷' is slightly unnatural compared to '防盗'."
+  },
+  {
+    "id": "j000066",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000067",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000068",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000069",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000070",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  }
+]

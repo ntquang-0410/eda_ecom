@@ -4,5 +4,39 @@
     "n": 447,
     "bleu": 71.668,
     "chrf": 70.1665
+  },
+  "balanced::42::tiki": {
+    "system_score": 0.0566,
+    "n": 438
+  },
+  "desc_heavy::42::1688": {
+    "system_score": 0.8352,
+    "n": 447,
+    "bleu": 71.3258,
+    "chrf": 71.121
+  },
+  "desc_heavy::42::tiki": {
+    "system_score": 0.0539,
+    "n": 438
+  },
+  "natural::42::1688": {
+    "system_score": 0.8406,
+    "n": 447,
+    "bleu": 74.2634,
+    "chrf": 72.3518
+  },
+  "natural::42::tiki": {
+    "system_score": 0.0565,
+    "n": 438
+  },
+  "tiki_heavy::42::1688": {
+    "system_score": 0.8453,
+    "n": 447,
+    "bleu": 69.3802,
+    "chrf": 67.6468
+  },
+  "tiki_heavy::42::tiki": {
+    "system_score": 0.052,
+    "n": 438
   }
 }

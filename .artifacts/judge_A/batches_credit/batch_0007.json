@@ -1,0 +1,62 @@
+[
+  {
+    "id": "j000071",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000072",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000073",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'Trân châu' (pearls) as '玉米粒' (corn)."
+  },
+  {
+    "id": "j000074",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistook 'Set of 5... No. 1' for 'No. 5 filter'."
+  },
+  {
+    "id": "j000075",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Source and hypothesis are identical."
+  },
+  {
+    "id": "j000076",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'one item' as 'dropshipping'."
+  },
+  {
+    "id": "j000077",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000078",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate, though slightly condensed e-commerce style."
+  },
+  {
+    "id": "j000079",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correctly preserved proper noun."
+  },
+  {
+    "id": "j000080",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  }
+]

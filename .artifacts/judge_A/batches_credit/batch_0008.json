@@ -1,0 +1,62 @@
+[
+  {
+    "id": "j000081",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000082",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor omission of 'year' (年), but meaning is clear."
+  },
+  {
+    "id": "j000083",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000084",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correctly handled the typo in source (481 to 48)."
+  },
+  {
+    "id": "j000085",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'Sủi Da' (cuticle pusher) as '气泡管' (bubble tube)."
+  },
+  {
+    "id": "j000086",
+    "rating": "BB",
+    "score": 5,
+    "note": "Hallucinated 'truffle' (松露) for 'mushroom' (Nấm)."
+  },
+  {
+    "id": "j000087",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000088",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000089",
+    "rating": "BB",
+    "score": 5,
+    "note": "Hallucinated 'mango' (芒果); phrasing is slightly awkward."
+  },
+  {
+    "id": "j000090",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing brand 'Forwenw'; 'wallet' instead of 'wallet-style case'."
+  }
+]
