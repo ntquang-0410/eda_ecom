@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000361",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missed 'co giãn' (弹力), but overall meaning and keywords are very good."
+  },
+  {
+    "id": "j000362",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000363",
+    "rating": "AA",
+    "score": 8,
+    "note": "‘钢丝带’ slightly unnatural for Milanese mesh strap (米兰尼斯金属表带), but understandable."
+  },
+  {
+    "id": "j000364",
+    "rating": "B",
+    "score": 4,
+    "note": "Multiple mistranslations: Trắng hồng -> 米白, Lụa xanh -> 绿丝, Smith -> missed/replaced by 安芙, etc."
+  },
+  {
+    "id": "j000365",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000366",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and accurate e-commerce title translation."
+  },
+  {
+    "id": "j000367",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000368",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000369",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000370",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate e-commerce style category translation."
+  },
+  {
+    "id": "j000371",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing 'kem' (膏); '110克抛光膏盒/抛光膏110g' is correct, '抛光盒' implies polishing box."
+  },
+  {
+    "id": "j000372",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Nước mắm is fish sauce (鱼露), mistranslated as 酱油 (soy sauce)."
+  },
+  {
+    "id": "j000373",
+    "rating": "A",
+    "score": 7,
+    "note": "Repeated 防水, slightly awkward phrasing, but meaning is intact."
+  },
+  {
+    "id": "j000374",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000375",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Very fluent and accurate e-commerce title."
+  },
+  {
+    "id": "j000376",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'Dây đeo Vải Dệt' (woven strap/织物表带) as '皮带' (leather belt)."
+  },
+  {
+    "id": "j000377",
+    "rating": "A",
+    "score": 7,
+    "note": "Acceptable translation of source, reference is too terse."
+  },
+  {
+    "id": "j000378",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Identical product code."
+  },
+  {
+    "id": "j000379",
+    "rating": "AA",
+    "score": 8,
+    "note": "'Bột rang muối' usually translates to 避风塘椒盐粉/椒盐粉; '盐烤粉' is understandable."
+  },
+  {
+    "id": "j000380",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent e-commerce translation."
+  }
+]

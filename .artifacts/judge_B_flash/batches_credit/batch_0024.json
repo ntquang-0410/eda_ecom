@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000481",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslates core ingredient aloe (lô hội) as collagen (胶原蛋白) and brand name."
+  },
+  {
+    "id": "j000482",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missed several key product efficacy and keyword terms such as collagen, centella, and acne relief."
+  },
+  {
+    "id": "j000483",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslates aloe vera (lô hội) as hyaluronic acid (玻尿酸) and misnames the brand."
+  },
+  {
+    "id": "j000484",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and well-formatted e-commerce description."
+  },
+  {
+    "id": "j000485",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslates car cover (bạt phủ xe) as car window film (汽车贴膜)."
+  },
+  {
+    "id": "j000486",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice difference (单肩 vs 双肩), overall meaning well preserved."
+  },
+  {
+    "id": "j000487",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct, natural e-commerce title keywords."
+  },
+  {
+    "id": "j000488",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact and correct translation."
+  },
+  {
+    "id": "j000489",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, comprehensive, and natural product description."
+  },
+  {
+    "id": "j000490",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Noticeable inaccuracies in shade names and place name translation."
+  },
+  {
+    "id": "j000491",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Brand name truncated and 'cung' (bow) mistranslated as '云朵'."
+  },
+  {
+    "id": "j000492",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Numeric error (3000ML mistranslated as 300ML) and missing currency unit."
+  },
+  {
+    "id": "j000493",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, complete, and natural translation."
+  },
+  {
+    "id": "j000494",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and fluent translation."
+  },
+  {
+    "id": "j000495",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Core ingredients severely mistranslated (cucumber to aloe, fullerene to perfluoride)."
+  },
+  {
+    "id": "j000496",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Left untranslated word 'for' and omitted 'điện thoại' (手机)."
+  },
+  {
+    "id": "j000497",
+    "rating": "AA",
+    "score": 8,
+    "note": "Natural listing title, minor repetition of '手机壳'."
+  },
+  {
+    "id": "j000498",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward repetition of '圆领' and introduces contradictory '高领'."
+  },
+  {
+    "id": "j000499",
+    "rating": "BB",
+    "score": 5,
+    "note": "Multiple mistranslations of colors, fabric names, and dress styles."
+  },
+  {
+    "id": "j000500",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslates 'vật tổ' (totem) as '真实' and uses awkward phrasing for shoe toe."
+  }
+]

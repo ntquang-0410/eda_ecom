@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000381",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor omission of 'túi trà' (tea bag), otherwise accurate and fluent."
+  },
+  {
+    "id": "j000382",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'Vải Dệt' (woven fabric) as '皮带' (leather strap)."
+  },
+  {
+    "id": "j000383",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor deviations, brand literally translated, but fully understandable."
+  },
+  {
+    "id": "j000384",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, natural e-commerce title translation."
+  },
+  {
+    "id": "j000385",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce listing translation."
+  },
+  {
+    "id": "j000386",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'đèn trang trí' as '饲养灯' and slightly awkward phrasing."
+  },
+  {
+    "id": "j000387",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct, exact numbers and natural phrasing."
+  },
+  {
+    "id": "j000388",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severe mistranslation: 'tam giác vuông' (right triangle) translated as '正方形' (square)."
+  },
+  {
+    "id": "j000389",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward phrasing and poor grammar in instruction clauses."
+  },
+  {
+    "id": "j000390",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Incomplete and truncated text at the end, multiple ingredient mistranslations."
+  },
+  {
+    "id": "j000391",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000392",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and standard e-commerce keywords translation."
+  },
+  {
+    "id": "j000393",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Multiple color/variant mistranslations (e.g., 'cà phê sữa' translated as milkshake)."
+  },
+  {
+    "id": "j000394",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000395",
+    "rating": "BB",
+    "score": 5,
+    "note": "Untranslated Vietnamese dimension abbreviations (D/R/C for Dài/Rộng/Cao)."
+  },
+  {
+    "id": "j000396",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate color translations."
+  },
+  {
+    "id": "j000397",
+    "rating": "B",
+    "score": 4,
+    "note": "Hallucinated '双龙纹', typo '宝貅' for '貔貅', and omitted 'có bóng'."
+  },
+  {
+    "id": "j000398",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent e-commerce title translation."
+  },
+  {
+    "id": "j000399",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000400",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted 'dán' (贴/贴片), but main information is preserved."
+  }
+]
