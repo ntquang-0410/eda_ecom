@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000081",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000082",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'thanh kéo' (pull rod) as '拉链' (zipper)."
+  },
+  {
+    "id": "j000083",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor terminology differences, meaning preserved."
+  },
+  {
+    "id": "j000084",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Multiple critical errors: mint to vanilla, Shantou to Hunan, Vaseline to Aloe."
+  },
+  {
+    "id": "j000085",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'Sủi Da' (skin curette) as '气泡管' (bubble tube)."
+  },
+  {
+    "id": "j000086",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000087",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'thun qua gáy' (neck strap) as '过耳式' (over-ear)."
+  },
+  {
+    "id": "j000088",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000089",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'điếu cày' (bamboo pipe) as '吸油烟' (oil smoke)."
+  },
+  {
+    "id": "j000090",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missed 'Dạng Ví' (wallet style)."
+  },
+  {
+    "id": "j000091",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000092",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000093",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000094",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly repetitive phrasing, but meaning is correct."
+  },
+  {
+    "id": "j000095",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000096",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missed 'đông' (winter) in 'thu đông'."
+  },
+  {
+    "id": "j000097",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000098",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'Loại thùng' (bucket type) as '箱型' (box type)."
+  },
+  {
+    "id": "j000099",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'Trọng lượng tịnh' (net weight) as '毛重' (gross weight)."
+  },
+  {
+    "id": "j000100",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  }
+]

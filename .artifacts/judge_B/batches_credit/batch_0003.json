@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000061",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of specifications and colors."
+  },
+  {
+    "id": "j000062",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor brand translation difference, otherwise accurate."
+  },
+  {
+    "id": "j000063",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward phrasing for 'doesn't weigh down hair'."
+  },
+  {
+    "id": "j000064",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated location (Yiwu) and key items."
+  },
+  {
+    "id": "j000065",
+    "rating": "AA",
+    "score": 8,
+    "note": "Meaning preserved, minor style choice."
+  },
+  {
+    "id": "j000066",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Terminology errors: 'keychain' instead of 'latch', 'multifunctional' instead of 'universal wheel'."
+  },
+  {
+    "id": "j000067",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000068",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'pull rod' as 'zipper'."
+  },
+  {
+    "id": "j000069",
+    "rating": "BB",
+    "score": 5,
+    "note": "Several awkward translations and incorrect dress style terms."
+  },
+  {
+    "id": "j000070",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000071",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000072",
+    "rating": "B",
+    "score": 4,
+    "note": "Major terminology error: 'mechanical' instead of 'medical device registration'."
+  },
+  {
+    "id": "j000073",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'melon' as 'watermelon' and 'drink' as 'toner'."
+  },
+  {
+    "id": "j000074",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Number error: 'Set of 5' became 'No. 5'."
+  },
+  {
+    "id": "j000075",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate, minor differences in color adjectives."
+  },
+  {
+    "id": "j000076",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Hallucinated content to fill empty commas in source."
+  },
+  {
+    "id": "j000077",
+    "rating": "B",
+    "score": 4,
+    "note": "Significant mistranslation of ingredients (Arbutin, Peach, Aloe)."
+  },
+  {
+    "id": "j000078",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000079",
+    "rating": "C",
+    "score": 1,
+    "note": "Fundamental error: 'Basil seeds' translated as 'Oats'."
+  },
+  {
+    "id": "j000080",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  }
+]

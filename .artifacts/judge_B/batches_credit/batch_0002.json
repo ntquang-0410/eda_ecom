@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000041",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward phrasing '盒 1 盒' for 'Hộp 1 Hũ'."
+  },
+  {
+    "id": "j000042",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice differences compared to reference."
+  },
+  {
+    "id": "j000043",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'Mè' (sesame) as 'Đậu' (bean)."
+  },
+  {
+    "id": "j000044",
+    "rating": "AA",
+    "score": 8,
+    "note": "Left 'SIÊU HOT' untranslated, otherwise correct."
+  },
+  {
+    "id": "j000045",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor brand name and style translation differences."
+  },
+  {
+    "id": "j000046",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice differences in colors."
+  },
+  {
+    "id": "j000047",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'Mắc ca' (Macadamia) as '麦钙'."
+  },
+  {
+    "id": "j000048",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'độ bão hòa thấp' (low saturation) as '低滋润'."
+  },
+  {
+    "id": "j000049",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000050",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000051",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Excellent translation of long descriptive text."
+  },
+  {
+    "id": "j000052",
+    "rating": "AA",
+    "score": 8,
+    "note": "Kept source digits (e.g., nylon2), otherwise correct."
+  },
+  {
+    "id": "j000053",
+    "rating": "C",
+    "score": 1,
+    "note": "Severe repetition and hallucination in the packaging specs section."
+  },
+  {
+    "id": "j000054",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000055",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000056",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'bạn trai cũ' (ex-boyfriend) as '老友男友'."
+  },
+  {
+    "id": "j000057",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000058",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000059",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000060",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  }
+]
