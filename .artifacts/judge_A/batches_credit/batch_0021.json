@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000301",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and accurate."
+  },
+  {
+    "id": "j000302",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correctly translated 'giá trị cao' as '高颜值' in context."
+  },
+  {
+    "id": "j000303",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect."
+  },
+  {
+    "id": "j000304",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing 'Giá Rẻ' and awkward phrasing '雾雾感'."
+  },
+  {
+    "id": "j000305",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000306",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing key noun 'Xe đạp' (Bicycle)."
+  },
+  {
+    "id": "j000307",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missing 'Nước tẩy trang'; '微粒水' is non-standard terminology."
+  },
+  {
+    "id": "j000308",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000309",
+    "rating": "A",
+    "score": 7,
+    "note": "Meaning preserved, though '卸妆水' would be better than '洁面水'."
+  },
+  {
+    "id": "j000310",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Incorrectly used '蒸' (steam) for instant noodles."
+  },
+  {
+    "id": "j000311",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000312",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missing 'sừng' (horn) material."
+  },
+  {
+    "id": "j000313",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000314",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000315",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000316",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000317",
+    "rating": "AA",
+    "score": 8,
+    "note": "Hallucinated '半透明' (translucent), otherwise correct."
+  },
+  {
+    "id": "j000318",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect."
+  },
+  {
+    "id": "j000319",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice: '筒' instead of '瓶/罐' for jar."
+  },
+  {
+    "id": "j000320",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  }
+]

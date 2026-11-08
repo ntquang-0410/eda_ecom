@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000321",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000322",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing 'freeze-dried' (sấy thăng hoa)."
+  },
+  {
+    "id": "j000323",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000324",
+    "rating": "A",
+    "score": 7,
+    "note": "Slightly clunky; 'sunglasses' translated as 'lens'."
+  },
+  {
+    "id": "j000325",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000326",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000327",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Literal translation of 'Hard Tailor' and awkward 'not heavy hair'."
+  },
+  {
+    "id": "j000328",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000329",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Missing 'mask'; hallucinated 'perfume box'."
+  },
+  {
+    "id": "j000330",
+    "rating": "A",
+    "score": 7,
+    "note": "Car cover translated as sunshade cloth; slight meaning shift."
+  },
+  {
+    "id": "j000331",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor awkwardness in color description."
+  },
+  {
+    "id": "j000332",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Missing key product 'mask'."
+  },
+  {
+    "id": "j000333",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000334",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000335",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000336",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000337",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000338",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'motorcycle' as 'car'."
+  },
+  {
+    "id": "j000339",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000340",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'right triangle' as 'square'."
+  }
+]
