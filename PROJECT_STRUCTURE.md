@@ -83,7 +83,9 @@ Bản cập nhật 2026-11-08 có thêm:
 data/bt_qwen3-4b/            toàn bộ output BT Qwen3-4B từ Kaggle
   title_attribute/           predictions v5 (29.446 dòng, good 99,68%)
   description/               predictions full 13.200 dòng (good 88,73%)
+data/bt_tiki_desc/qwen3-4b/  description BT đã process (11.404 unit, 6,363M token)
 data/weight_survey_ab/       hyps + COMET/credit scores của survey A/B
+reports/TIKI_DESC_4B_PROCESSING.md
 reports/WEIGHT_SURVEY_A_B.md
 ```
 
