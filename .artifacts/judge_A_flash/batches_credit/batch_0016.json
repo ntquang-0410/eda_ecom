@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000321",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully matches reference and source."
+  },
+  {
+    "id": "j000322",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missed 'Combo' and 'freeze-dried' (sấy thăng hoa)."
+  },
+  {
+    "id": "j000323",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title translation."
+  },
+  {
+    "id": "j000324",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated sunglasses as lenses (镜片); slightly awkward wording."
+  },
+  {
+    "id": "j000325",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Brand name retained correctly."
+  },
+  {
+    "id": "j000326",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, complete, and natural Chinese."
+  },
+  {
+    "id": "j000327",
+    "rating": "B",
+    "score": 4,
+    "note": "Literal translation errors ('硬尾', '不重头发' is awkward for lightweight)."
+  },
+  {
+    "id": "j000328",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate terminology and numbers, matches reference."
+  },
+  {
+    "id": "j000329",
+    "rating": "CC",
+    "score": 2,
+    "note": "Missed 'khẩu trang' (mask) and hallucinated '香水盒'."
+  },
+  {
+    "id": "j000330",
+    "rating": "A",
+    "score": 7,
+    "note": "'Khóa kéo' is zipper, rendered slightly awkwardly as '拉链门锁'."
+  },
+  {
+    "id": "j000331",
+    "rating": "BB",
+    "score": 5,
+    "note": "Literal translation of Heavy Rotation; mistranslated natural brown as 自研色."
+  },
+  {
+    "id": "j000332",
+    "rating": "B",
+    "score": 4,
+    "note": "Key product noun 'khẩu trang' (mask/口罩) is missing."
+  },
+  {
+    "id": "j000333",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation, '防渗垫' is understandable though '隔尿垫/防水垫' is more common."
+  },
+  {
+    "id": "j000334",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce product title."
+  },
+  {
+    "id": "j000335",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural e-commerce keyword style matching the source well."
+  },
+  {
+    "id": "j000336",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurately translated all details including trailing keywords."
+  },
+  {
+    "id": "j000337",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and well structured."
+  },
+  {
+    "id": "j000338",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'Mô tô thể thao' (sports motorbike) as '汽车运动模型' (sports car)."
+  },
+  {
+    "id": "j000339",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Identical number, fully correct."
+  },
+  {
+    "id": "j000340",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'tam giác vuông' (right-angled triangle) as '方形' (square)."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000421",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, natural translation of product title with correct specifications."
+  },
+  {
+    "id": "j000422",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor word choice issues: '喷壶' instead of cleaner/spray, and '内部' instead of '内饰'."
+  },
+  {
+    "id": "j000423",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'Tử khoai môn' (taro purple) as '胡萝卜' and net weight as gross weight."
+  },
+  {
+    "id": "j000424",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward phrasing ('6在1') and mistranslated brick parts/pieces as '细节'."
+  },
+  {
+    "id": "j000425",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good e-commerce title, minor omission of '绿茶' for Longjing."
+  },
+  {
+    "id": "j000426",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated roll-on deodorant as spray ('喷雾') throughout the text."
+  },
+  {
+    "id": "j000427",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated color 'Tử khoai môn' as '胡萝卜橙' and net weight as gross weight."
+  },
+  {
+    "id": "j000428",
+    "rating": "CC",
+    "score": 2,
+    "note": "Repetition hallucination loop, truncated output, and mistranslated brand name."
+  },
+  {
+    "id": "j000429",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate and natural title with only minor stylistic variations."
+  },
+  {
+    "id": "j000430",
+    "rating": "AA",
+    "score": 8,
+    "note": "All attributes accurately translated; minor brand transliteration difference."
+  },
+  {
+    "id": "j000431",
+    "rating": "CC",
+    "score": 2,
+    "note": "Severe hallucination with repetitive looping values and truncated ending."
+  },
+  {
+    "id": "j000432",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed the blue aspect of color 'Xanh Đen' (translated only as black)."
+  },
+  {
+    "id": "j000433",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate, fluent, and well-translated skincare product description."
+  },
+  {
+    "id": "j000434",
+    "rating": "AA",
+    "score": 8,
+    "note": "Generally accurate; minor omissions in specific product variant names."
+  },
+  {
+    "id": "j000435",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate translation; smartly fixed source error on size 'L'."
+  },
+  {
+    "id": "j000436",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and precise e-commerce title translation."
+  },
+  {
+    "id": "j000437",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated primary material 'Inox' (stainless steel) as aluminum alloy ('铝合金') in title."
+  },
+  {
+    "id": "j000438",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Unnatural phrasing ('6在1') and mistranslated toy parts/pieces as '细节'."
+  },
+  {
+    "id": "j000439",
+    "rating": "AA",
+    "score": 8,
+    "note": "Attributes correctly translated; minor literal rendering of noisy source text."
+  },
+  {
+    "id": "j000440",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent, accurate translation suitable for e-commerce search titles."
+  }
+]
