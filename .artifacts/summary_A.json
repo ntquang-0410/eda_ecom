@@ -148,11 +148,11 @@
     }
   },
   "gemma_mean": {
-    "attr_heavy": 7.4544999999999995,
-    "balanced": 7.3585,
-    "natural": 7.749750000000001,
-    "tiki_heavy": 7.05575,
-    "title_heavy": 7.215
+    "attr_heavy": 7.475,
+    "balanced": 7.336,
+    "natural": 7.696,
+    "tiki_heavy": 7.069,
+    "title_heavy": 7.112
   },
   "gemma_by_stratum": {
     "attr_heavy::1688::attribute": 8.027,
