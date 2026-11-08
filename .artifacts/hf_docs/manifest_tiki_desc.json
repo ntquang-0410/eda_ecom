@@ -1,0 +1,62 @@
+{
+  "dataset": "tiki desc split + BT partial",
+  "version": "2026-11-07",
+  "files": {
+    "TIKI_DESC.md": {
+      "bytes": 1134,
+      "sha256": "c348f051d9bb6771479916179338826fbf2ae23580e83a63dbc829dda9bd64df"
+    },
+    "bt_desc_partial/qwen3-0.6b/predictions.parquet": {
+      "bytes": 31551448,
+      "sha256": "59dab16e047393c8f92080135c1cafc0e9fae135f652ed62c2b7278593205a30"
+    },
+    "bt_desc_partial/qwen3-1.7b/predictions.parquet": {
+      "bytes": 33772579,
+      "sha256": "68a44c78f3f70816b3c3446eabf7b1bc2a51cb2da477a941b0b35321fd3ac0ca"
+    },
+    "bt_desc_partial/qwen3-4b/predictions.parquet": {
+      "bytes": 7646469,
+      "sha256": "8716ad2f9ee6725c5fd36e3efdd7136e66ab951c92746eb3ddac789f04bab2f7"
+    },
+    "code/process_bt_desc.py": {
+      "bytes": 8106,
+      "sha256": "be86a90de2547379a30d8a2b77aaebfebcbcfc8791909d717b4575b7b3c0ea0d"
+    },
+    "code/split_tiki_description.py": {
+      "bytes": 4482,
+      "sha256": "4d615840aa9fa64931b0c8088d4cddb73e7791ae7abbf0a8043954f7c9dae22f"
+    },
+    "data/tiki_desc_split/README.md": {
+      "bytes": 1602,
+      "sha256": "3a074287cfaab862da2b7c7eb6e4148315065e9479fb298f5f26ec4a1d173fd0"
+    },
+    "data/tiki_desc_split/attribute.parquet": {
+      "bytes": 2114303,
+      "sha256": "55d1a9a286b9839d68279e85a993371c71641386a82ed45a7512eb1597122cc1"
+    },
+    "data/tiki_desc_split/description.parquet": {
+      "bytes": 13413908,
+      "sha256": "2cb7f6a066d53169d3ddfd77a0bbede91931b005239d1f022531a9f8af9a4392"
+    },
+    "data/tiki_desc_split/summary.json": {
+      "bytes": 456,
+      "sha256": "35a40756836c3d7cbe98654e056e0e466d0e32698da24363b15965808cf8328f"
+    },
+    "data/tiki_desc_split/tiki_desc_split.parquet": {
+      "bytes": 15401566,
+      "sha256": "64ba6b83807523ab9174fdb70e7c37307fe5fae8db1cfaae13b10b73ca9d8934"
+    },
+    "data/weight_eval/eval_tiki_desc.parquet": {
+      "bytes": 161943,
+      "sha256": "887e459ab40e8970d9d4dbcc731f1c3333d1026bd347805ceec64af338de041f"
+    },
+    "data/weight_eval/eval_tiki_ext.parquet": {
+      "bytes": 206884,
+      "sha256": "4a9172a7541044dd19c0a29be514a0dc970f2c661485665f5007ede79cd2f0a9"
+    },
+    "reports/WEIGHT_EVAL_FINAL.md": {
+      "bytes": 2884,
+      "sha256": "6a5ec786b71940c9ba2c6756913fda876d2fc4de46f6d11d644fcc9e866194dc"
+    }
+  }
+}

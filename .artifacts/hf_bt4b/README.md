@@ -85,6 +85,7 @@ Bản này bị bản đầy đủ thay thế; giữ lại để đối chiếu.
 
 - Cùng kernel `tiki-description-bt-4b-8b` còn output **8B** (11.900 dòng, good 95,58%,
   dừng do time budget) — không nằm trong thư mục này vì đây là bản 4B.
-- Description 4B **chưa** được đưa qua `tools/process_bt_desc.py`; nếu cần train view
-  thì chạy processing trên `predictions_full.parquet`.
+- Description 4B **đã** được đưa qua `tools/process_bt_desc.py`:
+  `data/bt_tiki_desc/qwen3-4b/{full,train,units}.parquet` (11.404 unit, 85,4% QC ok,
+  6,363M token). Xem `reports/TIKI_DESC_4B_PROCESSING.md`.
 - Các dòng `good = False` vẫn được giữ; lọc theo `qc_status == "ok"` hoặc `good`.

@@ -1,0 +1,218 @@
+{
+  "dataset": "tiki-bt",
+  "version": "2026-11-01",
+  "main": "v5 (prompt brand-aware)",
+  "archive": [
+    "v3 (prompt plan_b_rtx_v3 + 2 vòng repair)"
+  ],
+  "source": {
+    "products": 13200,
+    "units_total": 120884,
+    "units_mt": 45709,
+    "cache_keys_mt": 29446,
+    "split_units": {
+      "train": 36434,
+      "dev": 4824,
+      "test": 4451
+    }
+  },
+  "models": {
+    "qwen3-0.6b": {
+      "version": "v5",
+      "full": {
+        "rows": 29446,
+        "bytes": 5268749,
+        "sha256": "7b65b58f241a35b2f2720eb0a7304b6da03e3645094cdb094990a1ac2072c96e"
+      },
+      "train": {
+        "rows": 27535,
+        "bytes": 4864052,
+        "sha256": "0d44a36927789a98db0e2c01884ae5ad5c1d51421b2a7433532338b6bb340cf6"
+      },
+      "units": {
+        "rows": 45709,
+        "bytes": 4852275,
+        "sha256": "13d3704ca39271ebcd654e452e680714cab8349be0b56b726d905372ccf226e1",
+        "extra_columns": [
+          "qty_status",
+          "qty_decision",
+          "qty_repaired",
+          "qty_weight"
+        ]
+      },
+      "v3": {
+        "full": {
+          "rows": 29446,
+          "bytes": 4964914,
+          "sha256": "655e025844697f0f27de3c53dcb8b6c2ba99df81937888e8edf2fd7823474f01"
+        },
+        "train": {
+          "rows": 29288,
+          "bytes": 4909340,
+          "sha256": "6bbd9232c3de964457b649a126260f4e3722828a08c78b3681bb32bc8abae247"
+        },
+        "units": {
+          "rows": 45709,
+          "bytes": 4728491,
+          "sha256": "f105009736df4a4866cdc5516b62f80a6923ed3109a2147aff86c27a93cfd658"
+        }
+      }
+    },
+    "qwen3-1.7b": {
+      "version": "v5",
+      "full": {
+        "rows": 29446,
+        "bytes": 5196108,
+        "sha256": "1e43945dbacf9159b468a16056a4bc8c1977ece8c0ab2eeec93bd6a63702d1f7"
+      },
+      "train": {
+        "rows": 29029,
+        "bytes": 5114500,
+        "sha256": "3a2fd35d149c67e5517e8cf151483a8b4723df6d70cd4cc3e9ab36b10870be3f"
+      },
+      "units": {
+        "rows": 45709,
+        "bytes": 4819982,
+        "sha256": "f5059c9e039ce48b6b61fb5bc1b5410f3d4cc9a17fdffb42cb53f4e5cc0f2dd2",
+        "extra_columns": [
+          "qty_status",
+          "qty_decision",
+          "qty_repaired",
+          "qty_weight"
+        ]
+      },
+      "v3": {
+        "full": {
+          "rows": 29446,
+          "bytes": 5334418,
+          "sha256": "baa3993a22c345e0e59d62e8092e9c36a384a5afd2e7cd3bb1de6631c507589c"
+        },
+        "train": {
+          "rows": 29397,
+          "bytes": 5310703,
+          "sha256": "895c4d1e02e3fe1d7f5c21007df4b657a2c356e9d075a090c8abf98c3fff0c3c"
+        },
+        "units": {
+          "rows": 45709,
+          "bytes": 4917637,
+          "sha256": "461240d84f6998f889b747f714d57643ddba44b68dc0234ee6a4fbfccdd8702e"
+        }
+      }
+    },
+    "qwen3-4b": {
+      "version": "v5",
+      "full": {
+        "rows": 29446,
+        "bytes": 5390222,
+        "sha256": "656d51793ed9d8cbf616e7d22362d282ea4568734f1d3db4de227e0c989b25bd"
+      },
+      "train": {
+        "rows": 29353,
+        "bytes": 5354470,
+        "sha256": "6b343dd5ea3d2454a8d58fcf76faad381a4c5ec43010356db739747653333445"
+      },
+      "units": {
+        "rows": 45709,
+        "bytes": 4904999,
+        "sha256": "2adb0a6de7443424f51a6397c426888e87444337a00c705600304693647c55d8",
+        "extra_columns": [
+          "qty_status",
+          "qty_decision",
+          "qty_repaired",
+          "qty_weight"
+        ]
+      },
+      "v3": {
+        "full": {
+          "rows": 29446,
+          "bytes": 5280317,
+          "sha256": "418a2dade5d46adb079497f4bbcb4155054d26142dc8e239f12158dfe3334101"
+        },
+        "train": {
+          "rows": 29435,
+          "bytes": 5268528,
+          "sha256": "a331e7b4184c61f591a7bc730c14cae7f961515cdb02d2108e71b328331801cc"
+        },
+        "units": {
+          "rows": 45709,
+          "bytes": 4865086,
+          "sha256": "5861d99b4ea448c7a5f8aee8456faf56b01782727920d5f078fa8ce3fb7e4870"
+        }
+      }
+    },
+    "qwen3-8b": {
+      "version": "v5",
+      "full": {
+        "rows": 29446,
+        "bytes": 5438339,
+        "sha256": "d1b6c564f4214d434e8a3f3d713092f66269722ec1a7a9271335069e366cc7b3"
+      },
+      "train": {
+        "rows": 29393,
+        "bytes": 5422927,
+        "sha256": "ecb901862dfecbaa12084065171cbbf502a67af97d73e3e00b098e587b80bbd1"
+      },
+      "units": {
+        "rows": 45709,
+        "bytes": 4934598,
+        "sha256": "6742453cbb55161ce8f17261089ea878ff571f1bb6b3637904127364b1d9f7b9",
+        "extra_columns": [
+          "qty_status",
+          "qty_decision",
+          "qty_repaired",
+          "qty_weight"
+        ]
+      },
+      "v3": {
+        "full": {
+          "rows": 29446,
+          "bytes": 5349867,
+          "sha256": "6c4c67a0b3d33dfebc1a08cf38ab0fb2ebfa071c266ba9be0a6d125a8cba55ed"
+        },
+        "train": {
+          "rows": 29436,
+          "bytes": 5343543,
+          "sha256": "ce8e91dee8c8ea4a6065539bf5aa706afd8e8333776ac445c6a19867a8c876bc"
+        },
+        "units": {
+          "rows": 45709,
+          "bytes": 4903999,
+          "sha256": "c5782dc3683624748031839fd5aba391482a7df356c29ec1762f7249c490c3a4"
+        }
+      }
+    }
+  },
+  "generated_at": "2026-11-01T05:10:25Z",
+  "quantity_normalization": {
+    "module": "cado_core/quantity_norm.py",
+    "unit_level_column": "qty_status",
+    "values": [
+      "qty_ok",
+      "qty_resolved",
+      "qty_review",
+      "qty_mismatch",
+      "qty_weak"
+    ],
+    "decision_file": "data/cleaned/quantity_weak_needs_decision.csv"
+  },
+  "character_normalization": {
+    "module": "cado_core/text.py::clean_noise_characters",
+    "rules": [
+      "NFC",
+      "full-width alnum -> ASCII",
+      "【】〖〗〔〕（）[] -> ASCII",
+      "remove control/zero-width/bidi/variation/PUA/emoji",
+      "remove HTML tag + known entity",
+      "remove URL",
+      "remove template braces",
+      "collapse repeated punctuation",
+      "drop unmatched brackets"
+    ]
+  },
+  "quantity_repair": {
+    "rows_total": 1891,
+    "repaired": 855,
+    "remaining_mismatch": 1036,
+    "weight_scheme": "qty_ok/resolved/repaired=1.0 | weak=0.7 | review=0.5 | mismatch A/B/C=0.6/0.3/0.1 (adjust per model)"
+  }
+}

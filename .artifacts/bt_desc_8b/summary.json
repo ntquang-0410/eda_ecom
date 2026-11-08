@@ -1,0 +1,32 @@
+[
+  {
+    "model": "qwen3-8b",
+    "rows": 11900,
+    "good_provider": 11374,
+    "qc_ok": 10752,
+    "qc_ok_rate": 0.9035,
+    "empty": 745,
+    "short": 745,
+    "untranslated": 360,
+    "no_cjk": 1049,
+    "ratio_bad": 939,
+    "identical": 115,
+    "input_truncated": 10,
+    "number_mismatch": 4248,
+    "boilerplate": 11899,
+    "source_chars_mean": 973.5,
+    "target_chars_mean": 402.3,
+    "cjk_ratio_mean": 0.6245,
+    "dedup_removed": 579,
+    "chunked_products": 21,
+    "units": 10342,
+    "train_units": 8243,
+    "split": {
+      "train": 8243,
+      "dev": 1064,
+      "test": 1035
+    },
+    "token_million": 5.494,
+    "boilerplate_in_train": 10341
+  }
+]
