@@ -147,8 +147,35 @@
       }
     }
   },
-  "gemma_mean": {},
-  "gemma_by_stratum": {},
+  "gemma_mean": {
+    "balanced": 6.6835,
+    "desc_heavy": 6.599500000000001,
+    "natural": 6.659250000000001,
+    "tiki_heavy": 6.169,
+    "title_heavy": 6.3275
+  },
+  "gemma_by_stratum": {
+    "balanced::1688::description": 6.053,
+    "balanced::1688::title": 7.333,
+    "balanced::tiki::description": 6.919,
+    "balanced::tiki::title": 6.429,
+    "desc_heavy::1688::description": 6.618,
+    "desc_heavy::1688::title": 6.719,
+    "desc_heavy::tiki::description": 6.629,
+    "desc_heavy::tiki::title": 6.432,
+    "natural::1688::description": 6.862,
+    "natural::1688::title": 6.703,
+    "natural::tiki::description": 6.647,
+    "natural::tiki::title": 6.425,
+    "tiki_heavy::1688::description": 5.676,
+    "tiki_heavy::1688::title": 6.414,
+    "tiki_heavy::tiki::description": 6.517,
+    "tiki_heavy::tiki::title": 6.069,
+    "title_heavy::1688::description": 5.667,
+    "title_heavy::1688::title": 7.103,
+    "title_heavy::tiki::description": 6.514,
+    "title_heavy::tiki::title": 6.026
+  },
   "comet_raw": {
     "balanced::42::1688": {
       "system_score": 0.855,

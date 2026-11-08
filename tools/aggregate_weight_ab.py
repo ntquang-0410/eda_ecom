@@ -56,12 +56,15 @@ def load_scores(path: Path) -> dict[tuple[str, int], pd.DataFrame]:
     return {key: part.reset_index(drop=True) for key, part in df.groupby(["config", "seed"])}
 
 
-def load_gemma(path: Path | None) -> dict[str, float]:
+def load_gemma(path: Path | None) -> tuple[dict[str, float], dict[str, int], str, bool]:
     if not path or not path.exists():
-        return {}
+        return {}, {}, "", False
     data = json.loads(path.read_text(encoding="utf-8"))
-    strata = data.get("summary", {}).get("by_stratum", {})
-    return {key: float(value.get("mean", float("nan"))) for key, value in strata.items()}
+    summary = data.get("summary", {})
+    strata = {key: float(value.get("mean", float("nan")))
+              for key, value in summary.get("by_stratum", {}).items()}
+    counts = {str(k): int(v.get("n", 0)) for k, v in summary.get("by_config", {}).items()}
+    return strata, counts, str(data.get("model", "")), bool(data.get("partial"))
 
 
 def mean_table(df: pd.DataFrame) -> pd.DataFrame:
@@ -94,7 +97,8 @@ def main() -> int:
     args = ap.parse_args()
 
     scores = load_scores(Path(args.scores_dir))
-    gemma = load_gemma(Path(args.gemma) if args.gemma else None)
+    gemma, gemma_counts, judge_model, gemma_partial = load_gemma(
+        Path(args.gemma) if args.gemma else None)
     frame = pd.concat(scores.values(), ignore_index=True)
     table = mean_table(frame)
 
@@ -165,12 +169,15 @@ def main() -> int:
                      f"{t['p_win']:.3f} |")
 
     if gemma_cfg:
-        lines += ["", "## Gemma credit (1..9, mẫu 50 eval_id/stratum/config)", "",
-                  "| config | mean | n stratum |", "|---|---:|---:|"]
+        label = judge_model or "judge"
+        note = " (một phần, quota)" if gemma_partial else ""
+        lines += ["", f"## Credit score (1..9) — {label}{note}", "",
+                  "| config | mean | n |", "|---|---:|---:|"]
         for config, values in sorted(gemma_cfg.items(), key=lambda x: -np.mean(x[1])):
-            lines.append(f"| {config} | {np.mean(values):.2f} | {len(values)} |")
+            n_items = gemma_counts.get(config, 0)
+            lines.append(f"| {config} | {np.mean(values):.2f} | {n_items} |")
     else:
-        lines += ["", "_Chưa có Gemma score._"]
+        lines += ["", "_Chưa có credit score._"]
 
     if comet_raw:
         lines += ["", "### COMET system score (raw)", "",

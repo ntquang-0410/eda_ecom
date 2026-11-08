@@ -23,7 +23,15 @@ Paired bootstrap 4.000 lần trên eval_id dùng chung.
 | balanced::seed42 | -0.0074 | [-0.0125, -0.0025] | 0.002 | +0.0005 | [-0.0142, +0.0146] | 0.529 |
 | tiki_heavy::seed42 | -0.0155 | [-0.0203, -0.0107] | 0.000 | -0.0025 | [-0.0195, +0.0134] | 0.377 |
 
-_Chưa có Gemma score._
+## Credit score (1..9) — gemini-3.8-flash (một phần, quota)
+
+| config | mean | n |
+|---|---:|---:|
+| natural | 7.75 | 125 |
+| attr_heavy | 7.45 | 122 |
+| balanced | 7.36 | 125 |
+| title_heavy | 7.21 | 107 |
+| tiki_heavy | 7.06 | 101 |
 
 ### COMET system score (raw)
 

@@ -82,11 +82,45 @@ Cơ chế: `natural` dồn 92% token cho description. Chuyển bớt sang title:
 
 Eval B có 2/3 số dòng là title nên net dương. BLEU lại giảm (74,3 → 68,5) vì BLEU là corpus-level và bị chi phối bởi các dòng description dài; COMET tính trung bình theo câu nên phản ánh đúng hơn mức cải thiện title.
 
-`balanced` và `title_heavy` gần như tương đương; `balanced` nhỉnh hơn ở Tiki description và ít cực đoan hơn, nên an toàn hơn nếu phải chọn một.
+`balanced` và `title_heavy` tương đương trên COMET (chênh 0,0016; CI chứa 0). Tuy nhiên credit của `title_heavy` thấp hơn `natural` trên 1688 (-0,25, chưa significant) và thấp hơn `balanced` 0,35 điểm, nên **`balanced` là lựa chọn an toàn hơn**.
 
 ---
 
-## 4. So với survey cũ (sampler lỗi)
+## 4. Credit score (metric phụ)
+
+Gemma-4 (`gemma-4-31b-it`) hết quota ngày sau 360/1.000 dòng (A) và 420/1.000 dòng (B). Để có metric phụ nhất quán, toàn bộ phần còn lại được chấm bằng **gemini-3.8-flash**, cùng prompt và thang credit AAA..C (1..9). Do quota, flash chấm được **580/1.000** dòng A và **680/1.000** dòng B; các batch được xáo trộn nên mẫu vẫn rải đều trên config/stratum.
+
+**A** (n = 580):
+
+| config | mean | n |
+|---|---:|---:|
+| natural | **7,75** | 125 |
+| attr_heavy | 7,45 | 122 |
+| balanced | 7,36 | 125 |
+| title_heavy | 7,21 | 107 |
+| tiki_heavy | 7,06 | 101 |
+
+Paired trên các `eval_id` được chấm ở cả hai config (1688): `attr_heavy` +0,15 (ns), `balanced` -0,58 (p = 0,018), `title_heavy` -0,71 (p = 0,033), `tiki_heavy` -0,83 (p = 0,003).
+
+**B** (n = 680):
+
+| config | mean | n |
+|---|---:|---:|
+| balanced | **6,68** | 146 |
+| natural | 6,66 | 140 |
+| desc_heavy | 6,60 | 138 |
+| title_heavy | 6,33 | 135 |
+| tiki_heavy | 6,17 | 121 |
+
+Paired 1688 vs `natural`: `balanced` -0,16 (ns), `title_heavy` -0,25 (ns), `desc_heavy` -0,05 (ns), `tiki_heavy` -0,82 (p = 0,000). Tiki: `balanced` +0,32 (ns), `title_heavy` +0,07 (ns).
+
+Nhận xét:
+
+- Credit **xác nhận A**: `natural` cao nhất, mọi reweight thấp hơn; `tiki_heavy` kém cả 1688 lẫn Tiki.
+- Credit **không tách được** `balanced`/`title_heavy` khỏi `natural` ở B, nhưng loại `tiki_heavy`.
+- `title_heavy` có xu hướng credit âm trên 1688 (dù chưa significant) trong khi COMET lại cao nhất → đây là điểm mâu thuẫn metric cần thận trọng.
+
+## 5. So với survey cũ (sampler lỗi)
 
 Kết quả cũ nói `balanced`/`title_heavy` tốt nhất cho cả hai tập. Điều đó **không còn đúng** sau khi sửa sampler:
 
@@ -98,27 +132,28 @@ Với quota sampler, phân phối token đúng thiết kế, và kết luận đ
 
 ---
 
-## 5. Khuyến nghị
+## 6. Khuyến nghị
 
 | tập | chọn | lý do |
 |---|---|---|
 | A (title + attribute) | **natural** | mọi reweight đều giảm 1688; Tiki không đổi |
-| B (title + description) | **balanced** (hoặc title_heavy) | +0,014…0,016 COMET-da trên 1688, Tiki không đổi |
+| B (title + description) | **balanced** | +0,014 COMET-da trên 1688 (có ý nghĩa), credit trung tính, ít cực đoan |
 
 Tóm lại: chỉ nên tái cân bằng khi một nhóm đang chiếm quá nhiều token so với độ hữu ích của nó (B: description 92%). Với A, attribute nhiều token nhưng cũng là nhóm học tốt nhất, nên giữ nguyên.
 
 ---
 
-## 6. Hạn chế
+## 7. Hạn chế
 
 - 1 seed (42); các CI trên là bất định theo câu, chưa gồm bất định do seed.
 - B thiếu 15 dòng description dài; ảnh hưởng như nhau ở mọi config.
 - COMET-QE cho Tiki có điểm tuyệt đối rất thấp và không tách được config; chưa kết luận được weight nào tốt cho Tiki.
-- Gemma credit (1..9) sẽ được bổ sung khi chấm xong; đây là metric phụ, COMET là metric chính.
+- Credit score mới chấm được một phần (A 580/1.000, B 680/1.000) do quota API; là metric phụ, COMET là metric chính.
+- COMET-QE cho Tiki không tách được config; kết luận cho Tiki chỉ là "không thay đổi".
 
 ---
 
-## 7. File
+## 8. File
 
 ```text
 data/weight_survey_ab/hyps/        hyp_A_*.parquet, hyp_B_*.parquet
