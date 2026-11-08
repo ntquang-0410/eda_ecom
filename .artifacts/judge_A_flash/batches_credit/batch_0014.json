@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000281",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and accurate translation."
+  },
+  {
+    "id": "j000282",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Omitted 'dán' (tape/sticker/diaper)."
+  },
+  {
+    "id": "j000283",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor wording congestion ('吸管水奶'), overall meaning well preserved."
+  },
+  {
+    "id": "j000284",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000285",
+    "rating": "AA",
+    "score": 8,
+    "note": "'不洗面' is slightly unnatural for '免洗', but understandable."
+  },
+  {
+    "id": "j000286",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated flavors: 'dừa' (coconut) to 黄瓜, 'sầu riêng' (durian) to 肉豆蔻."
+  },
+  {
+    "id": "j000287",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted 'SET' (套装)."
+  },
+  {
+    "id": "j000288",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and precise e-commerce title."
+  },
+  {
+    "id": "j000289",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly repetitive phrasing, but faithful to source."
+  },
+  {
+    "id": "j000290",
+    "rating": "A",
+    "score": 7,
+    "note": "'US' is typically 美规 rather than 美国 in specifications."
+  },
+  {
+    "id": "j000291",
+    "rating": "AA",
+    "score": 8,
+    "note": "Omitted 'nguyên khối' (一体成型/整钢)."
+  },
+  {
+    "id": "j000292",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and concise."
+  },
+  {
+    "id": "j000293",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted 'chụp tai' (头戴式)."
+  },
+  {
+    "id": "j000294",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted index number '2'."
+  },
+  {
+    "id": "j000295",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000296",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Dropped index numbers (1, 1, 2, 1) across color variants."
+  },
+  {
+    "id": "j000297",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted 'thay thế' (替换); '金属' instead of '钢/不锈钢'."
+  },
+  {
+    "id": "j000298",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Faithful e-commerce keyword listing."
+  },
+  {
+    "id": "j000299",
+    "rating": "BB",
+    "score": 5,
+    "note": "Omitted gift set ('quà tặng'), mistranslated 'bình sữa cong' as '弯头奶嘴'."
+  },
+  {
+    "id": "j000300",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  }
+]

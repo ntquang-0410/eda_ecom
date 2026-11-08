@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000361",
+    "rating": "BBB",
+    "score": 6,
+    "note": "“đế độn” mistranslated as “绒底” rather than platform/增高."
+  },
+  {
+    "id": "j000362",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated “cao su non” (memory foam) as “非弹性” and omitted the final paragraph."
+  },
+  {
+    "id": "j000363",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, natural e-commerce title."
+  },
+  {
+    "id": "j000364",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Specifications correctly and naturally formatted."
+  },
+  {
+    "id": "j000365",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Faithful, complete, and accurate product details."
+  },
+  {
+    "id": "j000366",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural product title."
+  },
+  {
+    "id": "j000367",
+    "rating": "B",
+    "score": 4,
+    "note": "Hallucinated “拉丁语”, inverted thickness comparison, and missing currency unit."
+  },
+  {
+    "id": "j000368",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice issue with “痘痘挤出器” instead of 粉刺针."
+  },
+  {
+    "id": "j000369",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, clear, and fluent translation."
+  },
+  {
+    "id": "j000370",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Multiple ingredient and spec mistranslations (lô hội->积雪草, Arbutin->阿甘果, Mục số 2->二类医疗器械)."
+  },
+  {
+    "id": "j000371",
+    "rating": "AA",
+    "score": 8,
+    "note": "Omitted platform name Tiki in the disclaimer; otherwise very good."
+  },
+  {
+    "id": "j000372",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Major mistranslation: “nước mắm” (fish sauce) translated as “酱油” (soy sauce)."
+  },
+  {
+    "id": "j000373",
+    "rating": "A",
+    "score": 7,
+    "note": "Repeated “防水” and omitted fabric type “vải dù”."
+  },
+  {
+    "id": "j000374",
+    "rating": "B",
+    "score": 4,
+    "note": "Inappropriately translated “bao cao su” as “防护套” throughout, and inverted thickness comparison."
+  },
+  {
+    "id": "j000375",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent and precise e-commerce title translation."
+  },
+  {
+    "id": "j000376",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Completely accurate and natural."
+  },
+  {
+    "id": "j000377",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor brand name transliteration flaw; successfully resolved source typo."
+  },
+  {
+    "id": "j000378",
+    "rating": "BBB",
+    "score": 6,
+    "note": "“Kỵ sĩ” mistranslated as “勇士”; “gót xuồng” mistranslated as “浅口”."
+  },
+  {
+    "id": "j000379",
+    "rating": "A",
+    "score": 7,
+    "note": "“Bột rang muối” translated slightly awkwardly as “盐烤粉”."
+  },
+  {
+    "id": "j000380",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent, standard, and fully accurate listing title."
+  }
+]
