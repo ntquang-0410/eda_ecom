@@ -34,10 +34,18 @@ def clean_source(text) -> str:
 
 
 def clean_target(text) -> str:
+    """Bỏ clause boilerplate Tiki nhưng giữ phần mô tả sản phẩm.
+
+    Bản cũ split chỉ theo 。！？ nên khi model viết các clause cách nhau bằng
+    dấu cách, cả đoạn bị coi là một câu và bị xoá sạch nếu có đuôi "giá/Tiki".
+    """
     t = str(text or "").strip()
     if not t:
         return ""
-    parts = re.split(r"(?<=[。！？])", t)
+    # tách thêm trước các marker boilerplate phổ biến
+    t = re.sub(r"(?:^|(?<=[\s。！？]))(?=(?:产品)?价格(?:在|已)?(?:Tiki|TikTok))", "\n", t)
+    t = re.sub(r"(?:^|(?<=[\s。！？]))(?=此外[，,]?\s*根据产品类型)", "\n", t)
+    parts = [p.strip() for p in re.split(r"(?<=[。！？])|\n", t) if p and p.strip()]
     kept = []
     for part in parts:
         if re.search(r"(Tiki|TikTok)", part, re.I) and re.search(r"(价格|税费|费用|运费|税)", part):
