@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000341",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and complete translation of all product options."
+  },
+  {
+    "id": "j000342",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and standard e-commerce phrasing."
+  },
+  {
+    "id": "j000343",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and natural warning text."
+  },
+  {
+    "id": "j000344",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor awkward phrasing with '富养成分' instead of '富含滋养成分'."
+  },
+  {
+    "id": "j000345",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and correct."
+  },
+  {
+    "id": "j000346",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Precise e-commerce keyword listing."
+  },
+  {
+    "id": "j000347",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and standard instruction text."
+  },
+  {
+    "id": "j000348",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missed fine line feature, translated Heavy Rotation literally, awkward word order for color."
+  },
+  {
+    "id": "j000349",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and faithful translation."
+  },
+  {
+    "id": "j000350",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor style issue: '铝边' is slightly colloquial for '铝金属表壳'."
+  },
+  {
+    "id": "j000351",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct color terminology."
+  },
+  {
+    "id": "j000352",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward phrasing; should be '标配无卡' or '标配不含卡'."
+  },
+  {
+    "id": "j000353",
+    "rating": "CC",
+    "score": 2,
+    "note": "Wrong brand name, missing product type noun, garbled phrasing."
+  },
+  {
+    "id": "j000354",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000355",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and standard attributes."
+  },
+  {
+    "id": "j000356",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent e-commerce title."
+  },
+  {
+    "id": "j000357",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural, complete, and faithful translation."
+  },
+  {
+    "id": "j000358",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor punctuation spacing issue ('ANCENC'), otherwise accurate."
+  },
+  {
+    "id": "j000359",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'hoa Cúc' (chrysanthemum) as '向日葵' (sunflower)."
+  },
+  {
+    "id": "j000360",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated almond cereal into '坚果奶' and 'Mè Đen' (black sesame) into '黑豆'."
+  }
+]

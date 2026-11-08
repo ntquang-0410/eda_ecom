@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000441",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor word-choice issue using '高领' instead of '高筒' for boots."
+  },
+  {
+    "id": "j000442",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated menstrual pants (băng quần) as tampons (卫生棉条); brand typo."
+  },
+  {
+    "id": "j000443",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct, complete, and natural e-commerce listing translation."
+  },
+  {
+    "id": "j000444",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated material (牛奶绒 to 羊绒), brand, and craft terms."
+  },
+  {
+    "id": "j000445",
+    "rating": "BB",
+    "score": 5,
+    "note": "Omitted Amazfit and mistranslated Honor Watch as 华为手表."
+  },
+  {
+    "id": "j000446",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, complete, and natural translation."
+  },
+  {
+    "id": "j000447",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor wordiness at the end, but meaning is fully preserved."
+  },
+  {
+    "id": "j000448",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and well-structured product description translation."
+  },
+  {
+    "id": "j000449",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor terminology issue ('手提包' instead of '手提款' for desk organizers)."
+  },
+  {
+    "id": "j000450",
+    "rating": "B",
+    "score": 4,
+    "note": "Multiple mistranslated shoe attributes ('坡跟' to '浅口', '套脚' to '帆布鞋')."
+  },
+  {
+    "id": "j000451",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Incorrect number translation: '1 triệu' (100万) translated as '10万'."
+  },
+  {
+    "id": "j000452",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated shoe attributes with hallucinated closure type ('拉杆鞋')."
+  },
+  {
+    "id": "j000453",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and standard e-commerce translation."
+  },
+  {
+    "id": "j000454",
+    "rating": "AA",
+    "score": 8,
+    "note": "Literal brand translation and untranslated city name, but fluent overall."
+  },
+  {
+    "id": "j000455",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and precise e-commerce title translation."
+  },
+  {
+    "id": "j000456",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Untranslated Vietnamese word ('khỉ' kept as 'khi')."
+  },
+  {
+    "id": "j000457",
+    "rating": "CC",
+    "score": 2,
+    "note": "Severe hallucination of missing attributes; mistranslated fabric material."
+  },
+  {
+    "id": "j000458",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word-choice issue on '钥扣', otherwise accurate and clear."
+  },
+  {
+    "id": "j000459",
+    "rating": "A",
+    "score": 7,
+    "note": "Repetitive phrasing in the opening feature line, but meaning preserved."
+  },
+  {
+    "id": "j000460",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated flat loafers/slip-ons into chunky sneakers ('老爹鞋')."
+  }
+]
