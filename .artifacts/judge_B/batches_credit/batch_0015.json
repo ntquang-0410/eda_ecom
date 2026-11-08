@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000301",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000302",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation, matches e-commerce style."
+  },
+  {
+    "id": "j000303",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated location: Wenling (温岭) as Wenzhou (温州)."
+  },
+  {
+    "id": "j000304",
+    "rating": "BB",
+    "score": 5,
+    "note": "Contradiction: 'saturated velvet' translated as 'moist' (湿润)."
+  },
+  {
+    "id": "j000305",
+    "rating": "A",
+    "score": 7,
+    "note": "Small error: used English word 'for' instead of Chinese."
+  },
+  {
+    "id": "j000306",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor omission of the word 'bicycle' (Xe đạp)."
+  },
+  {
+    "id": "j000307",
+    "rating": "AA",
+    "score": 8,
+    "note": "Acceptable, though '卸妆水' is more standard than '洁面水'."
+  },
+  {
+    "id": "j000308",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Excellent translation of a long technical description."
+  },
+  {
+    "id": "j000309",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward terminology: '微粒水' is not standard for micellar water."
+  },
+  {
+    "id": "j000310",
+    "rating": "B",
+    "score": 4,
+    "note": "Significant error: 'Roll On' (lăn) translated as 'Spray' (喷雾)."
+  },
+  {
+    "id": "j000311",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor terminology: '溶解' instead of '速溶' for instant coffee."
+  },
+  {
+    "id": "j000312",
+    "rating": "A",
+    "score": 7,
+    "note": "Missing key material: 'horn' (sừng)."
+  },
+  {
+    "id": "j000313",
+    "rating": "AA",
+    "score": 8,
+    "note": "Correct, but the tax disclaimer is repeated twice at the end."
+  },
+  {
+    "id": "j000314",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000315",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor addition of 'ultra-thin' (超薄) not in source."
+  },
+  {
+    "id": "j000316",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Brand name hallucination: 'Thỏ Tiểu Tảo' as '小虾兔'."
+  },
+  {
+    "id": "j000317",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'polarized' (phân cực) as 'high-speed' (极速)."
+  },
+  {
+    "id": "j000318",
+    "rating": "C",
+    "score": 1,
+    "note": "Unusable: translated into English instead of Simplified Chinese."
+  },
+  {
+    "id": "j000319",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice: '筒' (tube) instead of '瓶/罐' (jar)."
+  },
+  {
+    "id": "j000320",
+    "rating": "B",
+    "score": 4,
+    "note": "Significant style error: 'Flat shoes' (giày bệt) as 'Dad shoes' (老爹鞋)."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000321",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000322",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of terminology."
+  },
+  {
+    "id": "j000323",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000324",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missed 'polarized' and hallucinated 'Aurora glasses'."
+  },
+  {
+    "id": "j000325",
+    "rating": "BB",
+    "score": 5,
+    "note": "Significant numerical error: 16.8 million colors to 168,000."
+  },
+  {
+    "id": "j000326",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000327",
+    "rating": "A",
+    "score": 7,
+    "note": "Literal translation of 'Hard Tailor' and slightly awkward phrasing."
+  },
+  {
+    "id": "j000328",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Hallucinated repetitive text and missed key size specifications."
+  },
+  {
+    "id": "j000329",
+    "rating": "AA",
+    "score": 8,
+    "note": "Word choice '软糯' is slightly unnatural for masks."
+  },
+  {
+    "id": "j000330",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000331",
+    "rating": "A",
+    "score": 7,
+    "note": "Literal translation of brand line 'Heavy Rotation' as '重力旋转'."
+  },
+  {
+    "id": "j000332",
+    "rating": "C",
+    "score": 1,
+    "note": "Major hallucination: translated 'mask' as 'lipstick set'."
+  },
+  {
+    "id": "j000333",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000334",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'handbag set' as 'backpack'."
+  },
+  {
+    "id": "j000335",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000336",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000337",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000338",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'motorcycle' as 'car'."
+  },
+  {
+    "id": "j000339",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and professional."
+  },
+  {
+    "id": "j000340",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'right triangle' as 'square'."
+  }
+]

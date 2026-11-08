@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000341",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor color terminology differences."
+  },
+  {
+    "id": "j000342",
+    "rating": "A",
+    "score": 7,
+    "note": "Slightly repetitive phrasing in Chinese."
+  },
+  {
+    "id": "j000343",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated sanitary pad as tampon."
+  },
+  {
+    "id": "j000344",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000345",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000346",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000347",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Hallucinated currency (VND to KRW)."
+  },
+  {
+    "id": "j000348",
+    "rating": "AA",
+    "score": 8,
+    "note": "Literal translation of brand line name."
+  },
+  {
+    "id": "j000349",
+    "rating": "BB",
+    "score": 5,
+    "note": "Wrong weight unit (kg to jin) and color."
+  },
+  {
+    "id": "j000350",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000351",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated eyebrow pen as eyeliner."
+  },
+  {
+    "id": "j000352",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000353",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000354",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000355",
+    "rating": "B",
+    "score": 4,
+    "note": "Incorrect brand and product terminology."
+  },
+  {
+    "id": "j000356",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000357",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000358",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000359",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated daisy as sunflower."
+  },
+  {
+    "id": "j000360",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated black sesame as black bean."
+  }
+]
