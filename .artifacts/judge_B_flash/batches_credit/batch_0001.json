@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000021",
+    "rating": "AA",
+    "score": 8,
+    "note": "\"骑行车\" is slightly unnatural for children's bicycle (童车/自行车)."
+  },
+  {
+    "id": "j000022",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Contains untranslated Vietnamese \"SIÊU HOT\" and awkward repeated keywords."
+  },
+  {
+    "id": "j000023",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor literal phrasing (\"折叠三倍\"), but overall fluent and complete."
+  },
+  {
+    "id": "j000024",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Omitted brand name \"Forwenw\" and wallet form factor (\"Dạng Ví\")."
+  },
+  {
+    "id": "j000025",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and all specifications correctly translated."
+  },
+  {
+    "id": "j000026",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce product title translation."
+  },
+  {
+    "id": "j000027",
+    "rating": "B",
+    "score": 4,
+    "note": "Severe mistranslation: \"chụp tai\" (over-ear) mistranslated as \"入耳式\" (in-ear)."
+  },
+  {
+    "id": "j000028",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Wood types are mistranslated (\"tần bì\" is ash, \"mít\" is jackfruit wood)."
+  },
+  {
+    "id": "j000029",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct, concise, and accurate translation."
+  },
+  {
+    "id": "j000030",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated \"Mô tô\" (motorcycle) as \"汽车\" (car/automobile)."
+  },
+  {
+    "id": "j000031",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted \"nguyên khối\" (one-piece/clad); \"chảo\" translated generally as \"锅\"."
+  },
+  {
+    "id": "j000032",
+    "rating": "AA",
+    "score": 8,
+    "note": "\"铝边\" is slightly colloquial for watch case (铝金属表壳)."
+  },
+  {
+    "id": "j000033",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed \"nách\" (underarm bag), but overall meaning is preserved."
+  },
+  {
+    "id": "j000034",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Brand name Khải Thịnh mistranslated/hallucinated as \"混熙\"."
+  },
+  {
+    "id": "j000035",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, comprehensive, and natural e-commerce translation."
+  },
+  {
+    "id": "j000036",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate technical and certification details properly translated."
+  },
+  {
+    "id": "j000037",
+    "rating": "B",
+    "score": 4,
+    "note": "Multiple mistranslations in attributes (\"吸尘杯\" for suction mount, \"门风\" for air vent)."
+  },
+  {
+    "id": "j000038",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor style issue: \"消除异味滚珠\" is unidiomatic for 止汗走珠."
+  },
+  {
+    "id": "j000039",
+    "rating": "B",
+    "score": 4,
+    "note": "Severe mistranslation: \"chụp tai\" (over-ear) mistranslated as \"入耳式\" (in-ear)."
+  },
+  {
+    "id": "j000040",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Attribute mistranslations including \"立领\" for footwear and \"X元起\" for price add-ons."
+  }
+]

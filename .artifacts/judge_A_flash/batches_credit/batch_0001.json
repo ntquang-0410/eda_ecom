@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000021",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing the key product noun 'xe đạp' (自行车)."
+  },
+  {
+    "id": "j000022",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severely truncated mid-sentence; contains multiple mistranslations (khoai mì, vi chất, nước mắm)."
+  },
+  {
+    "id": "j000023",
+    "rating": "A",
+    "score": 7,
+    "note": "Repetitive translation of bilingual source, but acceptable."
+  },
+  {
+    "id": "j000024",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslates phone wallet case as wallet, misses brand name Forwenw."
+  },
+  {
+    "id": "j000025",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000026",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good e-commerce keywords; missed 'bảo quản' (保鲜) at the end."
+  },
+  {
+    "id": "j000027",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Omitted 'chụp tai' (头戴式/耳罩式)."
+  },
+  {
+    "id": "j000028",
+    "rating": "AA",
+    "score": 8,
+    "note": "Correct meaning, though 序号 would be more standard than 第20项."
+  },
+  {
+    "id": "j000029",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, clear and natural translation."
+  },
+  {
+    "id": "j000030",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and appropriate e-commerce title."
+  },
+  {
+    "id": "j000031",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted selling point 'nguyên khối' (一体成型/一体模铸)."
+  },
+  {
+    "id": "j000032",
+    "rating": "AA",
+    "score": 8,
+    "note": "'铝边' is slightly colloquial compared to standard '铝金属表壳'."
+  },
+  {
+    "id": "j000033",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good keywords, though 'nách' (腋下) was omitted."
+  },
+  {
+    "id": "j000034",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and poetic translation."
+  },
+  {
+    "id": "j000035",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and concise."
+  },
+  {
+    "id": "j000036",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate terminology."
+  },
+  {
+    "id": "j000037",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000038",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated Camry into Lexus (雷克萨斯 instead of 凯美瑞)."
+  },
+  {
+    "id": "j000039",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing 'chụp tai' (头戴式/耳罩式)."
+  },
+  {
+    "id": "j000040",
+    "rating": "BB",
+    "score": 5,
+    "note": "Cosmetic finish terms mistranslated (matte, satin mistranslated as 磨砂, 绗缝)."
+  }
+]

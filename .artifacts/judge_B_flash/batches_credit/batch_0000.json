@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000001",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslates timer/stopwatch (đồng hồ bấm giờ) as wristwatch (手表)."
+  },
+  {
+    "id": "j000002",
+    "rating": "B",
+    "score": 4,
+    "note": "Omitted the key subject 'dragon' (con rồng); awkward phrasing for quality description."
+  },
+  {
+    "id": "j000003",
+    "rating": "C",
+    "score": 1,
+    "note": "Severe word repetition hallucination loop, rendering the translation unusable."
+  },
+  {
+    "id": "j000004",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslates 'bò' (crawling) as '老虎', and several windmill style names are poorly translated."
+  },
+  {
+    "id": "j000005",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Missed key ingredient 'aloe vera' (lô hội), mistranslated brand name, awkward ending."
+  },
+  {
+    "id": "j000006",
+    "rating": "A",
+    "score": 7,
+    "note": "Size 'L' mistranslated as 'M', and 'quần kaki' translated literally as pants."
+  },
+  {
+    "id": "j000007",
+    "rating": "CC",
+    "score": 2,
+    "note": "Hallucinated aloe twice instead of cucumber (dưa chuột) and Centella Asiatica (积雪草)."
+  },
+  {
+    "id": "j000008",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor word order and phrasing issues (红点口罩/过滤8层), meaning is preserved."
+  },
+  {
+    "id": "j000009",
+    "rating": "CC",
+    "score": 2,
+    "note": "Suffers from severe repetition loop hallucination at the end and is truncated."
+  },
+  {
+    "id": "j000010",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and correctly preserves all product details and numbers."
+  },
+  {
+    "id": "j000011",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, natural e-commerce terminology, and captures all key specifications."
+  },
+  {
+    "id": "j000012",
+    "rating": "A",
+    "score": 7,
+    "note": "Brand name and 'cung' (蝴蝶结 mistranslated as 仓) have minor errors."
+  },
+  {
+    "id": "j000013",
+    "rating": "A",
+    "score": 7,
+    "note": "Slight omissions ('thể thao' and 'cổ thấp'), but fully usable and natural."
+  },
+  {
+    "id": "j000014",
+    "rating": "B",
+    "score": 4,
+    "note": "Inverted meaning on thickness comparison, number error (10万 vs 100万), mistranslated 'DV'."
+  },
+  {
+    "id": "j000015",
+    "rating": "B",
+    "score": 4,
+    "note": "Missing the core product noun 'thảm' (floor mat/pad)."
+  },
+  {
+    "id": "j000016",
+    "rating": "BB",
+    "score": 5,
+    "note": "Brand mistranslated as 混合, shoe terms translated as socks/waist zipper."
+  },
+  {
+    "id": "j000017",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and faithful translation of all product attributes."
+  },
+  {
+    "id": "j000018",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice variations in brand and color names, overall very good."
+  },
+  {
+    "id": "j000019",
+    "rating": "CC",
+    "score": 2,
+    "note": "Missing jackfruit (trái mít) in title, plus severe repetitive hallucination at the end."
+  },
+  {
+    "id": "j000020",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce terminology."
+  }
+]
