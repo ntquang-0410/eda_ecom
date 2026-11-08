@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000121",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000122",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce product title."
+  },
+  {
+    "id": "j000123",
+    "rating": "A",
+    "score": 7,
+    "note": "'Chấm Bi Đỏ' (red polka dots) translated literally as '鲜红点'."
+  },
+  {
+    "id": "j000124",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000125",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent and accurate e-commerce listing."
+  },
+  {
+    "id": "j000126",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000127",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000128",
+    "rating": "A",
+    "score": 7,
+    "note": "Repeated '高级感' and translated 'xanh' as blue instead of green."
+  },
+  {
+    "id": "j000129",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correctly handled source typo to match shoe sizes."
+  },
+  {
+    "id": "j000130",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural e-commerce keywords and phrasing."
+  },
+  {
+    "id": "j000131",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate standard terminology."
+  },
+  {
+    "id": "j000132",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent and accurate terminology."
+  },
+  {
+    "id": "j000133",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000134",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000135",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000136",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missed key feature 'Tẩy Trang' (makeup remover/卸妆)."
+  },
+  {
+    "id": "j000137",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'đi học' (school/kindergarten) as '学步' (learning to walk)."
+  },
+  {
+    "id": "j000138",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Complete and natural e-commerce listing."
+  },
+  {
+    "id": "j000139",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Dừa thô' (raw coconut/生椰) mistranslated as '粗粒椰子'."
+  },
+  {
+    "id": "j000140",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000181",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated keywords (collagen to hyaluronic acid, centella to magnolia) and slight brand mismatch."
+  },
+  {
+    "id": "j000182",
+    "rating": "BB",
+    "score": 5,
+    "note": "Multiple mistranslations on colors and clothing attributes (包臀 translated as 侧开, 焦糖 as 奶油, 实物 as 物理)."
+  },
+  {
+    "id": "j000183",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Number error (16.8 million translated as 16.8万) and voltage mistranslated as material."
+  },
+  {
+    "id": "j000184",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated core product: daisy/chrysanthemum (hoa Cúc) mistranslated as sunflower (向日葵)."
+  },
+  {
+    "id": "j000185",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good natural e-commerce title; minor discrepancy in color nuance."
+  },
+  {
+    "id": "j000186",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Meaning preserved but contains awkward literal phrasing (正品高级一级, 安全用于用户)."
+  },
+  {
+    "id": "j000187",
+    "rating": "CC",
+    "score": 2,
+    "note": "Severe hallucination/repetition loop at the end; glycol mistranslated as 甘油."
+  },
+  {
+    "id": "j000188",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated lamp arm (cần đèn) as '需要' and desk clamp as desk leg."
+  },
+  {
+    "id": "j000189",
+    "rating": "A",
+    "score": 7,
+    "note": "Accurate overall, slightly unnatural phrasing for 'không nặng tóc' (不重头发)."
+  },
+  {
+    "id": "j000190",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate and clear, '骑行车' is slightly unconventional compared to 自行车/童车."
+  },
+  {
+    "id": "j000191",
+    "rating": "A",
+    "score": 7,
+    "note": "Accurate meaning, though omitted 'combo' (组合/套餐)."
+  },
+  {
+    "id": "j000192",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'bộ hai món' (two-piece set) into '双肩包' (backpack)."
+  },
+  {
+    "id": "j000193",
+    "rating": "BB",
+    "score": 5,
+    "note": "Omitted the Whsa B5 variant entirely and duplicated another spec option multiple times."
+  },
+  {
+    "id": "j000194",
+    "rating": "AA",
+    "score": 8,
+    "note": "Well translated, fluent, and accurate Lego product description."
+  },
+  {
+    "id": "j000195",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct, natural Chinese e-commerce listing title."
+  },
+  {
+    "id": "j000196",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing twill brushed specification (斜纹磨毛) and hallucinated high-count cotton (高支)."
+  },
+  {
+    "id": "j000197",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor omission of 'vuông' (right-angled triangle vs. regular triangle)."
+  },
+  {
+    "id": "j000198",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward and wordy phrasing, though most product details are retained."
+  },
+  {
+    "id": "j000199",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and standard e-commerce phrasing."
+  },
+  {
+    "id": "j000200",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Size error: duplicated size M instead of translating size L."
+  }
+]

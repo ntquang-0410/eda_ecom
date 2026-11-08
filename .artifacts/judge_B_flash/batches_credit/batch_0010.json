@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000201",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslates two-piece bag set into backpack (双肩包); significant meaning distortion."
+  },
+  {
+    "id": "j000202",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and terminology is exact."
+  },
+  {
+    "id": "j000203",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and clean handling of e-commerce specifications."
+  },
+  {
+    "id": "j000204",
+    "rating": "AA",
+    "score": 8,
+    "note": "Fluent and accurate; minor non-standard translation of proper noun Cầu Đất."
+  },
+  {
+    "id": "j000205",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed winter (đông) from autumn-winter; ending phrasing is slightly loose."
+  },
+  {
+    "id": "j000206",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good overall; minor word repetition in product highlight lines."
+  },
+  {
+    "id": "j000207",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslates lamp parts: desk clamp to table leg, lamp arm to 'need', lamp section to bulb."
+  },
+  {
+    "id": "j000208",
+    "rating": "CC",
+    "score": 2,
+    "note": "Cuticle pusher mistranslated as aerator (气泡器); brand Kềm Nghĩa mistranslated as 配送."
+  },
+  {
+    "id": "j000209",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and matches standard e-commerce spec format."
+  },
+  {
+    "id": "j000210",
+    "rating": "B",
+    "score": 4,
+    "note": "Omits long battery life and hallucinates '久用不掉耳'."
+  },
+  {
+    "id": "j000211",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor inaccuracies: net weight translated as gross weight (毛重), 手提款 as 手提包."
+  },
+  {
+    "id": "j000212",
+    "rating": "B",
+    "score": 4,
+    "note": "Reverses critical specification: 5-pack of Filter No.1 translated as Filter No.5 (5号滤芯)."
+  },
+  {
+    "id": "j000213",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Core product noun (son dưỡng môi / lip balm) is completely missing."
+  },
+  {
+    "id": "j000214",
+    "rating": "AA",
+    "score": 8,
+    "note": "Meaning preserved; phrasing has slight word repetition."
+  },
+  {
+    "id": "j000215",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Decathlon is mistranslated as 超级运动 instead of 迪卡侬."
+  },
+  {
+    "id": "j000216",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, concise, and natural product title."
+  },
+  {
+    "id": "j000217",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslates patchwork (nối) as 连体 and slit (khe hở) as 撕裂."
+  },
+  {
+    "id": "j000218",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate and fluent; mobile WiFi connection translated slightly literally."
+  },
+  {
+    "id": "j000219",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Completely accurate translation of product title and specs."
+  },
+  {
+    "id": "j000220",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and natural product title."
+  }
+]

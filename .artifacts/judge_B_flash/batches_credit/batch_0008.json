@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000161",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Title phrasing is overly literal and awkward; Vietnamese hashtags left untranslated."
+  },
+  {
+    "id": "j000162",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslates 'lăn nách / roll on' (走珠/滚珠) as '腋下喷雾' (spray)."
+  },
+  {
+    "id": "j000163",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and natural e-commerce title translation."
+  },
+  {
+    "id": "j000164",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Precise translation adhering to standard e-commerce product attribute conventions."
+  },
+  {
+    "id": "j000165",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate and well-structured with only minor word choice differences."
+  },
+  {
+    "id": "j000166",
+    "rating": "B",
+    "score": 4,
+    "note": "Major tea terminology mistranslated (大红袍 as 红色披肩, 正山小种 as 马思义茉莉)."
+  },
+  {
+    "id": "j000167",
+    "rating": "A",
+    "score": 7,
+    "note": "Accurate overall with minor literal translations in brand and attribute values."
+  },
+  {
+    "id": "j000168",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Wrong chip brand, hallucinated duplicated functions, and misaligned 3C certification fields."
+  },
+  {
+    "id": "j000169",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Omitted key product target feature 'Dành Cho Da Khô' (for dry skin)."
+  },
+  {
+    "id": "j000170",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Bột rang muối' incorrectly translated as '烧烤盐' (barbecue salt) instead of 椒盐/避风塘粉."
+  },
+  {
+    "id": "j000171",
+    "rating": "BB",
+    "score": 5,
+    "note": "Omitted the key product subject 'trái mít' (jackfruit), calling it generic mesh bag."
+  },
+  {
+    "id": "j000172",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and natural translation matching standard attribute terminology."
+  },
+  {
+    "id": "j000173",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Bột rang muối' translated awkwardly as '盐烤粉' instead of 椒盐/盐焗粉."
+  },
+  {
+    "id": "j000174",
+    "rating": "CC",
+    "score": 2,
+    "note": "Systematically mistranslates the main product 'hạt é' (basil seed) as '米浆' (rice milk)."
+  },
+  {
+    "id": "j000175",
+    "rating": "AA",
+    "score": 8,
+    "note": "Comprehensive and accurate; 'dây đeo' slightly mistranslated as '手柄'."
+  },
+  {
+    "id": "j000176",
+    "rating": "AA",
+    "score": 8,
+    "note": "Fluent marketing copy with proper tone; untranslated place names remain acceptable."
+  },
+  {
+    "id": "j000177",
+    "rating": "A",
+    "score": 7,
+    "note": "Good translation; minor inaccuracies in brand name and installation position ('cẩu')."
+  },
+  {
+    "id": "j000178",
+    "rating": "AA",
+    "score": 8,
+    "note": "Very complete and accurate translation of complex fashion attributes."
+  },
+  {
+    "id": "j000179",
+    "rating": "A",
+    "score": 7,
+    "note": "Meaning preserved; '百搭臀裤' is slightly awkward compared to '屁屁裤'."
+  },
+  {
+    "id": "j000180",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslates 'phong cách Hồng Kông' as '粤式' and 'tay áo trễ vai' as '套袖'."
+  }
+]
