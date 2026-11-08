@@ -105,3 +105,4 @@ START 2026-11-07T20:42:03Z
 05:09:25 A[nadsa091/tiki-weight-ab-a has status "KernelWorkerStatus.RUNNING"] B[nadsa091/tiki-weight-ab-b has status "KernelWorkerStatus.RUNNING"]
 05:14:26 A[nadsa091/tiki-weight-ab-a has status "KernelWorkerStatus.RUNNING"] B[nadsa091/tiki-weight-ab-b has status "KernelWorkerStatus.RUNNING"]
 05:19:27 A[nadsa091/tiki-weight-ab-a has status "KernelWorkerStatus.RUNNING"] B[nadsa091/tiki-weight-ab-b has status "KernelWorkerStatus.RUNNING"]
+05:24:28 A[nadsa091/tiki-weight-ab-a has status "KernelWorkerStatus.RUNNING"] B[nadsa091/tiki-weight-ab-b has status "KernelWorkerStatus.COMPLETE"]
