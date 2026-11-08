@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000001",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, complete, and natural e-commerce phrasing."
+  },
+  {
+    "id": "j000002",
+    "rating": "B",
+    "score": 4,
+    "note": "Missed the key noun 'Con Rồng' (dragon) and unnatural phrasing at the end."
+  },
+  {
+    "id": "j000003",
+    "rating": "C",
+    "score": 1,
+    "note": "Degenerated into repetitive hallucinated tokens; unusable."
+  },
+  {
+    "id": "j000004",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000005",
+    "rating": "BB",
+    "score": 5,
+    "note": "Hallucinated '原蛋白' (collagen) and awkward phrasing '不洗面'."
+  },
+  {
+    "id": "j000006",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'mặt dây chuyền' (pendant/charm) as '挂绳' (lanyard)."
+  },
+  {
+    "id": "j000007",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated cucumber extract (dưa chuột) as hyaluronic acid (玻尿酸)."
+  },
+  {
+    "id": "j000008",
+    "rating": "A",
+    "score": 7,
+    "note": "'红点' is slightly literal for polka dot pattern (波点), but understandable."
+  },
+  {
+    "id": "j000009",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'satin' as '珍珠' (pearl)."
+  },
+  {
+    "id": "j000010",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate numbers and natural terminology."
+  },
+  {
+    "id": "j000011",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent, matches reference perfectly."
+  },
+  {
+    "id": "j000012",
+    "rating": "AA",
+    "score": 8,
+    "note": "Correct translation of 'Nước ấm', omitted number '1'."
+  },
+  {
+    "id": "j000013",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted 'cổ thấp' (low-top) and simplified sports shoes to 男鞋."
+  },
+  {
+    "id": "j000014",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000015",
+    "rating": "BB",
+    "score": 5,
+    "note": "Omitted the main product noun 'Thảm' (car mat/foot mat)."
+  },
+  {
+    "id": "j000016",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'băng tâm' (ice heart); hallucinated '心形爱心'."
+  },
+  {
+    "id": "j000017",
+    "rating": "AA",
+    "score": 8,
+    "note": "Phonetic Chinese transliteration of the brand name."
+  },
+  {
+    "id": "j000018",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurately translated location into standard Chinese administrative division."
+  },
+  {
+    "id": "j000019",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice issue ('类型1' vs '款式1/型号1'), meaning preserved."
+  },
+  {
+    "id": "j000020",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate terminology and natural phrasing."
+  }
+]
