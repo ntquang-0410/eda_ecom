@@ -56,15 +56,17 @@ def load_scores(path: Path) -> dict[tuple[str, int], pd.DataFrame]:
     return {key: part.reset_index(drop=True) for key, part in df.groupby(["config", "seed"])}
 
 
-def load_gemma(path: Path | None) -> tuple[dict[str, float], dict[str, int], str, bool]:
+def load_gemma(path: Path | None):
     if not path or not path.exists():
-        return {}, {}, "", False
+        return {}, {}, {}, "", False
     data = json.loads(path.read_text(encoding="utf-8"))
     summary = data.get("summary", {})
     strata = {key: float(value.get("mean", float("nan")))
               for key, value in summary.get("by_stratum", {}).items()}
-    counts = {str(k): int(v.get("n", 0)) for k, v in summary.get("by_config", {}).items()}
-    return strata, counts, str(data.get("model", "")), bool(data.get("partial"))
+    by_config = summary.get("by_config", {})
+    counts = {str(k): int(v.get("n", 0)) for k, v in by_config.items()}
+    means = {str(k): float(v.get("mean", float("nan"))) for k, v in by_config.items()}
+    return strata, counts, means, str(data.get("model", "")), bool(data.get("partial"))
 
 
 def mean_table(df: pd.DataFrame) -> pd.DataFrame:
@@ -97,7 +99,7 @@ def main() -> int:
     args = ap.parse_args()
 
     scores = load_scores(Path(args.scores_dir))
-    gemma, gemma_counts, judge_model, gemma_partial = load_gemma(
+    gemma, gemma_counts, gemma_by_config, judge_model, gemma_partial = load_gemma(
         Path(args.gemma) if args.gemma else None)
     frame = pd.concat(scores.values(), ignore_index=True)
     table = mean_table(frame)
@@ -120,20 +122,14 @@ def main() -> int:
     if args.comet_json and Path(args.comet_json).exists():
         comet_raw = json.loads(Path(args.comet_json).read_text(encoding="utf-8"))
 
-    gemma_rows, gemma_cfg = {}, {}
-    for key, value in gemma.items():
-        parts = key.split("::")
-        if len(parts) != 3:
-            continue
-        gemma_rows[tuple(parts)] = value
-        gemma_cfg.setdefault(parts[0], []).append(value)
+    gemma_rows = {tuple(k.split("::")): v for k, v in gemma.items() if len(k.split("::")) == 3}
 
     summary = {
         "suite": args.suite,
         "baseline": args.baseline,
         "configs": table.to_dict("records"),
         "bootstrap_vs_baseline": boot,
-        "gemma_mean": {k: float(np.mean(v)) for k, v in gemma_cfg.items()},
+        "gemma_mean": {k: float(v) for k, v in gemma_by_config.items()},
         "gemma_by_stratum": {f"{k[0]}::{k[1]}::{k[2]}": v for k, v in gemma_rows.items()},
         "comet_raw": comet_raw,
     }
@@ -168,14 +164,13 @@ def main() -> int:
                      f"{t['mean_diff']:+.4f} | [{t['ci_low']:+.4f}, {t['ci_high']:+.4f}] | "
                      f"{t['p_win']:.3f} |")
 
-    if gemma_cfg:
+    if gemma_by_config:
         label = judge_model or "judge"
         note = " (một phần, quota)" if gemma_partial else ""
         lines += ["", f"## Credit score (1..9) — {label}{note}", "",
                   "| config | mean | n |", "|---|---:|---:|"]
-        for config, values in sorted(gemma_cfg.items(), key=lambda x: -np.mean(x[1])):
-            n_items = gemma_counts.get(config, 0)
-            lines.append(f"| {config} | {np.mean(values):.2f} | {n_items} |")
+        for config, value in sorted(gemma_by_config.items(), key=lambda x: -x[1]):
+            lines.append(f"| {config} | {value:.2f} | {gemma_counts.get(config, 0)} |")
     else:
         lines += ["", "_Chưa có credit score._"]
 

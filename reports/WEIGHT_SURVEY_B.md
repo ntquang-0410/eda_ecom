@@ -28,10 +28,10 @@ Paired bootstrap 4.000 lần trên eval_id dùng chung.
 | config | mean | n |
 |---|---:|---:|
 | balanced | 6.68 | 146 |
-| natural | 6.66 | 140 |
-| desc_heavy | 6.60 | 138 |
-| title_heavy | 6.33 | 135 |
-| tiki_heavy | 6.17 | 121 |
+| natural | 6.64 | 140 |
+| desc_heavy | 6.59 | 138 |
+| title_heavy | 6.31 | 135 |
+| tiki_heavy | 6.15 | 121 |
 
 ### COMET system score (raw)
 

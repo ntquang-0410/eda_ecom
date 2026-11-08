@@ -82,7 +82,7 @@ Cơ chế: `natural` dồn 92% token cho description. Chuyển bớt sang title:
 
 Eval B có 2/3 số dòng là title nên net dương. BLEU lại giảm (74,3 → 68,5) vì BLEU là corpus-level và bị chi phối bởi các dòng description dài; COMET tính trung bình theo câu nên phản ánh đúng hơn mức cải thiện title.
 
-`balanced` và `title_heavy` tương đương trên COMET (chênh 0,0016; CI chứa 0). Tuy nhiên credit của `title_heavy` thấp hơn `natural` trên 1688 (-0,25, chưa significant) và thấp hơn `balanced` 0,35 điểm, nên **`balanced` là lựa chọn an toàn hơn**.
+`balanced` và `title_heavy` tương đương trên COMET (chênh 0,0016; CI chứa 0). Tuy nhiên credit của `title_heavy` thấp hơn `natural` trên 1688 (-0,25, chưa significant) và thấp hơn `balanced` 0,37 điểm, nên **`balanced` là lựa chọn an toàn hơn**.
 
 ---
 
@@ -94,11 +94,11 @@ Gemma-4 (`gemma-4-31b-it`) hết quota ngày sau 360/1.000 dòng (A) và 420/1.0
 
 | config | mean | n |
 |---|---:|---:|
-| natural | **7,75** | 125 |
-| attr_heavy | 7,45 | 122 |
-| balanced | 7,36 | 125 |
-| title_heavy | 7,21 | 107 |
-| tiki_heavy | 7,06 | 101 |
+| natural | **7,70** | 125 |
+| attr_heavy | 7,47 | 122 |
+| balanced | 7,34 | 125 |
+| title_heavy | 7,11 | 107 |
+| tiki_heavy | 7,07 | 101 |
 
 Paired trên các `eval_id` được chấm ở cả hai config (1688): `attr_heavy` +0,15 (ns), `balanced` -0,58 (p = 0,018), `title_heavy` -0,71 (p = 0,033), `tiki_heavy` -0,83 (p = 0,003).
 
@@ -107,10 +107,10 @@ Paired trên các `eval_id` được chấm ở cả hai config (1688): `attr_he
 | config | mean | n |
 |---|---:|---:|
 | balanced | **6,68** | 146 |
-| natural | 6,66 | 140 |
-| desc_heavy | 6,60 | 138 |
-| title_heavy | 6,33 | 135 |
-| tiki_heavy | 6,17 | 121 |
+| natural | 6,64 | 140 |
+| desc_heavy | 6,59 | 138 |
+| title_heavy | 6,31 | 135 |
+| tiki_heavy | 6,15 | 121 |
 
 Paired 1688 vs `natural`: `balanced` -0,16 (ns), `title_heavy` -0,25 (ns), `desc_heavy` -0,05 (ns), `tiki_heavy` -0,82 (p = 0,000). Tiki: `balanced` +0,32 (ns), `title_heavy` +0,07 (ns).
 
