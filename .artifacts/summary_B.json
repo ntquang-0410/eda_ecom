@@ -1,0 +1,204 @@
+{
+  "suite": "B",
+  "baseline": "natural",
+  "configs": [
+    {
+      "config": "title_heavy",
+      "n": 885,
+      "1688": 0.8566250333716672,
+      "tiki": 0.05302137856852246,
+      "1688_description": 0.898606687784195,
+      "1688_title": 0.8360540227095286,
+      "tiki_description": 0.23973038347195025,
+      "tiki_title": -0.032864763687054314
+    },
+    {
+      "config": "balanced",
+      "n": 885,
+      "1688": 0.8550458059081562,
+      "tiki": 0.0566216536699773,
+      "1688_description": 0.9002170828329462,
+      "1688_title": 0.8329118802150091,
+      "tiki_description": 0.24657921700913837,
+      "tiki_title": -0.030758825466036796
+    },
+    {
+      "config": "tiki_heavy",
+      "n": 885,
+      "1688": 0.8452714217589206,
+      "tiki": 0.051973641131362415,
+      "1688_description": 0.8979313028912966,
+      "1688_title": 0.8194680800040562,
+      "tiki_description": 0.24075928605768993,
+      "tiki_title": -0.03486775553474824
+    },
+    {
+      "config": "natural",
+      "n": 885,
+      "1688": 0.840616894715051,
+      "tiki": 0.056458745840681744,
+      "1688_description": 0.9109147805340436,
+      "1688_title": 0.8061709306637446,
+      "tiki_description": 0.24977858993562235,
+      "tiki_title": -0.03246838244299094
+    },
+    {
+      "config": "desc_heavy",
+      "n": 885,
+      "1688": 0.8352008057254006,
+      "tiki": 0.05389348409015294,
+      "1688_description": 0.9072851970487711,
+      "1688_title": 0.799879453976949,
+      "tiki_description": 0.2483688643121201,
+      "tiki_title": -0.035565190811951954
+    }
+  ],
+  "bootstrap_vs_baseline": {
+    "balanced::seed42": {
+      "all": {
+        "n": 885,
+        "mean_diff": 0.0074,
+        "ci_low": -0.0006,
+        "ci_high": 0.0153,
+        "p_win": 0.968
+      },
+      "1688": {
+        "n": 447,
+        "mean_diff": 0.0144,
+        "ci_low": 0.0081,
+        "ci_high": 0.0211,
+        "p_win": 1.0
+      },
+      "tiki": {
+        "n": 438,
+        "mean_diff": 0.0002,
+        "ci_low": -0.0146,
+        "ci_high": 0.0145,
+        "p_win": 0.527
+      }
+    },
+    "desc_heavy::seed42": {
+      "all": {
+        "n": 885,
+        "mean_diff": -0.004,
+        "ci_low": -0.0097,
+        "ci_high": 0.0019,
+        "p_win": 0.089
+      },
+      "1688": {
+        "n": 447,
+        "mean_diff": -0.0054,
+        "ci_low": -0.0113,
+        "ci_high": 0.001,
+        "p_win": 0.047
+      },
+      "tiki": {
+        "n": 438,
+        "mean_diff": -0.0026,
+        "ci_low": -0.0121,
+        "ci_high": 0.0071,
+        "p_win": 0.303
+      }
+    },
+    "tiki_heavy::seed42": {
+      "all": {
+        "n": 885,
+        "mean_diff": 0.0001,
+        "ci_low": -0.0083,
+        "ci_high": 0.0086,
+        "p_win": 0.527
+      },
+      "1688": {
+        "n": 447,
+        "mean_diff": 0.0047,
+        "ci_low": -0.0007,
+        "ci_high": 0.0103,
+        "p_win": 0.956
+      },
+      "tiki": {
+        "n": 438,
+        "mean_diff": -0.0045,
+        "ci_low": -0.0208,
+        "ci_high": 0.0111,
+        "p_win": 0.303
+      }
+    },
+    "title_heavy::seed42": {
+      "all": {
+        "n": 885,
+        "mean_diff": 0.0064,
+        "ci_low": -0.0015,
+        "ci_high": 0.0142,
+        "p_win": 0.949
+      },
+      "1688": {
+        "n": 447,
+        "mean_diff": 0.016,
+        "ci_low": 0.0099,
+        "ci_high": 0.0229,
+        "p_win": 1.0
+      },
+      "tiki": {
+        "n": 438,
+        "mean_diff": -0.0034,
+        "ci_low": -0.0178,
+        "ci_high": 0.0108,
+        "p_win": 0.321
+      }
+    }
+  },
+  "gemma_mean": {},
+  "gemma_by_stratum": {},
+  "comet_raw": {
+    "balanced::42::1688": {
+      "system_score": 0.855,
+      "n": 447,
+      "bleu": 71.668,
+      "chrf": 70.1665
+    },
+    "balanced::42::tiki": {
+      "system_score": 0.0566,
+      "n": 438
+    },
+    "desc_heavy::42::1688": {
+      "system_score": 0.8352,
+      "n": 447,
+      "bleu": 71.3258,
+      "chrf": 71.121
+    },
+    "desc_heavy::42::tiki": {
+      "system_score": 0.0539,
+      "n": 438
+    },
+    "natural::42::1688": {
+      "system_score": 0.8406,
+      "n": 447,
+      "bleu": 74.2634,
+      "chrf": 72.3518
+    },
+    "natural::42::tiki": {
+      "system_score": 0.0565,
+      "n": 438
+    },
+    "tiki_heavy::42::1688": {
+      "system_score": 0.8453,
+      "n": 447,
+      "bleu": 69.3802,
+      "chrf": 67.6468
+    },
+    "tiki_heavy::42::tiki": {
+      "system_score": 0.052,
+      "n": 438
+    },
+    "title_heavy::42::1688": {
+      "system_score": 0.8566,
+      "n": 447,
+      "bleu": 68.5093,
+      "chrf": 66.3432
+    },
+    "title_heavy::42::tiki": {
+      "system_score": 0.053,
+      "n": 438
+    }
+  }
+}

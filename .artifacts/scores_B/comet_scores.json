@@ -38,5 +38,15 @@
   "tiki_heavy::42::tiki": {
     "system_score": 0.052,
     "n": 438
+  },
+  "title_heavy::42::1688": {
+    "system_score": 0.8566,
+    "n": 447,
+    "bleu": 68.5093,
+    "chrf": 66.3432
+  },
+  "title_heavy::42::tiki": {
+    "system_score": 0.053,
+    "n": 438
   }
 }

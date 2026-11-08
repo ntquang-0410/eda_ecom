@@ -1,0 +1,62 @@
+[
+  {
+    "id": "j000101",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000102",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000103",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct, terminology and numbers exact."
+  },
+  {
+    "id": "j000104",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural color translations."
+  },
+  {
+    "id": "j000105",
+    "rating": "AA",
+    "score": 8,
+    "note": "Correct meaning, but punctuation is missing, creating a long string."
+  },
+  {
+    "id": "j000106",
+    "rating": "AA",
+    "score": 8,
+    "note": "Correct, though slightly repetitive with '保护套'."
+  },
+  {
+    "id": "j000107",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000108",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor loss of 'SET' (组合)."
+  },
+  {
+    "id": "j000109",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000110",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Key flavors mistranslated: Coconut to Mango, Durian to Vanilla."
+  }
+]

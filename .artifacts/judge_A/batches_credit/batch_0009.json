@@ -1,0 +1,62 @@
+[
+  {
+    "id": "j000091",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000092",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect match with reference."
+  },
+  {
+    "id": "j000093",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of terms and dimensions."
+  },
+  {
+    "id": "j000094",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor variation in keyword repetition."
+  },
+  {
+    "id": "j000095",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000096",
+    "rating": "A",
+    "score": 7,
+    "note": "Missing 'sports' and 'winter' from source."
+  },
+  {
+    "id": "j000097",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000098",
+    "rating": "AA",
+    "score": 8,
+    "note": "Acceptable transliteration of brand name."
+  },
+  {
+    "id": "j000099",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000100",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of all technical terms."
+  }
+]
