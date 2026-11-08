@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000221",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'nước mắm' (fish sauce) as '酱油' (soy sauce)."
+  },
+  {
+    "id": "j000222",
+    "rating": "BB",
+    "score": 5,
+    "note": "'Nước tẩy trang' (makeup remover) missing; '微粒水' is literal and awkward."
+  },
+  {
+    "id": "j000223",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000224",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and fluent e-commerce translation."
+  },
+  {
+    "id": "j000225",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missed one SKU; mistranslated 'Pudding' as '慕斯'."
+  },
+  {
+    "id": "j000226",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, matches typical e-commerce title style."
+  },
+  {
+    "id": "j000227",
+    "rating": "BB",
+    "score": 5,
+    "note": "'Ngũ cốc' mistranslated as '奶昔' (milkshake); 'Hạnh nhân' (almond) omitted."
+  },
+  {
+    "id": "j000228",
+    "rating": "AA",
+    "score": 8,
+    "note": "'US' could be translated as '美规', but meaning is clear."
+  },
+  {
+    "id": "j000229",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Pandan leaf mistranslated as pineapple leaf ('菠萝叶粉') and '叶网'."
+  },
+  {
+    "id": "j000230",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent translation."
+  },
+  {
+    "id": "j000231",
+    "rating": "B",
+    "score": 4,
+    "note": "Multiple mistranslations: cereal as milkshake, sesame as black bean, omitted almond."
+  },
+  {
+    "id": "j000232",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000233",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000234",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000235",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly awkward phrasing at the end, meaning well preserved."
+  },
+  {
+    "id": "j000236",
+    "rating": "CCC",
+    "score": 3,
+    "note": "'Feizixiao' mistranslated as '铁指小' and lychee mistranslated as peach."
+  },
+  {
+    "id": "j000237",
+    "rating": "CC",
+    "score": 2,
+    "note": "'Feizixiao' mistranslated as '铁观音', changing product identity."
+  },
+  {
+    "id": "j000238",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000239",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Literal brand translation and awkward phrasing like '盒3件'."
+  },
+  {
+    "id": "j000240",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated side door zipper as door lock ('拉链车门锁'); '车衣' preferred over '遮阳布'."
+  }
+]

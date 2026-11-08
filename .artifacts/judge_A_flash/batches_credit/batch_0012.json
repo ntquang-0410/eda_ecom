@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000241",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor omission of domestic e-commerce (trong nước), but overall natural and fitting for e-commerce."
+  },
+  {
+    "id": "j000242",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural e-commerce title translation."
+  },
+  {
+    "id": "j000243",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted 'Dành Cho Da Khô' (for dry skin), but brand and product are accurate."
+  },
+  {
+    "id": "j000244",
+    "rating": "A",
+    "score": 7,
+    "note": "Slightly awkward word order; '热塑性TPU' or 'TPU热塑性材料' would be better."
+  },
+  {
+    "id": "j000245",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and fluent translation."
+  },
+  {
+    "id": "j000246",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of product name and brand."
+  },
+  {
+    "id": "j000247",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated the standard term '前男友面膜' as '老男友面膜'."
+  },
+  {
+    "id": "j000248",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correctly interprets and standardizes all SKU variants."
+  },
+  {
+    "id": "j000249",
+    "rating": "C",
+    "score": 1,
+    "note": "Completely untranslated Vietnamese text."
+  },
+  {
+    "id": "j000250",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor change from original Chinese source text, meaning preserved."
+  },
+  {
+    "id": "j000251",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000252",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct model name preserved."
+  },
+  {
+    "id": "j000253",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct proper noun preserved."
+  },
+  {
+    "id": "j000254",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate unit translation."
+  },
+  {
+    "id": "j000255",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and concise translation."
+  },
+  {
+    "id": "j000256",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Hallucinated '磁性' for clock and mistranslated decorative lamp as '饰品'."
+  },
+  {
+    "id": "j000257",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000258",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurately conveys all product details and specs."
+  },
+  {
+    "id": "j000259",
+    "rating": "AA",
+    "score": 8,
+    "note": "'防渗垫' is slightly unusual for consumer bedding/mats ('隔尿垫/防水垫'), but meaning is clear."
+  },
+  {
+    "id": "j000260",
+    "rating": "B",
+    "score": 4,
+    "note": "Severely mistranslated 'Pixiu' (貔貅) as '双宝猪' with awkward repetitions."
+  }
+]
