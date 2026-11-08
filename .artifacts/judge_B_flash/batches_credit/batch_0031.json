@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000621",
+    "rating": "B",
+    "score": 4,
+    "note": "Missed key product category 'Đồ Chơi Xe Hơi Biến Hình' (transforming toy car)."
+  },
+  {
+    "id": "j000622",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Noticeable mistranslation of place name 'Đà Lạt' to '芽庄' (Nha Trang)."
+  },
+  {
+    "id": "j000623",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate specification translation with very minor terminology differences."
+  },
+  {
+    "id": "j000624",
+    "rating": "A",
+    "score": 7,
+    "note": "Meaning preserved; slight awkwardness in phrasing like '折叠三倍'."
+  },
+  {
+    "id": "j000625",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missed 'cổ điển' (retro/vintage) and duplicated '圆领'."
+  },
+  {
+    "id": "j000626",
+    "rating": "CC",
+    "score": 2,
+    "note": "Major error: 'khẩu trang' (facemask) mistranslated as '口红套装' (lipstick set)."
+  },
+  {
+    "id": "j000627",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, complete, and natural e-commerce title."
+  },
+  {
+    "id": "j000628",
+    "rating": "C",
+    "score": 1,
+    "note": "Completely untranslated Vietnamese text."
+  },
+  {
+    "id": "j000629",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Unnecessary repetition of '防水' and missed fabric type 'vải dù'."
+  },
+  {
+    "id": "j000630",
+    "rating": "A",
+    "score": 7,
+    "note": "Slightly simplified translation, but overall meaning is well preserved."
+  },
+  {
+    "id": "j000631",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate specifications and details with minor phrasing imperfections."
+  },
+  {
+    "id": "j000632",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact, complete, and standard e-commerce specification translation."
+  },
+  {
+    "id": "j000633",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated color 'Tử khoai môn' (taro purple) as '胡萝卜' (carrot)."
+  },
+  {
+    "id": "j000634",
+    "rating": "CC",
+    "score": 2,
+    "note": "Severe mistranslation: cuticle pusher translated as aerator; brand Kềm Nghĩa mistranslated."
+  },
+  {
+    "id": "j000635",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Color names have noticeable errors (e.g., persimmon and pear for plum and apricot)."
+  },
+  {
+    "id": "j000636",
+    "rating": "A",
+    "score": 7,
+    "note": "'Muối biển' (sea salt) translated as '粗盐' (coarse salt); otherwise good."
+  },
+  {
+    "id": "j000637",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Key ingredient 'dưa chuột' (cucumber) mistranslated as '玻尿酸' (hyaluronic acid)."
+  },
+  {
+    "id": "j000638",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate, detailed, and well-structured product description."
+  },
+  {
+    "id": "j000639",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural, complete, and fully correct e-commerce title translation."
+  },
+  {
+    "id": "j000640",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate translation; '海苔' would be more customary than '海藻' for snacks."
+  }
+]

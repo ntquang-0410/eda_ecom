@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000501",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct brand name."
+  },
+  {
+    "id": "j000502",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural translation."
+  },
+  {
+    "id": "j000503",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate numbers and terminology."
+  },
+  {
+    "id": "j000504",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Fatal mistranslation: 'Khẩu Trang' (mask) translated as '口红' (lipstick)."
+  },
+  {
+    "id": "j000505",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct color translation."
+  },
+  {
+    "id": "j000506",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missed the core noun 'bình' (bottle/jar)."
+  },
+  {
+    "id": "j000507",
+    "rating": "CC",
+    "score": 2,
+    "note": "Mistranslated brand/product name."
+  },
+  {
+    "id": "j000508",
+    "rating": "AA",
+    "score": 8,
+    "note": "Acceptable translation, could be 纯色 depending on context."
+  },
+  {
+    "id": "j000509",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate terminology and measurements."
+  },
+  {
+    "id": "j000510",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor inaccuracy, 竹木 would be more precise for Gỗ tre."
+  },
+  {
+    "id": "j000511",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor terminology issues (陶土战士 vs 兵马俑, 藏青 vs 牛仔蓝)."
+  },
+  {
+    "id": "j000512",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missed the core noun 'Thảm' (car floor mat)."
+  },
+  {
+    "id": "j000513",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and fully accurate."
+  },
+  {
+    "id": "j000514",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural e-commerce listing text."
+  },
+  {
+    "id": "j000515",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated macadamia and omitted 'sữa' (milk)."
+  },
+  {
+    "id": "j000516",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact car model translation."
+  },
+  {
+    "id": "j000517",
+    "rating": "CC",
+    "score": 2,
+    "note": "Severe stuttering/repetition loop, missed most content."
+  },
+  {
+    "id": "j000518",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct number conversion."
+  },
+  {
+    "id": "j000519",
+    "rating": "AA",
+    "score": 8,
+    "note": "Acceptable, context could prefer 纯色."
+  },
+  {
+    "id": "j000520",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'năm Thỏ' (兔年) as '五只小兔' and sương mù as '雾霾'."
+  }
+]
