@@ -77,6 +77,16 @@ Không xoá archive; chỉ move để root gọn.
 https://huggingface.co/datasets/ntquang0410/tiki-4model-eval
 ```
 
+Bản cập nhật 2026-11-08 có thêm:
+
+```text
+data/bt_qwen3-4b/            toàn bộ output BT Qwen3-4B từ Kaggle
+  title_attribute/           predictions v5 (29.446 dòng, good 99,68%)
+  description/               predictions full 13.200 dòng (good 88,73%)
+data/weight_survey_ab/       hyps + COMET/credit scores của survey A/B
+reports/WEIGHT_SURVEY_A_B.md
+```
+
 Bản cập nhật 2026-11-07 có thêm:
 
 ```text
