@@ -1,0 +1,62 @@
+[
+  {
+    "id": "j000021",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing 'Xe đạp' (Bicycle)."
+  },
+  {
+    "id": "j000022",
+    "rating": "C",
+    "score": 1,
+    "note": "Incomplete translation, cut off at the end; '短ening' is incorrect."
+  },
+  {
+    "id": "j000023",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000024",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing brand 'Forwenw'; '皮质钱包' should be '皮质钱包手机壳'."
+  },
+  {
+    "id": "j000025",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000026",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000027",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor loss of 'over-ear' detail."
+  },
+  {
+    "id": "j000028",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000029",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000030",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  }
+]

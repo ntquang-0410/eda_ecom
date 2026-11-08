@@ -1,0 +1,62 @@
+[
+  {
+    "id": "j000041",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice: '筒' is less common than '瓶' for jars."
+  },
+  {
+    "id": "j000042",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Terminology errors: 'Pudding' as 'Mousse', 'Lilac' as 'Lavender', and 'Vanilla' errors."
+  },
+  {
+    "id": "j000043",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Critical error: 'Mè' (sesame) mistranslated as 'Đậu' (bean)."
+  },
+  {
+    "id": "j000044",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Incomplete translation; hypothesis cuts off mid-sentence."
+  },
+  {
+    "id": "j000045",
+    "rating": "BB",
+    "score": 5,
+    "note": "Meaning loss: 'băng tâm' (ice heart/pure heart) is missing."
+  },
+  {
+    "id": "j000046",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000047",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missing key terms: 'Thùng' (case) and 'Sữa hạt' (nut milk)."
+  },
+  {
+    "id": "j000048",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000049",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000050",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  }
+]

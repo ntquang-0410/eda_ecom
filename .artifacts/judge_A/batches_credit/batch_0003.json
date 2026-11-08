@@ -1,0 +1,62 @@
+[
+  {
+    "id": "j000031",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000032",
+    "rating": "AA",
+    "score": 8,
+    "note": "铝边 is slightly awkward; 铝金属表壳 is better."
+  },
+  {
+    "id": "j000033",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missed 'underarm' (腋下), but overall very natural e-commerce style."
+  },
+  {
+    "id": "j000034",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and accurate translation."
+  },
+  {
+    "id": "j000035",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and concise."
+  },
+  {
+    "id": "j000036",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of technical terms."
+  },
+  {
+    "id": "j000037",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect."
+  },
+  {
+    "id": "j000038",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated Camry as Lexus (雷克萨斯)."
+  },
+  {
+    "id": "j000039",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missed 'over-ear' ( chụp tai), but meaning is preserved."
+  },
+  {
+    "id": "j000040",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Satin mistranslated as quilted (绗缝)."
+  }
+]
