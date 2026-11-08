@@ -1,8 +1,7 @@
 found 10 files
-Traceback (most recent call last):
-  File "/content/eda_ecom/tools/score_comet_weight.py", line 122, in <module>
-    raise SystemExit(main())
-                     ~~~~^^
-  File "/content/eda_ecom/tools/score_comet_weight.py", line 67, in main
-    from comet import download_model, load_from_checkpoint
-ModuleNotFoundError: No module named 'comet'
+/usr/local/lib/python3.13/dist-packages/torchmetrics/utilities/imports.py:23: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound, get_distribution
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:00<00:00,  7.00it/s]Fetching 5 files:  80%|████████  | 4/5 [00:24<00:06,  6.55s/it]Fetching 5 files: 100%|██████████| 5/5 [00:24<00:00,  4.86s/it]
+Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`
+/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:00<00:00,  4.28it/s]

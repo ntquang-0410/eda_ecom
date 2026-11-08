@@ -1,0 +1,62 @@
+[
+  {
+    "id": "j000011",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000012",
+    "rating": "AA",
+    "score": 8,
+    "note": "Correct translation, but missing the digit '1'."
+  },
+  {
+    "id": "j000013",
+    "rating": "A",
+    "score": 7,
+    "note": "Missing 'low top' and 'sport shoes' simplified to 'men's shoes'."
+  },
+  {
+    "id": "j000014",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000015",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missing the word for 'mat' (thảm)."
+  },
+  {
+    "id": "j000016",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'Băng tâm' (ice heart) as 'heart-shaped'."
+  },
+  {
+    "id": "j000017",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct transliteration."
+  },
+  {
+    "id": "j000018",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of location."
+  },
+  {
+    "id": "j000019",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000020",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  }
+]
