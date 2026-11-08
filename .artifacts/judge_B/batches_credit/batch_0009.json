@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000181",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'collagen' as 'hyaluronic acid' and 'centella asiatica' as 'magnolia'."
+  },
+  {
+    "id": "j000182",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'quilted', 'hip skirt', and 'pullover' (mũ trùm đầu)."
+  },
+  {
+    "id": "j000183",
+    "rating": "B",
+    "score": 4,
+    "note": "Major error: 16.8 million to 16.8万; 'Voltage' translated as 'Material'."
+  },
+  {
+    "id": "j000184",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'Daisy' (Cúc) as 'Sunflower' (向日葵)."
+  },
+  {
+    "id": "j000185",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and accurate e-commerce translation."
+  },
+  {
+    "id": "j000186",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly awkward phrasing at the end, but meaning is clear."
+  },
+  {
+    "id": "j000187",
+    "rating": "B",
+    "score": 4,
+    "note": "Severe hallucination: final paragraph repeated seven times."
+  },
+  {
+    "id": "j000188",
+    "rating": "A",
+    "score": 7,
+    "note": "Mistranslated 'table clamp' (kẹp bàn) as 'table leg' (桌脚)."
+  },
+  {
+    "id": "j000189",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly literal translation of 'không nặng tóc'."
+  },
+  {
+    "id": "j000190",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000191",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000192",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'two-piece set' as 'backpack' (双肩包)."
+  },
+  {
+    "id": "j000193",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing one product variant in the specifications list."
+  },
+  {
+    "id": "j000194",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, natural, and professional translation."
+  },
+  {
+    "id": "j000195",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000196",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missing key fabric details: 'brushed twill' and 'high weight'."
+  },
+  {
+    "id": "j000197",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Precise and correct."
+  },
+  {
+    "id": "j000198",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation, slightly wordy."
+  },
+  {
+    "id": "j000199",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000200",
+    "rating": "AA",
+    "score": 8,
+    "note": "Literal translation of source typos ('quần kaki' and 'tôi')."
+  }
+]

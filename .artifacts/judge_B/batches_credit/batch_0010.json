@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000201",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'two-piece set' as 'backpack'."
+  },
+  {
+    "id": "j000202",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000203",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of all attributes."
+  },
+  {
+    "id": "j000204",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Excellent translation of a long description."
+  },
+  {
+    "id": "j000205",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor omission: 'autumn winter' translated as 'autumn'."
+  },
+  {
+    "id": "j000206",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and professional terminology."
+  },
+  {
+    "id": "j000207",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'lamp arm' as 'bulb'."
+  },
+  {
+    "id": "j000208",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Significant mistranslation: 'cuticle pusher' as 'aerator'."
+  },
+  {
+    "id": "j000209",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of all attributes."
+  },
+  {
+    "id": "j000210",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'long battery life' as 'not falling out'."
+  },
+  {
+    "id": "j000211",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000212",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'set of 5' as 'No. 5'."
+  },
+  {
+    "id": "j000213",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missing key product noun 'lip balm'."
+  },
+  {
+    "id": "j000214",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000215",
+    "rating": "AA",
+    "score": 8,
+    "note": "Non-standard translation for brand 'Decathlon'."
+  },
+  {
+    "id": "j000216",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000217",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Multiple terminology errors in fabric, style, and color."
+  },
+  {
+    "id": "j000218",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000219",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000220",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  }
+]
