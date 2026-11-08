@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000141",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Truncated; missing key information like butterfly pattern, full protection, and iPhone 11."
+  },
+  {
+    "id": "j000142",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation; '适用于' is more standard in e-commerce than '适合'."
+  },
+  {
+    "id": "j000143",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated countdown timer (倒计时器/秒表) as wristwatch (手表)."
+  },
+  {
+    "id": "j000144",
+    "rating": "AA",
+    "score": 8,
+    "note": "Well translated; '水池刷/泳池刷' is more natural than '池塘刷'."
+  },
+  {
+    "id": "j000145",
+    "rating": "B",
+    "score": 4,
+    "note": "Multiple mistranslations: sanitary napkins translated as napkins, bandage cream as band-aid, trehalose as fructose."
+  },
+  {
+    "id": "j000146",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, clear, and natural product title translation."
+  },
+  {
+    "id": "j000147",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation covering all technical specifications."
+  },
+  {
+    "id": "j000148",
+    "rating": "A",
+    "score": 7,
+    "note": "Complete translation, though phrasing is somewhat literal."
+  },
+  {
+    "id": "j000149",
+    "rating": "CC",
+    "score": 2,
+    "note": "Repetitive hallucination, missing key details, and truncated at the end."
+  },
+  {
+    "id": "j000150",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated countdown timer as wristwatch (手表)."
+  },
+  {
+    "id": "j000151",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate and natural e-commerce keyword translation."
+  },
+  {
+    "id": "j000152",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated key fruits: pineapple (dứa) as mango, and cranberry (nam việt quất) as blueberry."
+  },
+  {
+    "id": "j000153",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 16.8 million colors as 16.8万 (168k), and keys (phím) as keyboards (键盘)."
+  },
+  {
+    "id": "j000154",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missed two-piece set (hai món) and mistranslated shoulder bag as backpack (双肩包)."
+  },
+  {
+    "id": "j000155",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 5 units of stage 1 filters into stage 5 filter (5号滤芯)."
+  },
+  {
+    "id": "j000156",
+    "rating": "A",
+    "score": 7,
+    "note": "Overall good, but mistranslated sliding doors (cửa trượt) as drawers (抽屉)."
+  },
+  {
+    "id": "j000157",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and well-structured toy product title."
+  },
+  {
+    "id": "j000158",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated origin city Sán Đầu (Shantou) as Chaozhou, plus minor terminology errors."
+  },
+  {
+    "id": "j000159",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated origin Nghĩa Ô (Yiwu) as Henan, and crawling (bò) as hopping."
+  },
+  {
+    "id": "j000160",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated origin Sán Đầu (Shantou) as Shatoujiao, with minor color description errors."
+  }
+]
