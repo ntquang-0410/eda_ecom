@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000601",
+    "rating": "AA",
+    "score": 8,
+    "note": "Translates well into natural e-commerce style, minor repetition of 男款/男."
+  },
+  {
+    "id": "j000602",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and correctly capitalized product title."
+  },
+  {
+    "id": "j000603",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation; '隔尿垫/隔水垫' is more common than '防渗垫'."
+  },
+  {
+    "id": "j000604",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Decathlon mistranslated as 艾德乐; some duplicate tags slightly misaligned."
+  },
+  {
+    "id": "j000605",
+    "rating": "B",
+    "score": 4,
+    "note": "Missed 'charging cup holder' (giá đỡ cốc sạc) in several color variants; 品牌 红包鼠 is inaccurate."
+  },
+  {
+    "id": "j000606",
+    "rating": "AA",
+    "score": 8,
+    "note": "Fluent and accurate translation overall with minor style choices (cao su non mistranslated as 非 latex)."
+  },
+  {
+    "id": "j000607",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated dưa lưới (cantaloupe) as 黄瓜 (cucumber); piperin as 姜黄素."
+  },
+  {
+    "id": "j000608",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed translating 'KHÁC' (其他), but general meaning is preserved."
+  },
+  {
+    "id": "j000609",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward phrasing with repeated 圆领; 'cao cổ kiểu Mỹ' mistranslated as 高领美式 instead of 美式高街."
+  },
+  {
+    "id": "j000610",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'công suất thấp' (低功耗) as '低音量' (low volume)."
+  },
+  {
+    "id": "j000611",
+    "rating": "A",
+    "score": 7,
+    "note": "Mistranslated 'cao su non' (memory foam) as '非 latex'; otherwise complete and fluent."
+  },
+  {
+    "id": "j000612",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted 'chụp tai' (headphone/头戴式), otherwise good."
+  },
+  {
+    "id": "j000613",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'cờ tướng' (Chinese chess/象棋) as '将棋' (shogi); misread 'đánh vecny' as yellow chess pieces."
+  },
+  {
+    "id": "j000614",
+    "rating": "C",
+    "score": 1,
+    "note": "Severe mistranslation: 'mè' (sesame/芝麻) translated as '豆' (beans)."
+  },
+  {
+    "id": "j000615",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation; slightly literal for trailing spam tags."
+  },
+  {
+    "id": "j000616",
+    "rating": "C",
+    "score": 1,
+    "note": "Repetitive hallucination loop at the end and truncated output."
+  },
+  {
+    "id": "j000617",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed 'Hát Karaoke' specifically (only translated '录音唱歌'), but understandable."
+  },
+  {
+    "id": "j000618",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated dừa (coconut) as 西红柿 (tomato) and sầu riêng (durian) as 花椒."
+  },
+  {
+    "id": "j000619",
+    "rating": "A",
+    "score": 7,
+    "note": "'Lăn khử mùi' translated as '防味滚轴' instead of standard '止汗走珠/止汗露'."
+  },
+  {
+    "id": "j000620",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Captures all product details accurately and uses natural e-commerce terminology."
+  }
+]

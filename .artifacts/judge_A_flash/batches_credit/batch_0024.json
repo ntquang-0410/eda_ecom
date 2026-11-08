@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000481",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missed aloe vera, mistranslated brand name, and used literal, awkward phrasing."
+  },
+  {
+    "id": "j000482",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and correct."
+  },
+  {
+    "id": "j000483",
+    "rating": "A",
+    "score": 7,
+    "note": "Hallucinated collagen (胶原蛋白) and phrased 免洗 awkwardly as 不洗面."
+  },
+  {
+    "id": "j000484",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000485",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated zipper (khóa kéo) as door lock (门锁)."
+  },
+  {
+    "id": "j000486",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor repetition and slightly clunky phrasing, meaning well preserved."
+  },
+  {
+    "id": "j000487",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title keywords."
+  },
+  {
+    "id": "j000488",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and correct."
+  },
+  {
+    "id": "j000489",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor inaccuracies: 煮 instead of 焖/泡, and 使用 instead of 食用."
+  },
+  {
+    "id": "j000490",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000491",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, correctly handling the source typo."
+  },
+  {
+    "id": "j000492",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and correct."
+  },
+  {
+    "id": "j000493",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and correct."
+  },
+  {
+    "id": "j000494",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated hộp xếp hình (puzzle box) as 可折叠盒 (collapsible box)."
+  },
+  {
+    "id": "j000495",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent e-commerce translation."
+  },
+  {
+    "id": "j000496",
+    "rating": "BBB",
+    "score": 6,
+    "note": "In e-commerce spec contexts, 无 is standard rather than 不."
+  },
+  {
+    "id": "j000497",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce listing title."
+  },
+  {
+    "id": "j000498",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Contradictory neck styles (圆领 vs 高领) and repetitive wording."
+  },
+  {
+    "id": "j000499",
+    "rating": "B",
+    "score": 4,
+    "note": "Barcode number is truncated, missing the last digit."
+  },
+  {
+    "id": "j000500",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and correct."
+  }
+]
