@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000441",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce product title."
+  },
+  {
+    "id": "j000442",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct warning text translation."
+  },
+  {
+    "id": "j000443",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000444",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match for model code."
+  },
+  {
+    "id": "j000445",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated fabric/woven strap (vải dệt) as leather strap (皮带)."
+  },
+  {
+    "id": "j000446",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000447",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Complete and natural listing keywords."
+  },
+  {
+    "id": "j000448",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Proper name and volume correctly kept."
+  },
+  {
+    "id": "j000449",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000450",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000451",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000452",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000453",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate color translation."
+  },
+  {
+    "id": "j000454",
+    "rating": "A",
+    "score": 7,
+    "note": "Scooter model 'Janus' is awkwardly transliterated instead of kept as Janus."
+  },
+  {
+    "id": "j000455",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title."
+  },
+  {
+    "id": "j000456",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'khỉ' (monkey/Kipling) was left untranslated as 'khi' in 'kipkhi'."
+  },
+  {
+    "id": "j000457",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate professional terminology and phrasing."
+  },
+  {
+    "id": "j000458",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000459",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and correct storage instructions."
+  },
+  {
+    "id": "j000460",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent and accurate e-commerce title."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000461",
+    "rating": "BB",
+    "score": 5,
+    "note": "Unnatural phrasing; '无卡标' distorts 'tiêu chuẩn không có thẻ' (标配不含卡)."
+  },
+  {
+    "id": "j000462",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice for 'Chấm Bi Đỏ' (波点), but fully understandable."
+  },
+  {
+    "id": "j000463",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and accurate translation."
+  },
+  {
+    "id": "j000464",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of sku option."
+  },
+  {
+    "id": "j000465",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward word order and phrasing in Chinese."
+  },
+  {
+    "id": "j000466",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated pandan leaf (lá dứa/lá nếp) as pineapple leaf and '叶网'."
+  },
+  {
+    "id": "j000467",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted 'Dành Cho Da Khô' (for dry skin)."
+  },
+  {
+    "id": "j000468",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and accurate e-commerce listing title."
+  },
+  {
+    "id": "j000469",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Omitted the core product noun: lip balm (son dưỡng môi)."
+  },
+  {
+    "id": "j000470",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated terracotta warriors and wrongly labeled women's/men's items as unisex."
+  },
+  {
+    "id": "j000471",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated Yiwu (义乌) as '义奥'."
+  },
+  {
+    "id": "j000472",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000473",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Omitted horn material (sừng) and mistranslated 'xuất Nhật' as '日本'."
+  },
+  {
+    "id": "j000474",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000475",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, complete, and fluent."
+  },
+  {
+    "id": "j000476",
+    "rating": "AA",
+    "score": 8,
+    "note": "Dimensions kept in Vietnamese abbreviations (D/R/C), though unit is translated."
+  },
+  {
+    "id": "j000477",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated timer (đồng hồ bấm giờ) as wristwatch (手表)."
+  },
+  {
+    "id": "j000478",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor terminology issues (遮阳布 vs 车衣, 拉链门锁 vs 车门拉链)."
+  },
+  {
+    "id": "j000479",
+    "rating": "C",
+    "score": 1,
+    "note": "Severe hallucination loop with repeated characters."
+  },
+  {
+    "id": "j000480",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  }
+]
