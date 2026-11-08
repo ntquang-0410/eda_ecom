@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000121",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated aluminum frame as zipper in color options; terminology errors for wheels."
+  },
+  {
+    "id": "j000122",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice: 'sea salt' translated as 'coarse salt'."
+  },
+  {
+    "id": "j000123",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate, though 'polka dot' is translated as 'spots'."
+  },
+  {
+    "id": "j000124",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000125",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000126",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated varnish/color description; added 'internet cafe' hallucination."
+  },
+  {
+    "id": "j000127",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Critical numerical error: 20 million VND became 200 thousand VND."
+  },
+  {
+    "id": "j000128",
+    "rating": "BB",
+    "score": 5,
+    "note": "Wrong material: 'mesh' (lưới) translated as 'velvet' (丝绒)."
+  },
+  {
+    "id": "j000129",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Multiple errors: Mint->Vanilla, Shantou->Sha Tau Kok, Vaseline->Aloe."
+  },
+  {
+    "id": "j000130",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000131",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000132",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000133",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor phonetic brand translation difference."
+  },
+  {
+    "id": "j000134",
+    "rating": "A",
+    "score": 7,
+    "note": "Meaning preserved, though 'Lucky Cat' terminology is slightly non-standard."
+  },
+  {
+    "id": "j000135",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000136",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Brand 'Decathlon' mistranslated as 'Desai'."
+  },
+  {
+    "id": "j000137",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000138",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate but slightly repetitive phrasing."
+  },
+  {
+    "id": "j000139",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000140",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  }
+]

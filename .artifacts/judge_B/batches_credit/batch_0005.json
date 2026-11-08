@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000101",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000102",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor error: 'chili' translated as 'mustard'."
+  },
+  {
+    "id": "j000103",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000104",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor terminology differences compared to reference."
+  },
+  {
+    "id": "j000105",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000106",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly repetitive phrasing but accurate."
+  },
+  {
+    "id": "j000107",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Excellent detailed translation."
+  },
+  {
+    "id": "j000108",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated table varnish color as chess piece color."
+  },
+  {
+    "id": "j000109",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor style issue: '6在1' should be '6合1'."
+  },
+  {
+    "id": "j000110",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Key flavors (coconut, durian) completely mistranslated."
+  },
+  {
+    "id": "j000111",
+    "rating": "A",
+    "score": 7,
+    "note": "Small word choice issue for 'jar'."
+  },
+  {
+    "id": "j000112",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000113",
+    "rating": "B",
+    "score": 4,
+    "note": "Significant error: 1 million VND became 100,000 CNY."
+  },
+  {
+    "id": "j000114",
+    "rating": "A",
+    "score": 7,
+    "note": "Small error: 'round neck' translated as 'round/polo neck'."
+  },
+  {
+    "id": "j000115",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate technical translation."
+  },
+  {
+    "id": "j000116",
+    "rating": "BB",
+    "score": 5,
+    "note": "Meaning loss: Tencel/Lyocell incorrectly translated as cotton."
+  },
+  {
+    "id": "j000117",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000118",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000119",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000120",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Noticeable error: 'centella asiatica' translated as 'corn'."
+  }
+]
