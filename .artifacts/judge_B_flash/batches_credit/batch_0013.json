@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000261",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation of product title."
+  },
+  {
+    "id": "j000262",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor inaccuracies: brand name transliteration and '手提包' instead of '手提款'."
+  },
+  {
+    "id": "j000263",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Place name error: Sán Đầu (Shantou) mistranslated as 潮州 (Chaozhou)."
+  },
+  {
+    "id": "j000264",
+    "rating": "A",
+    "score": 7,
+    "note": "'Có chỗ ở' mistranslated as '带座位' instead of '可登机'."
+  },
+  {
+    "id": "j000265",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missed final disclaimer sentence; translated both Pour-Over and Pha phin as '滤泡壶'."
+  },
+  {
+    "id": "j000266",
+    "rating": "B",
+    "score": 4,
+    "note": "Severe mistranslation of tea category 'Áo choàng đỏ' (大红袍) as '红色披肩'."
+  },
+  {
+    "id": "j000267",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Thun qua gáy' (headband/neck strap) mistranslated as '耳后透气'."
+  },
+  {
+    "id": "j000268",
+    "rating": "BB",
+    "score": 5,
+    "note": "'cao su non' mistranslated as '非弹性海绵'; missed final VAT disclaimer sentence."
+  },
+  {
+    "id": "j000269",
+    "rating": "CC",
+    "score": 2,
+    "note": "Severe hallucinations: black tea/Feizixiao translated as Tieguanyin, lychee aroma translated as peach."
+  },
+  {
+    "id": "j000270",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation; minor style additions on color naming."
+  },
+  {
+    "id": "j000271",
+    "rating": "BB",
+    "score": 5,
+    "note": "Repetitive hallucination loop at the end that truncates the output."
+  },
+  {
+    "id": "j000272",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Product type mistranslation: manicure cuticle pusher ('Sủi Da') translated as '气泡器'."
+  },
+  {
+    "id": "j000273",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and natural e-commerce translation."
+  },
+  {
+    "id": "j000274",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match and standard e-commerce attribute terms."
+  },
+  {
+    "id": "j000275",
+    "rating": "A",
+    "score": 7,
+    "note": "'Máy Sục Sủi Khí Oxy' awkwardly translated as '气泡机', but meaning is clear."
+  },
+  {
+    "id": "j000276",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'nhẫn' mistranslated as '手镯'; misses the original concept of ring toss."
+  },
+  {
+    "id": "j000277",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and well-structured translation."
+  },
+  {
+    "id": "j000278",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missed domestic e-commerce keyword ('trong nước'); condensed several source terms."
+  },
+  {
+    "id": "j000279",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor attribute value issue ('包装: 1'), overall correct."
+  },
+  {
+    "id": "j000280",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Serious price number error: '20 triệu' (20 million) mistranslated as '20万'."
+  }
+]

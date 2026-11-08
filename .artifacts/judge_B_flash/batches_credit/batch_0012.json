@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000241",
+    "rating": "AA",
+    "score": 8,
+    "note": "Translates well into e-commerce style; slightly simplifies domestic/international e-commerce to 跨境外贸."
+  },
+  {
+    "id": "j000242",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate and natural; 防盗 is more standard than 防扒."
+  },
+  {
+    "id": "j000243",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted target skin type 'Dành Cho Da Khô' (适合干皮)."
+  },
+  {
+    "id": "j000244",
+    "rating": "AA",
+    "score": 8,
+    "note": "Fluent and accurate overall; omitted store platform name Tiki in disclaimer."
+  },
+  {
+    "id": "j000245",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, complete, and natural Chinese phrasing."
+  },
+  {
+    "id": "j000246",
+    "rating": "B",
+    "score": 4,
+    "note": "Completely missed the main product category 'Đồ Chơi Xe Hơi Biến Hình' (变形汽车玩具)."
+  },
+  {
+    "id": "j000247",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 前男友面膜 as 男友面膜 and 平替 as 平面膜替代品."
+  },
+  {
+    "id": "j000248",
+    "rating": "AA",
+    "score": 8,
+    "note": "Well structured; minor color translation discrepancy (mơ translated as 梨色 instead of 杏色)."
+  },
+  {
+    "id": "j000249",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated origin city Sán Đầu (Shantou 汕头) as 潮州 (Chaozhou)."
+  },
+  {
+    "id": "j000250",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor mistranslation of 'Dây đeo' (strap/背带) as 手柄 (handle)."
+  },
+  {
+    "id": "j000251",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'vật tổ' (totem) as '蜘窝' and place name Vân Nghiêm."
+  },
+  {
+    "id": "j000252",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated palm kernel oil as coconut oil, and several chemical/nutrient names."
+  },
+  {
+    "id": "j000253",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Crucial mistranslation throughout: 'hạt é' (basil seed) wrongly translated as '燕麦' (oats)."
+  },
+  {
+    "id": "j000254",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'Làm trắng' as 漂亮 instead of 美白, plus awkward phrasing in attributes."
+  },
+  {
+    "id": "j000255",
+    "rating": "A",
+    "score": 7,
+    "note": "Good overall, but 'thun qua gáy' (headband/nape strap) awkwardly translated as '耳后透气'."
+  },
+  {
+    "id": "j000256",
+    "rating": "A",
+    "score": 7,
+    "note": "Fully intelligible; slightly awkward terminology (气泡机) and omitted thủy sinh."
+  },
+  {
+    "id": "j000257",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, concise, and appropriate terminology."
+  },
+  {
+    "id": "j000258",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate numbers, specs, and product keywords."
+  },
+  {
+    "id": "j000259",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate dimensions and meaning; 防水垫/隔尿垫 is more conventional than 防渗垫."
+  },
+  {
+    "id": "j000260",
+    "rating": "B",
+    "score": 4,
+    "note": "Left Obsidian untranslated, mistranslated Pixiu as 双龙, repetitive and awkward phrasing."
+  }
+]

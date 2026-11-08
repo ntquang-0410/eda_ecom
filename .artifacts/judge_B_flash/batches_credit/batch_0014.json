@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000281",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and complete translation with all specifications and details preserved."
+  },
+  {
+    "id": "j000282",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent translation; all specifications and measurements are preserved correctly."
+  },
+  {
+    "id": "j000283",
+    "rating": "A",
+    "score": 7,
+    "note": "Lacks punctuation/brackets and slightly repetitive title stacking, but meaning is intact."
+  },
+  {
+    "id": "j000284",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Hallucinated and repeated several attributes at the end where source had empty colons."
+  },
+  {
+    "id": "j000285",
+    "rating": "B",
+    "score": 4,
+    "note": "Missed key ingredient 'lô hội' (aloe vera) and mistranslated brand name Boquanya."
+  },
+  {
+    "id": "j000286",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severe mistranslation of flavor variants: 'dừa' (coconut) and 'sầu riêng' (durian) translated as cucumber and nutmeg."
+  },
+  {
+    "id": "j000287",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated pine wood as oak, and mistranslated 'vecny' (varnish) as yellow chess pieces."
+  },
+  {
+    "id": "j000288",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent, accurate e-commerce translation with proper terminology."
+  },
+  {
+    "id": "j000289",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, concise, and natural e-commerce product title translation."
+  },
+  {
+    "id": "j000290",
+    "rating": "AA",
+    "score": 8,
+    "note": "Well-translated with all instructions, numbers, and warnings intact; minor stylistic stiffness."
+  },
+  {
+    "id": "j000291",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation; 'nguyên khối' (monolithic/one-piece) was omitted."
+  },
+  {
+    "id": "j000292",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and well-structured product description translation."
+  },
+  {
+    "id": "j000293",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed 'chụp tai' (over-ear / headphone design) in the title."
+  },
+  {
+    "id": "j000294",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated slit/vent as color contrast and pocket as placket."
+  },
+  {
+    "id": "j000295",
+    "rating": "B",
+    "score": 4,
+    "note": "Multiple mistranslations including workspace corner as angle, idiom as song, and 'cộm vướng' as hurting feet."
+  },
+  {
+    "id": "j000296",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated product category 'Đại hồng bào', mistranslated tea type to jasmine, and packets to cans."
+  },
+  {
+    "id": "j000297",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and concise translation matching standard e-commerce phrasing."
+  },
+  {
+    "id": "j000298",
+    "rating": "A",
+    "score": 7,
+    "note": "Accurate meaning, though '偏光眼镜' is duplicated unnecessarily."
+  },
+  {
+    "id": "j000299",
+    "rating": "AA",
+    "score": 8,
+    "note": "High quality e-commerce title; translated 'cao cấp' slightly freely as '高颜值'."
+  },
+  {
+    "id": "j000300",
+    "rating": "A",
+    "score": 7,
+    "note": "Mistranslated 'glycol' (乙二醇) as '甘油' (glycerol), and minor hashtag boundary merge at end."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000201",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, natural e-commerce title."
+  },
+  {
+    "id": "j000202",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation and proper terminology."
+  },
+  {
+    "id": "j000203",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated brand 'Hefengyu' (和风雨) and missed 'whitening' (làm trắng)."
+  },
+  {
+    "id": "j000204",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate."
+  },
+  {
+    "id": "j000205",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missed 'winter' (đông in thu đông), otherwise very natural."
+  },
+  {
+    "id": "j000206",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000207",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact numbers, units, and terms."
+  },
+  {
+    "id": "j000208",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Untranslated brand/source words 'Kèm NGHĨA', repetitive '双头...2头'."
+  },
+  {
+    "id": "j000209",
+    "rating": "A",
+    "score": 7,
+    "note": "Brand Hefengyu should be 和风雨, otherwise accurate."
+  },
+  {
+    "id": "j000210",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Complete and fluent e-commerce listing."
+  },
+  {
+    "id": "j000211",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000212",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Bộ 5 lõi lọc nước số 1' means 'set of 5 1st-stage filters', not '5-stage filter'."
+  },
+  {
+    "id": "j000213",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation and natural phrasing."
+  },
+  {
+    "id": "j000214",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly repetitive word order, but all information is preserved."
+  },
+  {
+    "id": "j000215",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'sữa rửa mặt' (cleanser) as '面霜' (face cream)."
+  },
+  {
+    "id": "j000216",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000217",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate translation of source text."
+  },
+  {
+    "id": "j000218",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural e-commerce wording, meaning fully preserved."
+  },
+  {
+    "id": "j000219",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Precise product details and terminology."
+  },
+  {
+    "id": "j000220",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate, slightly Europeanized phrasing with '带吸管的'."
+  }
+]
