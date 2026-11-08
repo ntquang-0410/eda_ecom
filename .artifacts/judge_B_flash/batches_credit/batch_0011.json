@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000221",
+    "rating": "B",
+    "score": 4,
+    "note": "\"nước mắm\" (fish sauce) is mistranslated as \"酱油\" (soy sauce)."
+  },
+  {
+    "id": "j000222",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate and natural; \"微乳洁面水/卸妆水\" correctly conveys the product type."
+  },
+  {
+    "id": "j000223",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor repetition in the opening sentence, but meaning is fully preserved."
+  },
+  {
+    "id": "j000224",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and adheres well to e-commerce listing conventions."
+  },
+  {
+    "id": "j000225",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslations in attributes: \"Màu mơ\" (apricot) translated as \"梦色\", \"thói quen\" as \"休闲\"."
+  },
+  {
+    "id": "j000226",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and standard e-commerce phrasing, matches source completely."
+  },
+  {
+    "id": "j000227",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Ingredient error: \"Mè Đen\" (black sesame) mistranslated as \"黑豆\" (black bean)."
+  },
+  {
+    "id": "j000228",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Faithful and fluent translation with all specs and numbers preserved."
+  },
+  {
+    "id": "j000229",
+    "rating": "CCC",
+    "score": 3,
+    "note": "\"Lá Dứa / Lá Nếp\" (pandan leaf) mistranslated as \"菠萝叶/叶网\"."
+  },
+  {
+    "id": "j000230",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate product title translation without errors."
+  },
+  {
+    "id": "j000231",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Ingredient error: \"Mè Đen\" (black sesame) mistranslated as \"黑豆\" (black bean)."
+  },
+  {
+    "id": "j000232",
+    "rating": "A",
+    "score": 7,
+    "note": "Non-standard term \"溶解咖啡\" used instead of \"速溶咖啡\", but understandable."
+  },
+  {
+    "id": "j000233",
+    "rating": "A",
+    "score": 7,
+    "note": "\"Hồ bơi\" (pool) translated as \"池塘\" (pond); overall usable."
+  },
+  {
+    "id": "j000234",
+    "rating": "A",
+    "score": 7,
+    "note": "Number error in disclaimer: \"1 triệu\" (1 million / 100万) mistranslated as \"10 万\"."
+  },
+  {
+    "id": "j000235",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, standard e-commerce title phrasing."
+  },
+  {
+    "id": "j000236",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severe mistranslations: tea name \"Feizixiao\" replaced by \"铁观音\", and \"vải thiều\" (lychee) mistranslated."
+  },
+  {
+    "id": "j000237",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severe mistranslations: \"Feizixiao\" translated as \"铁观音\", \"vải thiều\" translated as \"蜜枣\"."
+  },
+  {
+    "id": "j000238",
+    "rating": "BB",
+    "score": 5,
+    "note": "Brand \"Đất Cà Phê\" awkwardly translated literally as \"咖啡土\"; several phrasing issues."
+  },
+  {
+    "id": "j000239",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, complete, and fluent translation."
+  },
+  {
+    "id": "j000240",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Core product mistranslation: \"bạt phủ xe\" (car cover/车衣) translated as \"汽车贴膜\" (car film)."
+  }
+]

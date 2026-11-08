@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000181",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000182",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000183",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural transliteration."
+  },
+  {
+    "id": "j000184",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'hoa Cúc' (chrysanthemum) as '向日葵' (sunflower)."
+  },
+  {
+    "id": "j000185",
+    "rating": "AA",
+    "score": 8,
+    "note": "Fluent e-commerce listing; 'xanh' translated as blue instead of green."
+  },
+  {
+    "id": "j000186",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'安全用于用户' and '正品高级一级' are stiff and unnatural."
+  },
+  {
+    "id": "j000187",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000188",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of dimensions."
+  },
+  {
+    "id": "j000189",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severe mistranslations: 'Tailor' as '尾', 'không nặng tóc' as '不重质'."
+  },
+  {
+    "id": "j000190",
+    "rating": "B",
+    "score": 4,
+    "note": "Missing the core product noun 'Xe đạp' (自行车)."
+  },
+  {
+    "id": "j000191",
+    "rating": "A",
+    "score": 7,
+    "note": "Word order is slightly awkward ('即食' placement), but meaning is preserved."
+  },
+  {
+    "id": "j000192",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural e-commerce listing title with correct keywords."
+  },
+  {
+    "id": "j000193",
+    "rating": "A",
+    "score": 7,
+    "note": "'灰暖' is an unnatural inversion of '暖灰'."
+  },
+  {
+    "id": "j000194",
+    "rating": "A",
+    "score": 7,
+    "note": "Usable, though '热塑性TPU' is standard."
+  },
+  {
+    "id": "j000195",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent and fully accurate e-commerce title."
+  },
+  {
+    "id": "j000196",
+    "rating": "A",
+    "score": 7,
+    "note": "'像羊绒' is somewhat literal for product phrasing."
+  },
+  {
+    "id": "j000197",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'tam giác vuông' (right triangle) as '方形' (square)."
+  },
+  {
+    "id": "j000198",
+    "rating": "BB",
+    "score": 5,
+    "note": "Omitted 'cotton giặt mềm mại như cashmere' (水洗棉/仿羊绒)."
+  },
+  {
+    "id": "j000199",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, complete, and natural e-commerce listing title."
+  },
+  {
+    "id": "j000200",
+    "rating": "A",
+    "score": 7,
+    "note": "'袋装' is slightly unnatural for 'Túi' (usually 包/包包), but usable."
+  }
+]

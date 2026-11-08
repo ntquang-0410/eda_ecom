@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000141",
+    "rating": "A",
+    "score": 7,
+    "note": "Repetitive phrasing and missed 'toàn diện' (full protection), but usable."
+  },
+  {
+    "id": "j000142",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate, minor spacing and formatting issues in the model name."
+  },
+  {
+    "id": "j000143",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated timer/stopwatch as '手表' (wristwatch)."
+  },
+  {
+    "id": "j000144",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000145",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000146",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed 'Dành Cho Da Khô' (for dry skin), main info preserved."
+  },
+  {
+    "id": "j000147",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, clear, and preserves all details."
+  },
+  {
+    "id": "j000148",
+    "rating": "A",
+    "score": 7,
+    "note": "Repetitive wording and missed 'bảo vệ toàn diện' nuance."
+  },
+  {
+    "id": "j000149",
+    "rating": "C",
+    "score": 1,
+    "note": "Severe hallucination loop ('雾面...') and missing key information."
+  },
+  {
+    "id": "j000150",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated countdown timer/stopwatch as '手表' (wristwatch)."
+  },
+  {
+    "id": "j000151",
+    "rating": "B",
+    "score": 4,
+    "note": "'làm sẵn' (in-stock/ready-made) translated inversely as '可定做' (customizable)."
+  },
+  {
+    "id": "j000152",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000153",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000154",
+    "rating": "B",
+    "score": 4,
+    "note": "Omitted 'hai món' (two-piece set) and hallucinated '双肩包' (backpack)."
+  },
+  {
+    "id": "j000155",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated '5 lõi lọc số 1' (5 units of filter #1) as '5号滤芯'."
+  },
+  {
+    "id": "j000156",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000157",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title."
+  },
+  {
+    "id": "j000158",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Standard, accurate translation."
+  },
+  {
+    "id": "j000159",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000160",
+    "rating": "C",
+    "score": 1,
+    "note": "Untranslated Vietnamese source."
+  }
+]

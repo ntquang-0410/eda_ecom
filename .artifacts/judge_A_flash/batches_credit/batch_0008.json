@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000161",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and accurate translation."
+  },
+  {
+    "id": "j000162",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor word choices: 煮 instead of 焖, 使用 instead of 食用."
+  },
+  {
+    "id": "j000163",
+    "rating": "A",
+    "score": 7,
+    "note": "Slightly awkward phrasing at the end; meaning well preserved."
+  },
+  {
+    "id": "j000164",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Multiple mistranslations in colors and names (Smith->艾米丽, quartz->欧米伽)."
+  },
+  {
+    "id": "j000165",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Model code kept accurately."
+  },
+  {
+    "id": "j000166",
+    "rating": "BB",
+    "score": 5,
+    "note": "Untranslated Vietnamese word 'cam' at the beginning."
+  },
+  {
+    "id": "j000167",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation, minor stylistic phrasing differences."
+  },
+  {
+    "id": "j000168",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000169",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Omitted 'Dành Cho Da Khô' (for dry skin)."
+  },
+  {
+    "id": "j000170",
+    "rating": "A",
+    "score": 7,
+    "note": "HongKong left untranslated; 盐烤粉 is slightly off."
+  },
+  {
+    "id": "j000171",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000172",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and matches reference perfectly."
+  },
+  {
+    "id": "j000173",
+    "rating": "AA",
+    "score": 8,
+    "note": "HongKong left untranslated; otherwise accurate."
+  },
+  {
+    "id": "j000174",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Proper noun accurately preserved."
+  },
+  {
+    "id": "j000175",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Source text in Chinese, perfectly preserved."
+  },
+  {
+    "id": "j000176",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Brand and model accurately translated."
+  },
+  {
+    "id": "j000177",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Truncated at the very end, missing unit and noun."
+  },
+  {
+    "id": "j000178",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing number 3 and slight hallucination (水感柔雾)."
+  },
+  {
+    "id": "j000179",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward word order ('女童休闲长裤男童') and omitted '外穿'."
+  },
+  {
+    "id": "j000180",
+    "rating": "BB",
+    "score": 5,
+    "note": "Hallucinated '水晶' (crystal) and inverted color modifiers."
+  }
+]
