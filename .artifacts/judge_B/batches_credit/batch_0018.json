@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000361",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'đế độn' (platform sole) as '绒底' (velvet bottom)."
+  },
+  {
+    "id": "j000362",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'cao su non' (memory foam) as '非弹性' (non-elastic)."
+  },
+  {
+    "id": "j000363",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000364",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000365",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000366",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000367",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Hallucinated '拉丁语' (Latin) for 'Mô tả' (Description)."
+  },
+  {
+    "id": "j000368",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000369",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000370",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'Arbutin' (熊果苷) as '阿甘果' (Argan)."
+  },
+  {
+    "id": "j000371",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000372",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Critical error: 'Nước mắm' (fish sauce) translated as '酱油' (soy sauce)."
+  },
+  {
+    "id": "j000373",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000374",
+    "rating": "AA",
+    "score": 8,
+    "note": "Used '防护套' instead of the standard '避孕套' for condoms."
+  },
+  {
+    "id": "j000375",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000376",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000377",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000378",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'Kỵ sĩ' (Knight) and 'Gót xuồng' (Wedge heel)."
+  },
+  {
+    "id": "j000379",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000380",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  }
+]

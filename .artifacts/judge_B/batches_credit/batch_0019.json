@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000381",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of all e-commerce keywords."
+  },
+  {
+    "id": "j000382",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'Vải Dệt' (woven fabric) as '皮带' (leather belt)."
+  },
+  {
+    "id": "j000383",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Excellent translation, preserved all details and formatting."
+  },
+  {
+    "id": "j000384",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor issue: 'kip khỉ' kept as is instead of translating 'khỉ' (monkey)."
+  },
+  {
+    "id": "j000385",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural terminology."
+  },
+  {
+    "id": "j000386",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct translation."
+  },
+  {
+    "id": "j000387",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000388",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'tam giác vuông' (right triangle) as '方形' (square)."
+  },
+  {
+    "id": "j000389",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'dưa lưới' (muskmelon) as '黄瓜' (cucumber)."
+  },
+  {
+    "id": "j000390",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor issue: 'SIÊU HOT' left untranslated."
+  },
+  {
+    "id": "j000391",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Precise translation of technical specifications."
+  },
+  {
+    "id": "j000392",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000393",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor error: 'Màu mơ' (apricot) translated as '梦色' (dream color)."
+  },
+  {
+    "id": "j000394",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000395",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Significant numerical error: '1 triệu' (1 million) translated as '10 万' (100k)."
+  },
+  {
+    "id": "j000396",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of cosmetic specifications."
+  },
+  {
+    "id": "j000397",
+    "rating": "A",
+    "score": 7,
+    "note": "Kept 'Obsidian' in English and missed 'có bóng' (has ball)."
+  },
+  {
+    "id": "j000398",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000399",
+    "rating": "BB",
+    "score": 5,
+    "note": "Geographic error: 'Đà Lạt' translated as '芽庄' (Nha Trang)."
+  },
+  {
+    "id": "j000400",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of all dimensions and specs."
+  }
+]
