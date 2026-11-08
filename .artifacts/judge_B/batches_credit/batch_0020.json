@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000401",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000402",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missed 'Vaseline' in product name; 'Sán Đầu' translated as region instead of city."
+  },
+  {
+    "id": "j000403",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000404",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000405",
+    "rating": "AA",
+    "score": 8,
+    "note": "Correct, though kept brand in English."
+  },
+  {
+    "id": "j000406",
+    "rating": "BB",
+    "score": 5,
+    "note": "Wrong term for whitening; significant loss of detail in keywords."
+  },
+  {
+    "id": "j000407",
+    "rating": "CC",
+    "score": 2,
+    "note": "Mistranslated 'Cúc' (Chrysanthemum) as '向日葵' (Sunflower)."
+  },
+  {
+    "id": "j000408",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000409",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000410",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000411",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000412",
+    "rating": "AA",
+    "score": 8,
+    "note": "Correct, slightly awkward phrasing."
+  },
+  {
+    "id": "j000413",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Critical error: translated 'Eyebrow pencil' as 'Eyeliner'."
+  },
+  {
+    "id": "j000414",
+    "rating": "BB",
+    "score": 5,
+    "note": "Multiple terminology errors: 'spliced' as 'jumpsuit', 'slit' as 'holes', 'pocket' as 'placket'."
+  },
+  {
+    "id": "j000415",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural e-commerce style, fully correct."
+  },
+  {
+    "id": "j000416",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000417",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'totem' as 'bird's nest' and city name error."
+  },
+  {
+    "id": "j000418",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000419",
+    "rating": "CC",
+    "score": 2,
+    "note": "Mistranslated 'cuticle pusher' as 'aerator/bubbler'."
+  },
+  {
+    "id": "j000420",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  }
+]
