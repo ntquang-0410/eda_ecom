@@ -1,0 +1,70 @@
+{
+  "prompt_version": "plan_b_rtx_v5",
+  "runs": [
+    {
+      "model_key": "qwen3-0.6b",
+      "n_done": 29446,
+      "n_total": 29446,
+      "n_good": 27535,
+      "good_rate": 0.9351,
+      "variant_scores": {
+        "brand_aware": 0.825,
+        "no_key": 0.8625,
+        "v4_fewshot": 0.7375
+      },
+      "chosen_variant": "no_key",
+      "stopped": "completed",
+      "elapsed_min": 149.0,
+      "updated_at": "2026-10-31T17:58:01Z"
+    },
+    {
+      "model_key": "qwen3-1.7b",
+      "n_done": 29446,
+      "n_total": 29446,
+      "n_good": 29029,
+      "good_rate": 0.9858,
+      "variant_scores": {
+        "brand_aware": 0.9625,
+        "no_key": 0.9625,
+        "v4_fewshot": 0.85
+      },
+      "chosen_variant": "brand_aware",
+      "stopped": "completed",
+      "elapsed_min": 62.2,
+      "updated_at": "2026-10-31T19:00:48Z"
+    },
+    {
+      "model_key": "qwen3-4b",
+      "n_done": 29446,
+      "n_total": 29446,
+      "n_good": 29353,
+      "good_rate": 0.9968,
+      "variant_scores": {
+        "brand_aware": 0.9875,
+        "no_key": 0.975,
+        "v4_fewshot": 0.9875
+      },
+      "chosen_variant": "brand_aware",
+      "stopped": "completed",
+      "elapsed_min": 53.5,
+      "updated_at": "2026-10-31T19:55:40Z"
+    },
+    {
+      "model_key": "qwen3-8b",
+      "n_done": 29446,
+      "n_total": 29446,
+      "n_good": 29393,
+      "good_rate": 0.9982,
+      "variant_scores": {
+        "brand_aware": 0.9875,
+        "no_key": 0.9875,
+        "v4_fewshot": 0.9875
+      },
+      "chosen_variant": "brand_aware",
+      "stopped": "completed",
+      "elapsed_min": 91.2,
+      "updated_at": "2026-10-31T21:29:39Z"
+    }
+  ],
+  "written_at": "2026-10-31T21:29:39Z"
+}

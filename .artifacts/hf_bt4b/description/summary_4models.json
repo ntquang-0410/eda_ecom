@@ -1,0 +1,26 @@
+{
+  "prompt_version": "plan_b_desc_v1",
+  "runs": [
+    {
+      "model": "qwen3-0.6b",
+      "rows": 13200,
+      "good_rate": 0.6684,
+      "stopped": "completed",
+      "minutes": 340.4
+    },
+    {
+      "model": "qwen3-1.7b",
+      "rows": 13200,
+      "good_rate": 0.7235,
+      "stopped": "completed",
+      "minutes": 245.5
+    },
+    {
+      "model": "qwen3-4b",
+      "rows": 5900,
+      "good_rate": 0.9303,
+      "stopped": "time_budget",
+      "minutes": 74.1
+    }
+  ]
+}

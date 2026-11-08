@@ -1,0 +1,7 @@
+{
+  "model": "qwen3-4b",
+  "rows": 5900,
+  "good_rate": 0.9303,
+  "stopped": "time_budget",
+  "minutes": 74.1
+}

@@ -1,0 +1,303 @@
+[{"stream_name":"stderr","time":8.319607047,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":8.319631487,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":9.612865088,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.612881808000001,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.612883348,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.612884498,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.108506976,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.108527406,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.108528996,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.108530066,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":56.937472941,"data":"torch 2.11.0+cu130 | transformers 5.20.2\n"}
+,{"stream_name":"stdout","time":56.937490811,"data":"cuda True\n"}
+,{"stream_name":"stdout","time":56.937492791,"data":"gpu NVIDIA RTX PRO 6000 Blackwell Server Edition 102.0 GB\n"}
+,{"stream_name":"stdout","time":56.94184893,"data":"deadline min 660\n"}
+,{"stream_name":"stdout","time":59.208704628,"data":"input /kaggle/input/datasets/nadsa091/tiki-description-input/description.parquet (13200, 14)\n"}
+,{"stream_name":"stdout","time":59.208731368,"data":"rows 13200 tokens 5230013\n"}
+,{"stream_name":"stdout","time":59.208733418,"data":"               pair_id                                                                                                                                                                                                                                                                                              source_text\n"}
+,{"stream_name":"stdout","time":59.208735808,"data":"0  tiki:278102658:desc  Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước n\n"}
+,{"stream_name":"stdout","time":60.491834062,"data":"qwen3-4b kagglehub /kaggle/input/models/qwen-lm/qwen-3/transformers/4b/1\n"}
+,{"stream_name":"stdout","time":60.907140979,"data":"qwen3-4b loading...\n"}
+,{"stream_name":"stdout","time":144.020231958,"data":"qwen3-4b loaded | alloc GB 8.1\n"}
+,{"stream_name":"stdout","time":155.558955103,"data":"qwen3-4b 100 / 13200 good 1.0\n"}
+,{"stream_name":"stdout","time":170.520337408,"data":"qwen3-4b 200 / 13200 good 0.995\n"}
+,{"stream_name":"stdout","time":192.671531545,"data":"qwen3-4b 300 / 13200 good 0.99\n"}
+,{"stream_name":"stdout","time":216.521143732,"data":"qwen3-4b 400 / 13200 good 0.978\n"}
+,{"stream_name":"stdout","time":244.692962633,"data":"qwen3-4b 500 / 13200 good 0.976\n"}
+,{"stream_name":"stdout","time":273.730254916,"data":"qwen3-4b 600 / 13200 good 0.973\n"}
+,{"stream_name":"stdout","time":302.968093927,"data":"qwen3-4b 700 / 13200 good 0.969\n"}
+,{"stream_name":"stdout","time":336.14348142,"data":"qwen3-4b 800 / 13200 good 0.96\n"}
+,{"stream_name":"stdout","time":367.664943163,"data":"qwen3-4b 900 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":404.526705901,"data":"qwen3-4b 1000 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":440.724460589,"data":"qwen3-4b 1100 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":478.930508869,"data":"qwen3-4b 1200 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":516.268405993,"data":"qwen3-4b 1300 / 13200 good 0.959\n"}
+,{"stream_name":"stdout","time":563.033178056,"data":"qwen3-4b 1400 / 13200 good 0.959\n"}
+,{"stream_name":"stdout","time":604.331093335,"data":"qwen3-4b 1500 / 13200 good 0.955\n"}
+,{"stream_name":"stdout","time":648.840849104,"data":"qwen3-4b 1600 / 13200 good 0.95\n"}
+,{"stream_name":"stdout","time":713.451889015,"data":"qwen3-4b 1700 / 13200 good 0.944\n"}
+,{"stream_name":"stdout","time":756.055010354,"data":"qwen3-4b 1800 / 13200 good 0.941\n"}
+,{"stream_name":"stdout","time":801.0891393,"data":"qwen3-4b 1900 / 13200 good 0.939\n"}
+,{"stream_name":"stdout","time":846.190664558,"data":"qwen3-4b 2000 / 13200 good 0.938\n"}
+,{"stream_name":"stdout","time":892.593835528,"data":"qwen3-4b 2100 / 13200 good 0.934\n"}
+,{"stream_name":"stdout","time":938.156455491,"data":"qwen3-4b 2200 / 13200 good 0.935\n"}
+,{"stream_name":"stdout","time":992.997179633,"data":"qwen3-4b 2300 / 13200 good 0.933\n"}
+,{"stream_name":"stdout","time":1043.914894353,"data":"qwen3-4b 2400 / 13200 good 0.931\n"}
+,{"stream_name":"stdout","time":1091.83319706,"data":"qwen3-4b 2500 / 13200 good 0.932\n"}
+,{"stream_name":"stdout","time":1145.797866792,"data":"qwen3-4b 2600 / 13200 good 0.931\n"}
+,{"stream_name":"stdout","time":1196.191493235,"data":"qwen3-4b 2700 / 13200 good 0.931\n"}
+,{"stream_name":"stdout","time":1247.954830557,"data":"qwen3-4b 2800 / 13200 good 0.931\n"}
+,{"stream_name":"stdout","time":1301.23998802,"data":"qwen3-4b 2900 / 13200 good 0.931\n"}
+,{"stream_name":"stdout","time":1357.778990131,"data":"qwen3-4b 3000 / 13200 good 0.932\n"}
+,{"stream_name":"stdout","time":1442.892873266,"data":"qwen3-4b 3100 / 13200 good 0.933\n"}
+,{"stream_name":"stdout","time":1521.594919187,"data":"qwen3-4b 3200 / 13200 good 0.933\n"}
+,{"stream_name":"stdout","time":1579.571846986,"data":"qwen3-4b 3300 / 13200 good 0.933\n"}
+,{"stream_name":"stdout","time":1647.583057702,"data":"qwen3-4b 3400 / 13200 good 0.934\n"}
+,{"stream_name":"stdout","time":1709.808404963,"data":"qwen3-4b 3500 / 13200 good 0.935\n"}
+,{"stream_name":"stdout","time":1775.538302058,"data":"qwen3-4b 3600 / 13200 good 0.936\n"}
+,{"stream_name":"stdout","time":1842.24426679,"data":"qwen3-4b 3700 / 13200 good 0.935\n"}
+,{"stream_name":"stdout","time":1933.428183222,"data":"qwen3-4b 3800 / 13200 good 0.934\n"}
+,{"stream_name":"stdout","time":2022.817202558,"data":"qwen3-4b 3900 / 13200 good 0.933\n"}
+,{"stream_name":"stdout","time":2090.240073729,"data":"qwen3-4b 4000 / 13200 good 0.932\n"}
+,{"stream_name":"stdout","time":2159.550685542,"data":"qwen3-4b 4100 / 13200 good 0.932\n"}
+,{"stream_name":"stdout","time":2226.052447812,"data":"qwen3-4b 4200 / 13200 good 0.932\n"}
+,{"stream_name":"stdout","time":2304.336443293,"data":"qwen3-4b 4300 / 13200 good 0.932\n"}
+,{"stream_name":"stdout","time":2376.336219031,"data":"qwen3-4b 4400 / 13200 good 0.933\n"}
+,{"stream_name":"stdout","time":2450.753285878,"data":"qwen3-4b 4500 / 13200 good 0.933\n"}
+,{"stream_name":"stdout","time":2553.154141899,"data":"qwen3-4b 4600 / 13200 good 0.932\n"}
+,{"stream_name":"stdout","time":2649.347053061,"data":"qwen3-4b 4700 / 13200 good 0.932\n"}
+,{"stream_name":"stdout","time":2722.679721991,"data":"qwen3-4b 4800 / 13200 good 0.932\n"}
+,{"stream_name":"stdout","time":2799.385377634,"data":"qwen3-4b 4900 / 13200 good 0.932\n"}
+,{"stream_name":"stdout","time":2878.355555195,"data":"qwen3-4b 5000 / 13200 good 0.931\n"}
+,{"stream_name":"stdout","time":2976.819201445,"data":"qwen3-4b 5100 / 13200 good 0.93\n"}
+,{"stream_name":"stdout","time":3065.213231434,"data":"qwen3-4b 5200 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":3170.482193314,"data":"qwen3-4b 5300 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":3276.360534378,"data":"qwen3-4b 5400 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":3363.887647424,"data":"qwen3-4b 5500 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":3458.845627406,"data":"qwen3-4b 5600 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":3568.971538171,"data":"qwen3-4b 5700 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":3668.930442223,"data":"qwen3-4b 5800 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":3758.902434277,"data":"qwen3-4b 5900 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":3852.979426419,"data":"qwen3-4b 6000 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":3991.345223868,"data":"qwen3-4b 6100 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":4092.094448116,"data":"qwen3-4b 6200 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":4194.624289514,"data":"qwen3-4b 6300 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":4302.191179401,"data":"qwen3-4b 6400 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":4404.959148937,"data":"qwen3-4b 6500 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":4514.916392238,"data":"qwen3-4b 6600 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":4643.314243413,"data":"qwen3-4b 6700 / 13200 good 0.93\n"}
+,{"stream_name":"stdout","time":4762.504535691,"data":"qwen3-4b 6800 / 13200 good 0.93\n"}
+,{"stream_name":"stdout","time":4894.027480915,"data":"qwen3-4b 6900 / 13200 good 0.93\n"}
+,{"stream_name":"stdout","time":5026.294515445,"data":"qwen3-4b 7000 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":5160.611092557,"data":"qwen3-4b 7100 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":5294.49377706,"data":"qwen3-4b 7200 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":5426.302097505,"data":"qwen3-4b 7300 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":5546.379427861,"data":"qwen3-4b 7400 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":5687.309716929,"data":"qwen3-4b 7500 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":5811.100460426,"data":"qwen3-4b 7600 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":5957.528080888,"data":"qwen3-4b 7700 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":6125.022351688,"data":"qwen3-4b 7800 / 13200 good 0.93\n"}
+,{"stream_name":"stdout","time":6264.819205706,"data":"qwen3-4b 7900 / 13200 good 0.93\n"}
+,{"stream_name":"stdout","time":6437.760039029,"data":"qwen3-4b 8000 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":6585.958052984,"data":"qwen3-4b 8100 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":6722.121427509,"data":"qwen3-4b 8200 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":6859.521767975,"data":"qwen3-4b 8300 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":7001.892999142,"data":"qwen3-4b 8400 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":7145.145409383,"data":"qwen3-4b 8500 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":7286.839579941,"data":"qwen3-4b 8600 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":7440.057131689,"data":"qwen3-4b 8700 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":7592.670348648,"data":"qwen3-4b 8800 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":7755.302162692,"data":"qwen3-4b 8900 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":7940.640578119,"data":"qwen3-4b 9000 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":8160.993978757,"data":"qwen3-4b 9100 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":8310.641849055,"data":"qwen3-4b 9200 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":8478.332059846,"data":"qwen3-4b 9300 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":8691.371150352,"data":"qwen3-4b 9400 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":8907.97892016,"data":"qwen3-4b 9500 / 13200 good 0.929\n"}
+,{"stream_name":"stdout","time":9113.666826472,"data":"qwen3-4b 9600 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":9287.854335873,"data":"qwen3-4b 9700 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":9493.589369992,"data":"qwen3-4b 9800 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":9706.821729369,"data":"qwen3-4b 9900 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":9908.718469303,"data":"qwen3-4b 10000 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":10148.164906354,"data":"qwen3-4b 10100 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":10363.99327162,"data":"qwen3-4b 10200 / 13200 good 0.928\n"}
+,{"stream_name":"stdout","time":10583.204890932,"data":"qwen3-4b 10300 / 13200 good 0.927\n"}
+,{"stream_name":"stdout","time":10825.13897838,"data":"qwen3-4b 10400 / 13200 good 0.927\n"}
+,{"stream_name":"stdout","time":11070.071991591,"data":"qwen3-4b 10500 / 13200 good 0.927\n"}
+,{"stream_name":"stdout","time":11297.605281562,"data":"qwen3-4b 10600 / 13200 good 0.927\n"}
+,{"stream_name":"stdout","time":11556.698604912,"data":"qwen3-4b 10700 / 13200 good 0.926\n"}
+,{"stream_name":"stdout","time":11786.056131676,"data":"qwen3-4b 10800 / 13200 good 0.926\n"}
+,{"stream_name":"stdout","time":12038.631745108,"data":"qwen3-4b 10900 / 13200 good 0.926\n"}
+,{"stream_name":"stdout","time":12333.792136054,"data":"qwen3-4b 11000 / 13200 good 0.925\n"}
+,{"stream_name":"stdout","time":12622.423823547,"data":"qwen3-4b 11100 / 13200 good 0.925\n"}
+,{"stream_name":"stdout","time":12894.443058017,"data":"qwen3-4b 11200 / 13200 good 0.924\n"}
+,{"stream_name":"stdout","time":13196.195936267,"data":"qwen3-4b 11300 / 13200 good 0.923\n"}
+,{"stream_name":"stdout","time":13506.156404975,"data":"qwen3-4b 11400 / 13200 good 0.923\n"}
+,{"stream_name":"stdout","time":13800.965739889,"data":"qwen3-4b 11500 / 13200 good 0.923\n"}
+,{"stream_name":"stdout","time":14111.845249367,"data":"qwen3-4b 11600 / 13200 good 0.923\n"}
+,{"stream_name":"stdout","time":14434.837479796,"data":"qwen3-4b 11700 / 13200 good 0.923\n"}
+,{"stream_name":"stdout","time":14710.911788307,"data":"qwen3-4b 11800 / 13200 good 0.922\n"}
+,{"stream_name":"stdout","time":15043.238207723,"data":"qwen3-4b 11900 / 13200 good 0.922\n"}
+,{"stream_name":"stdout","time":15402.138682092,"data":"qwen3-4b 12000 / 13200 good 0.921\n"}
+,{"stream_name":"stdout","time":15762.418391881,"data":"qwen3-4b 12100 / 13200 good 0.921\n"}
+,{"stream_name":"stdout","time":16127.066284555,"data":"qwen3-4b 12200 / 13200 good 0.92\n"}
+,{"stream_name":"stdout","time":16497.151018389,"data":"qwen3-4b 12300 / 13200 good 0.919\n"}
+,{"stream_name":"stdout","time":16878.791920688,"data":"qwen3-4b 12400 / 13200 good 0.918\n"}
+,{"stream_name":"stdout","time":17257.253110077,"data":"qwen3-4b 12500 / 13200 good 0.917\n"}
+,{"stream_name":"stdout","time":17639.571742349,"data":"qwen3-4b 12600 / 13200 good 0.916\n"}
+,{"stream_name":"stdout","time":18041.230633228,"data":"qwen3-4b 12700 / 13200 good 0.915\n"}
+,{"stream_name":"stdout","time":18436.140952032,"data":"qwen3-4b 12800 / 13200 good 0.912\n"}
+,{"stream_name":"stdout","time":18831.049196057,"data":"qwen3-4b 12900 / 13200 good 0.907\n"}
+,{"stream_name":"stdout","time":19005.401261021,"data":"qwen3-4b 13000 / 13200 good 0.9\n"}
+,{"stream_name":"stdout","time":19179.770168764,"data":"qwen3-4b 13100 / 13200 good 0.894\n"}
+,{"stream_name":"stdout","time":19354.100691943,"data":"qwen3-4b 13200 / 13200 good 0.887\n"}
+,{"stream_name":"stdout","time":19354.298715773,"data":"qwen3-4b DONE {'model': 'qwen3-4b', 'rows': 13200, 'good_rate': 0.8873, 'stopped': 'completed', 'minutes': 320.2}\n"}
+,{"stream_name":"stdout","time":19354.848075473,"data":"qwen3-8b kagglehub /kaggle/input/models/qwen-lm/qwen-3/transformers/8b/1\n"}
+,{"stream_name":"stdout","time":19355.113352352,"data":"qwen3-8b loading...\n"}
+,{"stream_name":"stdout","time":19516.087053455,"data":"qwen3-8b loaded | alloc GB 16.4\n"}
+,{"stream_name":"stdout","time":19531.05831421,"data":"qwen3-8b 100 / 13200 good 1.0\n"}
+,{"stream_name":"stdout","time":19556.682532854,"data":"qwen3-8b 200 / 13200 good 0.985\n"}
+,{"stream_name":"stdout","time":19592.560315596,"data":"qwen3-8b 300 / 13200 good 0.98\n"}
+,{"stream_name":"stdout","time":19631.90311164,"data":"qwen3-8b 400 / 13200 good 0.983\n"}
+,{"stream_name":"stdout","time":19677.215309067,"data":"qwen3-8b 500 / 13200 good 0.982\n"}
+,{"stream_name":"stdout","time":19723.955458012,"data":"qwen3-8b 600 / 13200 good 0.977\n"}
+,{"stream_name":"stdout","time":19772.570784875,"data":"qwen3-8b 700 / 13200 good 0.973\n"}
+,{"stream_name":"stdout","time":19824.076603645,"data":"qwen3-8b 800 / 13200 good 0.971\n"}
+,{"stream_name":"stdout","time":19875.495249229,"data":"qwen3-8b 900 / 13200 good 0.972\n"}
+,{"stream_name":"stdout","time":19935.767457224,"data":"qwen3-8b 1000 / 13200 good 0.969\n"}
+,{"stream_name":"stdout","time":19993.633733832,"data":"qwen3-8b 1100 / 13200 good 0.967\n"}
+,{"stream_name":"stdout","time":20056.09851023,"data":"qwen3-8b 1200 / 13200 good 0.968\n"}
+,{"stream_name":"stdout","time":20116.423294992,"data":"qwen3-8b 1300 / 13200 good 0.968\n"}
+,{"stream_name":"stdout","time":20209.466843717,"data":"qwen3-8b 1400 / 13200 good 0.967\n"}
+,{"stream_name":"stdout","time":20273.451160971,"data":"qwen3-8b 1500 / 13200 good 0.969\n"}
+,{"stream_name":"stdout","time":20362.634884303,"data":"qwen3-8b 1600 / 13200 good 0.969\n"}
+,{"stream_name":"stdout","time":20432.344670999,"data":"qwen3-8b 1700 / 13200 good 0.968\n"}
+,{"stream_name":"stdout","time":20503.981398857,"data":"qwen3-8b 1800 / 13200 good 0.967\n"}
+,{"stream_name":"stdout","time":20574.14986681,"data":"qwen3-8b 1900 / 13200 good 0.967\n"}
+,{"stream_name":"stdout","time":20645.958345231,"data":"qwen3-8b 2000 / 13200 good 0.968\n"}
+,{"stream_name":"stdout","time":20721.708963784,"data":"qwen3-8b 2100 / 13200 good 0.967\n"}
+,{"stream_name":"stdout","time":20794.418179773,"data":"qwen3-8b 2200 / 13200 good 0.967\n"}
+,{"stream_name":"stdout","time":20875.283243671,"data":"qwen3-8b 2300 / 13200 good 0.968\n"}
+,{"stream_name":"stdout","time":20953.161344102,"data":"qwen3-8b 2400 / 13200 good 0.969\n"}
+,{"stream_name":"stdout","time":21030.942888658,"data":"qwen3-8b 2500 / 13200 good 0.968\n"}
+,{"stream_name":"stdout","time":21113.66992897,"data":"qwen3-8b 2600 / 13200 good 0.968\n"}
+,{"stream_name":"stdout","time":21189.345642383,"data":"qwen3-8b 2700 / 13200 good 0.97\n"}
+,{"stream_name":"stdout","time":21274.938346232,"data":"qwen3-8b 2800 / 13200 good 0.969\n"}
+,{"stream_name":"stdout","time":21360.768054328,"data":"qwen3-8b 2900 / 13200 good 0.97\n"}
+,{"stream_name":"stdout","time":21448.542667452,"data":"qwen3-8b 3000 / 13200 good 0.97\n"}
+,{"stream_name":"stdout","time":21565.341581103,"data":"qwen3-8b 3100 / 13200 good 0.97\n"}
+,{"stream_name":"stdout","time":21702.41389677,"data":"qwen3-8b 3200 / 13200 good 0.969\n"}
+,{"stream_name":"stdout","time":21788.333761012,"data":"qwen3-8b 3300 / 13200 good 0.97\n"}
+,{"stream_name":"stdout","time":21884.128799402,"data":"qwen3-8b 3400 / 13200 good 0.97\n"}
+,{"stream_name":"stdout","time":21981.917383777,"data":"qwen3-8b 3500 / 13200 good 0.971\n"}
+,{"stream_name":"stdout","time":22081.571686182,"data":"qwen3-8b 3600 / 13200 good 0.971\n"}
+,{"stream_name":"stdout","time":22201.501481879,"data":"qwen3-8b 3700 / 13200 good 0.971\n"}
+,{"stream_name":"stdout","time":22309.547670498,"data":"qwen3-8b 3800 / 13200 good 0.969\n"}
+,{"stream_name":"stdout","time":22412.851836166,"data":"qwen3-8b 3900 / 13200 good 0.968\n"}
+,{"stream_name":"stdout","time":22536.814042715,"data":"qwen3-8b 4000 / 13200 good 0.968\n"}
+,{"stream_name":"stdout","time":22637.411306995,"data":"qwen3-8b 4100 / 13200 good 0.967\n"}
+,{"stream_name":"stdout","time":22735.14408657,"data":"qwen3-8b 4200 / 13200 good 0.967\n"}
+,{"stream_name":"stdout","time":22861.439660109,"data":"qwen3-8b 4300 / 13200 good 0.966\n"}
+,{"stream_name":"stdout","time":22966.601683158,"data":"qwen3-8b 4400 / 13200 good 0.966\n"}
+,{"stream_name":"stdout","time":23096.685184079,"data":"qwen3-8b 4500 / 13200 good 0.966\n"}
+,{"stream_name":"stdout","time":23215.284860235,"data":"qwen3-8b 4600 / 13200 good 0.966\n"}
+,{"stream_name":"stdout","time":23349.23700202,"data":"qwen3-8b 4700 / 13200 good 0.966\n"}
+,{"stream_name":"stdout","time":23479.492690936,"data":"qwen3-8b 4800 / 13200 good 0.967\n"}
+,{"stream_name":"stdout","time":23611.147701266,"data":"qwen3-8b 4900 / 13200 good 0.967\n"}
+,{"stream_name":"stdout","time":23731.077395181,"data":"qwen3-8b 5000 / 13200 good 0.967\n"}
+,{"stream_name":"stdout","time":23870.152065842,"data":"qwen3-8b 5100 / 13200 good 0.966\n"}
+,{"stream_name":"stdout","time":24019.306506081,"data":"qwen3-8b 5200 / 13200 good 0.966\n"}
+,{"stream_name":"stdout","time":24140.323551614,"data":"qwen3-8b 5300 / 13200 good 0.966\n"}
+,{"stream_name":"stdout","time":24290.498709479,"data":"qwen3-8b 5400 / 13200 good 0.965\n"}
+,{"stream_name":"stdout","time":24442.850167616,"data":"qwen3-8b 5500 / 13200 good 0.965\n"}
+,{"stream_name":"stdout","time":24573.710290317,"data":"qwen3-8b 5600 / 13200 good 0.965\n"}
+,{"stream_name":"stdout","time":24701.384778504,"data":"qwen3-8b 5700 / 13200 good 0.965\n"}
+,{"stream_name":"stdout","time":24864.413056998,"data":"qwen3-8b 5800 / 13200 good 0.965\n"}
+,{"stream_name":"stdout","time":25001.872620244,"data":"qwen3-8b 5900 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":25160.757173925,"data":"qwen3-8b 6000 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":25336.436306969,"data":"qwen3-8b 6100 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":25482.663096799,"data":"qwen3-8b 6200 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":25626.309247656,"data":"qwen3-8b 6300 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":25778.177273243,"data":"qwen3-8b 6400 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":25953.013265507,"data":"qwen3-8b 6500 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":26122.580370694,"data":"qwen3-8b 6600 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":26303.06572135,"data":"qwen3-8b 6700 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":26484.325354771,"data":"qwen3-8b 6800 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":26692.100675745,"data":"qwen3-8b 6900 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":26851.739070674,"data":"qwen3-8b 7000 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":27034.302686735,"data":"qwen3-8b 7100 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":27187.317147808,"data":"qwen3-8b 7200 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":27363.800144314,"data":"qwen3-8b 7300 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":27542.44714767,"data":"qwen3-8b 7400 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":27748.609204751,"data":"qwen3-8b 7500 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":27933.164685684,"data":"qwen3-8b 7600 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":28100.777316773,"data":"qwen3-8b 7700 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":28288.128603593,"data":"qwen3-8b 7800 / 13200 good 0.964\n"}
+,{"stream_name":"stdout","time":28498.071149757,"data":"qwen3-8b 7900 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":28713.690634966,"data":"qwen3-8b 8000 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":28939.251048767,"data":"qwen3-8b 8100 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":29136.811878604,"data":"qwen3-8b 8200 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":29325.323441349,"data":"qwen3-8b 8300 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":29523.205634454,"data":"qwen3-8b 8400 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":29767.798763055,"data":"qwen3-8b 8500 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":29970.28746127,"data":"qwen3-8b 8600 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":30199.795882493,"data":"qwen3-8b 8700 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":30434.456676665,"data":"qwen3-8b 8800 / 13200 good 0.963\n"}
+,{"stream_name":"stdout","time":30657.161018556,"data":"qwen3-8b 8900 / 13200 good 0.962\n"}
+,{"stream_name":"stdout","time":30880.491522257,"data":"qwen3-8b 9000 / 13200 good 0.962\n"}
+,{"stream_name":"stdout","time":31120.433629419,"data":"qwen3-8b 9100 / 13200 good 0.962\n"}
+,{"stream_name":"stdout","time":31340.107039963,"data":"qwen3-8b 9200 / 13200 good 0.962\n"}
+,{"stream_name":"stdout","time":31599.409166346,"data":"qwen3-8b 9300 / 13200 good 0.962\n"}
+,{"stream_name":"stdout","time":31821.821654279,"data":"qwen3-8b 9400 / 13200 good 0.962\n"}
+,{"stream_name":"stdout","time":32111.877095871,"data":"qwen3-8b 9500 / 13200 good 0.962\n"}
+,{"stream_name":"stdout","time":32369.863896949,"data":"qwen3-8b 9600 / 13200 good 0.962\n"}
+,{"stream_name":"stdout","time":32627.821685051,"data":"qwen3-8b 9700 / 13200 good 0.962\n"}
+,{"stream_name":"stdout","time":32884.21856578,"data":"qwen3-8b 9800 / 13200 good 0.961\n"}
+,{"stream_name":"stdout","time":33156.755453988,"data":"qwen3-8b 9900 / 13200 good 0.961\n"}
+,{"stream_name":"stdout","time":33455.28340338,"data":"qwen3-8b 10000 / 13200 good 0.961\n"}
+,{"stream_name":"stdout","time":33772.177575857,"data":"qwen3-8b 10100 / 13200 good 0.96\n"}
+,{"stream_name":"stdout","time":34027.803726714,"data":"qwen3-8b 10200 / 13200 good 0.96\n"}
+,{"stream_name":"stdout","time":34329.136286865,"data":"qwen3-8b 10300 / 13200 good 0.96\n"}
+,{"stream_name":"stdout","time":34626.919942367,"data":"qwen3-8b 10400 / 13200 good 0.96\n"}
+,{"stream_name":"stdout","time":34940.941915334,"data":"qwen3-8b 10500 / 13200 good 0.96\n"}
+,{"stream_name":"stdout","time":35259.852365817,"data":"qwen3-8b 10600 / 13200 good 0.959\n"}
+,{"stream_name":"stdout","time":35593.828550212,"data":"qwen3-8b 10700 / 13200 good 0.959\n"}
+,{"stream_name":"stdout","time":35891.38181097,"data":"qwen3-8b 10800 / 13200 good 0.959\n"}
+,{"stream_name":"stdout","time":36227.432609194,"data":"qwen3-8b 10900 / 13200 good 0.958\n"}
+,{"stream_name":"stdout","time":36577.063051595,"data":"qwen3-8b 11000 / 13200 good 0.958\n"}
+,{"stream_name":"stdout","time":36933.383784571,"data":"qwen3-8b 11100 / 13200 good 0.958\n"}
+,{"stream_name":"stdout","time":37271.997921418,"data":"qwen3-8b 11200 / 13200 good 0.958\n"}
+,{"stream_name":"stdout","time":37634.896592456,"data":"qwen3-8b 11300 / 13200 good 0.958\n"}
+,{"stream_name":"stdout","time":38037.369043947,"data":"qwen3-8b 11400 / 13200 good 0.957\n"}
+,{"stream_name":"stdout","time":38407.537557706,"data":"qwen3-8b 11500 / 13200 good 0.957\n"}
+,{"stream_name":"stdout","time":38796.993757007,"data":"qwen3-8b 11600 / 13200 good 0.957\n"}
+,{"stream_name":"stdout","time":39182.991200774,"data":"qwen3-8b 11700 / 13200 good 0.957\n"}
+,{"stream_name":"stdout","time":39525.051077933,"data":"qwen3-8b 11800 / 13200 good 0.957\n"}
+,{"stream_name":"stdout","time":39968.818869819,"data":"qwen3-8b 11900 / 13200 good 0.956\n"}
+,{"stream_name":"stdout","time":39968.92889082,"data":"qwen3-8b time budget at 11900\n"}
+,{"stream_name":"stdout","time":39968.92890009,"data":"qwen3-8b DONE {'model': 'qwen3-8b', 'rows': 11900, 'good_rate': 0.9558, 'stopped': 'time_budget', 'minutes': 340.9}\n"}
+,{"stream_name":"stdout","time":39968.92890189,"data":"[\n"}
+,{"stream_name":"stdout","time":39968.92890312,"data":"  {\n"}
+,{"stream_name":"stdout","time":39968.92890415,"data":"    \"model\": \"qwen3-4b\",\n"}
+,{"stream_name":"stdout","time":39968.92890553,"data":"    \"rows\": 13200,\n"}
+,{"stream_name":"stdout","time":39968.92890679,"data":"    \"good_rate\": 0.8873,\n"}
+,{"stream_name":"stdout","time":39968.92890795,"data":"    \"stopped\": \"completed\",\n"}
+,{"stream_name":"stdout","time":39968.92890963,"data":"    \"minutes\": 320.2\n"}
+,{"stream_name":"stdout","time":39968.92891068,"data":"  },\n"}
+,{"stream_name":"stdout","time":39968.92891167,"data":"  {\n"}
+,{"stream_name":"stdout","time":39968.92891265,"data":"    \"model\": \"qwen3-8b\",\n"}
+,{"stream_name":"stdout","time":39968.92891374,"data":"    \"rows\": 11900,\n"}
+,{"stream_name":"stdout","time":39968.92891475,"data":"    \"good_rate\": 0.9558,\n"}
+,{"stream_name":"stdout","time":39968.92891577,"data":"    \"stopped\": \"time_budget\",\n"}
+,{"stream_name":"stdout","time":39968.92891685,"data":"    \"minutes\": 340.9\n"}
+,{"stream_name":"stdout","time":39968.92891788,"data":"  }\n"}
+,{"stream_name":"stdout","time":39968.92891887,"data":"]\n"}
+,{"stream_name":"stderr","time":39973.467929629,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":39973.467954289,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":39973.60899642,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":39973.60901825,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":39974.108941615,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":39974.156432682,"data":"[NbConvertApp] Writing 54259 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":39975.390648487,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":39975.670574641,"data":"[NbConvertApp] Writing 357170 bytes to __results__.html\n"}
+]
