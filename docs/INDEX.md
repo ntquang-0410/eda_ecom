@@ -7,6 +7,10 @@ Các báo cáo đang dùng:
 - `reports/WEIGHT_SURVEY_TECHNIQUE_A_B.md` — kỹ thuật quota sampling cho A/B
 - `reports/EDA_A_B.md` / `EDA_A_DEDUP.md` — EDA split A/B trước processing
 - `reports/EDA_PROCESSED_A_B.md` — EDA sau processing (units dùng để train)
+- `reports/TIKI_DESC_BT_PROCESSING.md` — QC/processing BT description 4 model
+
+Layout dataset trên HF: xem `README.md` / `INDEX.md` của repo
+https://huggingface.co/datasets/ntquang0410/tiki-4model-eval
 - `reports/WEIGHT_EVAL_FINAL.md` — kết luận weight 4B, COMET + Gemma credit (sampler cũ, tham khảo)
 - `reports/WEIGHT_EVAL.md` — bảng COMET chi tiết, 2 seed
 - `reports/WEIGHT_EVAL_PIPELINE.md` — cách chạy lại weight
