@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000141",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Missing iPhone 11, butterfly pattern, and comprehensive protection."
+  },
+  {
+    "id": "j000142",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000143",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'timer' as 'wristwatch' (手表)."
+  },
+  {
+    "id": "j000144",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor difference: 'pond brush' instead of 'pool brush'."
+  },
+  {
+    "id": "j000145",
+    "rating": "B",
+    "score": 4,
+    "note": "Significant errors: 'medical device' as 'mechanical', 'sanitary pads' as 'napkins'."
+  },
+  {
+    "id": "j000146",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000147",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000148",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000149",
+    "rating": "CC",
+    "score": 2,
+    "note": "Repetitive looping text and missing key product details."
+  },
+  {
+    "id": "j000150",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'timer' as 'wristwatch' (手表)."
+  },
+  {
+    "id": "j000151",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000152",
+    "rating": "BB",
+    "score": 5,
+    "note": "Incorrect fruits: pineapple as mango, cranberry as blueberry."
+  },
+  {
+    "id": "j000153",
+    "rating": "A",
+    "score": 7,
+    "note": "Small error: 16.8 million colors translated as 168,000."
+  },
+  {
+    "id": "j000154",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing 'two-piece set', incorrectly added 'backpack'."
+  },
+  {
+    "id": "j000155",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'Set of 5' as 'Filter No. 5'."
+  },
+  {
+    "id": "j000156",
+    "rating": "AA",
+    "score": 8,
+    "note": "Mostly correct, minor terminology inconsistency in colors."
+  },
+  {
+    "id": "j000157",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000158",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor error: Shantou translated as Chaozhou."
+  },
+  {
+    "id": "j000159",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Incorrect origin (Henan instead of Yiwu) and function (jumping instead of crawling)."
+  },
+  {
+    "id": "j000160",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor error: Shantou translated as Shatoujiao."
+  }
+]
