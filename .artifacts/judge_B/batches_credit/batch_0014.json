@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000281",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation, all technical specs and numbers preserved."
+  },
+  {
+    "id": "j000282",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation of product details and size table."
+  },
+  {
+    "id": "j000283",
+    "rating": "AA",
+    "score": 8,
+    "note": "Meaning preserved, though slightly repetitive phrasing."
+  },
+  {
+    "id": "j000284",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'Sợi quang' as optical fiber; kg to 斤 conversion error."
+  },
+  {
+    "id": "j000285",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missing 'aloe vera' (lô hội); awkward phrasing for '免洗'."
+  },
+  {
+    "id": "j000286",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Critical errors in flavors: Coconut/Durian mistranslated as Cucumber/Nutmeg."
+  },
+  {
+    "id": "j000287",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated pine wood as oak; varnish description is incorrect."
+  },
+  {
+    "id": "j000288",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000289",
+    "rating": "AA",
+    "score": 8,
+    "note": "Correct meaning, slightly repetitive word choice."
+  },
+  {
+    "id": "j000290",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Excellent translation, all details and instructions preserved."
+  },
+  {
+    "id": "j000291",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and concise."
+  },
+  {
+    "id": "j000292",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct, terminology is precise."
+  },
+  {
+    "id": "j000293",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000294",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'slit' as 'color blocking' and 'pocket' as 'placket'."
+  },
+  {
+    "id": "j000295",
+    "rating": "A",
+    "score": 7,
+    "note": "Literal translation of idiom '1 nốt nhạc' is slightly awkward."
+  },
+  {
+    "id": "j000296",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor terminology issue: 'packets' translated as 'jars'."
+  },
+  {
+    "id": "j000297",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000298",
+    "rating": "AA",
+    "score": 8,
+    "note": "Meaning preserved, though repetitive phrasing."
+  },
+  {
+    "id": "j000299",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000300",
+    "rating": "A",
+    "score": 7,
+    "note": "Chemical error: 'glycol' mistranslated as 'glycerin' (甘油)."
+  }
+]

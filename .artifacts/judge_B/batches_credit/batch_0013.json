@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000261",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000262",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated net weight as gross weight; slight brand name mismatch."
+  },
+  {
+    "id": "j000263",
+    "rating": "BB",
+    "score": 5,
+    "note": "Factual error: Sán Đầu is Shantou, not Chaozhou; terminology issues."
+  },
+  {
+    "id": "j000264",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Hallucinated '带座位' (has seat) for 'Có chỗ ở'."
+  },
+  {
+    "id": "j000265",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor terminology issues with 'Phin' and place name."
+  },
+  {
+    "id": "j000266",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Critical error: mistook Dahongpao tea for a red shawl."
+  },
+  {
+    "id": "j000267",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'qua gáy' (around neck) as '耳后' (behind ears)."
+  },
+  {
+    "id": "j000268",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'cao su non' (memory foam) as 'non-elastic sponge'."
+  },
+  {
+    "id": "j000269",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Wrong tea variety, wrong tea type, and wrong fruit flavor."
+  },
+  {
+    "id": "j000270",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000271",
+    "rating": "C",
+    "score": 1,
+    "note": "Truncated output and critical error in size unit conversion (kg to jin)."
+  },
+  {
+    "id": "j000272",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Critical error: mistranslated nail cuticle pusher as an aerator."
+  },
+  {
+    "id": "j000273",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000274",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000275",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000276",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor error: 'nhẫn' (rings) translated as '手镯' (bracelets)."
+  },
+  {
+    "id": "j000277",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000278",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly over-condensed but accurate."
+  },
+  {
+    "id": "j000279",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor terminology differences compared to reference."
+  },
+  {
+    "id": "j000280",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Critical numerical error: 20 million VND translated as 200 thousand VND."
+  }
+]
