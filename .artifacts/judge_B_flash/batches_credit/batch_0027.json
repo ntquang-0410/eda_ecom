@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000541",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural translation."
+  },
+  {
+    "id": "j000542",
+    "rating": "A",
+    "score": 7,
+    "note": "'Loại rời' (loose fit) mistranslated as '单件' (single piece); otherwise accurate."
+  },
+  {
+    "id": "j000543",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and standard e-commerce phrasing."
+  },
+  {
+    "id": "j000544",
+    "rating": "B",
+    "score": 4,
+    "note": "Multiple mistranslations: suction cup as magnetic mount, air vent hook as door gap hanger."
+  },
+  {
+    "id": "j000545",
+    "rating": "CC",
+    "score": 2,
+    "note": "Major flavor mistranslations: coconut became orange, and durian became nutmeg."
+  },
+  {
+    "id": "j000546",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate meaning; '乘用车地板垫' is slightly less standard than '汽车脚垫'."
+  },
+  {
+    "id": "j000547",
+    "rating": "CC",
+    "score": 2,
+    "note": "Core product mistranslated: 'mè' (sesame) mistranslated as '豆' (beans)."
+  },
+  {
+    "id": "j000548",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Muối biển' mistranslated as '粗盐', missing 'bán buôn' (wholesale), terminology awkward."
+  },
+  {
+    "id": "j000549",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor chemical mistranslation (Lactulose as 乳糖醇 instead of 乳果糖) and a duplicated concluding sentence."
+  },
+  {
+    "id": "j000550",
+    "rating": "CC",
+    "score": 2,
+    "note": "Key product mistranslated: chrysanthemum (hoa cúc) translated as sunflower (向日葵)."
+  },
+  {
+    "id": "j000551",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurately translated source terms and specifications."
+  },
+  {
+    "id": "j000552",
+    "rating": "A",
+    "score": 7,
+    "note": "'Kỵ sĩ' translated as '勇士' instead of '骑士', 'gót xuồng' translated as '平跟'."
+  },
+  {
+    "id": "j000553",
+    "rating": "CC",
+    "score": 2,
+    "note": "Severe mistranslations: sanitary pads translated as napkins, cream as band-aid, medical certification misunderstood."
+  },
+  {
+    "id": "j000554",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Móc khóa' (buckle/clasp) mistranslated as '抽拉式' and '抽屉式'."
+  },
+  {
+    "id": "j000555",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor flaw: 'Trọng lượng tịnh' (net weight) translated as '毛重' (gross weight)."
+  },
+  {
+    "id": "j000556",
+    "rating": "CC",
+    "score": 2,
+    "note": "Core product mistranslated: sesame (mè) translated as beans (豆)."
+  },
+  {
+    "id": "j000557",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and well structured."
+  },
+  {
+    "id": "j000558",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Áo choàng đỏ' translated as '红袍' instead of '大红袍'; phonetic mangling of Zhengshan Xiaozhong."
+  },
+  {
+    "id": "j000559",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and precise e-commerce title translation."
+  },
+  {
+    "id": "j000560",
+    "rating": "AA",
+    "score": 8,
+    "note": "'骑行车' is slightly unnatural compared to '自行车/儿童自行车', meaning preserved."
+  }
+]

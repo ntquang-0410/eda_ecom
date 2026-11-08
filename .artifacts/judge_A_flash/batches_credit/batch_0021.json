@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000421",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title translation."
+  },
+  {
+    "id": "j000422",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor omission of 'other/cleaning', but meaning is well-preserved."
+  },
+  {
+    "id": "j000423",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation of place name."
+  },
+  {
+    "id": "j000424",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000425",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent and accurate e-commerce listing."
+  },
+  {
+    "id": "j000426",
+    "rating": "A",
+    "score": 7,
+    "note": "'煮' instead of '焖/静置', and '即可使用' should be '即可食用'."
+  },
+  {
+    "id": "j000427",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation of location."
+  },
+  {
+    "id": "j000428",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of material."
+  },
+  {
+    "id": "j000429",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slight phrasing awkwardness ('男养生茶' vs '男士养生茶'), meaning clear."
+  },
+  {
+    "id": "j000430",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000431",
+    "rating": "AA",
+    "score": 8,
+    "note": "Common phrasing usually includes '型' (重组Ⅲ型胶原蛋白), but meaning is intact."
+  },
+  {
+    "id": "j000432",
+    "rating": "B",
+    "score": 4,
+    "note": "Omitted 'bình' (bottle/jar), translating only 'white cap'."
+  },
+  {
+    "id": "j000433",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact proper noun translation."
+  },
+  {
+    "id": "j000434",
+    "rating": "AAA",
+    "score": 9,
+    "note": "All color options translated accurately and naturally."
+  },
+  {
+    "id": "j000435",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate translation of options."
+  },
+  {
+    "id": "j000436",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and standard e-commerce keywords."
+  },
+  {
+    "id": "j000437",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000438",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000439",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000440",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Comprehensive and accurate keyword translation."
+  }
+]

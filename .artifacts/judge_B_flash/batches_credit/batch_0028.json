@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000561",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated core terms: '招财猫' as '神兽猫', '存钱罐' as '节约罐'."
+  },
+  {
+    "id": "j000562",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate and natural e-commerce listing translation with well-handled disclaimer."
+  },
+  {
+    "id": "j000563",
+    "rating": "A",
+    "score": 7,
+    "note": "'kip khỉ' (Kipling猴子包) translated as 'kipkiki'; otherwise accurate."
+  },
+  {
+    "id": "j000564",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural e-commerce title translation."
+  },
+  {
+    "id": "j000565",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate specification attribute translations matching standard terminology."
+  },
+  {
+    "id": "j000566",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'dọn dẹp' and 'kỹ thuật dòng điện yếu' translated awkwardly; word choices unidiomatic."
+  },
+  {
+    "id": "j000567",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Brand C咖 mistranslated as 咖啡C; 'mụn đầu đen' (去黑头) mistranslated as 治痘."
+  },
+  {
+    "id": "j000568",
+    "rating": "BB",
+    "score": 5,
+    "note": "'Lá dứa' (斑斓叶/香兰叶) mistranslated as '菠萝叶' (pineapple leaves)."
+  },
+  {
+    "id": "j000569",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'bộ 5 lõi lọc số 1' (5支1号滤芯) as '5级净水器滤芯'."
+  },
+  {
+    "id": "j000570",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Number error in disclaimer: 1 triệu đồng (100万) mistranslated as 10万."
+  },
+  {
+    "id": "j000571",
+    "rating": "B",
+    "score": 4,
+    "note": "Missing the key product noun 'Xe đạp' (自行车)."
+  },
+  {
+    "id": "j000572",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severe mistranslation: 'Sữa hạt Mắc ca' garbled into '麦钙', missed 'thùng'."
+  },
+  {
+    "id": "j000573",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated wood types (白蜡木, 菠萝蜜木) and duplicated disclaimer text at end."
+  },
+  {
+    "id": "j000574",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate attribute translations aligned with e-commerce standards."
+  },
+  {
+    "id": "j000575",
+    "rating": "B",
+    "score": 4,
+    "note": "'hút điếu cày' mistranslated as '吸酒精灯'; omitted platform disclaimer at end."
+  },
+  {
+    "id": "j000576",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate and clear; '皮套' is slightly more precise than '手机壳'."
+  },
+  {
+    "id": "j000577",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation; 'không nặng tóc' rendered as '不粘发'."
+  },
+  {
+    "id": "j000578",
+    "rating": "BB",
+    "score": 5,
+    "note": "Multiple mistranslations: 包臀 mistranslated as 中袖, 直贡呢 as 还是Drigom呢, 焦糖色 as 奶油色."
+  },
+  {
+    "id": "j000579",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural, complete, and faithful translation."
+  },
+  {
+    "id": "j000580",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Muối biển' (海盐) mistranslated as '粗盐'; 'Latte dừa thô' missed '生椰拿铁'."
+  }
+]

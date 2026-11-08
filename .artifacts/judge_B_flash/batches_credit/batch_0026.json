@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000521",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct, fluent, and comprehensive e-commerce description."
+  },
+  {
+    "id": "j000522",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Several terminology errors: pull rod translated as zipper, burgundy as red, etc."
+  },
+  {
+    "id": "j000523",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severe repetition collapse across tea names; brand name translated literally."
+  },
+  {
+    "id": "j000524",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Repeated 防水, missed fabric type (vải dù)."
+  },
+  {
+    "id": "j000525",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated black tea variety as Tieguanyin oolong and lychee aroma as peach."
+  },
+  {
+    "id": "j000526",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor mistranslation of mayo sauce as wasabi sauce; otherwise good."
+  },
+  {
+    "id": "j000527",
+    "rating": "A",
+    "score": 7,
+    "note": "Awkward repeated phrases (送礼/礼盒装) but information is intact."
+  },
+  {
+    "id": "j000528",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and natural e-commerce phrasing."
+  },
+  {
+    "id": "j000529",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed 前 in the standard product term 前男友面膜."
+  },
+  {
+    "id": "j000530",
+    "rating": "C",
+    "score": 1,
+    "note": "Severe degenerative repetitive hallucination loop."
+  },
+  {
+    "id": "j000531",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated papaya as mango and cranberry as blueberry."
+  },
+  {
+    "id": "j000532",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated Dahongpao tea category as red shawl and distorted tea names."
+  },
+  {
+    "id": "j000533",
+    "rating": "B",
+    "score": 4,
+    "note": "Mangled marketing keywords; awkwardly translated 'year of rabbit cheap' as 低价兔."
+  },
+  {
+    "id": "j000534",
+    "rating": "A",
+    "score": 7,
+    "note": "Slight inaccuracies in shade names and place of origin (Shantou translated as Chaozhou)."
+  },
+  {
+    "id": "j000535",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, natural e-commerce title translation."
+  },
+  {
+    "id": "j000536",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word-choice issue on the brand mascot, meaning fully preserved."
+  },
+  {
+    "id": "j000537",
+    "rating": "A",
+    "score": 7,
+    "note": "Mistranslated water pipe tobacco (điếu cày), otherwise well translated."
+  },
+  {
+    "id": "j000538",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Hallucinated an attribute field and mistranslated blackhead removal."
+  },
+  {
+    "id": "j000539",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated wide-tooth horn comb as sparse toothbrush."
+  },
+  {
+    "id": "j000540",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce product title."
+  }
+]
