@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000021",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000022",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Untranslated 'SIÊU HOT' and repetitive keyword translation."
+  },
+  {
+    "id": "j000023",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and professional translation."
+  },
+  {
+    "id": "j000024",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missing brand 'Forwenw' and 'wallet-style' specification."
+  },
+  {
+    "id": "j000025",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of technical specs."
+  },
+  {
+    "id": "j000026",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000027",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'over-ear' as 'in-ear'."
+  },
+  {
+    "id": "j000028",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Incorrect translation of wood species (Ash/Jackfruit)."
+  },
+  {
+    "id": "j000029",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and concise."
+  },
+  {
+    "id": "j000030",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'motorcycle' as 'car'."
+  },
+  {
+    "id": "j000031",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000032",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000033",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor omission of 'underarm' (腋下)."
+  },
+  {
+    "id": "j000034",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Brand name 'Khải Thịnh' mistranslated/hallucinated."
+  },
+  {
+    "id": "j000035",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000036",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Excellent translation of technical details."
+  },
+  {
+    "id": "j000037",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'Cốc hút pháo' as '吸尘杯' (vacuum cup)."
+  },
+  {
+    "id": "j000038",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000039",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'over-ear' as 'in-ear'."
+  },
+  {
+    "id": "j000040",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Several errors in color and style terminology."
+  }
+]

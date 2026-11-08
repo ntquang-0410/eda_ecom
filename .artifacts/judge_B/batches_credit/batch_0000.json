@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000001",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'timer' as 'wristwatch' (手表)."
+  },
+  {
+    "id": "j000002",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missing key subject 'Dragon' (Con Rồng)."
+  },
+  {
+    "id": "j000003",
+    "rating": "CC",
+    "score": 2,
+    "note": "Severe repetition of 'waterproof' and missing key features."
+  },
+  {
+    "id": "j000004",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'crawling' (Bò) as 'tiger' (老虎)."
+  },
+  {
+    "id": "j000005",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missing 'aloe vera' (lô hội)."
+  },
+  {
+    "id": "j000006",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor terminology and size mapping issues."
+  },
+  {
+    "id": "j000007",
+    "rating": "BB",
+    "score": 5,
+    "note": "Wrong ingredients: cucumber/centella translated as aloe."
+  },
+  {
+    "id": "j000008",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice for 'polka dots'."
+  },
+  {
+    "id": "j000009",
+    "rating": "C",
+    "score": 1,
+    "note": "Extreme repetition and truncated output."
+  },
+  {
+    "id": "j000010",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000011",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000012",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor brand and terminology differences."
+  },
+  {
+    "id": "j000013",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor meaning loss (missing 'low top')."
+  },
+  {
+    "id": "j000014",
+    "rating": "BB",
+    "score": 5,
+    "note": "Significant number error: 1 million VND to 100k VND."
+  },
+  {
+    "id": "j000015",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000016",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Brand mistranslated; 'waist zipper' is illogical for boots."
+  },
+  {
+    "id": "j000017",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000018",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor brand and terminology differences."
+  },
+  {
+    "id": "j000019",
+    "rating": "C",
+    "score": 1,
+    "note": "Extreme repetition of the final paragraph."
+  },
+  {
+    "id": "j000020",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  }
+]
