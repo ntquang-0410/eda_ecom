@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000401",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate, but lacks spaces around English acronyms/brand name."
+  },
+  {
+    "id": "j000402",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correctly handled and cleaned source typo."
+  },
+  {
+    "id": "j000403",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation; '铝边' is slightly colloquial for watch casing."
+  },
+  {
+    "id": "j000404",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural product title translation."
+  },
+  {
+    "id": "j000405",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate translation; spacing could be improved."
+  },
+  {
+    "id": "j000406",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000407",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'hoa Cúc' (daisy/chrysanthemum) as '向日葵' (sunflower)."
+  },
+  {
+    "id": "j000408",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Omitted the main noun 'Thảm' (mat/foot pad)."
+  },
+  {
+    "id": "j000409",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000410",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and well-formatted."
+  },
+  {
+    "id": "j000411",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurately translated all details and specifications."
+  },
+  {
+    "id": "j000412",
+    "rating": "A",
+    "score": 7,
+    "note": "Understandable, but mistranslated fabric description into '被套' and '一级货' is literal."
+  },
+  {
+    "id": "j000413",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000414",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of 'giày đế bằng' as '平底鞋'."
+  },
+  {
+    "id": "j000415",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Hallucinated '纯棉宽松' not found in the source text."
+  },
+  {
+    "id": "j000416",
+    "rating": "A",
+    "score": 7,
+    "note": "'盐烤粉' is slightly awkward for Vietnamese rang muối seasoning."
+  },
+  {
+    "id": "j000417",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000418",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Omitted brand 'Lenzing' (兰精) and repetitive phrasing."
+  },
+  {
+    "id": "j000419",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Major error: 'sủi da' (cuticle pusher) mistranslated as '气泡器'."
+  },
+  {
+    "id": "j000420",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and faithful to the source."
+  }
+]

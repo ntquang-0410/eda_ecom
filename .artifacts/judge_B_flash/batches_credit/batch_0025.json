@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000501",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor terminology differences (纤维 vs 超纤, 高跟鞋 vs 高跟), overall very accurate."
+  },
+  {
+    "id": "j000502",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Duplicate material mention, '16.8万色' should be '1680万色', '键盘数量' should be 按键数."
+  },
+  {
+    "id": "j000503",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'quý mão' (癸卯/兔年) as 贵马, multiple repetitive phrases, hashtag untranslated."
+  },
+  {
+    "id": "j000504",
+    "rating": "C",
+    "score": 1,
+    "note": "'Khẩu Trang' (mask/口罩) completely mistranslated as '口红' (lipstick). Hallucinated '香氛口红'."
+  },
+  {
+    "id": "j000505",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000506",
+    "rating": "AA",
+    "score": 8,
+    "note": "'Xanh Đen' (blue-black/navy) translated as just 黑色, minor meaning loss."
+  },
+  {
+    "id": "j000507",
+    "rating": "A",
+    "score": 7,
+    "note": "Shantou mistranslated as 潮州; minor color name inaccuracies compared to cosmetic norms."
+  },
+  {
+    "id": "j000508",
+    "rating": "BB",
+    "score": 5,
+    "note": "'20 triệu' (20 million) mistranslated as '200万' (2 million); xe máy điện is 电动摩托车 not 自行车."
+  },
+  {
+    "id": "j000509",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Well-translated, fluent and faithful to the source text."
+  },
+  {
+    "id": "j000510",
+    "rating": "A",
+    "score": 7,
+    "note": "Rong biển is seaweed/海苔, translated as 海带; otherwise accurate and clear."
+  },
+  {
+    "id": "j000511",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of attributes and options."
+  },
+  {
+    "id": "j000512",
+    "rating": "A",
+    "score": 7,
+    "note": "Car mat translated as 地毯 instead of 脚垫, but meaning is generally preserved."
+  },
+  {
+    "id": "j000513",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Dây đeo' (strap/band) mistranslated as '带扣' (buckle)."
+  },
+  {
+    "id": "j000514",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural e-commerce listing title keyword concatenation."
+  },
+  {
+    "id": "j000515",
+    "rating": "B",
+    "score": 4,
+    "note": "Untranslated 'Mắc ca' (macadamia/夏威夷果) and missing 'Sữa hạt' (plant/nut milk)."
+  },
+  {
+    "id": "j000516",
+    "rating": "B",
+    "score": 4,
+    "note": "'dứa' (pineapple) mistranslated as 芒果 (mango); 'nam việt quất' (cranberry) mistranslated as 蓝莓."
+  },
+  {
+    "id": "j000517",
+    "rating": "B",
+    "score": 4,
+    "note": "Missed 'năm Thỏ' (Year of the Rabbit / 兔年), fragmented expression."
+  },
+  {
+    "id": "j000518",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missed 'Hát Karaoke' function translation, otherwise very good."
+  },
+  {
+    "id": "j000519",
+    "rating": "BB",
+    "score": 5,
+    "note": "'20 triệu' (20 million) mistranslated as '200万' (2 million); 'mất cắp' translated as '丢钥匙'."
+  },
+  {
+    "id": "j000520",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Hallucinated '五只小兔' for 'năm Thỏ' (兔年)."
+  }
+]
