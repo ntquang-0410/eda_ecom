@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000341",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation of all items and colors."
+  },
+  {
+    "id": "j000342",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of the source text."
+  },
+  {
+    "id": "j000343",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation of safety warnings."
+  },
+  {
+    "id": "j000344",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor awkwardness in '富养成分'."
+  },
+  {
+    "id": "j000345",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000346",
+    "rating": "AA",
+    "score": 8,
+    "note": "Acceptable translation for e-commerce context."
+  },
+  {
+    "id": "j000347",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000348",
+    "rating": "AA",
+    "score": 8,
+    "note": "Literal translation of 'Heavy Rotation' is acceptable."
+  },
+  {
+    "id": "j000349",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000350",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000351",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000352",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward phrasing; '无卡标准' is not natural."
+  },
+  {
+    "id": "j000353",
+    "rating": "BB",
+    "score": 5,
+    "note": "Awkward ending '白' and missing product type."
+  },
+  {
+    "id": "j000354",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000355",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct."
+  },
+  {
+    "id": "j000356",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000357",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and detailed translation."
+  },
+  {
+    "id": "j000358",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation of technical terms."
+  },
+  {
+    "id": "j000359",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'Cúc' (Chrysanthemum) as '向日葵' (Sunflower)."
+  },
+  {
+    "id": "j000360",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'Mè Đen' (Black Sesame) as '黑豆' (Black Bean)."
+  }
+]
