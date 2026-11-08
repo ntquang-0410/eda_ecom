@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000061",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and standard e-commerce apparel terminology."
+  },
+  {
+    "id": "j000062",
+    "rating": "A",
+    "score": 7,
+    "note": "Meaning preserved; minor terminology inaccuracies (e.g., 叉车 for cẩu, 杂货)."
+  },
+  {
+    "id": "j000063",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslates 'Hard Tailor' as 硬尾 and 'không nặng tóc' as 不重头."
+  },
+  {
+    "id": "j000064",
+    "rating": "B",
+    "score": 4,
+    "note": "Multiple mistranslations: 义乌 as 义奥, 套圈 as 手链, and glowing toys as 小夜灯."
+  },
+  {
+    "id": "j000065",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate e-commerce title, natural keyword phrasing."
+  },
+  {
+    "id": "j000066",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severe error: aluminum frame models were all mislabeled as zipper boxes; 锁扣 translated as 钥匙扣."
+  },
+  {
+    "id": "j000067",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate translation of attributes; correctly maps 拼多多."
+  },
+  {
+    "id": "j000068",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Miscalibrated terms: thanh kéo translated as 拉链, Burgundy as red, and brand as 不1."
+  },
+  {
+    "id": "j000069",
+    "rating": "B",
+    "score": 4,
+    "note": "Unedited MT errors: literal '还有DriGom吗', 物理物, 桃子 (apricot), and 裙中裙."
+  },
+  {
+    "id": "j000070",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor awkward phrasing (地板垫 instead of 脚垫), but meaning is clear."
+  },
+  {
+    "id": "j000071",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and concise translation."
+  },
+  {
+    "id": "j000072",
+    "rating": "B",
+    "score": 4,
+    "note": "Bad MT terms: 械字号 mistranslated as 机械字尺寸, and 卫生巾 as 卫生纸."
+  },
+  {
+    "id": "j000073",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Contains duplicated text blocks and mistranslates cantaloupe as watermelon."
+  },
+  {
+    "id": "j000074",
+    "rating": "B",
+    "score": 4,
+    "note": "Crucial error: confused quantity and model number (5-pack of Filter 1 translated as Filter 5)."
+  },
+  {
+    "id": "j000075",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Noticeable errors:登机 translated as 直飞, 喜庆红 as 谊清红, and 拉链箱 as 拉杆箱."
+  },
+  {
+    "id": "j000076",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Hallucinated functions into empty fields and labeled wireless earbuds as '有线'."
+  },
+  {
+    "id": "j000077",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslates core ingredients: aloe vera as 玛卡尼古拉, peach as 芒果, and item number as 二类医疗器械."
+  },
+  {
+    "id": "j000078",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title translation."
+  },
+  {
+    "id": "j000079",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Core product mistranslated throughout: hạt é (basil seeds) rendered as 燕麦颗粒 (oats)."
+  },
+  {
+    "id": "j000080",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000041",
+    "rating": "BBB",
+    "score": 6,
+    "note": "“1 筒” is an unnatural quantifier for a jar of bird's nest (usually 瓶 or 罐)."
+  },
+  {
+    "id": "j000042",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Several variant names mistranslated (e.g., pudding as mousse, Thanh Thanh as 清空)."
+  },
+  {
+    "id": "j000043",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Critical mistranslation: sesame (mè) translated as bean (豆)."
+  },
+  {
+    "id": "j000044",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Truncated at end; untranslated '短ening' and 'pentasodium'; khoai mì mistranslated."
+  },
+  {
+    "id": "j000045",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslation; completely missed 'băng tâm' (冰心)."
+  },
+  {
+    "id": "j000046",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, complete, and properly formatted."
+  },
+  {
+    "id": "j000047",
+    "rating": "B",
+    "score": 4,
+    "note": "Untranslated Vietnamese 'Mắc ca', omitted 'sữa hạt' (nut milk) and 'thùng'."
+  },
+  {
+    "id": "j000048",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce listing title."
+  },
+  {
+    "id": "j000049",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent e-commerce translation."
+  },
+  {
+    "id": "j000050",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, natural e-commerce phrasing."
+  },
+  {
+    "id": "j000051",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and concise."
+  },
+  {
+    "id": "j000052",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate, though '66-90码' is more idiomatic in apparel."
+  },
+  {
+    "id": "j000053",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correctly translated standard textile term."
+  },
+  {
+    "id": "j000054",
+    "rating": "A",
+    "score": 7,
+    "note": "Understandable, but '无' or '否' is standard for product attributes."
+  },
+  {
+    "id": "j000055",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation; minor omission of 'co giãn' (elastic)."
+  },
+  {
+    "id": "j000056",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated fixed industry term '前男友面膜' as '老男友面膜'."
+  },
+  {
+    "id": "j000057",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural, complete, and idiomatic e-commerce title."
+  },
+  {
+    "id": "j000058",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural product description."
+  },
+  {
+    "id": "j000059",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent e-commerce keyword title covering all source details."
+  },
+  {
+    "id": "j000060",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of all product attributes and terms."
+  }
+]

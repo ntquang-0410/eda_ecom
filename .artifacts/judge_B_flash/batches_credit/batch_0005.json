@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000101",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000102",
+    "rating": "A",
+    "score": 7,
+    "note": "Good overall, but 'sốt Mayo' is mistranslated as '芥末酱' instead of mayonnaise."
+  },
+  {
+    "id": "j000103",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and natural."
+  },
+  {
+    "id": "j000104",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate metadata mapping with minor stylistic differences."
+  },
+  {
+    "id": "j000105",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate meaning, slight repetition of '收纳盒'."
+  },
+  {
+    "id": "j000106",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Concise and fits e-commerce title conventions."
+  },
+  {
+    "id": "j000107",
+    "rating": "A",
+    "score": 7,
+    "note": "Well translated overall; 'Cleanser' is mistakenly translated as '乳液' instead of cleanser."
+  },
+  {
+    "id": "j000108",
+    "rating": "BB",
+    "score": 5,
+    "note": "'vecny' (varnish) was repeatedly mistranslated as '黄色棋子', distorting multiple sentences."
+  },
+  {
+    "id": "j000109",
+    "rating": "A",
+    "score": 7,
+    "note": "Usable, but '6在1' is awkward and literal for '6合1'."
+  },
+  {
+    "id": "j000110",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severe mistranslations of key flavors: 'dừa' (coconut) as cucumber and 'sầu riêng' (durian) as nutmeg."
+  },
+  {
+    "id": "j000111",
+    "rating": "A",
+    "score": 7,
+    "note": "Understandable, but '筒' is an awkward classifier for jars/bottles ('罐/瓶')."
+  },
+  {
+    "id": "j000112",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor wording issue ('高腰' instead of '高筒' for boots), meaning preserved."
+  },
+  {
+    "id": "j000113",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Number error: '1 triệu' (1 million) was translated as '10万' (100 thousand)."
+  },
+  {
+    "id": "j000114",
+    "rating": "BB",
+    "score": 5,
+    "note": "Hallucinated '翻领' and mistranslated 'đường phố cao' (high street) as '街头高领'."
+  },
+  {
+    "id": "j000115",
+    "rating": "BBB",
+    "score": 6,
+    "note": "One entire SKU variant with strap ('Dây đeo') was omitted in the capacity list."
+  },
+  {
+    "id": "j000116",
+    "rating": "BB",
+    "score": 5,
+    "note": "Hallucinated '全棉' for Tencel/Lyocell and has duplicate words ('冰丝冰丝')."
+  },
+  {
+    "id": "j000117",
+    "rating": "A",
+    "score": 7,
+    "note": "'Lăn khử mùi' is awkwardly translated as '消除异味滚轴' rather than '止汗走珠露'."
+  },
+  {
+    "id": "j000118",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and clear."
+  },
+  {
+    "id": "j000119",
+    "rating": "A",
+    "score": 7,
+    "note": "'Nước tẩy trang' is more accurately '卸妆水' rather than '洁面水'."
+  },
+  {
+    "id": "j000120",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'centella asiatica' (积雪草) mistranslated as '玉米' (corn), plus a few other minor errors."
+  }
+]

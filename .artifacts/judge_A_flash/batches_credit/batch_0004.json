@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000081",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word order/phrasing preference (尺码66-90 or 66-90码)."
+  },
+  {
+    "id": "j000082",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and clear."
+  },
+  {
+    "id": "j000083",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor phrasing difference, meaning fully preserved."
+  },
+  {
+    "id": "j000084",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correctly handled numbers and typo."
+  },
+  {
+    "id": "j000085",
+    "rating": "CC",
+    "score": 2,
+    "note": "Mistranslated cuticle pusher (sủi da) as 气泡管 and missed brand name."
+  },
+  {
+    "id": "j000086",
+    "rating": "A",
+    "score": 7,
+    "note": "Mistranslated nấm (mushroom) as 松露 (truffle)."
+  },
+  {
+    "id": "j000087",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000088",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce listing title."
+  },
+  {
+    "id": "j000089",
+    "rating": "B",
+    "score": 4,
+    "note": "Hallucinated '芒果' (mango) and phrasing is awkward."
+  },
+  {
+    "id": "j000090",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated phone wallet case as wallet (皮质钱包) and omitted brand Forwenw."
+  },
+  {
+    "id": "j000091",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000092",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Matches reference perfectly."
+  },
+  {
+    "id": "j000093",
+    "rating": "AA",
+    "score": 8,
+    "note": "防渗垫 is slightly unconventional compared to 防水垫/隔尿垫, but understandable."
+  },
+  {
+    "id": "j000094",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and complete e-commerce title."
+  },
+  {
+    "id": "j000095",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and clear."
+  },
+  {
+    "id": "j000096",
+    "rating": "AA",
+    "score": 8,
+    "note": "Translated thu đông (autumn-winter) as 秋季 (autumn only)."
+  },
+  {
+    "id": "j000097",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000098",
+    "rating": "AA",
+    "score": 8,
+    "note": "Phonetic transliteration for brand Kouzhiyue instead of 蔻植悦, otherwise good."
+  },
+  {
+    "id": "j000099",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Matches reference perfectly."
+  },
+  {
+    "id": "j000100",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent e-commerce translation."
+  }
+]

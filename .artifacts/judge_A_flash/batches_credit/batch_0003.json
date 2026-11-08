@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000061",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor terminology deviations from typical SKU names (e.g., 云奇 for 云栖), but meaning mostly preserved."
+  },
+  {
+    "id": "j000062",
+    "rating": "A",
+    "score": 7,
+    "note": "Bed sheet types mistranslated between 床单 and 床笠, missing unit cm at the end."
+  },
+  {
+    "id": "j000063",
+    "rating": "B",
+    "score": 4,
+    "note": "Literal translation '硬尾', '不重头发' is awkward and unnatural Chinese."
+  },
+  {
+    "id": "j000064",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severe mistranslations: '义奥' for 义乌, '手镯' for 套圈 (nhẫn), '小夜灯' for 发光玩具."
+  },
+  {
+    "id": "j000065",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate meaning, slight repetition and informal phrasing ('女防偷包')."
+  },
+  {
+    "id": "j000066",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Identical to source and reference."
+  },
+  {
+    "id": "j000067",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and matches reference."
+  },
+  {
+    "id": "j000068",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000069",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match for barcode/number."
+  },
+  {
+    "id": "j000070",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation, '地板垫' is slightly less idiomatic than 脚垫 but clear."
+  },
+  {
+    "id": "j000071",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of product name and details."
+  },
+  {
+    "id": "j000072",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate color translations matching reference."
+  },
+  {
+    "id": "j000073",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'Trân châu' (boba/pearls) as '玉米粒' (corn kernels); unnatural syntax."
+  },
+  {
+    "id": "j000074",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'Bộ 5 lõi lọc nước số 1' (set of 5 size-1 filters) as '5号滤芯'."
+  },
+  {
+    "id": "j000075",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Identical to source and reference."
+  },
+  {
+    "id": "j000076",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'Một mặt hàng' (single item) as '一件代发' (dropshipping)."
+  },
+  {
+    "id": "j000077",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor variation from standard '青春流行', meaning is preserved."
+  },
+  {
+    "id": "j000078",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate meaning, slightly rigid phrasing."
+  },
+  {
+    "id": "j000079",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match for brand/model string."
+  },
+  {
+    "id": "j000080",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, '毫升' correctly spells out ml."
+  }
+]

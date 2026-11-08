@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000081",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice difference (初中 vs 高中/中学), overall accurate."
+  },
+  {
+    "id": "j000082",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'thanh kéo' as 拉链 instead of 拉杆, and missed 'Burgundy' (酒红)."
+  },
+  {
+    "id": "j000083",
+    "rating": "BB",
+    "score": 5,
+    "note": "Hallucinated '洗颜油' and mistranslated brand C咖 as C咖啡."
+  },
+  {
+    "id": "j000084",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Multiple factual errors: Sán Đầu translated as 湖南, mint as vanilla, Vaseline as aloe vera."
+  },
+  {
+    "id": "j000085",
+    "rating": "CC",
+    "score": 2,
+    "note": "Cuticle pusher (sủi da) mistranslated as 气泡管; brand Kềm Nghĩa omitted."
+  },
+  {
+    "id": "j000086",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and correct terminology."
+  },
+  {
+    "id": "j000087",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated wearing style 'qua gáy' (behind neck) as '过耳式' (ear-loop)."
+  },
+  {
+    "id": "j000088",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted target skin type 'Dành Cho Da Khô' (for dry skin)."
+  },
+  {
+    "id": "j000089",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'nhóm' as 组, 'đèn cầy' as 油灯, and 'điếu cày' as 吸油烟."
+  },
+  {
+    "id": "j000090",
+    "rating": "BB",
+    "score": 5,
+    "note": "Omitted brand 'Forwenw' and product feature 'Dạng Ví' (wallet style)."
+  },
+  {
+    "id": "j000091",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and complete translation."
+  },
+  {
+    "id": "j000092",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation matching all specifications."
+  },
+  {
+    "id": "j000093",
+    "rating": "AA",
+    "score": 8,
+    "note": "'防渗垫' is slightly literal compared to '防水隔尿垫', but meaning is clear."
+  },
+  {
+    "id": "j000094",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Unsegmented run-on string of keywords without punctuation; brand untranslated."
+  },
+  {
+    "id": "j000095",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate specifications and parameters, slightly wordy phrasing."
+  },
+  {
+    "id": "j000096",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed 'đông' (winter) and redundant repetition of '男鞋'."
+  },
+  {
+    "id": "j000097",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, complete, and well-structured translation."
+  },
+  {
+    "id": "j000098",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Loại thùng' (bucket bag) mistranslated as '箱型' (box shape)."
+  },
+  {
+    "id": "j000099",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of all product attributes."
+  },
+  {
+    "id": "j000100",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title translation."
+  }
+]

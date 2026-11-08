@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000041",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslates 'Hũ' (jar/bottle) as '盒', and leaves 'Yến Plus' untranslated."
+  },
+  {
+    "id": "j000042",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Minor mistranslations: '工艺: 不是' (should be 无) and 'Y26梦色' (should be 杏色)."
+  },
+  {
+    "id": "j000043",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severely mistranslates core product 'Mè' (sesame) as '豆' (beans)."
+  },
+  {
+    "id": "j000044",
+    "rating": "A",
+    "score": 7,
+    "note": "Leaves 'SIÊU HOT' untranslated; 'đèn pin' translated as '电池灯' instead of 手电筒."
+  },
+  {
+    "id": "j000045",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Brand name 'Khải Thịnh' mistranslated as '混熙'; minor terminology flaws."
+  },
+  {
+    "id": "j000046",
+    "rating": "A",
+    "score": 7,
+    "note": "Color 'mơ' mistranslated as '梨色' (should be 杏色); overall well preserved."
+  },
+  {
+    "id": "j000047",
+    "rating": "CCC",
+    "score": 3,
+    "note": "'Mắc ca' (macadamia) mistranslated as '麦钙'; missing 'Thùng' (一箱)."
+  },
+  {
+    "id": "j000048",
+    "rating": "B",
+    "score": 4,
+    "note": "'độ bão hòa thấp' (low saturation) mistranslated as '低滋润' (low moisturization)."
+  },
+  {
+    "id": "j000049",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate and fluent e-commerce translation with minor punctuation differences."
+  },
+  {
+    "id": "j000050",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural, complete, and fully correct e-commerce title."
+  },
+  {
+    "id": "j000051",
+    "rating": "AA",
+    "score": 8,
+    "note": "Comprehensive and accurate; minor style choices in landscape terminology."
+  },
+  {
+    "id": "j000052",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Hệ thống vận chuyển' mistranslated as '运输系统' instead of 背负系统; retains raw number artifacts."
+  },
+  {
+    "id": "j000053",
+    "rating": "C",
+    "score": 1,
+    "note": "Repetitive hallucination loop and text truncated with replacement characters."
+  },
+  {
+    "id": "j000054",
+    "rating": "A",
+    "score": 7,
+    "note": "Omits 'cho điện thoại'; missing currency unit '越南盾' for 100万."
+  },
+  {
+    "id": "j000055",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'cổ cao' translated awkwardly as '高腰' instead of 高筒/中筒 for boots."
+  },
+  {
+    "id": "j000056",
+    "rating": "BB",
+    "score": 5,
+    "note": "'bạn trai cũ' (ex-boyfriend/前男友) mistranslated as '老友男友'."
+  },
+  {
+    "id": "j000057",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural, fluent, and accurate e-commerce title."
+  },
+  {
+    "id": "j000058",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and clear translation preserving all key product specifications."
+  },
+  {
+    "id": "j000059",
+    "rating": "A",
+    "score": 7,
+    "note": "Omits 'nách' (腋下包); overall meaning is well preserved."
+  },
+  {
+    "id": "j000060",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, concise, and appropriate e-commerce terminology."
+  }
+]
