@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000341",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor color translation choices ('梨色' for 'mơ'), otherwise accurate and complete."
+  },
+  {
+    "id": "j000342",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Repetitive phrasing ('女背包女防偷双肩包') and awkward word choice ('防偷' instead of '防盗')."
+  },
+  {
+    "id": "j000343",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslates pants-style sanitary pads ('băng quần') as tampons ('卫生棉条')."
+  },
+  {
+    "id": "j000344",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and correct e-commerce terminology."
+  },
+  {
+    "id": "j000345",
+    "rating": "A",
+    "score": 7,
+    "note": "Uses unidiomatic '溶解咖啡' instead of '速溶咖啡', but overall meaning is preserved."
+  },
+  {
+    "id": "j000346",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title translation."
+  },
+  {
+    "id": "j000347",
+    "rating": "BB",
+    "score": 5,
+    "note": "Hallucinated currency ('韩元' instead of 'VND/越南盾') and repetitive phrasing ('相机、相机')."
+  },
+  {
+    "id": "j000348",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Literal translation of series name ('重力旋转') and omitted 'nét kẻ siêu mịn'."
+  },
+  {
+    "id": "j000349",
+    "rating": "B",
+    "score": 4,
+    "note": "Hallucinated multiple attribute names from empty source tags; mistranslated color name."
+  },
+  {
+    "id": "j000350",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor style issue ('铝边' vs official '铝金属表壳'), meaning is clear."
+  },
+  {
+    "id": "j000351",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated eyebrow pen ('kẻ lông mày') as eyeliner ('眼线笔') and body wash as face cream."
+  },
+  {
+    "id": "j000352",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and matches standard e-commerce attribute conventions."
+  },
+  {
+    "id": "j000353",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent translation of product specifications."
+  },
+  {
+    "id": "j000354",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural attribute translation."
+  },
+  {
+    "id": "j000355",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslations in brand/product terms ('红古', '河山蛋' for 卤蛋, '五种口味' for 五香)."
+  },
+  {
+    "id": "j000356",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice ('防粘' instead of conventional '不粘')."
+  },
+  {
+    "id": "j000357",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000358",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly clunky word ordering at the end, but all key information preserved."
+  },
+  {
+    "id": "j000359",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated flower type: 'hoa Cúc' (daisy/chrysanthemum) translated as '向日葵' (sunflower)."
+  },
+  {
+    "id": "j000360",
+    "rating": "BB",
+    "score": 5,
+    "note": "Omitted almond ('hạnh nhân') and mistranslated black sesame ('mè đen') as black bean ('黑豆')."
+  }
+]

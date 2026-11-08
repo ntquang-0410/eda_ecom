@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000321",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate overall; '形象: 否' should preferably be '形象: 无'."
+  },
+  {
+    "id": "j000322",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted 'Combo' and word order is slightly unnatural, but meaning is intact."
+  },
+  {
+    "id": "j000323",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce translation."
+  },
+  {
+    "id": "j000324",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Kính râm phân cực' (偏光墨镜) mistranslated as '极光眼镜'."
+  },
+  {
+    "id": "j000325",
+    "rating": "BB",
+    "score": 5,
+    "note": "16.8 triệu mistranslated as 16.8万; key count translated as keyboard count."
+  },
+  {
+    "id": "j000326",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent and fully accurate."
+  },
+  {
+    "id": "j000327",
+    "rating": "B",
+    "score": 4,
+    "note": "'Tailor' mistranslated as 尾; 'không nặng tóc' translated awkwardly as 不重头发."
+  },
+  {
+    "id": "j000328",
+    "rating": "C",
+    "score": 1,
+    "note": "Severe hallucinated repetitions ('适中') and missing most product specifications."
+  },
+  {
+    "id": "j000329",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Key product term 'Khẩu Trang' (口罩) is missing entirely."
+  },
+  {
+    "id": "j000330",
+    "rating": "A",
+    "score": 7,
+    "note": "'Khóa kéo cánh cửa' translated somewhat awkwardly as '拉链门帘', meaning mostly preserved."
+  },
+  {
+    "id": "j000331",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missed 'nét kẻ siêu mịn' and translated brand line literally."
+  },
+  {
+    "id": "j000332",
+    "rating": "C",
+    "score": 1,
+    "note": "Critical error: 'Khẩu Trang' (mask) mistranslated as '口红套装' (lipstick set)."
+  },
+  {
+    "id": "j000333",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation with all numbers and dimensions preserved."
+  },
+  {
+    "id": "j000334",
+    "rating": "B",
+    "score": 4,
+    "note": "'Bộ túi xách hai món' mistranslated as '双肩包', with repetitive words at the end."
+  },
+  {
+    "id": "j000335",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural e-commerce listing translation matching the source."
+  },
+  {
+    "id": "j000336",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Faithfully reflects source including specs and keywords."
+  },
+  {
+    "id": "j000337",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly awkward grammar ('给...') but meaning is clear."
+  },
+  {
+    "id": "j000338",
+    "rating": "B",
+    "score": 4,
+    "note": "'Mô tô thể thao' (sports motorcycle) mistranslated as '汽车模型' (car model)."
+  },
+  {
+    "id": "j000339",
+    "rating": "A",
+    "score": 7,
+    "note": "Small typos like '陶火类别' for '淘货类别', otherwise good."
+  },
+  {
+    "id": "j000340",
+    "rating": "B",
+    "score": 4,
+    "note": "'Tam giác vuông' (right triangle) mistranslated as '正方形' (square)."
+  }
+]

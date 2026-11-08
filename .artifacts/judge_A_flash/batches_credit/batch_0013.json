@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000261",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title translation."
+  },
+  {
+    "id": "j000262",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Model code exactly matches."
+  },
+  {
+    "id": "j000263",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of round neck."
+  },
+  {
+    "id": "j000264",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and concise."
+  },
+  {
+    "id": "j000265",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000266",
+    "rating": "BB",
+    "score": 5,
+    "note": "First item 'cam' left untranslated; minor color inaccuracies."
+  },
+  {
+    "id": "j000267",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural product description."
+  },
+  {
+    "id": "j000268",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct color names."
+  },
+  {
+    "id": "j000269",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severe hallucination of tea types (Tieguanyin) and flavors."
+  },
+  {
+    "id": "j000270",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation of color name."
+  },
+  {
+    "id": "j000271",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000272",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated cuticle pusher tool (sủi da) as an aerator (气泡器)."
+  },
+  {
+    "id": "j000273",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor distortion: translated puzzle dimension as individual piece dimension."
+  },
+  {
+    "id": "j000274",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Omitted Smith Mary Jane items and repeated incorrect options."
+  },
+  {
+    "id": "j000275",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation; terminology slightly unidiomatic ('氧气气泡机')."
+  },
+  {
+    "id": "j000276",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated famous city Yiwu (Nghĩa Ô) as '义奥'."
+  },
+  {
+    "id": "j000277",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Standard and accurate translation."
+  },
+  {
+    "id": "j000278",
+    "rating": "BB",
+    "score": 5,
+    "note": "Omitted domestic/cross-border e-commerce info; mistranslated in-ear as ear-clip."
+  },
+  {
+    "id": "j000279",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000280",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  }
+]
