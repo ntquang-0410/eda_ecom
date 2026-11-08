@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000241",
+    "rating": "AA",
+    "score": 8,
+    "note": "Condensed e-commerce style, accurate meaning."
+  },
+  {
+    "id": "j000242",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000243",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor omission of 'dry skin' attribute."
+  },
+  {
+    "id": "j000244",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Excellent detailed translation."
+  },
+  {
+    "id": "j000245",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and natural."
+  },
+  {
+    "id": "j000246",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing key product category 'Transforming Car Toy'."
+  },
+  {
+    "id": "j000247",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor error: 'boyfriend' instead of 'ex-boyfriend'."
+  },
+  {
+    "id": "j000248",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Highly accurate technical specifications."
+  },
+  {
+    "id": "j000249",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Incorrect city translation: Shantou to Chaozhou."
+  },
+  {
+    "id": "j000250",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor error: 'strap' translated as 'handle'."
+  },
+  {
+    "id": "j000251",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Incorrect city and terminology errors."
+  },
+  {
+    "id": "j000252",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor terminology errors in ingredients."
+  },
+  {
+    "id": "j000253",
+    "rating": "C",
+    "score": 1,
+    "note": "Critical error: Basil seeds translated as Oats."
+  },
+  {
+    "id": "j000254",
+    "rating": "BB",
+    "score": 5,
+    "note": "Poor word choice for 'whitening' and missing keywords."
+  },
+  {
+    "id": "j000255",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor error: 'over neck' translated as 'behind ear'."
+  },
+  {
+    "id": "j000256",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000257",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000258",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000259",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000260",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'Pixiu' as 'Dragon'; Obsidian untranslated."
+  }
+]

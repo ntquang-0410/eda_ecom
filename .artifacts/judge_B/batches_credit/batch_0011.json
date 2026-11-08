@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000221",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'fish sauce' as 'soy sauce'."
+  },
+  {
+    "id": "j000222",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000223",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of a long description."
+  },
+  {
+    "id": "j000224",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and matches reference well."
+  },
+  {
+    "id": "j000225",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor errors: 'apricot' translated as 'dream' color."
+  },
+  {
+    "id": "j000226",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000227",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'black sesame' as 'black bean'."
+  },
+  {
+    "id": "j000228",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of a long description."
+  },
+  {
+    "id": "j000229",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'pandan leaf' as 'pineapple leaf'."
+  },
+  {
+    "id": "j000230",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000231",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'black sesame' as 'black bean'."
+  },
+  {
+    "id": "j000232",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of a long description."
+  },
+  {
+    "id": "j000233",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor word choice: 'swimming pool' as 'pond'."
+  },
+  {
+    "id": "j000234",
+    "rating": "BB",
+    "score": 5,
+    "note": "Significant numerical error: 1 million to 100 thousand."
+  },
+  {
+    "id": "j000235",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000236",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Wrong tea type and flavor (Feizixiao to Tie Guan Yin)."
+  },
+  {
+    "id": "j000237",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Wrong tea type and flavor (Feizixiao to Tie Guan Yin)."
+  },
+  {
+    "id": "j000238",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of a long description."
+  },
+  {
+    "id": "j000239",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of a long description."
+  },
+  {
+    "id": "j000240",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated 'car cover' as 'car film'."
+  }
+]
