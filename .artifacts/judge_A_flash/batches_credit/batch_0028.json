@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000561",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and matches the source perfectly."
+  },
+  {
+    "id": "j000562",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor word order/phrasing issue, meaning is clear."
+  },
+  {
+    "id": "j000563",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, natural e-commerce title translation."
+  },
+  {
+    "id": "j000564",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent translation of product title."
+  },
+  {
+    "id": "j000565",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000566",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated backpack (双肩) as 单肩."
+  },
+  {
+    "id": "j000567",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000568",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated pandan leaf (香兰叶) as pineapple leaf, and lá nếp as 叶网."
+  },
+  {
+    "id": "j000569",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 5-pack of filter #1 into filter #5."
+  },
+  {
+    "id": "j000570",
+    "rating": "CC",
+    "score": 2,
+    "note": "Mistranslated bịch (bag/pack) as 锅 (pot)."
+  },
+  {
+    "id": "j000571",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor style issue (骑行车 instead of 自行车/童车)."
+  },
+  {
+    "id": "j000572",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Untranslated 'Mắc ca', omitted 'Thùng' and 'Sữa hạt'."
+  },
+  {
+    "id": "j000573",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation, minor style preference."
+  },
+  {
+    "id": "j000574",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated Smith to 安芙, wrong color translations (深紫, 米白)."
+  },
+  {
+    "id": "j000575",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Unnatural Chinese grammar and awkward phrasing."
+  },
+  {
+    "id": "j000576",
+    "rating": "B",
+    "score": 4,
+    "note": "Omitted brand Forwenw, translated phone case as wallet."
+  },
+  {
+    "id": "j000577",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward calque translation '男女不重'."
+  },
+  {
+    "id": "j000578",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000579",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate terminology."
+  },
+  {
+    "id": "j000580",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent and natural e-commerce title."
+  }
+]

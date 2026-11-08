@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000661",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor repetition in Vietnamese translated naturally; missing final tax disclaimer sentence."
+  },
+  {
+    "id": "j000662",
+    "rating": "A",
+    "score": 7,
+    "note": "Repetitive terms in hypothesis ('唇釉口红百搭唇釉'), meaning generally conveyed."
+  },
+  {
+    "id": "j000663",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000664",
+    "rating": "A",
+    "score": 7,
+    "note": "Glycol translated as 甘油 (glycerol/glycerin) instead of 乙二醇; otherwise good."
+  },
+  {
+    "id": "j000665",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Gói 7 Cái' translated as '7包' (7 packs) instead of 1 pack of 7."
+  },
+  {
+    "id": "j000666",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated dưa chuột (cucumber) and Centella Asiatica (积雪草) as 芦荟 (aloe vera)."
+  },
+  {
+    "id": "j000667",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Multiple mistranslations: thùng (bucket/水桶) as 箱型, tài liệu as 文具, lưng as 背跨."
+  },
+  {
+    "id": "j000668",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent and accurate translation of cosmetic title."
+  },
+  {
+    "id": "j000669",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title phrasing."
+  },
+  {
+    "id": "j000670",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slight phrasing awkwardness ('女包女双肩包', '防扒'), overall meaning accurate."
+  },
+  {
+    "id": "j000671",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation; minor awkward phrasing in parts."
+  },
+  {
+    "id": "j000672",
+    "rating": "A",
+    "score": 7,
+    "note": "Mistranslated wood types (tần bì = 白蜡木 not 柚木; mít = 菠萝蜜木 not 木棉木)."
+  },
+  {
+    "id": "j000673",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'cao su non' (memory foam) as '非 latex' (non-latex); missed final sentence."
+  },
+  {
+    "id": "j000674",
+    "rating": "AA",
+    "score": 8,
+    "note": "Brand transliteration difference, otherwise very accurate spec sheet translation."
+  },
+  {
+    "id": "j000675",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Concise and fully accurate."
+  },
+  {
+    "id": "j000676",
+    "rating": "B",
+    "score": 4,
+    "note": "nhung sữa mistranslated as 羊绒, brand mistranslated, color variants mistranslated/missing texture words."
+  },
+  {
+    "id": "j000677",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation; 'Hộp 12 gói' translated as '12包装' (missing box)."
+  },
+  {
+    "id": "j000678",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and conveys all details well."
+  },
+  {
+    "id": "j000679",
+    "rating": "AA",
+    "score": 8,
+    "note": "Mixture translated as 混纺 (Pro omitted), but meaning is well-preserved."
+  },
+  {
+    "id": "j000680",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural product title translation."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000541",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate transliteration of units and dimensions."
+  },
+  {
+    "id": "j000542",
+    "rating": "AA",
+    "score": 8,
+    "note": "Acceptable transliteration of the brand/name."
+  },
+  {
+    "id": "j000543",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor omissions ('thu đông' translated as only '秋季', missing '鞋' after '休闲男')."
+  },
+  {
+    "id": "j000544",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000545",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Severe mistranslations of ingredients ('dừa' as cucumber, 'sầu riêng' as ginger)."
+  },
+  {
+    "id": "j000546",
+    "rating": "AA",
+    "score": 8,
+    "note": "Correct meaning; '汽车脚垫' is more idiomatic than '汽车地板垫'."
+  },
+  {
+    "id": "j000547",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Core product mistranslated: sesame ('mè') mistranslated as beans ('豆')."
+  },
+  {
+    "id": "j000548",
+    "rating": "BBB",
+    "score": 6,
+    "note": "The last word is cut off ('零食批' instead of '零食批发')."
+  },
+  {
+    "id": "j000549",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact model match."
+  },
+  {
+    "id": "j000550",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'hoa Cúc Tím' (daisy/coneflower) as '向日葵' (sunflower)."
+  },
+  {
+    "id": "j000551",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Faithful and accurate translation of the source title."
+  },
+  {
+    "id": "j000552",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact model match."
+  },
+  {
+    "id": "j000553",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000554",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated female/male specific styles as unisex ('男女款') for several variants."
+  },
+  {
+    "id": "j000555",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact model match."
+  },
+  {
+    "id": "j000556",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Core product mistranslated: 'mè' (sesame) rendered as '豆' (beans)."
+  },
+  {
+    "id": "j000557",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward word order ('抛光膏盒' suggests an empty box rather than paste in a tub)."
+  },
+  {
+    "id": "j000558",
+    "rating": "BBB",
+    "score": 6,
+    "note": "First item 'cam' is left untranslated Vietnamese."
+  },
+  {
+    "id": "j000559",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent, accurate e-commerce title translation."
+  },
+  {
+    "id": "j000560",
+    "rating": "AA",
+    "score": 8,
+    "note": "'骑行车' is slightly unidiomatic for 'xe đạp' (usually '自行车/童车')."
+  }
+]
