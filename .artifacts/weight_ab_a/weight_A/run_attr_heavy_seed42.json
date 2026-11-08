@@ -1,0 +1,13 @@
+{
+  "config": "attr_heavy",
+  "seed": 42,
+  "steps": 500,
+  "tokens": 4000595,
+  "minutes": 125.2,
+  "actual_share": {
+    "1688_attribute": 0.6000013028496763,
+    "1688_title": 0.09998619654044162,
+    "tiki_attribute": 0.2500141437799617,
+    "tiki_title": 0.049998356829920425
+  }
+}

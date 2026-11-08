@@ -63,3 +63,7 @@ csv/length_prior_v3/
 
 # API keys
 keys.txt
+
+# Model weights > 100MB/file: GitHub tu choi, dung Hugging Face
+*.safetensors
+.artifacts/**/adapter_model.safetensors

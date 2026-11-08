@@ -60,6 +60,10 @@ def main() -> int:
         raise FileNotFoundError(f"không có hyp_*.parquet trong {hyp_dir}")
     print(f"found {len(files)} files", flush=True)
 
+    import os
+    import torch
+
+    torch.set_num_threads(int(os.environ.get("TORCH_THREADS", "2")))
     from comet import download_model, load_from_checkpoint
     import sacrebleu
 

@@ -30,6 +30,8 @@ def load_hyp(hyp_dir: Path) -> pd.DataFrame:
     if not frames:
         raise FileNotFoundError(f"không có hyp_*.parquet trong {hyp_dir}")
     df = pd.concat(frames, ignore_index=True)
+    # bỏ hypothesis rỗng (prompt quá dài hoặc generate lỗi) để không chấm rác
+    df = df[df["hypothesis"].fillna("").astype(str).str.strip().ne("")].reset_index(drop=True)
     required = {"eval_id", "source", "hypothesis", "dataset", "pair_type", "config", "seed"}
     missing = required - set(df.columns)
     if missing:

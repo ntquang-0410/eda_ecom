@@ -1,0 +1,67 @@
+[
+  {
+    "config": "natural",
+    "seed": 42,
+    "steps": 500,
+    "tokens": 4001154,
+    "minutes": 87.7,
+    "actual_share": {
+      "1688_description": 0.5257020649550809,
+      "1688_title": 0.047883153903986876,
+      "tiki_description": 0.39535696651392643,
+      "tiki_title": 0.03105781462700582
+    }
+  },
+  {
+    "config": "balanced",
+    "seed": 42,
+    "steps": 500,
+    "tokens": 4000717,
+    "minutes": 115.5,
+    "actual_share": {
+      "1688_description": 0.2500510109280609,
+      "1688_title": 0.24998221610268903,
+      "tiki_description": 0.24998740637367267,
+      "tiki_title": 0.24997936659557737
+    }
+  },
+  {
+    "config": "title_heavy",
+    "seed": 42,
+    "steps": 500,
+    "tokens": 4000577,
+    "minutes": 119.7,
+    "actual_share": {
+      "1688_description": 0.09999148440040706,
+      "1688_title": 0.39994352825794294,
+      "tiki_description": 0.10011613642620516,
+      "tiki_title": 0.3999488509154449
+    }
+  },
+  {
+    "config": "desc_heavy",
+    "seed": 42,
+    "steps": 500,
+    "tokens": 4006944,
+    "minutes": 83.5,
+    "actual_share": {
+      "1688_description": 0.5499746729175897,
+      "1688_title": 0.020001881997626658,
+      "tiki_description": 0.4000196931767057,
+      "tiki_title": 0.030003751908077903
+    }
+  },
+  {
+    "config": "tiki_heavy",
+    "seed": 42,
+    "steps": 500,
+    "tokens": 4000511,
+    "minutes": 115.2,
+    "actual_share": {
+      "1688_description": 0.1500435009093206,
+      "1688_title": 0.09999627176752758,
+      "tiki_description": 0.39998475641972325,
+      "tiki_title": 0.3499754709034286
+    }
+  }
+]

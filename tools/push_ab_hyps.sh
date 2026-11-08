@@ -8,11 +8,11 @@ rm -rf "$STAGE"; mkdir -p "$STAGE"
 # Đổi tên để A/B không ghi đè nhau và notebook lọc theo _A_/_B_.
 for s in a b; do
   S=$(echo "$s" | tr 'a-z' 'A-Z')
-  for f in "$ROOT"/.artifacts/weight_ab_$s/hyp_*.parquet; do
+  for f in "$ROOT"/.artifacts/weight_ab_$s/weight_*/hyp_*.parquet; do
     [ -e "$f" ] || continue
     cp "$f" "$STAGE/hyp_${S}_$(basename "$f" | sed 's/^hyp_//')"
   done
-  for f in "$ROOT"/.artifacts/weight_ab_$s/run_*.json; do
+  for f in "$ROOT"/.artifacts/weight_ab_$s/weight_*/run_*.json; do
     [ -e "$f" ] || continue
     cp "$f" "$STAGE/run_${S}_$(basename "$f" | sed 's/^run_//')"
   done

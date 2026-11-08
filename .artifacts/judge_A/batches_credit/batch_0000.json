@@ -1,0 +1,62 @@
+[
+  {
+    "id": "j000001",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000002",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missing 'Dragon' (Con Rồng), key product detail."
+  },
+  {
+    "id": "j000003",
+    "rating": "C",
+    "score": 1,
+    "note": "Severe repetition and missing key information."
+  },
+  {
+    "id": "j000004",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000005",
+    "rating": "A",
+    "score": 7,
+    "note": "Mistranslated 'gel' as 'collagen'; '不洗面' is slightly awkward."
+  },
+  {
+    "id": "j000006",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate, though 'pendant' is translated as 'lanyard'."
+  },
+  {
+    "id": "j000007",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated 'cucumber' (dưa chuột) as 'hyaluronic acid' (玻尿酸)."
+  },
+  {
+    "id": "j000008",
+    "rating": "A",
+    "score": 7,
+    "note": "'Polka dot' (Chấm Bi) translated as 'Red dot' (红点)."
+  },
+  {
+    "id": "j000009",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'satin' as 'pearl' (珍珠)."
+  },
+  {
+    "id": "j000010",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "config": "desc_heavy",
+  "seed": 42,
+  "steps": 500,
+  "tokens": 4006944,
+  "minutes": 83.5,
+  "actual_share": {
+    "1688_description": 0.5499746729175897,
+    "1688_title": 0.020001881997626658,
+    "tiki_description": 0.4000196931767057,
+    "tiki_title": 0.030003751908077903
+  }
+}

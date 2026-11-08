@@ -1,0 +1,8 @@
+found 10 files
+Traceback (most recent call last):
+  File "/content/eda_ecom/tools/score_comet_weight.py", line 122, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/content/eda_ecom/tools/score_comet_weight.py", line 67, in main
+    from comet import download_model, load_from_checkpoint
+ModuleNotFoundError: No module named 'comet'

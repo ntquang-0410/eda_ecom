@@ -1,0 +1,13 @@
+{
+  "config": "balanced",
+  "seed": 42,
+  "steps": 500,
+  "tokens": 4000717,
+  "minutes": 115.5,
+  "actual_share": {
+    "1688_description": 0.2500510109280609,
+    "1688_title": 0.24998221610268903,
+    "tiki_description": 0.24998740637367267,
+    "tiki_title": 0.24997936659557737
+  }
+}
