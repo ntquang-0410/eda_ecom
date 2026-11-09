@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000661",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, natural translation of safety warning."
+  },
+  {
+    "id": "j000662",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good e-commerce style, slightly different wording from reference but conveys meaning well."
+  },
+  {
+    "id": "j000663",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000664",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000665",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Missed noun 'khẩu trang' (masks), mistranslated 'mềm mại' as '软毛'."
+  },
+  {
+    "id": "j000666",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent e-commerce translation."
+  },
+  {
+    "id": "j000667",
+    "rating": "A",
+    "score": 7,
+    "note": "Pinyin brand name Kouzhiyue rendered as 库智愈 instead of 蔻植悦, redundant '面膜'."
+  },
+  {
+    "id": "j000668",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Repeated 防水, mistranslated 'Nâu Tự Nhiên' as '棕自研色' (should be 自然棕色)."
+  },
+  {
+    "id": "j000669",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent e-commerce product title, matches reference closely."
+  },
+  {
+    "id": "j000670",
+    "rating": "A",
+    "score": 7,
+    "note": "Translated 'mùa xuân hè' (spring/summer) as '春秋' (spring/autumn); '防偷' is less standard than '防盗'."
+  },
+  {
+    "id": "j000671",
+    "rating": "A",
+    "score": 7,
+    "note": "US in specs usually refers to US plug/spec (美规), but '美国' is acceptable."
+  },
+  {
+    "id": "j000672",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000673",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000674",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000675",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000676",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000677",
+    "rating": "AA",
+    "score": 8,
+    "note": "Usually '竹木' or '竹制', but '竹子' conveys the material correctly."
+  },
+  {
+    "id": "j000678",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation, '国内外贸' slightly awkward compared to reference '国内外电商爆款'."
+  },
+  {
+    "id": "j000679",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed 'Vải Dệt' (woven/fabric material), but overall usable and clear."
+  },
+  {
+    "id": "j000680",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missed 'quà tặng' (gift/礼盒), but otherwise accurate."
+  }
+]
