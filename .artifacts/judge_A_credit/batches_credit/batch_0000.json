@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000581",
+    "rating": "A",
+    "score": 7,
+    "note": "Wording slightly literal ('一级货'); meaning is preserved."
+  },
+  {
+    "id": "j000582",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'mùa xuân hè' (spring/summer) as '春秋' (spring/autumn)."
+  },
+  {
+    "id": "j000583",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'nhẫn' mistranslated as '手镯'; repetitive phrasing."
+  },
+  {
+    "id": "j000584",
+    "rating": "BB",
+    "score": 5,
+    "note": "Hallucinated '芒果' (mango) not found in the source text."
+  },
+  {
+    "id": "j000585",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted 'vải chéo' (twill); slight awkwardness combining 4-piece and 3-piece."
+  },
+  {
+    "id": "j000586",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted 'núm ti' (nipple/teat), but key meaning preserved."
+  },
+  {
+    "id": "j000587",
+    "rating": "B",
+    "score": 4,
+    "note": "Missing key animal 'Con Rồng' (dragon); unnatural ending phrasing."
+  },
+  {
+    "id": "j000588",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title translation."
+  },
+  {
+    "id": "j000589",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'gia công' (processing/OEM) as '代发' (dropshipping)."
+  },
+  {
+    "id": "j000590",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent, and correct standard terminology."
+  },
+  {
+    "id": "j000591",
+    "rating": "A",
+    "score": 7,
+    "note": "'xanh' translated as blue instead of green/proper color tone; repetitive wording."
+  },
+  {
+    "id": "j000592",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and appropriate e-commerce terminology."
+  },
+  {
+    "id": "j000593",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correctly handled source typo to match size sequence."
+  },
+  {
+    "id": "j000594",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000595",
+    "rating": "CC",
+    "score": 2,
+    "note": "Mistranslated sleeve length ('tay') as three fingers ('三指') instead of '三分袖'."
+  },
+  {
+    "id": "j000596",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000597",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct terminology."
+  },
+  {
+    "id": "j000598",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, natural e-commerce keywords."
+  },
+  {
+    "id": "j000599",
+    "rating": "A",
+    "score": 7,
+    "note": "Slightly awkward phrasing ('抛光膏盒'), but meaning is clear."
+  },
+  {
+    "id": "j000600",
+    "rating": "A",
+    "score": 7,
+    "note": "'地板垫' is literal for 'thảm lót sàn' (typically 脚垫); meaning preserved."
+  }
+]
