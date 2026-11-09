@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000721",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000722",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural."
+  },
+  {
+    "id": "j000723",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'Nghĩa Ô' (义乌) mistranslated as '义奥'."
+  },
+  {
+    "id": "j000724",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor phrasing preference; '66-90码' is more common than '66-90尺寸'."
+  },
+  {
+    "id": "j000725",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Perfect translation."
+  },
+  {
+    "id": "j000726",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and accurate e-commerce title."
+  },
+  {
+    "id": "j000727",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation; '防水垫/隔尿垫' is more common than '防渗垫'."
+  },
+  {
+    "id": "j000728",
+    "rating": "AA",
+    "score": 8,
+    "note": "Acceptable translation of 'trơn', though in apparel it often means '纯色'."
+  },
+  {
+    "id": "j000729",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate e-commerce title with appropriate keywords."
+  },
+  {
+    "id": "j000730",
+    "rating": "AA",
+    "score": 8,
+    "note": "Minor omission of 'túi trà' (茶包/袋泡茶) in '代加工'."
+  },
+  {
+    "id": "j000731",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate terminology and natural listing title."
+  },
+  {
+    "id": "j000732",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title."
+  },
+  {
+    "id": "j000733",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'tam giác vuông' (right triangle) as '方形' (square)."
+  },
+  {
+    "id": "j000734",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed the word 'cao' (高)."
+  },
+  {
+    "id": "j000735",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent translation."
+  },
+  {
+    "id": "j000736",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and complete e-commerce keywords."
+  },
+  {
+    "id": "j000737",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000738",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000739",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title."
+  },
+  {
+    "id": "j000740",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated 'quần PP lớn cho bé' as 'PP大童' (older kids) instead of baby's big PP pants."
+  }
+]
