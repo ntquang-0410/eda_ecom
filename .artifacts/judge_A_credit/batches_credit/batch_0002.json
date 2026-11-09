@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000621",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title translation."
+  },
+  {
+    "id": "j000622",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000623",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated wine red suit as red wine set."
+  },
+  {
+    "id": "j000624",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correctly handled bilingual variant label."
+  },
+  {
+    "id": "j000625",
+    "rating": "B",
+    "score": 4,
+    "note": "Severe repetitions and contradictory round neck vs high neck."
+  },
+  {
+    "id": "j000626",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000627",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent and fully accurate."
+  },
+  {
+    "id": "j000628",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation of bilingual color name."
+  },
+  {
+    "id": "j000629",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor repetition of 防水, missed fabric details (dù dày)."
+  },
+  {
+    "id": "j000630",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missed KHÁC (other) and vệ sinh, but main meaning preserved."
+  },
+  {
+    "id": "j000631",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully accurate and natural warning text."
+  },
+  {
+    "id": "j000632",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Brand/name preserved correctly."
+  },
+  {
+    "id": "j000633",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact location translated correctly."
+  },
+  {
+    "id": "j000634",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Sủi da (cuticle pusher) mistranslated as 气泡管; brand untranslated."
+  },
+  {
+    "id": "j000635",
+    "rating": "B",
+    "score": 4,
+    "note": "Several items mistranslated colors/elements in the latter half."
+  },
+  {
+    "id": "j000636",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent e-commerce product title translation."
+  },
+  {
+    "id": "j000637",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent cosmetic product title."
+  },
+  {
+    "id": "j000638",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000639",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Complete and natural translation."
+  },
+  {
+    "id": "j000640",
+    "rating": "AA",
+    "score": 8,
+    "note": "竹木/竹制 would be more precise for material, but acceptable."
+  }
+]
