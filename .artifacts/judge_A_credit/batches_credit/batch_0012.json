@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000821",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent e-commerce title translation."
+  },
+  {
+    "id": "j000822",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted 'không nặng tóc' (lightweight/non-greasy), but otherwise good."
+  },
+  {
+    "id": "j000823",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Truncated at the end, plus mistranslations (cassava starch, fish sauce)."
+  },
+  {
+    "id": "j000824",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and concise translation."
+  },
+  {
+    "id": "j000825",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Identical number preserved correctly."
+  },
+  {
+    "id": "j000826",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'trân châu' (boba/jelly) as '玉米粒' (corn); awkward phrasing."
+  },
+  {
+    "id": "j000827",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation; brand Kouzhiyue phonetically rendered rather than standard 蔻植悦."
+  },
+  {
+    "id": "j000828",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and comprehensive e-commerce title translation."
+  },
+  {
+    "id": "j000829",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Literal brand transliteration and slightly unnatural phrasing throughout."
+  },
+  {
+    "id": "j000830",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and concise."
+  },
+  {
+    "id": "j000831",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Omitted 'dán' (tape/sticker/diaper type), leaving only L68."
+  },
+  {
+    "id": "j000832",
+    "rating": "CC",
+    "score": 2,
+    "note": "Mistranslated 'bịch' (pack/bag) as '杯' (cup)."
+  },
+  {
+    "id": "j000833",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title with appropriate keywords."
+  },
+  {
+    "id": "j000834",
+    "rating": "AA",
+    "score": 8,
+    "note": "Omitted 'chất liệu mềm mại' (soft material), but otherwise natural."
+  },
+  {
+    "id": "j000835",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce product title."
+  },
+  {
+    "id": "j000836",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation of flavor and volume."
+  },
+  {
+    "id": "j000837",
+    "rating": "A",
+    "score": 7,
+    "note": "Mistranslated first 'cốp xe' (trunk) as '车顶箱' (roof box)."
+  },
+  {
+    "id": "j000838",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and complete translation."
+  },
+  {
+    "id": "j000839",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly shifted 'giày bệt' (flats) to '板鞋', but preserves overall meaning."
+  },
+  {
+    "id": "j000840",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missing the core product noun 'Thảm' (mat/floor mat)."
+  }
+]
