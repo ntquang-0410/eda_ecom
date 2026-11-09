@@ -27,6 +27,8 @@ if not torch.cuda.is_available():
     raise SystemExit('no GPU')
 p = torch.cuda.get_device_properties(0)
 print('gpu', p.name, round(p.total_memory/1e9, 1), 'GB')
+# torchao 0.10 trong image Kaggle không tương thích peft mới
+subprocess.run([sys.executable, '-m', 'pip', 'uninstall', '-y', 'torchao'], capture_output=True)
 """
 
 PREP = """DATA = Path('/kaggle/input/tiki-weight-ab-data2')
