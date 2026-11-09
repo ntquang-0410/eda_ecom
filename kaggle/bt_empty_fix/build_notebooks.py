@@ -370,3 +370,4 @@ def build(name: str, title: str, models: list[str]) -> None:
 if __name__ == "__main__":
     build("tiki-bt-fix-small", "Tiki BT Fix Small", ["qwen3-0.6b", "qwen3-1.7b"])
     build("tiki-bt-fix-big", "Tiki BT Fix Big", ["qwen3-4b", "qwen3-8b"])
+    build("tiki-bt-fix-8b-full", "Tiki BT Fix 8B Full", ["qwen3-8b"])

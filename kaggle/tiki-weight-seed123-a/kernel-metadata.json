@@ -1,0 +1,22 @@
+{
+  "id": "anhtamxinhdep/tiki-weight-seed123-a",
+  "title": "Tiki Weight Seed123 A",
+  "code_file": "seed123.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "anhtamxinhdep/tiki-weight-ab-data2"
+  ],
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-3"
+  ],
+  "kernel_sources": [],
+  "model_sources": [
+    "qwen-lm/qwen-3/Transformers/4b/1"
+  ],
+  "machine_shape": "NvidiaRtxPro6000"
+}
