@@ -56,7 +56,8 @@ reports/
   WEIGHT_EVAL_FINAL.md
   WEIGHT_EVAL.md
   WEIGHT_EVAL_PIPELINE.md
-  TIKI_DESC_*.md (khi có)
+  TIKI_DESC_*.md
+  NEXT_STEPS.md (khi có)
 ```
 
 ## Archive
