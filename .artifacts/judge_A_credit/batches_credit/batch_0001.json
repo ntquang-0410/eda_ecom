@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000601",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent, natural, and accurately captures all selling points."
+  },
+  {
+    "id": "j000602",
+    "rating": "BB",
+    "score": 5,
+    "note": "Missed brand 'Forwenw' and mistranslated phone wallet case as '皮质钱包' (wallet)."
+  },
+  {
+    "id": "j000603",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate numbers and specifications; '防渗垫' is understandable though '防水垫' is more common."
+  },
+  {
+    "id": "j000604",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated cleanser ('sữa rửa mặt') as facial cream ('面霜')."
+  },
+  {
+    "id": "j000605",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Literal translation errors, notably '泥土战士' instead of '兵马俑'."
+  },
+  {
+    "id": "j000606",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000607",
+    "rating": "B",
+    "score": 4,
+    "note": "Hallucinated '芒果' (mango) not present in the source; slightly awkward phrasing."
+  },
+  {
+    "id": "j000608",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation, minor condensation of interior keywords."
+  },
+  {
+    "id": "j000609",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Copied noisy duplicated words from source and mistranslated high street as '高领'."
+  },
+  {
+    "id": "j000610",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Smooth e-commerce phrasing, deduplicated and fully accurate."
+  },
+  {
+    "id": "j000611",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000612",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated over-ear headphones ('tai nghe chụp tai') as in-ear ('入耳式')."
+  },
+  {
+    "id": "j000613",
+    "rating": "BB",
+    "score": 5,
+    "note": "Omitted 'SET' and translated noun 'nam châm' as adjective '磁性'."
+  },
+  {
+    "id": "j000614",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated sesame seeds ('mè đen, mè trắng') as black/white beans ('黑豆，有机白豆')."
+  },
+  {
+    "id": "j000615",
+    "rating": "A",
+    "score": 7,
+    "note": "Faithfully translates product title and included spam tags."
+  },
+  {
+    "id": "j000616",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact and natural terminology."
+  },
+  {
+    "id": "j000617",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct number conversion."
+  },
+  {
+    "id": "j000618",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated coconut and durian as cucumber ('黄瓜') and hawthorn ('山楂')."
+  },
+  {
+    "id": "j000619",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated car model Camry as Lexus ('雷克萨斯')."
+  },
+  {
+    "id": "j000620",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Repetitive wording and omitted explicit mention of important occasions."
+  }
+]
