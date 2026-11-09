@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000681",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslation: 'Tay ba tấc' refers to 3/4 or three-quarter/short sleeves (三分袖), not '三指宽'."
+  },
+  {
+    "id": "j000682",
+    "rating": "AA",
+    "score": 8,
+    "note": "Omitted 'dụng cụ' (工具) and slightly awkward '弱电工' instead of '弱电工程'."
+  },
+  {
+    "id": "j000683",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match for brand/term."
+  },
+  {
+    "id": "j000684",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed the cashmere-like cotton comparison ('mềm mại như cashmere'), but overall understandable."
+  },
+  {
+    "id": "j000685",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missed 'quà tặng' (礼盒/礼品), minor omission, meaning mostly preserved."
+  },
+  {
+    "id": "j000686",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed 'đế mềm' (软底), but otherwise complete and natural."
+  },
+  {
+    "id": "j000687",
+    "rating": "AA",
+    "score": 8,
+    "note": "Very close, '青春流行' is standard e-commerce phrasing, but '青年流行' is acceptable."
+  },
+  {
+    "id": "j000688",
+    "rating": "BBB",
+    "score": 6,
+    "note": "'红酒套装' means red wine set instead of wine red suit/outfit (酒红色套装)."
+  },
+  {
+    "id": "j000689",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000690",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Translating brand 'Heavy Rotation' as '重力旋转' is awkward; minor repetitive phrasing."
+  },
+  {
+    "id": "j000691",
+    "rating": "AA",
+    "score": 8,
+    "note": "Missed 'nguyên khối' (一体成型/一体), otherwise accurate."
+  },
+  {
+    "id": "j000692",
+    "rating": "AA",
+    "score": 8,
+    "note": "Translated both bilingual terms directly to '黑色/黑色', could be simplified to '黑色'."
+  },
+  {
+    "id": "j000693",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward word order and misinterpreting boot shaft as '高领' instead of '高筒/中筒'."
+  },
+  {
+    "id": "j000694",
+    "rating": "CCC",
+    "score": 3,
+    "note": "'tam giác vuông' (right triangle) mistranslated as '方形' (square)."
+  },
+  {
+    "id": "j000695",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct and standard."
+  },
+  {
+    "id": "j000696",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct."
+  },
+  {
+    "id": "j000697",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly literal phrasing, but conveys all product details clearly."
+  },
+  {
+    "id": "j000698",
+    "rating": "AAA",
+    "score": 9,
+    "note": "'圆领' is the most common and accurate translation for 'cổ tròn'."
+  },
+  {
+    "id": "j000699",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate, fluent e-commerce title translation."
+  },
+  {
+    "id": "j000700",
+    "rating": "AA",
+    "score": 8,
+    "note": "US in specs usually means US plug (美规), translating as '美国' is slightly overly literal."
+  }
+]
