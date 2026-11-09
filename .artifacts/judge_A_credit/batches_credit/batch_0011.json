@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000801",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural."
+  },
+  {
+    "id": "j000802",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000803",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000804",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000805",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate e-commerce title translation."
+  },
+  {
+    "id": "j000806",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated cốp xe as 车顶箱; missing complete set wording."
+  },
+  {
+    "id": "j000807",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate specifications translation."
+  },
+  {
+    "id": "j000808",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000809",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Untranslated Vietnamese (Mắc ca), missing words (Thùng, sữa hạt)."
+  },
+  {
+    "id": "j000810",
+    "rating": "A",
+    "score": 7,
+    "note": "Slight truncation at the end, missing 保鲜盒."
+  },
+  {
+    "id": "j000811",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Duplicated 防水; missed fabric specification (vải dù)."
+  },
+  {
+    "id": "j000812",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000813",
+    "rating": "AA",
+    "score": 8,
+    "note": "Slightly unnatural word order (四件套床单), but meaning is intact."
+  },
+  {
+    "id": "j000814",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural translation."
+  },
+  {
+    "id": "j000815",
+    "rating": "BB",
+    "score": 5,
+    "note": "Literal mistranslation of 兵马俑 as 泥土战士; denim translated as 藏青."
+  },
+  {
+    "id": "j000816",
+    "rating": "AA",
+    "score": 8,
+    "note": "Spacing missing in 17promaxair, otherwise accurate."
+  },
+  {
+    "id": "j000817",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Omitted hạnh nhân, hallucinated 奶昔, mistranslated mè đen (sesame) as 黑豆."
+  },
+  {
+    "id": "j000818",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Mistranslated khóa kéo (zipper) as 锁; 遮阳布 instead of 车衣."
+  },
+  {
+    "id": "j000819",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Brand Hefengyu should be 和风雨, transliterated incorrectly."
+  },
+  {
+    "id": "j000820",
+    "rating": "AA",
+    "score": 8,
+    "note": "Model Janus is usually kept in English, but phonetic rendering is acceptable."
+  }
+]
