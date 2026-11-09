@@ -129,6 +129,7 @@ def main() -> int:
     ap.add_argument("--data-root", default="/kaggle/input/tiki-weight-ab-processed")
     ap.add_argument("--out", required=True)
     ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--configs", default="", help="danh sách config, phân tách bằng dấu phẩy")
     ap.add_argument("--tokens", type=int, default=4_000_000)
     ap.add_argument("--steps", type=int, default=500)
     ap.add_argument("--max-seq", type=int, default=960)
@@ -142,6 +143,12 @@ def main() -> int:
     eval_frame = pd.read_parquet(data / f"eval_{args.dataset}.parquet")
     meta = json.loads((data / f"meta_{args.dataset}.json").read_text(encoding="utf-8"))
     configs = meta["configs"]
+    if args.configs:
+        want = [c.strip() for c in args.configs.split(",") if c.strip()]
+        configs = {k: v for k, v in configs.items() if k in want}
+        missing = set(want) - set(configs)
+        if missing:
+            raise SystemExit(f"config không có trong meta: {sorted(missing)}")
     tokenizer = AutoTokenizer.from_pretrained(args.model, trust_remote_code=True, local_files_only=True)
     tokenizer.padding_side = "left"
     if tokenizer.pad_token is None:
