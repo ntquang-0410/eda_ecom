@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000741",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Camry translated as 雷克萨斯 (Lexus) instead of 凯美瑞."
+  },
+  {
+    "id": "j000742",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and concise translation."
+  },
+  {
+    "id": "j000743",
+    "rating": "BB",
+    "score": 5,
+    "note": "Dây đeo thép (steel strap) translated as 仿钢带 (imitation steel band)."
+  },
+  {
+    "id": "j000744",
+    "rating": "AA",
+    "score": 8,
+    "note": "Chấm Bi Đỏ could be 红底波点/红波点, but 红点 is acceptable."
+  },
+  {
+    "id": "j000745",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good e-commerce style, 防偷 is slightly less standard than 防盗."
+  },
+  {
+    "id": "j000746",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Awkward translation of 'không cần kiểm tra chuyến công tác' (intended免托运/登机)."
+  },
+  {
+    "id": "j000747",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed translating 'KHÁC' (other), but main meaning is well captured."
+  },
+  {
+    "id": "j000748",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fluent and accurate safety instructions."
+  },
+  {
+    "id": "j000749",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Well-formed e-commerce title, natural Chinese listing style."
+  },
+  {
+    "id": "j000750",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and clear translation."
+  },
+  {
+    "id": "j000751",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural keyword combination, accurate meaning."
+  },
+  {
+    "id": "j000752",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Word order is reversed; should be 标配无卡/标配不含卡."
+  },
+  {
+    "id": "j000753",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Missed 'bình' (瓶/壶), translated only as 'white lid'."
+  },
+  {
+    "id": "j000754",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000755",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and precise warning label translation."
+  },
+  {
+    "id": "j000756",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct and natural product title."
+  },
+  {
+    "id": "j000757",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fixed source typo '481' to '48' correctly matching reference."
+  },
+  {
+    "id": "j000758",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and idiomatic e-commerce title."
+  },
+  {
+    "id": "j000759",
+    "rating": "AA",
+    "score": 8,
+    "note": "Handled machine-translated Vietnamese source well; fluent result."
+  },
+  {
+    "id": "j000760",
+    "rating": "A",
+    "score": 7,
+    "note": "Minor character discrepancies in transliteration/color names, overall understandable."
+  }
+]
