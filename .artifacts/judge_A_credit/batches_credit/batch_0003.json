@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000641",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct translation."
+  },
+  {
+    "id": "j000642",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate, minor repetition of 手提包."
+  },
+  {
+    "id": "j000643",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and fluent e-commerce translation."
+  },
+  {
+    "id": "j000644",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct numbers and units."
+  },
+  {
+    "id": "j000645",
+    "rating": "C",
+    "score": 1,
+    "note": "Truncated sentence at the end; shortening translated as 短ening, fish sauce translated as 酱油."
+  },
+  {
+    "id": "j000646",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match."
+  },
+  {
+    "id": "j000647",
+    "rating": "AA",
+    "score": 8,
+    "note": "Đậy nắp trong 3 phút is cover/steep for 3 min, not 煮; 食用 would be better than 使用."
+  },
+  {
+    "id": "j000648",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated colors (Lụa xanh->绿丝绒, Xanh tím than->紫色), brand Smith omitted."
+  },
+  {
+    "id": "j000649",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Lá dứa/lá nếp is pandan leaf (斑兰叶/香兰叶), not pineapple leaf (菠萝叶) or 叶网."
+  },
+  {
+    "id": "j000650",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good e-commerce phrasing, accurately conveys meaning."
+  },
+  {
+    "id": "j000651",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact translation."
+  },
+  {
+    "id": "j000652",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Omitted the last two SKU options (1.5m and 1.8m fitted sheet sets)."
+  },
+  {
+    "id": "j000653",
+    "rating": "A",
+    "score": 7,
+    "note": "Giày đế bằng means flat shoes; missed the number 2."
+  },
+  {
+    "id": "j000654",
+    "rating": "AA",
+    "score": 8,
+    "note": "Good translation, missed 'nét kẻ siêu mịn' (超细笔触)."
+  },
+  {
+    "id": "j000655",
+    "rating": "BB",
+    "score": 5,
+    "note": "kem đánh bóng is polishing paste/cream, translated as 抛光盒 (polishing box)."
+  },
+  {
+    "id": "j000656",
+    "rating": "A",
+    "score": 7,
+    "note": "bạn trai cũ mistranslated as 老男友 instead of 前男友."
+  },
+  {
+    "id": "j000657",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Correct number conversion."
+  },
+  {
+    "id": "j000658",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate product translation."
+  },
+  {
+    "id": "j000659",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact standard term preserved."
+  },
+  {
+    "id": "j000660",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural and fully correct translation."
+  }
+]
