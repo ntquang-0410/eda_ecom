@@ -1,0 +1,122 @@
+[
+  {
+    "id": "j000701",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate, kept Vietnamese dimension abbreviations D/R/C instead of 长/宽/高."
+  },
+  {
+    "id": "j000702",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Fully correct, natural e-commerce title phrasing."
+  },
+  {
+    "id": "j000703",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'một mặt hàng' (single item) as '一件代发' (dropshipping)."
+  },
+  {
+    "id": "j000704",
+    "rating": "AA",
+    "score": 8,
+    "note": "Accurate; 'US' translated as '美国' rather than '美规'."
+  },
+  {
+    "id": "j000705",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Identical to original Chinese source text."
+  },
+  {
+    "id": "j000706",
+    "rating": "A",
+    "score": 7,
+    "note": "Brand transliterated phonetically as '库智悦' instead of official '蔻植悦'."
+  },
+  {
+    "id": "j000707",
+    "rating": "B",
+    "score": 4,
+    "note": "Mistranslated 'mô tô' (motorcycle) as '汽车' (car)."
+  },
+  {
+    "id": "j000708",
+    "rating": "A",
+    "score": 7,
+    "note": "Omitted 'nguyên khối' (一体成型) and used generic '锅' instead of '煎锅/平底锅'."
+  },
+  {
+    "id": "j000709",
+    "rating": "BBB",
+    "score": 6,
+    "note": "Somewhat literal and unnatural phrasing ('方便的...', '一级货')."
+  },
+  {
+    "id": "j000710",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate and natural e-commerce title."
+  },
+  {
+    "id": "j000711",
+    "rating": "AA",
+    "score": 8,
+    "note": "'铝边' is slightly colloquial for '铝金属表壳/铝合金边框'."
+  },
+  {
+    "id": "j000712",
+    "rating": "BB",
+    "score": 5,
+    "note": "Mistranslated finish terms: 'satin' to '细纱' (should be 缎光/缎面), awkward '水雾柔'."
+  },
+  {
+    "id": "j000713",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed 'Combo', and word order is slightly awkward but meaning is preserved."
+  },
+  {
+    "id": "j000714",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match for model code."
+  },
+  {
+    "id": "j000715",
+    "rating": "CCC",
+    "score": 3,
+    "note": "Mistranslated core product 'son dưỡng môi' (lip balm) as '精华' (essence/serum)."
+  },
+  {
+    "id": "j000716",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Accurate translation."
+  },
+  {
+    "id": "j000717",
+    "rating": "A",
+    "score": 7,
+    "note": "Slightly literal phrasing ('用于观赏鱼缸', '墙挂钟'), but meaning preserved."
+  },
+  {
+    "id": "j000718",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Exact match for product code."
+  },
+  {
+    "id": "j000719",
+    "rating": "A",
+    "score": 7,
+    "note": "Missed the cashmere reference ('mềm mại như cashmere'), otherwise good."
+  },
+  {
+    "id": "j000720",
+    "rating": "AAA",
+    "score": 9,
+    "note": "Natural, accurate translation."
+  }
+]
