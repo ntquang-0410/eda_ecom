@@ -1,0 +1,16 @@
+{
+  "id": "anhtamxinhdep/tiki-comet-seed123",
+  "title": "Tiki COMET Seed123",
+  "code_file": "comet.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "anhtamxinhdep/tiki-seed123-hyps"
+  ],
+  "kernel_sources": [],
+  "model_sources": []
+}

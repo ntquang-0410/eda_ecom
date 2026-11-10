@@ -1,0 +1,9 @@
+data/
+.artifacts/
+.env
+keys.txt
+__pycache__/
+*.pyc
+*.parquet
+*.safetensors
+*.ckpt

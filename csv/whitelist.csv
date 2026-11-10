@@ -1,0 +1,324 @@
+﻿word,category,domain,match_mode,reason
+Lite,brand,general,exact,Thương hiệu / dòng sản phẩm
+Buds,brand,general,exact,Thương hiệu / dòng sản phẩm
+birstory,brand,general,ignore_case,Thương hiệu / dòng sản phẩm
+swicky,brand,general,ignore_case,Thương hiệu / dòng sản phẩm
+Nova,brand,general,exact,Thương hiệu / dòng sản phẩm
+iPad,brand,general,ignore_case,Thương hiệu / dòng sản phẩm
+BAPE,brand,general,exact,Thương hiệu / dòng sản phẩm
+BANGE,brand,general,exact,Thương hiệu / dòng sản phẩm
+Note,brand,general,exact,Thương hiệu / dòng sản phẩm
+mini,brand,general,ignore_case,Thương hiệu / dòng sản phẩm
+hegen,brand,general,ignore_case,Thương hiệu / dòng sản phẩm
+Motorola,brand,general,exact,Thương hiệu / dòng sản phẩm
+MagSafe,brand,general,exact,Thương hiệu / dòng sản phẩm
+kakashow,brand,general,ignore_case,Thương hiệu / dòng sản phẩm
+Nokia,brand,general,exact,Thương hiệu / dòng sản phẩm
+Mate,brand,general,exact,Thương hiệu / dòng sản phẩm
+finercare,brand,general,ignore_case,Thương hiệu / dòng sản phẩm
+MacBook,brand,general,exact,Thương hiệu / dòng sản phẩm
+Gucci,brand,general,exact,Thương hiệu / dòng sản phẩm
+iPhone,brand,general,ignore_case,Thương hiệu / dòng sản phẩm
+Adidas,brand,general,exact,Thương hiệu / dòng sản phẩm
+OPPO,brand,general,exact,Thương hiệu / dòng sản phẩm
+Lolita,brand,general,exact,Thương hiệu / dòng sản phẩm
+Xiaomi,brand,general,exact,Thương hiệu / dòng sản phẩm
+Pro,brand,general,exact,Thương hiệu / dòng sản phẩm
+Ultra,brand,general,exact,Thương hiệu / dòng sản phẩm
+Samsung,brand,general,exact,Thương hiệu / dòng sản phẩm
+SPACEXPERT,brand,general,exact,Thương hiệu / dòng sản phẩm
+Huawei,brand,general,exact,Thương hiệu / dòng sản phẩm
+Mini,brand,general,exact,Thương hiệu / dòng sản phẩm
+Max,brand,general,exact,Thương hiệu / dòng sản phẩm
+POLO,brand,general,exact,Thương hiệu / dòng sản phẩm
+Jeep,brand,general,exact,Thương hiệu / dòng sản phẩm
+AirPods,brand,general,exact,Thương hiệu / dòng sản phẩm
+Puma,brand,general,exact,Thương hiệu / dòng sản phẩm
+kekemood,brand,general,ignore_case,Thương hiệu / dòng sản phẩm
+Galaxy,brand,general,exact,Thương hiệu / dòng sản phẩm
+Nike,brand,general,exact,Thương hiệu / dòng sản phẩm
+OnePlus,brand,general,exact,Thương hiệu / dòng sản phẩm
+eiio,brand,general,ignore_case,Thương hiệu / dòng sản phẩm
+vivo,brand,general,ignore_case,Thương hiệu / dòng sản phẩm
+ProMax,brand,general,exact,Thương hiệu / dòng sản phẩm
+FILA,brand,general,exact,Thương hiệu / dòng sản phẩm
+Yahababy,brand,general,exact,Thương hiệu / dòng sản phẩm
+PROMAX,brand,general,exact,Thương hiệu / dòng sản phẩm
+Redmi,brand,general,exact,Thương hiệu / dòng sản phẩm
+babypal,brand,general,ignore_case,Thương hiệu / dòng sản phẩm
+Plus,brand,general,exact,Thương hiệu / dòng sản phẩm
+Honor,brand,general,exact,Thương hiệu / dòng sản phẩm
+Apple,brand,general,exact,Thương hiệu / dòng sản phẩm
+Realme,brand,general,exact,Thương hiệu / dòng sản phẩm
+Air,brand,general,exact,Thương hiệu / dòng sản phẩm
+POCO,brand,general,exact,Thương hiệu / dòng sản phẩm
+SGS,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+GPU,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+DC,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+LDPE,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+HDMI,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+FDA,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+Wifi,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+MB,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+DJ,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+PC,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+IP67,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+PET,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+NFC,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+RAM,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+AUX,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+RF,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+LTE,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+DDR,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+PU,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+HDPE,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+RoHS,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+LED,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+TSA,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+DIY,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+IR,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+TC,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+IP68,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+BT,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+PE,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+SSD,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+EVA,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+PPSU,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+ANC,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+AI,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+Bluetooth,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+PA,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+AMOLED,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+LOGO,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+DP,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+PP,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+SPF,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+UV,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+VGA,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+IP,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+LOG,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+POM,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+DVR,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+XY,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+ID,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+OBD,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+TB,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+MD,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+FM,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+HD,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+VR,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+ODM,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+SUV,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+PTFE,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+APP,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+IP65,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+QHD,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+CD,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+WiFi,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+TK,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+CE,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+AC,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+FHD,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+TPU,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+GPS,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+FCC,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+Hi-Fi,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+IoT,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+WIFI,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+TPE,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+USB,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+ENC,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+AM,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+PCIe,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+GB,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+ACC,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+ADAS,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+DAC,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+SATA,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+OLED,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+TWS,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+ABS,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+SS,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+NVMe,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+AR,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+CAD,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+PDF,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+ROM,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+PWM,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+MPPT,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+OEM,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+API,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+QC,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+CPU,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+TPR,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+HiFi,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+UHD,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+CNC,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+HDD,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+SIM,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+OTG,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+PVC,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+LCD,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+EPS,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+WWW,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+ECU,tech_abbreviation,general,exact,Viết tắt kỹ thuật / chuyên ngành
+SML,unit,measurement,exact,Đơn vị đo lường / kích thước
+mah,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+Wh,unit,measurement,exact,Đơn vị đo lường / kích thước
+g,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+mm,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+mL,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+mg,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+kWh,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+S,unit,measurement,exact,Đơn vị đo lường / kích thước
+lb,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+dBi,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+kHz,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+MHz,unit,measurement,exact,Đơn vị đo lường / kích thước
+km,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+Hz,unit,measurement,exact,Đơn vị đo lường / kích thước
+XS,unit,measurement,exact,Đơn vị đo lường / kích thước
+oz,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+cm,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+m,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+L,unit,measurement,exact,Đơn vị đo lường / kích thước
+mAh,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+XL,unit,measurement,exact,Đơn vị đo lường / kích thước
+M,unit,measurement,exact,Đơn vị đo lường / kích thước
+XXXXXL,unit,measurement,exact,Đơn vị đo lường / kích thước
+kg,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+XXXXL,unit,measurement,exact,Đơn vị đo lường / kích thước
+dB,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+ml,unit,measurement,ignore_case,Đơn vị đo lường / kích thước
+XXXL,unit,measurement,exact,Đơn vị đo lường / kích thước
+XXL,unit,measurement,exact,Đơn vị đo lường / kích thước
+GHz,unit,measurement,exact,Đơn vị đo lường / kích thước
+retro,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+ulzzang,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+preppy,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+boho,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+magsafe,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+kawaii,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+cleanfit,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+ins,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+slim,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+cardvr,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+dashcam,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+basic,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+punk,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+fit,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+chic,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+oversize,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+vintage,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+tritan,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+casual,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+harajuku,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+hello,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+INS,loanword,fashion,exact,Từ mượn phổ biến trong TMĐT Trung Quốc
+mori,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+boxy,loanword,fashion,ignore_case,Từ mượn phổ biến trong TMĐT Trung Quốc
+HS1,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Cinnamon,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Ginger,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Number,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Male,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Ginseng,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+cos,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Gel,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+ma,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Mulberry,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+miss,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Lolita,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Zero,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+rodeo,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Slipper,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Pro,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+DJ,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+toast,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+PC,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+tee,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+PM,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Sports,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Six,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+gentlewoman,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Turmeric,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+glaze,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+MILO,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Galaxy,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Mommy,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Hi-Fi,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+slippers,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+WIFI,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Vegan,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+samba,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Extra,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+LULU,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+XY,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Dieter,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+newborn,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+mollie,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+MARK,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+growth,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+hobo,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+Dodo,keep_exception,wordnet,exact,Ngoại lệ: physical_object_no_zh nhưng là brand/tech
+tea,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+LP,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Cyme,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+HEAT,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+HA,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Pink,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+ape,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+COAST,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+power,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Track,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Note,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+GREEN,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Warrior,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+mini,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+CD,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Step,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Auto,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Peach,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+CURB,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+women,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Mate,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+AI,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Man,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+POL,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Originals,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+HOME,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+kitty,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Flash,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Cut,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Women,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Pro,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+classic,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+GPS,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Six,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+King,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+balance,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+PET,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+LIFE,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Maple,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Clip,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+fox,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Five,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+HORIZON,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+BLACK,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+pod,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+baby,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+MACK,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Car,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Green,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+bob,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+MD,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Black,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Girls,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+LCD,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+pa,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+LED,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Men,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+camera,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Air,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+bear,keep_exception,wordnet,ignore_case,Ngoại lệ: physical_object_zh_match nhưng nên giữ
+Daddy,keep_exception,wordnet,exact,Ngoại lệ: physical_object_zh_match nhưng nên giữ

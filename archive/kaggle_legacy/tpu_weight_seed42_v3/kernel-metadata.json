@@ -1,0 +1,20 @@
+{
+  "id": "ntquang0410/tiki-weight-tpu-v3-seed42",
+  "title": "Tiki Weight TPU V3 Seed42",
+  "code_file": "weight_tpu.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "ntquang0410/tiki-pairs-dedup"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": [
+    "qwen-lm/qwen-3/Transformers/4b/1"
+  ],
+  "machine_shape": "TpuV3-8"
+}

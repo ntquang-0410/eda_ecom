@@ -1,0 +1,21 @@
+{
+  "id": "ntquang0410/tiki-plan-b-tpu-shard-spike",
+  "title": "Tiki Plan B TPU Shard Spike",
+  "code_file": "shard_spike.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "ntquang0410/tiki-plan-a-bt-input"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": [
+    "qwen-lm/qwen-3/Transformers/0.6b/1",
+    "qwen-lm/qwen-3/Transformers/8b/1"
+  ],
+  "machine_shape": "TpuV5E8"
+}

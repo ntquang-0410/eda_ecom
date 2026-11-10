@@ -1,0 +1,25 @@
+{
+  "id": "ntquang0410/tiki-plan-b-bt-rtx-4-model",
+  "title": "Tiki Plan B BT RTX 4 Model",
+  "code_file": "plan_b_bt_rtx.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "ntquang0410/tiki-plan-a-bt-input"
+  ],
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-3"
+  ],
+  "kernel_sources": [],
+  "model_sources": [
+    "qwen-lm/qwen-3/Transformers/0.6b/1",
+    "qwen-lm/qwen-3/Transformers/1.7b/1",
+    "qwen-lm/qwen-3/Transformers/4b/1",
+    "qwen-lm/qwen-3/Transformers/8b/1"
+  ],
+  "machine_shape": "NvidiaRtxPro6000"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "qwen3-1.7b",
+  "model_id": "Qwen/Qwen3-1.7B",
+  "dtype": "bfloat16",
+  "trust_remote_code": true,
+  "max_input_tokens": 1024,
+  "max_new_tokens": 128,
+  "batch_size": 12,
+  "num_beams": 1,
+  "do_sample": false,
+  "temperature": 0.0,
+  "enable_thinking": false,
+  "requires_sharding": false,
+  "priority": 2
+}

@@ -1,0 +1,16 @@
+{
+  "name": "qwen3-8b",
+  "model_id": "Qwen/Qwen3-8B",
+  "dtype": "bfloat16",
+  "trust_remote_code": true,
+  "max_input_tokens": 1024,
+  "max_new_tokens": 128,
+  "batch_size": 2,
+  "num_beams": 1,
+  "do_sample": false,
+  "temperature": 0.0,
+  "enable_thinking": false,
+  "requires_sharding": true,
+  "sharding_note": "TPU v5e-8 cần tensor/pipeline sharding; nếu không ổn định, dùng GPU 4-bit hoặc chỉ chạy subset.",
+  "priority": 4
+}

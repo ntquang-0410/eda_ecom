@@ -1,0 +1,17 @@
+word,vi_equivalents,category,reason
+mask,mặt nạ|mặt na,beauty,Đã có "mặt nạ" trong câu
+facial,mặt nạ|mặt na|da mặt,beauty,Đã có "mặt nạ"/"da mặt" trong câu
+face,mặt nạ|mặt na|khuôn mặt|da mặt,beauty,Đã có từ tương đương trong câu
+bags,túi xách|túi|cặp|balo|ba lô,fashion,Đã có "túi"/"ba lô" trong câu
+bag,túi xách|túi|cặp|balo|ba lô,fashion,Đã có "túi"/"ba lô" trong câu
+handbag,túi xách|túi|túi đeo,fashion,Đã có "túi xách" trong câu
+handbags,túi xách|túi|túi đeo,fashion,Số nhiều của handbag
+shoes,giày|dép|giầy,fashion,Đã có "giày"/"dép" trong câu
+sneakers,giày|giày thể thao,fashion,Đã có "giày" trong câu
+clothes,quần áo|áo quần|trang phục,fashion,Đã có "quần áo" trong câu
+babyclothes,quần áo|áo quần|trang phục|áo,baby,Đã có "quần áo" trong câu
+backpack,balo|ba lô|cặp sách,fashion,Đã có "ba lô" trong câu
+luggage,hành lý|hanh ly|vali,travel,Đã có "hành lý"/"vali" trong câu
+suitcase,vali|hành lý|hanh ly,travel,Đã có "vali" trong câu
+tshirt,áo thun|áo phông|áo,fashion,Đã có "áo" trong câu
+dress,váy|đầm,fashion,Đã có "váy"/"đầm" trong câu
