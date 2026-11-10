@@ -1,0 +1,53 @@
+{
+  "rows": 146948,
+  "tokens_million": 19.312,
+  "group_share": {
+    "1688_attribute": 0.1657,
+    "1688_description": 0.4276,
+    "1688_title": 0.0389,
+    "tiki_attribute": 0.0208,
+    "tiki_description": 0.3217,
+    "tiki_title": 0.0253
+  },
+  "group_rows": {
+    "1688_attribute": 73815,
+    "1688_description": 16819,
+    "1688_title": 16133,
+    "tiki_attribute": 15727,
+    "tiki_description": 11397,
+    "tiki_title": 13057
+  },
+  "split": {
+    "train": 128153,
+    "dev": 9512,
+    "test": 9283
+  },
+  "configs": {
+    "natural": null,
+    "balanced_B": {
+      "1688_title": 0.203375,
+      "1688_attribute": 0.165672,
+      "1688_description": 0.203375,
+      "tiki_title": 0.203375,
+      "tiki_attribute": 0.020828,
+      "tiki_description": 0.203375
+    },
+    "title_boost": {
+      "1688_title": 0.3254,
+      "1688_attribute": 0.165672,
+      "1688_description": 0.08135,
+      "tiki_title": 0.3254,
+      "tiki_attribute": 0.020828,
+      "tiki_description": 0.08135
+    },
+    "attr_boost": {
+      "1688_title": 0.023938,
+      "1688_attribute": 0.444162,
+      "1688_description": 0.262835,
+      "tiki_title": 0.015527,
+      "tiki_attribute": 0.055838,
+      "tiki_description": 0.1977
+    }
+  },
+  "eval_rows": 900
+}
