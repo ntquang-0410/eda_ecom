@@ -516,3 +516,6 @@ Output file downloaded to .artifacts/seed123_out/comet/venv/lib/python3.12/site-
 Kernel log downloaded to .artifacts/seed123_out/comet/tiki-comet-seed123.log 
 Next page token: eyJHY3NQYWdlVG9rZW4iOiIzNjc5MzQzOTcvb3V0cHV0L3ZlbnYvbGliL3B5dGhvbjMuMTIvc2l0ZS1wYWNrYWdlcy9mdW5jdG9yY2gvX3NyYy9hb3RfYXV0b2dyYWQvX19pbml0X18ucHkifQ==
 DONE
+05:41:31 anhtamxinhdep/tiki-comet-seed123 has status "KernelWorkerStatus.RUNNING"
+05:43:32 anhtamxinhdep/tiki-comet-seed123 has status "KernelWorkerStatus.RUNNING"
+05:45:33 anhtamxinhdep/tiki-comet-seed123 has status "KernelWorkerStatus.RUNNING"
