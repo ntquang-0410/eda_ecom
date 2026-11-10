@@ -45,6 +45,9 @@ CODE = Path('/kaggle/working/code'); CODE.mkdir(exist_ok=True)
 trainer = sorted(Path('/kaggle/input').rglob('train_weight_quota_gpu.py'))[0]
 for name in ('train_weight_quota_gpu.py', 'quota_sampling.py', 'tpu_weight_train.py'):
     shutil.copy2(trainer.parent / name, CODE / name)
+# cho phép --dataset C
+tr = CODE / 'train_weight_quota_gpu.py'
+tr.write_text(tr.read_text().replace('choices=("A", "B")', 'choices=("A", "B", "C")'), encoding='utf-8')
 
 MODEL = None
 for cfg in Path('/kaggle/input').rglob('config.json'):
@@ -60,7 +63,7 @@ print('DATA', DATA, '| MODEL', MODEL)
 
 
 def build(suffix: str, configs: str, title: str) -> None:
-    name = f"tiki-weight-c-{suffix}"
+    name = f"tiki-weight-c{suffix}"
     run = f"""cmd = [sys.executable, str(CODE / 'train_weight_quota_gpu.py'),
        '--dataset', 'C', '--data-root', str(ROOT),
        '--out', '/kaggle/working/weight_C_{suffix}', '--model', MODEL,

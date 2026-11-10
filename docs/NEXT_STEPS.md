@@ -9,6 +9,12 @@
 > - 8B full đang chạy 1.300 description; credit A 840/1.000, B 680/1.000 (hết quota).
 > - Xem `reports/SEED123_SUMMARY.md`.
 
+> **P1 đang chạy:**
+> - Dataset C 6 nhóm: 146.948 dòng / 19,312M token; eval_C 900 dòng lấy từ dev.
+> - 4 config: natural, balanced_B, title_boost, attr_boost (4M/500 step).
+> - Number mismatch: tách soft/hard, hard (>=3) weight 0.5 khi train final;
+>   xem `reports/P1_DATA_QUALITY.md`.
+
 ---
 
 ## 1. Hiện trạng: cái gì đã chắc, cái gì còn tạm
