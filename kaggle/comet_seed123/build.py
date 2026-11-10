@@ -94,7 +94,7 @@ P = '/kaggle/working/venv/bin/python'
 subprocess.run(['uv', 'pip', 'install', '--python', P,
                 'torch', '--index-url', 'https://download.pytorch.org/whl/cu121'], check=True)
 subprocess.run(['uv', 'pip', 'install', '--python', P,
-                'numpy<2', 'pandas==2.2.3', 'pyarrow>=17',
+                'numpy<2', 'pandas==2.2.3', 'pyarrow==17.0.0',
                 'unbabel-comet>=2.2', 'sacrebleu'], check=True)
 print('venv ready')
 """),

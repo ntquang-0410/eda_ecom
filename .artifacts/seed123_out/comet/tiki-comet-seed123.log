@@ -1,262 +1,508 @@
-[{"stream_name":"stderr","time":6.993972971,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
-,{"stream_name":"stderr","time":6.994036721,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
-,{"stream_name":"stderr","time":7.999055924,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
-,{"stream_name":"stderr","time":7.999084051,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
-,{"stream_name":"stderr","time":7.9990892460000005,"data":"0.00s - to python to disable frozen modules.\n"}
-,{"stream_name":"stderr","time":7.999093656,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
-,{"stream_name":"stderr","time":8.60538735,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
-,{"stream_name":"stderr","time":8.605416953,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
-,{"stream_name":"stderr","time":8.605420742,"data":"0.00s - to python to disable frozen modules.\n"}
-,{"stream_name":"stderr","time":8.605433413,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
-,{"stream_name":"stderr","time":229.257603097,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
-,{"stream_name":"stderr","time":229.257638702,"data":"bigframes 2.51.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
-,{"stream_name":"stderr","time":229.257658984,"data":"grpcio-tools 1.85.1 requires protobuf\u003c8.0.0,\u003e=7.35.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257665282,"data":"kaggle-environments 1.33.3 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257671149,"data":"kaggle-environments 1.33.3 requires protobuf\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257677244,"data":"bayesian-optimization 3.4.0 requires numpy\u003e=2.1.3; python_full_version == \"3.13.*\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257682373,"data":"opencv-python-headless 4.14.0.94 requires numpy\u003e=2; python_version \u003e= \"3.9\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257687762,"data":"onnx 1.23.2 requires protobuf\u003e=6.31.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257858409,"data":"google-cloud-texttospeech 2.38.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257872222,"data":"mne 1.13.2 requires numpy\u003c3,\u003e=2.1, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257878302,"data":"opencv-python 4.14.0.94 requires numpy\u003e=2; python_version \u003e= \"3.9\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257883652,"data":"a2a-sdk 1.3.0 requires protobuf\u003e=5.29.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257888527,"data":"google-cloud-vision 3.16.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257903867,"data":"cesium 0.12.4 requires numpy\u003c3.0,\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257908015,"data":"google-cloud-videointelligence 2.21.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257912065,"data":"grpc-google-iam-v1 0.14.6 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257915996,"data":"google-cloud-functions 1.25.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257919955,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257923808,"data":"google-cloud-bigquery-connection 1.23.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257934707,"data":"grpcio-status 1.84.1 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257937737,"data":"tensorflow 2.21.0 requires protobuf\u003c8.0.0,\u003e=6.31.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257940404,"data":"moviepy 1.0.3 requires decorator\u003c5.0,\u003e=4.0.2, but you have decorator 5.3.1 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257943049,"data":"ml-dtypes 0.6.0 requires numpy\u003e=2.0.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257945696,"data":"ml-dtypes 0.6.0 requires numpy\u003e=2.1.0; python_version \u003e= \"3.13\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257948478,"data":"shap 0.54.1 requires numpy\u003e=2, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257951031,"data":"grain 0.2.18 requires protobuf\u003e=5.28.3, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257953589,"data":"tobler 0.14.0 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257956227,"data":"geopandas 1.2.0 requires numpy\u003e=2, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257969818,"data":"google-cloud-dataproc 5.32.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257972661,"data":"google-cloud-language 2.22.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257975254,"data":"jax 0.11.1 requires numpy\u003e=2.1, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.257977934,"data":"wandb 0.28.1 requires protobuf!=5.28.0,!=5.29.0,\u003c8,\u003e=5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258020065,"data":"cupy-cuda13x 14.0.1 requires numpy\u003c2.6,\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258024316,"data":"googleapis-common-protos 1.76.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258028198,"data":"ydf 0.15.0 requires protobuf\u003c7.0.0,\u003e=5.29.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258032104,"data":"tensorboard 2.21.0 requires protobuf\u003c8.0.0,\u003e=6.31.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258040598,"data":"rasterio 1.5.2 requires numpy\u003e=2, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258044415,"data":"opencv-contrib-python 4.14.0.94 requires numpy\u003e=2; python_version \u003e= \"3.9\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258048497,"data":"google-cloud-firestore 2.34.1 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258052421,"data":"dm-tree 0.1.10 requires numpy\u003e=2.1.0; python_version \u003e= \"3.13\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258056383,"data":"google-cloud-monitoring 2.32.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258060344,"data":"jaxlib 0.11.1 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258064155,"data":"xarray-einstats 0.11.0 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258067926,"data":"proto-plus 1.29.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258071869,"data":"gradio-client 2.7.2 requires huggingface-hub\u003c3.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258077896,"data":"google-cloud-datastore 2.27.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258084958,"data":"gradio 6.30.0 requires huggingface-hub\u003c3.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258088143,"data":"gradio 6.30.0 requires pillow\u003c13.0,\u003e=8.0, but you have pillow 13.0.0 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258090808,"data":"google-cloud-storage-control 1.17.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258093537,"data":"pytensor 2.38.3 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258096077,"data":"google-cloud-translate 3.28.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258098722,"data":"google-cloud-spanner 3.71.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258101341,"data":"tifffile 2026.10.15 requires numpy\u003e=2.1, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258103878,"data":"contourpy 1.4.0 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258106414,"data":"diffusers 0.42.0 requires huggingface-hub\u003c3.0,\u003e=1.32.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.258109056,"data":"google-cloud-resource-manager 1.19.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462072917,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
-,{"stream_name":"stderr","time":229.462104522,"data":"bigframes 2.51.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
-,{"stream_name":"stderr","time":229.462110101,"data":"grpcio-tools 1.85.1 requires protobuf\u003c8.0.0,\u003e=7.35.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462114324,"data":"kaggle-environments 1.33.3 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462118181,"data":"kaggle-environments 1.33.3 requires protobuf\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462122091,"data":"bayesian-optimization 3.4.0 requires numpy\u003e=2.1.3; python_full_version == \"3.13.*\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462126015,"data":"opencv-python-headless 4.14.0.94 requires numpy\u003e=2; python_version \u003e= \"3.9\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462129984,"data":"onnx 1.23.2 requires protobuf\u003e=6.31.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462134041,"data":"google-cloud-texttospeech 2.38.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462138734,"data":"mne 1.13.2 requires numpy\u003c3,\u003e=2.1, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462142945,"data":"opencv-python 4.14.0.94 requires numpy\u003e=2; python_version \u003e= \"3.9\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462147811,"data":"a2a-sdk 1.3.0 requires protobuf\u003e=5.29.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462151609,"data":"google-cloud-vision 3.16.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462155709,"data":"cesium 0.12.4 requires numpy\u003c3.0,\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462159561,"data":"google-cloud-videointelligence 2.21.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462163595,"data":"grpc-google-iam-v1 0.14.6 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462167436,"data":"google-cloud-functions 1.25.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462171474,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46217684,"data":"google-cloud-bigquery-connection 1.23.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462186993,"data":"grpcio-status 1.84.1 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462191493,"data":"tensorflow 2.21.0 requires protobuf\u003c8.0.0,\u003e=6.31.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462194241,"data":"moviepy 1.0.3 requires decorator\u003c5.0,\u003e=4.0.2, but you have decorator 5.3.1 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462196858,"data":"ml-dtypes 0.6.0 requires numpy\u003e=2.0.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462199547,"data":"ml-dtypes 0.6.0 requires numpy\u003e=2.1.0; python_version \u003e= \"3.13\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462206227,"data":"shap 0.54.1 requires numpy\u003e=2, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462208977,"data":"grain 0.2.18 requires protobuf\u003e=5.28.3, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462211547,"data":"tobler 0.14.0 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462214141,"data":"geopandas 1.2.0 requires numpy\u003e=2, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462216662,"data":"google-cloud-dataproc 5.32.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462219305,"data":"google-cloud-language 2.22.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462221915,"data":"jax 0.11.1 requires numpy\u003e=2.1, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462224508,"data":"wandb 0.28.1 requires protobuf!=5.28.0,!=5.29.0,\u003c8,\u003e=5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462227103,"data":"cupy-cuda13x 14.0.1 requires numpy\u003c2.6,\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462229701,"data":"googleapis-common-protos 1.76.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462232283,"data":"ydf 0.15.0 requires protobuf\u003c7.0.0,\u003e=5.29.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.4622349,"data":"tensorboard 2.21.0 requires protobuf\u003c8.0.0,\u003e=6.31.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462237476,"data":"rasterio 1.5.2 requires numpy\u003e=2, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462239998,"data":"opencv-contrib-python 4.14.0.94 requires numpy\u003e=2; python_version \u003e= \"3.9\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46224303,"data":"google-cloud-firestore 2.34.1 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46224573,"data":"dm-tree 0.1.10 requires numpy\u003e=2.1.0; python_version \u003e= \"3.13\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462248416,"data":"google-cloud-monitoring 2.32.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462250997,"data":"jaxlib 0.11.1 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462253523,"data":"xarray-einstats 0.11.0 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46225604,"data":"proto-plus 1.29.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46225863,"data":"gradio-client 2.7.2 requires huggingface-hub\u003c3.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46226133,"data":"google-cloud-datastore 2.27.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462265909,"data":"gradio 6.30.0 requires huggingface-hub\u003c3.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462268684,"data":"gradio 6.30.0 requires pillow\u003c13.0,\u003e=8.0, but you have pillow 13.0.0 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462271288,"data":"google-cloud-storage-control 1.17.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462273909,"data":"pytensor 2.38.3 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462276422,"data":"google-cloud-translate 3.28.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462279005,"data":"google-cloud-spanner 3.71.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462281612,"data":"tifffile 2026.10.15 requires numpy\u003e=2.1, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462284136,"data":"contourpy 1.4.0 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462286616,"data":"diffusers 0.42.0 requires huggingface-hub\u003c3.0,\u003e=1.32.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462289844,"data":"google-cloud-resource-manager 1.19.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46230004,"data":"\n"}
-,{"stream_name":"stderr","time":229.462303309,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
-,{"stream_name":"stderr","time":229.462306366,"data":"bigframes 2.51.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
-,{"stream_name":"stderr","time":229.462309453,"data":"grpcio-tools 1.85.1 requires protobuf\u003c8.0.0,\u003e=7.35.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462312042,"data":"kaggle-environments 1.33.3 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462314583,"data":"kaggle-environments 1.33.3 requires protobuf\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462317203,"data":"bayesian-optimization 3.4.0 requires numpy\u003e=2.1.3; python_full_version == \"3.13.*\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462319935,"data":"opencv-python-headless 4.14.0.94 requires numpy\u003e=2; python_version \u003e= \"3.9\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462322647,"data":"onnx 1.23.2 requires protobuf\u003e=6.31.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462325204,"data":"google-cloud-texttospeech 2.38.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462327819,"data":"mne 1.13.2 requires numpy\u003c3,\u003e=2.1, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46233042,"data":"opencv-python 4.14.0.94 requires numpy\u003e=2; python_version \u003e= \"3.9\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462333121,"data":"a2a-sdk 1.3.0 requires protobuf\u003e=5.29.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46233801,"data":"google-cloud-vision 3.16.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462340747,"data":"cesium 0.12.4 requires numpy\u003c3.0,\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462343325,"data":"google-cloud-videointelligence 2.21.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462345936,"data":"grpc-google-iam-v1 0.14.6 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462348518,"data":"google-cloud-functions 1.25.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462351125,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462353652,"data":"google-cloud-bigquery-connection 1.23.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462356265,"data":"grpcio-status 1.84.1 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46235913,"data":"tensorflow 2.21.0 requires protobuf\u003c8.0.0,\u003e=6.31.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46236174,"data":"moviepy 1.0.3 requires decorator\u003c5.0,\u003e=4.0.2, but you have decorator 5.3.1 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46236438,"data":"ml-dtypes 0.6.0 requires numpy\u003e=2.0.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46236691,"data":"ml-dtypes 0.6.0 requires numpy\u003e=2.1.0; python_version \u003e= \"3.13\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462369593,"data":"shap 0.54.1 requires numpy\u003e=2, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462372139,"data":"grain 0.2.18 requires protobuf\u003e=5.28.3, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462374684,"data":"tobler 0.14.0 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46237721,"data":"geopandas 1.2.0 requires numpy\u003e=2, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462379732,"data":"google-cloud-dataproc 5.32.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462382335,"data":"google-cloud-language 2.22.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462384959,"data":"jax 0.11.1 requires numpy\u003e=2.1, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462387477,"data":"wandb 0.28.1 requires protobuf!=5.28.0,!=5.29.0,\u003c8,\u003e=5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462390085,"data":"cupy-cuda13x 14.0.1 requires numpy\u003c2.6,\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462392674,"data":"googleapis-common-protos 1.76.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462397201,"data":"ydf 0.15.0 requires protobuf\u003c7.0.0,\u003e=5.29.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462399865,"data":"tensorboard 2.21.0 requires protobuf\u003c8.0.0,\u003e=6.31.1, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462402474,"data":"rasterio 1.5.2 requires numpy\u003e=2, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462404996,"data":"opencv-contrib-python 4.14.0.94 requires numpy\u003e=2; python_version \u003e= \"3.9\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462407713,"data":"google-cloud-firestore 2.34.1 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462410361,"data":"dm-tree 0.1.10 requires numpy\u003e=2.1.0; python_version \u003e= \"3.13\", but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462413389,"data":"google-cloud-monitoring 2.32.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462416007,"data":"jaxlib 0.11.1 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.46241855,"data":"xarray-einstats 0.11.0 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462421051,"data":"proto-plus 1.29.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462423607,"data":"gradio-client 2.7.2 requires huggingface-hub\u003c3.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462426262,"data":"google-cloud-datastore 2.27.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462428841,"data":"gradio 6.30.0 requires huggingface-hub\u003c3.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462431458,"data":"gradio 6.30.0 requires pillow\u003c13.0,\u003e=8.0, but you have pillow 13.0.0 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462434019,"data":"google-cloud-storage-control 1.17.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462436636,"data":"pytensor 2.38.3 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462439156,"data":"google-cloud-translate 3.28.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462441736,"data":"google-cloud-spanner 3.71.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462444336,"data":"tifffile 2026.10.15 requires numpy\u003e=2.1, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462446855,"data":"contourpy 1.4.0 requires numpy\u003e=2.0, but you have numpy 1.26.4 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462449379,"data":"diffusers 0.42.0 requires huggingface-hub\u003c3.0,\u003e=1.32.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
-,{"stream_name":"stderr","time":229.462452025,"data":"google-cloud-resource-manager 1.19.0 requires protobuf\u003c8.0.0,\u003e=6.33.5, but you have protobuf 4.25.9 which is incompatible.\n"}
-,{"stream_name":"stderr","time":240.473966565,"data":"Traceback (most recent call last):\n"}
-,{"stream_name":"stderr","time":240.474648605,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
-,{"stream_name":"stderr","time":240.474662498,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
-,{"stream_name":"stderr","time":240.47466861,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stderr","time":240.474672703,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
-,{"stream_name":"stderr","time":240.474676503,"data":"    raise_for_execution_errors(nb, output_path)\n"}
-,{"stream_name":"stderr","time":240.474680407,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stderr","time":240.474683522,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
-,{"stream_name":"stderr","time":240.474687276,"data":"    raise error\n"}
-,{"stream_name":"stderr","time":240.474690455,"data":"papermill.exceptions.PapermillExecutionError: \n"}
-,{"stream_name":"stderr","time":240.474693665,"data":"---------------------------------------------------------------------------\n"}
-,{"stream_name":"stderr","time":240.474697211,"data":"Exception encountered at \"In [1]\":\n"}
-,{"stream_name":"stderr","time":240.474700549,"data":"---------------------------------------------------------------------------\n"}
-,{"stream_name":"stderr","time":240.474704058,"data":"ValueError                                Traceback (most recent call last)\n"}
-,{"stream_name":"stderr","time":240.474707493,"data":"/tmp/ipykernel_23/3470282228.py in \u003ccell line: 0\u003e()\n"}
-,{"stream_name":"stderr","time":240.474711293,"data":"      8 from pathlib import Path\n"}
-,{"stream_name":"stderr","time":240.474714834,"data":"      9 import numpy as np\n"}
-,{"stream_name":"stderr","time":240.474717926,"data":"---\u003e 10 import pandas as pd\n"}
-,{"stream_name":"stderr","time":240.474721409,"data":"     11 print('cuda', torch.cuda.is_available())\n"}
-,{"stream_name":"stderr","time":240.474724668,"data":"     12 if not torch.cuda.is_available():\n"}
-,{"stream_name":"stderr","time":240.474728153,"data":"\n"}
-,{"stream_name":"stderr","time":240.47473126,"data":"/usr/local/lib/python3.13/dist-packages/pandas/__init__.py in \u003cmodule\u003e\n"}
-,{"stream_name":"stderr","time":240.474734692,"data":"     35     ) from _err\n"}
-,{"stream_name":"stderr","time":240.474738011,"data":"     36 \n"}
-,{"stream_name":"stderr","time":240.474741378,"data":"---\u003e 37 from pandas._config import (\n"}
-,{"stream_name":"stderr","time":240.474744671,"data":"     38     get_option,\n"}
-,{"stream_name":"stderr","time":240.474748082,"data":"     39     set_option,\n"}
-,{"stream_name":"stderr","time":240.474751924,"data":"\n"}
-,{"stream_name":"stderr","time":240.474755022,"data":"/usr/local/lib/python3.13/dist-packages/pandas/_config/__init__.py in \u003cmodule\u003e\n"}
-,{"stream_name":"stderr","time":240.474758547,"data":"     18     \"warn_copy_on_write\",\n"}
-,{"stream_name":"stderr","time":240.474762176,"data":"     19 ]\n"}
-,{"stream_name":"stderr","time":240.474766032,"data":"---\u003e 20 from pandas._config import config\n"}
-,{"stream_name":"stderr","time":240.474769498,"data":"     21 from pandas._config import dates  # pyright: ignore[reportUnusedImport]  # noqa: F401\n"}
-,{"stream_name":"stderr","time":240.474780852,"data":"     22 from pandas._config.config import (\n"}
-,{"stream_name":"stderr","time":240.474784805,"data":"\n"}
-,{"stream_name":"stderr","time":240.474788118,"data":"/usr/local/lib/python3.13/dist-packages/pandas/_config/config.py in \u003cmodule\u003e\n"}
-,{"stream_name":"stderr","time":240.474791463,"data":"     66 import warnings\n"}
-,{"stream_name":"stderr","time":240.474803176,"data":"     67 \n"}
-,{"stream_name":"stderr","time":240.474806656,"data":"---\u003e 68 from pandas._typing import (\n"}
-,{"stream_name":"stderr","time":240.474810093,"data":"     69     F,\n"}
-,{"stream_name":"stderr","time":240.474813163,"data":"     70     T,\n"}
-,{"stream_name":"stderr","time":240.474816697,"data":"\n"}
-,{"stream_name":"stderr","time":240.474820918,"data":"/usr/local/lib/python3.13/dist-packages/pandas/_typing.py in \u003cmodule\u003e\n"}
-,{"stream_name":"stderr","time":240.474824296,"data":"    196     int,\n"}
-,{"stream_name":"stderr","time":240.474827573,"data":"    197     np.ndarray,\n"}
-,{"stream_name":"stderr","time":240.474830657,"data":"--\u003e 198     np.random.Generator,\n"}
-,{"stream_name":"stderr","time":240.474834248,"data":"    199     np.random.BitGenerator,\n"}
-,{"stream_name":"stderr","time":240.474837433,"data":"    200     np.random.RandomState,\n"}
-,{"stream_name":"stderr","time":240.474840576,"data":"\n"}
-,{"stream_name":"stderr","time":240.474843738,"data":"/usr/local/lib/python3.13/dist-packages/numpy/__init__.py in __getattr__(attr)\n"}
-,{"stream_name":"stderr","time":240.474846967,"data":"    338         public_symbols -= {\n"}
-,{"stream_name":"stderr","time":240.474850241,"data":"    339             \"core\", \"matrixlib\",\n"}
-,{"stream_name":"stderr","time":240.47485368,"data":"--\u003e 340             # These were moved in 1.25 and may be deprecated eventually:\n"}
-,{"stream_name":"stderr","time":240.474857377,"data":"    341             \"ModuleDeprecationWarning\", \"VisibleDeprecationWarning\",\n"}
-,{"stream_name":"stderr","time":240.474861285,"data":"    342             \"ComplexWarning\", \"TooHardError\", \"AxisError\"\n"}
-,{"stream_name":"stderr","time":240.474864823,"data":"\n"}
-,{"stream_name":"stderr","time":240.474868278,"data":"/usr/local/lib/python3.13/dist-packages/numpy/random/__init__.py in \u003cmodule\u003e\n"}
-,{"stream_name":"stderr","time":240.474871601,"data":"    178 \n"}
-,{"stream_name":"stderr","time":240.474874957,"data":"    179 # add these for module-freeze analysis (like PyInstaller)\n"}
-,{"stream_name":"stderr","time":240.474878233,"data":"--\u003e 180 from . import _pickle\n"}
-,{"stream_name":"stderr","time":240.474881793,"data":"    181 from . import _common\n"}
-,{"stream_name":"stderr","time":240.474884814,"data":"    182 from . import _bounded_integers\n"}
-,{"stream_name":"stderr","time":240.474888107,"data":"\n"}
-,{"stream_name":"stderr","time":240.474891564,"data":"/usr/local/lib/python3.13/dist-packages/numpy/random/_pickle.py in \u003cmodule\u003e\n"}
-,{"stream_name":"stderr","time":240.474895098,"data":"----\u003e 1 from .mtrand import RandomState\n"}
-,{"stream_name":"stderr","time":240.474898248,"data":"      2 from ._philox import Philox\n"}
-,{"stream_name":"stderr","time":240.474901527,"data":"      3 from ._pcg64 import PCG64, PCG64DXSM\n"}
-,{"stream_name":"stderr","time":240.474905096,"data":"      4 from ._sfc64 import SFC64\n"}
-,{"stream_name":"stderr","time":240.474908311,"data":"      5 \n"}
-,{"stream_name":"stderr","time":240.47491185,"data":"\n"}
-,{"stream_name":"stderr","time":240.474915241,"data":"numpy/random/mtrand.pyx in init numpy.random.mtrand()\n"}
-,{"stream_name":"stderr","time":240.47492391,"data":"\n"}
-,{"stream_name":"stderr","time":240.474927415,"data":"ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject\n"}
-,{"stream_name":"stderr","time":240.47493148,"data":"\n"}
-,{"stream_name":"stderr","time":242.631172208,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
-,{"stream_name":"stderr","time":242.631201952,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
-,{"stream_name":"stderr","time":242.798976475,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
-,{"stream_name":"stderr","time":242.799014905,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
-,{"stream_name":"stderr","time":243.568060654,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
-,{"stream_name":"stderr","time":243.64632886,"data":"[NbConvertApp] Writing 21587 bytes to __notebook__.ipynb\n"}
-,{"stream_name":"stderr","time":246.154407563,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
-,{"stream_name":"stderr","time":246.692365698,"data":"[NbConvertApp] Writing 308607 bytes to __results__.html\n"}
+[{"stream_name":"stderr","time":6.528967104,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":6.529016865,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":7.48784881,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.487920735,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.487932243,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.487935967,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.162621682,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.162652289,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.162657721,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.162661754,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":13.838057355,"data":"warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`?\n"}
+,{"stream_name":"stderr","time":14.040769158,"data":"warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`?\n"}
+,{"stream_name":"stderr","time":14.040795326,"data":"\n"}
+,{"stream_name":"stderr","time":14.040800017,"data":"warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`?\n"}
+,{"stream_name":"stderr","time":14.091304973,"data":"Using CPython 3.12.3 interpreter at: /usr/bin/python3.12\n"}
+,{"stream_name":"stderr","time":14.091327325,"data":"Creating virtual environment at: venv\n"}
+,{"stream_name":"stderr","time":14.091809774,"data":"Activate with: source venv/bin/activate\n"}
+,{"stream_name":"stderr","time":14.149031995,"data":"Using Python 3.12.3 environment at: venv\n"}
+,{"stream_name":"stderr","time":14.293236091,"data":"Using CPython 3.12.3 interpreter at: /usr/bin/python3.12\n"}
+,{"stream_name":"stderr","time":14.29325845,"data":"Creating virtual environment at: venv\n"}
+,{"stream_name":"stderr","time":14.293262604,"data":"Activate with: source venv/bin/activate\n"}
+,{"stream_name":"stderr","time":14.293265897,"data":"Using Python 3.12.3 environment at: venv\n"}
+,{"stream_name":"stderr","time":14.293269059,"data":"\n"}
+,{"stream_name":"stderr","time":14.293272051,"data":"Using CPython 3.12.3 interpreter at: /usr/bin/python3.12\n"}
+,{"stream_name":"stderr","time":14.293275442,"data":"Creating virtual environment at: venv\n"}
+,{"stream_name":"stderr","time":14.293279052,"data":"Activate with: source venv/bin/activate\n"}
+,{"stream_name":"stderr","time":14.293282846,"data":"Using Python 3.12.3 environment at: venv\n"}
+,{"stream_name":"stderr","time":14.769776087,"data":"Resolved 23 packages in 619ms\n"}
+,{"stream_name":"stderr","time":14.784736709,"data":"Downloading nvidia-cusolver-cu12 (118.4MiB)\n"}
+,{"stream_name":"stderr","time":14.785591669,"data":"Downloading networkx (2.0MiB)\n"}
+,{"stream_name":"stderr","time":14.79672782,"data":"Downloading setuptools (1.2MiB)\n"}
+,{"stream_name":"stderr","time":14.805349562,"data":"Downloading triton (199.8MiB)\n"}
+,{"stream_name":"stderr","time":14.817131797,"data":"Downloading nvidia-cudnn-cu12 (634.0MiB)\n"}
+,{"stream_name":"stderr","time":14.846822739,"data":"Downloading sympy (5.9MiB)\n"}
+,{"stream_name":"stderr","time":14.877521201,"data":"Downloading torch (744.2MiB)\n"}
+,{"stream_name":"stderr","time":14.898949239,"data":"Downloading nvidia-cublas-cu12 (391.6MiB)\n"}
+,{"stream_name":"stderr","time":14.909363513,"data":"Downloading nvidia-nvjitlink-cu12 (37.9MiB)\n"}
+,{"stream_name":"stderr","time":14.92299335,"data":"Downloading nvidia-cuda-nvrtc-cu12 (22.6MiB)\n"}
+,{"stream_name":"stderr","time":14.928016263,"data":"Downloading nvidia-curand-cu12 (53.9MiB)\n"}
+,{"stream_name":"stderr","time":14.930045419,"data":"Downloading nvidia-cufft-cu12 (116.0MiB)\n"}
+,{"stream_name":"stderr","time":14.976804547,"data":"Resolved 23 packages in 619ms\n"}
+,{"stream_name":"stderr","time":14.976824057,"data":"Downloading nvidia-cusolver-cu12 (118.4MiB)\n"}
+,{"stream_name":"stderr","time":14.97682905,"data":"Downloading networkx (2.0MiB)\n"}
+,{"stream_name":"stderr","time":14.976832949,"data":"Downloading setuptools (1.2MiB)\n"}
+,{"stream_name":"stderr","time":14.97683695,"data":"Downloading triton (199.8MiB)\n"}
+,{"stream_name":"stderr","time":14.97684077,"data":"Downloading nvidia-cudnn-cu12 (634.0MiB)\n"}
+,{"stream_name":"stderr","time":14.976861408,"data":"Downloading sympy (5.9MiB)\n"}
+,{"stream_name":"stderr","time":14.976865696,"data":"Downloading torch (744.2MiB)\n"}
+,{"stream_name":"stderr","time":14.976869468,"data":"Downloading nvidia-cublas-cu12 (391.6MiB)\n"}
+,{"stream_name":"stderr","time":14.97687325,"data":"Downloading nvidia-nvjitlink-cu12 (37.9MiB)\n"}
+,{"stream_name":"stderr","time":14.976876956,"data":"Downloading nvidia-cuda-nvrtc-cu12 (22.6MiB)\n"}
+,{"stream_name":"stderr","time":14.976880734,"data":"Downloading nvidia-curand-cu12 (53.9MiB)\n"}
+,{"stream_name":"stderr","time":14.976897605,"data":"Downloading nvidia-cufft-cu12 (116.0MiB)\n"}
+,{"stream_name":"stderr","time":14.976901663,"data":"\n"}
+,{"stream_name":"stderr","time":14.977038454,"data":"Resolved 23 packages in 619ms\n"}
+,{"stream_name":"stderr","time":14.977047514,"data":"Downloading nvidia-cusolver-cu12 (118.4MiB)\n"}
+,{"stream_name":"stderr","time":14.977051899,"data":"Downloading networkx (2.0MiB)\n"}
+,{"stream_name":"stderr","time":14.977055891,"data":"Downloading setuptools (1.2MiB)\n"}
+,{"stream_name":"stderr","time":14.977059877,"data":"Downloading triton (199.8MiB)\n"}
+,{"stream_name":"stderr","time":14.977063901,"data":"Downloading nvidia-cudnn-cu12 (634.0MiB)\n"}
+,{"stream_name":"stderr","time":14.977068003,"data":"Downloading sympy (5.9MiB)\n"}
+,{"stream_name":"stderr","time":14.977072123,"data":"Downloading torch (744.2MiB)\n"}
+,{"stream_name":"stderr","time":14.977076273,"data":"Downloading nvidia-cublas-cu12 (391.6MiB)\n"}
+,{"stream_name":"stderr","time":14.977080443,"data":"Downloading nvidia-nvjitlink-cu12 (37.9MiB)\n"}
+,{"stream_name":"stderr","time":14.977084644,"data":"Downloading nvidia-cuda-nvrtc-cu12 (22.6MiB)\n"}
+,{"stream_name":"stderr","time":14.97708901,"data":"Downloading nvidia-curand-cu12 (53.9MiB)\n"}
+,{"stream_name":"stderr","time":14.977092913,"data":"Downloading nvidia-cufft-cu12 (116.0MiB)\n"}
+,{"stream_name":"stderr","time":14.988785336,"data":" Downloaded setuptools\n"}
+,{"stream_name":"stderr","time":15.02353817,"data":"Downloading nvidia-cuda-cupti-cu12 (13.5MiB)\n"}
+,{"stream_name":"stderr","time":15.029031659,"data":"Downloading nvidia-cusparse-cu12 (186.9MiB)\n"}
+,{"stream_name":"stderr","time":15.0601001,"data":"Downloading nvidia-nccl-cu12 (179.9MiB)\n"}
+,{"stream_name":"stderr","time":15.105682115,"data":" Downloaded networkx\n"}
+,{"stream_name":"stderr","time":15.192363723,"data":" Downloaded setuptools\n"}
+,{"stream_name":"stderr","time":15.192390744,"data":"Downloading nvidia-cuda-cupti-cu12 (13.5MiB)\n"}
+,{"stream_name":"stderr","time":15.192396552,"data":"Downloading nvidia-cusparse-cu12 (186.9MiB)\n"}
+,{"stream_name":"stderr","time":15.192401405,"data":"Downloading nvidia-nccl-cu12 (179.9MiB)\n"}
+,{"stream_name":"stderr","time":15.192406239,"data":" Downloaded networkx\n"}
+,{"stream_name":"stderr","time":15.192410057,"data":"\n"}
+,{"stream_name":"stderr","time":15.192425994,"data":" Downloaded setuptools\n"}
+,{"stream_name":"stderr","time":15.192430058,"data":"Downloading nvidia-cuda-cupti-cu12 (13.5MiB)\n"}
+,{"stream_name":"stderr","time":15.192434481,"data":"Downloading nvidia-cusparse-cu12 (186.9MiB)\n"}
+,{"stream_name":"stderr","time":15.192439269,"data":"Downloading nvidia-nccl-cu12 (179.9MiB)\n"}
+,{"stream_name":"stderr","time":15.192443631,"data":" Downloaded networkx\n"}
+,{"stream_name":"stderr","time":15.406808265,"data":" Downloaded sympy\n"}
+,{"stream_name":"stderr","time":15.609139457,"data":" Downloaded sympy\n"}
+,{"stream_name":"stderr","time":15.609168356,"data":"\n"}
+,{"stream_name":"stderr","time":15.609173136999999,"data":" Downloaded sympy\n"}
+,{"stream_name":"stderr","time":17.259664402,"data":" Downloaded nvidia-cuda-cupti-cu12\n"}
+,{"stream_name":"stderr","time":17.462458487,"data":" Downloaded nvidia-cuda-cupti-cu12\n"}
+,{"stream_name":"stderr","time":17.462488157,"data":"\n"}
+,{"stream_name":"stderr","time":17.462502457,"data":" Downloaded nvidia-cuda-cupti-cu12\n"}
+,{"stream_name":"stderr","time":18.397457356,"data":" Downloaded nvidia-cuda-nvrtc-cu12\n"}
+,{"stream_name":"stderr","time":18.600458022,"data":" Downloaded nvidia-cuda-nvrtc-cu12\n"}
+,{"stream_name":"stderr","time":18.600485358,"data":"\n"}
+,{"stream_name":"stderr","time":18.600490208,"data":" Downloaded nvidia-cuda-nvrtc-cu12\n"}
+,{"stream_name":"stderr","time":20.347542732,"data":" Downloaded nvidia-nvjitlink-cu12\n"}
+,{"stream_name":"stderr","time":20.551009376,"data":" Downloaded nvidia-nvjitlink-cu12\n"}
+,{"stream_name":"stderr","time":20.551035519,"data":"\n"}
+,{"stream_name":"stderr","time":20.551040175,"data":" Downloaded nvidia-nvjitlink-cu12\n"}
+,{"stream_name":"stderr","time":24.785753388,"data":" Downloaded triton\n"}
+,{"stream_name":"stderr","time":24.987960012,"data":" Downloaded triton\n"}
+,{"stream_name":"stderr","time":24.987988555,"data":"\n"}
+,{"stream_name":"stderr","time":24.987993809,"data":" Downloaded triton\n"}
+,{"stream_name":"stderr","time":25.790285764,"data":" Downloaded nvidia-curand-cu12\n"}
+,{"stream_name":"stderr","time":25.993338918,"data":" Downloaded nvidia-curand-cu12\n"}
+,{"stream_name":"stderr","time":25.993414836,"data":"\n"}
+,{"stream_name":"stderr","time":25.993420683,"data":" Downloaded nvidia-curand-cu12\n"}
+,{"stream_name":"stderr","time":27.49302786,"data":" Downloaded nvidia-cusolver-cu12\n"}
+,{"stream_name":"stderr","time":27.69244054,"data":" Downloaded nvidia-cusolver-cu12\n"}
+,{"stream_name":"stderr","time":27.692465409,"data":"\n"}
+,{"stream_name":"stderr","time":27.692479394,"data":" Downloaded nvidia-cusolver-cu12\n"}
+,{"stream_name":"stderr","time":34.466198534,"data":" Downloaded nvidia-cufft-cu12\n"}
+,{"stream_name":"stderr","time":34.667854367,"data":" Downloaded nvidia-cufft-cu12\n"}
+,{"stream_name":"stderr","time":34.667881783,"data":"\n"}
+,{"stream_name":"stderr","time":34.667902011,"data":" Downloaded nvidia-cufft-cu12\n"}
+,{"stream_name":"stderr","time":38.774659634,"data":" Downloaded nvidia-cusparse-cu12\n"}
+,{"stream_name":"stderr","time":38.977490754,"data":" Downloaded nvidia-cusparse-cu12\n"}
+,{"stream_name":"stderr","time":38.977516619,"data":"\n"}
+,{"stream_name":"stderr","time":38.977521867,"data":" Downloaded nvidia-cusparse-cu12\n"}
+,{"stream_name":"stderr","time":40.290815746,"data":" Downloaded nvidia-nccl-cu12\n"}
+,{"stream_name":"stderr","time":40.495023616,"data":" Downloaded nvidia-nccl-cu12\n"}
+,{"stream_name":"stderr","time":40.495049056,"data":"\n"}
+,{"stream_name":"stderr","time":40.495084583,"data":" Downloaded nvidia-nccl-cu12\n"}
+,{"stream_name":"stderr","time":43.367125868,"data":" Downloaded nvidia-cublas-cu12\n"}
+,{"stream_name":"stderr","time":43.568951025,"data":" Downloaded nvidia-cublas-cu12\n"}
+,{"stream_name":"stderr","time":43.569007587,"data":"\n"}
+,{"stream_name":"stderr","time":43.569016017,"data":" Downloaded nvidia-cublas-cu12\n"}
+,{"stream_name":"stderr","time":45.122480778,"data":" Downloaded nvidia-cudnn-cu12\n"}
+,{"stream_name":"stderr","time":45.325846016,"data":" Downloaded nvidia-cudnn-cu12\n"}
+,{"stream_name":"stderr","time":45.325873865,"data":"\n"}
+,{"stream_name":"stderr","time":45.325879342,"data":" Downloaded nvidia-cudnn-cu12\n"}
+,{"stream_name":"stderr","time":50.463010543,"data":" Downloaded torch\n"}
+,{"stream_name":"stderr","time":50.463417099,"data":"Prepared 23 packages in 35.69s\n"}
+,{"stream_name":"stderr","time":50.4644874,"data":"warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n"}
+,{"stream_name":"stderr","time":50.464504495,"data":"         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n"}
+,{"stream_name":"stderr","time":50.464511945,"data":"         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\n"}
+,{"stream_name":"stderr","time":50.67634927,"data":" Downloaded torch\n"}
+,{"stream_name":"stderr","time":50.676372664,"data":"Prepared 23 packages in 35.69s\n"}
+,{"stream_name":"stderr","time":50.676378427,"data":"warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n"}
+,{"stream_name":"stderr","time":50.676383768,"data":"         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n"}
+,{"stream_name":"stderr","time":50.676388663,"data":"         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\n"}
+,{"stream_name":"stderr","time":50.676394166,"data":"\n"}
+,{"stream_name":"stderr","time":50.679042619,"data":" Downloaded torch\n"}
+,{"stream_name":"stderr","time":50.679062428,"data":"Prepared 23 packages in 35.69s\n"}
+,{"stream_name":"stderr","time":50.679068418,"data":"warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n"}
+,{"stream_name":"stderr","time":50.679073384,"data":"         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n"}
+,{"stream_name":"stderr","time":50.679078101,"data":"         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\n"}
+,{"stream_name":"stderr","time":53.77158071,"data":"Installed 23 packages in 3.30s\n"}
+,{"stream_name":"stderr","time":53.771613227,"data":" + filelock==4.2.4\n"}
+,{"stream_name":"stderr","time":53.771619607,"data":" + fsspec==2026.9.0\n"}
+,{"stream_name":"stderr","time":53.771624747,"data":" + jinja2==3.1.6\n"}
+,{"stream_name":"stderr","time":53.771629698,"data":" + markupsafe==3.0.3\n"}
+,{"stream_name":"stderr","time":53.771634914,"data":" + mpmath==1.3.0\n"}
+,{"stream_name":"stderr","time":53.771809272,"data":" + networkx==3.7\n"}
+,{"stream_name":"stderr","time":53.771819129,"data":" + nvidia-cublas-cu12==12.1.3.1\n"}
+,{"stream_name":"stderr","time":53.771824324,"data":" + nvidia-cuda-cupti-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":53.771829543,"data":" + nvidia-cuda-nvrtc-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":53.771842997,"data":" + nvidia-cuda-runtime-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":53.771913237,"data":" + nvidia-cudnn-cu12==9.1.0.70\n"}
+,{"stream_name":"stderr","time":53.772007527,"data":" + nvidia-cufft-cu12==11.0.2.54\n"}
+,{"stream_name":"stderr","time":53.772167697,"data":" + nvidia-curand-cu12==10.3.2.106\n"}
+,{"stream_name":"stderr","time":53.77225941,"data":" + nvidia-cusolver-cu12==11.4.5.107\n"}
+,{"stream_name":"stderr","time":53.772359279,"data":" + nvidia-cusparse-cu12==12.1.0.106\n"}
+,{"stream_name":"stderr","time":53.772379565,"data":" + nvidia-nccl-cu12==2.21.5\n"}
+,{"stream_name":"stderr","time":53.772458759,"data":" + nvidia-nvjitlink-cu12==12.9.86\n"}
+,{"stream_name":"stderr","time":53.772547446,"data":" + nvidia-nvtx-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":53.772610615,"data":" + setuptools==78.1.0\n"}
+,{"stream_name":"stderr","time":53.772699766,"data":" + sympy==1.13.1\n"}
+,{"stream_name":"stderr","time":53.772870105,"data":" + torch==2.5.1+cu121\n"}
+,{"stream_name":"stderr","time":53.772967922,"data":" + triton==3.1.0\n"}
+,{"stream_name":"stderr","time":53.772998061,"data":" + typing-extensions==4.16.0\n"}
+,{"stream_name":"stderr","time":53.787729917,"data":"Using Python 3.12.3 environment at: venv\n"}
+,{"stream_name":"stderr","time":53.974051715,"data":"Installed 23 packages in 3.30s\n"}
+,{"stream_name":"stderr","time":53.974080298,"data":" + filelock==4.2.4\n"}
+,{"stream_name":"stderr","time":53.974086512,"data":" + fsspec==2026.9.0\n"}
+,{"stream_name":"stderr","time":53.974091582,"data":" + jinja2==3.1.6\n"}
+,{"stream_name":"stderr","time":53.974096592,"data":" + markupsafe==3.0.3\n"}
+,{"stream_name":"stderr","time":53.97595158,"data":" + mpmath==1.3.0\n"}
+,{"stream_name":"stderr","time":53.975964238,"data":" + networkx==3.7\n"}
+,{"stream_name":"stderr","time":53.975968387,"data":" + nvidia-cublas-cu12==12.1.3.1\n"}
+,{"stream_name":"stderr","time":53.975972264,"data":" + nvidia-cuda-cupti-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":53.975976166,"data":" + nvidia-cuda-nvrtc-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":53.975979957,"data":" + nvidia-cuda-runtime-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":53.978947917,"data":" + nvidia-cudnn-cu12==9.1.0.70\n"}
+,{"stream_name":"stderr","time":53.978964112,"data":" + nvidia-cufft-cu12==11.0.2.54\n"}
+,{"stream_name":"stderr","time":53.978970307,"data":" + nvidia-curand-cu12==10.3.2.106\n"}
+,{"stream_name":"stderr","time":53.97897567,"data":" + nvidia-cusolver-cu12==11.4.5.107\n"}
+,{"stream_name":"stderr","time":53.978981025,"data":" + nvidia-cusparse-cu12==12.1.0.106\n"}
+,{"stream_name":"stderr","time":53.978995561,"data":" + nvidia-nccl-cu12==2.21.5\n"}
+,{"stream_name":"stderr","time":53.978999654,"data":" + nvidia-nvjitlink-cu12==12.9.86\n"}
+,{"stream_name":"stderr","time":53.979004077,"data":" + nvidia-nvtx-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":53.979007817,"data":" + setuptools==78.1.0\n"}
+,{"stream_name":"stderr","time":53.979011496,"data":" + sympy==1.13.1\n"}
+,{"stream_name":"stderr","time":53.979015223,"data":" + torch==2.5.1+cu121\n"}
+,{"stream_name":"stderr","time":53.979019625,"data":" + triton==3.1.0\n"}
+,{"stream_name":"stderr","time":53.979023692,"data":" + typing-extensions==4.16.0\n"}
+,{"stream_name":"stderr","time":53.979027355,"data":"Using Python 3.12.3 environment at: venv\n"}
+,{"stream_name":"stderr","time":53.979032068,"data":"\n"}
+,{"stream_name":"stderr","time":53.979037587,"data":"Installed 23 packages in 3.30s\n"}
+,{"stream_name":"stderr","time":53.979042804,"data":" + filelock==4.2.4\n"}
+,{"stream_name":"stderr","time":53.979047241,"data":" + fsspec==2026.9.0\n"}
+,{"stream_name":"stderr","time":53.979052181,"data":" + jinja2==3.1.6\n"}
+,{"stream_name":"stderr","time":53.979056341,"data":" + markupsafe==3.0.3\n"}
+,{"stream_name":"stderr","time":53.979060731,"data":" + mpmath==1.3.0\n"}
+,{"stream_name":"stderr","time":53.979066063,"data":" + networkx==3.7\n"}
+,{"stream_name":"stderr","time":53.979070205,"data":" + nvidia-cublas-cu12==12.1.3.1\n"}
+,{"stream_name":"stderr","time":53.979075657,"data":" + nvidia-cuda-cupti-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":53.979080375,"data":" + nvidia-cuda-nvrtc-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":53.979084708,"data":" + nvidia-cuda-runtime-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":53.979089748,"data":" + nvidia-cudnn-cu12==9.1.0.70\n"}
+,{"stream_name":"stderr","time":53.979094973,"data":" + nvidia-cufft-cu12==11.0.2.54\n"}
+,{"stream_name":"stderr","time":53.979099218,"data":" + nvidia-curand-cu12==10.3.2.106\n"}
+,{"stream_name":"stderr","time":53.979104112,"data":" + nvidia-cusolver-cu12==11.4.5.107\n"}
+,{"stream_name":"stderr","time":53.979109331,"data":" + nvidia-cusparse-cu12==12.1.0.106\n"}
+,{"stream_name":"stderr","time":53.979113619,"data":" + nvidia-nccl-cu12==2.21.5\n"}
+,{"stream_name":"stderr","time":53.979118481,"data":" + nvidia-nvjitlink-cu12==12.9.86\n"}
+,{"stream_name":"stderr","time":53.979123529,"data":" + nvidia-nvtx-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":53.979127551,"data":" + setuptools==78.1.0\n"}
+,{"stream_name":"stderr","time":53.97913161,"data":" + sympy==1.13.1\n"}
+,{"stream_name":"stderr","time":53.979136659,"data":" + torch==2.5.1+cu121\n"}
+,{"stream_name":"stderr","time":53.979141764,"data":" + triton==3.1.0\n"}
+,{"stream_name":"stderr","time":53.979145858,"data":" + typing-extensions==4.16.0\n"}
+,{"stream_name":"stderr","time":53.979150752,"data":"Using Python 3.12.3 environment at: venv\n"}
+,{"stream_name":"stderr","time":55.446762076,"data":"Resolved 65 packages in 1.65s\n"}
+,{"stream_name":"stderr","time":55.648965196,"data":"Resolved 65 packages in 1.65s\n"}
+,{"stream_name":"stderr","time":55.649031911,"data":"\n"}
+,{"stream_name":"stderr","time":70.988477896,"data":"Resolved 65 packages in 1.65s\n"}
+,{"stream_name":"stderr","time":70.99198873,"data":"Downloading pyarrow (52.5MiB)\n"}
+,{"stream_name":"stderr","time":70.992006814,"data":"Downloading transformers (11.4MiB)\n"}
+,{"stream_name":"stderr","time":70.992634385,"data":"Downloading tokenizers (3.1MiB)\n"}
+,{"stream_name":"stderr","time":70.993087174,"data":"Downloading sentencepiece (1.6MiB)\n"}
+,{"stream_name":"stderr","time":70.993473373,"data":"Downloading hf-xet (4.1MiB)\n"}
+,{"stream_name":"stderr","time":70.993792071,"data":"Downloading aiohttp (1.8MiB)\n"}
+,{"stream_name":"stderr","time":70.994453318,"data":"Downloading pandas (12.1MiB)\n"}
+,{"stream_name":"stderr","time":70.994783798,"data":"Downloading scipy (33.6MiB)\n"}
+,{"stream_name":"stderr","time":70.995970207,"data":"Downloading numpy (17.1MiB)\n"}
+,{"stream_name":"stderr","time":70.999040927,"data":"Downloading lxml (5.0MiB)\n"}
+,{"stream_name":"stderr","time":71.194673807,"data":"Downloading pyarrow (52.5MiB)\n"}
+,{"stream_name":"stderr","time":71.194713625,"data":"Downloading transformers (11.4MiB)\n"}
+,{"stream_name":"stderr","time":71.194719059,"data":"Downloading tokenizers (3.1MiB)\n"}
+,{"stream_name":"stderr","time":71.194723286,"data":"Downloading sentencepiece (1.6MiB)\n"}
+,{"stream_name":"stderr","time":71.194727635,"data":"Downloading hf-xet (4.1MiB)\n"}
+,{"stream_name":"stderr","time":71.194732091,"data":"Downloading aiohttp (1.8MiB)\n"}
+,{"stream_name":"stderr","time":71.194735987,"data":"Downloading pandas (12.1MiB)\n"}
+,{"stream_name":"stderr","time":71.194740002,"data":"Downloading scipy (33.6MiB)\n"}
+,{"stream_name":"stderr","time":71.194743936,"data":"Downloading numpy (17.1MiB)\n"}
+,{"stream_name":"stderr","time":71.194747412,"data":"Downloading lxml (5.0MiB)\n"}
+,{"stream_name":"stderr","time":71.194750882,"data":"\n"}
+,{"stream_name":"stderr","time":71.194754252,"data":"Downloading pyarrow (52.5MiB)\n"}
+,{"stream_name":"stderr","time":71.194757781,"data":"Downloading transformers (11.4MiB)\n"}
+,{"stream_name":"stderr","time":71.194761367,"data":"Downloading tokenizers (3.1MiB)\n"}
+,{"stream_name":"stderr","time":71.19476488,"data":"Downloading sentencepiece (1.6MiB)\n"}
+,{"stream_name":"stderr","time":71.194770101,"data":"Downloading hf-xet (4.1MiB)\n"}
+,{"stream_name":"stderr","time":71.194773301,"data":"Downloading aiohttp (1.8MiB)\n"}
+,{"stream_name":"stderr","time":71.194780531,"data":"Downloading pandas (12.1MiB)\n"}
+,{"stream_name":"stderr","time":71.194783093,"data":"Downloading scipy (33.6MiB)\n"}
+,{"stream_name":"stderr","time":71.194785522,"data":"Downloading numpy (17.1MiB)\n"}
+,{"stream_name":"stderr","time":71.19478792,"data":"Downloading lxml (5.0MiB)\n"}
+,{"stream_name":"stderr","time":73.712202642,"data":" Downloaded sentencepiece\n"}
+,{"stream_name":"stderr","time":73.730590891,"data":" Downloaded aiohttp\n"}
+,{"stream_name":"stderr","time":73.857109372,"data":" Downloaded tokenizers\n"}
+,{"stream_name":"stderr","time":73.915812877,"data":" Downloaded sentencepiece\n"}
+,{"stream_name":"stderr","time":73.915839775,"data":" Downloaded aiohttp\n"}
+,{"stream_name":"stderr","time":73.915844201,"data":" Downloaded tokenizers\n"}
+,{"stream_name":"stderr","time":73.915848034,"data":"\n"}
+,{"stream_name":"stderr","time":73.915851593,"data":" Downloaded sentencepiece\n"}
+,{"stream_name":"stderr","time":73.915855212,"data":" Downloaded aiohttp\n"}
+,{"stream_name":"stderr","time":73.915858851,"data":" Downloaded tokenizers\n"}
+,{"stream_name":"stderr","time":73.946874398,"data":" Downloaded hf-xet\n"}
+,{"stream_name":"stderr","time":74.007971471,"data":" Downloaded lxml\n"}
+,{"stream_name":"stderr","time":74.151052637,"data":" Downloaded hf-xet\n"}
+,{"stream_name":"stderr","time":74.151076149,"data":" Downloaded lxml\n"}
+,{"stream_name":"stderr","time":74.15108082,"data":"\n"}
+,{"stream_name":"stderr","time":74.151313075,"data":" Downloaded hf-xet\n"}
+,{"stream_name":"stderr","time":74.151322247,"data":" Downloaded lxml\n"}
+,{"stream_name":"stderr","time":74.358701091,"data":" Downloaded transformers\n"}
+,{"stream_name":"stderr","time":74.35872389,"data":" Downloaded pandas\n"}
+,{"stream_name":"stderr","time":74.56135781,"data":" Downloaded transformers\n"}
+,{"stream_name":"stderr","time":74.561385267,"data":" Downloaded pandas\n"}
+,{"stream_name":"stderr","time":74.561388195,"data":"\n"}
+,{"stream_name":"stderr","time":74.561390467,"data":" Downloaded transformers\n"}
+,{"stream_name":"stderr","time":74.56141482,"data":" Downloaded pandas\n"}
+,{"stream_name":"stderr","time":74.71116306,"data":" Downloaded numpy\n"}
+,{"stream_name":"stderr","time":74.913324911,"data":" Downloaded numpy\n"}
+,{"stream_name":"stderr","time":74.913349058,"data":"\n"}
+,{"stream_name":"stderr","time":74.91335907,"data":" Downloaded numpy\n"}
+,{"stream_name":"stderr","time":75.94123699,"data":" Downloaded scipy\n"}
+,{"stream_name":"stderr","time":76.143408793,"data":" Downloaded scipy\n"}
+,{"stream_name":"stderr","time":76.143438636,"data":"\n"}
+,{"stream_name":"stderr","time":76.143444187,"data":" Downloaded scipy\n"}
+,{"stream_name":"stderr","time":77.803461611,"data":" Downloaded pyarrow\n"}
+,{"stream_name":"stderr","time":77.803487656,"data":"Prepared 42 packages in 22.35s\n"}
+,{"stream_name":"stderr","time":77.804662811,"data":"warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n"}
+,{"stream_name":"stderr","time":77.804848929,"data":"         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n"}
+,{"stream_name":"stderr","time":77.804896971,"data":"         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\n"}
+,{"stream_name":"stderr","time":78.009056858,"data":" Downloaded pyarrow\n"}
+,{"stream_name":"stderr","time":78.009079841,"data":"Prepared 42 packages in 22.35s\n"}
+,{"stream_name":"stderr","time":78.009085327,"data":"warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n"}
+,{"stream_name":"stderr","time":78.00908976,"data":"         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n"}
+,{"stream_name":"stderr","time":78.009094132,"data":"         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\n"}
+,{"stream_name":"stderr","time":78.009098356,"data":"\n"}
+,{"stream_name":"stderr","time":78.009102361,"data":" Downloaded pyarrow\n"}
+,{"stream_name":"stderr","time":78.009106585,"data":"Prepared 42 packages in 22.35s\n"}
+,{"stream_name":"stderr","time":78.009110736,"data":"warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n"}
+,{"stream_name":"stderr","time":78.009114244,"data":"         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n"}
+,{"stream_name":"stderr","time":78.009118204,"data":"         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\n"}
+,{"stream_name":"stderr","time":78.42824469,"data":"Installed 42 packages in 621ms\n"}
+,{"stream_name":"stderr","time":78.428299154,"data":" + aiohappyeyeballs==2.7.1\n"}
+,{"stream_name":"stderr","time":78.428305634,"data":" + aiohttp==3.14.5\n"}
+,{"stream_name":"stderr","time":78.428309954,"data":" + aiosignal==1.4.0\n"}
+,{"stream_name":"stderr","time":78.42832586,"data":" + attrs==26.1.0\n"}
+,{"stream_name":"stderr","time":78.428330585,"data":" + certifi==2026.10.23\n"}
+,{"stream_name":"stderr","time":78.428335399,"data":" + charset-normalizer==3.5.2\n"}
+,{"stream_name":"stderr","time":78.428339447,"data":" + colorama==0.4.6\n"}
+,{"stream_name":"stderr","time":78.428344087,"data":" + entmax==1.3\n"}
+,{"stream_name":"stderr","time":78.428348561,"data":" + frozenlist==1.8.0\n"}
+,{"stream_name":"stderr","time":78.428353009,"data":" + hf-xet==1.8.0\n"}
+,{"stream_name":"stderr","time":78.42838269,"data":" + huggingface-hub==0.36.2\n"}
+,{"stream_name":"stderr","time":78.428386813,"data":" + idna==3.20\n"}
+,{"stream_name":"stderr","time":78.428391437,"data":" + jsonargparse==3.13.1\n"}
+,{"stream_name":"stderr","time":78.428396126,"data":" + lightning-utilities==0.15.3\n"}
+,{"stream_name":"stderr","time":78.428400571,"data":" + lxml==6.1.3\n"}
+,{"stream_name":"stderr","time":78.428405423,"data":" + multidict==7.2.1\n"}
+,{"stream_name":"stderr","time":78.428410048,"data":" + numpy==1.26.4\n"}
+,{"stream_name":"stderr","time":78.428414856,"data":" + packaging==26.3\n"}
+,{"stream_name":"stderr","time":78.428419594,"data":" + pandas==2.2.3\n"}
+,{"stream_name":"stderr","time":78.428424141,"data":" + portalocker==4.4.2\n"}
+,{"stream_name":"stderr","time":78.428428794,"data":" + propcache==0.5.4\n"}
+,{"stream_name":"stderr","time":78.428433319,"data":" + protobuf==4.25.9\n"}
+,{"stream_name":"stderr","time":78.428437688,"data":" + pyarrow==26.0.1\n"}
+,{"stream_name":"stderr","time":78.42846648,"data":" + python-dateutil==4.0.0\n"}
+,{"stream_name":"stderr","time":78.428471503,"data":" + pytorch-lightning==2.6.6\n"}
+,{"stream_name":"stderr","time":78.428475823,"data":" + pytz==2026.6\n"}
+,{"stream_name":"stderr","time":78.428479935,"data":" + pyyaml==6.0.3\n"}
+,{"stream_name":"stderr","time":78.428483678,"data":" + regex==2026.11.9\n"}
+,{"stream_name":"stderr","time":78.428487479,"data":" + requests==2.34.2\n"}
+,{"stream_name":"stderr","time":78.428491417,"data":" + sacrebleu==2.6.0\n"}
+,{"stream_name":"stderr","time":78.428495102,"data":" + safetensors==0.8.0\n"}
+,{"stream_name":"stderr","time":78.428498817,"data":" + scipy==1.17.1\n"}
+,{"stream_name":"stderr","time":78.428504158,"data":" + sentencepiece==0.2.3\n"}
+,{"stream_name":"stderr","time":78.428508172,"data":" + tabulate==0.10.0\n"}
+,{"stream_name":"stderr","time":78.428511972,"data":" + tokenizers==0.22.2\n"}
+,{"stream_name":"stderr","time":78.428516254,"data":" + torchmetrics==0.10.3\n"}
+,{"stream_name":"stderr","time":78.428520219,"data":" + tqdm==4.70.1\n"}
+,{"stream_name":"stderr","time":78.428524262,"data":" + transformers==4.57.6\n"}
+,{"stream_name":"stderr","time":78.428546666,"data":" + tzdata==2026.6\n"}
+,{"stream_name":"stderr","time":78.428551024,"data":" + unbabel-comet==2.2.7\n"}
+,{"stream_name":"stderr","time":78.428555128,"data":" + urllib3==2.8.0\n"}
+,{"stream_name":"stderr","time":78.428559497,"data":" + yarl==1.25.1\n"}
+,{"stream_name":"stdout","time":78.438624048,"data":"venv ready\n"}
+,{"stream_name":"stderr","time":78.439817793,"data":"Installed 42 packages in 621ms\n"}
+,{"stream_name":"stderr","time":78.439836431,"data":" + aiohappyeyeballs==2.7.1\n"}
+,{"stream_name":"stderr","time":78.439841029,"data":" + aiohttp==3.14.5\n"}
+,{"stream_name":"stderr","time":78.439844313,"data":" + aiosignal==1.4.0\n"}
+,{"stream_name":"stderr","time":78.439847583,"data":" + attrs==26.1.0\n"}
+,{"stream_name":"stderr","time":78.439850798,"data":" + certifi==2026.10.23\n"}
+,{"stream_name":"stderr","time":78.439862689,"data":" + charset-normalizer==3.5.2\n"}
+,{"stream_name":"stderr","time":78.439866009,"data":" + colorama==0.4.6\n"}
+,{"stream_name":"stderr","time":78.439869162,"data":" + entmax==1.3\n"}
+,{"stream_name":"stderr","time":78.439872362,"data":" + frozenlist==1.8.0\n"}
+,{"stream_name":"stderr","time":78.439875556,"data":" + hf-xet==1.8.0\n"}
+,{"stream_name":"stderr","time":78.439878794,"data":" + huggingface-hub==0.36.2\n"}
+,{"stream_name":"stderr","time":78.439882046,"data":" + idna==3.20\n"}
+,{"stream_name":"stderr","time":78.439905359,"data":" + jsonargparse==3.13.1\n"}
+,{"stream_name":"stderr","time":78.439908908,"data":" + lightning-utilities==0.15.3\n"}
+,{"stream_name":"stderr","time":78.439912781,"data":" + lxml==6.1.3\n"}
+,{"stream_name":"stderr","time":78.439916444,"data":" + multidict==7.2.1\n"}
+,{"stream_name":"stderr","time":78.439919641,"data":" + numpy==1.26.4\n"}
+,{"stream_name":"stderr","time":78.439922809,"data":" + packaging==26.3\n"}
+,{"stream_name":"stderr","time":78.439926039,"data":" + pandas==2.2.3\n"}
+,{"stream_name":"stderr","time":78.439929177,"data":" + portalocker==4.4.2\n"}
+,{"stream_name":"stderr","time":78.439932406,"data":" + propcache==0.5.4\n"}
+,{"stream_name":"stderr","time":78.439935598,"data":" + protobuf==4.25.9\n"}
+,{"stream_name":"stderr","time":78.439938733,"data":" + pyarrow==26.0.1\n"}
+,{"stream_name":"stderr","time":78.439941932,"data":" + python-dateutil==4.0.0\n"}
+,{"stream_name":"stderr","time":78.439945096,"data":" + pytorch-lightning==2.6.6\n"}
+,{"stream_name":"stderr","time":78.439948323,"data":" + pytz==2026.6\n"}
+,{"stream_name":"stderr","time":78.439951442,"data":" + pyyaml==6.0.3\n"}
+,{"stream_name":"stderr","time":78.439954582,"data":" + regex==2026.11.9\n"}
+,{"stream_name":"stderr","time":78.439957784,"data":" + requests==2.34.2\n"}
+,{"stream_name":"stderr","time":78.439961009,"data":" + sacrebleu==2.6.0\n"}
+,{"stream_name":"stderr","time":78.439964228,"data":" + safetensors==0.8.0\n"}
+,{"stream_name":"stderr","time":78.439967358,"data":" + scipy==1.17.1\n"}
+,{"stream_name":"stderr","time":78.439970418,"data":" + sentencepiece==0.2.3\n"}
+,{"stream_name":"stderr","time":78.439973599,"data":" + tabulate==0.10.0\n"}
+,{"stream_name":"stderr","time":78.439978119,"data":" + tokenizers==0.22.2\n"}
+,{"stream_name":"stderr","time":78.439999574,"data":" + torchmetrics==0.10.3\n"}
+,{"stream_name":"stderr","time":78.440003466,"data":" + tqdm==4.70.1\n"}
+,{"stream_name":"stderr","time":78.440007196,"data":" + transformers==4.57.6\n"}
+,{"stream_name":"stderr","time":78.440011653,"data":" + tzdata==2026.6\n"}
+,{"stream_name":"stderr","time":78.440015304,"data":" + unbabel-comet==2.2.7\n"}
+,{"stream_name":"stderr","time":78.4400188,"data":" + urllib3==2.8.0\n"}
+,{"stream_name":"stderr","time":78.440022112,"data":" + yarl==1.25.1\n"}
+,{"stream_name":"stderr","time":78.440024996,"data":"\n"}
+,{"stream_name":"stderr","time":78.440027834,"data":"Installed 42 packages in 621ms\n"}
+,{"stream_name":"stderr","time":78.440031469,"data":" + aiohappyeyeballs==2.7.1\n"}
+,{"stream_name":"stderr","time":78.440034203,"data":" + aiohttp==3.14.5\n"}
+,{"stream_name":"stderr","time":78.440037019,"data":" + aiosignal==1.4.0\n"}
+,{"stream_name":"stderr","time":78.440039811,"data":" + attrs==26.1.0\n"}
+,{"stream_name":"stderr","time":78.440042855,"data":" + certifi==2026.10.23\n"}
+,{"stream_name":"stderr","time":78.440046112,"data":" + charset-normalizer==3.5.2\n"}
+,{"stream_name":"stderr","time":78.440054929,"data":" + colorama==0.4.6\n"}
+,{"stream_name":"stderr","time":78.440058248,"data":" + entmax==1.3\n"}
+,{"stream_name":"stderr","time":78.440062093,"data":" + frozenlist==1.8.0\n"}
+,{"stream_name":"stderr","time":78.440065363,"data":" + hf-xet==1.8.0\n"}
+,{"stream_name":"stderr","time":78.440068458,"data":" + huggingface-hub==0.36.2\n"}
+,{"stream_name":"stderr","time":78.440072004,"data":" + idna==3.20\n"}
+,{"stream_name":"stderr","time":78.440075709,"data":" + jsonargparse==3.13.1\n"}
+,{"stream_name":"stderr","time":78.440079429,"data":" + lightning-utilities==0.15.3\n"}
+,{"stream_name":"stderr","time":78.440083078,"data":" + lxml==6.1.3\n"}
+,{"stream_name":"stderr","time":78.440086578,"data":" + multidict==7.2.1\n"}
+,{"stream_name":"stderr","time":78.44009045,"data":" + numpy==1.26.4\n"}
+,{"stream_name":"stderr","time":78.440094364,"data":" + packaging==26.3\n"}
+,{"stream_name":"stderr","time":78.44009829,"data":" + pandas==2.2.3\n"}
+,{"stream_name":"stderr","time":78.440101959,"data":" + portalocker==4.4.2\n"}
+,{"stream_name":"stderr","time":78.440105185,"data":" + propcache==0.5.4\n"}
+,{"stream_name":"stderr","time":78.440108377,"data":" + protobuf==4.25.9\n"}
+,{"stream_name":"stderr","time":78.440111639,"data":" + pyarrow==26.0.1\n"}
+,{"stream_name":"stderr","time":78.44011479,"data":" + python-dateutil==4.0.0\n"}
+,{"stream_name":"stderr","time":78.440118048,"data":" + pytorch-lightning==2.6.6\n"}
+,{"stream_name":"stderr","time":78.440121365,"data":" + pytz==2026.6\n"}
+,{"stream_name":"stderr","time":78.440124515,"data":" + pyyaml==6.0.3\n"}
+,{"stream_name":"stderr","time":78.440127634,"data":" + regex==2026.11.9\n"}
+,{"stream_name":"stderr","time":78.440130869,"data":" + requests==2.34.2\n"}
+,{"stream_name":"stderr","time":78.440134038,"data":" + sacrebleu==2.6.0\n"}
+,{"stream_name":"stderr","time":78.440137202,"data":" + safetensors==0.8.0\n"}
+,{"stream_name":"stderr","time":78.440140402,"data":" + scipy==1.17.1\n"}
+,{"stream_name":"stderr","time":78.440143537,"data":" + sentencepiece==0.2.3\n"}
+,{"stream_name":"stderr","time":78.440146757,"data":" + tabulate==0.10.0\n"}
+,{"stream_name":"stderr","time":78.44014989,"data":" + tokenizers==0.22.2\n"}
+,{"stream_name":"stderr","time":78.440153101,"data":" + torchmetrics==0.10.3\n"}
+,{"stream_name":"stderr","time":78.440156311,"data":" + tqdm==4.70.1\n"}
+,{"stream_name":"stderr","time":78.44016106,"data":" + transformers==4.57.6\n"}
+,{"stream_name":"stderr","time":78.440183896,"data":" + tzdata==2026.6\n"}
+,{"stream_name":"stderr","time":78.440188414,"data":" + unbabel-comet==2.2.7\n"}
+,{"stream_name":"stderr","time":78.440192232,"data":" + urllib3==2.8.0\n"}
+,{"stream_name":"stderr","time":78.44019613,"data":" + yarl==1.25.1\n"}
+,{"stream_name":"stdout","time":78.451013221,"data":"score.py written\n"}
+,{"stream_name":"stdout","time":137.483519452,"data":"torch 2.5.1+cu121 cuda True\n"}
+,{"stream_name":"stdout","time":137.483556147,"data":"models loaded\n"}
+,{"stream_name":"stdout","time":137.483561887,"data":"\n"}
+,{"stream_name":"stdout","time":137.483566335,"data":"\n"}
+,{"stream_name":"stdout","time":137.483570568,"data":"Fetching 5 files:   0%|          | 0/5 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":137.483580995,"data":"Fetching 5 files:  20%|██        | 1/5 [00:00\u003c00:00,  5.66it/s]\n"}
+,{"stream_name":"stdout","time":137.483585627,"data":"Fetching 5 files: 100%|██████████| 5/5 [00:08\u003c00:00,  1.66s/it]\n"}
+,{"stream_name":"stdout","time":137.483595528,"data":"Fetching 5 files: 100%|██████████| 5/5 [00:08\u003c00:00,  1.66s/it]\n"}
+,{"stream_name":"stdout","time":137.483601523,"data":"/kaggle/working/venv/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py:73: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.\n"}
+,{"stream_name":"stdout","time":137.48360726,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stdout","time":137.483624714,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stdout","time":137.483629,"data":"/kaggle/working/venv/lib/python3.12/site-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stdout","time":137.483633777,"data":"\n"}
+,{"stream_name":"stdout","time":137.483637633,"data":"Fetching 5 files:   0%|          | 0/5 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":137.483641991,"data":"Fetching 5 files:  60%|██████    | 3/5 [00:00\u003c00:00, 12.87it/s]\n"}
+,{"stream_name":"stdout","time":137.483647109,"data":"Fetching 5 files: 100%|██████████| 5/5 [00:05\u003c00:00,  1.09s/it]\n"}
+,{"stream_name":"stdout","time":137.483651069,"data":"Lightning automatically upgraded your loaded checkpoint from v1.3.5 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt20-comet-qe-da/snapshots/2e7ffc84fb67d99cf92506611766463bb9230cfb/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stdout","time":137.48365621,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stdout","time":137.483661243,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":137.48366486,"data":"  File \"/kaggle/working/score.py\", line 26, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":137.483668748,"data":"    df = pd.read_parquet(path).drop_duplicates(\"eval_id\")\n"}
+,{"stream_name":"stdout","time":137.483672391,"data":"         ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":137.483675907,"data":"  File \"/kaggle/working/venv/lib/python3.12/site-packages/pandas/io/parquet.py\", line 651, in read_parquet\n"}
+,{"stream_name":"stdout","time":137.483679763,"data":"    impl = get_engine(engine)\n"}
+,{"stream_name":"stdout","time":137.483683099,"data":"           ^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":137.483686545,"data":"  File \"/kaggle/working/venv/lib/python3.12/site-packages/pandas/io/parquet.py\", line 67, in get_engine\n"}
+,{"stream_name":"stdout","time":137.483690535,"data":"    raise ImportError(\n"}
+,{"stream_name":"stdout","time":137.483698041,"data":"ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\n"}
+,{"stream_name":"stdout","time":137.483701851,"data":"A suitable version of pyarrow or fastparquet is required for parquet support.\n"}
+,{"stream_name":"stdout","time":137.483705636,"data":"Trying to import the above resulted in these errors:\n"}
+,{"stream_name":"stdout","time":137.483711054,"data":" - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.\n"}
+,{"stream_name":"stdout","time":137.483716715,"data":" - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.\n"}
+,{"stream_name":"stdout","time":137.483720588,"data":"\n"}
+,{"stream_name":"stderr","time":137.710272565,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":137.710876269,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":137.710901686,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
+,{"stream_name":"stderr","time":137.710912248,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":137.710917188,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":137.71092175,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":137.710925613,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":137.710929382,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":137.71093318,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":137.711185435,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":137.711197389,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":137.71120022,"data":"Exception encountered at \"In [3]\":\n"}
+,{"stream_name":"stderr","time":137.711202788,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":137.711210202,"data":"CalledProcessError                        Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":137.711212701,"data":"/tmp/ipykernel_23/3021144635.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":137.711215316,"data":"      4 print(r.stdout[-4000:])\n"}
+,{"stream_name":"stderr","time":137.71121764,"data":"      5 print(r.stderr[-4000:])\n"}
+,{"stream_name":"stderr","time":137.711219826,"data":"----\u003e 6 r.check_returncode()\n"}
+,{"stream_name":"stderr","time":137.711222329,"data":"\n"}
+,{"stream_name":"stderr","time":137.711224477,"data":"/usr/lib/python3.13/subprocess.py in check_returncode(self)\n"}
+,{"stream_name":"stderr","time":137.71122678,"data":"    507         \"\"\"Raise CalledProcessError if the exit code is non-zero.\"\"\"\n"}
+,{"stream_name":"stderr","time":137.711229241,"data":"    508         if self.returncode:\n"}
+,{"stream_name":"stderr","time":137.711231567,"data":"--\u003e 509             raise CalledProcessError(self.returncode, self.args, self.stdout,\n"}
+,{"stream_name":"stderr","time":137.711261066,"data":"    510                                      self.stderr)\n"}
+,{"stream_name":"stderr","time":137.711265159,"data":"    511 \n"}
+,{"stream_name":"stderr","time":137.711268622,"data":"\n"}
+,{"stream_name":"stderr","time":137.71127238,"data":"CalledProcessError: Command '['/kaggle/working/venv/bin/python', '/kaggle/working/score.py']' returned non-zero exit status 1.\n"}
+,{"stream_name":"stderr","time":137.711276398,"data":"\n"}
+,{"stream_name":"stderr","time":140.027365474,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":140.02739428,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":140.1982712,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":140.198298714,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":140.966093682,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":141.063140906,"data":"[NbConvertApp] Writing 20012 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":143.508530142,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":144.040328282,"data":"[NbConvertApp] Writing 297486 bytes to __results__.html\n"}
 ]
