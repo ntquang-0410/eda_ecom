@@ -1,0 +1,52 @@
+{
+  "A::attr_heavy::123::1688": {
+    "system_score": 0.8494,
+    "n": 600,
+    "bleu": 46.578,
+    "chrf": 47.1585
+  },
+  "A::attr_heavy::123::tiki": {
+    "system_score": 0.0158,
+    "n": 600
+  },
+  "A::natural::123::1688": {
+    "system_score": 0.8533,
+    "n": 600,
+    "bleu": 47.9127,
+    "chrf": 48.1801
+  },
+  "A::natural::123::tiki": {
+    "system_score": 0.0352,
+    "n": 600
+  },
+  "B::balanced::123::1688": {
+    "system_score": 0.857,
+    "n": 447,
+    "bleu": 73.187,
+    "chrf": 71.3557
+  },
+  "B::balanced::123::tiki": {
+    "system_score": 0.0429,
+    "n": 438
+  },
+  "B::natural::123::1688": {
+    "system_score": 0.8424,
+    "n": 447,
+    "bleu": 74.6136,
+    "chrf": 72.7155
+  },
+  "B::natural::123::tiki": {
+    "system_score": 0.0519,
+    "n": 438
+  },
+  "B::title_heavy::123::1688": {
+    "system_score": 0.8585,
+    "n": 447,
+    "bleu": 68.7167,
+    "chrf": 66.5976
+  },
+  "B::title_heavy::123::tiki": {
+    "system_score": 0.0571,
+    "n": 438
+  }
+}
