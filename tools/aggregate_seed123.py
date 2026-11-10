@@ -74,7 +74,7 @@ def main() -> int:
         d = d.merge(products, on="eval_id", how="left", suffixes=("", "_eval"))
         frames.append(d)
     df = pd.concat(frames, ignore_index=True)
-    seeds = sorted(df.seed.unique())
+    seeds = [int(x) for x in sorted(df.seed.unique())]
     configs = set(df.config)
     configs.discard("natural")
 

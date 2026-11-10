@@ -3,7 +3,8 @@
 **Ngày:** 2026-11-08  
 **Model:** Qwen3-4B + LoRA (r=16, all-linear)  
 **Dữ liệu:** processed units chia từ dữ liệu **trước EDA**  
-**Ngân sách:** 4.000.000 token/config, 500 optimizer step, seed 42  
+**Ngân sách:** 4.000.000 token/config, 500 optimizer step  
+**Seed:** 42 và 123 (xác nhận)  
 **Sampler:** quota-based (không dùng `p_i ∝ w_g·t_i`)
 
 ---
@@ -75,6 +76,9 @@ Paired bootstrap vs `natural`:
 
 **Kết luận B:** `title_heavy` và `balanced` đều tăng 1688 có ý nghĩa (+0,016 / +0,014; CI không chứa 0; P(win) = 1,000). Tiki không đổi.
 
+Seed 123 xác nhận lại: `balanced` +0,0147 [+0,0102; +0,0195], `title_heavy` +0,0162 [+0,0112; +0,0215].
+Gain B vững trên **1688**; khi gộp Tiki CI chứa 0 nên không kết luận "tốt hơn overall".
+
 Cơ chế: `natural` dồn 92% token cho description. Chuyển bớt sang title:
 
 - 1688_title: 0,806 → 0,836 (**+0,030**)
@@ -145,7 +149,9 @@ Tóm lại: chỉ nên tái cân bằng khi một nhóm đang chiếm quá nhi�
 
 ## 7. Hạn chế
 
-- 1 seed (42); các CI trên là bất định theo câu, chưa gồm bất định do seed.
+- Đã chạy thêm seed 123: A `attr_heavy` tái lập mức giảm; B `balanced` và `title_heavy`
+  tái lập mức tăng trên 1688 (xem `reports/SEED123_SUMMARY.md`).
+- CI trên là bất định theo câu/sản phẩm; chưa ước lượng đầy đủ bất định do seed cho mọi config.
 - B thiếu 15 dòng description dài; ảnh hưởng như nhau ở mọi config.
 - COMET-QE cho Tiki có điểm tuyệt đối rất thấp và không tách được config; chưa kết luận được weight nào tốt cho Tiki.
 - Credit score mới chấm được một phần (A 580/1.000, B 680/1.000) do quota API; là metric phụ, COMET là metric chính.
