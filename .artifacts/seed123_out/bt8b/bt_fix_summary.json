@@ -1,0 +1,12 @@
+{
+  "prompt_version": "plan_b_desc_v1_retry",
+  "runs": [
+    {
+      "model": "qwen3-8b",
+      "rows": 1300,
+      "good_rate": 0.9569,
+      "stopped": "completed",
+      "minutes": 182.4
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "model": "qwen3-8b",
+  "rows": 1300,
+  "good_rate": 0.9569,
+  "stopped": "completed",
+  "minutes": 182.4
+}

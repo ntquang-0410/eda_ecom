@@ -58,3 +58,11 @@
 08:00:36 anhtamxinhdep/tiki-bt-fix-8b-full has status "KernelWorkerStatus.RUNNING"
 08:03:37 anhtamxinhdep/tiki-bt-fix-8b-full has status "KernelWorkerStatus.RUNNING"
 08:06:39 anhtamxinhdep/tiki-bt-fix-8b-full has status "KernelWorkerStatus.RUNNING"
+08:09:40 anhtamxinhdep/tiki-bt-fix-8b-full has status "KernelWorkerStatus.RUNNING"
+08:12:41 anhtamxinhdep/tiki-bt-fix-8b-full has status "KernelWorkerStatus.COMPLETE"
+Warning: Looks like you're using an outdated `kaggle` version (installed: 2.0.2), please consider upgrading to the latest version (2.2.5)
+Output file downloaded to .artifacts/seed123_out/bt8b/bt_fix/qwen3-8b/predictions.parquet
+Output file downloaded to .artifacts/seed123_out/bt8b/bt_fix/qwen3-8b/run_state.json
+Output file downloaded to .artifacts/seed123_out/bt8b/bt_fix_summary.json
+Kernel log downloaded to .artifacts/seed123_out/bt8b/tiki-bt-fix-8b-full.log 
+DONE
