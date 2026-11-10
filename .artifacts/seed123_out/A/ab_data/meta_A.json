@@ -1,0 +1,52 @@
+{
+  "rows": 118477,
+  "raw_rows": 118688,
+  "removed": 211,
+  "tokens_million": 4.707,
+  "group_tokens": {
+    "1688_attribute": 3064267,
+    "1688_title": 752144,
+    "tiki_attribute": 402223,
+    "tiki_title": 487867
+  },
+  "group_share": {
+    "1688_attribute": 0.6511,
+    "1688_title": 0.1598,
+    "tiki_attribute": 0.0855,
+    "tiki_title": 0.1037
+  },
+  "split": {
+    "train": 103653,
+    "dev": 7534,
+    "test": 7290
+  },
+  "configs": {
+    "natural": null,
+    "balanced": {
+      "1688_title": 0.25,
+      "1688_attribute": 0.25,
+      "tiki_title": 0.25,
+      "tiki_attribute": 0.25
+    },
+    "title_heavy": {
+      "1688_title": 0.4,
+      "1688_attribute": 0.2,
+      "tiki_title": 0.25,
+      "tiki_attribute": 0.15
+    },
+    "attr_heavy": {
+      "1688_title": 0.1,
+      "1688_attribute": 0.6,
+      "tiki_title": 0.05,
+      "tiki_attribute": 0.25
+    },
+    "tiki_heavy": {
+      "1688_title": 0.1,
+      "1688_attribute": 0.2,
+      "tiki_title": 0.3,
+      "tiki_attribute": 0.4
+    }
+  },
+  "eval_rows": 1200,
+  "source_dup_rows_kept": 6546
+}

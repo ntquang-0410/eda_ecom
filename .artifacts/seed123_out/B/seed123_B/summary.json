@@ -1,0 +1,41 @@
+[
+  {
+    "config": "natural",
+    "seed": 123,
+    "steps": 500,
+    "tokens": 4000525,
+    "minutes": 88.0,
+    "actual_share": {
+      "1688_description": 0.525634729063288,
+      "1688_title": 0.04787679395201509,
+      "tiki_description": 0.3954314925542068,
+      "tiki_title": 0.031056984430490077
+    }
+  },
+  {
+    "config": "balanced",
+    "seed": 123,
+    "steps": 500,
+    "tokens": 4001384,
+    "minutes": 114.5,
+    "actual_share": {
+      "1688_description": 0.24998467003925862,
+      "1688_title": 0.2499382797338529,
+      "tiki_description": 0.2501391745276781,
+      "tiki_title": 0.24993787569921033
+    }
+  },
+  {
+    "config": "title_heavy",
+    "seed": 123,
+    "steps": 500,
+    "tokens": 4000521,
+    "minutes": 119.2,
+    "actual_share": {
+      "1688_description": 0.1000401234189661,
+      "1688_title": 0.3999581266965632,
+      "tiki_description": 0.1000515280578131,
+      "tiki_title": 0.39995022182665757
+    }
+  }
+]
