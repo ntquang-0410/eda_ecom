@@ -24,8 +24,9 @@ CELLS = [
     code("""import os, subprocess, sys
 os.environ['USE_TF'] = '0'
 os.environ['USE_FLAX'] = '0'
+# numpy 2.x làm vỡ ABI của pandas trong image Kaggle -> pin <2
 subprocess.run([sys.executable, '-m', 'pip', 'install', '-q',
-                'unbabel-comet>=2.2', 'sacrebleu'], check=True)
+                'numpy<2', 'unbabel-comet>=2.2', 'sacrebleu'], check=True)
 import torch, json, time
 from pathlib import Path
 import numpy as np
@@ -103,10 +104,8 @@ meta = {
     "enable_tpu": False,
     "enable_internet": True,
     "dataset_sources": ["anhtamxinhdep/tiki-seed123-hyps"],
-    "competition_sources": ["arc-prize-2026-arc-agi-3"],
     "kernel_sources": [],
     "model_sources": [],
-    "machine_shape": "NvidiaRtxPro6000",
 }
 (folder / "kernel-metadata.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2),
                                              encoding="utf-8")
