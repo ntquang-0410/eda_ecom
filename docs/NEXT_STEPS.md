@@ -3,6 +3,12 @@
 **Ngày:** 2026-11-08  
 **Bối cảnh:** sau weight survey A/B (quota sampler), BT description 4 model và refactor/dọn repo.
 
+> **Cập nhật 2026-11-10:** P0 đã chạy xong phần chính.
+> - Cluster bootstrap theo product: B 1688 vẫn vững; overall B (gộp Tiki) CI chứa 0.
+> - Seed 123: A `attr_heavy` tái lập mức giảm; B `balanced` +0,0147 / `title_heavy` +0,0162 tái lập trên 1688.
+> - 8B full đang chạy 1.300 description; credit A 840/1.000, B 680/1.000 (hết quota).
+> - Xem `reports/SEED123_SUMMARY.md`.
+
 ---
 
 ## 1. Hiện trạng: cái gì đã chắc, cái gì còn tạm
@@ -10,7 +16,7 @@
 | Kết luận | Mức độ chắc | Vấn đề |
 |---|---|---|
 | A giữ `natural` | Khá chắc | 1 seed; eval đã dùng lại nhiều lần |
-| B chọn `balanced` | **Tạm** | Gain nhỏ (+0,0144); 1 seed; credit chưa đầy đủ |
+| B chọn `balanced` | **Chắc trên 1688** | Tái lập 2 seed (+0,0146); overall gộp Tiki chưa kết luận |
 | BT 4B description tốt nhất | Chắc | 93,5% QC ok sau retry |
 | 8B description | Chưa đủ | Mới 11.900/13.200, thiếu 1.300 dòng dài nhất |
 | Tiki không đổi theo weight | Chưa kết luận | COMET-QE gần 0/âm, độ phân giải thấp |

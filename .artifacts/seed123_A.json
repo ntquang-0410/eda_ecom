@@ -1,0 +1,107 @@
+{
+  "suite": "A",
+  "seeds": [
+    42,
+    123
+  ],
+  "configs": [
+    {
+      "config": "attr_heavy",
+      "1688_42": {
+        "mean": -0.0049,
+        "lo": -0.0083,
+        "hi": -0.0013,
+        "p": 0.004,
+        "n_products": 455
+      },
+      "1688_123": {
+        "mean": -0.004,
+        "lo": -0.0077,
+        "hi": -0.0004,
+        "p": 0.014,
+        "n_products": 455
+      },
+      "1688_mean": -0.0044,
+      "1688_same_sign": true,
+      "tiki_42": {
+        "mean": 0.0048,
+        "lo": -0.0083,
+        "hi": 0.0176,
+        "p": 0.769,
+        "n_products": 460
+      },
+      "tiki_123": {
+        "mean": -0.0194,
+        "lo": -0.0335,
+        "hi": -0.0064,
+        "p": 0.002,
+        "n_products": 460
+      },
+      "tiki_mean": -0.0073,
+      "tiki_same_sign": false
+    },
+    {
+      "config": "balanced",
+      "1688_42": {
+        "mean": -0.0074,
+        "lo": -0.0124,
+        "hi": -0.0025,
+        "p": 0.002,
+        "n_products": 455
+      },
+      "1688_mean": -0.0074,
+      "1688_same_sign": true,
+      "tiki_42": {
+        "mean": 0.0005,
+        "lo": -0.0151,
+        "hi": 0.0151,
+        "p": 0.523,
+        "n_products": 460
+      },
+      "tiki_mean": 0.0005,
+      "tiki_same_sign": true
+    },
+    {
+      "config": "tiki_heavy",
+      "1688_42": {
+        "mean": -0.0155,
+        "lo": -0.0205,
+        "hi": -0.0109,
+        "p": 0.0,
+        "n_products": 455
+      },
+      "1688_mean": -0.0155,
+      "1688_same_sign": true,
+      "tiki_42": {
+        "mean": -0.0025,
+        "lo": -0.0187,
+        "hi": 0.0134,
+        "p": 0.388,
+        "n_products": 460
+      },
+      "tiki_mean": -0.0025,
+      "tiki_same_sign": true
+    },
+    {
+      "config": "title_heavy",
+      "1688_42": {
+        "mean": -0.0069,
+        "lo": -0.0118,
+        "hi": -0.0021,
+        "p": 0.003,
+        "n_products": 455
+      },
+      "1688_mean": -0.0069,
+      "1688_same_sign": true,
+      "tiki_42": {
+        "mean": 0.0033,
+        "lo": -0.0098,
+        "hi": 0.0159,
+        "p": 0.689,
+        "n_products": 460
+      },
+      "tiki_mean": 0.0033,
+      "tiki_same_sign": true
+    }
+  ]
+}

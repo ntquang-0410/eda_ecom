@@ -1,0 +1,121 @@
+{
+  "suite": "B",
+  "seeds": [
+    42,
+    123
+  ],
+  "configs": [
+    {
+      "config": "balanced",
+      "1688_42": {
+        "mean": 0.0144,
+        "lo": 0.0081,
+        "hi": 0.0213,
+        "p": 1.0,
+        "n_products": 375
+      },
+      "1688_123": {
+        "mean": 0.0147,
+        "lo": 0.0102,
+        "hi": 0.0195,
+        "p": 1.0,
+        "n_products": 375
+      },
+      "1688_mean": 0.0146,
+      "1688_same_sign": true,
+      "tiki_42": {
+        "mean": 0.0002,
+        "lo": -0.0141,
+        "hi": 0.0144,
+        "p": 0.507,
+        "n_products": 407
+      },
+      "tiki_123": {
+        "mean": -0.009,
+        "lo": -0.0234,
+        "hi": 0.0051,
+        "p": 0.102,
+        "n_products": 407
+      },
+      "tiki_mean": -0.0044,
+      "tiki_same_sign": false
+    },
+    {
+      "config": "desc_heavy",
+      "1688_42": {
+        "mean": -0.0054,
+        "lo": -0.0113,
+        "hi": 0.0006,
+        "p": 0.041,
+        "n_products": 375
+      },
+      "1688_mean": -0.0054,
+      "1688_same_sign": true,
+      "tiki_42": {
+        "mean": -0.0026,
+        "lo": -0.0126,
+        "hi": 0.0068,
+        "p": 0.291,
+        "n_products": 407
+      },
+      "tiki_mean": -0.0026,
+      "tiki_same_sign": true
+    },
+    {
+      "config": "tiki_heavy",
+      "1688_42": {
+        "mean": 0.0047,
+        "lo": -0.0008,
+        "hi": 0.0102,
+        "p": 0.952,
+        "n_products": 375
+      },
+      "1688_mean": 0.0047,
+      "1688_same_sign": true,
+      "tiki_42": {
+        "mean": -0.0045,
+        "lo": -0.0211,
+        "hi": 0.0113,
+        "p": 0.295,
+        "n_products": 407
+      },
+      "tiki_mean": -0.0045,
+      "tiki_same_sign": true
+    },
+    {
+      "config": "title_heavy",
+      "1688_42": {
+        "mean": 0.016,
+        "lo": 0.0097,
+        "hi": 0.0227,
+        "p": 1.0,
+        "n_products": 375
+      },
+      "1688_123": {
+        "mean": 0.0162,
+        "lo": 0.0112,
+        "hi": 0.0215,
+        "p": 1.0,
+        "n_products": 375
+      },
+      "1688_mean": 0.0161,
+      "1688_same_sign": true,
+      "tiki_42": {
+        "mean": -0.0034,
+        "lo": -0.0173,
+        "hi": 0.0105,
+        "p": 0.307,
+        "n_products": 407
+      },
+      "tiki_123": {
+        "mean": 0.0052,
+        "lo": -0.0113,
+        "hi": 0.0217,
+        "p": 0.737,
+        "n_products": 407
+      },
+      "tiki_mean": 0.0009,
+      "tiki_same_sign": false
+    }
+  ]
+}

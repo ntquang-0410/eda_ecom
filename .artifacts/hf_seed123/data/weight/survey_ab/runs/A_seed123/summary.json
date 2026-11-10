@@ -1,0 +1,28 @@
+[
+  {
+    "config": "natural",
+    "seed": 123,
+    "steps": 500,
+    "tokens": 4000079,
+    "minutes": 114.8,
+    "actual_share": {
+      "1688_attribute": 0.6608024526632826,
+      "1688_title": 0.15535131995624546,
+      "tiki_attribute": 0.08307375930911609,
+      "tiki_title": 0.10077246807135573
+    }
+  },
+  {
+    "config": "attr_heavy",
+    "seed": 123,
+    "steps": 500,
+    "tokens": 4000392,
+    "minutes": 124.4,
+    "actual_share": {
+      "1688_attribute": 0.6000263851760531,
+      "1688_title": 0.09999796160942077,
+      "tiki_attribute": 0.24997687245299036,
+      "tiki_title": 0.049998780761535765
+    }
+  }
+]
