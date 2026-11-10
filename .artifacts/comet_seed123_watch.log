@@ -4,3 +4,8 @@
 Warning: Looks like you're using an outdated `kaggle` version (installed: 2.0.2), please consider upgrading to the latest version (2.2.5)
 Kernel log downloaded to .artifacts/seed123_out/comet/tiki-comet-seed123.log 
 DONE
+05:26:59 anhtamxinhdep/tiki-comet-seed123 has status "KernelWorkerStatus.RUNNING"
+05:29:00 anhtamxinhdep/tiki-comet-seed123 has status "KernelWorkerStatus.ERROR"
+Warning: Looks like you're using an outdated `kaggle` version (installed: 2.0.2), please consider upgrading to the latest version (2.2.5)
+Kernel log downloaded to .artifacts/seed123_out/comet/tiki-comet-seed123.log 
+DONE
