@@ -1,9 +1,7 @@
-save_data: /kaggle/working/onmt/A
 src_vocab: /kaggle/working/onmt/A/vocab.vi
 tgt_vocab: /kaggle/working/onmt/A/vocab.zh
 src_vocab_size: 32000
 tgt_vocab_size: 32000
-overwrite: True
 data:
   corpus_1:
     path_src: /kaggle/working/onmt/A/train.vi
