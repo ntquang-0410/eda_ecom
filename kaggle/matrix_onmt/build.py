@@ -87,18 +87,16 @@ def run(ds, epochs=10):
     steps_per_epoch = max(1, math.ceil(stats[ds]['train_tokens'] / (4096 * 2)))
     train_steps = min(30000, steps_per_epoch * epochs)
     vocab_yaml = WORK / f'vocab_{ds}.yaml'
-    vocab_yaml.write_text(f"""save_data: {d}
-src_vocab: {d}/vocab.vi
+    vocab_yaml.write_text(f"""src_vocab: {d}/vocab.vi
 tgt_vocab: {d}/vocab.zh
 src_vocab_size: 32000
 tgt_vocab_size: 32000
-overwrite: True
 data:
   corpus_1:
     path_src: {d}/train.vi
     path_tgt: {d}/train.zh
 """, encoding='utf-8')
-    subprocess.run([P, '-m', 'onmt.bin.build_vocab', '-config', str(vocab_yaml), '-n_sample', '200000'], check=True)
+    subprocess.run([P, '-m', 'onmt.bin.build_vocab', '-config', str(vocab_yaml), '-save_data', str(d), '-n_sample', '200000'], check=True)
 
     cfg = WORK / f'train_{ds}.yaml'
     cfg.write_text(f"""data:
@@ -110,16 +108,13 @@ data:
     path_src: {d}/valid.vi
     path_tgt: {d}/valid.zh
 save_model: {d}/model
-save_data: {d}
 src_vocab: {d}/vocab.vi
 tgt_vocab: {d}/vocab.zh
-overwrite: True
 world_size: 1
 gpu_ranks: [0]
 batch_type: tokens
 batch_size: 4096
 accum_count: [2]
-valid_batch_size: 2048
 train_steps: {train_steps}
 valid_steps: {max(500, steps_per_epoch // 2)}
 save_checkpoint_steps: {max(500, steps_per_epoch)}
@@ -129,22 +124,18 @@ warmup_steps: 2000
 learning_rate: 2.0
 decay_method: noam
 adam_beta2: 0.998
-max_grad_norm: 0
 label_smoothing: 0.1
-param_init: 0
-param_init_glorot: true
-position_encoding: true
 dropout: 0.1
 attention_dropout: 0.1
 seed: 42
-model:
-  architecture: transformer
-  d_model: 256
-  heads: 8
-  layers: 4
-  transformer_ff: 1024
-  dropout: 0.1
-  attention_dropout: 0.1
+model_type: text
+encoder_type: transformer
+decoder_type: transformer
+hidden_size: 256
+word_vec_size: 256
+heads: 8
+layers: 4
+transformer_ff: 1024
 """, encoding='utf-8')
     log = (d / 'train.log').open('w', encoding='utf-8')
     subprocess.run([P, '-m', 'onmt.bin.train', '-config', str(cfg)], stdout=log, stderr=subprocess.STDOUT, check=True)
@@ -208,7 +199,7 @@ folder = ROOT / "kaggle" / "tiki-matrix-onmt-ab"
 folder.mkdir(parents=True, exist_ok=True)
 (folder / "onmt.ipynb").write_text(json.dumps(nb, ensure_ascii=False, indent=1), encoding="utf-8")
 meta = {
-    "id": "nguynthanhquang/tiki-matrix-onmt-ab",
+    "id": "ntquang0410/tiki-matrix-onmt-ab",
     "title": "Tiki Matrix onmt ab",
     "code_file": "onmt.ipynb",
     "language": "python",
@@ -217,7 +208,7 @@ meta = {
     "enable_gpu": True,
     "enable_tpu": False,
     "enable_internet": True,
-    "dataset_sources": ["nguynthanhquang/tiki-matrix-data"],
+    "dataset_sources": ["ntquang0410/tiki-matrix-data"],
     "kernel_sources": [],
     "model_sources": [],
 }

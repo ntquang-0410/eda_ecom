@@ -72,13 +72,13 @@ def make(ds: str, config: str, out_name: str, title: str) -> None:
             c['source'] = INFER.splitlines(keepends=True)
     leak_cell = {"cell_type": "code", "execution_count": None, "metadata": {},
                  "outputs": [], "source": LEAK.splitlines(keepends=True)}
-    nb['cells'].insert(2, leak_cell)
+    nb['cells'].insert(4, leak_cell)
 
     folder = ROOT / 'kaggle' / out_name
     folder.mkdir(parents=True, exist_ok=True)
     (folder / f'{out_name}.ipynb').write_text(json.dumps(nb, ensure_ascii=False, indent=1), encoding='utf-8')
     meta = {
-        "id": f"nguynthanhquang/{out_name}",
+        "id": f"ntquang0410/{out_name}",
         "title": title,
         "code_file": f'{out_name}.ipynb',
         "language": "python",
@@ -87,7 +87,7 @@ def make(ds: str, config: str, out_name: str, title: str) -> None:
         "enable_gpu": True,
         "enable_tpu": False,
         "enable_internet": False,
-        "dataset_sources": ["nguynthanhquang/ecomgpt-7b", "nguynthanhquang/tiki-matrix-data"],
+        "dataset_sources": ["nguynthanhquang/ecomgpt-7b", "ntquang0410/tiki-matrix-data"],
         "competition_sources": ["arc-prize-2026-arc-agi-3"],
         "kernel_sources": [],
         "model_sources": [],
