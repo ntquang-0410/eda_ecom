@@ -67,3 +67,8 @@ keys.txt
 # Model weights > 100MB/file: GitHub tu choi, dung Hugging Face
 *.safetensors
 .artifacts/**/adapter_model.safetensors
+# Model checkpoints (GitHub >100MB)
+*.pt
+*.pth
+*.ckpt
+*.onnx
