@@ -1519,3 +1519,4 @@ Output file downloaded to .artifacts/matrix_out/moses_b/mosesdecoder/contrib/oth
 Kernel log downloaded to .artifacts/matrix_out/moses_b/tiki-matrix-moses-b2.log 
 Next page token: eyJHY3NQYWdlVG9rZW4iOiIzNjg1NDM0Mzcvb3V0cHV0L21vc2VzZGVjb2Rlci9jb250cmliL290aGVyLWJ1aWxkcy91dGlsLy5jcHJvamVjdCJ9
 19:38:39 tiki-matrix-onmt-ab [ntquang0410/tiki-matrix-onmt-ab has status "KernelWorkerStatus.RUNNING"]
+19:42:40 tiki-matrix-onmt-ab [ntquang0410/tiki-matrix-onmt-ab has status "KernelWorkerStatus.RUNNING"]
