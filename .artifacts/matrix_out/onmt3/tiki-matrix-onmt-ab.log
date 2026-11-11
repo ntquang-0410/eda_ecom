@@ -1,0 +1,1085 @@
+[{"stream_name":"stderr","time":7.228743196,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":7.228793536,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":8.210860538,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.21093197,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.210941411,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.210945674,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.821778721,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.821813553,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.82181759,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.821820144,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":15.691605622,"data":"warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`?\n"}
+,{"stream_name":"stderr","time":15.894193975,"data":"warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`?\n"}
+,{"stream_name":"stderr","time":15.894223803,"data":"\n"}
+,{"stream_name":"stderr","time":15.894230453,"data":"warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`?\n"}
+,{"stream_name":"stderr","time":16.128117146,"data":"Downloading cpython-3.11.18-linux-x86_64-gnu (download) (29.2MiB)\n"}
+,{"stream_name":"stderr","time":16.33104709,"data":"Downloading cpython-3.11.18-linux-x86_64-gnu (download) (29.2MiB)\n"}
+,{"stream_name":"stderr","time":16.331073262,"data":"\n"}
+,{"stream_name":"stderr","time":16.331077962,"data":"Downloading cpython-3.11.18-linux-x86_64-gnu (download) (29.2MiB)\n"}
+,{"stream_name":"stderr","time":17.481988176,"data":" Downloaded cpython-3.11.18-linux-x86_64-gnu (download)\n"}
+,{"stream_name":"stderr","time":17.641710031,"data":"Using CPython 3.11.18\n"}
+,{"stream_name":"stderr","time":17.641734078,"data":"Creating virtual environment at: venv\n"}
+,{"stream_name":"stderr","time":17.642578598,"data":"Activate with: source venv/bin/activate\n"}
+,{"stream_name":"stderr","time":17.684740708,"data":" Downloaded cpython-3.11.18-linux-x86_64-gnu (download)\n"}
+,{"stream_name":"stderr","time":17.684762767,"data":"Using CPython 3.11.18\n"}
+,{"stream_name":"stderr","time":17.684767303,"data":"Creating virtual environment at: venv\n"}
+,{"stream_name":"stderr","time":17.6847935,"data":"Activate with: source venv/bin/activate\n"}
+,{"stream_name":"stderr","time":17.684796184,"data":"\n"}
+,{"stream_name":"stderr","time":17.684799512,"data":" Downloaded cpython-3.11.18-linux-x86_64-gnu (download)\n"}
+,{"stream_name":"stderr","time":17.684816884,"data":"Using CPython 3.11.18\n"}
+,{"stream_name":"stderr","time":17.684834707,"data":"Creating virtual environment at: venv\n"}
+,{"stream_name":"stderr","time":17.684839157,"data":"Activate with: source venv/bin/activate\n"}
+,{"stream_name":"stderr","time":17.802865078,"data":"Using Python 3.11.18 environment at: venv\n"}
+,{"stream_name":"stderr","time":18.004981005,"data":"Using Python 3.11.18 environment at: venv\n"}
+,{"stream_name":"stderr","time":18.005006098,"data":"\n"}
+,{"stream_name":"stderr","time":18.005010093,"data":"Using Python 3.11.18 environment at: venv\n"}
+,{"stream_name":"stderr","time":18.588710809,"data":"Resolved 22 packages in 784ms\n"}
+,{"stream_name":"stderr","time":18.613218124,"data":"Downloading triton (160.1MiB)\n"}
+,{"stream_name":"stderr","time":18.613729755,"data":"Downloading nvidia-cusolver-cu12 (118.4MiB)\n"}
+,{"stream_name":"stderr","time":18.615350952,"data":"Downloading torch (722.2MiB)\n"}
+,{"stream_name":"stderr","time":18.644428205,"data":"Downloading nvidia-nvjitlink-cu12 (37.9MiB)\n"}
+,{"stream_name":"stderr","time":18.64460869,"data":"Downloading networkx (2.0MiB)\n"}
+,{"stream_name":"stderr","time":18.646875686,"data":"Downloading sympy (6.0MiB)\n"}
+,{"stream_name":"stderr","time":18.791143639,"data":"Resolved 22 packages in 784ms\n"}
+,{"stream_name":"stderr","time":18.791208878,"data":"Downloading triton (160.1MiB)\n"}
+,{"stream_name":"stderr","time":18.791222220999998,"data":"Downloading nvidia-cusolver-cu12 (118.4MiB)\n"}
+,{"stream_name":"stderr","time":18.791225662,"data":"Downloading torch (722.2MiB)\n"}
+,{"stream_name":"stderr","time":18.791228258,"data":"Downloading nvidia-nvjitlink-cu12 (37.9MiB)\n"}
+,{"stream_name":"stderr","time":18.791230921,"data":"Downloading networkx (2.0MiB)\n"}
+,{"stream_name":"stderr","time":18.791233406,"data":"Downloading sympy (6.0MiB)\n"}
+,{"stream_name":"stderr","time":18.791236036,"data":"\n"}
+,{"stream_name":"stderr","time":18.791238903,"data":"Resolved 22 packages in 784ms\n"}
+,{"stream_name":"stderr","time":18.791241725,"data":"Downloading triton (160.1MiB)\n"}
+,{"stream_name":"stderr","time":18.791244172,"data":"Downloading nvidia-cusolver-cu12 (118.4MiB)\n"}
+,{"stream_name":"stderr","time":18.791246632,"data":"Downloading torch (722.2MiB)\n"}
+,{"stream_name":"stderr","time":18.791249524,"data":"Downloading nvidia-nvjitlink-cu12 (37.9MiB)\n"}
+,{"stream_name":"stderr","time":18.791284819,"data":"Downloading networkx (2.0MiB)\n"}
+,{"stream_name":"stderr","time":18.791289963,"data":"Downloading sympy (6.0MiB)\n"}
+,{"stream_name":"stderr","time":18.872508415,"data":"Downloading nvidia-cublas-cu12 (391.6MiB)\n"}
+,{"stream_name":"stderr","time":19.0770762,"data":"Downloading nvidia-cublas-cu12 (391.6MiB)\n"}
+,{"stream_name":"stderr","time":19.077130596,"data":"\n"}
+,{"stream_name":"stderr","time":19.077160449,"data":"Downloading nvidia-cublas-cu12 (391.6MiB)\n"}
+,{"stream_name":"stderr","time":19.220743131,"data":"Downloading nvidia-cuda-nvrtc-cu12 (22.6MiB)\n"}
+,{"stream_name":"stderr","time":19.236947479,"data":" Downloaded networkx\n"}
+,{"stream_name":"stderr","time":19.272226816,"data":"Downloading nvidia-curand-cu12 (53.9MiB)\n"}
+,{"stream_name":"stderr","time":19.275324591,"data":"Downloading nvidia-cufft-cu12 (116.0MiB)\n"}
+,{"stream_name":"stderr","time":19.28035525,"data":"Downloading nvidia-cuda-cupti-cu12 (13.5MiB)\n"}
+,{"stream_name":"stderr","time":19.290112867,"data":"Downloading nvidia-cusparse-cu12 (186.9MiB)\n"}
+,{"stream_name":"stderr","time":19.293114368,"data":"Downloading nvidia-cudnn-cu12 (697.8MiB)\n"}
+,{"stream_name":"stderr","time":19.33866161,"data":"Downloading nvidia-nccl-cu12 (151.3MiB)\n"}
+,{"stream_name":"stderr","time":19.42781271,"data":"Downloading nvidia-cuda-nvrtc-cu12 (22.6MiB)\n"}
+,{"stream_name":"stderr","time":19.427836397,"data":" Downloaded networkx\n"}
+,{"stream_name":"stderr","time":19.427841714,"data":"Downloading nvidia-curand-cu12 (53.9MiB)\n"}
+,{"stream_name":"stderr","time":19.42784604,"data":"Downloading nvidia-cufft-cu12 (116.0MiB)\n"}
+,{"stream_name":"stderr","time":19.427850397,"data":"Downloading nvidia-cuda-cupti-cu12 (13.5MiB)\n"}
+,{"stream_name":"stderr","time":19.427854646,"data":"Downloading nvidia-cusparse-cu12 (186.9MiB)\n"}
+,{"stream_name":"stderr","time":19.427858995,"data":"Downloading nvidia-cudnn-cu12 (697.8MiB)\n"}
+,{"stream_name":"stderr","time":19.42786314,"data":"Downloading nvidia-nccl-cu12 (151.3MiB)\n"}
+,{"stream_name":"stderr","time":19.4278676,"data":"\n"}
+,{"stream_name":"stderr","time":19.428273868,"data":"Downloading nvidia-cuda-nvrtc-cu12 (22.6MiB)\n"}
+,{"stream_name":"stderr","time":19.428341333,"data":" Downloaded networkx\n"}
+,{"stream_name":"stderr","time":19.428347984,"data":"Downloading nvidia-curand-cu12 (53.9MiB)\n"}
+,{"stream_name":"stderr","time":19.428368199,"data":"Downloading nvidia-cufft-cu12 (116.0MiB)\n"}
+,{"stream_name":"stderr","time":19.428373002,"data":"Downloading nvidia-cuda-cupti-cu12 (13.5MiB)\n"}
+,{"stream_name":"stderr","time":19.428427707,"data":"Downloading nvidia-cusparse-cu12 (186.9MiB)\n"}
+,{"stream_name":"stderr","time":19.428432829,"data":"Downloading nvidia-cudnn-cu12 (697.8MiB)\n"}
+,{"stream_name":"stderr","time":19.428436682,"data":"Downloading nvidia-nccl-cu12 (151.3MiB)\n"}
+,{"stream_name":"stderr","time":19.548039376,"data":" Downloaded sympy\n"}
+,{"stream_name":"stderr","time":19.750337074,"data":" Downloaded sympy\n"}
+,{"stream_name":"stderr","time":19.750361417,"data":"\n"}
+,{"stream_name":"stderr","time":19.75038156,"data":" Downloaded sympy\n"}
+,{"stream_name":"stderr","time":22.544195281,"data":" Downloaded nvidia-cuda-cupti-cu12\n"}
+,{"stream_name":"stderr","time":22.747031863,"data":" Downloaded nvidia-cuda-cupti-cu12\n"}
+,{"stream_name":"stderr","time":22.747056151,"data":"\n"}
+,{"stream_name":"stderr","time":22.747060101,"data":" Downloaded nvidia-cuda-cupti-cu12\n"}
+,{"stream_name":"stderr","time":22.802131018,"data":" Downloaded nvidia-nvjitlink-cu12\n"}
+,{"stream_name":"stderr","time":23.00482232,"data":" Downloaded nvidia-nvjitlink-cu12\n"}
+,{"stream_name":"stderr","time":23.00484822,"data":"\n"}
+,{"stream_name":"stderr","time":23.004871894,"data":" Downloaded nvidia-nvjitlink-cu12\n"}
+,{"stream_name":"stderr","time":24.321360881,"data":" Downloaded nvidia-cuda-nvrtc-cu12\n"}
+,{"stream_name":"stderr","time":24.525223343,"data":" Downloaded nvidia-cuda-nvrtc-cu12\n"}
+,{"stream_name":"stderr","time":24.52525,"data":"\n"}
+,{"stream_name":"stderr","time":24.525254594,"data":" Downloaded nvidia-cuda-nvrtc-cu12\n"}
+,{"stream_name":"stderr","time":26.240393187,"data":" Downloaded triton\n"}
+,{"stream_name":"stderr","time":26.36000309,"data":" Downloaded nvidia-curand-cu12\n"}
+,{"stream_name":"stderr","time":26.443032074,"data":" Downloaded triton\n"}
+,{"stream_name":"stderr","time":26.443085477,"data":" Downloaded nvidia-curand-cu12\n"}
+,{"stream_name":"stderr","time":26.4430919,"data":"\n"}
+,{"stream_name":"stderr","time":26.443095939,"data":" Downloaded triton\n"}
+,{"stream_name":"stderr","time":26.443099934,"data":" Downloaded nvidia-curand-cu12\n"}
+,{"stream_name":"stderr","time":27.008565797,"data":" Downloaded nvidia-cusolver-cu12\n"}
+,{"stream_name":"stderr","time":27.211504188,"data":" Downloaded nvidia-cusolver-cu12\n"}
+,{"stream_name":"stderr","time":27.211544024,"data":"\n"}
+,{"stream_name":"stderr","time":27.211549538,"data":" Downloaded nvidia-cusolver-cu12\n"}
+,{"stream_name":"stderr","time":30.046959914,"data":" Downloaded nvidia-cufft-cu12\n"}
+,{"stream_name":"stderr","time":30.249959664,"data":" Downloaded nvidia-cufft-cu12\n"}
+,{"stream_name":"stderr","time":30.249982536,"data":"\n"}
+,{"stream_name":"stderr","time":30.249986561,"data":" Downloaded nvidia-cufft-cu12\n"}
+,{"stream_name":"stderr","time":35.095744506,"data":" Downloaded nvidia-cusparse-cu12\n"}
+,{"stream_name":"stderr","time":35.298282158,"data":" Downloaded nvidia-cusparse-cu12\n"}
+,{"stream_name":"stderr","time":35.298324585,"data":"\n"}
+,{"stream_name":"stderr","time":35.298330732,"data":" Downloaded nvidia-cusparse-cu12\n"}
+,{"stream_name":"stderr","time":37.979858596,"data":" Downloaded nvidia-nccl-cu12\n"}
+,{"stream_name":"stderr","time":38.182552804,"data":" Downloaded nvidia-nccl-cu12\n"}
+,{"stream_name":"stderr","time":38.182575703,"data":"\n"}
+,{"stream_name":"stderr","time":38.182580515,"data":" Downloaded nvidia-nccl-cu12\n"}
+,{"stream_name":"stderr","time":40.045185245,"data":" Downloaded nvidia-cublas-cu12\n"}
+,{"stream_name":"stderr","time":40.250597242,"data":" Downloaded nvidia-cublas-cu12\n"}
+,{"stream_name":"stderr","time":40.250621664,"data":"\n"}
+,{"stream_name":"stderr","time":40.250626768,"data":" Downloaded nvidia-cublas-cu12\n"}
+,{"stream_name":"stderr","time":43.830355555,"data":" Downloaded torch\n"}
+,{"stream_name":"stderr","time":44.0326492,"data":" Downloaded torch\n"}
+,{"stream_name":"stderr","time":44.032697047,"data":"\n"}
+,{"stream_name":"stderr","time":44.032702616,"data":" Downloaded torch\n"}
+,{"stream_name":"stderr","time":51.10238406,"data":" Downloaded nvidia-cudnn-cu12\n"}
+,{"stream_name":"stderr","time":51.304726936,"data":" Downloaded nvidia-cudnn-cu12\n"}
+,{"stream_name":"stderr","time":51.304763408,"data":"\n"}
+,{"stream_name":"stderr","time":51.304768063,"data":" Downloaded nvidia-cudnn-cu12\n"}
+,{"stream_name":"stderr","time":52.368416372,"data":"Prepared 22 packages in 33.77s\n"}
+,{"stream_name":"stderr","time":52.370041117,"data":"warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n"}
+,{"stream_name":"stderr","time":52.424329202,"data":"         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n"}
+,{"stream_name":"stderr","time":52.424343694,"data":"         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\n"}
+,{"stream_name":"stderr","time":52.57104797,"data":"Prepared 22 packages in 33.77s\n"}
+,{"stream_name":"stderr","time":52.57107278,"data":"warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n"}
+,{"stream_name":"stderr","time":52.571078416,"data":"         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n"}
+,{"stream_name":"stderr","time":52.571083281,"data":"         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\n"}
+,{"stream_name":"stderr","time":52.571087831,"data":"\n"}
+,{"stream_name":"stderr","time":52.571091948,"data":"Prepared 22 packages in 33.77s\n"}
+,{"stream_name":"stderr","time":52.571096387,"data":"warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n"}
+,{"stream_name":"stderr","time":52.571110074,"data":"         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n"}
+,{"stream_name":"stderr","time":52.57111377,"data":"         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\n"}
+,{"stream_name":"stderr","time":56.815613015,"data":"Installed 22 packages in 4.44s\n"}
+,{"stream_name":"stderr","time":56.815979191,"data":" + filelock==4.2.4\n"}
+,{"stream_name":"stderr","time":56.815996774,"data":" + fsspec==2026.9.0\n"}
+,{"stream_name":"stderr","time":56.816003893,"data":" + jinja2==3.1.6\n"}
+,{"stream_name":"stderr","time":56.816009637,"data":" + markupsafe==3.0.3\n"}
+,{"stream_name":"stderr","time":56.81601584,"data":" + mpmath==1.3.0\n"}
+,{"stream_name":"stderr","time":56.816021519,"data":" + networkx==3.6.1\n"}
+,{"stream_name":"stderr","time":56.816027464,"data":" + nvidia-cublas-cu12==12.1.3.1\n"}
+,{"stream_name":"stderr","time":56.816200943,"data":" + nvidia-cuda-cupti-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":56.816223378,"data":" + nvidia-cuda-nvrtc-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":56.81628923,"data":" + nvidia-cuda-runtime-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":56.816298471,"data":" + nvidia-cudnn-cu12==8.9.2.26\n"}
+,{"stream_name":"stderr","time":56.816403446,"data":" + nvidia-cufft-cu12==11.0.2.54\n"}
+,{"stream_name":"stderr","time":56.816475344,"data":" + nvidia-curand-cu12==10.3.2.106\n"}
+,{"stream_name":"stderr","time":56.816597716,"data":" + nvidia-cusolver-cu12==11.4.5.107\n"}
+,{"stream_name":"stderr","time":56.816658778,"data":" + nvidia-cusparse-cu12==12.1.0.106\n"}
+,{"stream_name":"stderr","time":56.816744344,"data":" + nvidia-nccl-cu12==2.19.3\n"}
+,{"stream_name":"stderr","time":56.816815301,"data":" + nvidia-nvjitlink-cu12==12.9.86\n"}
+,{"stream_name":"stderr","time":56.816830538,"data":" + nvidia-nvtx-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":56.816952958,"data":" + sympy==1.14.0\n"}
+,{"stream_name":"stderr","time":56.817006676,"data":" + torch==2.2.2+cu121\n"}
+,{"stream_name":"stderr","time":56.817066894,"data":" + triton==2.2.0\n"}
+,{"stream_name":"stderr","time":56.81713532,"data":" + typing-extensions==4.16.0\n"}
+,{"stream_name":"stderr","time":56.831642444,"data":"Using Python 3.11.18 environment at: venv\n"}
+,{"stream_name":"stderr","time":57.017949232,"data":"Installed 22 packages in 4.44s\n"}
+,{"stream_name":"stderr","time":57.017980871,"data":" + filelock==4.2.4\n"}
+,{"stream_name":"stderr","time":57.017985401,"data":" + fsspec==2026.9.0\n"}
+,{"stream_name":"stderr","time":57.017989043,"data":" + jinja2==3.1.6\n"}
+,{"stream_name":"stderr","time":57.017992332,"data":" + markupsafe==3.0.3\n"}
+,{"stream_name":"stderr","time":57.019945041,"data":" + mpmath==1.3.0\n"}
+,{"stream_name":"stderr","time":57.019956351,"data":" + networkx==3.6.1\n"}
+,{"stream_name":"stderr","time":57.019961737,"data":" + nvidia-cublas-cu12==12.1.3.1\n"}
+,{"stream_name":"stderr","time":57.019967139,"data":" + nvidia-cuda-cupti-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":57.019972646,"data":" + nvidia-cuda-nvrtc-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":57.019977587,"data":" + nvidia-cuda-runtime-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":57.019982643,"data":" + nvidia-cudnn-cu12==8.9.2.26\n"}
+,{"stream_name":"stderr","time":57.019987464,"data":" + nvidia-cufft-cu12==11.0.2.54\n"}
+,{"stream_name":"stderr","time":57.019992433,"data":" + nvidia-curand-cu12==10.3.2.106\n"}
+,{"stream_name":"stderr","time":57.020028876,"data":" + nvidia-cusolver-cu12==11.4.5.107\n"}
+,{"stream_name":"stderr","time":57.020034462,"data":" + nvidia-cusparse-cu12==12.1.0.106\n"}
+,{"stream_name":"stderr","time":57.020039675,"data":" + nvidia-nccl-cu12==2.19.3\n"}
+,{"stream_name":"stderr","time":57.020043974,"data":" + nvidia-nvjitlink-cu12==12.9.86\n"}
+,{"stream_name":"stderr","time":57.020047811,"data":" + nvidia-nvtx-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":57.020051548,"data":" + sympy==1.14.0\n"}
+,{"stream_name":"stderr","time":57.020055263,"data":" + torch==2.2.2+cu121\n"}
+,{"stream_name":"stderr","time":57.020059003,"data":" + triton==2.2.0\n"}
+,{"stream_name":"stderr","time":57.020062776,"data":" + typing-extensions==4.16.0\n"}
+,{"stream_name":"stderr","time":57.02006662,"data":"Using Python 3.11.18 environment at: venv\n"}
+,{"stream_name":"stderr","time":57.020070497,"data":"\n"}
+,{"stream_name":"stderr","time":57.020074148,"data":"Installed 22 packages in 4.44s\n"}
+,{"stream_name":"stderr","time":57.020077954,"data":" + filelock==4.2.4\n"}
+,{"stream_name":"stderr","time":57.020081652,"data":" + fsspec==2026.9.0\n"}
+,{"stream_name":"stderr","time":57.020085468,"data":" + jinja2==3.1.6\n"}
+,{"stream_name":"stderr","time":57.020089265,"data":" + markupsafe==3.0.3\n"}
+,{"stream_name":"stderr","time":57.020093016,"data":" + mpmath==1.3.0\n"}
+,{"stream_name":"stderr","time":57.020096835,"data":" + networkx==3.6.1\n"}
+,{"stream_name":"stderr","time":57.020102661,"data":" + nvidia-cublas-cu12==12.1.3.1\n"}
+,{"stream_name":"stderr","time":57.020110246,"data":" + nvidia-cuda-cupti-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":57.020127223,"data":" + nvidia-cuda-nvrtc-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":57.020131725,"data":" + nvidia-cuda-runtime-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":57.020136046,"data":" + nvidia-cudnn-cu12==8.9.2.26\n"}
+,{"stream_name":"stderr","time":57.020140464,"data":" + nvidia-cufft-cu12==11.0.2.54\n"}
+,{"stream_name":"stderr","time":57.020144563,"data":" + nvidia-curand-cu12==10.3.2.106\n"}
+,{"stream_name":"stderr","time":57.020149246,"data":" + nvidia-cusolver-cu12==11.4.5.107\n"}
+,{"stream_name":"stderr","time":57.020153257,"data":" + nvidia-cusparse-cu12==12.1.0.106\n"}
+,{"stream_name":"stderr","time":57.020157011,"data":" + nvidia-nccl-cu12==2.19.3\n"}
+,{"stream_name":"stderr","time":57.020160859,"data":" + nvidia-nvjitlink-cu12==12.9.86\n"}
+,{"stream_name":"stderr","time":57.020164753,"data":" + nvidia-nvtx-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":57.020168474,"data":" + sympy==1.14.0\n"}
+,{"stream_name":"stderr","time":57.020172181,"data":" + torch==2.2.2+cu121\n"}
+,{"stream_name":"stderr","time":57.02017593,"data":" + triton==2.2.0\n"}
+,{"stream_name":"stderr","time":57.020180132,"data":" + typing-extensions==4.16.0\n"}
+,{"stream_name":"stderr","time":57.020183901,"data":"Using Python 3.11.18 environment at: venv\n"}
+,{"stream_name":"stderr","time":67.371383085,"data":"Resolved 91 packages in 10.53s\n"}
+,{"stream_name":"stderr","time":67.425674378,"data":"Downloading pydantic-core (2.1MiB)\n"}
+,{"stream_name":"stderr","time":67.426119648,"data":"Downloading pillow (6.8MiB)\n"}
+,{"stream_name":"stderr","time":67.431365496,"data":"Downloading pygments (1.2MiB)\n"}
+,{"stream_name":"stderr","time":67.43192147,"data":"Downloading numpy (16.1MiB)\n"}
+,{"stream_name":"stderr","time":67.432809983,"data":"Downloading tensorboard-data-server (6.3MiB)\n"}
+,{"stream_name":"stderr","time":67.433287138,"data":"Downloading grpcio (7.0MiB)\n"}
+,{"stream_name":"stderr","time":67.43546589,"data":"Downloading lxml (5.0MiB)\n"}
+,{"stream_name":"stderr","time":67.435850726,"data":"Downloading tensorboard (5.3MiB)\n"}
+,{"stream_name":"stderr","time":67.438327574,"data":"Downloading blis (13.7MiB)\n"}
+,{"stream_name":"stderr","time":67.439035163,"data":"Downloading pyonmttok (16.8MiB)\n"}
+,{"stream_name":"stderr","time":67.440087648,"data":"Downloading rapidfuzz (3.0MiB)\n"}
+,{"stream_name":"stderr","time":67.440522946,"data":"Downloading fasttext-wheel (4.2MiB)\n"}
+,{"stream_name":"stderr","time":67.441336241,"data":"Downloading spacy (33.1MiB)\n"}
+,{"stream_name":"stderr","time":67.441806295,"data":"Downloading ctranslate2 (40.6MiB)\n"}
+,{"stream_name":"stderr","time":67.44222781,"data":"Downloading thinc (4.3MiB)\n"}
+,{"stream_name":"stderr","time":67.442645922,"data":"Downloading srsly (1.2MiB)\n"}
+,{"stream_name":"stderr","time":67.574318207,"data":"Resolved 91 packages in 10.53s\n"}
+,{"stream_name":"stderr","time":67.574386927,"data":"Downloading pydantic-core (2.1MiB)\n"}
+,{"stream_name":"stderr","time":67.574397357,"data":"Downloading pillow (6.8MiB)\n"}
+,{"stream_name":"stderr","time":67.57440347,"data":"Downloading pygments (1.2MiB)\n"}
+,{"stream_name":"stderr","time":67.574409981,"data":"Downloading numpy (16.1MiB)\n"}
+,{"stream_name":"stderr","time":67.574415736,"data":"Downloading tensorboard-data-server (6.3MiB)\n"}
+,{"stream_name":"stderr","time":67.574422001,"data":"Downloading grpcio (7.0MiB)\n"}
+,{"stream_name":"stderr","time":67.574427431,"data":"Downloading lxml (5.0MiB)\n"}
+,{"stream_name":"stderr","time":67.574431375,"data":"Downloading tensorboard (5.3MiB)\n"}
+,{"stream_name":"stderr","time":67.574435563,"data":"Downloading blis (13.7MiB)\n"}
+,{"stream_name":"stderr","time":67.574439649,"data":"Downloading pyonmttok (16.8MiB)\n"}
+,{"stream_name":"stderr","time":67.574443823,"data":"Downloading rapidfuzz (3.0MiB)\n"}
+,{"stream_name":"stderr","time":67.574447782,"data":"Downloading fasttext-wheel (4.2MiB)\n"}
+,{"stream_name":"stderr","time":67.574475145,"data":"Downloading spacy (33.1MiB)\n"}
+,{"stream_name":"stderr","time":67.574478969,"data":"Downloading ctranslate2 (40.6MiB)\n"}
+,{"stream_name":"stderr","time":67.574482651,"data":"Downloading thinc (4.3MiB)\n"}
+,{"stream_name":"stderr","time":67.574486476,"data":"Downloading srsly (1.2MiB)\n"}
+,{"stream_name":"stderr","time":67.574490382,"data":"\n"}
+,{"stream_name":"stderr","time":67.574494105,"data":"Resolved 91 packages in 10.53s\n"}
+,{"stream_name":"stderr","time":67.574498231,"data":"Downloading pydantic-core (2.1MiB)\n"}
+,{"stream_name":"stderr","time":67.574502291,"data":"Downloading pillow (6.8MiB)\n"}
+,{"stream_name":"stderr","time":67.574506397,"data":"Downloading pygments (1.2MiB)\n"}
+,{"stream_name":"stderr","time":67.574510469,"data":"Downloading numpy (16.1MiB)\n"}
+,{"stream_name":"stderr","time":67.574514629,"data":"Downloading tensorboard-data-server (6.3MiB)\n"}
+,{"stream_name":"stderr","time":67.574518781,"data":"Downloading grpcio (7.0MiB)\n"}
+,{"stream_name":"stderr","time":67.574523535,"data":"Downloading lxml (5.0MiB)\n"}
+,{"stream_name":"stderr","time":67.574529293,"data":"Downloading tensorboard (5.3MiB)\n"}
+,{"stream_name":"stderr","time":67.574535461,"data":"Downloading blis (13.7MiB)\n"}
+,{"stream_name":"stderr","time":67.574541691,"data":"Downloading pyonmttok (16.8MiB)\n"}
+,{"stream_name":"stderr","time":67.57454731,"data":"Downloading rapidfuzz (3.0MiB)\n"}
+,{"stream_name":"stderr","time":67.574562673,"data":"Downloading fasttext-wheel (4.2MiB)\n"}
+,{"stream_name":"stderr","time":67.574566681,"data":"Downloading spacy (33.1MiB)\n"}
+,{"stream_name":"stderr","time":67.574570723,"data":"Downloading ctranslate2 (40.6MiB)\n"}
+,{"stream_name":"stderr","time":67.574574591,"data":"Downloading thinc (4.3MiB)\n"}
+,{"stream_name":"stderr","time":67.574578417,"data":"Downloading srsly (1.2MiB)\n"}
+,{"stream_name":"stderr","time":68.642067941,"data":" Downloaded srsly\n"}
+,{"stream_name":"stderr","time":68.689049909,"data":" Downloaded pygments\n"}
+,{"stream_name":"stderr","time":68.842460463,"data":" Downloaded pydantic-core\n"}
+,{"stream_name":"stderr","time":68.844355496,"data":" Downloaded srsly\n"}
+,{"stream_name":"stderr","time":68.84437377,"data":" Downloaded pygments\n"}
+,{"stream_name":"stderr","time":68.844378727,"data":" Downloaded\n"}
+,{"stream_name":"stderr","time":68.844382897,"data":" Downloaded srsly\n"}
+,{"stream_name":"stderr","time":68.844387115,"data":" Downloaded pygments\n"}
+,{"stream_name":"stderr","time":68.94924584,"data":" Downloaded Downloaded rapidfuzz\n"}
+,{"stream_name":"stderr","time":69.047577234,"data":" pydantic-core\n"}
+,{"stream_name":"stderr","time":69.047600542,"data":" Downloaded rapidfuzz\n"}
+,{"stream_name":"stderr","time":69.047605602,"data":"\n"}
+,{"stream_name":"stderr","time":69.047609953,"data":" pydantic-core\n"}
+,{"stream_name":"stderr","time":69.047614467,"data":" Downloaded rapidfuzz\n"}
+,{"stream_name":"stderr","time":69.096023019,"data":" Downloaded fasttext-wheel\n"}
+,{"stream_name":"stderr","time":69.12148102,"data":" Downloaded thinc\n"}
+,{"stream_name":"stderr","time":69.205311864,"data":" Downloaded lxml\n"}
+,{"stream_name":"stderr","time":69.257971147,"data":" Downloaded tensorboard\n"}
+,{"stream_name":"stderr","time":69.301196229,"data":" Downloaded fasttext-wheel\n"}
+,{"stream_name":"stderr","time":69.301221536,"data":" Downloaded thinc\n"}
+,{"stream_name":"stderr","time":69.301226559,"data":" Downloaded lxml\n"}
+,{"stream_name":"stderr","time":69.301230918,"data":" Downloaded tensorboard\n"}
+,{"stream_name":"stderr","time":69.301235274,"data":"\n"}
+,{"stream_name":"stderr","time":69.301428899,"data":" Downloaded fasttext-wheel\n"}
+,{"stream_name":"stderr","time":69.301437703,"data":" Downloaded thinc\n"}
+,{"stream_name":"stderr","time":69.301442341,"data":" Downloaded lxml\n"}
+,{"stream_name":"stderr","time":69.301446278,"data":" Downloaded tensorboard\n"}
+,{"stream_name":"stderr","time":69.386993332,"data":" Downloaded tensorboard-data-server\n"}
+,{"stream_name":"stderr","time":69.429566362,"data":" Downloaded pillow\n"}
+,{"stream_name":"stderr","time":69.455039313,"data":" Downloaded grpcio\n"}
+,{"stream_name":"stderr","time":69.5897153,"data":" Downloaded tensorboard-data-server\n"}
+,{"stream_name":"stderr","time":69.589740463,"data":" Downloaded pillow\n"}
+,{"stream_name":"stderr","time":69.589745771,"data":" Downloaded grpcio\n"}
+,{"stream_name":"stderr","time":69.589749577,"data":"\n"}
+,{"stream_name":"stderr","time":69.589753596,"data":" Downloaded tensorboard-data-server\n"}
+,{"stream_name":"stderr","time":69.589757863,"data":" Downloaded pillow\n"}
+,{"stream_name":"stderr","time":69.589762303,"data":" Downloaded grpcio\n"}
+,{"stream_name":"stderr","time":70.680053352,"data":" Downloaded blis\n"}
+,{"stream_name":"stderr","time":70.885065407,"data":" Downloaded blis\n"}
+,{"stream_name":"stderr","time":70.885092559,"data":"\n"}
+,{"stream_name":"stderr","time":70.885097386,"data":" Downloaded blis\n"}
+,{"stream_name":"stderr","time":71.334448245,"data":" Downloaded numpy\n"}
+,{"stream_name":"stderr","time":71.537840016,"data":" Downloaded numpy\n"}
+,{"stream_name":"stderr","time":71.537893346,"data":"\n"}
+,{"stream_name":"stderr","time":71.53795887,"data":" Downloaded numpy\n"}
+,{"stream_name":"stderr","time":71.568234364,"data":" Downloaded pyonmttok\n"}
+,{"stream_name":"stderr","time":71.770869259,"data":" Downloaded pyonmttok\n"}
+,{"stream_name":"stderr","time":71.770892528,"data":"\n"}
+,{"stream_name":"stderr","time":71.770896149,"data":" Downloaded pyonmttok\n"}
+,{"stream_name":"stderr","time":76.693626254,"data":" Downloaded ctranslate2\n"}
+,{"stream_name":"stderr","time":76.699304904,"data":" Downloaded spacy\n"}
+,{"stream_name":"stderr","time":76.896019428,"data":" Downloaded ctranslate2\n"}
+,{"stream_name":"stderr","time":76.896051336,"data":" Downloaded spacy\n"}
+,{"stream_name":"stderr","time":76.896056697,"data":"\n"}
+,{"stream_name":"stderr","time":76.896060626,"data":" Downloaded ctranslate2\n"}
+,{"stream_name":"stderr","time":76.896064598,"data":" Downloaded spacy\n"}
+,{"stream_name":"stderr","time":77.45616995,"data":"Prepared 69 packages in 10.08s\n"}
+,{"stream_name":"stderr","time":77.458735231,"data":"warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n"}
+,{"stream_name":"stderr","time":77.458752915,"data":"         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n"}
+,{"stream_name":"stderr","time":77.45875854,"data":"         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\n"}
+,{"stream_name":"stderr","time":77.660139112,"data":"Prepared 69 packages in 10.08s\n"}
+,{"stream_name":"stderr","time":77.660169911,"data":"warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n"}
+,{"stream_name":"stderr","time":77.660176709,"data":"         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n"}
+,{"stream_name":"stderr","time":77.660181401,"data":"         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\n"}
+,{"stream_name":"stderr","time":77.660186037,"data":"\n"}
+,{"stream_name":"stderr","time":77.660190285,"data":"Prepared 69 packages in 10.08s\n"}
+,{"stream_name":"stderr","time":77.660194397,"data":"warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.\n"}
+,{"stream_name":"stderr","time":77.660198446,"data":"         If the cache and target directories are on different filesystems, hardlinking may not be supported.\n"}
+,{"stream_name":"stderr","time":77.660203146,"data":"         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.\n"}
+,{"stream_name":"stderr","time":78.060363111,"data":"Installed 69 packages in 604ms\n"}
+,{"stream_name":"stderr","time":78.060622077,"data":" + absl-py==2.5.1\n"}
+,{"stream_name":"stderr","time":78.060633084,"data":" + annotated-doc==0.0.6\n"}
+,{"stream_name":"stderr","time":78.060638303,"data":" + annotated-types==0.8.0\n"}
+,{"stream_name":"stderr","time":78.06064313,"data":" + anyio==4.16.0\n"}
+,{"stream_name":"stderr","time":78.060657356,"data":" + blinker==1.9.0\n"}
+,{"stream_name":"stderr","time":78.060717206,"data":" + blis==1.3.4\n"}
+,{"stream_name":"stderr","time":78.060817822,"data":" + catalogue==2.0.10\n"}
+,{"stream_name":"stderr","time":78.060896856,"data":" + certifi==2026.10.23\n"}
+,{"stream_name":"stderr","time":78.061012693,"data":" + charset-normalizer==3.5.2\n"}
+,{"stream_name":"stderr","time":78.061069153,"data":" + click==8.5.1\n"}
+,{"stream_name":"stderr","time":78.061117982,"data":" + cloudpathlib==0.26.0\n"}
+,{"stream_name":"stderr","time":78.061221806,"data":" + colorama==0.4.6\n"}
+,{"stream_name":"stderr","time":78.061242474,"data":" + confection==1.3.4\n"}
+,{"stream_name":"stderr","time":78.061331659,"data":" + configargparse==1.9.0\n"}
+,{"stream_name":"stderr","time":78.061503457,"data":" + ctranslate2==4.9.0\n"}
+,{"stream_name":"stderr","time":78.061519943,"data":" + cymem==2.0.16\n"}
+,{"stream_name":"stderr","time":78.061566358,"data":" + fasttext-wheel==0.9.2\n"}
+,{"stream_name":"stderr","time":78.061670099,"data":" + flask==3.1.3\n"}
+,{"stream_name":"stderr","time":78.061748537,"data":" + grpcio==1.85.1\n"}
+,{"stream_name":"stderr","time":78.061797945,"data":" + h11==0.16.0\n"}
+,{"stream_name":"stderr","time":78.061942067,"data":" + httpcore==1.0.9\n"}
+,{"stream_name":"stderr","time":78.061973559,"data":" + httpx==0.28.1\n"}
+,{"stream_name":"stderr","time":78.062039648,"data":" + idna==3.20\n"}
+,{"stream_name":"stderr","time":78.062159956,"data":" + itsdangerous==2.2.0\n"}
+,{"stream_name":"stderr","time":78.062299119,"data":" + lxml==6.1.3\n"}
+,{"stream_name":"stderr","time":78.062306314,"data":" + markdown==3.11.3\n"}
+,{"stream_name":"stderr","time":78.062359776,"data":" + markdown-it-py==4.3.0\n"}
+,{"stream_name":"stderr","time":78.062421813,"data":" + mdurl==0.1.2\n"}
+,{"stream_name":"stderr","time":78.062512257,"data":" + murmurhash==1.0.16\n"}
+,{"stream_name":"stderr","time":78.062557648,"data":" + numpy==2.4.6\n"}
+,{"stream_name":"stderr","time":78.062693053,"data":" + opennmt-py==3.5.1\n"}
+,{"stream_name":"stderr","time":78.06280171,"data":" + packaging==26.3\n"}
+,{"stream_name":"stderr","time":78.0629702,"data":" + pillow==13.0.0\n"}
+,{"stream_name":"stderr","time":78.062987404,"data":" + portalocker==4.4.2\n"}
+,{"stream_name":"stderr","time":78.063077186,"data":" + preshed==3.0.15\n"}
+,{"stream_name":"stderr","time":78.063150596,"data":" + protobuf==7.36.2\n"}
+,{"stream_name":"stderr","time":78.063159377,"data":" + pyahocorasick==2.3.1\n"}
+,{"stream_name":"stderr","time":78.063328739,"data":" + pybind11==3.1.0\n"}
+,{"stream_name":"stderr","time":78.063336483,"data":" + pydantic==2.14.3\n"}
+,{"stream_name":"stderr","time":78.063371352,"data":" + pydantic-core==2.50.4\n"}
+,{"stream_name":"stderr","time":78.063478837,"data":" + pygments==2.21.0\n"}
+,{"stream_name":"stderr","time":78.063572575,"data":" + pyonmttok==1.38.1\n"}
+,{"stream_name":"stderr","time":78.063630396,"data":" + pyyaml==6.0.3\n"}
+,{"stream_name":"stderr","time":78.063758144,"data":" + rapidfuzz==3.14.6\n"}
+,{"stream_name":"stderr","time":78.06376449,"data":" + regex==2026.11.9\n"}
+,{"stream_name":"stderr","time":78.063833033,"data":" + requests==2.34.2\n"}
+,{"stream_name":"stderr","time":78.063897723,"data":" + rich==15.0.0\n"}
+,{"stream_name":"stderr","time":78.064012957,"data":" + sacrebleu==2.6.0\n"}
+,{"stream_name":"stderr","time":78.064073779,"data":" + setuptools==84.2.1\n"}
+,{"stream_name":"stderr","time":78.064161087,"data":" + shellingham==1.5.4\n"}
+,{"stream_name":"stderr","time":78.064248371,"data":" + six==1.17.0\n"}
+,{"stream_name":"stderr","time":78.064340325,"data":" + smart-open==9.0.3\n"}
+,{"stream_name":"stderr","time":78.064353727,"data":" + spacy==3.8.18\n"}
+,{"stream_name":"stderr","time":78.064448283,"data":" + spacy-legacy==3.0.12\n"}
+,{"stream_name":"stderr","time":78.064573033,"data":" + spacy-loggers==1.0.5\n"}
+,{"stream_name":"stderr","time":78.064620542,"data":" + srsly==2.5.6\n"}
+,{"stream_name":"stderr","time":78.064673854,"data":" + tabulate==0.10.0\n"}
+,{"stream_name":"stderr","time":78.064753368,"data":" + tensorboard==2.21.0\n"}
+,{"stream_name":"stderr","time":78.064840011,"data":" + tensorboard-data-server==0.7.2\n"}
+,{"stream_name":"stderr","time":78.064957543,"data":" + thinc==8.3.14\n"}
+,{"stream_name":"stderr","time":78.065053901,"data":" + tqdm==4.70.1\n"}
+,{"stream_name":"stderr","time":78.06508796,"data":" + typer==0.29.1\n"}
+,{"stream_name":"stderr","time":78.065145839,"data":" + typing-inspection==0.4.5\n"}
+,{"stream_name":"stderr","time":78.065248473,"data":" + urllib3==2.8.0\n"}
+,{"stream_name":"stderr","time":78.065329514,"data":" + waitress==3.0.2\n"}
+,{"stream_name":"stderr","time":78.06542221,"data":" + wasabi==1.1.3\n"}
+,{"stream_name":"stderr","time":78.065513229,"data":" + weasel==1.0.1\n"}
+,{"stream_name":"stderr","time":78.065599624,"data":" + werkzeug==3.1.9\n"}
+,{"stream_name":"stderr","time":78.065632704,"data":" + wrapt==2.5.2\n"}
+,{"stream_name":"stderr","time":78.263436373,"data":"Installed 69 packages in 604ms\n"}
+,{"stream_name":"stderr","time":78.263464886,"data":" + absl-py==2.5.1\n"}
+,{"stream_name":"stderr","time":78.263468357,"data":" + annotated-doc==0.0.6\n"}
+,{"stream_name":"stderr","time":78.2634711,"data":" + annotated-types==0.8.0\n"}
+,{"stream_name":"stderr","time":78.26347367,"data":" + anyio==4.16.0\n"}
+,{"stream_name":"stderr","time":78.26347626,"data":" + blinker==1.9.0\n"}
+,{"stream_name":"stderr","time":78.263478626,"data":" + blis==1.3.4\n"}
+,{"stream_name":"stderr","time":78.263481048,"data":" + catalogue==2.0.10\n"}
+,{"stream_name":"stderr","time":78.2634834,"data":" + certifi==2026.10.23\n"}
+,{"stream_name":"stderr","time":78.263486722,"data":" + charset-normalizer==3.5.2\n"}
+,{"stream_name":"stderr","time":78.263505906,"data":" + click==8.5.1\n"}
+,{"stream_name":"stderr","time":78.263510362,"data":" + cloudpathlib==0.26.0\n"}
+,{"stream_name":"stderr","time":78.26351414,"data":" + colorama==0.4.6\n"}
+,{"stream_name":"stderr","time":78.263518022,"data":" + confection==1.3.4\n"}
+,{"stream_name":"stderr","time":78.263522058,"data":" + configargparse==1.9.0\n"}
+,{"stream_name":"stderr","time":78.263526173,"data":" + ctranslate2==4.9.0\n"}
+,{"stream_name":"stderr","time":78.263529741,"data":" + cymem==2.0.16\n"}
+,{"stream_name":"stderr","time":78.263533234,"data":" + fasttext-wheel==0.9.2\n"}
+,{"stream_name":"stderr","time":78.263536652,"data":" + flask==3.1.3\n"}
+,{"stream_name":"stderr","time":78.263540018,"data":" + grpcio==1.85.1\n"}
+,{"stream_name":"stderr","time":78.26354351,"data":" + h11==0.16.0\n"}
+,{"stream_name":"stderr","time":78.263546844,"data":" + httpcore==1.0.9\n"}
+,{"stream_name":"stderr","time":78.26355029,"data":" + httpx==0.28.1\n"}
+,{"stream_name":"stderr","time":78.263562862,"data":" + idna==3.20\n"}
+,{"stream_name":"stderr","time":78.263565424,"data":" + itsdangerous==2.2.0\n"}
+,{"stream_name":"stderr","time":78.263567796,"data":" + lxml==6.1.3\n"}
+,{"stream_name":"stderr","time":78.263570119,"data":" + markdown==3.11.3\n"}
+,{"stream_name":"stderr","time":78.263572589,"data":" + markdown-it-py==4.3.0\n"}
+,{"stream_name":"stderr","time":78.263574935,"data":" + mdurl==0.1.2\n"}
+,{"stream_name":"stderr","time":78.263577257,"data":" + murmurhash==1.0.16\n"}
+,{"stream_name":"stderr","time":78.263588347,"data":" + numpy==2.4.6\n"}
+,{"stream_name":"stderr","time":78.263591626,"data":" + opennmt-py==3.5.1\n"}
+,{"stream_name":"stderr","time":78.263608049,"data":" + packaging==26.3\n"}
+,{"stream_name":"stderr","time":78.263611928,"data":" + pillow==13.0.0\n"}
+,{"stream_name":"stderr","time":78.263615928,"data":" + portalocker==4.4.2\n"}
+,{"stream_name":"stderr","time":78.263619848,"data":" + preshed==3.0.15\n"}
+,{"stream_name":"stderr","time":78.263623912,"data":" + protobuf==7.36.2\n"}
+,{"stream_name":"stderr","time":78.263627816,"data":" + pyahocorasick==2.3.1\n"}
+,{"stream_name":"stderr","time":78.26363125,"data":" + pybind11==3.1.0\n"}
+,{"stream_name":"stderr","time":78.263634722,"data":" + pydantic==2.14.3\n"}
+,{"stream_name":"stderr","time":78.263638061,"data":" + pydantic-core==2.50.4\n"}
+,{"stream_name":"stderr","time":78.263641446,"data":" + pygments==2.21.0\n"}
+,{"stream_name":"stderr","time":78.263644825,"data":" + pyonmttok==1.38.1\n"}
+,{"stream_name":"stderr","time":78.263648312,"data":" + pyyaml==6.0.3\n"}
+,{"stream_name":"stderr","time":78.263651721,"data":" + rapidfuzz==3.14.6\n"}
+,{"stream_name":"stderr","time":78.263655124,"data":" + regex==2026.11.9\n"}
+,{"stream_name":"stderr","time":78.263658534,"data":" + requests==2.34.2\n"}
+,{"stream_name":"stderr","time":78.263661973,"data":" + rich==15.0.0\n"}
+,{"stream_name":"stderr","time":78.263665284,"data":" + sacrebleu==2.6.0\n"}
+,{"stream_name":"stderr","time":78.26366861,"data":" + setuptools==84.2.1\n"}
+,{"stream_name":"stderr","time":78.263674076,"data":" + shellingham==1.5.4\n"}
+,{"stream_name":"stderr","time":78.263690453,"data":" + six==1.17.0\n"}
+,{"stream_name":"stderr","time":78.263711887,"data":" + smart-open==9.0.3\n"}
+,{"stream_name":"stderr","time":78.26371649,"data":" + spacy==3.8.18\n"}
+,{"stream_name":"stderr","time":78.263720384,"data":" + spacy-legacy==3.0.12\n"}
+,{"stream_name":"stderr","time":78.263724536,"data":" + spacy-loggers==1.0.5\n"}
+,{"stream_name":"stderr","time":78.263728624,"data":" + srsly==2.5.6\n"}
+,{"stream_name":"stderr","time":78.26373215,"data":" + tabulate==0.10.0\n"}
+,{"stream_name":"stderr","time":78.263735507,"data":" + tensorboard==2.21.0\n"}
+,{"stream_name":"stderr","time":78.26373894,"data":" + tensorboard-data-server==0.7.2\n"}
+,{"stream_name":"stderr","time":78.263742391,"data":" + thinc==8.3.14\n"}
+,{"stream_name":"stderr","time":78.263745711,"data":" + tqdm==4.70.1\n"}
+,{"stream_name":"stderr","time":78.263749041,"data":" + typer==0.29.1\n"}
+,{"stream_name":"stderr","time":78.263752418,"data":" + typing-inspection==0.4.5\n"}
+,{"stream_name":"stderr","time":78.263755856,"data":" + urllib3==2.8.0\n"}
+,{"stream_name":"stderr","time":78.26375926,"data":" + waitress==3.0.2\n"}
+,{"stream_name":"stderr","time":78.263762674,"data":" + wasabi==1.1.3\n"}
+,{"stream_name":"stderr","time":78.263766058,"data":" + weasel==1.0.1\n"}
+,{"stream_name":"stderr","time":78.26376934,"data":" + werkzeug==3.1.9\n"}
+,{"stream_name":"stderr","time":78.263772712,"data":" + wrapt==2.5.2\n"}
+,{"stream_name":"stderr","time":78.263776112,"data":"\n"}
+,{"stream_name":"stderr","time":78.26377942,"data":"Installed 69 packages in 604ms\n"}
+,{"stream_name":"stderr","time":78.263782894,"data":" + absl-py==2.5.1\n"}
+,{"stream_name":"stderr","time":78.26378803,"data":" + annotated-doc==0.0.6\n"}
+,{"stream_name":"stderr","time":78.263795355,"data":" + annotated-types==0.8.0\n"}
+,{"stream_name":"stderr","time":78.26381518,"data":" + anyio==4.16.0\n"}
+,{"stream_name":"stderr","time":78.263819328,"data":" + blinker==1.9.0\n"}
+,{"stream_name":"stderr","time":78.263823529,"data":" + blis==1.3.4\n"}
+,{"stream_name":"stderr","time":78.263827415,"data":" + catalogue==2.0.10\n"}
+,{"stream_name":"stderr","time":78.263830791,"data":" + certifi==2026.10.23\n"}
+,{"stream_name":"stderr","time":78.263834153,"data":" + charset-normalizer==3.5.2\n"}
+,{"stream_name":"stderr","time":78.263837554,"data":" + click==8.5.1\n"}
+,{"stream_name":"stderr","time":78.263840891,"data":" + cloudpathlib==0.26.0\n"}
+,{"stream_name":"stderr","time":78.263844243,"data":" + colorama==0.4.6\n"}
+,{"stream_name":"stderr","time":78.263847621,"data":" + confection==1.3.4\n"}
+,{"stream_name":"stderr","time":78.263850985,"data":" + configargparse==1.9.0\n"}
+,{"stream_name":"stderr","time":78.263854358,"data":" + ctranslate2==4.9.0\n"}
+,{"stream_name":"stderr","time":78.263857819,"data":" + cymem==2.0.16\n"}
+,{"stream_name":"stderr","time":78.263861185,"data":" + fasttext-wheel==0.9.2\n"}
+,{"stream_name":"stderr","time":78.263864597,"data":" + flask==3.1.3\n"}
+,{"stream_name":"stderr","time":78.263867981,"data":" + grpcio==1.85.1\n"}
+,{"stream_name":"stderr","time":78.263871392,"data":" + h11==0.16.0\n"}
+,{"stream_name":"stderr","time":78.263874769,"data":" + httpcore==1.0.9\n"}
+,{"stream_name":"stderr","time":78.263878191,"data":" + httpx==0.28.1\n"}
+,{"stream_name":"stderr","time":78.263881601,"data":" + idna==3.20\n"}
+,{"stream_name":"stderr","time":78.263890889,"data":" + itsdangerous==2.2.0\n"}
+,{"stream_name":"stderr","time":78.263906259,"data":" + lxml==6.1.3\n"}
+,{"stream_name":"stderr","time":78.263930187,"data":" + markdown==3.11.3\n"}
+,{"stream_name":"stderr","time":78.263934415,"data":" + markdown-it-py==4.3.0\n"}
+,{"stream_name":"stderr","time":78.263937839,"data":" + mdurl==0.1.2\n"}
+,{"stream_name":"stderr","time":78.263941212,"data":" + murmurhash==1.0.16\n"}
+,{"stream_name":"stderr","time":78.263944621,"data":" + numpy==2.4.6\n"}
+,{"stream_name":"stderr","time":78.263949502,"data":" + opennmt-py==3.5.1\n"}
+,{"stream_name":"stderr","time":78.263952895,"data":" + packaging==26.3\n"}
+,{"stream_name":"stderr","time":78.263956258,"data":" + pillow==13.0.0\n"}
+,{"stream_name":"stderr","time":78.263959661,"data":" + portalocker==4.4.2\n"}
+,{"stream_name":"stderr","time":78.263963015,"data":" + preshed==3.0.15\n"}
+,{"stream_name":"stderr","time":78.263966434,"data":" + protobuf==7.36.2\n"}
+,{"stream_name":"stderr","time":78.263969783,"data":" + pyahocorasick==2.3.1\n"}
+,{"stream_name":"stderr","time":78.26397318,"data":" + pybind11==3.1.0\n"}
+,{"stream_name":"stderr","time":78.263976574,"data":" + pydantic==2.14.3\n"}
+,{"stream_name":"stderr","time":78.263979995,"data":" + pydantic-core==2.50.4\n"}
+,{"stream_name":"stderr","time":78.263988749,"data":" + pygments==2.21.0\n"}
+,{"stream_name":"stderr","time":78.263992344,"data":" + pyonmttok==1.38.1\n"}
+,{"stream_name":"stderr","time":78.264007555,"data":" + pyyaml==6.0.3\n"}
+,{"stream_name":"stderr","time":78.264011883,"data":" + rapidfuzz==3.14.6\n"}
+,{"stream_name":"stderr","time":78.264015745,"data":" + regex==2026.11.9\n"}
+,{"stream_name":"stderr","time":78.26401948,"data":" + requests==2.34.2\n"}
+,{"stream_name":"stderr","time":78.264023578,"data":" + rich==15.0.0\n"}
+,{"stream_name":"stderr","time":78.264027283,"data":" + sacrebleu==2.6.0\n"}
+,{"stream_name":"stderr","time":78.264030595,"data":" + setuptools==84.2.1\n"}
+,{"stream_name":"stderr","time":78.264037925,"data":" + shellingham==1.5.4\n"}
+,{"stream_name":"stderr","time":78.264041327,"data":" + six==1.17.0\n"}
+,{"stream_name":"stderr","time":78.264044713,"data":" + smart-open==9.0.3\n"}
+,{"stream_name":"stderr","time":78.264048147,"data":" + spacy==3.8.18\n"}
+,{"stream_name":"stderr","time":78.264051553,"data":" + spacy-legacy==3.0.12\n"}
+,{"stream_name":"stderr","time":78.264054992,"data":" + spacy-loggers==1.0.5\n"}
+,{"stream_name":"stderr","time":78.264058685,"data":" + srsly==2.5.6\n"}
+,{"stream_name":"stderr","time":78.264062024,"data":" + tabulate==0.10.0\n"}
+,{"stream_name":"stderr","time":78.264065383,"data":" + tensorboard==2.21.0\n"}
+,{"stream_name":"stderr","time":78.264068783,"data":" + tensorboard-data-server==0.7.2\n"}
+,{"stream_name":"stderr","time":78.264072243,"data":" + thinc==8.3.14\n"}
+,{"stream_name":"stderr","time":78.264075619,"data":" + tqdm==4.70.1\n"}
+,{"stream_name":"stderr","time":78.264079048,"data":" + typer==0.29.1\n"}
+,{"stream_name":"stderr","time":78.264088423,"data":" + typing-inspection==0.4.5\n"}
+,{"stream_name":"stderr","time":78.264102807,"data":" + urllib3==2.8.0\n"}
+,{"stream_name":"stderr","time":78.264106837,"data":" + waitress==3.0.2\n"}
+,{"stream_name":"stderr","time":78.264110813,"data":" + wasabi==1.1.3\n"}
+,{"stream_name":"stderr","time":78.264114948,"data":" + weasel==1.0.1\n"}
+,{"stream_name":"stderr","time":78.26411903,"data":" + werkzeug==3.1.9\n"}
+,{"stream_name":"stderr","time":78.264123017,"data":" + wrapt==2.5.2\n"}
+,{"stream_name":"stderr","time":81.57205406,"data":"\n"}
+,{"stream_name":"stderr","time":81.572083954,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":81.57208862,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":81.57209211,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":81.572095636,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":81.572099366,"data":"\n"}
+,{"stream_name":"stderr","time":81.572102662,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":81.572106235,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":81.572109742,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":81.572112997,"data":"\n"}
+,{"stream_name":"stderr","time":81.572116666,"data":"Traceback (most recent call last):  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":81.572120414,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":81.572124216,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":81.572127754,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":81.572131395,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":81.57213509,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":81.572139382,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":81.572142832,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":81.57215836,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":81.572162776,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":81.572167104,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":81.572171046,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":81.572176788,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":81.774520487,"data":"\n"}
+,{"stream_name":"stderr","time":82.27743462,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":82.277454339,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":82.27745845,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":82.277462056,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":82.277466048,"data":"\n"}
+,{"stream_name":"stderr","time":82.277469455,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":82.277473149,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":82.277476609,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":82.277480064,"data":"\n"}
+,{"stream_name":"stderr","time":82.277483392,"data":"Traceback (most recent call last):  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":82.277487416,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":82.277492196,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":82.277495876,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":82.277499578,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":82.277502945,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":82.277506586,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":82.277510048,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":82.277513933,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":82.277517566,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":82.277521478,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":82.277525755,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":82.277541766,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":82.277545997,"data":"\n"}
+,{"stream_name":"stderr","time":82.27754945,"data":"\n"}
+,{"stream_name":"stderr","time":82.277552975,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":82.277556763,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":82.277560546,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":82.277564269,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":82.277568261,"data":"\n"}
+,{"stream_name":"stderr","time":82.277571726,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":82.27757553000001,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":82.277585187,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":82.277589034,"data":"\n"}
+,{"stream_name":"stderr","time":82.277592372,"data":"Traceback (most recent call last):  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":82.277596066,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":82.277599582,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":82.277602886,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":82.277606718,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":82.277610258,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":82.277614154,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":82.277617434,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":82.277621237,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":82.27762484,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":82.277628412,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":82.277632584,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":82.27763682,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stdout","time":86.009991459,"data":"torch 2.2.2+cu121 cuda True\n"}
+,{"stream_name":"stdout","time":86.212616074,"data":"torch 2.2.2+cu121 cuda True\n"}
+,{"stream_name":"stdout","time":86.557190584,"data":"venv ready\n"}
+,{"stream_name":"stdout","time":93.395331265,"data":"A {'train_rows': 103626, 'valid_rows': 7503, 'train_tokens': 5083615, 'eval_rows': 1500, 'eval_src_over_512': 49}\n"}
+,{"stream_name":"stdout","time":109.131235765,"data":"B {'train_rows': 49774, 'valid_rows': 4232, 'train_tokens': 18828937, 'eval_rows': 1500, 'eval_src_over_512': 49}\n"}
+,{"stream_name":"stderr","time":109.982246821,"data":"\n"}
+,{"stream_name":"stderr","time":109.982277046,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":109.982283593,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":109.982288868,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":109.982293312,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":109.982297851,"data":"\n"}
+,{"stream_name":"stderr","time":109.982301949,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":109.982305944,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":109.982310006,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":109.982314206,"data":"\n"}
+,{"stream_name":"stderr","time":109.982317821,"data":"Traceback (most recent call last):  File \"\u003cfrozen runpy\u003e\", line 189, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":109.982322635,"data":"  File \"\u003cfrozen runpy\u003e\", line 112, in _get_module_details\n"}
+,{"stream_name":"stderr","time":109.982326877,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py\", line 2, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":109.982331348,"data":"    import onmt.inputters\n"}
+,{"stream_name":"stderr","time":109.982335164,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py\", line 7, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":109.982339517,"data":"    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify\n"}
+,{"stream_name":"stderr","time":109.982343627,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":109.982348076,"data":"    import torch\n"}
+,{"stream_name":"stderr","time":109.982351986,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":109.982357062,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":109.982361596,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":109.982366947,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":109.982370953,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":109.982375497,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":109.982379567,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":109.982383808,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":109.982388011,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":109.982392774,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":109.982412437,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":109.982419601,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":110.184828293,"data":"\n"}
+,{"stream_name":"stderr","time":110.184853364,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":110.184859113,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":110.184863427,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":110.184867247,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":110.184871309,"data":"\n"}
+,{"stream_name":"stderr","time":110.184877249,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":110.184880935,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":110.184884693,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":110.184888303,"data":"\n"}
+,{"stream_name":"stderr","time":110.184893245,"data":"Traceback (most recent call last):  File \"\u003cfrozen runpy\u003e\", line 189, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":110.184933124,"data":"  File \"\u003cfrozen runpy\u003e\", line 112, in _get_module_details\n"}
+,{"stream_name":"stderr","time":110.184941247,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py\", line 2, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.18494621,"data":"    import onmt.inputters\n"}
+,{"stream_name":"stderr","time":110.184949939,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py\", line 7, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.184953869,"data":"    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify\n"}
+,{"stream_name":"stderr","time":110.184957623,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.184961455,"data":"    import torch\n"}
+,{"stream_name":"stderr","time":110.184965259,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.184969086,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":110.184972551,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.184976304,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":110.184979693,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.184983573,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":110.18498711,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.184991203,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":110.185007672,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.185010664,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":110.185014429,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":110.185017248,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":110.185019834,"data":"\n"}
+,{"stream_name":"stderr","time":110.185022195,"data":"\n"}
+,{"stream_name":"stderr","time":110.185024475,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":110.185026983,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":110.185029422,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":110.185032211,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":110.185034763,"data":"\n"}
+,{"stream_name":"stderr","time":110.185037117,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":110.185039652,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":110.185042185,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":110.185044619,"data":"\n"}
+,{"stream_name":"stderr","time":110.185046901,"data":"Traceback (most recent call last):  File \"\u003cfrozen runpy\u003e\", line 189, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":110.185049559,"data":"  File \"\u003cfrozen runpy\u003e\", line 112, in _get_module_details\n"}
+,{"stream_name":"stderr","time":110.185052057,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py\", line 2, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.185054639,"data":"    import onmt.inputters\n"}
+,{"stream_name":"stderr","time":110.185057013,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py\", line 7, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.1850596,"data":"    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify\n"}
+,{"stream_name":"stderr","time":110.185062077,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.185064676,"data":"    import torch\n"}
+,{"stream_name":"stderr","time":110.185067037,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.185069635,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":110.185072016,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.185074576,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":110.185076946,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.185079837,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":110.185084629,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.185087369,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":110.185089835,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":110.185092541,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":110.185095472,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":110.185098256,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":111.487463302,"data":"Corpus corpus_1's weight should be given. We default it to 1 for you.\n"}
+,{"stream_name":"stderr","time":111.487756281,"data":"[2026-11-11 18:43:14,896 INFO] Counter vocab from 200000 samples.\n"}
+,{"stream_name":"stderr","time":111.48777009,"data":"[2026-11-11 18:43:14,896 INFO] Build vocab on 200000 transformed examples/corpus.\n"}
+,{"stream_name":"stderr","time":111.690381918,"data":"Corpus corpus_1's weight should be given. We default it to 1 for you.\n"}
+,{"stream_name":"stderr","time":111.690412956,"data":"[2026-11-11 18:43:14,896 INFO] Counter vocab from 200000 samples.\n"}
+,{"stream_name":"stderr","time":111.690417369,"data":"[2026-11-11 18:43:14,896 INFO] Build vocab on 200000 transformed examples/corpus.\n"}
+,{"stream_name":"stderr","time":111.69042124,"data":"\n"}
+,{"stream_name":"stderr","time":111.690424834,"data":"Corpus corpus_1's weight should be given. We default it to 1 for you.\n"}
+,{"stream_name":"stderr","time":111.690428391,"data":"[2026-11-11 18:43:14,896 INFO] Counter vocab from 200000 samples.\n"}
+,{"stream_name":"stderr","time":111.690432635,"data":"[2026-11-11 18:43:14,896 INFO] Build vocab on 200000 transformed examples/corpus.\n"}
+,{"stream_name":"stderr","time":115.16025917,"data":"[2026-11-11 18:43:18,568 INFO] Counters src: 75370\n"}
+,{"stream_name":"stderr","time":115.160823137,"data":"[2026-11-11 18:43:18,568 INFO] Counters tgt: 48092\n"}
+,{"stream_name":"stderr","time":115.363728971,"data":"[2026-11-11 18:43:18,568 INFO] Counters src: 75370\n"}
+,{"stream_name":"stderr","time":115.363766162,"data":"[2026-11-11 18:43:18,568 INFO] Counters tgt: 48092\n"}
+,{"stream_name":"stderr","time":115.36377435,"data":"\n"}
+,{"stream_name":"stderr","time":115.363776797,"data":"[2026-11-11 18:43:18,568 INFO] Counters src: 75370\n"}
+,{"stream_name":"stderr","time":115.363779103,"data":"[2026-11-11 18:43:18,568 INFO] Counters tgt: 48092\n"}
+,{"stream_name":"stderr","time":2757.495453428,"data":"\n"}
+,{"stream_name":"stderr","time":2757.49550009,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":2757.495505402,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":2757.495509587,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":2757.495513892,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":2757.495518268,"data":"\n"}
+,{"stream_name":"stderr","time":2757.495522098,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":2757.49554076,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":2757.495544768,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":2757.495547885,"data":"\n"}
+,{"stream_name":"stderr","time":2757.495550834,"data":"Traceback (most recent call last):  File \"\u003cfrozen runpy\u003e\", line 189, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":2757.495554401,"data":"  File \"\u003cfrozen runpy\u003e\", line 112, in _get_module_details\n"}
+,{"stream_name":"stderr","time":2757.495557629,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py\", line 2, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.495561421,"data":"    import onmt.inputters\n"}
+,{"stream_name":"stderr","time":2757.495564648,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py\", line 7, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.495568501,"data":"    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify\n"}
+,{"stream_name":"stderr","time":2757.495572598,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.495576193,"data":"    import torch\n"}
+,{"stream_name":"stderr","time":2757.495579613,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.495583203,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":2757.495586576,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.495589783,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":2757.495592979,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.495597112,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":2757.495600917,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.495604788,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":2757.49560828,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.495611794,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":2757.495617523,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":2757.495624118,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":2757.701518447,"data":"\n"}
+,{"stream_name":"stderr","time":2757.701541744,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":2757.701546485,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":2757.701550753,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":2757.701565062,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":2757.701570174,"data":"\n"}
+,{"stream_name":"stderr","time":2757.701573645,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":2757.701576887,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":2757.70158037,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":2757.7015837,"data":"\n"}
+,{"stream_name":"stderr","time":2757.701586785,"data":"Traceback (most recent call last):  File \"\u003cfrozen runpy\u003e\", line 189, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":2757.701590443,"data":"  File \"\u003cfrozen runpy\u003e\", line 112, in _get_module_details\n"}
+,{"stream_name":"stderr","time":2757.701594058,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py\", line 2, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701597696,"data":"    import onmt.inputters\n"}
+,{"stream_name":"stderr","time":2757.701600962,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py\", line 7, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701604599,"data":"    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify\n"}
+,{"stream_name":"stderr","time":2757.70160813,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701611694,"data":"    import torch\n"}
+,{"stream_name":"stderr","time":2757.70161488,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701618355,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":2757.701621865,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701625335,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":2757.701628495,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701633461,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":2757.701636607,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701640471,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":2757.701645732,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701649274,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":2757.701654332,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":2757.701659808,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":2757.701663854,"data":"\n"}
+,{"stream_name":"stderr","time":2757.701667798,"data":"\n"}
+,{"stream_name":"stderr","time":2757.701675893,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":2757.701679455,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":2757.701682757,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":2757.701686034,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":2757.701689475,"data":"\n"}
+,{"stream_name":"stderr","time":2757.701692539,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":2757.701695932,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":2757.701699336,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":2757.701702789,"data":"\n"}
+,{"stream_name":"stderr","time":2757.701705875,"data":"Traceback (most recent call last):  File \"\u003cfrozen runpy\u003e\", line 189, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":2757.70170947,"data":"  File \"\u003cfrozen runpy\u003e\", line 112, in _get_module_details\n"}
+,{"stream_name":"stderr","time":2757.701712913,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py\", line 2, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701716494,"data":"    import onmt.inputters\n"}
+,{"stream_name":"stderr","time":2757.701719653,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py\", line 7, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701723263,"data":"    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify\n"}
+,{"stream_name":"stderr","time":2757.701726577,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701732097,"data":"    import torch\n"}
+,{"stream_name":"stderr","time":2757.701740722,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701757538,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":2757.701761708,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701765903,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":2757.701769912,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701790705,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":2757.701794214,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701798082,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":2757.701802074,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2757.701805917,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":2757.70181024,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":2757.701818304,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":2758.848872682,"data":"[2026-11-11 19:27:22,257 INFO] Loading checkpoint from /kaggle/working/onmt/A/model_step_6210.pt\n"}
+,{"stream_name":"stderr","time":2759.051391564,"data":"[2026-11-11 19:27:22,257 INFO] Loading checkpoint from /kaggle/working/onmt/A/model_step_6210.pt\n"}
+,{"stream_name":"stderr","time":2759.051422261,"data":"\n"}
+,{"stream_name":"stderr","time":2759.051427495,"data":"[2026-11-11 19:27:22,257 INFO] Loading checkpoint from /kaggle/working/onmt/A/model_step_6210.pt\n"}
+,{"stream_name":"stderr","time":2759.377301804,"data":"[2026-11-11 19:27:22,785 INFO] Loading data into the model\n"}
+,{"stream_name":"stderr","time":2759.579920322,"data":"[2026-11-11 19:27:22,785 INFO] Loading data into the model\n"}
+,{"stream_name":"stderr","time":2759.579956983,"data":"\n"}
+,{"stream_name":"stderr","time":2759.579962702,"data":"[2026-11-11 19:27:22,785 INFO] Loading data into the model\n"}
+,{"stream_name":"stderr","time":2782.618999912,"data":"[2026-11-11 19:27:46,027 INFO] PRED SCORE: -2.3411, PRED PPL: 10.39 NB SENTENCES: 1500\n"}
+,{"stream_name":"stdout","time":2782.633348107,"data":"Time w/o python interpreter load/terminate:  23.784555912017822\n"}
+,{"stream_name":"stderr","time":2782.822222054,"data":"[2026-11-11 19:27:46,027 INFO] PRED SCORE: -2.3411, PRED PPL: 10.39 NB SENTENCES: 1500\n"}
+,{"stream_name":"stderr","time":2782.822276261,"data":"\n"}
+,{"stream_name":"stderr","time":2782.822281616,"data":"[2026-11-11 19:27:46,027 INFO] PRED SCORE: -2.3411, PRED PPL: 10.39 NB SENTENCES: 1500\n"}
+,{"stream_name":"stdout","time":2782.836615629,"data":"Time w/o python interpreter load/terminate:  23.784555912017822\n"}
+,{"stream_name":"stdout","time":2783.448426944,"data":"A steps 6210 ckpt model_step_6210.pt pred lines 1500\n"}
+,{"stream_name":"stderr","time":2784.014352669,"data":"\n"}
+,{"stream_name":"stderr","time":2784.014383458,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":2784.014389074,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":2784.014393347,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":2784.014397506,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":2784.014401923,"data":"\n"}
+,{"stream_name":"stderr","time":2784.014405495,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":2784.014409296,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":2784.01441332,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":2784.014417228,"data":"\n"}
+,{"stream_name":"stderr","time":2784.014420943,"data":"Traceback (most recent call last):  File \"\u003cfrozen runpy\u003e\", line 189, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":2784.014425398,"data":"  File \"\u003cfrozen runpy\u003e\", line 112, in _get_module_details\n"}
+,{"stream_name":"stderr","time":2784.014429776,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py\", line 2, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.014434291,"data":"    import onmt.inputters\n"}
+,{"stream_name":"stderr","time":2784.014438355,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py\", line 7, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.014455751,"data":"    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify\n"}
+,{"stream_name":"stderr","time":2784.014460182,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.014464684,"data":"    import torch\n"}
+,{"stream_name":"stderr","time":2784.014468786,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.014473501,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":2784.014477809,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.014482003,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":2784.014485795,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.014490047,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":2784.014494089,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.014498609,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":2784.014503419,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.014508249,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":2784.014514348,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":2784.014519406,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":2784.216873415,"data":"\n"}
+,{"stream_name":"stderr","time":2784.216919207,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":2784.216927193,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":2784.216931043,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":2784.216934938,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":2784.216938878,"data":"\n"}
+,{"stream_name":"stderr","time":2784.216942067,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":2784.216949724,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":2784.216952315,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":2784.216954768,"data":"\n"}
+,{"stream_name":"stderr","time":2784.216956922,"data":"Traceback (most recent call last):  File \"\u003cfrozen runpy\u003e\", line 189, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":2784.216960002,"data":"  File \"\u003cfrozen runpy\u003e\", line 112, in _get_module_details\n"}
+,{"stream_name":"stderr","time":2784.216962382,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py\", line 2, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.216975642,"data":"    import onmt.inputters\n"}
+,{"stream_name":"stderr","time":2784.216978035,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py\", line 7, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.216980523,"data":"    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify\n"}
+,{"stream_name":"stderr","time":2784.216982873,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.216985401,"data":"    import torch\n"}
+,{"stream_name":"stderr","time":2784.216987623,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.216990066,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":2784.216992339,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.216994895,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":2784.216997108,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.216999627,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":2784.217001869,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.217004335,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":2784.217006685,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.217009206,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":2784.21701343,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":2784.217016032,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":2784.217018461,"data":"\n"}
+,{"stream_name":"stderr","time":2784.217020663,"data":"\n"}
+,{"stream_name":"stderr","time":2784.217022808,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":2784.217025097,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":2784.217027364,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":2784.21702966,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":2784.217032028,"data":"\n"}
+,{"stream_name":"stderr","time":2784.21703417,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":2784.217036448,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":2784.217038771,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":2784.217041045,"data":"\n"}
+,{"stream_name":"stderr","time":2784.217043172,"data":"Traceback (most recent call last):  File \"\u003cfrozen runpy\u003e\", line 189, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":2784.217047884,"data":"  File \"\u003cfrozen runpy\u003e\", line 112, in _get_module_details\n"}
+,{"stream_name":"stderr","time":2784.217050342,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py\", line 2, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.217052719,"data":"    import onmt.inputters\n"}
+,{"stream_name":"stderr","time":2784.217054938,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py\", line 7, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.217057379,"data":"    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify\n"}
+,{"stream_name":"stderr","time":2784.217059717,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.217062182,"data":"    import torch\n"}
+,{"stream_name":"stderr","time":2784.217064366,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.217066805,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":2784.217069023,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.217071445,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":2784.217073663,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.217076082,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":2784.217078292,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.217080746,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":2784.217083015,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":2784.21708545,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":2784.217088224,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":2784.217090809,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":2785.337815767,"data":"Corpus corpus_1's weight should be given. We default it to 1 for you.\n"}
+,{"stream_name":"stderr","time":2785.337843839,"data":"[2026-11-11 19:27:48,746 INFO] Counter vocab from 200000 samples.\n"}
+,{"stream_name":"stderr","time":2785.337848307,"data":"[2026-11-11 19:27:48,746 INFO] Build vocab on 200000 transformed examples/corpus.\n"}
+,{"stream_name":"stderr","time":2785.540445613,"data":"Corpus corpus_1's weight should be given. We default it to 1 for you.\n"}
+,{"stream_name":"stderr","time":2785.540479868,"data":"[2026-11-11 19:27:48,746 INFO] Counter vocab from 200000 samples.\n"}
+,{"stream_name":"stderr","time":2785.540483423,"data":"[2026-11-11 19:27:48,746 INFO] Build vocab on 200000 transformed examples/corpus.\n"}
+,{"stream_name":"stderr","time":2785.540486818,"data":"\n"}
+,{"stream_name":"stderr","time":2785.540489098,"data":"Corpus corpus_1's weight should be given. We default it to 1 for you.\n"}
+,{"stream_name":"stderr","time":2785.54050388,"data":"[2026-11-11 19:27:48,746 INFO] Counter vocab from 200000 samples.\n"}
+,{"stream_name":"stderr","time":2785.540506743,"data":"[2026-11-11 19:27:48,746 INFO] Build vocab on 200000 transformed examples/corpus.\n"}
+,{"stream_name":"stderr","time":2796.203582759,"data":"[2026-11-11 19:27:59,611 INFO] Counters src: 102667\n"}
+,{"stream_name":"stderr","time":2796.203628392,"data":"[2026-11-11 19:27:59,612 INFO] Counters tgt: 65058\n"}
+,{"stream_name":"stderr","time":2796.41015505,"data":"[2026-11-11 19:27:59,611 INFO] Counters src: 102667\n"}
+,{"stream_name":"stderr","time":2796.41018412,"data":"[2026-11-11 19:27:59,612 INFO] Counters tgt: 65058\n"}
+,{"stream_name":"stderr","time":2796.410189273,"data":"\n"}
+,{"stream_name":"stderr","time":2796.410193475,"data":"[2026-11-11 19:27:59,611 INFO] Counters src: 102667\n"}
+,{"stream_name":"stderr","time":2796.410197773,"data":"[2026-11-11 19:27:59,612 INFO] Counters tgt: 65058\n"}
+,{"stream_name":"stderr","time":13198.145558652,"data":"\n"}
+,{"stream_name":"stderr","time":13198.145605455,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":13198.14562429,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":13198.145630258,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":13198.145635342,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":13198.145640983,"data":"\n"}
+,{"stream_name":"stderr","time":13198.145645054,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":13198.145649277,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":13198.145653512,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":13198.14565763,"data":"\n"}
+,{"stream_name":"stderr","time":13198.145661595,"data":"Traceback (most recent call last):  File \"\u003cfrozen runpy\u003e\", line 189, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":13198.145666027,"data":"  File \"\u003cfrozen runpy\u003e\", line 112, in _get_module_details\n"}
+,{"stream_name":"stderr","time":13198.145670335,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py\", line 2, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.145674804,"data":"    import onmt.inputters\n"}
+,{"stream_name":"stderr","time":13198.145678923,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py\", line 7, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.145683467,"data":"    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify\n"}
+,{"stream_name":"stderr","time":13198.145873074,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.145897222,"data":"    import torch\n"}
+,{"stream_name":"stderr","time":13198.14592732,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.145933391,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":13198.145938262,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.145945743,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":13198.145963068,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.145967135,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":13198.145970418,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.145974104,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":13198.145977545,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.145981047,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":13198.145984973,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":13198.145990362,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":13198.354505235,"data":"\n"}
+,{"stream_name":"stderr","time":13198.354531076,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":13198.35453427,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":13198.354536791,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":13198.354539219,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":13198.354542148,"data":"\n"}
+,{"stream_name":"stderr","time":13198.354544346,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":13198.35454664,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":13198.354549194,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":13198.354565301,"data":"\n"}
+,{"stream_name":"stderr","time":13198.354569248,"data":"Traceback (most recent call last):  File \"\u003cfrozen runpy\u003e\", line 189, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":13198.354573593,"data":"  File \"\u003cfrozen runpy\u003e\", line 112, in _get_module_details\n"}
+,{"stream_name":"stderr","time":13198.354578424,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py\", line 2, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354583124,"data":"    import onmt.inputters\n"}
+,{"stream_name":"stderr","time":13198.354587201,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py\", line 7, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354591225,"data":"    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify\n"}
+,{"stream_name":"stderr","time":13198.354594859,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354598624,"data":"    import torch\n"}
+,{"stream_name":"stderr","time":13198.354601886,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354605581,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":13198.354622242,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354625124,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":13198.354627446,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354629831,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":13198.354632142,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.35463462,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":13198.354637031,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354639454,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":13198.354642799,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":13198.354645529,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":13198.354647916,"data":"\n"}
+,{"stream_name":"stderr","time":13198.354650057,"data":"\n"}
+,{"stream_name":"stderr","time":13198.354652956,"data":"A module that was compiled using NumPy 1.x cannot be run in\n"}
+,{"stream_name":"stderr","time":13198.354667772,"data":"NumPy 2.4.6 as it may crash. To support both 1.x and 2.x\n"}
+,{"stream_name":"stderr","time":13198.354671706,"data":"versions of NumPy, modules must be compiled with NumPy 2.0.\n"}
+,{"stream_name":"stderr","time":13198.354675665,"data":"Some module may need to rebuild instead e.g. with 'pybind11\u003e=2.12'.\n"}
+,{"stream_name":"stderr","time":13198.354679856,"data":"\n"}
+,{"stream_name":"stderr","time":13198.35468348,"data":"If you are a user of the module, the easiest solution will be to\n"}
+,{"stream_name":"stderr","time":13198.354686992,"data":"downgrade to 'numpy\u003c2' or try to upgrade the affected module.\n"}
+,{"stream_name":"stderr","time":13198.354698991,"data":"We expect that some modules will need time to support NumPy 2.\n"}
+,{"stream_name":"stderr","time":13198.354702376,"data":"\n"}
+,{"stream_name":"stderr","time":13198.354705457,"data":"Traceback (most recent call last):  File \"\u003cfrozen runpy\u003e\", line 189, in _run_module_as_main\n"}
+,{"stream_name":"stderr","time":13198.354709078,"data":"  File \"\u003cfrozen runpy\u003e\", line 112, in _get_module_details\n"}
+,{"stream_name":"stderr","time":13198.354712511,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py\", line 2, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354716036,"data":"    import onmt.inputters\n"}
+,{"stream_name":"stderr","time":13198.354719249,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py\", line 7, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354722892,"data":"    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify\n"}
+,{"stream_name":"stderr","time":13198.354726363,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354738651,"data":"    import torch\n"}
+,{"stream_name":"stderr","time":13198.354741095,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py\", line 1477, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354743537,"data":"    from .functional import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":13198.354745782,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354748614,"data":"    import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":13198.354763075,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354767624,"data":"    from .modules import *  # noqa: F403\n"}
+,{"stream_name":"stderr","time":13198.35477132,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354775734,"data":"    from .transformer import TransformerEncoder, TransformerDecoder, \\\n"}
+,{"stream_name":"stderr","time":13198.354779584,"data":"  File \"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py\", line 20, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13198.354783603,"data":"    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":13198.35478756,"data":"/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)\n"}
+,{"stream_name":"stderr","time":13198.354791286,"data":"  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),\n"}
+,{"stream_name":"stderr","time":13199.49409692,"data":"[2026-11-11 22:21:22,902 INFO] Loading checkpoint from /kaggle/working/onmt/B/model_step_22990.pt\n"}
+,{"stream_name":"stderr","time":13199.69630453,"data":"[2026-11-11 22:21:22,902 INFO] Loading checkpoint from /kaggle/working/onmt/B/model_step_22990.pt\n"}
+,{"stream_name":"stderr","time":13199.696332381,"data":"\n"}
+,{"stream_name":"stderr","time":13199.69633691,"data":"[2026-11-11 22:21:22,902 INFO] Loading checkpoint from /kaggle/working/onmt/B/model_step_22990.pt\n"}
+,{"stream_name":"stderr","time":13200.022807377,"data":"[2026-11-11 22:21:23,431 INFO] Loading data into the model\n"}
+,{"stream_name":"stderr","time":13200.225848282,"data":"[2026-11-11 22:21:23,431 INFO] Loading data into the model\n"}
+,{"stream_name":"stderr","time":13200.225882261,"data":"\n"}
+,{"stream_name":"stderr","time":13200.225885665,"data":"[2026-11-11 22:21:23,431 INFO] Loading data into the model\n"}
+,{"stream_name":"stderr","time":13329.638762939,"data":"[2026-11-11 22:23:33,047 INFO] PRED SCORE: -1.3721, PRED PPL: 3.94 NB SENTENCES: 1500\n"}
+,{"stream_name":"stdout","time":13329.65393358,"data":"Time w/o python interpreter load/terminate:  130.15964818000793\n"}
+,{"stream_name":"stderr","time":13329.846436563,"data":"[2026-11-11 22:23:33,047 INFO] PRED SCORE: -1.3721, PRED PPL: 3.94 NB SENTENCES: 1500\n"}
+,{"stream_name":"stderr","time":13329.846467831,"data":"\n"}
+,{"stream_name":"stderr","time":13329.846472048,"data":"[2026-11-11 22:23:33,047 INFO] PRED SCORE: -1.3721, PRED PPL: 3.94 NB SENTENCES: 1500\n"}
+,{"stream_name":"stdout","time":13329.855946808,"data":"Time w/o python interpreter load/terminate:  130.15964818000793\n"}
+,{"stream_name":"stdout","time":13330.292347409,"data":"B steps 22990 ckpt model_step_22990.pt pred lines 1500\n"}
+,{"stream_name":"stdout","time":13330.292376026,"data":"[\n"}
+,{"stream_name":"stdout","time":13330.292391423,"data":"  {\n"}
+,{"stream_name":"stdout","time":13330.29239512,"data":"    \"dataset\": \"A\",\n"}
+,{"stream_name":"stdout","time":13330.292399519,"data":"    \"train_steps\": 6210,\n"}
+,{"stream_name":"stdout","time":13330.292403998,"data":"    \"epochs\": 10,\n"}
+,{"stream_name":"stdout","time":13330.292408152,"data":"    \"checkpoint\": \"model_step_6210.pt\",\n"}
+,{"stream_name":"stdout","time":13330.292412948,"data":"    \"train_tokens\": 5083615\n"}
+,{"stream_name":"stdout","time":13330.292416754,"data":"  },\n"}
+,{"stream_name":"stdout","time":13330.292420065,"data":"  {\n"}
+,{"stream_name":"stdout","time":13330.292423389,"data":"    \"dataset\": \"B\",\n"}
+,{"stream_name":"stdout","time":13330.292426954,"data":"    \"train_steps\": 22990,\n"}
+,{"stream_name":"stdout","time":13330.292430562,"data":"    \"epochs\": 10,\n"}
+,{"stream_name":"stdout","time":13330.292434055,"data":"    \"checkpoint\": \"model_step_22990.pt\",\n"}
+,{"stream_name":"stdout","time":13330.2924377,"data":"    \"train_tokens\": 18828937\n"}
+,{"stream_name":"stdout","time":13330.292441208,"data":"  }\n"}
+,{"stream_name":"stdout","time":13330.292444612,"data":"]\n"}
+,{"stream_name":"stdout","time":13330.518627023,"data":"A 1500 empty 316 /kaggle/working/hyp_onmt_a_seed42.parquet\n"}
+,{"stream_name":"stdout","time":13330.539382819,"data":"B 1500 empty 0 /kaggle/working/hyp_onmt_b_seed42.parquet\n"}
+,{"stream_name":"stderr","time":13333.27452819,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":13333.274555319,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":13333.455936486,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":13333.455959103,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":13334.261208367,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":13334.34283949,"data":"[NbConvertApp] Writing 33892 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":13336.860945248,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":13337.411090608,"data":"[NbConvertApp] Writing 334099 bytes to __results__.html\n"}
+]

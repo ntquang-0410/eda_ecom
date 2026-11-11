@@ -1,0 +1,16 @@
+{
+  "A": {
+    "train_rows": 103626,
+    "valid_rows": 7503,
+    "train_tokens": 5083615,
+    "eval_rows": 1500,
+    "eval_src_over_512": 49
+  },
+  "B": {
+    "train_rows": 49774,
+    "valid_rows": 4232,
+    "train_tokens": 18828937,
+    "eval_rows": 1500,
+    "eval_src_over_512": 49
+  }
+}

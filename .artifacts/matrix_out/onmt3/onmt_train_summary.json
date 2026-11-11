@@ -1,0 +1,16 @@
+[
+  {
+    "dataset": "A",
+    "train_steps": 6210,
+    "epochs": 10,
+    "checkpoint": "model_step_6210.pt",
+    "train_tokens": 5083615
+  },
+  {
+    "dataset": "B",
+    "train_steps": 22990,
+    "epochs": 10,
+    "checkpoint": "model_step_22990.pt",
+    "train_tokens": 18828937
+  }
+]
