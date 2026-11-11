@@ -1,0 +1,16 @@
+{
+  "id": "ntquang0410/tiki-matrix-moses-b",
+  "title": "Tiki Matrix Moses B2",
+  "code_file": "tiki-matrix-moses-b.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "ntquang0410/tiki-matrix-data"
+  ],
+  "kernel_sources": [],
+  "model_sources": []
+}

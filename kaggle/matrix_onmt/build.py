@@ -96,7 +96,7 @@ data:
     path_src: {d}/train.vi
     path_tgt: {d}/train.zh
 """, encoding='utf-8')
-    subprocess.run([P, '-m', 'onmt.bin.build_vocab', '-config', str(vocab_yaml), '-save_data', str(d), '-n_sample', '200000'], check=True)
+    subprocess.run([P, '-m', 'onmt.bin.build_vocab', '-config', str(vocab_yaml), '-save_data', str(d), '-src_vocab_size', '32000', '-tgt_vocab_size', '32000', '-n_sample', '200000'], check=True)
 
     cfg = WORK / f'train_{ds}.yaml'
     cfg.write_text(f"""data:
@@ -113,13 +113,15 @@ tgt_vocab: {d}/vocab.zh
 world_size: 1
 gpu_ranks: [0]
 batch_type: tokens
-batch_size: 4096
-accum_count: [2]
+batch_size: 2048
+accum_count: [4]
 train_steps: {train_steps}
 valid_steps: {max(500, steps_per_epoch // 2)}
 save_checkpoint_steps: {max(500, steps_per_epoch)}
 keep_checkpoint: 2
 report_every: 200
+num_workers: 0
+bucket_size: 1024
 warmup_steps: 2000
 learning_rate: 2.0
 decay_method: noam
