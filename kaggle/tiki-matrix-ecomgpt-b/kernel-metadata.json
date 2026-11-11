@@ -1,0 +1,21 @@
+{
+  "id": "ntquang0410/tiki-matrix-ecomgpt-b",
+  "title": "Tiki Matrix Ecomgpt B",
+  "code_file": "tiki-matrix-ecomgpt-b.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "nguynthanhquang/ecomgpt-7b",
+    "ntquang0410/tiki-matrix-data"
+  ],
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-3"
+  ],
+  "kernel_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaRtxPro6000"
+}

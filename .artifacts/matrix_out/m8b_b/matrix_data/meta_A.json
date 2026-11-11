@@ -1,0 +1,42 @@
+{
+  "dataset": "A",
+  "source_processed": "A_bt",
+  "policy": {
+    "tiki_target": "bt_qwen3-4b",
+    "1688": "real",
+    "train_splits": [
+      "train",
+      "dev"
+    ],
+    "test": "eval only"
+  },
+  "rows": 111129,
+  "tokens_million": 4.518,
+  "group_share": {
+    "1688_attribute": 0.6711,
+    "1688_title": 0.1584,
+    "tiki_attribute": 0.075,
+    "tiki_title": 0.0955
+  },
+  "group_rows": {
+    "1688_attribute": 70114,
+    "1688_title": 15350,
+    "tiki_attribute": 14012,
+    "tiki_title": 11653
+  },
+  "split": {
+    "train": 103626,
+    "dev": 7503
+  },
+  "eval": "eval_F (1.500 dòng, dùng chung mọi cell)",
+  "eval_rows": 1500,
+  "configs": {
+    "natural": null,
+    "balanced": {
+      "1688_title": 0.25,
+      "1688_attribute": 0.25,
+      "tiki_title": 0.25,
+      "tiki_attribute": 0.25
+    }
+  }
+}
