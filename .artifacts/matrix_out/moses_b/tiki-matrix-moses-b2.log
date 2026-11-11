@@ -1,0 +1,49 @@
+[{"stream_name":"stderr","time":7.378691717,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":7.378742917,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":8.500001405999999,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.500032099,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.500037747,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.500042113,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.26834702,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.268384545,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.26839052,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.268394668,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":12.70361433,"data":"DATA /kaggle/input/datasets/ntquang0410/tiki-matrix-data\n"}
+,{"stream_name":"stdout","time":14.344237749,"data":"sample 52128 tokens 4.001 {'1688_description': 0.2500504393324327, '1688_title': 0.24996958535065317, 'tiki_description': 0.250019194277405, 'tiki_title': 0.24996078103950908}\n"}
+,{"stream_name":"stdout","time":14.344279638,"data":"eval 1500\n"}
+,{"stream_name":"stdout","time":17.894974262,"data":"wrote train/eval text\n"}
+,{"stream_name":"stdout","time":1233.357461529,"data":"-rwxr-xr-x 1 root root 2084512 Nov 11 19:02 bin/lmplz\n"}
+,{"stream_name":"stdout","time":1233.357522396,"data":"-rwxr-xr-x 1 root root 8192496 Nov 11 19:02 bin/moses\n"}
+,{"stream_name":"stderr","time":1233.359408978,"data":"W: Skipping acquire of configured file 'main/source/Sources' as repository 'https://r2u.stat.illinois.edu/ubuntu noble InRelease' does not seem to provide it (sources.list entry misspelt?)\n"}
+,{"stream_name":"stderr","time":1233.35944847,"data":"\n"}
+,{"stream_name":"stderr","time":1233.35982546,"data":"W: Skipping acquire of configured file 'main/source/Sources' as repository 'https://r2u.stat.illinois.edu/ubuntu noble InRelease' does not seem to provide it (sources.list entry misspelt?)\n"}
+,{"stream_name":"stdout","time":1721.102283859,"data":"align sec 458.9\n"}
+,{"stream_name":"stdout","time":1721.102329056,"data":"sym lines 52128 sample 0-8 1-9 2-12 3-216 4-219 5-116 6-0 6-117 7-16 8-16 9-135 10-15 11-19 12-14 13-14\n"}
+,{"stream_name":"stdout","time":1823.44881727,"data":"-rw-r--r-- 1 root root 7.7M Nov 11 19:12 lm.arpa.gz\n"}
+,{"stream_name":"stdout","time":1823.448869664,"data":"\n"}
+,{"stream_name":"stdout","time":1823.44887637,"data":"Score v2.1 -- scoring methods for extracted rules\n"}
+,{"stream_name":"stdout","time":1823.448886703,"data":"Loading lexical translation table from /kaggle/working/work/work/model/lex.f2e.\n"}
+,{"stream_name":"stdout","time":1823.448891504,"data":"......................................\n"}
+,{"stream_name":"stdout","time":1823.448894771,"data":"Score v2.1 -- scoring methods for extracted rules\n"}
+,{"stream_name":"stdout","time":1823.448907544,"data":"using inverse mode\n"}
+,{"stream_name":"stdout","time":1823.448911744,"data":"Loading lexical translation table from /kaggle/working/work/work/model/lex.e2f.\n"}
+,{"stream_name":"stdout","time":1823.448915563,"data":"......................................\n"}
+,{"stream_name":"stdout","time":1823.448919569,"data":"-rw-r--r-- 1 root root 1072 Nov 11 19:14 /kaggle/working/work/work/model/moses.ini\n"}
+,{"stream_name":"stdout","time":2886.784341465,"data":"1500 pred.zh\n"}
+,{"stream_name":"stdout","time":2886.784892226,"data":"BEST TRANSLATION: 卡 促 进 市 形 为 儿 SƠ|UNK|UNK|UNK 生 从 0 个 月 - 2 岁 双 开 窗 心 灵 的 眼 睛 ， 特 别 是 对 于 新 生 婴 儿 ， 几 乎 所 有 接 秋 第 过 眼 睛 童 veo|UNK|UNK|UNK ấy|UNK|UNK|UNK 视 角 。 非 常 重 要 的 宝 宝 使 用 最 多 的 五 个 月 。 然 而 ， 新 生 儿 时 ， 视 觉 发 展 ， 如 未 成 年 人 的 ， 因 此 刺 激 视 觉 的 婴 儿 可 调 节 非 常 必 要 的 。 卡 刺 激 视 觉 的 婴 儿 含 3 卷 画 状 zizzac|UNK|UNK|UNK 从 黑 白 色 , 黑 色 红 到 全 颜 色 。 用 作 刺 激 视 觉 的 婴 儿 ： + 激 发 视 觉 + 大 脑 发 育 + 作 动 积 极 的 能 力 和 记 忆 中 。 此 外 ， 这 些 绝 佳 作 用 的 合 作 ， 使 画 的 刺 激 视 觉 周 围 床 或 摇 篮 床 儿 躺 下 旋 转 ， 孩 子 一 侧 的 任 何 看 到 有 趣 的 形 象 美 观 ， 帮 助 宝 宝 玩 耍 更 安 稳 ， 妈 妈 nhàn|UNK|UNK|UNK 。 Đấy|UNK|UNK|UNK 双 1 工 作 ， 方 便 。 #the|UNK|UNK|UNK #tranh|UNK|UNK|UNK #kichthich|UNK|UNK|UNK #thigiac|UNK|UNK|UNK #tresosinh|UNK|UNK|UNK #tranhkichthichthigiacchotresosinh|UNK|UNK|UNK #tranhchobesosinh|UNK|UNK|UNK #kichthichthigiac|UNK|UNK|UNK #tranhkichthichthigiacchobe|UNK|UNK|UNK #tranhchobe|UNK|UNK|UNK #tranhchotresosinh|UNK|UNK|UNK #tranhkichthichthigiac|UNK|UNK|UNK #tranhthigiac|UNK|UNK|UNK #tranhkichthichthigiacchotre|UNK|UNK|UNK #hinhanhkichthichthigiacchobesosinh|UNK|UNK|UNK #phattrienthigiacchotresosinh|UNK|UNK|UNK #kichthichthigiactresosinh|UNK|UNK|UNK #tranhkichthichthigiactresosinh|UNK|UNK|UNK #tranhmau|UNK|UNK|UNK #tranhkichthichthigiacchotresosinh|UNK|UNK|UNK #dochoichobesosinh|UNK|UNK|UNK #tranh_kich_thich_thi_giac_cho_tre_so_sinh|UNK|UNK|UNK #do_choi_cho_be_so_sinh|UNK|UNK|UNK #tranhkíchthíchthịgiác|UNK|UNK|UNK #tranhkíchthíchthịgiácchotrẻsơsinh|UNK|UNK|UNK #thẻkíchthíchthịgiác|UNK|UNK|UNK #thẻkíchthíchthịgiácchobé|UNK|UNK|UNK #tranhthịgiácđentrắng|UNK|UNK|UNK #tranhthịgiác|UNK|UNK|UNK #tranhthịgiácchotrẻsơsinh|UNK|UNK|UNK #tranhkichthichthigiac|UNK|UNK|UNK #tranhkichthichthigiacchotresosinh|UNK|UNK|UNK #thekichthichthigiac|UNK|UNK|UNK #thekichthichthigiacchobe|UNK|UNK|UNK #tranhthigiacdentrang|UNK|UNK|UNK #tranhthigiac|UNK|UNK|UNK #tranhthigiacchotresosinh|UNK|UNK|UNK #sachkichthichthigiacchotresosinh|UNK|UNK|UNK 产 品 价 格 已 包 含 Tiki 现 行 的 税 费 。 此 外 ， 根 据 产 品 类 型 、 形 式 和 交 货 地 址 ， 可 能 会 产 生 其 他 费 用 ， 如 运 费 、 大 件 商 品 附 加 费 、 进 口 税 （ 对 于 从 国 外 发 货 且 价 值 超 过 100 万 越 南 盾 的 订 单 ） . . . . . . . [1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111]  [total=-5198.717] core=(-4400.000,-362.000,208.000,-364.478,-620.003,-155.291,-488.640,-70.852,-17.858,-33.472,-70.480,-8.916,-43.679,-146.000,-1518.519)  \n"}
+,{"stream_name":"stdout","time":2886.784952985,"data":"Line 1498: Decision rule took 0.001 seconds total\n"}
+,{"stream_name":"stdout","time":2886.784957625,"data":"Line 1498: Additional reporting took 0.001 seconds total\n"}
+,{"stream_name":"stdout","time":2886.784993176,"data":"Line 1498: Translation took 11.653 seconds total\n"}
+,{"stream_name":"stdout","time":2886.785007258,"data":"Name:moses\tVmPeak:17971652 kB\tVmRSS:1383980 kB\tRSSMax:17643880 kB\tuser:4112.217\tsys:24.786\tCPU:4137.003\treal:1062.609\n"}
+,{"stream_name":"stdout","time":2887.220337279,"data":"        eval_id dataset pair_type                                                                                                                         source                         reference                               hypothesis   config  seed\n"}
+,{"stream_name":"stdout","time":2887.220419683,"data":"0  1688v1:00000    1688     title  Vali du lịch xe đẩy rộng có nắp mở phía trước, vali đa chức năng, vali kéo doanh nhân 24 inch dung tích lớn, hộp đựng 20 inch  前开盖宽拉杆旅行箱多功能行李箱大容量24寸商务拉杆箱20寸登机箱  宽拉杆旅行箱行李箱前开盖行李箱多功能拉杆箱 24 寸商务大容量收纳箱 20 寸  moses_b    4\n"}
+,{"stream_name":"stdout","time":2887.220430436,"data":"empty 0.0 n 1500\n"}
+,{"stream_name":"stderr","time":2891.842433375,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2891.842494166,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2892.105136125,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2892.105166002,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2893.063167201,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":2893.202567418,"data":"[NbConvertApp] Writing 16746 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":2896.624189697,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2897.416702409,"data":"[NbConvertApp] Writing 308901 bytes to __results__.html\n"}
+]
