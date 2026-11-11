@@ -1,0 +1,13 @@
+{
+  "dataset": {
+    "A": {"rows": 111129, "tokens_million": 4.518, "train_rows": 103626, "dev_rows": 7503, "epochs_at_4M": 0.8854},
+    "B": {"rows": 54006, "tokens_million": 15.825, "train_rows": 49774, "dev_rows": 4232, "epochs_at_4M": 0.2528}
+  },
+  "qwen3_8b": {
+    "A_natural": {"tokens": 4000038, "steps": 500, "minutes": 216.3, "hyp_rows": 1500, "empty": 15},
+    "B_balanced": {"tokens": 4002207, "steps": 500, "minutes": 149.0, "hyp_rows": 1500, "empty": 15,
+                   "sampled_rows": 52131, "unique_rows": 25453, "epochs_seen": 0.2529}
+  },
+  "eval_F": {"rows": 1500, "strata": {"1688_title": 300, "1688_attribute": 300, "1688_description": 150,
+             "tiki_title": 300, "tiki_attribute": 300, "tiki_description": 150}}
+}
