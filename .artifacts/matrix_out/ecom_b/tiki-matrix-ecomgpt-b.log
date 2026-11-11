@@ -1,0 +1,81 @@
+[{"stream_name":"stderr","time":3.987038129,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":3.9870656589999998,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":4.5297434469999995,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":4.529758687,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":4.529760237,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":4.529761237,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":4.8265766469999996,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":4.826594147,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":4.826595727,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":4.826596787,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.420633387,"data":"gpu NVIDIA RTX PRO 6000 Blackwell Server Edition 102.0 GB\n"}
+,{"stream_name":"stdout","time":25.034659975,"data":"local model /kaggle/input/datasets/nguynthanhquang/ecomgpt-7b\n"}
+,{"stream_name":"stdout","time":25.237312496,"data":"DATA /kaggle/input/datasets/ntquang0410/tiki-matrix-data\n"}
+,{"stream_name":"stdout","time":26.464196251,"data":"sample 52128 tokens 4.001 {'1688_description': 0.2500504393324327, '1688_title': 0.24996958535065317, 'tiki_description': 0.250019194277405, 'tiki_title': 0.24996078103950908}\n"}
+,{"stream_name":"stdout","time":26.464213261,"data":"eval 1500\n"}
+,{"stream_name":"stdout","time":26.464214681,"data":"epochs_seen 0.2528\n"}
+,{"stream_name":"stdout","time":27.580675607,"data":"wrote train/eval text\n"}
+,{"stream_name":"stderr","time":28.977135812,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":28.977160212,"data":"\n"}
+,{"stream_name":"stderr","time":28.977161832,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":5582.970589714,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1041 \u003e 1024). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stderr","time":5582.970612434,"data":"\n"}
+,{"stream_name":"stderr","time":5582.970614454,"data":"[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1041 \u003e 1024). Running this sequence through the model will result in indexing errors\n"}
+,{"stream_name":"stdout","time":5598.353298844,"data":"steps 500 avg rows/step 104.202\n"}
+,{"stream_name":"stdout","time":5602.799909281,"data":"0 3.7651\n"}
+,{"stream_name":"stderr","time":5603.000088828,"data":"/tmp/ipykernel_65/23756539.py:79: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stderr","time":5603.000106618,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stderr","time":5603.000116458,"data":"  print(step, round(float(out.loss), 4), flush=True)\n"}
+,{"stream_name":"stderr","time":5603.000117778,"data":"\n"}
+,{"stream_name":"stderr","time":5603.000118548,"data":"/tmp/ipykernel_65/23756539.py:79: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stderr","time":5603.000119458,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stderr","time":5603.000120318,"data":"  print(step, round(float(out.loss), 4), flush=True)\n"}
+,{"stream_name":"stdout","time":5692.519315709,"data":"25 3.136\n"}
+,{"stream_name":"stdout","time":5780.603579023,"data":"50 1.9968\n"}
+,{"stream_name":"stdout","time":5871.359601823,"data":"75 2.2732\n"}
+,{"stream_name":"stdout","time":5960.794873795,"data":"100 2.1166\n"}
+,{"stream_name":"stdout","time":6050.953336127,"data":"125 1.8577\n"}
+,{"stream_name":"stdout","time":6139.032280086,"data":"150 0.1696\n"}
+,{"stream_name":"stdout","time":6231.108313743,"data":"175 1.0487\n"}
+,{"stream_name":"stdout","time":6322.062950129,"data":"200 1.3104\n"}
+,{"stream_name":"stdout","time":6411.671716606,"data":"225 1.5164\n"}
+,{"stream_name":"stdout","time":6502.115020922,"data":"250 0.8947\n"}
+,{"stream_name":"stdout","time":6592.948625027,"data":"275 1.5381\n"}
+,{"stream_name":"stdout","time":6682.724536712,"data":"300 1.0135\n"}
+,{"stream_name":"stdout","time":6774.362925771,"data":"325 0.1165\n"}
+,{"stream_name":"stdout","time":6866.169679069,"data":"350 0.9119\n"}
+,{"stream_name":"stdout","time":6957.015502295,"data":"375 1.3335\n"}
+,{"stream_name":"stdout","time":7047.367425845,"data":"400 0.3641\n"}
+,{"stream_name":"stdout","time":7133.979658259,"data":"425 1.073\n"}
+,{"stream_name":"stdout","time":7220.95393516,"data":"450 2.0071\n"}
+,{"stream_name":"stdout","time":7310.466154273,"data":"475 0.255\n"}
+,{"stream_name":"stdout","time":8998.401746765,"data":"A rows 111129 tokensM 4.518 overlap 0 epochs@4M 0.885\n"}
+,{"stream_name":"stdout","time":8998.419682525,"data":"B rows 54006 tokensM 15.825 overlap 0 epochs@4M 0.253\n"}
+,{"stream_name":"stdout","time":8998.419691595,"data":"LEAK CHECK OK\n"}
+,{"stream_name":"stdout","time":8998.453428975,"data":"generate max_new 64 rows 600\n"}
+,{"stream_name":"stdout","time":8999.20887893,"data":"0 / 600\n"}
+,{"stream_name":"stdout","time":9010.740005315,"data":"160 / 600\n"}
+,{"stream_name":"stdout","time":9022.15445316,"data":"320 / 600\n"}
+,{"stream_name":"stdout","time":9036.509916788,"data":"480 / 600\n"}
+,{"stream_name":"stdout","time":9046.578066091,"data":"generate max_new 256 rows 600\n"}
+,{"stream_name":"stdout","time":9052.11157973,"data":"0 / 600\n"}
+,{"stream_name":"stdout","time":9113.420139146,"data":"160 / 600\n"}
+,{"stream_name":"stdout","time":9150.323149727,"data":"320 / 600\n"}
+,{"stream_name":"stdout","time":9173.978764889,"data":"480 / 600\n"}
+,{"stream_name":"stdout","time":9196.796314245,"data":"generate max_new 768 rows 300\n"}
+,{"stream_name":"stdout","time":9220.234282002,"data":"0 / 300\n"}
+,{"stream_name":"stdout","time":9582.028290229,"data":"160 / 300\n"}
+,{"stream_name":"stdout","time":9971.029088904,"data":"done 1500\n"}
+,{"stream_name":"stdout","time":9971.075213194,"data":"        eval_id dataset pair_type                                                                                                                         source                         reference                      hypothesis     config  seed\n"}
+,{"stream_name":"stdout","time":9971.075229244,"data":"0  1688v1:00000    1688     title  Vali du lịch xe đẩy rộng có nắp mở phía trước, vali đa chức năng, vali kéo doanh nhân 24 inch dung tích lớn, hộp đựng 20 inch  前开盖宽拉杆旅行箱多功能行李箱大容量24寸商务拉杆箱20寸登机箱   前开口拉杆箱多功能旅行箱24寸大容量商务拉杆箱20寸大箱子  ecomgpt_b    42\n"}
+,{"stream_name":"stdout","time":9971.075232114,"data":"1  1688v1:00\n"}
+,{"stream_name":"stdout","time":9971.075233144,"data":"empty 0.014 n 1500\n"}
+,{"stream_name":"stderr","time":9975.360602246,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":9975.360617566,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":9975.447133316,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":9975.447145206,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":9975.832875274,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":9975.869315454,"data":"[NbConvertApp] Writing 31787 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":9977.018550039,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":9977.269965938,"data":"[NbConvertApp] Writing 350682 bytes to __results__.html\n"}
+]

@@ -1,0 +1,1492 @@
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<frozen runpy>", line 189, in _run_module_as_main
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+[2026-11-11 14:39:47,047 INFO] Missing transforms field for corpus_1 data, set to default: [].
+[2026-11-11 14:39:47,047 INFO] Missing transforms field for valid data, set to default: [].
+[2026-11-11 14:39:47,047 INFO] Parsed 2 corpora from -data.
+[2026-11-11 14:39:47,047 INFO] Get special vocabs from Transforms: {'src': [], 'tgt': []}.
+[2026-11-11 14:39:47,253 INFO] The first 10 tokens of the vocabs are:['<unk>', '<blank>', '<s>', '</s>', ';', ',', '[', ']', 'màu', '.']
+[2026-11-11 14:39:47,254 INFO] The decoder start token is: <s>
+[2026-11-11 14:39:47,254 INFO] Building model...
+[2026-11-11 14:39:49,590 INFO] Switching model to float32 for amp/apex_amp
+[2026-11-11 14:39:49,590 INFO] Non quantized layer compute is fp32
+[2026-11-11 14:39:49,875 INFO] NMTModel(
+  (encoder): TransformerEncoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(32768, 256, padding_idx=1)
+        )
+      )
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (transformer): ModuleList(
+      (0-3): 4 x TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=False)
+          (linear_values): Linear(in_features=256, out_features=256, bias=False)
+          (linear_query): Linear(in_features=256, out_features=256, bias=False)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=False)
+          (w_2): Linear(in_features=1024, out_features=256, bias=False)
+          (layer_norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (layer_norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+  )
+  (decoder): TransformerDecoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(32768, 256, padding_idx=1)
+        )
+      )
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (layer_norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+    (transformer_layers): ModuleList(
+      (0-3): 4 x TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=False)
+          (linear_values): Linear(in_features=256, out_features=256, bias=False)
+          (linear_query): Linear(in_features=256, out_features=256, bias=False)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=False)
+          (w_2): Linear(in_features=1024, out_features=256, bias=False)
+          (layer_norm): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=False)
+          (linear_values): Linear(in_features=256, out_features=256, bias=False)
+          (linear_query): Linear(in_features=256, out_features=256, bias=False)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=False)
+        )
+        (layer_norm_2): LayerNorm((256,), eps=1e-06, elementwise_affine=True)
+      )
+    )
+  )
+  (generator): Linear(in_features=256, out_features=32768, bias=True)
+)
+[2026-11-11 14:39:49,877 INFO] encoder: 11538944
+[2026-11-11 14:39:49,877 INFO] decoder: 21010944
+[2026-11-11 14:39:49,877 INFO] * number of parameters: 32549888
+[2026-11-11 14:39:49,878 INFO] Trainable parameters = {'torch.float32': 32549888, 'torch.float16': 0, 'torch.uint8': 0, 'torch.int8': 0}
+[2026-11-11 14:39:49,878 INFO] Non trainable parameters = {'torch.float32': 0, 'torch.float16': 0, 'torch.uint8': 0, 'torch.int8': 0}
+[2026-11-11 14:39:49,878 INFO]  * src vocab size = 32768
+[2026-11-11 14:39:49,878 INFO]  * tgt vocab size = 32768
+[2026-11-11 14:39:50,636 INFO] Starting training on GPU: [0]
+[2026-11-11 14:39:50,637 INFO] Start training loop and validate every 500 steps...
+[2026-11-11 14:39:50,638 INFO] Scoring with: None
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+[2026-11-11 14:39:52,917 INFO] Weighted corpora loaded so far:
+			* corpus_1: 1
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+[2026-11-11 14:39:55,159 INFO] Weighted corpora loaded so far:
+			* corpus_1: 1
+[2026-11-11 14:39:57,323 INFO] Weighted corpora loaded so far:
+			* corpus_1: 2
+[2026-11-11 14:39:57,335 INFO] Weighted corpora loaded so far:
+			* corpus_1: 2
+[2026-11-11 14:39:59,629 INFO] Weighted corpora loaded so far:
+			* corpus_1: 3
+[2026-11-11 14:39:59,692 INFO] Weighted corpora loaded so far:
+			* corpus_1: 3
+[2026-11-11 14:40:02,583 INFO] Weighted corpora loaded so far:
+			* corpus_1: 4
+[2026-11-11 14:40:02,642 INFO] Weighted corpora loaded so far:
+			* corpus_1: 4
+[2026-11-11 14:40:05,026 INFO] Weighted corpora loaded so far:
+			* corpus_1: 5
+[2026-11-11 14:40:05,153 INFO] Weighted corpora loaded so far:
+			* corpus_1: 5
+[2026-11-11 14:40:07,637 INFO] Weighted corpora loaded so far:
+			* corpus_1: 6
+[2026-11-11 14:40:07,839 INFO] Weighted corpora loaded so far:
+			* corpus_1: 6
+[2026-11-11 14:41:21,224 INFO] Step 200/ 6210; acc: 0.0; ppl: 32831.9; xent: 10.4; lr: 0.00028; sents:   75657; bsz: 2980/3172/189; 13160/14006 tok/s;     91 sec;
+[2026-11-11 14:42:22,233 INFO] Step 400/ 6210; acc: 2.3; ppl: 31466.8; xent: 10.4; lr: 0.00056; sents:   77268; bsz: 2953/3153/193; 19361/20674 tok/s;    152 sec;
+[2026-11-11 14:42:46,466 INFO] Weighted corpora loaded so far:
+			* corpus_1: 7
+[2026-11-11 14:42:49,422 INFO] Weighted corpora loaded so far:
+			* corpus_1: 7
+[2026-11-11 14:42:51,384 INFO] Weighted corpora loaded so far:
+			* corpus_1: 8
+[2026-11-11 14:42:53,167 INFO] Weighted corpora loaded so far:
+			* corpus_1: 9
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+[2026-11-11 14:42:55,356 INFO] Weighted corpora loaded so far:
+			* corpus_1: 8
+[2026-11-11 14:42:58,207 INFO] Weighted corpora loaded so far:
+			* corpus_1: 9
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+[2026-11-11 14:42:58,692 INFO] Weighted corpora loaded so far:
+			* corpus_1: 10
+[2026-11-11 14:43:00,744 INFO] Weighted corpora loaded so far:
+			* corpus_1: 11
+The batch will be filled until we reach 1, its size may exceed 32 tokens
+[2026-11-11 14:43:05,271 INFO] Weighted corpora loaded so far:
+			* corpus_1: 10
+[2026-11-11 14:43:07,939 INFO] Weighted corpora loaded so far:
+			* corpus_1: 11
+[2026-11-11 14:44:00,488 INFO] valid stats calculation
+                           took: 67.28525233268738 s.
+[2026-11-11 14:44:00,489 INFO] Train perplexity: 31610.1
+[2026-11-11 14:44:00,489 INFO] Train accuracy: 1.94819
+[2026-11-11 14:44:00,489 INFO] Sentences processed: 191671
+[2026-11-11 14:44:00,489 INFO] Average bsz: 2968/3163/192
+[2026-11-11 14:44:00,489 INFO] Validation perplexity: 28679.3
+[2026-11-11 14:44:00,489 INFO] Validation accuracy: 5.2195
+[2026-11-11 14:44:30,812 INFO] Step 600/ 6210; acc: 4.9; ppl: 28671.4; xent: 10.3; lr: 0.00084; sents:   77821; bsz: 3010/3205/195; 9363/9970 tok/s;    280 sec;
+[2026-11-11 14:44:37,310 INFO] Saving checkpoint /kaggle/working/onmt/A/model_step_621.pt
+[2026-11-11 14:45:33,608 INFO] Step 800/ 6210; acc: 4.5; ppl: 23588.3; xent: 10.1; lr: 0.00112; sents:   77374; bsz: 2909/3108/193; 18530/19797 tok/s;    343 sec;
+[2026-11-11 14:46:38,315 INFO] Step 1000/ 6210; acc: 4.8; ppl: 15217.6; xent: 9.6; lr: 0.00140; sents:   76037; bsz: 3026/3211/190; 18703/19850 tok/s;    408 sec;
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+The batch will be filled until we reach 1, its size may exceed 32 tokens
+[2026-11-11 14:47:38,227 INFO] valid stats calculation
+                           took: 59.91051125526428 s.
+[2026-11-11 14:47:38,228 INFO] Train perplexity: 25404.4
+[2026-11-11 14:47:38,228 INFO] Train accuracy: 3.29037
+[2026-11-11 14:47:38,228 INFO] Sentences processed: 384157
+[2026-11-11 14:47:38,228 INFO] Average bsz: 2976/3170/192
+[2026-11-11 14:47:38,228 INFO] Validation perplexity: 13005.8
+[2026-11-11 14:47:38,228 INFO] Validation accuracy: 5.2195
+[2026-11-11 14:48:25,003 INFO] Weighted corpora loaded so far:
+			* corpus_1: 12
+[2026-11-11 14:48:26,542 INFO] Weighted corpora loaded so far:
+			* corpus_1: 13
+[2026-11-11 14:48:30,337 INFO] Weighted corpora loaded so far:
+			* corpus_1: 12
+[2026-11-11 14:48:31,543 INFO] Weighted corpora loaded so far:
+			* corpus_1: 14
+[2026-11-11 14:48:32,334 INFO] Weighted corpora loaded so far:
+			* corpus_1: 13
+[2026-11-11 14:48:33,151 INFO] Weighted corpora loaded so far:
+			* corpus_1: 15
+[2026-11-11 14:48:34,764 INFO] Weighted corpora loaded so far:
+			* corpus_1: 16
+[2026-11-11 14:48:38,272 INFO] Weighted corpora loaded so far:
+			* corpus_1: 14
+[2026-11-11 14:48:40,615 INFO] Weighted corpora loaded so far:
+			* corpus_1: 15
+[2026-11-11 14:48:41,129 INFO] Step 1200/ 6210; acc: 5.0; ppl: 9920.9; xent: 9.2; lr: 0.00168; sents:   78106; bsz: 2936/3152/195; 9562/10265 tok/s;    530 sec;
+[2026-11-11 14:48:42,693 INFO] Weighted corpora loaded so far:
+			* corpus_1: 16
+[2026-11-11 14:48:54,418 INFO] Saving checkpoint /kaggle/working/onmt/A/model_step_1242.pt
+[2026-11-11 14:49:45,094 INFO] Step 1400/ 6210; acc: 6.1; ppl: 6925.6; xent: 8.8; lr: 0.00196; sents:   85344; bsz: 2892/3132/213; 18082/19587 tok/s;    594 sec;
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+The batch will be filled until we reach 1, its size may exceed 32 tokens
+[2026-11-11 14:51:17,418 INFO] valid stats calculation
+                           took: 59.99557662010193 s.
+[2026-11-11 14:51:17,419 INFO] Train perplexity: 17115.7
+[2026-11-11 14:51:17,419 INFO] Train accuracy: 4.01341
+[2026-11-11 14:51:17,419 INFO] Sentences processed: 582573
+[2026-11-11 14:51:17,419 INFO] Average bsz: 2956/3157/194
+[2026-11-11 14:51:17,419 INFO] Validation perplexity: 5382.2
+[2026-11-11 14:51:17,419 INFO] Validation accuracy: 5.2195
+[2026-11-11 14:51:48,962 INFO] Step 1600/ 6210; acc: 5.4; ppl: 5113.8; xent: 8.5; lr: 0.00224; sents:   74099; bsz: 2921/3107/185; 9433/10032 tok/s;    718 sec;
+[2026-11-11 14:52:52,397 INFO] Step 1800/ 6210; acc: 4.9; ppl: 3940.3; xent: 8.3; lr: 0.00252; sents:   73153; bsz: 3052/3243/183; 19245/20447 tok/s;    782 sec;
+[2026-11-11 14:53:00,943 INFO] Weighted corpora loaded so far:
+			* corpus_1: 17
+[2026-11-11 14:53:02,526 INFO] Weighted corpora loaded so far:
+			* corpus_1: 18
+[2026-11-11 14:53:08,080 INFO] Weighted corpora loaded so far:
+			* corpus_1: 19
+[2026-11-11 14:53:08,234 INFO] Weighted corpora loaded so far:
+			* corpus_1: 17
+[2026-11-11 14:53:10,511 INFO] Weighted corpora loaded so far:
+			* corpus_1: 20
+[2026-11-11 14:53:10,830 INFO] Weighted corpora loaded so far:
+			* corpus_1: 18
+[2026-11-11 14:53:12,894 INFO] Saving checkpoint /kaggle/working/onmt/A/model_step_1863.pt
+[2026-11-11 14:53:16,264 INFO] Weighted corpora loaded so far:
+			* corpus_1: 21
+[2026-11-11 14:53:17,023 INFO] Weighted corpora loaded so far:
+			* corpus_1: 19
+[2026-11-11 14:53:19,285 INFO] Weighted corpora loaded so far:
+			* corpus_1: 20
+[2026-11-11 14:53:25,339 INFO] Weighted corpora loaded so far:
+			* corpus_1: 21
+[2026-11-11 14:53:57,896 INFO] Step 2000/ 6210; acc: 5.7; ppl: 3115.9; xent: 8.0; lr: 0.00279; sents:   87441; bsz: 2974/3203/219; 18160/19560 tok/s;    847 sec;
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+The batch will be filled until we reach 1, its size may exceed 32 tokens
+[2026-11-11 14:54:57,455 INFO] valid stats calculation
+                           took: 59.557650566101074 s.
+[2026-11-11 14:54:57,455 INFO] Train perplexity: 11622.1
+[2026-11-11 14:54:57,456 INFO] Train accuracy: 4.34672
+[2026-11-11 14:54:57,456 INFO] Sentences processed: 782300
+[2026-11-11 14:54:57,456 INFO] Average bsz: 2965/3168/196
+[2026-11-11 14:54:57,456 INFO] Validation perplexity: 3113.16
+[2026-11-11 14:54:57,456 INFO] Validation accuracy: 5.2195
+[2026-11-11 14:56:00,419 INFO] Step 2200/ 6210; acc: 5.7; ppl: 2710.4; xent: 7.9; lr: 0.00266; sents:   58255; bsz: 3028/3180/146; 9885/10383 tok/s;    970 sec;
+[2026-11-11 14:57:04,458 INFO] Step 2400/ 6210; acc: 5.5; ppl: 2401.5; xent: 7.8; lr: 0.00255; sents:   70466; bsz: 2966/3165/176; 18526/19768 tok/s;   1034 sec;
+[2026-11-11 14:57:31,225 INFO] Saving checkpoint /kaggle/working/onmt/A/model_step_2484.pt
+[2026-11-11 14:57:37,000 INFO] Weighted corpora loaded so far:
+			* corpus_1: 22
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+[2026-11-11 14:57:41,951 INFO] Weighted corpora loaded so far:
+			* corpus_1: 23
+The batch will be filled until we reach 1, its size may exceed 32 tokens
+[2026-11-11 14:57:44,508 INFO] Weighted corpora loaded so far:
+			* corpus_1: 24
+[2026-11-11 14:57:46,419 INFO] Weighted corpora loaded so far:
+			* corpus_1: 25
+[2026-11-11 14:57:52,628 INFO] Weighted corpora loaded so far:
+			* corpus_1: 26
+[2026-11-11 14:58:39,192 INFO] valid stats calculation
+                           took: 62.420501708984375 s.
+[2026-11-11 14:58:39,193 INFO] Train perplexity: 8552.25
+[2026-11-11 14:58:39,193 INFO] Train accuracy: 4.6117
+[2026-11-11 14:58:39,193 INFO] Sentences processed: 952700
+[2026-11-11 14:58:39,193 INFO] Average bsz: 2964/3164/191
+[2026-11-11 14:58:39,193 INFO] Validation perplexity: 2406.05
+[2026-11-11 14:58:39,193 INFO] Validation accuracy: 5.2195
+[2026-11-11 14:58:46,940 INFO] Weighted corpora loaded so far:
+			* corpus_1: 22
+[2026-11-11 14:58:48,511 INFO] Weighted corpora loaded so far:
+			* corpus_1: 23
+[2026-11-11 14:58:53,374 INFO] Weighted corpora loaded so far:
+			* corpus_1: 24
+[2026-11-11 14:58:54,919 INFO] Weighted corpora loaded so far:
+			* corpus_1: 25
+[2026-11-11 14:59:00,569 INFO] Weighted corpora loaded so far:
+			* corpus_1: 26
+[2026-11-11 14:59:10,691 INFO] Step 2600/ 6210; acc: 6.5; ppl: 2184.2; xent: 7.7; lr: 0.00245; sents:   91869; bsz: 2904/3133/230; 9203/9927 tok/s;   1160 sec;
+[2026-11-11 15:00:14,619 INFO] Step 2800/ 6210; acc: 5.5; ppl: 2087.4; xent: 7.6; lr: 0.00236; sents:   76374; bsz: 3001/3206/191; 18780/20061 tok/s;   1224 sec;
+[2026-11-11 15:01:19,636 INFO] Step 3000/ 6210; acc: 5.8; ppl: 2035.9; xent: 7.6; lr: 0.00228; sents:   83228; bsz: 2909/3125/208; 17895/19225 tok/s;   1289 sec;
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+The batch will be filled until we reach 1, its size may exceed 32 tokens
+[2026-11-11 15:02:19,748 INFO] valid stats calculation
+                           took: 60.11139988899231 s.
+[2026-11-11 15:02:19,749 INFO] Train perplexity: 6750.13
+[2026-11-11 15:02:19,749 INFO] Train accuracy: 4.83199
+[2026-11-11 15:02:19,749 INFO] Sentences processed: 1.16249e+06
+[2026-11-11 15:02:19,749 INFO] Average bsz: 2964/3166/194
+[2026-11-11 15:02:19,749 INFO] Validation perplexity: 2168.39
+[2026-11-11 15:02:19,749 INFO] Validation accuracy: 4.33446
+[2026-11-11 15:02:52,612 INFO] Saving checkpoint /kaggle/working/onmt/A/model_step_3105.pt
+[2026-11-11 15:03:15,679 INFO] Weighted corpora loaded so far:
+			* corpus_1: 27
+[2026-11-11 15:03:20,500 INFO] Weighted corpora loaded so far:
+			* corpus_1: 28
+[2026-11-11 15:03:22,127 INFO] Weighted corpora loaded so far:
+			* corpus_1: 29
+[2026-11-11 15:03:22,461 INFO] Step 3200/ 6210; acc: 5.8; ppl: 1966.1; xent: 7.6; lr: 0.00221; sents:   75781; bsz: 2980/3192/189; 9706/10394 tok/s;   1412 sec;
+[2026-11-11 15:03:24,356 INFO] Weighted corpora loaded so far:
+			* corpus_1: 27
+[2026-11-11 15:03:27,732 INFO] Weighted corpora loaded so far:
+			* corpus_1: 30
+[2026-11-11 15:03:29,454 INFO] Weighted corpora loaded so far:
+			* corpus_1: 31
+[2026-11-11 15:03:30,005 INFO] Weighted corpora loaded so far:
+			* corpus_1: 28
+[2026-11-11 15:03:32,379 INFO] Weighted corpora loaded so far:
+			* corpus_1: 29
+[2026-11-11 15:03:39,176 INFO] Weighted corpora loaded so far:
+			* corpus_1: 30
+[2026-11-11 15:03:41,160 INFO] Weighted corpora loaded so far:
+			* corpus_1: 31
+[2026-11-11 15:04:26,888 INFO] Step 3400/ 6210; acc: 6.5; ppl: 1869.1; xent: 7.5; lr: 0.00214; sents:   79911; bsz: 2943/3131/200; 18272/19439 tok/s;   1476 sec;
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+The batch will be filled until we reach 1, its size may exceed 32 tokens
+[2026-11-11 15:05:58,360 INFO] valid stats calculation
+                           took: 59.4108099937439 s.
+[2026-11-11 15:05:58,361 INFO] Train perplexity: 5641.56
+[2026-11-11 15:05:58,361 INFO] Train accuracy: 5.01885
+[2026-11-11 15:05:58,361 INFO] Sentences processed: 1.36216e+06
+[2026-11-11 15:05:58,361 INFO] Average bsz: 2961/3163/195
+[2026-11-11 15:05:58,361 INFO] Validation perplexity: 1993.18
+[2026-11-11 15:05:58,361 INFO] Validation accuracy: 6.45635
+[2026-11-11 15:06:29,662 INFO] Step 3600/ 6210; acc: 6.5; ppl: 1844.8; xent: 7.5; lr: 0.00208; sents:   91878; bsz: 2891/3122/230; 9420/10171 tok/s;   1599 sec;
+[2026-11-11 15:07:09,838 INFO] Saving checkpoint /kaggle/working/onmt/A/model_step_3726.pt
+[2026-11-11 15:07:34,116 INFO] Step 3800/ 6210; acc: 5.8; ppl: 1805.3; xent: 7.5; lr: 0.00203; sents:   75517; bsz: 2943/3158/189; 18262/19602 tok/s;   1663 sec;
+[2026-11-11 15:07:51,101 INFO] Weighted corpora loaded so far:
+			* corpus_1: 32
+[2026-11-11 15:07:52,714 INFO] Weighted corpora loaded so far:
+			* corpus_1: 33
+[2026-11-11 15:07:57,709 INFO] Weighted corpora loaded so far:
+			* corpus_1: 34
+[2026-11-11 15:07:59,293 INFO] Weighted corpora loaded so far:
+			* corpus_1: 35
+[2026-11-11 15:08:00,990 INFO] Weighted corpora loaded so far:
+			* corpus_1: 32
+[2026-11-11 15:08:02,681 INFO] Weighted corpora loaded so far:
+			* corpus_1: 33
+[2026-11-11 15:08:06,300 INFO] Weighted corpora loaded so far:
+			* corpus_1: 36
+[2026-11-11 15:08:07,913 INFO] Weighted corpora loaded so far:
+			* corpus_1: 34
+[2026-11-11 15:08:09,563 INFO] Weighted corpora loaded so far:
+			* corpus_1: 35
+[2026-11-11 15:08:16,487 INFO] Weighted corpora loaded so far:
+			* corpus_1: 36
+[2026-11-11 15:08:39,762 INFO] Step 4000/ 6210; acc: 5.4; ppl: 1806.3; xent: 7.5; lr: 0.00198; sents:   65966; bsz: 3067/3234/165; 18686/19703 tok/s;   1729 sec;
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+The batch will be filled until we reach 1, its size may exceed 32 tokens
+[2026-11-11 15:09:39,206 INFO] valid stats calculation
+                           took: 59.442577838897705 s.
+[2026-11-11 15:09:39,206 INFO] Train perplexity: 4888.49
+[2026-11-11 15:09:39,206 INFO] Train accuracy: 5.12068
+[2026-11-11 15:09:39,207 INFO] Sentences processed: 1.55154e+06
+[2026-11-11 15:09:39,207 INFO] Average bsz: 2964/3167/194
+[2026-11-11 15:09:39,207 INFO] Validation perplexity: 1907.93
+[2026-11-11 15:09:39,207 INFO] Validation accuracy: 7.50198
+[2026-11-11 15:10:41,841 INFO] Step 4200/ 6210; acc: 6.2; ppl: 1741.5; xent: 7.5; lr: 0.00193; sents:   72460; bsz: 2902/3088/181; 9509/10119 tok/s;   1851 sec;
+[2026-11-11 15:11:29,578 INFO] Saving checkpoint /kaggle/working/onmt/A/model_step_4347.pt
+[2026-11-11 15:11:47,026 INFO] Step 4400/ 6210; acc: 6.8; ppl: 1695.9; xent: 7.4; lr: 0.00188; sents:   72149; bsz: 2950/3143/180; 18100/19286 tok/s;   1916 sec;
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+The batch will be filled until we reach 1, its size may exceed 32 tokens
+[2026-11-11 15:13:20,032 INFO] valid stats calculation
+                           took: 60.24479365348816 s.
+[2026-11-11 15:13:20,033 INFO] Train perplexity: 4356.04
+[2026-11-11 15:13:20,033 INFO] Train accuracy: 5.32205
+[2026-11-11 15:13:20,033 INFO] Sentences processed: 1.74343e+06
+[2026-11-11 15:13:20,033 INFO] Average bsz: 2960/3162/194
+[2026-11-11 15:13:20,033 INFO] Validation perplexity: 1766.25
+[2026-11-11 15:13:20,033 INFO] Validation accuracy: 8.0895
+[2026-11-11 15:13:27,754 INFO] Weighted corpora loaded so far:
+			* corpus_1: 37
+[2026-11-11 15:13:32,627 INFO] Weighted corpora loaded so far:
+			* corpus_1: 38
+[2026-11-11 15:13:34,245 INFO] Weighted corpora loaded so far:
+			* corpus_1: 39
+[2026-11-11 15:13:39,546 INFO] Weighted corpora loaded so far:
+			* corpus_1: 37
+[2026-11-11 15:13:40,002 INFO] Weighted corpora loaded so far:
+			* corpus_1: 40
+[2026-11-11 15:13:42,370 INFO] Weighted corpora loaded so far:
+			* corpus_1: 41
+[2026-11-11 15:13:44,976 INFO] Weighted corpora loaded so far:
+			* corpus_1: 38
+[2026-11-11 15:13:46,835 INFO] Weighted corpora loaded so far:
+			* corpus_1: 39
+[2026-11-11 15:13:48,506 INFO] Weighted corpora loaded so far:
+			* corpus_1: 40
+[2026-11-11 15:13:51,513 INFO] Step 4600/ 6210; acc: 8.4; ppl: 1652.9; xent: 7.4; lr: 0.00184; sents:   84952; bsz: 2959/3189/212; 9507/10248 tok/s;   2041 sec;
+[2026-11-11 15:13:54,908 INFO] Weighted corpora loaded so far:
+			* corpus_1: 41
+[2026-11-11 15:14:55,583 INFO] Step 4800/ 6210; acc: 8.6; ppl: 1599.9; xent: 7.4; lr: 0.00180; sents:   78594; bsz: 2995/3197/196; 18699/19961 tok/s;   2105 sec;
+[2026-11-11 15:15:49,641 INFO] Saving checkpoint /kaggle/working/onmt/A/model_step_4968.pt
+[2026-11-11 15:16:00,638 INFO] Step 5000/ 6210; acc: 8.3; ppl: 1570.8; xent: 7.4; lr: 0.00177; sents:   70644; bsz: 3032/3214/177; 18644/19760 tok/s;   2170 sec;
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+The batch will be filled until we reach 1, its size may exceed 32 tokens
+[2026-11-11 15:17:00,248 INFO] valid stats calculation
+                           took: 59.609827518463135 s.
+[2026-11-11 15:17:00,249 INFO] Train perplexity: 3934.17
+[2026-11-11 15:17:00,249 INFO] Train accuracy: 5.62802
+[2026-11-11 15:17:00,250 INFO] Sentences processed: 1.93034e+06
+[2026-11-11 15:17:00,250 INFO] Average bsz: 2965/3166/193
+[2026-11-11 15:17:00,250 INFO] Validation perplexity: 1718.23
+[2026-11-11 15:17:00,250 INFO] Validation accuracy: 7.96703
+[2026-11-11 15:18:03,980 INFO] Weighted corpora loaded so far:
+			* corpus_1: 42
+[2026-11-11 15:18:04,023 INFO] Step 5200/ 6210; acc: 9.7; ppl: 1523.8; xent: 7.3; lr: 0.00173; sents:   85790; bsz: 2957/3170/214; 9586/10278 tok/s;   2293 sec;
+[2026-11-11 15:18:05,647 INFO] Weighted corpora loaded so far:
+			* corpus_1: 43
+[2026-11-11 15:18:10,929 INFO] Weighted corpora loaded so far:
+			* corpus_1: 44
+[2026-11-11 15:18:12,512 INFO] Weighted corpora loaded so far:
+			* corpus_1: 45
+[2026-11-11 15:18:14,092 INFO] Weighted corpora loaded so far:
+			* corpus_1: 46
+[2026-11-11 15:18:20,828 INFO] Weighted corpora loaded so far:
+			* corpus_1: 42
+[2026-11-11 15:18:22,605 INFO] Weighted corpora loaded so far:
+			* corpus_1: 43
+[2026-11-11 15:18:28,529 INFO] Weighted corpora loaded so far:
+			* corpus_1: 44
+[2026-11-11 15:18:30,927 INFO] Weighted corpora loaded so far:
+			* corpus_1: 45
+[2026-11-11 15:18:33,021 INFO] Weighted corpora loaded so far:
+			* corpus_1: 46
+[2026-11-11 15:19:08,436 INFO] Step 5400/ 6210; acc: 9.4; ppl: 1508.9; xent: 7.3; lr: 0.00170; sents:   79501; bsz: 2944/3159/199; 18281/19618 tok/s;   2358 sec;
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+The batch will be filled until we reach 1, its size may exceed 32 tokens
+[2026-11-11 15:20:40,938 INFO] valid stats calculation
+                           took: 59.696239948272705 s.
+[2026-11-11 15:20:40,939 INFO] Train perplexity: 3605.61
+[2026-11-11 15:20:40,939 INFO] Train accuracy: 5.98588
+[2026-11-11 15:20:40,939 INFO] Sentences processed: 2.13544e+06
+[2026-11-11 15:20:40,939 INFO] Average bsz: 2963/3166/194
+[2026-11-11 15:20:40,939 INFO] Validation perplexity: 1631.71
+[2026-11-11 15:20:40,939 INFO] Validation accuracy: 8.12936
+[2026-11-11 15:21:08,968 INFO] Saving checkpoint /kaggle/working/onmt/A/model_step_5589.pt
+[2026-11-11 15:21:12,517 INFO] Step 5600/ 6210; acc: 9.3; ppl: 1456.8; xent: 7.3; lr: 0.00167; sents:   78287; bsz: 2970/3180/196; 9574/10252 tok/s;   2482 sec;
+[2026-11-11 15:22:17,125 INFO] Step 5800/ 6210; acc: 8.7; ppl: 1483.2; xent: 7.3; lr: 0.00164; sents:   68388; bsz: 2987/3193/171; 18494/19771 tok/s;   2546 sec;
+[2026-11-11 15:22:42,294 INFO] Weighted corpora loaded so far:
+			* corpus_1: 47
+[2026-11-11 15:22:43,878 INFO] Weighted corpora loaded so far:
+			* corpus_1: 48
+[2026-11-11 15:22:48,971 INFO] Weighted corpora loaded so far:
+			* corpus_1: 49
+[2026-11-11 15:22:50,649 INFO] Weighted corpora loaded so far:
+			* corpus_1: 50
+[2026-11-11 15:22:52,220 INFO] Weighted corpora loaded so far:
+			* corpus_1: 51
+[2026-11-11 15:22:57,380 INFO] Weighted corpora loaded so far:
+			* corpus_1: 47
+[2026-11-11 15:23:02,512 INFO] Weighted corpora loaded so far:
+			* corpus_1: 48
+[2026-11-11 15:23:04,190 INFO] Weighted corpora loaded so far:
+			* corpus_1: 49
+[2026-11-11 15:23:05,873 INFO] Weighted corpora loaded so far:
+			* corpus_1: 50
+[2026-11-11 15:23:12,474 INFO] Weighted corpora loaded so far:
+			* corpus_1: 51
+[2026-11-11 15:23:22,960 INFO] Step 6000/ 6210; acc: 10.1; ppl: 1412.1; xent: 7.3; lr: 0.00161; sents:   88474; bsz: 2925/3135/221; 17773/19050 tok/s;   2612 sec;
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.4.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "<string>", line 1, in <module>
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/root/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/__init__.py", line 2, in <module>
+    import onmt.inputters
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/__init__.py", line 7, in <module>
+    from onmt.inputters.text_utils import text_sort_key, process, numericalize, tensorify
+  File "/kaggle/working/venv/lib/python3.11/site-packages/onmt/inputters/text_utils.py", line 1, in <module>
+    import torch
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/kaggle/working/venv/lib/python3.11/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+The batch will be filled until we reach 1, its size may exceed 32 tokens
+[2026-11-11 15:24:23,442 INFO] valid stats calculation
+                           took: 60.4818811416626 s.
+[2026-11-11 15:24:23,443 INFO] Train perplexity: 3341.15
+[2026-11-11 15:24:23,444 INFO] Train accuracy: 6.26182
+[2026-11-11 15:24:23,444 INFO] Sentences processed: 2.33078e+06
+[2026-11-11 15:24:23,444 INFO] Average bsz: 2963/3167/194
+[2026-11-11 15:24:23,444 INFO] Validation perplexity: 1597.42
+[2026-11-11 15:24:23,444 INFO] Validation accuracy: 8.30556
+[2026-11-11 15:25:27,178 INFO] Step 6200/ 6210; acc: 9.4; ppl: 1425.4; xent: 7.3; lr: 0.00159; sents:   75895; bsz: 3000/3170/190; 9660/10209 tok/s;   2737 sec;
+[2026-11-11 15:25:30,644 INFO] Saving checkpoint /kaggle/working/onmt/A/model_step_6210.pt
