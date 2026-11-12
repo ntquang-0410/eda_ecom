@@ -12,9 +12,11 @@ tgt_vocab: onmt/A/vocab.zh
 world_size: 1
 gpu_ranks: [0]
 batch_type: tokens
-batch_size: 4096
-accum_count: [2]
-train_steps: 6210          # 10 epoch x 621 step/epoch
+batch_size: 2048
+accum_count: [4]
+num_workers: 0
+bucket_size: 1024
+train_steps: 30000        # ~48,3 epoch x 621 step/epoch (bản 10 epoch bị degenerate)
 valid_steps: 500
 save_checkpoint_steps: 621
 keep_checkpoint: 2

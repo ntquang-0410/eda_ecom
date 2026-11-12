@@ -1,7 +1,7 @@
-# Cấu hình fine-tune / train — Matrix 4×2
+# Cấu hình fine-tune / train — Matrix 5×2
 
 **Ngày:** 2026-11-11  
-**Mục tiêu:** 4 trường phái model × 2 bộ dữ liệu (A-natural, B-balanced), đánh giá trên cùng `eval_F` 1.500 dòng.
+**Mục tiêu:** 5 model × 2 bộ dữ liệu (A-natural, B-balanced), đánh giá trên cùng `eval_F` 1.500 dòng.
 
 ---
 
@@ -34,7 +34,7 @@ Caveat bắt buộc ghi trong báo cáo: B chỉ học ~1/4 epoch so với A; đ
 
 ---
 
-## 2. Quota sampling (dùng cho cả 4 model)
+## 2. Quota sampling (dùng cho cả 5 model)
 
 ```text
 B = 4.000.000 token
@@ -97,6 +97,32 @@ format: tokenizer.apply_chat_template(..., enable_thinking=False)
 
 ---
 
+## 3b. Qwen3-4B (LLM nhỏ hơn, cùng recipe)
+
+**File:** `configs/matrix_5models/qwen3_4b_lora.yaml`
+
+| thông số | giá trị |
+|---|---|
+| base | `Qwen/Qwen3-4B` (`qwen-lm/qwen-3/Transformers/4b/1`) |
+| dtype | bfloat16, gradient checkpointing |
+| max_seq_len | 960 |
+| LoRA | r=16, alpha=32, dropout=0,05, bias=none, `all-linear` |
+| optimizer | AdamW, lr=1e-4, cosine, warmup 20 step, 500 step |
+| batch | micro-batch **4**, ~8.000 token/step |
+| seed | 42 |
+| inference | greedy; `max_new` 64/256/768 theo stratum |
+
+**Kết quả đã chạy:**
+
+| cell | token | phút | epochs | hyp | empty |
+|---|---:|---:|---:|---:|---:|
+| A natural | 4.000.038 | 153,1 | 0,885 | 1.500 | 15 |
+| B balanced | 4.002.207 | 116,3 | 0,253 | 1.500 | 15 |
+
+**Nhận xét:** 4B A hòa 8B A (Δ −0,0008, CI chứa 0); 4B B thấp hơn 8B B 0,0072. Ở description, 4B A +0,0156 và 4B B +0,0006 so với 8B → capacity 4B đã đủ cho trường dài; 8B chỉ nhỉnh title/attribute ngắn. Xem `reports/MODEL_CAUSE_ANALYSIS.md`.
+
+---
+
 ## 4. EcomGPT-7B (LLM chuyên ngành)
 
 **File:** `configs/matrix_4models/ecomgpt_7b_lora.yaml`
@@ -129,6 +155,13 @@ Translate the following Vietnamese e-commerce text into Simplified Chinese. Retu
 
 **Inference:** greedy, batch 8, `max_new` theo `eval_F` (64/256/768). Bản cũ dùng cứng 160 token nên đã bị loại; bản mới sửa theo stratum.
 
+**Kết quả đã chạy:**
+
+| cell | token | steps | hyp | empty |
+|---|---:|---:|---:|---:|
+| A natural | 4.000M | 500 | 1.500 | 0 |
+| B balanced | 4.001M | 500 | 1.500 | 21 (toàn bộ ở Tiki attribute) |
+
 ---
 
 ## 5. OpenNMT-py (Neural MT from-scratch)
@@ -141,15 +174,19 @@ Translate the following Vietnamese e-commerce text into Simplified Chinese. Retu
 | env | venv Python 3.11, torch 2.2.2+cu121 |
 | kiến trúc | Transformer, `d_model=256`, `heads=8`, `layers=4`, `transformer_ff=1024` |
 | dropout | 0,1; attention dropout 0,1 |
-| batch | `batch_type=tokens`, 4.096 token, `accum_count=[2]` |
+| batch | `batch_type=tokens`, 2.048 token × `accum_count=[4]` = 8.192 token/step; `num_workers=0`, `bucket_size=1024` |
 | optimizer | Noam, lr=2,0, warmup 2.000, `adam_beta2=0,998` |
 | label smoothing | 0,1 |
-| epoch | **10** |
-| train_steps | A: **6.210** (621 step/epoch); B: **22.990** (2.299 step/epoch) |
+| epoch | A: **30.000 step ≈ 48,3 epoch** (bản 10 epoch bị degenerate); B: **10 epoch** |
+| train_steps | A: **30.000**; B: **22.990** (2.299 step/epoch) |
 | valid | dev; valid_steps A 500, B 1.149 |
 | checkpoint | mỗi 621 (A) / 2.299 (B) step, giữ 2 |
-| decode | beam 5, batch 32, `max_length=512`, `replace_unk` |
+| decode | beam 5, `max_length=512`, `replace_unk`; batch 32 (B) / batch 4 (A, tránh OOM T4) |
 | seed | 42 |
+
+**Vocab:** ép `src_vocab_size=32000`, `tgt_vocab_size=32000` để khớp embedding 32.768. Bản đầu không ép → vocab 48k/75k, target token >32.767 thành `<unk>`, model chỉ sinh EOS (1.500 dòng rỗng). Đây là bug đã fix, không phải kết quả khoa học.
+
+**Kết quả A 30k step:** ppl 823,5; acc 16,0%; hypothesis đủ 1.500 dòng nhưng vẫn lặp cụm (`件套…`) → COMET 1688 0,3581, BLEU 0,45. Kết luận: OpenNMT from-scratch không cạnh tranh được trên dữ liệu 4–16M token này, kể cả khi tăng gấp 3 compute.
 
 **Caveat B:** có **49 dòng eval** (3,3%) dài >512 token; OpenNMT cắt bớt. Đây là hạn chế của NMT với trường description dài, cần ghi nhận.
 
@@ -181,9 +218,11 @@ Lưu ý: dùng **eflomal thay GIZA++** do môi trường Kaggle; cùng vai trò 
 | 1688 | COMET-da `Unbabel/wmt22-comet-da` + BLEU/chrF |
 | Tiki | COMET-QE `Unbabel/wmt20-comet-qe-da` |
 | so sánh | paired bootstrap **2.000 lần**, resample theo `product_id` |
-| bảng | 4×2 theo stratum Title / Attribute / Description |
+| bảng | 5×2 theo stratum Title / Attribute / Description |
 
-15 dòng eval không sinh được hypothesis (prompt > 952 token) giống hệt nhau ở mọi cell, được loại khỏi mọi phép so sánh.
+15 dòng eval (3 description 1688 + 12 description Tiki) có prompt > 952 token nên Qwen không sinh được hypothesis; EcomGPT B thêm 21 dòng Tiki attribute rỗng. Mọi phép so sánh paired chỉ dùng `eval_id` có score ở cả hai phía, nên n dao động 717–750.
+
+**Bảng kết quả cuối:** xem `reports/MATRIX_5X2_RESULTS.md` (10 cell, stratum, paired bootstrap 2.000 lần).
 
 ---
 
@@ -191,18 +230,24 @@ Lưu ý: dùng **eflomal thay GIZA++** do môi trường Kaggle; cùng vai trò 
 
 | model | GPU | ghi chú |
 |---|---|---|
-| Qwen3-8B | Kaggle RTX Pro 6000 | competition mode, offline |
-| EcomGPT-7B | Kaggle RTX Pro 6000 | cần model offline dataset (đang đóng gói) |
-| OpenNMT | Kaggle GPU (T4/RTX) | internet để tạo venv |
+| Qwen3-8B / Qwen3-4B | Kaggle RTX Pro 6000 | competition mode, offline; 4B micro-batch 4 |
+| EcomGPT-7B | Kaggle RTX Pro 6000 | model offline `nguynthanhquang/ecomgpt-7b` |
+| OpenNMT | Kaggle T4 | internet để tạo venv Python 3.11 + torch 2.2.2 |
 | Moses | CPU | Moses + eflomal |
 
 ---
 
 ## 9. Trạng thái
 
-| cell | trạng thái |
-|---|---|
-| Qwen3-8B A / B | **xong** |
-| Moses A / B | **xong** (hyp có sẵn) |
-| OpenNMT A / B | đang chạy |
-| EcomGPT A / B | cấu hình xong, chờ model offline để chạy RTX |
+| cell | trạng thái | COMET 1688 | COMET-QE Tiki |
+|---|---|---:|---:|
+| Qwen3-8B A | **xong** | 0,8560 | 0,0635 |
+| Qwen3-8B B | **xong** | 0,8552 | 0,0687 |
+| Qwen3-4B A | **xong** | 0,8552 | 0,0647 |
+| Qwen3-4B B | **xong** | 0,8480 | 0,0570 |
+| EcomGPT-7B A | **xong** | 0,8214 | 0,0102 |
+| EcomGPT-7B B | **xong** | 0,7661 | -0,1455 |
+| Moses A | **xong** | 0,7947 | -0,2401 |
+| Moses B | **xong** | 0,8103 | -0,1466 |
+| OpenNMT A (30k step) | **xong** | 0,3581 | -1,3508 |
+| OpenNMT B (10 epoch) | **xong** | 0,3424 | -1,3909 |

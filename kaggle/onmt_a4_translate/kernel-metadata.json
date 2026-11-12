@@ -1,0 +1,17 @@
+{
+  "id": "ntquang0410/onmt-a4-translate",
+  "title": "Onmt A4 Translate",
+  "code_file": "translate.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "ntquang0410/onmt-a4-model",
+    "ntquang0410/tiki-matrix-data"
+  ],
+  "kernel_sources": [],
+  "model_sources": []
+}

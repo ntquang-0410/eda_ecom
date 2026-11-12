@@ -2,6 +2,10 @@
 
 Các báo cáo đang dùng:
 
+- `reports/MATRIX_5X2_RESULTS.md` — **matrix 5 model × 2 recipe** (COMET + bootstrap)
+- `reports/MODEL_CAUSE_ANALYSIS.md` — phân tích nguyên nhân theo từng model
+- `reports/MODEL_DIAGNOSTICS.md` — chẩn đoán lỗi định lượng, ví dụ
+- `reports/FINETUNE_CONFIGS_5MODELS.md` — cấu hình fine-tune/train 5 model
 - `reports/WEIGHT_SURVEY_A_B.md` — **kết quả chính**: A giữ natural, B chọn balanced
 - `reports/SEED123_SUMMARY.md` — xác nhận 2 seed 42/123
 - `reports/CLUSTER_BOOTSTRAP.md` — CI theo product/title_heavy

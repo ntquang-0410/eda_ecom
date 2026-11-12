@@ -1,0 +1,24 @@
+{
+  "config": "balanced",
+  "seed": 42,
+  "steps": 500,
+  "tokens": 4002207,
+  "sampled_eff_tokens_total": 4002206.728,
+  "sampled_eff_tokens_group": {
+    "1688_description": 1001909.723,
+    "1688_title": 1000044.587,
+    "tiki_description": 1000243.055,
+    "tiki_title": 1000009.363
+  },
+  "sampled_unique_rows": 25453,
+  "train_rows": 54006,
+  "train_tokens_million": 15.825,
+  "epochs_seen": 0.2529,
+  "minutes": 116.3,
+  "actual_share": {
+    "1688_description": 0.2500504393324327,
+    "1688_title": 0.24996958535065317,
+    "tiki_description": 0.250019194277405,
+    "tiki_title": 0.24996078103950908
+  }
+}

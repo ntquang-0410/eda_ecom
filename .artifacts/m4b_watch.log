@@ -1,0 +1,112 @@
+04:27:43 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+04:31:44 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+04:35:45 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+04:39:46 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+04:43:47 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+04:47:48 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+04:51:49 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+04:55:50 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+04:59:51 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:03:52 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:07:53 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:11:55 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:15:56 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:19:57 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:23:58 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:27:59 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:32:00 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:36:01 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:40:02 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:44:02 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:48:03 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:52:04 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+05:56:05 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:00:06 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:04:07 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:08:08 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:12:09 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:16:10 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:20:11 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:24:12 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:28:13 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:32:14 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:36:15 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:40:16 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:44:17 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:48:18 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:52:19 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:56:20 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.COMPLETE"]
+Warning: Looks like you're using an outdated `kaggle` version (installed: 2.0.2), please consider upgrading to the latest version (2.2.5)
+Output file downloaded to .artifacts/matrix_out/m4b_a/code/__pycache__/quota_sampling.cpython-313.pyc
+Output file downloaded to .artifacts/matrix_out/m4b_a/code/__pycache__/tpu_weight_train.cpython-313.pyc
+Output file downloaded to .artifacts/matrix_out/m4b_a/code/quota_sampling.py
+Output file downloaded to .artifacts/matrix_out/m4b_a/code/tpu_weight_train.py
+Output file downloaded to .artifacts/matrix_out/m4b_a/code/train_weight_quota_gpu.py
+Output file downloaded to .artifacts/matrix_out/m4b_a/matrix_data/eval_A.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_a/matrix_data/eval_B.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_a/matrix_data/meta_A.json
+Output file downloaded to .artifacts/matrix_out/m4b_a/matrix_data/meta_B.json
+Output file downloaded to .artifacts/matrix_out/m4b_a/matrix_data/processed_A/units.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_a/matrix_data/processed_B/units.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/adapter_natural_seed42/README.md
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/adapter_natural_seed42/adapter_config.json
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/adapter_natural_seed42/adapter_model.safetensors
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/hyp_m4b_a_natural_seed42.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/run_natural_seed42.json
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/sample_natural_seed42.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/summary.json
+Kernel log downloaded to .artifacts/matrix_out/m4b_a/tiki-matrix-m4b-a.log 
+Warning: Looks like you're using an outdated `kaggle` version (installed: 2.0.2), please consider upgrading to the latest version (2.2.5)
+Kernel version 1 successfully pushed.  Please check progress at https://www.kaggle.com/code/ntquang0410/tiki-matrix-m4b-b
+06:56:33 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:00:34 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:04:35 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:08:36 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:12:36 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:16:38 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:20:39 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:24:40 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:28:41 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:32:42 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:36:43 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:40:44 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:44:45 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:48:46 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:52:47 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+07:56:48 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:00:49 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:04:50 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:08:51 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:12:52 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:16:53 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:20:54 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:24:55 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:28:56 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:32:57 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:36:58 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:40:59 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:45:00 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:49:01 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:53:02 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]
+08:57:03 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.COMPLETE"]
+Warning: Looks like you're using an outdated `kaggle` version (installed: 2.0.2), please consider upgrading to the latest version (2.2.5)
+Output file downloaded to .artifacts/matrix_out/m4b_b/code/__pycache__/quota_sampling.cpython-313.pyc
+Output file downloaded to .artifacts/matrix_out/m4b_b/code/__pycache__/tpu_weight_train.cpython-313.pyc
+Output file downloaded to .artifacts/matrix_out/m4b_b/code/quota_sampling.py
+Output file downloaded to .artifacts/matrix_out/m4b_b/code/tpu_weight_train.py
+Output file downloaded to .artifacts/matrix_out/m4b_b/code/train_weight_quota_gpu.py
+Output file downloaded to .artifacts/matrix_out/m4b_b/matrix_data/eval_A.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_b/matrix_data/eval_B.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_b/matrix_data/meta_A.json
+Output file downloaded to .artifacts/matrix_out/m4b_b/matrix_data/meta_B.json
+Output file downloaded to .artifacts/matrix_out/m4b_b/matrix_data/processed_A/units.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_b/matrix_data/processed_B/units.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_b/out_B_m4b_balanced/adapter_balanced_seed42/README.md
+Output file downloaded to .artifacts/matrix_out/m4b_b/out_B_m4b_balanced/adapter_balanced_seed42/adapter_config.json
+Output file downloaded to .artifacts/matrix_out/m4b_b/out_B_m4b_balanced/adapter_balanced_seed42/adapter_model.safetensors
+Output file downloaded to .artifacts/matrix_out/m4b_b/out_B_m4b_balanced/hyp_m4b_b_balanced_seed42.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_b/out_B_m4b_balanced/run_balanced_seed42.json
+Output file downloaded to .artifacts/matrix_out/m4b_b/out_B_m4b_balanced/sample_balanced_seed42.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_b/out_B_m4b_balanced/summary.json
+Kernel log downloaded to .artifacts/matrix_out/m4b_b/tiki-matrix-m4b-b.log 
+DONE
