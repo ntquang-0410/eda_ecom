@@ -115,14 +115,15 @@ def main() -> int:
     sc = load_scores(Path(args.scores_dir))
     df = hyp.merge(ev[["eval_id", "dataset", "pair_type", "source_text", "target_text"]],
                    on="eval_id", how="left", suffixes=("", "_ev"))
-    df["ref"] = df["reference"].fillna(df["target_text"]).fillna("")
+    df["ref"] = np.where(df["dataset"] == "tiki", df["target_text"], df["reference"])
+    df["ref"] = pd.Series(df["ref"], index=df.index).fillna("")
     df["pair_type"] = df["pair_type"].fillna("")
     df["dataset"] = df["dataset"].fillna("")
 
     df["is_empty"] = df.hypothesis.str.strip().eq("")
     df["is_short"] = df.hypothesis.str.len() < 5
     df["len"] = df.hypothesis.str.len()
-    df["ref_len"] = df.ref.str.len().clip(lower=1)
+    df["ref_len"] = np.where(df["dataset"] == "tiki", np.nan, df.ref.str.len().clip(lower=1))
     df["len_ratio"] = df.len / df.ref_len
     df["rep4"] = df.hypothesis.map(rep4)
     df["han"] = df.hypothesis.map(han_ratio)
@@ -177,7 +178,7 @@ def main() -> int:
     overall = []
     for lab in labels:
         d = merged[merged.label == lab]
-        d1688 = d[(d.dataset == "1688") & (~d.empty) & d.ref.str.strip().ne("")]
+        d1688 = d[(d.dataset == "1688") & (~d.is_empty) & d.ref.str.strip().ne("")]
         overall.append({
             "label": lab,
             "comet1688": d[d.dataset == "1688"].score.mean(),
@@ -233,12 +234,35 @@ def main() -> int:
                      f"{r.med_len:.0f} | {r.len_ratio:.2f} | {r.rep4:.3f} | {r.han_pct:.1f} | "
                      f"{r.vi_pct:.1f} | {r.digit_recall:.2f} | {r.latin_recall:.2f} |")
 
-    lines += ["", "## 3. BLEU/chrF theo stratum (1688)", "",
+    # coverage gap: stratum có trong training vs stratum bị bỏ
+    gap_rows = []
+    for lab in labels:
+        recipe = lab.rsplit("_", 1)[-1]
+        unseen = "description" if recipe == "a" else "attribute"
+        for ds in ("1688", "tiki"):
+            d = tab[(tab.label == lab) & (tab.dataset == ds)]
+            if not len(d):
+                continue
+            seen = d[d.stratum != unseen]
+            miss = d[d.stratum == unseen]
+            gap_rows.append({"label": lab, "dataset": ds,
+                             "seen": seen.comet.mean(), "unseen": miss.comet.mean(),
+                             "gap": seen.comet.mean() - miss.comet.mean(),
+                             "unseen_stratum": unseen})
+    gap = pd.DataFrame(gap_rows)
+    lines += ["", "## 3. Khoảng trống stratum bị bỏ khỏi training", "",
+              "A chỉ có title+attribute; B chỉ có title+description. Cột `unseen` là stratum không hề xuất hiện trong training.", "",
+              "| model | dataset | stratum unseen | COMET seen | COMET unseen | gap |",
+              "|---|---|---|---:|---:|---:|"]
+    for _, r in gap.iterrows():
+        lines.append(f"| {r.label} | {r.dataset} | {r.unseen_stratum} | {r.seen:.3f} | {r.unseen:.3f} | {r.gap:+.3f} |")
+
+    lines += ["", "## 4. BLEU/chrF theo stratum (1688)", "",
               "| model | stratum | n | BLEU | chrF |", "|---|---|---:|---:|---:|"]
     for _, r in bl.iterrows():
         lines.append(f"| {r.label} | {r.stratum} | {r.n} | {r.bleu:.2f} | {r.chrf:.2f} |")
 
-    lines += ["", "## 4. Ví dụ lỗi nặng nhất (1688, COMET thấp nhất)", ""]
+    lines += ["", "## 5. Ví dụ lỗi nặng nhất (1688, COMET thấp nhất)", ""]
     for lab in labels:
         e = examples.get(lab)
         if not e:

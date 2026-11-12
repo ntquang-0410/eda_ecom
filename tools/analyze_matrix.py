@@ -15,10 +15,11 @@ import sacrebleu
 PAT = re.compile(r"scores_(?P<label>.+)_seed42_(?P<ds>1688|tiki)\.parquet")
 STRATA = [("1688", "title"), ("1688", "attribute"), ("1688", "description"),
           ("tiki", "title"), ("tiki", "attribute"), ("tiki", "description")]
-ORDER = ["qwen_a", "qwen_b", "ecomgpt_a", "ecomgpt_b",
+ORDER = ["qwen_a", "qwen_b", "qwen4b_a", "qwen4b_b", "ecomgpt_a", "ecomgpt_b",
          "moses_a", "moses_b", "onmt_a", "onmt_b"]
-MODELS = ["qwen", "ecomgpt", "moses", "onmt"]
-PRETTY = {"qwen": "Qwen3-8B", "ecomgpt": "EcomGPT-7B", "moses": "Moses", "onmt": "OpenNMT"}
+MODELS = ["qwen", "qwen4b", "ecomgpt", "moses", "onmt"]
+PRETTY = {"qwen": "Qwen3-8B", "qwen4b": "Qwen3-4B", "ecomgpt": "EcomGPT-7B",
+          "moses": "Moses", "onmt": "OpenNMT"}
 
 
 def load(scores_dir: Path) -> pd.DataFrame:
