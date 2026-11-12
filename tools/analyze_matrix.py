@@ -10,6 +10,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import sacrebleu
 
 PAT = re.compile(r"scores_(?P<label>.+)_seed42_(?P<ds>1688|tiki)\.parquet")
 STRATA = [("1688", "title"), ("1688", "attribute"), ("1688", "description"),
@@ -60,14 +61,27 @@ def main() -> int:
 
     labels = sorted(df.label.unique())
     lines = ["# Matrix 4 model × 2 data — COMET", "",
-             "Eval: `eval_F` 1.500 dòng. 1688 = COMET-da, Tiki = COMET-QE.", ""]
+             "Eval: `eval_F` 1.500 dòng. 1688 = COMET-da, Tiki = COMET-QE. "
+             "BLEU/chrF tính trên phần 1688 có reference.", ""]
     lines += ["## Điểm theo model × data", "",
-              "| cell | 1688 da | Tiki QE | BLEU 1688 | n 1688 | n Tiki |",
-              "|---|---:|---:|---:|---:|---:|"]
+              "| cell | 1688 da | Tiki QE | BLEU 1688 | chrF 1688 | n 1688 | n Tiki |",
+              "|---|---:|---:|---:|---:|---:|---:|"]
     for lab in labels:
         a = df[(df.label == lab) & (df.ds == "1688")]
         t = df[(df.label == lab) & (df.ds == "tiki")]
-        lines.append(f"| {lab} | {a.score.mean():.4f} | {t.score.mean():.4f} | - | {len(a)} | {len(t)} |")
+        bleu = chrf = float("nan")
+        hp = root / ".artifacts" / "hyp" / f"hyp_{lab}_seed42.parquet"
+        if not hp.exists():
+            hp = next((x for x in root.glob(f".artifacts/matrix_out/**/hyp_{lab}_seed42.parquet")), None)
+        if hp is not None:
+            h = pd.read_parquet(hp)
+            h = h[(h.dataset == "1688") & h.reference.fillna("").str.strip().ne("") & h.hypothesis.fillna("").str.strip().ne("")]
+            if len(h):
+                bleu = sacrebleu.corpus_bleu(h.hypothesis.tolist(), [h.reference.tolist()], tokenize="zh").score
+                chrf = sacrebleu.corpus_chrf(h.hypothesis.tolist(), [h.reference.tolist()]).score
+        b = f"{bleu:.2f}" if bleu == bleu else "-"
+        c = f"{chrf:.2f}" if chrf == chrf else "-"
+        lines.append(f"| {lab} | {a.score.mean():.4f} | {t.score.mean():.4f} | {b} | {c} | {len(a)} | {len(t)} |")
 
     lines += ["", "## Theo stratum", "",
               "| cell | " + " | ".join(f"{ds}_{pt}" for ds, pt in STRATA) + " |",
@@ -79,15 +93,23 @@ def main() -> int:
             cells.append(f"{part.score.mean():.3f}" if len(part) else "-")
         lines.append(f"| {lab} | " + " | ".join(cells) + " |")
 
-    base = df[df.label == args.baseline][["eval_id", "score"]]
-    lines += ["", f"## Paired bootstrap vs `{args.baseline}`", "",
-              "| cell | Δ | CI 95% | n sản phẩm |", "|---|---:|---|---:|"]
+    lines += ["", f"## Paired bootstrap vs `{args.baseline}` (2.000 lần, cluster theo sản phẩm)", "",
+              "| cell | Δ 1688 da [CI 95%] | Δ Tiki QE [CI 95%] | n 1688 | n Tiki |",
+              "|---|---:|---:|---:|---:|"]
     for lab in labels:
         if lab == args.baseline:
             continue
-        m = df[df.label == lab].merge(base, on="eval_id", suffixes=("", "_base"))
-        info = boot((m.score - m.score_base).to_numpy(), m.product_id.fillna(m.eval_id).to_numpy())
-        lines.append(f"| {lab} | {info['mean']:+.4f} | [{info['lo']:+.4f}; {info['hi']:+.4f}] | {info['n']} |")
+        cells = []
+        for ds in ("1688", "tiki"):
+            b = df[(df.label == args.baseline) & (df.ds == ds)][["eval_id", "score"]]
+            m = df[(df.label == lab) & (df.ds == ds)].merge(b, on="eval_id", suffixes=("", "_base"))
+            if len(m) < 2:
+                cells.append(("-", "-"))
+                continue
+            info = boot((m.score - m.score_base).to_numpy(), m.product_id.fillna(m.eval_id).to_numpy())
+            sig = "*" if info["lo"] > 0 or info["hi"] < 0 else ""
+            cells.append((f"{info['mean']:+.4f} [{info['lo']:+.4f}; {info['hi']:+.4f}]{sig}", str(info["n"])))
+        lines.append(f"| {lab} | {cells[0][0]} | {cells[1][0]} | {cells[0][1]} | {cells[1][1]} |")
 
     lines += ["", "## Đọc kết quả", "",
               "- Qwen3-8B là baseline mạnh nhất trên cả 1688 và Tiki.",
