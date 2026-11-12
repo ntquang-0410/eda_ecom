@@ -1,0 +1,54 @@
+model:
+  base: Qwen/Qwen3-4B
+  source: qwen-lm/qwen-3/Transformers/4b/1
+  dtype: bfloat16
+  gradient_checkpointing: true
+  max_seq_len: 960
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  bias: none
+  task_type: CAUSAL_LM
+  target_modules: all-linear
+
+optimizer:
+  name: AdamW
+  lr: 1.0e-4
+  weight_decay: 0.0
+  betas: [0.9, 0.999]
+  grad_clip: 1.0
+  scheduler: cosine
+  warmup_steps: 20
+  total_steps: 500
+
+training:
+  token_budget: 4000000
+  steps: 500
+  tokens_per_step: 8000
+  micro_batch: 4
+  seed: 42
+  loss: token-weighted causal LM (labels -100 cho prompt)
+
+sampling:
+  method: quota
+  group_target: T_g = s_g * 4_000_000
+  sample_with_replacement: true
+  per_group_uniform: true
+  configs:
+    A_natural: natural token mass
+    B_balanced: {1688_title: 0.25, 1688_description: 0.25, tiki_title: 0.25, tiki_description: 0.25}
+
+prompt:
+  system: >-
+    You are a professional Vietnamese-to-Simplified Chinese e-commerce translator.
+    Translate the user text into Simplified Chinese. Preserve numbers, units and brand names.
+    Return only the translation, no explanation.
+  user: source_text
+  chat_template: tokenizer.apply_chat_template(enable_thinking=False)
+
+inference:
+  do_sample: false
+  batch_size: 1 nếu max_new > 300, ngược lại 4
+  max_new: theo eval_F (64 title / 256 attribute / 768 description)

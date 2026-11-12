@@ -1,0 +1,36 @@
+data:
+  corpus_1:
+    path_src: onmt/B/train.vi
+    path_tgt: onmt/B/train.zh
+    weight: 1
+  valid:
+    path_src: onmt/B/valid.vi
+    path_tgt: onmt/B/valid.zh
+save_model: onmt/B/model
+src_vocab: onmt/B/vocab.vi
+tgt_vocab: onmt/B/vocab.zh
+world_size: 1
+gpu_ranks: [0]
+batch_type: tokens
+batch_size: 2048
+accum_count: [4]
+num_workers: 0
+bucket_size: 1024
+train_steps: 22990        # 10 epoch x 2299 step/epoch
+valid_steps: 1149
+save_checkpoint_steps: 2299
+keep_checkpoint: 2
+report_every: 200
+warmup_steps: 2000
+learning_rate: 2.0
+decay_method: noam
+adam_beta2: 0.998
+label_smoothing: 0.1
+dropout: 0.1
+attention_dropout: 0.1
+seed: 42
+model_type: transformer
+d_model: 256
+heads: 8
+layers: 4
+transformer_ff: 1024
