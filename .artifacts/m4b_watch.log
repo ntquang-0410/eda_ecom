@@ -35,3 +35,27 @@
 06:44:17 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
 06:48:18 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
 06:52:19 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.RUNNING"]
+06:56:20 tiki-matrix-m4b-a [ntquang0410/tiki-matrix-m4b-a has status "KernelWorkerStatus.COMPLETE"]
+Warning: Looks like you're using an outdated `kaggle` version (installed: 2.0.2), please consider upgrading to the latest version (2.2.5)
+Output file downloaded to .artifacts/matrix_out/m4b_a/code/__pycache__/quota_sampling.cpython-313.pyc
+Output file downloaded to .artifacts/matrix_out/m4b_a/code/__pycache__/tpu_weight_train.cpython-313.pyc
+Output file downloaded to .artifacts/matrix_out/m4b_a/code/quota_sampling.py
+Output file downloaded to .artifacts/matrix_out/m4b_a/code/tpu_weight_train.py
+Output file downloaded to .artifacts/matrix_out/m4b_a/code/train_weight_quota_gpu.py
+Output file downloaded to .artifacts/matrix_out/m4b_a/matrix_data/eval_A.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_a/matrix_data/eval_B.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_a/matrix_data/meta_A.json
+Output file downloaded to .artifacts/matrix_out/m4b_a/matrix_data/meta_B.json
+Output file downloaded to .artifacts/matrix_out/m4b_a/matrix_data/processed_A/units.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_a/matrix_data/processed_B/units.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/adapter_natural_seed42/README.md
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/adapter_natural_seed42/adapter_config.json
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/adapter_natural_seed42/adapter_model.safetensors
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/hyp_m4b_a_natural_seed42.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/run_natural_seed42.json
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/sample_natural_seed42.parquet
+Output file downloaded to .artifacts/matrix_out/m4b_a/out_A_m4b_natural/summary.json
+Kernel log downloaded to .artifacts/matrix_out/m4b_a/tiki-matrix-m4b-a.log 
+Warning: Looks like you're using an outdated `kaggle` version (installed: 2.0.2), please consider upgrading to the latest version (2.2.5)
+Kernel version 1 successfully pushed.  Please check progress at https://www.kaggle.com/code/ntquang0410/tiki-matrix-m4b-b
+06:56:33 tiki-matrix-m4b-b [ntquang0410/tiki-matrix-m4b-b has status "KernelWorkerStatus.RUNNING"]

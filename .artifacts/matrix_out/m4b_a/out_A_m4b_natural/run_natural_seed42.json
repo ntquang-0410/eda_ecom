@@ -1,0 +1,24 @@
+{
+  "config": "natural",
+  "seed": 42,
+  "steps": 500,
+  "tokens": 4000038,
+  "sampled_eff_tokens_total": 4000038.144,
+  "sampled_eff_tokens_group": {
+    "1688_attribute": 2684294.228,
+    "1688_title": 633727.915,
+    "tiki_attribute": 300077.323,
+    "tiki_title": 381938.678
+  },
+  "sampled_unique_rows": 65353,
+  "train_rows": 111129,
+  "train_tokens_million": 4.518,
+  "epochs_seen": 0.8854,
+  "minutes": 153.1,
+  "actual_share": {
+    "1688_attribute": 0.6710671577032473,
+    "1688_title": 0.15843046787017964,
+    "tiki_attribute": 0.07501861541685818,
+    "tiki_title": 0.09548375900971492
+  }
+}
