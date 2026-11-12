@@ -8,6 +8,34 @@
     "B_balanced": {"tokens": 4002207, "steps": 500, "minutes": 149.0, "hyp_rows": 1500, "empty": 15,
                    "sampled_rows": 52131, "unique_rows": 25453, "epochs_seen": 0.2529}
   },
+  "ecomgpt_7b": {
+    "A_natural": {"tokens": 4000038, "steps": 500, "hyp_rows": 1500, "empty": 0,
+                  "sampled_rows": 98826, "unique_rows": 65353},
+    "B_balanced": {"tokens": 4000665, "steps": 500, "hyp_rows": 1500, "empty": 21,
+                   "sampled_rows": 52128, "unique_rows": 25453}
+  },
+  "moses": {
+    "A_natural": {"budget_tokens": 4000000, "hyp_rows": 1500, "empty": 0},
+    "B_balanced": {"budget_tokens": 4000000, "hyp_rows": 1500, "empty": 0}
+  },
+  "opennmt": {
+    "A_natural": {"train_steps": 30000, "epochs": 48.3, "train_tokens_unique": 5083615,
+                  "ppl_final": 823.5, "acc_final": 16.0, "hyp_rows": 1500, "empty": 0,
+                  "decode_batch": 4},
+    "B_balanced": {"train_steps": 22990, "epochs": 10.0, "train_tokens_unique": 18828937,
+                   "ppl_final": 561.3, "acc_final": 21.2, "hyp_rows": 1500, "empty": 0,
+                   "decode_batch": 32}
+  },
+  "final_comet": {
+    "qwen_a":    {"comet_da_1688": 0.8560, "comet_qe_tiki": 0.0635, "bleu_1688": 55.19},
+    "qwen_b":    {"comet_da_1688": 0.8552, "comet_qe_tiki": 0.0687, "bleu_1688": 70.95},
+    "ecomgpt_a": {"comet_da_1688": 0.8214, "comet_qe_tiki": 0.0102, "bleu_1688": 26.37},
+    "ecomgpt_b": {"comet_da_1688": 0.7661, "comet_qe_tiki": -0.1455, "bleu_1688": 14.39},
+    "moses_a":   {"comet_da_1688": 0.7947, "comet_qe_tiki": -0.2401, "bleu_1688": 33.96},
+    "moses_b":   {"comet_da_1688": 0.8103, "comet_qe_tiki": -0.1466, "bleu_1688": 67.82},
+    "onmt_a":    {"comet_da_1688": 0.3581, "comet_qe_tiki": -1.3508, "bleu_1688": 0.45},
+    "onmt_b":    {"comet_da_1688": 0.3424, "comet_qe_tiki": -1.3909, "bleu_1688": 2.05}
+  },
   "eval_F": {"rows": 1500, "strata": {"1688_title": 300, "1688_attribute": 300, "1688_description": 150,
              "tiki_title": 300, "tiki_attribute": 300, "tiki_description": 150}}
 }
