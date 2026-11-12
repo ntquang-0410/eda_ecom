@@ -1,7 +1,7 @@
-# Cấu hình fine-tune / train — Matrix 4×2
+# Cấu hình fine-tune / train — Matrix 5×2
 
 **Ngày:** 2026-11-11  
-**Mục tiêu:** 4 trường phái model × 2 bộ dữ liệu (A-natural, B-balanced), đánh giá trên cùng `eval_F` 1.500 dòng.
+**Mục tiêu:** 5 model × 2 bộ dữ liệu (A-natural, B-balanced), đánh giá trên cùng `eval_F` 1.500 dòng.
 
 ---
 
@@ -34,7 +34,7 @@ Caveat bắt buộc ghi trong báo cáo: B chỉ học ~1/4 epoch so với A; đ
 
 ---
 
-## 2. Quota sampling (dùng cho cả 4 model)
+## 2. Quota sampling (dùng cho cả 5 model)
 
 ```text
 B = 4.000.000 token
@@ -94,6 +94,32 @@ format: tokenizer.apply_chat_template(..., enable_thinking=False)
 |---|---:|---:|---:|---:|
 | A natural | 4.000.038 | 216,3 | 0,885 | 1.500 |
 | B balanced | 4.002.207 | 149,0 | 0,253 | 1.500 |
+
+---
+
+## 3b. Qwen3-4B (LLM nhỏ hơn, cùng recipe)
+
+**File:** `configs/matrix_5models/qwen3_4b_lora.yaml`
+
+| thông số | giá trị |
+|---|---|
+| base | `Qwen/Qwen3-4B` (`qwen-lm/qwen-3/Transformers/4b/1`) |
+| dtype | bfloat16, gradient checkpointing |
+| max_seq_len | 960 |
+| LoRA | r=16, alpha=32, dropout=0,05, bias=none, `all-linear` |
+| optimizer | AdamW, lr=1e-4, cosine, warmup 20 step, 500 step |
+| batch | micro-batch **4**, ~8.000 token/step |
+| seed | 42 |
+| inference | greedy; `max_new` 64/256/768 theo stratum |
+
+**Kết quả đã chạy:**
+
+| cell | token | phút | epochs | hyp | empty |
+|---|---:|---:|---:|---:|---:|
+| A natural | 4.000.038 | 153,1 | 0,885 | 1.500 | 15 |
+| B balanced | 4.002.207 | 116,3 | 0,253 | 1.500 | 15 |
+
+**Nhận xét:** 4B A hòa 8B A (Δ −0,0008, CI chứa 0); 4B B thấp hơn 8B B 0,0072. Ở description, 4B A +0,0156 và 4B B +0,0006 so với 8B → capacity 4B đã đủ cho trường dài; 8B chỉ nhỉnh title/attribute ngắn. Xem `reports/MODEL_CAUSE_ANALYSIS.md`.
 
 ---
 
@@ -192,11 +218,11 @@ Lưu ý: dùng **eflomal thay GIZA++** do môi trường Kaggle; cùng vai trò 
 | 1688 | COMET-da `Unbabel/wmt22-comet-da` + BLEU/chrF |
 | Tiki | COMET-QE `Unbabel/wmt20-comet-qe-da` |
 | so sánh | paired bootstrap **2.000 lần**, resample theo `product_id` |
-| bảng | 4×2 theo stratum Title / Attribute / Description |
+| bảng | 5×2 theo stratum Title / Attribute / Description |
 
 15 dòng eval (3 description 1688 + 12 description Tiki) có prompt > 952 token nên Qwen không sinh được hypothesis; EcomGPT B thêm 21 dòng Tiki attribute rỗng. Mọi phép so sánh paired chỉ dùng `eval_id` có score ở cả hai phía, nên n dao động 717–750.
 
-**Bảng kết quả cuối:** xem `reports/MATRIX_4X2_RESULTS.md` (8 cell, stratum, paired bootstrap 2.000 lần).
+**Bảng kết quả cuối:** xem `reports/MATRIX_5X2_RESULTS.md` (10 cell, stratum, paired bootstrap 2.000 lần).
 
 ---
 
@@ -204,7 +230,7 @@ Lưu ý: dùng **eflomal thay GIZA++** do môi trường Kaggle; cùng vai trò 
 
 | model | GPU | ghi chú |
 |---|---|---|
-| Qwen3-8B | Kaggle RTX Pro 6000 | competition mode, offline |
+| Qwen3-8B / Qwen3-4B | Kaggle RTX Pro 6000 | competition mode, offline; 4B micro-batch 4 |
 | EcomGPT-7B | Kaggle RTX Pro 6000 | model offline `nguynthanhquang/ecomgpt-7b` |
 | OpenNMT | Kaggle T4 | internet để tạo venv Python 3.11 + torch 2.2.2 |
 | Moses | CPU | Moses + eflomal |
@@ -217,6 +243,8 @@ Lưu ý: dùng **eflomal thay GIZA++** do môi trường Kaggle; cùng vai trò 
 |---|---|---:|---:|
 | Qwen3-8B A | **xong** | 0,8560 | 0,0635 |
 | Qwen3-8B B | **xong** | 0,8552 | 0,0687 |
+| Qwen3-4B A | **xong** | 0,8552 | 0,0647 |
+| Qwen3-4B B | **xong** | 0,8480 | 0,0570 |
 | EcomGPT-7B A | **xong** | 0,8214 | 0,0102 |
 | EcomGPT-7B B | **xong** | 0,7661 | -0,1455 |
 | Moses A | **xong** | 0,7947 | -0,2401 |

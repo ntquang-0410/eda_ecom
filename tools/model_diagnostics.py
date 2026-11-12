@@ -274,7 +274,7 @@ def main() -> int:
                              "unseen_stratum": unseen})
     gap = pd.DataFrame(gap_rows)
     lines += ["", "## 4. Khoảng trống stratum bị bỏ khỏi training", "",
-              "A chỉ có title+attribute; B chỉ có title+description. Cột `unseen` là stratum không hề xuất hiện trong training.", "",
+              "A chỉ có title+attribute; B chỉ có title+description. `gap` = COMET trung bình các stratum seen − COMET stratum unseen; gap âm nghĩa là stratum bị bỏ lại tốt hơn.", "",
               "| model | dataset | stratum unseen | COMET seen | COMET unseen | gap |",
               "|---|---|---|---:|---:|---:|"]
     for _, r in gap.iterrows():

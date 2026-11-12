@@ -189,13 +189,22 @@ def main() -> int:
         i1 = boot((m1688.score - m1688.score_a).to_numpy(), m1688.product_id.fillna(m1688.eval_id).to_numpy())
         i2 = boot((mtiki.score - mtiki.score_a).to_numpy(), mtiki.product_id.fillna(mtiki.eval_id).to_numpy())
         lines += [
-            f"- **Model:** Qwen3-8B > EcomGPT-7B > Moses > OpenNMT trên 1688. "
-            f"Qwen hơn cell mạnh thứ nhì (EcomGPT A) 0,0346 COMET, CI [0,0273; 0,0417].",
-            f"- **Qwen A vs B:** B − A = {fmt(i1)} trên 1688 và {fmt(i2)} trên Tiki; "
+            "- **Model:** Qwen3-8B ≈ Qwen3-4B > EcomGPT-7B > Moses > OpenNMT trên 1688. "
+            "Hai cell Qwen dẫn đầu; khoảng cách với EcomGPT A là 0,034 COMET (CI [0,027; 0,042]).",
+            f"- **Qwen3-8B A vs B:** B − A = {fmt(i1)} trên 1688 và {fmt(i2)} trên Tiki; "
             "cả hai CI đều chứa 0 → không có khác biệt tổng thể có ý nghĩa.",
-            "- **Đánh đổi theo stratum (Qwen):** B − A = **+0,053** description 1688 (CI [+0,041; +0,067]) "
+            "- **Đánh đổi theo stratum (Qwen3-8B):** B − A = **+0,053** description 1688 (CI [+0,041; +0,067]) "
             "nhưng **−0,028** attribute (CI [−0,036; −0,021]); Tiki attribute +0,031. "
             "Recipe B dạy description tốt hơn nhưng mất attribute, nên A/B hòa về tổng.",
+            "- **Qwen3-4B vs Qwen3-8B:** A hòa hoàn toàn (Δ −0,0008, CI [−0,0055; +0,0041]); "
+            "B thấp hơn 0,0072 (CI [−0,0114; −0,0031]) do title (−0,009*) và attribute (−0,010*). "
+            "Ở description, 4B **không thua**: A +0,0156* và B +0,0006. Capacity 4B đã đủ cho trường dài; "
+            "8B chỉ nhỉnh hơn ở title/attribute ngắn.",
+            "- **Qwen3-4B A vs B:** cùng kiểu đánh đổi: description +0,0384* nhưng attribute −0,0331*; "
+            "tổng 1688 giảm nhẹ −0,0072*.",
+            "- **BLEU vs COMET:** Qwen3-4B A có BLEU 41,7 so với 55,2 của 8B A nhưng COMET bằng nhau. "
+            "4B sinh description dài/đủ trường hơn (đôi khi 8B co về `其他`), nên bị BLEU phạt n-gram "
+            "nhưng COMET-da vẫn đánh giá đúng nghĩa.",
             "- **EcomGPT-7B:** B kém A rõ rệt ở cả tổng (Δ −0,055 da; −0,157 QE) lẫn attribute và description.",
             "- **Moses:** B hơn A ở 1688 (+0,0156, CI [+0,009; +0,022]) và Tiki QE (+0,0935), "
             "chủ yếu nhờ description; nhưng cả hai vẫn có COMET-QE Tiki âm.",
