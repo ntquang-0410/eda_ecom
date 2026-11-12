@@ -226,7 +226,30 @@ def main() -> int:
                      f"{r.empty_pct:.1f} | {r.short_pct:.1f} | {r.rep4:.3f} | {r.vi_pct:.1f} | "
                      f"{r.digit_recall:.2f} | {r.latin_recall:.2f} | {r.unique_hyp_pct:.1f} |")
 
-    lines += ["", "## 2. Theo stratum", "",
+    fail_rows = []
+    for lab in labels:
+        d = merged[merged.label == lab]
+        d1688 = d[d.dataset == "1688"]
+        num_rows = d[d.digit.notna()]
+        fail_rows.append({
+            "label": lab,
+            "rep_high": 100 * (d.rep4 > 0.3).mean(),
+            "too_short": 100 * (d1688.len_ratio < 0.5).mean(),
+            "too_long": 100 * (d1688.len_ratio > 2.0).mean(),
+            "vi_leak": 100 * (d.vi > 0.01).mean(),
+            "num_missing": 100 * (num_rows.digit < 1).mean() if len(num_rows) else np.nan,
+            "top1_freq": 100 * d.hypothesis.value_counts(normalize=True).iloc[0] if len(d) else np.nan,
+        })
+    fail = pd.DataFrame(fail_rows).set_index("label")
+    lines += ["", "## 2. Kiểu lỗi", "",
+              "| model | rep4>0,3 % | len/ref<0,5 % (1688) | len/ref>2 % (1688) | sót tiếng Việt % | mất số % | tần suất hyp top-1 % |",
+              "|---|---:|---:|---:|---:|---:|---:|"]
+    for lab in labels:
+        r = fail.loc[lab]
+        lines.append(f"| {lab} | {r.rep_high:.1f} | {r.too_short:.1f} | {r.too_long:.1f} | "
+                     f"{r.vi_leak:.1f} | {r.num_missing:.1f} | {r.top1_freq:.1f} |")
+
+    lines += ["", "## 3. Theo stratum", "",
               "| model | dataset | stratum | n | COMET | rỗng % | med len | len/ref | rep4 | Hán % | vi % | digit | latin |",
               "|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
     for _, r in tab.iterrows():
@@ -250,19 +273,19 @@ def main() -> int:
                              "gap": seen.comet.mean() - miss.comet.mean(),
                              "unseen_stratum": unseen})
     gap = pd.DataFrame(gap_rows)
-    lines += ["", "## 3. Khoảng trống stratum bị bỏ khỏi training", "",
+    lines += ["", "## 4. Khoảng trống stratum bị bỏ khỏi training", "",
               "A chỉ có title+attribute; B chỉ có title+description. Cột `unseen` là stratum không hề xuất hiện trong training.", "",
               "| model | dataset | stratum unseen | COMET seen | COMET unseen | gap |",
               "|---|---|---|---:|---:|---:|"]
     for _, r in gap.iterrows():
         lines.append(f"| {r.label} | {r.dataset} | {r.unseen_stratum} | {r.seen:.3f} | {r.unseen:.3f} | {r.gap:+.3f} |")
 
-    lines += ["", "## 4. BLEU/chrF theo stratum (1688)", "",
+    lines += ["", "## 5. BLEU/chrF theo stratum (1688)", "",
               "| model | stratum | n | BLEU | chrF |", "|---|---|---:|---:|---:|"]
     for _, r in bl.iterrows():
         lines.append(f"| {r.label} | {r.stratum} | {r.n} | {r.bleu:.2f} | {r.chrf:.2f} |")
 
-    lines += ["", "## 5. Ví dụ lỗi nặng nhất (1688, COMET thấp nhất)", ""]
+    lines += ["", "## 6. Ví dụ lỗi nặng nhất (1688, COMET thấp nhất)", ""]
     for lab in labels:
         e = examples.get(lab)
         if not e:
