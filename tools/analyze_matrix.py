@@ -63,7 +63,7 @@ def fmt(info: dict, signed: bool = True, stars: bool = True) -> str:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--scores-dir", required=True)
-    ap.add_argument("--out", default="reports/MATRIX_4X2_RESULTS.md")
+    ap.add_argument("--out", default="reports/MATRIX_5X2_RESULTS.md")
     ap.add_argument("--eval", default="/content/matrix_data_dl/eval_A.parquet",
                     help="eval_F parquet 1.500 dòng (mặc định bản trong tiki-matrix-data)")
     args = ap.parse_args()
@@ -92,8 +92,8 @@ def main() -> int:
         return d.score.mean() if len(d) else float("nan")
 
     lines = []
-    lines += ["# Matrix 4 model × 2 data — COMET", "",
-              "Eval: `eval_F` 1.500 dòng dùng chung cho cả 8 cell (cùng `eval_id`, cùng reference). "
+    lines += ["# Matrix 5 model × 2 data — COMET", "",
+              "Eval: `eval_F` 1.500 dòng dùng chung cho cả 10 cell (cùng `eval_id`, cùng reference). "
               "1688 = COMET-da có reference; Tiki = COMET-QE không reference. "
               "BLEU/chrF tính trên phần 1688 có reference và hypothesis không rỗng.", ""]
 
