@@ -280,6 +280,36 @@ def test_dong_lenh_va_file_ra():
         assert tm["diem_chinh"]["chrf_macro_huong"] == 100 and "sacrebleu" in tm["phien_ban"]
 
 
+def test_dong_ngu_canh():
+    """Sửa 07/11/2026: dòng chép lại lời dẫn 'Product title (context only...)' đã dịch bị cắt; dòng thuộc tính bình thường không bị đụng."""
+    sach, cat, qt = C.cat_loi_dan("产品标题（仅上下文，不翻译）：Cốc giữ nhiệt\n品牌: Elmich\n容量: 500ml")
+    assert sach == "品牌: Elmich\n容量: 500ml" and cat and qt == "dong_ngu_canh", (sach, qt)
+    sach, cat, qt = C.cat_loi_dan("Tiêu đề sản phẩm (chỉ để làm ngữ cảnh, không dịch): 保温杯\nThương hiệu: Elmich")
+    assert sach == "Thương hiệu: Elmich" and qt == "dong_ngu_canh", (sach, qt)
+    sach, cat, qt = C.cat_loi_dan("Product title (context only, do not translate): x\nThương hiệu: Elmich")
+    assert sach == "Thương hiệu: Elmich" and qt == "dong_ngu_canh"
+    for ok in ("品牌: Elmich\n产品标题: 保温杯", "Thương hiệu: Elmich\nTên sản phẩm: Cốc", "产品: 保温杯 (仅限室内)"):
+        s, c, q = C.cat_loi_dan(ok)
+        assert s == ok and not c, (ok, s, q)
+    # kết hợp với lời dẫn đầu dòng: cả hai quy tắc cùng chạy
+    s, c, q = C.cat_loi_dan("Here is the translation:\n产品标题（仅上下文）：x\nA: 1")
+    assert s == "A: 1" and q == "dong_ngu_canh,dong_dan", (s, q)
+
+
+def test_moc_tham_chieu():
+    """Sửa 07/11/2026: giu_so, giu_latin, sai_chu_viet cũng chạy trên bản tham chiếu; bản dịch hỏng thì mốc vẫn nguyên, bản dịch đúng thì hai bên bằng nhau."""
+    t = tc(TAT_CA)
+    df, tm = C.cham(t, dd(t))
+    for c in ("ref_giu_so_dat", "ref_giu_latin_dat", "ref_sai_chu_viet"):
+        assert c in df.columns and "_ref" not in c
+    assert (df["ref_giu_so_dat"] == df["giu_so_dat"]).all() and (df["ref_sai_chu_viet"] == df["sai_chu_viet"]).all()
+    nhom = tm["theo_nhom"]["zh->vi/title"]
+    assert nhom["ref_ti_le_giu_so_dat"] == nhom["ti_le_giu_so_dat"] and "ref_ti_le_sai_chu_viet" in nhom and "ref_ti_le_giu_latin_dat" in nhom
+    hong = dd(t, {"m0": "Cốc giữ nhiệt inox màu đen"})                # mất 500ml và Elmich: hyp kém mốc, mốc không đổi
+    df2, tm2 = C.cham(t, hong)
+    assert df2.loc[df2.id == "m0", "giu_so_dat"].iloc[0] in (False, 0) and bool(df2.loc[df2.id == "m0", "ref_giu_so_dat"].iloc[0]) == bool(df.loc[df.id == "m0", "ref_giu_so_dat"].iloc[0])
+
+
 if __name__ == "__main__":
     for ten, ham in list(globals().items()):
         if ten.startswith("test_") and callable(ham):

@@ -33,6 +33,9 @@ Dữ liệu vào: `data/processed/bo_chon_hf/` (HF `ntquang0410/zh-vie_ecom`, `d
 | `kiem_dong_moi.py` | Tỉ lệ, kiểm tín hiệu | chạy trên máy, không GPU: so mức ~11% với 1 : 1 trên dòng mới của mô tả, kèm độ nhạy chữ hoa và cụm sản phẩm chung dòng, viết `kiem_dong_moi.md`; không đọc test |
 | `kiem_fold_ti_le.py` | Tỉ lệ, kiểm trên fold khác | chạy trên máy, không GPU: áp luật khóa trên một fold (`--fold F --moc <sinh> --muc <sinh> --ra <thu_muc>`), viết `kiem_fold<F>.md`; bản dịch lấy từ `dong_goi_kaggle.py b8f1 moi\|tiep`, `b8f2 moi\|tiep`; lưu đầu ra trước lần đẩy kế bằng `luu_tl`, `luu_b78`, `luu_b8f1` |
 | `kiem_3fold_ti_le.py` | Tỉ lệ, kết luận bản cụm | chạy trên máy, không GPU: áp tiêu chí 3 fold, viết `kiem_3fold.json`; không đọc test |
+| `kiem_3fold_pair.py` | Luật 3 fold của bản pair (~11% so với 1 : 1) | chạy trên máy, không GPU; luật khóa trước khi có số fold 2 (WALKTHROUGH Prompt 804); không đọc test |
+| `tong_hop_do_test.py` | Tổng hợp lần đo test MỘT lần (fine-tune so với zero-shot) | chạy trên máy, không GPU; luật khóa trước khi đo (WALKTHROUGH Prompt 806); chỉ đọc điểm từng mục từ phiên Kaggle, không đọc `test_khoa` |
+| `dich_bang_adapter.py` | Dịch title hoặc danh sách thuộc tính bằng adapter bản cuối | cần GPU ~9–10 GB; lời dẫn và trần sinh giống lúc huấn luyện và đo (có test so với mẫu pool); phần nạp mô hình chưa chạy thử trên máy Nhật Anh |
 | `nhat_ky_chay.py` | Nhật ký mọi lần chạy | chạy trên máy, không GPU: gom thông số, kết quả, so sánh theo cặp, giờ GPU, hash mã/dữ liệu/bản dịch của MỌI lần chạy từ file kết quả, viết `ft_run/NHAT_KY_CHAY.{md,json}` để tra cứu khi viết báo cáo và phản biện; **chạy lại sau mỗi phiên mới** (thêm phiên vào `PHIEN_CHINH` và `NGUON_TRANG_THAI` trong file); không đọc test |
 | `test_*.py` | – | test trên dữ liệu tự dựng, chạy trực tiếp |
 

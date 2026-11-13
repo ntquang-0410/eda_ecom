@@ -34,7 +34,7 @@ def xay_mau(mau, tok, max_len):
             bo += 1
             continue
         ra.append({"id": m["id"], "ids": ip + ia, "labels": [-100] * len(ip) + ia, "fold5": m["fold5"],
-                   "huong": m.get("huong"), "loai": m.get("loai"), "category": m.get("category")})
+                   "huong": m.get("huong"), "loai": m.get("loai"), "category": m.get("category"), "product_id": m.get("product_id")})
     return ra, bo
 
 
@@ -257,10 +257,31 @@ def tim_mot(mau_ten):
 
 
 def kiem_khoa_test():
-    la = [str(p) for p in VAO.rglob("*") if p.is_file() and ("test_" in p.name or p.name in {"split.parquet", "ds_test.txt"})
+    la = [str(p) for p in VAO.rglob("*") if p.is_file() and ("test_" in p.name or p.name.startswith("do_khoa_") or p.name in {"split.parquet", "ds_test.txt"})
           and "site-packages" not in str(p) and "arc-prize" not in str(p)]
     if la:
         raise RuntimeError(f"CO_FILE_TEST_TRONG_INPUT:{la[:5]}")
+
+
+def kiem_khoa_test_do():
+    """Chế độ đo test (Nhật Anh duyệt 07/11/2026): được phép có file do_khoa_*.jsonl*; mọi file 'test_*' khác, split.parquet, ds_test.txt vẫn là lỗi.
+    Phải có ít nhất một file do_khoa_*. Việc không rò sang pool kiểm riêng bằng kiem_ro_ri_test."""
+    la = [p for p in VAO.rglob("*") if p.is_file() and "site-packages" not in str(p) and "arc-prize" not in str(p)]
+    cam = [str(p) for p in la if p.name in {"split.parquet", "ds_test.txt"} or ("test_" in p.name and not p.name.startswith("do_khoa_"))]
+    if cam:
+        raise RuntimeError(f"CO_FILE_TEST_LA_TRONG_INPUT:{cam[:5]}")
+    if not any(p.name.startswith("do_khoa_") for p in la):
+        raise RuntimeError("THIEU_DO_KHOA")
+
+
+def kiem_ro_ri_test(mau_test, mau_pool):
+    """Không sản phẩm hay id nào của test nằm trong pool (cùng nhánh). Trả (số sp test, số mẫu test)."""
+    sp_pool, id_pool = {m["product_id"] for m in mau_pool}, {m["id"] for m in mau_pool}
+    chung_sp = {m["product_id"] for m in mau_test} & sp_pool
+    chung_id = {m["id"] for m in mau_test} & id_pool
+    if chung_sp or chung_id:
+        raise RuntimeError(f"TEST_ROI_VAO_POOL:{len(chung_sp)}sp:{len(chung_id)}id")
+    return len({m["product_id"] for m in mau_test}), len(mau_test)
 
 
 def cai_thu_vien():
@@ -330,21 +351,33 @@ def loss_co_trong_so(model, ids, lab, mask, ts, thiet_bi):
     return (ce * tw).sum() / tw.sum()
 
 
-def nap_goc(duong_dan):
+def nap_goc(duong_dan, attn="sdpa"):
+    """attn mặc định sdpa như mọi lần chạy cũ (Qwen3); mô hình BLOOM (EcomGPT) không dùng sdpa nên truyền attn="eager"."""
     import torch
     from transformers import AutoModelForCausalLM
-    return AutoModelForCausalLM.from_pretrained(str(duong_dan), dtype=torch.bfloat16, device_map={"": 0}, attn_implementation="sdpa")
+    return AutoModelForCausalLM.from_pretrained(str(duong_dan), dtype=torch.bfloat16, device_map={"": 0}, attn_implementation=attn)
 
 
-def sinh(model, tok, mau, thiet_bi, bs=32, ngan_sach=32768):
-    """Giải mã greedy cố định; trần max_new_tokens theo độ dài đích tham chiếu. Xếp theo độ dài và cắt lô theo ngân sách cho nhanh; trả đúng thứ tự mau."""
+def chon_tran_sinh(n_tok_nguon):
+    """Trần max_new_tokens theo độ dài NGUỒN (đo trên pool 07/11/2026: token đích / token nguồn lớn nhất 2,94 ở title zh->vi, 1,59 ở mô tả), nên 3,5 lần cộng 64.
+    Dùng khi đo test, vì lúc dịch thật không có tham chiếu để lấy độ dài."""
+    return min(2048, math.ceil(3.5 * n_tok_nguon) + 64)
+
+
+def sinh(model, tok, mau, thiet_bi, bs=32, ngan_sach=32768, tran_theo="dich", lam_prompt=None):
+    """Giải mã greedy cố định; trần max_new_tokens theo độ dài đích tham chiếu (tran_theo="dich", mặc định, giữ nguyên cho mọi lần chạy đã làm)
+    hoặc theo độ dài nguồn (tran_theo="nguon", dùng khi đo test). Xếp theo độ dài và cắt lô theo ngân sách cho nhanh; trả đúng thứ tự mau."""
     import torch
     tok.padding_side = "left"
     model.eval()
     mo = []
     for m in mau:
-        p = tok.apply_chat_template(m["messages"][:1], tokenize=False, add_generation_prompt=True, enable_thinking=False)
-        tran = min(1500, len(tok(m["dich"], add_special_tokens=False)["input_ids"]) * 2 + 64)
+        # lam_prompt=None: khuôn chat Qwen3 như mọi lần chạy cũ; mô hình khác truyền hàm dựng lời dẫn riêng (xem kaggle_quota.tao_khuon)
+        p = lam_prompt(m) if lam_prompt else tok.apply_chat_template(m["messages"][:1], tokenize=False, add_generation_prompt=True, enable_thinking=False)
+        if tran_theo == "nguon":
+            tran = chon_tran_sinh(len(tok(m["nguon"], add_special_tokens=False)["input_ids"]))
+        else:
+            tran = min(1500, len(tok(m["dich"], add_special_tokens=False)["input_ids"]) * 2 + 64)
         mo.append({"m": m, "p": p, "tran": tran, "ids": [0] * (len(tok(p, add_special_tokens=False)["input_ids"]) + tran)})
     kq = {}
     for k in cat_ngan_sach(sorted(mo, key=lambda x: len(x["ids"])), bs, ngan_sach):
@@ -687,16 +720,26 @@ def chay_b78(cfg, bc):
         return tm, D._sach({"epoch": str(epoch), "giay_moi_mau": giay_moi_mau, "so_mau": len(mau), "sinh_lap": int(tm.sinh_lap.sum()), "ti_le_cat_loi_dan": float(tm.da_cat_loi_dan.mean()),
                             "chrf": th["diem_chinh"], "theo_huong": th["theo_huong"], "theo_nhom": th["theo_nhom"], "theo_category": th["theo_category"], "dong_da_thay_moi": th.get("dong_da_thay_moi")})
 
-    def huan_luyen(ten, v, nhanh, fold, p_title=None, lr=None):
+    def huan_luyen(ten, v, nhanh, fold, p_title=None, lr=None, loai_sp=None):
+        """fold là số: huấn luyện trên các fold khác và kiểm trên fold đó (như mọi lần chạy trước). fold là None: BẢN CUỐI trên TOÀN pool (Nhật Anh duyệt 07/11/2026, Prompt 808);
+        loai_sp (tập product_id) = bỏ mẫu title của các sản phẩm đó khỏi tập huấn luyện, giữ nguyên mẫu mô tả; mẫu 'kiểm' lấy từ chính tập huấn luyện nên CHỈ để bắt hỏng, không phải đo chất lượng."""
         nonlocal goc
         if v["epoch_xong"] >= SO_EPOCH_B6 or v.get("hong"):
             return
-        train = [m for m in ma[nhanh] if m["fold5"] != fold]
+        if fold is None:
+            tat_ca = [m for m in ma[nhanh] if not (loai_sp and m["loai"] == "title" and m["product_id"] in loai_sp)]
+            v.update(toan_pool=True, so_mau_pool=len(ma[nhanh]), so_title_bi_loai=len(ma[nhanh]) - len(tat_ca), kiem_la_train=True)
+            train = tat_ca
+        else:
+            train = [m for m in ma[nhanh] if m["fold5"] != fold]
         if cfg.get("so_train"):
             train = random.Random(cfg["seed"]).sample(train, cfg["so_train"])
-        kiem = lay_phan_tang([m for m in ma[nhanh] if m["fold5"] == fold], cfg["so_kiem_moi_nhom"], cfg["seed"])
-        if {m["id"] for m in train} & {m["id"] for m in kiem}:
-            raise RuntimeError("giao_train_kiem")
+        if fold is None:
+            kiem = lay_phan_tang(train, cfg["so_kiem_moi_nhom"], cfg["seed"])
+        else:
+            kiem = lay_phan_tang([m for m in ma[nhanh] if m["fold5"] == fold], cfg["so_kiem_moi_nhom"], cfg["seed"])
+            if {m["id"] for m in train} & {m["id"] for m in kiem}:
+                raise RuntimeError("giao_train_kiem")
         co_batch = cfg["micro_bs"] * cfg["tich_luy"]
         buoc_theo_epoch = [gom_buoc(chia_lo(train, cfg["micro_bs"], cfg["seed"] + e, cfg["ngan_sach_token"]), co_batch) for e in range(SO_EPOCH_B6)]
         tong_buoc = sum(len(x) for x in buoc_theo_epoch)
@@ -843,6 +886,27 @@ def chay_b78(cfg, bc):
         del m
         torch.cuda.empty_cache()
 
+    def kiem_nhanh_cuoi(ten, v, nhanh, thu_adapter):
+        """Bản cuối trên toàn pool: sinh thử vài mẫu (hướng x loại) CỦA CHÍNH TẬP HUẤN LUYỆN và chấm chrF, chỉ để bắt hỏng (đầu ra rỗng, lặp, chrF thấp bất thường).
+        Điểm này KHÔNG phải chất lượng trên dữ liệu mới; chất lượng dựa trên K-fold và lần đo test của adapter fold 0."""
+        nonlocal goc
+        if v.get("hong") or v.get("kiem_nhanh"):
+            return
+        kiem_gio(ten)
+        loai_sp = set(cfg.get("loai_title_sp") or []) if v.get("so_title_bi_loai") else set()
+        mau = lay_phan_tang([x for x in goc_mau[nhanh] if x["phan"] == 0 and not (x["loai"] == "title" and x["product_id"] in loai_sp)], cfg.get("so_sinh_kiem_nhanh", 25), cfg["seed"] + 7)
+        m = PeftModel.from_pretrained(goc, str(thu_adapter))
+        t = time.time()
+        du = sinh(m, tok, mau, thiet_bi)
+        giay = round((time.time() - t) / len(du), 3)
+        goc = m.unload()
+        del m
+        torch.cuda.empty_cache()
+        _, v["kiem_nhanh"] = cham_mot(nhanh, mau, du, None, SO_EPOCH_B6, giay)
+        v["kiem_nhanh"]["tren_du_lieu_huan_luyen"] = True
+        ghi()
+        print(ten, "KIEM NHANH (tren du lieu huan luyen) chrF", v["kiem_nhanh"]["chrf"]["chrf_macro_huong"], "so mau", len(mau), "sinh lap", v["kiem_nhanh"]["sinh_lap"], flush=True)
+
     # Việc 1: LoRA attention so với LoRA mọi lớp cùng lr, rank, epoch 1, cụm fold 0, cùng mẫu sinh của B6. Khảo sát tỉ lệ không cần phần này
     mau_a, tm_a = None, {}
     if not cfg.get("viec"):
@@ -887,9 +951,12 @@ def chay_b78(cfg, bc):
                 if not v["khop_b6"]:
                     raise RuntimeError(f"CHAM_LAI_KHONG_KHOP_B6:{v['cham']['chrf']['chrf_macro_huong']}:{goc_b6}")
             continue
-        huan_luyen(ten, v, nhanh, fold, j.get("p_title"), j.get("lr"))
+        huan_luyen(ten, v, nhanh, fold, j.get("p_title"), j.get("lr"), set(cfg.get("loai_title_sp") or []) if j.get("loai_title_co") else None)
         if cfg.get("chrf_toi_thieu") is not None and v.get("hong"):
             dung_bat_thuong(ten, "loss khong huu han")
+        if j.get("khong_danh_gia"):         # bản cuối trên toàn pool: không còn fold giữ lại; chỉ sinh thử vài mẫu để bắt hỏng
+            kiem_nhanh_cuoi(ten, v, nhanh, thu_ra / ten / f"ep{SO_EPOCH_B6}")
+            continue
         danh_gia(ten, v, nhanh, fold, thu_ra / ten / f"ep{SO_EPOCH_B6}", thu_ra / ten / f"sinh_ep{SO_EPOCH_B6}.jsonl", j.get("ca_fold", True))
         if cfg.get("chrf_toi_thieu") is not None and v.get("cham"):
             ly_do = kiem_bat_thuong(v["cham"], cfg["chrf_toi_thieu"], cfg["lap_toi_da"])
@@ -899,6 +966,123 @@ def chay_b78(cfg, bc):
     ghi()
     bc["dat"] = not any(v.get("hong") for v in st["viec"].values())
     print("B78 XONG", {t: (v["cham"] or {}).get("chrf", {}).get("chrf_macro_huong") for t, v in st["viec"].items()}, flush=True)
+
+
+def chay_do_test(cfg, bc):
+    """Đo MỘT lần (B10, Nhật Anh duyệt 07/11/2026, Prompt 806): với mỗi nhánh (cụm, pair), sinh bản dịch của zero-shot (Qwen3-4B nguyên bản) và của adapter fold 0 ở ~11% title
+    trên cùng mẫu, trần sinh theo độ dài NGUỒN, rồi chấm bằng cham_diem. Không huấn luyện gì, không đổi cấu hình theo điểm.
+    cfg: nguon_do = "test" (đọc do_khoa_{nhanh}.jsonl* từ Dataset test riêng, kiểm không rò vào pool) hoặc "pool_fold" (CHỈ ĐỂ CHẠY KHÓI: lấy mẫu của một fold pool làm 'test' giả,
+    không đụng test thật); mo_hinh_ft = {nhanh: tên việc trong kho lưu}; nhanh; gio_toi_da; so_mau_do (mỗi nhóm hướng x loại, chỉ khói).
+    Ra: do_test/do_test_trang_thai.json (điểm), do_test/sinh_{nhanh}_{mo_hinh}.jsonl (bản dịch), do_test/sinh_diem_{nhanh}_{mo_hinh}.jsonl (điểm từng mục, KHÔNG có tham chiếu).
+    Mỗi (nhánh, mô hình) tự bỏ qua nếu đã xong; hết giờ thì lưu rồi dừng có trật tự, phiên sau chạy tiếp."""
+    import gc
+    import hashlib
+    import shutil
+    import pandas as pd
+    import torch
+    import transformers
+    import peft
+    from peft import PeftModel
+    from transformers import AutoTokenizer
+    import cham_diem as D
+
+    thiet_bi = "cuda:0"
+    het_giay = cfg.get("gio_toi_da", 4.5) * 3600
+    thu_ra = RA / "do_test"
+    tep = thu_ra / "do_test_trang_thai.json"
+    if not tep.exists():
+        cu = sorted(VAO.rglob("do_test_trang_thai.json"))
+        if cu:
+            shutil.copytree(cu[0].parent, thu_ra)
+            print("chay tiep tu:", cu[0], flush=True)
+    thu_ra.mkdir(parents=True, exist_ok=True)
+    st = json.loads(tep.read_text(encoding="utf-8")) if tep.exists() else {"xong": False, "bat_thuong": None, "ket_qua": {}}
+    if st.get("nguon_do") not in (None, cfg["nguon_do"]):
+        raise RuntimeError(f"NOI_NHAM_NGUON_DO:{st.get('nguon_do')}:{cfg['nguon_do']}")          # không nối khói (mẫu pool) vào lần đo test thật hay ngược lại
+
+    def ghi():
+        tam = tep.with_suffix(".tmp")
+        tam.write_text(json.dumps(st, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
+        tam.replace(tep)
+
+    bc["moi_truong"] = {"torch": torch.__version__, "transformers": transformers.__version__, "peft": peft.__version__, "gpu": torch.cuda.get_device_name(0)}
+    thu_mh = tim_mot("REVISION.txt").parent
+    bc["mo_hinh"] = thu_mh.joinpath("REVISION.txt").read_text().split()
+    tok = AutoTokenizer.from_pretrained(str(thu_mh))
+    if tok.pad_token_id is None:
+        tok.pad_token = tok.eos_token
+    tok.padding_side = "right"
+    kho_tt = tim_mot("tl_trang_thai.json")
+    kho = kho_tt.parent
+    mf_kho = json.loads(tim_mot("MANIFEST_TL.json").read_text(encoding="utf-8"))          # nằm ngoài thư mục tl/ của kho lưu; khóa là đường dẫn tương đối so với tl/
+    st["nguon_do"] = cfg["nguon_do"]
+    st["mo_hinh_ft"] = cfg["mo_hinh_ft"]
+    st["cach_sinh"] = {"giai_ma": "greedy", "tran": "min(2048, ceil(3,5 x token nguon) + 64)", "enable_thinking": False}
+    ghi()
+
+    for nhanh in cfg["nhanh"]:
+        pool = doc_mau(nhanh)
+        if cfg["nguon_do"] == "test":
+            ds = [p for p in sorted(VAO.rglob(f"do_khoa_{nhanh}.jsonl*")) if p.is_file()]
+            if len(ds) != 1:
+                raise RuntimeError(f"do_khoa_{nhanh}: thay {len(ds)} file")
+            with open(ds[0], "rb") as f:
+                nen = f.read(2) == b"\x1f\x8b"
+            mo = gzip.open(ds[0], "rt", encoding="utf-8") if nen else open(ds[0], encoding="utf-8")
+            with mo as f:
+                mau = [json.loads(x) for x in f]
+            n_sp, n_mau = kiem_ro_ri_test(mau, pool)
+            st.setdefault("mau_do", {})[nhanh] = {"so_sp": n_sp, "so_mau": n_mau, "so_phan_khac_0": sum(1 for m in mau if m.get("phan", 0) != 0),
+                                                   "sha256": hashlib.sha256(ds[0].read_bytes()).hexdigest()}
+        else:
+            mau = lay_phan_tang([m for m in pool if m["fold5"] == cfg.get("fold_do", 4) and m["phan"] == 0], cfg.get("so_mau_do", 3), cfg["seed"])
+            st.setdefault("mau_do", {})[nhanh] = {"so_mau": len(mau), "ghi_chu": "KHOI: mau cua fold pool, khong phai test"}
+        for m in mau:
+            for k in ("id", "product_id", "huong", "loai", "nguon", "dich", "messages", "category"):
+                if k not in m:
+                    raise RuntimeError(f"mau_do_thieu_truong:{nhanh}:{k}")
+        # "đã thấy" = dòng nguồn có trong các fold mà adapter fold 0 đã học (fold khác 0), cùng cách với phần fold
+        tap = D.xay_tap_da_thay(pd.DataFrame(pool)[["loai", "category", "nguon", "nhanh", "fold5"]], cfg.get("fold_adapter", 0), nhanh)
+        ten_ft = cfg["mo_hinh_ft"][nhanh]
+        duong_ad = kho / ten_ft / "ep2"
+        rel = f"{ten_ft}/ep2/adapter_model.safetensors"
+        h = hashlib.sha256()
+        with open(duong_ad / "adapter_model.safetensors", "rb") as a:
+            for k in iter(lambda: a.read(2**20), b""):
+                h.update(k)
+        if h.hexdigest() != mf_kho[rel]["sha256"]:
+            raise RuntimeError(f"ADAPTER_LECH_HASH:{rel}")
+        st.setdefault("adapter", {})[nhanh] = {"ten": ten_ft, "sha256": h.hexdigest()}
+        ghi()
+        for mh in ("zero_shot", "ft"):
+            khoa = f"{nhanh}/{mh}"
+            if khoa in st["ket_qua"]:
+                continue
+            if time.time() - cfg["_t_bat_dau"] > het_giay:
+                raise DungHetGio(khoa)
+            goc = nap_goc(thu_mh)
+            model = PeftModel.from_pretrained(goc, str(duong_ad)) if mh == "ft" else goc
+            t0 = time.time()
+            du = sinh(model, tok, mau, thiet_bi, tran_theo="nguon")
+            giay = (time.time() - t0) / max(1, len(mau))
+            (thu_ra / f"sinh_{nhanh}_{mh}.jsonl").write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in du) + "\n", encoding="utf-8")
+            tm, th = D.cham(pd.DataFrame(mau), pd.DataFrame(du), nhanh=nhanh, tap_da_thay=tap)
+            pid = {m["id"]: m["product_id"] for m in mau}
+            cot = [c for c in tm.columns if not c.startswith("_")]
+            (thu_ra / f"sinh_diem_{nhanh}_{mh}.jsonl").write_text(
+                "\n".join(json.dumps(D._sach({**{c: r[c] for c in cot}, "product_id": pid[r["id"]]}), ensure_ascii=False) for r in tm.to_dict("records")) + "\n", encoding="utf-8")
+            st["ket_qua"][khoa] = D._sach({"so_mau": len(mau), "giay_moi_mau": round(giay, 3), "sinh_lap": int(tm.sinh_lap.sum()), "thieu_hyp": th["thieu_hyp"],
+                                           "ti_le_cat_loi_dan": float(tm.da_cat_loi_dan.mean()), "chrf": th["diem_chinh"], "theo_huong": th["theo_huong"],
+                                           "theo_nhom": th["theo_nhom"], "cat_loi_dan": th["cat_loi_dan"], "dong_da_thay_moi": th.get("dong_da_thay_moi")})
+            ghi()
+            print(f"{khoa} XONG chrF {th['diem_chinh']['chrf_macro_huong']:.2f} so mau {len(mau)} giay/mau {giay:.3f}", flush=True)
+            del model, goc
+            gc.collect()
+            torch.cuda.empty_cache()
+    st["xong"] = all(f"{n}/{m}" in st["ket_qua"] for n in cfg["nhanh"] for m in ("zero_shot", "ft"))
+    ghi()
+    bc["dat"] = st["xong"]
+    print("DO_TEST XONG" if st["xong"] else "DO_TEST CHUA XONG", flush=True)
 
 
 def thu_b5(cfg, bc):
@@ -1222,10 +1406,21 @@ def main(cfg):
     bc = {"cau_hinh": cfg, "dat": False}
     t = time.time()
     try:
-        kiem_khoa_test()
-        bc["khoa_test"] = "khong_co_file_test_trong_input"
+        if cfg["che_do"] == "do_test" and cfg.get("nguon_do") == "test":
+            kiem_khoa_test_do()
+            bc["khoa_test"] = "chi_co_do_khoa_dung_ten"          # lần đo test thật: Dataset test riêng được gắn; kiem_ro_ri_test kiểm không rò vào pool
+        else:
+            kiem_khoa_test()
+            bc["khoa_test"] = "khong_co_file_test_trong_input"
         cai_thu_vien()
-        if cfg["che_do"] in ("b6", "b78"):
+        if cfg["che_do"] == "do_test":
+            cfg["_t_bat_dau"] = t
+            try:
+                chay_do_test(cfg, bc)
+            except DungHetGio as e:
+                bc["dung_het_gio"] = str(e)
+                print("KET THUC PHIEN CO TRAT TU, dung o", e, flush=True)
+        elif cfg["che_do"] in ("b6", "b78"):
             cfg["_t_bat_dau"] = t
             try:
                 (chay_b6 if cfg["che_do"] == "b6" else chay_b78)(cfg, bc)

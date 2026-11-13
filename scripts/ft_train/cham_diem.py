@@ -42,7 +42,9 @@ GIOI_HAN = [
     "sai_chu_viet: đích Trung chứa chữ Việt có dấu bị cờ kể cả khi đó là tên riêng giữ nguyên; đích Việt chứa chữ Hán bị cờ kể cả tên hãng Trung",
     "dung_so_dong: tách thuần theo TACH_DONG, '; ' nằm trong giá trị tự do cũng bị tách",
     "sinh_lap: ngưỡng chưa chốt, đoạn lặp chu kỳ ngắn cần chạy dài >= min_doan*min_lan ký tự mới bị bắt",
-    "cat_loi_dan: một lượt, chỉ các quy tắc ghi rõ; think chưa đóng thẻ thì không cắt",
+    "cat_loi_dan: một lượt, chỉ các quy tắc ghi rõ; think chưa đóng thẻ thì không cắt; dong_ngu_canh chỉ bắt vài dạng dịch đã biết của lời dẫn 'Product title (context only...)', "
+    "cách diễn đạt khác thì không bắt và vẫn tính là lỗi của bản dịch",
+    "ref_*: giu_so, giu_latin, sai_chu_viet cũng được chạy trên chính bản tham chiếu (bản dịch máy) để có mốc; chỉ so điểm của mô hình với mốc này, không đọc 100% là đúng/sai tuyệt đối",
 ]
 
 _FULL = {ord(chr(0xFF10 + i)): str(i) for i in range(10)}
@@ -326,6 +328,9 @@ _INTRO = (r"(?:(?:here\s+is|here's|here\s+are|below\s+is|this\s+is)\s+(?:the\s+)
           r"|(?:以下是)?翻[译譯](?:结果)?|译文)")
 _RE_DONG_DAN = re.compile(rf"^\s*{_INTRO}\s*[:：]?\s*$", re.I)
 _RE_TIEN_TO = re.compile(rf"^\s*{_INTRO}\s*[:：]\s*(\S.*)$", re.I | re.S)
+# Dòng chép lại lời dẫn "Product title (context only, do not translate): ..." đã bị dịch (zero-shot hay chép; Nhật Anh duyệt sửa 07/11/2026 trước khi đo test).
+# CHỈ bắt các dạng đã biết: 产品标题（仅上下文…, Tiêu đề/Tên sản phẩm (chỉ…, Product title (context only. Dạng diễn đạt khác không bắt (ghi ở GIOI_HAN).
+_RE_NGU_CANH = re.compile(r"^\s*(?:产品(?:标题|名称)\s*[（(]\s*仅|(?:Tiêu đề|Tên)\s+sản phẩm\s*[（(]\s*chỉ|Product title\s*[（(]\s*context only)", re.I)
 _RE_THINK = re.compile(r"<think>.*?</think>", re.S | re.I)
 _RE_RAO = re.compile(r"^\s*```[^\n`]*\n(.*?)\n?[ \t]*```\s*$", re.S)
 _RE_RAO_DONG = re.compile(r"^\s*```(.*?)```\s*$", re.S)
@@ -336,6 +341,7 @@ def cat_loi_dan(text):
     """Cắt lời dẫn, một lượt, theo thứ tự (tên quy tắc ghi trong chuỗi trả về, ngăn bằng ','):
       think        bỏ mọi khối <think>...</think> (kể cả rỗng);
       rao_code     bỏ rào ``` bao toàn bộ (kể cả dòng ```lang);
+      dong_ngu_canh bỏ MỌI dòng chép lại lời dẫn "Product title (context only, ...)" đã dịch ('产品标题（仅上下文…', 'Tiêu đề sản phẩm (chỉ…'); chỉ các dạng này;
       dong_dan     bỏ dòng đầu (không rỗng) nếu CẢ DÒNG là lời dẫn: 'Here is the translation:', 'Translation:', 'Bản dịch:', 'Dịch:',
                    '翻译：', '译文：' (không phân biệt hoa thường, có/không dấu hai chấm);
       tien_to_dan  nếu lời dẫn nằm cùng dòng với nội dung thì phải CÓ dấu hai chấm ('Translation: Áo thun' -> 'Áo thun');
@@ -355,6 +361,11 @@ def cat_loi_dan(text):
         t = m.group(1).strip()
         qt.append("rao_code")
     dong = t.split("\n")
+    con = [d for d in dong if not _RE_NGU_CANH.match(d)]
+    if len(con) != len(dong):
+        t = "\n".join(con).strip()
+        dong = t.split("\n")
+        qt.append("dong_ngu_canh")
     i = next((k for k, d in enumerate(dong) if d.strip()), None)
     if i is not None:
         if _RE_DONG_DAN.match(dong[i]):
@@ -434,7 +445,8 @@ def cham(tham_chieu, du_doan, nhanh=None, tap_da_thay=None, comet=None, kiwi=Non
             hyp, da_cat, qt = hyp, False, ""
         so, la = giu_so(nguon, hyp), giu_latin(nguon, hyp, huong, loai, nh)
         sc, lap = sai_chu_viet(huong, nguon, hyp, nguong_latin), sinh_lap(hyp, dich, min_doan, min_lan, he_so_dai)
-        row = {"id": r["id"], "huong": huong, "loai": loai, "category": r["category"], "nhanh": nh, "thieu_hyp": thieu,
+        rso, rla, rsc = giu_so(nguon, dich), giu_latin(nguon, dich, huong, loai, nh), sai_chu_viet(huong, nguon, dich, nguong_latin)      # mốc: cùng kiểm trên bản tham chiếu
+        row = {"ref_giu_so_dat": rso["dat"], "ref_giu_latin_dat": rla["dat"], "ref_sai_chu_viet": rsc["co"],"id": r["id"], "huong": huong, "loai": loai, "category": r["category"], "nhanh": nh, "thieu_hyp": thieu,
                "hyp_cham": hyp, "da_cat_loi_dan": da_cat, "quy_tac_cat": qt, "chrf": chrf_cau(huong, hyp, dich),
                "giu_so_dat": so["dat"], "so_mat": so["mat"], "so_la": so["la"],
                "giu_latin_dat": la["dat"], "latin_mat": la["mat"], "latin_tong": la["tong"],
@@ -483,6 +495,9 @@ def _tom_tat(d, huong, day_du=True):
         ti_le_sai_chu_viet=float(d["sai_chu_viet"].mean()), ti_le_sinh_lap=float(d["sinh_lap"].mean()),
         ti_le_da_cat_loi_dan=float(d["da_cat_loi_dan"].mean()),
         ti_le_do_dai_tb=float(d["ti_le_do_dai"].mean()), ti_le_do_dai_trung_vi=float(d["ti_le_do_dai"].median()))
+    for c, ten in (("ref_giu_so_dat", "ref_ti_le_giu_so_dat"), ("ref_giu_latin_dat", "ref_ti_le_giu_latin_dat"), ("ref_sai_chu_viet", "ref_ti_le_sai_chu_viet")):
+        if c in d.columns:
+            out[ten] = float(d[c].mean())
     if d["dung_so_dong"].notna().any():
         out["ti_le_dung_so_dong"] = float(d["dung_so_dong"].dropna().astype(bool).mean())
     for c in ("comet", "kiwi"):

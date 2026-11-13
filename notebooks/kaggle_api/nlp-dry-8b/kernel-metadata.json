@@ -1,0 +1,21 @@
+{
+ "id": "honghuynanh/nlp-dry-8b",
+ "title": "nlp-dry-8b",
+ "code_file": "nlp-dry-8b.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": false,
+ "enable_tpu": false,
+ "enable_internet": false,
+ "dataset_sources": [
+  "honghuynanh/ft-qwen3-4b-pool",
+  "honghuynanh/ft-qwen3-4b-quota"
+ ],
+ "competition_sources": [],
+ "kernel_sources": [
+  "honghuynanh/ft-qwen3-4b-thu-vien",
+  "honghuynanh/ft-qwen3-8b-mo-hinh"
+ ],
+ "model_sources": []
+}

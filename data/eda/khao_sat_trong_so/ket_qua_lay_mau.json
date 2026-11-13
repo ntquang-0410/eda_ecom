@@ -1,0 +1,432 @@
+{
+  "cum_natural": {
+    "bo": "cum",
+    "cau_hinh": "natural",
+    "s_dat_pct": {
+      "1688_title": 5.892736061859912,
+      "tiki_title": 4.193116702657537,
+      "1688_description": 75.59060471124104,
+      "tiki_description": 14.323542524241518
+    },
+    "n_draw": 5497,
+    "n_unique": 4625,
+    "repeat_max": 5,
+    "tong_e": 4000198.0,
+    "tong_tgt": 2100010.0,
+    "title_share_e_thuc": 0.00910729918869016,
+    "title_share_tgt_thuc": 0.009018528483197698,
+    "theo_nhom": {
+      "1688_title": {
+        "n_draw": 317,
+        "e_share_thuc": 0.0047522647628942365,
+        "tgt_share_thuc": 0.0055023547506916634,
+        "e_share_dat": 0.05892736061859912
+      },
+      "1688_description": {
+        "n_draw": 4119,
+        "e_share_thuc": 0.9198877155580799,
+        "tgt_share_thuc": 0.9274336788872434,
+        "e_share_dat": 0.7559060471124104
+      },
+      "tiki_title": {
+        "n_draw": 257,
+        "e_share_thuc": 0.0043550344257959235,
+        "tgt_share_thuc": 0.0035161737325060355,
+        "e_share_dat": 0.04193116702657537
+      },
+      "tiki_description": {
+        "n_draw": 804,
+        "e_share_thuc": 0.07100498525322997,
+        "tgt_share_thuc": 0.06354779262955891,
+        "e_share_dat": 0.14323542524241517
+      }
+    }
+  },
+  "cum_balanced": {
+    "bo": "cum",
+    "cau_hinh": "balanced",
+    "s_dat_pct": {
+      "1688_title": 25.0,
+      "1688_description": 25.0,
+      "tiki_title": 25.0,
+      "tiki_description": 25.0
+    },
+    "n_draw": 12073,
+    "n_unique": 9934,
+    "repeat_max": 7,
+    "tong_e": 4000028.0,
+    "tong_tgt": 2049556.0,
+    "title_share_e_thuc": 0.09861205971558198,
+    "title_share_tgt_thuc": 0.09767383765069118,
+    "theo_nhom": {
+      "1688_title": {
+        "n_draw": 3052,
+        "e_share_thuc": 0.04580017939874421,
+        "tgt_share_thuc": 0.05404341232930449,
+        "e_share_dat": 0.25
+      },
+      "1688_description": {
+        "n_draw": 2912,
+        "e_share_thuc": 0.6479732141875006,
+        "tgt_share_thuc": 0.6694801215482769,
+        "e_share_dat": 0.25
+      },
+      "tiki_title": {
+        "n_draw": 3044,
+        "e_share_thuc": 0.052811880316837784,
+        "tgt_share_thuc": 0.04363042532138668,
+        "e_share_dat": 0.25
+      },
+      "tiki_description": {
+        "n_draw": 3065,
+        "e_share_thuc": 0.25341472609691734,
+        "tgt_share_thuc": 0.23284604080103202,
+        "e_share_dat": 0.25
+      }
+    }
+  },
+  "cum_title_heavy": {
+    "bo": "cum",
+    "cau_hinh": "title_heavy",
+    "s_dat_pct": {
+      "1688_title": 40.0,
+      "1688_description": 10.0,
+      "tiki_title": 40.0,
+      "tiki_description": 10.0
+    },
+    "n_draw": 22874,
+    "n_unique": 15206,
+    "repeat_max": 10,
+    "tong_e": 4000039.0,
+    "tong_tgt": 2049295.0,
+    "title_share_e_thuc": 0.29235564953241705,
+    "title_share_tgt_thuc": 0.290518934560422,
+    "theo_nhom": {
+      "1688_title": {
+        "n_draw": 9228,
+        "e_share_thuc": 0.13818115273376086,
+        "tgt_share_thuc": 0.1629106595194933,
+        "e_share_dat": 0.4
+      },
+      "1688_description": {
+        "n_draw": 2295,
+        "e_share_thuc": 0.5133982443671175,
+        "tgt_share_thuc": 0.5309967574214547,
+        "e_share_dat": 0.1
+      },
+      "tiki_title": {
+        "n_draw": 9057,
+        "e_share_thuc": 0.15417449679865622,
+        "tgt_share_thuc": 0.1276082750409287,
+        "e_share_dat": 0.4
+      },
+      "tiki_description": {
+        "n_draw": 2294,
+        "e_share_thuc": 0.19424610610046553,
+        "tgt_share_thuc": 0.17848430801812332,
+        "e_share_dat": 0.1
+      }
+    }
+  },
+  "cum_desc_heavy": {
+    "bo": "cum",
+    "cau_hinh": "desc_heavy",
+    "s_dat_pct": {
+      "1688_title": 2.0,
+      "1688_description": 55.0,
+      "tiki_title": 3.0,
+      "tiki_description": 40.0
+    },
+    "n_draw": 6369,
+    "n_unique": 5193,
+    "repeat_max": 7,
+    "tong_e": 4000841.0,
+    "tong_tgt": 2068680.0,
+    "title_share_e_thuc": 0.005546833778198134,
+    "title_share_tgt_thuc": 0.0051660962546164705,
+    "theo_nhom": {
+      "1688_title": {
+        "n_draw": 123,
+        "e_share_thuc": 0.0018358640095919832,
+        "tgt_share_thuc": 0.0021385617881934374,
+        "e_share_dat": 0.02
+      },
+      "1688_description": {
+        "n_draw": 3446,
+        "e_share_thuc": 0.7758766219402371,
+        "tgt_share_thuc": 0.7954729586016204,
+        "e_share_dat": 0.55
+      },
+      "tiki_title": {
+        "n_draw": 214,
+        "e_share_thuc": 0.0037109697686061507,
+        "tgt_share_thuc": 0.003027534466423033,
+        "e_share_dat": 0.03
+      },
+      "tiki_description": {
+        "n_draw": 2586,
+        "e_share_thuc": 0.2185765442815648,
+        "tgt_share_thuc": 0.19936094514376318,
+        "e_share_dat": 0.4
+      }
+    }
+  },
+  "cum_tiki_heavy": {
+    "bo": "cum",
+    "cau_hinh": "tiki_heavy",
+    "s_dat_pct": {
+      "1688_title": 10.0,
+      "1688_description": 15.0,
+      "tiki_title": 35.0,
+      "tiki_description": 40.0
+    },
+    "n_draw": 13461,
+    "n_unique": 9901,
+    "repeat_max": 12,
+    "tong_e": 4000542.0,
+    "tong_tgt": 1985589.0,
+    "title_share_e_thuc": 0.10051288050469162,
+    "title_share_tgt_thuc": 0.0930132066605929,
+    "theo_nhom": {
+      "1688_title": {
+        "n_draw": 1278,
+        "e_share_thuc": 0.019168402681436665,
+        "tgt_share_thuc": 0.02335830829038638,
+        "e_share_dat": 0.1
+      },
+      "1688_description": {
+        "n_draw": 1986,
+        "e_share_thuc": 0.44571335584028365,
+        "tgt_share_thuc": 0.47556820671347394,
+        "e_share_dat": 0.15
+      },
+      "tiki_title": {
+        "n_draw": 4742,
+        "e_share_thuc": 0.08134447782325495,
+        "tgt_share_thuc": 0.06965489837020652,
+        "e_share_dat": 0.35
+      },
+      "tiki_description": {
+        "n_draw": 5455,
+        "e_share_thuc": 0.45377376365502475,
+        "tgt_share_thuc": 0.4314185866259332,
+        "e_share_dat": 0.4
+      }
+    }
+  },
+  "pair_natural": {
+    "bo": "pair",
+    "cau_hinh": "natural",
+    "s_dat_pct": {
+      "1688_title": 6.5452871074617756,
+      "1688_attribute": 74.35029321599839,
+      "tiki_title": 4.657454942131679,
+      "tiki_attribute": 14.44696473440815
+    },
+    "n_draw": 27495,
+    "n_unique": 23931,
+    "repeat_max": 11,
+    "tong_e": 4000235.0,
+    "tong_tgt": 2159235.0,
+    "title_share_e_thuc": 0.049336601474663365,
+    "title_share_tgt_thuc": 0.047713657846413196,
+    "theo_nhom": {
+      "1688_title": {
+        "n_draw": 1806,
+        "e_share_thuc": 0.02704666100866574,
+        "tgt_share_thuc": 0.030279242416874495,
+        "e_share_dat": 0.06545287107461775
+      },
+      "1688_attribute": {
+        "n_draw": 20442,
+        "e_share_thuc": 0.8392746926118091,
+        "tgt_share_thuc": 0.8590236819984856,
+        "e_share_dat": 0.7435029321599839
+      },
+      "tiki_title": {
+        "n_draw": 1316,
+        "e_share_thuc": 0.022289940465997624,
+        "tgt_share_thuc": 0.0174344154295387,
+        "e_share_dat": 0.04657454942131679
+      },
+      "tiki_attribute": {
+        "n_draw": 3931,
+        "e_share_thuc": 0.11138870591352758,
+        "tgt_share_thuc": 0.09326266015510123,
+        "e_share_dat": 0.1444696473440815
+      }
+    }
+  },
+  "pair_balanced": {
+    "bo": "pair",
+    "cau_hinh": "balanced",
+    "s_dat_pct": {
+      "1688_title": 25.0,
+      "1688_attribute": 25.0,
+      "tiki_title": 25.0,
+      "tiki_attribute": 25.0
+    },
+    "n_draw": 39313,
+    "n_unique": 28525,
+    "repeat_max": 13,
+    "tong_e": 4001459.0,
+    "tong_tgt": 2041690.0,
+    "title_share_e_thuc": 0.3130910500394981,
+    "title_share_tgt_thuc": 0.3117691716176305,
+    "theo_nhom": {
+      "1688_title": {
+        "n_draw": 9772,
+        "e_share_thuc": 0.14611170575532575,
+        "tgt_share_thuc": 0.17297679863250542,
+        "e_share_dat": 0.25
+      },
+      "1688_attribute": {
+        "n_draw": 9834,
+        "e_share_thuc": 0.40544661334778137,
+        "tgt_share_thuc": 0.43884331117848446,
+        "e_share_dat": 0.25
+      },
+      "tiki_title": {
+        "n_draw": 9820,
+        "e_share_thuc": 0.16697934428417235,
+        "tgt_share_thuc": 0.13879237298512506,
+        "e_share_dat": 0.25
+      },
+      "tiki_attribute": {
+        "n_draw": 9887,
+        "e_share_thuc": 0.2814623366127205,
+        "tgt_share_thuc": 0.24938751720388502,
+        "e_share_dat": 0.25
+      }
+    }
+  },
+  "pair_title_heavy": {
+    "bo": "pair",
+    "cau_hinh": "title_heavy",
+    "s_dat_pct": {
+      "1688_title": 40.0,
+      "1688_attribute": 20.0,
+      "tiki_title": 25.0,
+      "tiki_attribute": 15.0
+    },
+    "n_draw": 44275,
+    "n_unique": 27881,
+    "repeat_max": 11,
+    "tong_e": 4000053.0,
+    "tong_tgt": 2095242.0,
+    "title_share_e_thuc": 0.4569704451416019,
+    "title_share_tgt_thuc": 0.46121498137208017,
+    "theo_nhom": {
+      "1688_title": {
+        "n_draw": 17826,
+        "e_share_thuc": 0.26737345730169076,
+        "tgt_share_thuc": 0.308364379866383,
+        "e_share_dat": 0.4
+      },
+      "1688_attribute": {
+        "n_draw": 8904,
+        "e_share_thuc": 0.36386717875988145,
+        "tgt_share_thuc": 0.38374898937688345,
+        "e_share_dat": 0.2
+      },
+      "tiki_title": {
+        "n_draw": 11099,
+        "e_share_thuc": 0.1895969878399111,
+        "tgt_share_thuc": 0.15285060150569718,
+        "e_share_dat": 0.25
+      },
+      "tiki_attribute": {
+        "n_draw": 6446,
+        "e_share_thuc": 0.1791623760985167,
+        "tgt_share_thuc": 0.1550360292510364,
+        "e_share_dat": 0.15
+      }
+    }
+  },
+  "pair_attr_heavy": {
+    "bo": "pair",
+    "cau_hinh": "attr_heavy",
+    "s_dat_pct": {
+      "1688_title": 10.0,
+      "1688_attribute": 60.0,
+      "tiki_title": 5.0,
+      "tiki_attribute": 25.0
+    },
+    "n_draw": 29108,
+    "n_unique": 25125,
+    "repeat_max": 13,
+    "tong_e": 4000469.0,
+    "tong_tgt": 2122934.0,
+    "title_share_e_thuc": 0.06964708387941514,
+    "title_share_tgt_thuc": 0.07079918640899811,
+    "theo_nhom": {
+      "1688_title": {
+        "n_draw": 2969,
+        "e_share_thuc": 0.044501282224659156,
+        "tgt_share_thuc": 0.050647829843037985,
+        "e_share_dat": 0.1
+      },
+      "1688_attribute": {
+        "n_draw": 17385,
+        "e_share_thuc": 0.7226480195197114,
+        "tgt_share_thuc": 0.7518905439358925,
+        "e_share_dat": 0.6
+      },
+      "tiki_title": {
+        "n_draw": 1482,
+        "e_share_thuc": 0.02514580165475598,
+        "tgt_share_thuc": 0.020151356565960128,
+        "e_share_dat": 0.05
+      },
+      "tiki_attribute": {
+        "n_draw": 7272,
+        "e_share_thuc": 0.20770489660087355,
+        "tgt_share_thuc": 0.1773102696551094,
+        "e_share_dat": 0.25
+      }
+    }
+  },
+  "pair_tiki_heavy": {
+    "bo": "pair",
+    "cau_hinh": "tiki_heavy",
+    "s_dat_pct": {
+      "1688_title": 10.0,
+      "1688_attribute": 20.0,
+      "tiki_title": 30.0,
+      "tiki_attribute": 40.0
+    },
+    "n_draw": 37578,
+    "n_unique": 26790,
+    "repeat_max": 24,
+    "tong_e": 4000405.0,
+    "tong_tgt": 1950062.0,
+    "title_share_e_thuc": 0.24722621834539252,
+    "title_share_tgt_thuc": 0.235251494567865,
+    "theo_nhom": {
+      "1688_title": {
+        "n_draw": 3669,
+        "e_share_thuc": 0.0547004615782652,
+        "tgt_share_thuc": 0.06771374448607274,
+        "e_share_dat": 0.1
+      },
+      "1688_attribute": {
+        "n_draw": 7571,
+        "e_share_thuc": 0.3198038698581769,
+        "tgt_share_thuc": 0.3627218006401848,
+        "e_share_dat": 0.2
+      },
+      "tiki_title": {
+        "n_draw": 11324,
+        "e_share_thuc": 0.19252575676712733,
+        "tgt_share_thuc": 0.16753775008179228,
+        "e_share_dat": 0.3
+      },
+      "tiki_attribute": {
+        "n_draw": 15014,
+        "e_share_thuc": 0.43296991179643063,
+        "tgt_share_thuc": 0.4020267047919502,
+        "e_share_dat": 0.4
+      }
+    }
+  }
+}

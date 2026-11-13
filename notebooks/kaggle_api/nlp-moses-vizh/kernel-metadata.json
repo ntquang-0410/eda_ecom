@@ -1,0 +1,19 @@
+{
+ "id": "honghuynanh/nlp-moses-vizh",
+ "title": "nlp-moses-vizh",
+ "code_file": "nlp-moses-vizh.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": false,
+ "enable_tpu": false,
+ "enable_internet": true,
+ "dataset_sources": [
+  "honghuynanh/ft-song-ngu"
+ ],
+ "competition_sources": [],
+ "kernel_sources": [
+  "honghuynanh/nlp-moses-build"
+ ],
+ "model_sources": []
+}

@@ -1,0 +1,3 @@
+﻿tap,source,n,unique_product,title_zh_len_mean,title_vi_len_mean,desc_zh_len_mean,desc_vi_len_mean,desc_lines_mean,desc_items_mean,missing_title_vi,missing_desc_vi,empty_title_vi,empty_desc_vi
+cum,1688,14837,14837,31.24769158185617,112.56392801779336,419.04960571544115,1084.6739906989283,1.0,24.813506773606523,0,0,0,0
+cum,tiki,10738,10738,36.59750419072453,79.3787483702738,121.71177127956788,286.09936673496,1.0,6.885360402309555,0,0,0,0

@@ -1,0 +1,51 @@
+model:
+  base: damo/nlp_ecomgpt_multilingual-7B-ecom
+  dtype: bfloat16
+  gradient_checkpointing: true
+  max_seq_len: 960
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  bias: none
+  task_type: CAUSAL_LM
+  target_modules: all-linear
+
+optimizer:
+  name: AdamW
+  lr: 1.0e-4
+  warmup_steps: 20
+  scheduler: cosine
+  total_steps: 500
+
+training:
+  token_budget: 4000000
+  steps: 500
+  tokens_per_step: 8000
+  micro_batch: 2
+  seed: 42
+
+sampling:
+  method: quota
+  configs:
+    A_natural: natural token mass
+    B_balanced: {1688_title: 0.25, 1688_description: 0.25, tiki_title: 0.25, tiki_description: 0.25}
+
+prompt:
+  template: |
+    Below is an instruction that describes a task, paired with an input that provides further context.
+    Write a response that appropriately completes the request.
+
+    ### Instruction:
+    Translate the following Vietnamese e-commerce text into Simplified Chinese. Return only the translation.
+
+    ### Input:
+    {source_text}
+
+    ### Response:
+
+inference:
+  do_sample: false
+  batch_size: 8
+  max_new: theo eval_F (64 title / 256 attribute / 768 description)

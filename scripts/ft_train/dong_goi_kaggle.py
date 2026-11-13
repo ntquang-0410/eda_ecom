@@ -17,6 +17,7 @@ gặp mã sản phẩm test. Notebook huấn luyện vì vậy không có dữ l
 import gzip
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -26,7 +27,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import chung as C  # noqa: E402
 
-NGUOI_DUNG = "trinhnhatanh"
+# Tên tài khoản Kaggle đang dùng. Mặc định là tài khoản 1; đặt biến môi trường KAGGLE_NGUOI_DUNG để dùng tài khoản khác (11/11/2026: tài khoản 2).
+NGUOI_DUNG = os.environ.get("KAGGLE_NGUOI_DUNG", "trinhnhatanh")
 KAGGLE = str(Path(sys.executable).parent / "kaggle")
 THU_MUC_API = C.GOC / "notebooks" / "kaggle_api"
 GOI_POOL = C.FT_RUN / "goi_pool"
@@ -42,7 +44,8 @@ from pathlib import Path
 OUT = Path("/kaggle/working/thu_vien")
 OUT.mkdir(parents=True, exist_ok=True)
 # --no-deps: máy đích đã có torch, transformers, huggingface_hub; không tải lại torch cho nhẹ. Cài ở đích bằng pip --no-index --find-links.
-GOI = ["peft", "accelerate", "sacrebleu", "portalocker", "regex", "tabulate", "colorama", "lxml", "safetensors", "psutil"]
+# peft ghim 0.18.1: đúng bản đã dùng cho mọi lần chạy từ B5 đến bản cuối (tài khoản 2 đóng gói lại 11/11/2026 ra peft 0.21.2 nếu không ghim, có thể khác kết quả cũ)
+GOI = ["peft==0.18.1", "accelerate", "sacrebleu", "portalocker", "regex", "tabulate", "colorama", "lxml", "safetensors", "psutil"]
 
 def sh(c):
     print(">>", c[:300], flush=True)
@@ -57,7 +60,7 @@ assert sh(f"/tmp/py312/bin/python -m pip download --no-cache-dir --no-deps -d {O
 ws = sorted(OUT.glob("*.whl"))
 print(len(ws), "wheel:", [p.name for p in ws], flush=True)
 for g in GOI:
-    assert any(p.name.lower().startswith(g.replace("-", "_")) for p in ws), f"thieu wheel {g}"
+    assert any(p.name.lower().startswith(g.split("==")[0].replace("-", "_")) for p in ws), f"thieu wheel {g}"
 (OUT / "MANIFEST.json").write_text(json.dumps({"goi": GOI, "files": [p.name for p in ws]}, indent=1), encoding="utf-8")
 print("XONG", flush=True)
 '''
@@ -82,6 +85,94 @@ for can in ["config.json", "tokenizer.json", "tokenizer_config.json"]:
 assert any(p.suffix == ".safetensors" for p in fs), "khong co trong so .safetensors"
 assert tong < 19 * 2**30, "vuot gioi han 20 GB"
 (OUT / "REVISION.txt").write_text(f"{REPO}\n{sha}\n", encoding="utf-8")
+print("XONG", flush=True)
+'''
+
+
+# Qwen3-8B: cùng cách đóng gói như 4B (HF, ghim revision), 15,3 GB < 19 GiB. Thêm 11/11/2026 cho 3 LLM trên dữ liệu của mình.
+SLUG_MO_HINH_8B = "ft-qwen3-8b-mo-hinh"
+MO_HINH_8B = MO_HINH.replace("Qwen/Qwen3-4B", "Qwen/Qwen3-8B").replace("/kaggle/working/Qwen3-4B", "/kaggle/working/Qwen3-8B")
+
+# EcomGPT-7B (ModelScope damo/nlp_ecomgpt_multilingual-7B-ecom, nền bigscience/bloomz-7b1, giấy phép ghi Apache 2.0 trên ModelScope):
+# trọng số gốc là 4 shard pytorch_model-*.bin FLOAT32, tổng 30,2 GB, vượt giới hạn 20 GB của Kaggle, nên tải từng shard, đổi sang bfloat16
+# và ghi thành safetensors (khoảng 15 GB). Mỗi shard xong thì xóa bản gốc để không tràn đĩa.
+SLUG_MO_HINH_ECOM = "ft-ecomgpt-7b-mo-hinh"
+MO_HINH_ECOM = r'''import hashlib, json, shutil, subprocess, sys, time
+from pathlib import Path
+import requests
+import torch
+from safetensors.torch import save_file
+
+MS = "https://www.modelscope.cn/api/v1/models/damo/nlp_ecomgpt_multilingual-7B-ecom/repo"
+OUT = Path("/kaggle/working/EcomGPT-7B")
+TMP = Path("/tmp/ecom_goc")
+OUT.mkdir(parents=True, exist_ok=True)
+TMP.mkdir(parents=True, exist_ok=True)
+
+ds = requests.get(MS + "/files", params={"Revision": "master", "Recursive": "true"}, timeout=120).json()["Data"]["Files"]
+files = {f["Path"]: f for f in ds if f.get("Type") != "tree"}
+shards = sorted(p for p in files if p.startswith("pytorch_model-") and p.endswith(".bin"))
+print("shard goc:", [(p, round(files[p]["Size"] / 2**30, 2)) for p in shards], flush=True)
+assert len(shards) == 4, shards
+
+def tai(p, dich):
+    for lan in range(4):
+        try:
+            with requests.get(MS, params={"Revision": "master", "FilePath": p}, stream=True, timeout=300) as r:
+                r.raise_for_status()
+                with open(dich, "wb") as f:
+                    for c in r.iter_content(1 << 22):
+                        f.write(c)
+            if Path(dich).stat().st_size == files[p]["Size"]:
+                return
+            print("kich thuoc lech, tai lai", p, flush=True)
+        except Exception as e:
+            print("loi tai", p, lan, repr(e)[:200], flush=True)
+            time.sleep(10)
+    raise RuntimeError("khong tai duoc " + p)
+
+for p in ["config.json", "generation_config.json", "tokenizer.json", "tokenizer_config.json", "special_tokens_map.json", "README.md", "requirements.txt"]:
+    tai(p, OUT / p)
+
+weight_map, tong = {}, 0
+for i, p in enumerate(shards, 1):
+    t0 = time.time()
+    goc = TMP / p
+    tai(p, goc)
+    print(f"[{i}/4] da tai {p} ({time.time() - t0:.0f} giay)", flush=True)
+    sd = torch.load(goc, map_location="cpu", weights_only=True)
+    goc.unlink()
+    ra = {k: v.to(torch.bfloat16).contiguous() for k, v in sd.items()}
+    del sd
+    ten = f"model-{i:05d}-of-00004.safetensors"
+    save_file(ra, str(OUT / ten), metadata={"format": "pt"})
+    for k, v in ra.items():
+        weight_map[k] = ten
+        tong += v.numel() * 2
+    print(f"[{i}/4] ghi {ten}: {len(ra)} tensor, {(OUT / ten).stat().st_size / 2**30:.2f} GiB", flush=True)
+    del ra
+
+(OUT / "model.safetensors.index.json").write_text(json.dumps({"metadata": {"total_size": tong}, "weight_map": weight_map}, indent=1), encoding="utf-8")
+cfg = json.loads((OUT / "config.json").read_text(encoding="utf-8"))
+cfg["torch_dtype"] = "bfloat16"
+(OUT / "config.json").write_text(json.dumps(cfg, indent=2), encoding="utf-8")
+sha = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(OUT.glob("*.safetensors"))}
+(OUT / "REVISION.txt").write_text("damo/nlp_ecomgpt_multilingual-7B-ecom\nmaster (ModelScope), doi float32 .bin -> bfloat16 safetensors\n" + json.dumps(sha, indent=1) + "\n", encoding="utf-8")
+tongdia = sum(p.stat().st_size for p in OUT.rglob("*") if p.is_file())
+print(f"TONG {tongdia / 2**30:.2f} GiB; so tensor {len(weight_map)}; tong tham so ~{tong / 2 / 1e9:.2f} ty", flush=True)
+assert tongdia < 19 * 2**30, "vuot gioi han 20 GB"
+# kiem nhanh: tokenizer va khung mo hinh (khong nap trong so)
+import transformers
+from transformers import AutoConfig, AutoTokenizer, AutoModelForCausalLM
+print("transformers", transformers.__version__, "torch", torch.__version__, flush=True)
+tok = AutoTokenizer.from_pretrained(str(OUT))
+for s in ["260GSM Boxy clean fit宽松短袖T恤洗水做旧矮胖男CROP CROPPED", "Tai nghe Bluetooth không dây kiểu kẹp tai thiết kế riêng thể thao"]:
+    ids = tok(s)["input_ids"]
+    print(len(s), "ky tu ->", len(ids), "token;", tok.decode(ids)[:60], flush=True)
+c = AutoConfig.from_pretrained(str(OUT))
+with torch.device("meta"):
+    m = AutoModelForCausalLM.from_config(c)
+print("khung mo hinh:", type(m).__name__, sum(p.numel() for p in m.parameters()) / 1e9, "ty tham so", flush=True)
 print("XONG", flush=True)
 '''
 
@@ -235,6 +326,41 @@ print("XONG", flush=True)
 '''
 
 
+# Lưu đầu ra bản 36 (tl2: cum_f0_p11_lr1e4, pair_f1, pair_f1_p11) sang notebook riêng, cùng lý do: adapter chỉ còn ở đó
+SLUG_TL2_LUU = "ft-qwen3-4b-tl2-luu"
+TL2_LUU = r'''import hashlib, json, shutil
+from pathlib import Path
+
+ds = sorted(Path("/kaggle/input").rglob("tl2_trang_thai.json"))
+assert len(ds) == 1, ds
+st = json.loads(ds[0].read_text(encoding="utf-8"))
+assert st.get("xong") is True and not st.get("bat_thuong"), "ban tl2 chua xong"
+OUT = Path("/kaggle/working/tl2")
+shutil.copytree(ds[0].parent, OUT)
+for ten in ("cum_f0_p11_lr1e4", "pair_f1", "pair_f1_p11"):
+    v = st["viec"][ten]
+    print(ten, "epoch", v["epoch_xong"], "chrF", v["cham"]["chrf"]["chrf_macro_huong"], flush=True)
+    assert (OUT / ten / "ep2" / "adapter_model.safetensors").exists() and (OUT / ten / "sinh_ep2.jsonl").exists(), ten
+mf = {}
+for p in sorted(OUT.rglob("*")):
+    if p.is_file():
+        h = hashlib.sha256()
+        with open(p, "rb") as a:
+            for k in iter(lambda: a.read(2**20), b""):
+                h.update(k)
+        mf[str(p.relative_to(OUT)).replace("\\", "/")] = {"byte": p.stat().st_size, "sha256": h.hexdigest()}
+Path("/kaggle/working/MANIFEST_TL2.json").write_text(json.dumps(mf, indent=1), encoding="utf-8")
+print(len(mf), "file", round(sum(v["byte"] for v in mf.values()) / 2**30, 2), "GiB", flush=True)
+print("XONG", flush=True)
+'''
+
+
+# Lưu đầu ra bản tl3 (pair_f2, pair_f2_p11) sang notebook riêng, cùng lý do: adapter chỉ còn ở đó, lần đẩy kế sẽ thay
+SLUG_TL3_LUU = "ft-qwen3-4b-tl3-luu"
+TL3_LUU = TL2_LUU.replace("tl2_trang_thai", "tl3_trang_thai").replace("ban tl2", "ban tl3").replace("/kaggle/working/tl2", "/kaggle/working/tl3").replace(
+    "MANIFEST_TL2", "MANIFEST_TL3").replace('("cum_f0_p11_lr1e4", "pair_f1", "pair_f1_p11")', '("pair_f2", "pair_f2_p11")')
+
+
 def goi(*args, check=True):
     r = subprocess.run([KAGGLE, *args], capture_output=True, text=True, encoding="utf-8", errors="replace")
     out = (r.stdout + r.stderr).strip()
@@ -303,10 +429,62 @@ def du_lieu():
         goi("datasets", "create", "-p", str(GOI_POOL))      # không có --public: riêng tư
 
 
-def chay_b5(cau_hinh=None, noi_phien_truoc=False, them_nguon=()):
+# Dataset test riêng tư cho lần đo test MỘT lần (Nhật Anh duyệt 07/11/2026, Prompt 806; D17). Tên file bắt đầu bằng do_khoa_ (không chứa "test_") để mọi phiên huấn luyện
+# bình thường vẫn bị kiem_khoa_test chặn nếu lỡ gắn nhầm; chỉ chế độ do_test (nguon_do = "test") được phép có chúng.
+SLUG_DO_KHOA = "ft-qwen3-4b-do-khoa"
+GOI_DO_KHOA = C.FT_RUN / "goi_do_khoa"
+FILE_DO_KHOA = {"do_khoa_cum.jsonl.gz", "do_khoa_pair.jsonl.gz", "MANIFEST.json", "dataset-metadata.json"}
+TRUONG_DO_KHOA = ("id", "product_id", "huong", "loai", "nguon", "dich", "messages", "category")
+
+
+def kiem_do_khoa(ids_test, sp_pool, duong_dan):
+    """Đọc từng dòng file đã nén nhưng KHÔNG in nội dung: mọi product_id phải thuộc test và không thuộc pool, id không trùng, đủ trường. Trả (số mẫu, số sp)."""
+    sp, ids, n = set(), set(), 0
+    with gzip.open(duong_dan, "rt", encoding="utf-8") as f:
+        for d in f:
+            m = json.loads(d)
+            if any(k not in m for k in TRUONG_DO_KHOA):
+                raise SystemExit(f"thiếu trường trong {duong_dan.name}")
+            if m["product_id"] not in ids_test or m["product_id"] in sp_pool:
+                raise SystemExit(f"{duong_dan.name}: sản phẩm không thuộc test hoặc lẫn pool")
+            if m["id"] in ids:
+                raise SystemExit(f"{duong_dan.name}: id trùng")
+            ids.add(m["id"])
+            sp.add(m["product_id"])
+            n += 1
+    return n, len(sp)
+
+
+def do_khoa():
+    """Dựng và đẩy Dataset test riêng tư (không --public). Chỉ đọc byte và đếm, không in nội dung test. Mẫu test sinh bởi dung_mau.py: mỗi sản phẩm 2 mẫu (title, mô tả) mỗi nhánh."""
+    tach = C.doc_split()
+    ids_test, sp_pool = set(tach.product_id[tach.la_test]), set(tach.product_id[~tach.la_test])
+    GOI_DO_KHOA.mkdir(parents=True, exist_ok=True)
+    mf = {"sha256_ds_test": C.bam_ds_test(ids_test), "nhanh": {}}
+    for nh in ("cum", "pair"):
+        vao, ra = C.THU_MUC_TEST / f"test_{nh}.jsonl", GOI_DO_KHOA / f"do_khoa_{nh}.jsonl.gz"
+        with open(vao, "rb") as a, open(ra, "wb") as raw, gzip.GzipFile(fileobj=raw, mode="wb", mtime=0) as b:
+            shutil.copyfileobj(a, b)
+        n, so_sp = kiem_do_khoa(ids_test, sp_pool, ra)
+        if so_sp != len(ids_test) or n != 2 * len(ids_test):
+            raise SystemExit(f"{nh}: có {n} mẫu / {so_sp} sản phẩm, cần {2 * len(ids_test)} / {len(ids_test)}")
+        mf["nhanh"][nh] = {"so_mau": n, "so_sp": so_sp, "sha256_jsonl": C.sha256_file(vao), "sha256_gz": hashlib.sha256(ra.read_bytes()).hexdigest()}
+    (GOI_DO_KHOA / "MANIFEST.json").write_text(json.dumps(mf, ensure_ascii=False, indent=1), encoding="utf-8")
+    (GOI_DO_KHOA / "dataset-metadata.json").write_text(json.dumps({"title": SLUG_DO_KHOA, "id": f"{NGUOI_DUNG}/{SLUG_DO_KHOA}",
+                                                                   "licenses": [{"name": "other"}]}, indent=1), encoding="utf-8")
+    co = {p.name for p in GOI_DO_KHOA.iterdir()}
+    assert co == FILE_DO_KHOA, f"thư mục tải lên có file lạ hoặc thiếu file: {sorted(co ^ FILE_DO_KHOA)}"
+    print(json.dumps(mf["nhanh"], indent=1))
+    if "ready" in goi("datasets", "status", f"{NGUOI_DUNG}/{SLUG_DO_KHOA}", check=False):
+        raise SystemExit("Dataset test đã tồn tại: không đẩy phiên bản mới (đo test chỉ một lần). Xóa tay nếu thật sự cần dựng lại.")
+    goi("datasets", "create", "-p", str(GOI_DO_KHOA))          # không có --public: riêng tư
+
+
+def chay_b5(cau_hinh=None, noi_phien_truoc=False, them_nguon=(), them_dataset=(), slug="nlp-group3"):
     """Ghi đè notebook nlp-group3: nhúng mã huấn luyện vào notebook, Dataset chỉ chứa dữ liệu pool.
     noi_phien_truoc: gắn đầu ra phiên trước của chính notebook để chạy tiếp (không tải checkpoint về máy rồi tải lên lại).
-    them_nguon: notebook khác cần gắn thêm (kho lưu B6)."""
+    them_nguon: notebook khác cần gắn thêm (kho lưu B6).
+    them_dataset: Dataset khác cần gắn thêm; CHỈ dùng cho lần đo test thật (Dataset test riêng tư), mặc định rỗng để mọi phiên huấn luyện không bao giờ có dữ liệu test."""
     goc = Path(__file__).resolve().parent
     cfg = {"che_do": "thu_b5", "nhanh": "cum", "fold_kiem": 0, "so_buoc": 100, "lr": 1e-4, "rank": 16, "micro_bs": 32, "tich_luy": 1,
            "ngan_sach_token": 4096, "gc": False, "max_len": 2048, "seed": 42, "so_mau_kiem": 300, "so_mau_sinh": 12}
@@ -317,8 +495,7 @@ def chay_b5(cau_hinh=None, noi_phien_truoc=False, them_nguon=()):
     o2 = "# Ghi mã huấn luyện và bộ chấm (nhúng sẵn, phiên tắt Internet)\nfrom pathlib import Path\n" + ghi
     o3 = "import sys\nsys.path.insert(0, '.')\nimport kaggle_train\nkaggle_train.main(CAU_HINH)\n"
     tieu = ("# Fine-tune Qwen3-4B + LoRA (scripts/ft_train)\n\nGPU RTX Pro 6000 (notebook gắn cuộc thi), phiên tắt Internet. "
-            "Dữ liệu: chỉ mẫu pool; không có dữ liệu test trong notebook này.")
-    slug = "nlp-group3"
+            + ("Dữ liệu: mẫu pool và Dataset test riêng tư (lần đo test MỘT lần)." if them_dataset else "Dữ liệu: chỉ mẫu pool; không có dữ liệu test trong notebook này."))
     thu = THU_MUC_API / slug
     thu.mkdir(parents=True, exist_ok=True)
     (thu / f"{slug}.ipynb").write_text(json.dumps(tao_notebook([o1, o2, o3], tieu), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
@@ -326,7 +503,7 @@ def chay_b5(cau_hinh=None, noi_phien_truoc=False, them_nguon=()):
         "id": f"{NGUOI_DUNG}/{slug}", "title": slug, "code_file": f"{slug}.ipynb", "language": "python", "kernel_type": "notebook",
         "is_private": True, "enable_gpu": True, "enable_tpu": False, "enable_internet": False,
         "docker_image": ANH_RTX, "machine_shape": "NvidiaRtxPro6000",
-        "dataset_sources": [f"{NGUOI_DUNG}/{SLUG_POOL}"], "competition_sources": [CUOC_THI],
+        "dataset_sources": [f"{NGUOI_DUNG}/{SLUG_POOL}"] + [f"{NGUOI_DUNG}/{s}" for s in them_dataset], "competition_sources": [CUOC_THI],
         "kernel_sources": [f"{NGUOI_DUNG}/{SLUG_THU_VIEN}", f"{NGUOI_DUNG}/{SLUG_MO_HINH}"] + [f"{NGUOI_DUNG}/{s}" for s in them_nguon] + ([f"{NGUOI_DUNG}/{slug}"] if noi_phien_truoc else []),
         "model_sources": []}, indent=1), encoding="utf-8")
     goi("kernels", "push", "-p", str(thu), "--accelerator", "NvidiaRtxPro6000")
@@ -373,6 +550,75 @@ VIEC_TL2 = [{"ten": "cum_f0_p11_lr1e4", "nhanh": "cum", "fold": 0, "p_title": 0.
 CAU_HINH_TL2 = {"che_do": "b78", "ten_trang_thai": "tl2", "viec": VIEC_TL2, "so_kiem_moi_nhom": 750, "so_sinh_moi_nhom": 250, "gio_toi_da": 6.0,
                 "chrf_toi_thieu": 65.0, "lap_toi_da": 0.05}
 THU_TL2 = {"che_do": "b78", "ten_trang_thai": "thu_tl2", "viec": VIEC_TL2, "so_kiem_moi_nhom": 10, "so_sinh_moi_nhom": 250, "rut_gon_sinh": 3, "so_train": 320, "gio_toi_da": 0.75}
+# Nhật Anh duyệt 07/11/2026 (Prompt 804): bản pair trên fold 2, mốc 1 : 1 (pair_f2) và ~11% (pair_f2_p11, p_title 0.1086 như fold 0, 1). Luật khóa ở kiem_3fold_pair.py và WALKTHROUGH
+# (Prompt 804), khóa TRƯỚC khi có số fold 2. Trạng thái riêng "tl3", không nối phiên nào. Hai việc ~2,7 giờ [ƯỚC]; trần 3,5 giờ chỉ để lần chạy lỗi không đốt quota.
+VIEC_TL3 = [{"ten": "pair_f2", "nhanh": "pair", "fold": 2, "ca_fold": False},
+            {"ten": "pair_f2_p11", "nhanh": "pair", "fold": 2, "p_title": 0.1086, "ca_fold": False}]
+CAU_HINH_TL3 = {"che_do": "b78", "ten_trang_thai": "tl3", "viec": VIEC_TL3, "so_kiem_moi_nhom": 750, "so_sinh_moi_nhom": 250, "gio_toi_da": 3.5,
+                "chrf_toi_thieu": 65.0, "lap_toi_da": 0.05}
+THU_TL3 = {"che_do": "b78", "ten_trang_thai": "thu_tl3", "viec": VIEC_TL3, "so_kiem_moi_nhom": 10, "so_sinh_moi_nhom": 250, "rut_gon_sinh": 3, "so_train": 320, "gio_toi_da": 0.5}
+
+
+# Nhật Anh duyệt 07/11/2026 (Prompt 806): đo test MỘT lần. Zero-shot và adapter fold 0 ở ~11% title (cụm cum_f0_p11 10,74%, pair pair_f0_p11 10,86%, cả hai lr 2e-4), mẫu test
+# giống hệt cho cả hai mô hình. Adapter lấy từ kho lưu ft-qwen3-4b-tl-luu (gắn như notebook nguồn, kiểm hash theo MANIFEST_TL.json). Trần 4,5 giờ chỉ để lần chạy lỗi không đốt quota.
+DO_TEST_ADAPTER = {"cum": "cum_f0_p11", "pair": "pair_f0_p11"}
+CAU_HINH_DO_TEST = {"che_do": "do_test", "ten_trang_thai": "do_test", "nguon_do": "test", "nhanh": ["cum", "pair"], "mo_hinh_ft": DO_TEST_ADAPTER, "fold_adapter": 0, "gio_toi_da": 4.5}
+# Khói chạy trên MẪU POOL (fold 4, 3 mẫu mỗi nhóm hướng x loại) làm 'test' giả: không gắn Dataset test, nên kiem_khoa_test thường vẫn bật
+THU_DO_TEST = {"che_do": "do_test", "ten_trang_thai": "do_test", "nguon_do": "pool_fold", "fold_do": 4, "so_mau_do": 3, "nhanh": ["cum", "pair"], "mo_hinh_ft": DO_TEST_ADAPTER,
+               "fold_adapter": 0, "gio_toi_da": 0.75}
+
+
+# Nhật Anh duyệt 07/11/2026 (Prompt 808): BẢN CUỐI trên TOÀN pool, hai nhánh, cùng cấu hình đã chốt (~11% title: cụm 10,74%, pair 10,86%; lr 2e-4, rank 64, 2 epoch).
+# Cách xử lý title = cách 1: LOẠI mẫu title của sản phẩm bị loc_title.py gắn cờ khỏi tập huấn luyện, GIỮ mẫu mô tả của chúng; w_title tính lại để giữ đúng tỉ trọng.
+# Không còn fold giữ lại nên không chấm; mỗi việc chỉ sinh thử vài mẫu (của tập huấn luyện) để bắt hỏng. Trạng thái riêng "cuoi", không nối phiên nào.
+VIEC_CUOI = [{"ten": "cum_cuoi", "nhanh": "cum", "fold": None, "p_title": 0.1074, "loai_title_co": True, "khong_danh_gia": True, "ca_fold": False},
+             {"ten": "pair_cuoi", "nhanh": "pair", "fold": None, "p_title": 0.1086, "loai_title_co": True, "khong_danh_gia": True, "ca_fold": False}]
+
+
+def san_pham_title_co():
+    """product_id của sản phẩm trong POOL có title bị gắn cờ (ft_run/loc_title/pool.parquet, chỉ đọc cờ). Dùng chung cho hai nhánh vì title giống 100%."""
+    import pandas as pd
+    d = pd.read_parquet(C.FT_RUN / "loc_title" / "pool.parquet")
+    cot = [c for c in d.columns if c.startswith("co_c")]
+    assert len(cot) == 1, d.columns.tolist()
+    return sorted(d.loc[d[cot[0]], "product_id"].astype(str))
+
+
+def cau_hinh_cuoi(khoi=False):
+    ds = san_pham_title_co()
+    chung = {"che_do": "b78", "viec": VIEC_CUOI, "so_kiem_moi_nhom": 750, "so_sinh_moi_nhom": 250, "loai_title_sp": ds, "so_sinh_kiem_nhanh": 25}
+    if khoi:
+        return {**chung, "ten_trang_thai": "thu_cuoi", "so_kiem_moi_nhom": 10, "so_sinh_kiem_nhanh": 3, "so_train": 320, "gio_toi_da": 0.5}
+    return {**chung, "ten_trang_thai": "cuoi", "gio_toi_da": 5.5, "chrf_toi_thieu": 65.0, "lap_toi_da": 0.05}
+
+
+# Lưu adapter bản cuối sang notebook riêng, cùng lý do: adapter chỉ còn ở đầu ra nlp-group3, lần đẩy kế sẽ thay
+SLUG_CUOI_LUU = "ft-qwen3-4b-cuoi-luu"
+CUOI_LUU = r'''import hashlib, json, shutil
+from pathlib import Path
+
+ds = sorted(Path("/kaggle/input").rglob("cuoi_trang_thai.json"))
+assert len(ds) == 1, ds
+st = json.loads(ds[0].read_text(encoding="utf-8"))
+assert st.get("xong") is True and not st.get("bat_thuong"), "ban cuoi chua xong"
+OUT = Path("/kaggle/working/cuoi")
+shutil.copytree(ds[0].parent, OUT)
+for ten in ("cum_cuoi", "pair_cuoi"):
+    v = st["viec"][ten]
+    print(ten, "epoch", v["epoch_xong"], "so_title_bi_loai", v.get("so_title_bi_loai"), "kiem_nhanh chrF", v["kiem_nhanh"]["chrf"]["chrf_macro_huong"], flush=True)
+    assert (OUT / ten / "ep2" / "adapter_model.safetensors").exists() and (OUT / ten / "ep2" / "adapter_config.json").exists(), ten
+mf = {}
+for p in sorted(OUT.rglob("*")):
+    if p.is_file():
+        h = hashlib.sha256()
+        with open(p, "rb") as a:
+            for k in iter(lambda: a.read(2**20), b""):
+                h.update(k)
+        mf[str(p.relative_to(OUT)).replace("\\", "/")] = {"byte": p.stat().st_size, "sha256": h.hexdigest()}
+Path("/kaggle/working/MANIFEST_CUOI.json").write_text(json.dumps(mf, indent=1), encoding="utf-8")
+print(len(mf), "file", round(sum(v["byte"] for v in mf.values()) / 2**30, 2), "GiB", flush=True)
+print("XONG", flush=True)
+'''
 
 
 def trang_thai_kernel():
@@ -397,7 +643,7 @@ def tai_ket_qua(ra, ten="b6"):
     return json.loads(tep[0].read_text(encoding="utf-8")) if tep else None
 
 
-def chay_nhieu_phien(ten, cau_hinh, thu_muc, bat_dau_moi, them_nguon=(), so_phien_toi_da=4):
+def chay_nhieu_phien(ten, cau_hinh, thu_muc, bat_dau_moi, them_nguon=(), so_phien_toi_da=4, them_dataset=()):
     """Chạy qua nhiều phiên, cùng cách với b6_tu_dong. Không tự bật thêm việc: xong hoặc bất thường thì dừng, người quyết việc tiếp theo.
     Phiên chạy trên Kaggle, máy tắt thì phiên vẫn chạy và tự lưu; bật lại máy chạy "tiep" để lấy kết quả."""
     goc = C.FT_RUN / thu_muc
@@ -419,7 +665,7 @@ def chay_nhieu_phien(ten, cau_hinh, thu_muc, bat_dau_moi, them_nguon=(), so_phie
             return
     for lan in range(1, so_phien_toi_da + 1):
         ra = goc / time.strftime(f"phien_{lan}_%Y%m%d_%H%M%S")
-        chay_b5(cau_hinh, noi_phien_truoc=not (bat_dau_moi and lan == 1), them_nguon=them_nguon)
+        chay_b5(cau_hinh, noi_phien_truoc=not (bat_dau_moi and lan == 1), them_nguon=them_nguon, them_dataset=them_dataset)
         time.sleep(90)
         s = cho_xong()
         st = tai_ket_qua(ra, ten)
@@ -427,7 +673,8 @@ def chay_nhieu_phien(ten, cau_hinh, thu_muc, bat_dau_moi, them_nguon=(), so_phie
         if st:
             print(json.dumps({"xong": st.get("xong"), "bat_thuong": st.get("bat_thuong"), "so_cap_attn": st.get("attn", {}).get("so_cap"),
                               "viec": {t: {"epoch": v["epoch_xong"], "buoc": v["buoc"], "diem": v["diem"], "p_thuc": v.get("p_thuc"),
-                                           "chrf": (v.get("cham") or {}).get("chrf", {}).get("chrf_macro_huong")} for t, v in st["viec"].items()}}, ensure_ascii=False), flush=True)
+                                           "chrf": (v.get("cham") or {}).get("chrf", {}).get("chrf_macro_huong")} for t, v in st.get("viec", {}).items()},
+                              "ket_qua_do": {k: v["chrf"]["chrf_macro_huong"] for k, v in st.get("ket_qua", {}).items()}}, ensure_ascii=False), flush=True)
         if "COMPLETE" not in s:
             raise SystemExit(f"Phiên {lan} không hoàn tất: {s}. Xem {ra}. Sửa rồi chạy lệnh với tham số tiep")
         if not st:
@@ -435,6 +682,58 @@ def chay_nhieu_phien(ten, cau_hinh, thu_muc, bat_dau_moi, them_nguon=(), so_phie
         if ket_thuc(st):
             return
     raise SystemExit(f"Hết {so_phien_toi_da} phiên mà {ten} chưa xong")
+
+
+def kiem_khoi_tl3(st, bc, s):
+    """Cổng khói tl3: trả danh sách lý do KHÔNG đạt (rỗng = đạt). Không dùng số chrF của khói (dữ liệu rút gọn, vô nghĩa)."""
+    loi = []
+    if "COMPLETE" not in s:
+        loi.append(f"phiên khói không COMPLETE: {s}")
+    if not st:
+        return loi + ["không có trạng thái khói"]
+    if not st.get("xong") or st.get("bat_thuong"):
+        loi.append(f"khói chưa xong hoặc bất thường: xong={st.get('xong')} bat_thuong={st.get('bat_thuong')}")
+    cho = {"pair_f2": None, "pair_f2_p11": 0.1086}
+    if set(st.get("viec", {})) != set(cho):
+        loi.append(f"sai tập việc: {sorted(st.get('viec', {}))}")
+    for ten, p in cho.items():
+        v = st.get("viec", {}).get(ten) or {}
+        if v.get("nhanh") != "pair" or v.get("fold") != 2 or v.get("epoch_xong") != 2:
+            loi.append(f"{ten}: nhánh/fold/epoch sai ({v.get('nhanh')}, {v.get('fold')}, {v.get('epoch_xong')})")
+        if abs((v.get("lr") or 0) - 2e-4) > 1e-12:
+            loi.append(f"{ten}: lr {v.get('lr')} khác 2e-4")
+        if v.get("p_muc_tieu") != p:
+            loi.append(f"{ten}: p_muc_tieu {v.get('p_muc_tieu')} khác {p}")
+        if p and abs((v.get("p_thuc") or 0) - p) > 1e-3:
+            loi.append(f"{ten}: p_thuc {v.get('p_thuc')} lệch mục tiêu {p}")
+        if v.get("so_id_sinh_thieu") != 0:
+            loi.append(f"{ten}: thiếu id sinh {v.get('so_id_sinh_thieu')}")
+    t = st.get("thu_loss_1_1") or {}
+    if not t or abs(t.get("out_loss", 0) - t.get("co_trong_so", 1)) > 1e-4:
+        loi.append(f"phép thử loss có trọng số 1 : 1 không khớp: {t}")
+    if (bc or {}).get("khoa_test") != "khong_co_file_test_trong_input":
+        loi.append(f"khoa_test: {(bc or {}).get('khoa_test')}")
+    return loi
+
+
+def tl3_tu_dong():
+    """Nhật Anh duyệt 07/11/2026 (Prompt 804): khói rồi chạy thật pair fold 2, liền nhau. Khói không đạt thì dừng, KHÔNG đẩy phiên thật."""
+    s = trang_thai_kernel()
+    if "RUNNING" in s or "QUEUED" in s:
+        raise SystemExit(f"nlp-group3 đang chạy, không đẩy đè: {s}")
+    ra = C.FT_RUN / "kaggle_tl3_thu" / time.strftime("khoi_%Y%m%d_%H%M%S")
+    chay_b5(THU_TL3)
+    time.sleep(90)
+    s = cho_xong(60)
+    st = tai_ket_qua(ra, "thu_tl3")
+    tep = list(ra.rglob("bao_cao_thu_tl3.json"))
+    bc = json.loads(tep[0].read_text(encoding="utf-8")) if tep else None
+    print(time.strftime("%H:%M:%S"), "KHOI", s, flush=True)
+    loi = kiem_khoi_tl3(st, bc, s)
+    if loi:
+        raise SystemExit("KHOI KHONG DAT, khong day phien that. Xem " + str(ra) + ":\n  " + "\n  ".join(loi))
+    print("KHOI_DAT: khoa_test sach, 2 viec pair fold 2 xong 2 epoch, phep thu 1:1 khop. Day phien that.", flush=True)
+    chay_nhieu_phien("tl3", CAU_HINH_TL3, "kaggle_tl3", True)
 
 
 def b78_tu_dong(bat_dau_moi):
@@ -479,6 +778,10 @@ def main():
         day_dong_goi(SLUG_THU_VIEN, THU_VIEN, "# Đóng gói thư viện fine-tune (Internet bật)")
     elif viec == "mo_hinh":
         day_dong_goi(SLUG_MO_HINH, MO_HINH, "# Đóng gói Qwen/Qwen3-4B (Internet bật)")
+    elif viec == "mo_hinh_8b":
+        day_dong_goi(SLUG_MO_HINH_8B, MO_HINH_8B, "# Đóng gói Qwen/Qwen3-8B (Internet bật)")
+    elif viec == "mo_hinh_ecomgpt":
+        day_dong_goi(SLUG_MO_HINH_ECOM, MO_HINH_ECOM, "# Đóng gói EcomGPT-7B từ ModelScope, đổi float32 .bin sang bfloat16 safetensors (Internet bật)")
     elif viec == "du_lieu":
         du_lieu()
     elif viec == "luu_b6":      # lưu adapter B6 sang notebook riêng, không GPU; chạy trước mọi lần đẩy lại nlp-group3
@@ -501,10 +804,32 @@ def main():
         chay_nhieu_phien("b8f2", CAU_HINH_B8_F2, "kaggle_b8f2", sys.argv[2] == "moi")
     elif viec == "luu_b8f2":    # lưu đầu ra bản 34 sang notebook riêng, không GPU; chạy trước khi đẩy lại nlp-group3
         day_dong_goi(SLUG_B8F2_LUU, B8F2_LUU, "# Lưu đầu ra cụm ~11% fold 2 (không GPU, không Internet)", internet=False, kernel_sources=[f"{NGUOI_DUNG}/nlp-group3"])
+    elif viec == "luu_tl2":     # lưu đầu ra bản 36 sang notebook riêng, không GPU; chạy trước khi đẩy lại nlp-group3
+        day_dong_goi(SLUG_TL2_LUU, TL2_LUU, "# Lưu đầu ra kiểm lr 1e-4 (cụm fold 0) và pair fold 1 (không GPU, không Internet)", internet=False, kernel_sources=[f"{NGUOI_DUNG}/nlp-group3"])
     elif viec == "tl2_thu":     # khói: đủ luồng 3 việc (lr 1e-4, pair fold 1 hai mức) với dữ liệu rút gọn, trạng thái riêng
         chay_b5(THU_TL2)
     elif viec == "tl2":         # tl2 moi | tl2 tiep: kiểm lr 1e-4 + pair fold 1, một phiên, máy tắt vẫn chạy
         chay_nhieu_phien("tl2", CAU_HINH_TL2, "kaggle_tl2", sys.argv[2] == "moi")
+    elif viec == "luu_tl3":     # lưu đầu ra bản tl3 sang notebook riêng, không GPU; chạy trước khi đẩy lại nlp-group3
+        day_dong_goi(SLUG_TL3_LUU, TL3_LUU, "# Lưu đầu ra pair fold 2 (không GPU, không Internet)", internet=False, kernel_sources=[f"{NGUOI_DUNG}/nlp-group3"])
+    elif viec == "cuoi_thu":    # khói bản cuối: 2 việc trên dữ liệu rút gọn, kiểm việc loại title bị gắn cờ, trạng thái riêng "thu_cuoi"
+        chay_b5(cau_hinh_cuoi(khoi=True))
+    elif viec == "cuoi":        # cuoi moi | cuoi tiep: BẢN CUỐI trên toàn pool, một phiên, máy tắt vẫn chạy
+        chay_nhieu_phien("cuoi", cau_hinh_cuoi(), "kaggle_cuoi", sys.argv[2] == "moi")
+    elif viec == "luu_cuoi":    # lưu adapter bản cuối sang notebook riêng, không GPU; chạy trước khi đẩy lại nlp-group3
+        day_dong_goi(SLUG_CUOI_LUU, CUOI_LUU, "# Lưu adapter bản cuối trên toàn pool (không GPU, không Internet)", internet=False, kernel_sources=[f"{NGUOI_DUNG}/nlp-group3"])
+    elif viec == "do_khoa":     # dựng và đẩy Dataset test riêng tư; chỉ chạy khi đã sẵn sàng đo test thật (không in nội dung test)
+        do_khoa()
+    elif viec == "do_test_thu": # khói đo test trên mẫu pool, KHÔNG gắn Dataset test, gắn kho lưu adapter
+        chay_b5(THU_DO_TEST, them_nguon=[SLUG_TL_LUU])
+    elif viec == "do_test":     # do_test moi | do_test tiep: ĐO TEST THẬT, gắn Dataset test riêng tư
+        chay_nhieu_phien("do_test", CAU_HINH_DO_TEST, "kaggle_do_test", sys.argv[2] == "moi", them_nguon=[SLUG_TL_LUU], them_dataset=[SLUG_DO_KHOA])
+    elif viec == "tl3_thu":     # chỉ khói: 2 việc pair fold 2 với dữ liệu rút gọn, trạng thái riêng
+        chay_b5(THU_TL3)
+    elif viec == "tl3":         # tl3 moi | tl3 tiep: pair fold 2, một phiên, máy tắt vẫn chạy
+        chay_nhieu_phien("tl3", CAU_HINH_TL3, "kaggle_tl3", sys.argv[2] == "moi")
+    elif viec == "tl3_tu_dong":     # khói rồi chạy thật liền nhau; khói không đạt thì DỪNG, không đẩy phiên thật
+        tl3_tu_dong()
     elif viec == "chay_b5":
         chay_b5()
     elif viec == "b6_thu":      # chạy khói phần 1: dừng giữa chừng, kết thúc phiên như khi hết giờ

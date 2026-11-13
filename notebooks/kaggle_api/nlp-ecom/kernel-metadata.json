@@ -1,0 +1,26 @@
+{
+ "id": "honghuynanh/nlp-ecom",
+ "title": "nlp-ecom",
+ "code_file": "nlp-ecom.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_tpu": false,
+ "enable_internet": false,
+ "dataset_sources": [
+  "honghuynanh/ft-qwen3-4b-pool",
+  "honghuynanh/ft-qwen3-4b-quota"
+ ],
+ "competition_sources": [
+  "arc-prize-2026-arc-agi-3"
+ ],
+ "kernel_sources": [
+  "honghuynanh/ft-qwen3-4b-thu-vien",
+  "honghuynanh/ft-ecomgpt-7b-mo-hinh",
+  "honghuynanh/ft-qwen3-4b-mo-hinh"
+ ],
+ "model_sources": [],
+ "docker_image": "gcr.io/kaggle-private-byod/python@sha256:00377cd1b3d470a605bc5b0ceca79969e369644e9b36802242a1c70e627372f9",
+ "machine_shape": "NvidiaRtxPro6000"
+}

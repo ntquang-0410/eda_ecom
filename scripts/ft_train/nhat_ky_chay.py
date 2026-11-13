@@ -22,9 +22,14 @@ PHIEN_CHINH = [
     ("Thử tỉ lệ fold 0", 29, "kaggle_tl/phien_1_20261105_231941/bao_cao_tl.json", "cum/pair × ~11% và 75% title"),
     ("B8 fold 1, 2 mốc 1 : 1 + cụm ~11% fold 1", 32, "kaggle_b8f1/phien_1_20261106_102741/bao_cao_b78.json", "nối cum_f1 từ bước 1.102 của bản 25, rồi cum_f1_p11, cum_f2"),
     ("Cụm ~11% fold 2", 34, "kaggle_b8f2/phien_1_20261106_165058/bao_cao_b8f2.json", "cum_f2_p11"),
+    ("Kiểm lr 1e-4 (cụm) + pair fold 1", 36, "kaggle_tl2/phien_1_20261106_210034/bao_cao_tl2.json", "cum_f0_p11_lr1e4, pair_f1, pair_f1_p11"),
+    ("Pair fold 2", 38, "kaggle_tl3/phien_1_20261107_073538/bao_cao_tl3.json", "pair_f2, pair_f2_p11; bản 37 là khói, bản 38 là phiên thật"),
+    ("Đo test MỘT lần", 41, "kaggle_do_test/phien_1_20261107_080604/bao_cao_do_test.json", "không huấn luyện: zero-shot và adapter fold 0 (cum_f0_p11, pair_f0_p11) trên toàn bộ 5.116 mẫu test mỗi nhánh; bản 39, 40 là khói"),
+    ("Bản cuối trên toàn pool", 43, "kaggle_cuoi/phien_1_20261107_105449/bao_cao_cuoi.json", "cum_cuoi, pair_cuoi: toàn pool, loại 6.386 title bị cờ; bản 42 là khói"),
 ]
 PHIEN_KHOI = ["kaggle_b5", "kaggle_b5_lan2", "kaggle_b5_lan3", "kaggle_b5_lan4", "kaggle_do_toc_do", "kaggle_nguyen_nhan", "kaggle_b6_thu", "kaggle_b6_thu2",
-              "kaggle_b6_noi/phan1", "kaggle_b6_noi/phan2", "kaggle_b78_thu/phan1", "kaggle_b78_thu/phan2", "kaggle_tl_thu/phan1", "kaggle_tl_thu/phan2"]
+              "kaggle_b6_noi/phan1", "kaggle_b6_noi/phan2", "kaggle_b78_thu/phan1", "kaggle_b78_thu/phan2", "kaggle_tl_thu/phan1", "kaggle_tl_thu/phan2",
+              "kaggle_tl3_thu", "kaggle_do_test_thu", "kaggle_cuoi_thu"]
 # (nhãn, bản Kaggle sinh ra, đường dẫn trạng thái, "b6" = cấu trúc B6, còn lại cấu trúc viec). Theo thứ tự thời gian: việc làm xong ở trạng thái sau thay bản dở ở trạng thái trước.
 NGUON_TRANG_THAI = [
     ("B6", "20–22", "kaggle_b6/ket_qua_cuoi/b6/b6_trang_thai.json", "b6"),
@@ -32,6 +37,9 @@ NGUON_TRANG_THAI = [
     ("Thử tỉ lệ fold 0", "29", "kaggle_tl/phien_1_20261105_231941/tl/tl_trang_thai.json", "viec"),
     ("B8 fold 1, 2 + cụm ~11% fold 1", "25→32", "kaggle_b8f1/phien_1_20261106_102741/b78/b78_trang_thai.json", "viec"),
     ("Cụm ~11% fold 2", "34", "kaggle_b8f2/phien_1_20261106_165058/b8f2/b8f2_trang_thai.json", "viec"),
+    ("Kiểm lr 1e-4 (cụm) + pair fold 1", "36", "kaggle_tl2/phien_1_20261106_210034/tl2/tl2_trang_thai.json", "viec"),
+    ("Pair fold 2", "38", "kaggle_tl3/phien_1_20261107_073538/tl3/tl3_trang_thai.json", "viec"),
+    ("Bản cuối trên toàn pool", "43", "kaggle_cuoi/phien_1_20261107_105449/cuoi/cuoi_trang_thai.json", "viec"),
 ]
 NHOM = ["zh->vi|title", "zh->vi|mo_ta", "vi->zh|title", "vi->zh|mo_ta"]
 
@@ -191,6 +199,21 @@ def doc_so_cap():
                 c = cap(lay(g, *ks))
                 if c:
                     ra.append((f"{nhan}{', bản ' + nh if nh else ''}: mức ~11% − mốc 1 : 1", ten, c))
+    for nhan, p in [("Kiểm lr, cụm fold 0 (luật lr): lr 1e-4 − lr 2e-4, cùng ~11%", "kaggle_tl2/cham/kiem_lr_cum_f0.json"),
+                    ("Pair fold 1 (luật pair): mức ~11% − mốc 1 : 1", "kaggle_tl2/cham/kiem_pair_f1.json")]:
+        d = doc(p)
+        for ten, ks in ten_muc:
+            c = cap(lay(d, *ks))
+            if c:
+                ra.append((nhan, ten, c))
+        ra.append((nhan, "chrF chung (theo câu)", cap(d.get("theo_cau"))))
+    p3 = doc("kaggle_tl3/cham/kiem_3fold_pair.json")
+    for fo, d in p3["theo_fold"].items():
+        for ten, ks in ten_muc:
+            c = cap(lay(d, *ks))
+            if c:
+                ra.append((f"Bản pair, fold {fo} (luật 3 fold pair): mức ~11% − mốc 1 : 1", ten, c))
+        ra.append((f"Bản pair, fold {fo} (luật 3 fold pair): mức ~11% − mốc 1 : 1", "chrF chung (theo câu)", cap(d.get("theo_cau"))))
     k3 = doc("kaggle_b8f2/phien_1_20261106_165058/tong_hop/kiem_3fold.json")
     for fo, h in k3["theo_fold"].items():
         ra.append((f"Bản cụm, fold {fo}: mức ~11% − mốc 1 : 1", "chrF chung theo câu", cap(h.get("theo_cau"))))
@@ -215,7 +238,7 @@ def dau_van_tay():
     return ra
 
 
-def viet_md(phien, khoi, ket, ghi_chu, so_cap, k3, vt):
+def viet_md(phien, khoi, ket, ghi_chu, so_cap, k3, vt, dt=None):
     L = []
     w = L.append
     w("# NHẬT KÝ CÁC LẦN CHẠY FINE-TUNE QWEN3-4B + LORA\n")
@@ -235,7 +258,7 @@ def viet_md(phien, khoi, ket, ghi_chu, so_cap, k3, vt):
               "Dữ liệu: `max_len` 2.048 token, `micro_bs` 32, ngân sách 4.096 token mỗi lô nhỏ, không bật gradient checkpointing; seed 42 (xáo lô theo seed + chỉ số epoch).",
               "Số epoch: B6 vòng 1 là 1 epoch; mọi lần chạy từ vòng 2 về sau là 2 epoch.",
               "Kiểm loss: 3.000 mẫu kiểm cố định (750 mỗi hướng × loại), nằm trong fold kiểm; loss không trọng số, điểm = trung bình theo hướng, title và mô tả trọng số bằng nhau.",
-              "Sinh bản dịch: greedy (`do_sample=False`), trần `max_new_tokens` theo độ dài đích tham chiếu (sẽ đổi sang độ dài nguồn trước khi đo test), 1.000 mẫu (250 mỗi hướng × loại) giống nhau giữa các cấu hình để so theo cặp.",
+              "Sinh bản dịch: greedy (`do_sample=False`), trần `max_new_tokens` theo độ dài đích tham chiếu cho mọi lần chạy huấn luyện và chấm theo fold, 1.000 mẫu (250 mỗi hướng × loại) giống nhau giữa các cấu hình để so theo cặp. Riêng lần đo test (mục 9) dùng trần theo độ dài NGUỒN `min(2048, 3,5 × token nguồn + 64)`, chọn từ tỉ lệ token đích/nguồn lớn nhất đo trên pool (2,94), và bộ chấm có thêm mốc tham chiếu `ref_*` và quy tắc cắt lời dẫn `dong_ngu_canh`.",
               "Loss có trọng số (từ đợt thử tỉ lệ): mẫu title nhân `w_title`, mẫu mô tả nhân 1; `he_chuan = he_chuan_goc × tổng_trọng_số / số_mẫu` giữ độ lớn bước tương đương; đánh giá vẫn không trọng số. Tỉ lệ title là siêu tham số cố định trong một lần train.",
               "Chia dữ liệu: `chia_tap_v2`, seed 20261104, test 10% khóa cứng (2.558 sản phẩm), pool 23.017 chia 5 fold theo nhóm gần-trùng; Dataset Kaggle chỉ có mẫu pool."]:
         w(f"- {s}")
@@ -278,8 +301,9 @@ def viet_md(phien, khoi, ket, ghi_chu, so_cap, k3, vt):
     for s in ["Bản Kaggle 26 (nối B7+B8 phần hai) bị Nhật Anh hủy; `cum_f1` dừng ở bước 1.102/1.800 rồi được nối ở bản 32 từ checkpoint lưu trong notebook `ft-qwen3-4b-b78-luu` (có cả `opt.pt`, trạng thái tối ưu, và vị trí lô). Chạy khói đã kiểm nối đúng số bước, nhưng cum_f1 vẫn là một lần huấn luyện đi qua hai phiên và hai bản mã Kaggle (25 rồi 32).",
               "Mã `kaggle_train.py` bản cũ KHÔNG được lưu riêng: B6 (bản 20–22) và B7+B8 phần đầu (bản 25) chạy bằng bản mã trước lần sửa lúc 23:06 ngày 05/11/2026; từ bản 29 trở đi chạy bằng bản hiện tại (mtime 23:06 05/11, không đổi sau đó; bản Kaggle 34 còn nguyên trong `notebooks/kaggle_api/nlp-group3/nlp-group3.ipynb`). Lần sửa đó thêm (theo plan v0.6.1, bước 1): loss có trọng số theo tỉ lệ title, danh sách việc lấy từ cấu hình, chọn trạng thái tiến xa hơn. Em chưa chạy lại cùng một cấu hình bằng hai bản mã để so kết quả; bằng chứng duy nhất là phép thử trong phiên: với w = 1 loss có trọng số trùng `out.loss` của mô hình (3,4583 = 3,4583, ghi ở `thu_loss_1_1`), và bản dịch B6 chấm lại trên máy ra đúng điểm B6 (chỉ chứng minh bản dịch không bị đổi, không chứng minh đường mã).",
               "Gradient bị cắt (clip 1,0) khác nhau rõ giữa các việc: mốc 1 : 1 `cum_f2` bị cắt 112/256 bước lô toàn title, còn `cum_f2_p11` chỉ 3/256; mức 75% bị cắt gần như mọi bước title (262/263, 263/263). Tức ở mức 1 : 1 các lô title cũng đã bị cắt thường xuyên; thống kê này chưa có cho `cum_f0` và `pair_f0` (chạy trước khi ghi).",
-              "Bản cụm đạt luật khóa 3 fold và đổi sang 10,74% title; lr 1e-4 ở mức mới và bản pair (đang giữ 1 : 1) CHƯA kiểm; tập test CHƯA đo; các điểm trên chưa được người hay LLM chấm so cặp (B9).",
-              "Các mức tỉ lệ đã thử: ~11% (fold 0, 1, 2 cho cụm; fold 0 cho pair), ~50% (mốc, 3 fold cụm, fold 0 pair), 75% (fold 0 cả hai bản). Mức 75% bị clip gradient gần như mọi bước title nên tác dụng thực thấp hơn danh nghĩa."]:
+              "Kết luận hiện tại: bản cụm đạt luật khóa 3 fold và chốt 10,74% title, lr 2e-4 (kiểm lr 1e-4 ở mức này KHÔNG đạt: chrF chung theo câu +0,03 [-0,43; +0,47]); bản pair đạt luật 3 fold riêng của pair (khóa trước ở WALKTHROUGH Prompt 804, `kiem_3fold_pair.py`) và Nhật Anh duyệt chốt 10,86%; tập test đã đo MỘT lần (mục 9): fine-tune thắng zero-shot ở mọi nhánh, mọi hướng; bản cuối đã huấn luyện (mục 10). CÁC ĐIỂM CHƯA được người hay LLM chấm so cặp (B9); chrF chỉ đo độ giống bản dịch máy dùng làm tham chiếu.",
+              "Các mức tỉ lệ đã thử: ~11% (3 fold cho cả cụm và pair), ~50% (mốc, 3 fold cho cả hai bản), 75% (fold 0 cả hai bản). Mức 75% bị clip gradient gần như mọi bước title nên tác dụng thực thấp hơn danh nghĩa. Fold 0 cũng là nơi phát hiện tín hiệu dòng mới zh→vi nên chỉ fold 1, 2 là kiểm độc lập; luật pair 3 fold tính trung bình title nên một fold title tụt (fold 0: title hai hướng -0,96, zh→vi -1,19) có thể được fold khác bù.",
+              "Sự cố khi vận hành, ghi để phản biện: tiến trình tự động trên máy (`tl3_tu_dong`) từng chết giữa chừng khi chờ khói; cổng khói được chạy tay bằng đúng hàm `kiem_khoi_tl3` rồi mới đẩy phiên thật. Phiên Kaggle chạy độc lập với máy nên không mất kết quả. Khói đo test lần đầu (bản 39) lỗi do đường dẫn manifest, đã sửa (bản 40). Script kiểm khói bản cuối em viết có ngưỡng chất lượng áp nhầm cho khói 15 bước nên báo không đạt dù cơ chế đều đạt (bản 42); ngưỡng đó được áp lại và đạt ở bản thật."]:
         w(f"- {s}")
     w("\n## 8. Dấu vân tay để chứng minh số không bị sửa\n")
     w("### Dữ liệu và phép chia\n")
@@ -300,7 +324,18 @@ def viet_md(phien, khoi, ket, ghi_chu, so_cap, k3, vt):
     w("\n### Kho lưu adapter (không GPU)\n")
     for k, v in vt["kho_luu"].items():
         w(f"- `{k}`: {v['so_file']} file kèm sha256 trong tệp manifest.")
-    w("- Notebook kho lưu trên Kaggle (tài khoản `trinhnhatanh`): `ft-qwen3-4b-b6-luu`, `ft-qwen3-4b-b78-luu`, `ft-qwen3-4b-tl-luu`, `ft-qwen3-4b-b8f1-luu`. **Đầu ra bản 34 (`cum_f2_p11`) CHƯA lưu sang kho riêng; phải lưu trước lần đẩy kế.**")
+    w("- Notebook kho lưu trên Kaggle (tài khoản `trinhnhatanh`): `ft-qwen3-4b-b6-luu`, `ft-qwen3-4b-b78-luu`, `ft-qwen3-4b-tl-luu`, `ft-qwen3-4b-b8f1-luu`, `ft-qwen3-4b-b8f2-luu`, `ft-qwen3-4b-tl2-luu`, `ft-qwen3-4b-tl3-luu`, `ft-qwen3-4b-cuoi-luu` (adapter bản cuối). Dataset riêng tư `ft-qwen3-4b-pool` (mẫu pool) và `ft-qwen3-4b-do-khoa` (tập test, chỉ gắn vào phiên đo test). Đầu ra mọi phiên huấn luyện đã được lưu sang kho riêng trước khi đẩy phiên kế; bản đo test (bản 41) không có adapter, bản dịch và điểm đã tải về máy.")
+    if dt:
+        w("\n## 9. Đo test MỘT lần (bản 41): fine-tune adapter fold 0 ~11% title so với zero-shot\n")
+        w("Luật khóa trước khi đo (`tong_hop_do_test.py`, WALKTHROUGH Prompt 806): mỗi nhánh, mỗi hướng, fine-tune thắng khi cận dưới khoảng 95% (bootstrap theo sản phẩm, seed 42) của chênh chrF theo mục > 0. Mẫu: 5.116 mục / 2.558 sản phẩm mỗi nhánh, greedy, cùng mẫu cho cả hai mô hình. chrF chỉ đo độ giống bản dịch máy dùng làm tham chiếu nên khoảng cách với zero-shot bị phóng đại so với chất lượng thật.\n")
+        w("| Nhánh | Hướng | chrF zero-shot | chrF fine-tune | Chênh | Thấp | Cao | Thắng |\n|---|---|---|---|---|---|---|---|")
+        for nh, r in dt.items():
+            for h, v in r["huong"].items():
+                c = v["chung"]
+                w(f"| {nh} | {h} | {f(c['chrf_zs'])} | {f(c['chrf_ft'])} | {f(c['chenh'])} | {f(c['thap'])} | {f(c['cao'])} | {c['thang_zero_shot']} |")
+        w("\nCảnh báo theo luật: " + ("không có." if not any(r["canh_bao"] for r in dt.values()) else "; ".join(x for r in dt.values() for x in r["canh_bao"])) + " Adapter dùng: `cum_f0_p11` (ce352c70…), `pair_f0_p11` (4d06b578…), kiểm hash theo manifest trước khi đo.\n")
+    w("\n## 10. Bản cuối trên toàn pool (bản 43)\n")
+    w("Huấn luyện trên toàn pool (23.017 sản phẩm), hai lần, cùng cấu hình đã chốt: ~11% title (cụm 10,74%, pair 10,86%), lr 2e-4, rank 64, 2 epoch. Cách xử lý title (Nhật Anh chọn 07/11/2026): LOẠI mẫu title của 6.386/23.017 sản phẩm bị `loc_title.py` gắn cờ, GIỮ mẫu mô tả; `w_title` tính lại để giữ đúng tỉ trọng. Không còn fold giữ lại nên không chấm chất lượng; chỉ sinh thử 100 mẫu của chính tập huấn luyện để bắt hỏng (kết quả trong bảng mục 3 và 4 và trạng thái `cuoi_trang_thai.json`). Adapter ở `ft-qwen3-4b-cuoi-luu` và đã tải về `ft_run/ban_cuoi/`, hash khớp manifest. Bản cuối KHÔNG đo lại trên test.\n")
     return "\n".join(L) + "\n"
 
 
@@ -311,9 +346,11 @@ def main():
     so_cap, k3 = doc_so_cap()
     vt = dau_van_tay()
     so_cap = [x for x in so_cap if x[2]]
+    p_dt = FT / "kaggle_do_test" / "phien_1_20261107_080604" / "tong_hop" / "tong_hop_do_test.json"
+    dt = json.loads(p_dt.read_text(encoding="utf-8")) if p_dt.exists() else None
     (FT / "NHAT_KY_CHAY.json").write_text(json.dumps({"phien_chinh": phien, "phien_khoi": khoi, "viec": ket, "ghi_chu": ghi_chu, "so_sanh_theo_cap": [{"nhom": a, "ten": b, "so": c} for a, b, c in so_cap],
-                                                      "tieu_chi_3_fold": k3, "dau_van_tay": vt}, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
-    (FT / "NHAT_KY_CHAY.md").write_text(viet_md(phien, khoi, ket, ghi_chu, so_cap, k3, vt), encoding="utf-8")
+                                                      "tieu_chi_3_fold": k3, "do_test": dt, "dau_van_tay": vt}, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
+    (FT / "NHAT_KY_CHAY.md").write_text(viet_md(phien, khoi, ket, ghi_chu, so_cap, k3, vt, dt), encoding="utf-8")
     print("viec:", len(ket), "| phien chinh:", len(phien), "| so sanh:", len(so_cap), "| script:", len(vt["script"]), "| sinh:", len(vt["sinh"]))
     print("ghi:", FT / "NHAT_KY_CHAY.md")
 

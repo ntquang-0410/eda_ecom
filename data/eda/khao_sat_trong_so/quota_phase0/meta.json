@@ -1,0 +1,116 @@
+{
+  "cum_cap960_flt0": {
+    "natural": {
+      "1688_title": 0.06261565230612079,
+      "1688_description": 0.7421402202713436,
+      "tiki_title": 0.04455565882747554,
+      "tiki_description": 0.15068846859506
+    },
+    "group_counts": {
+      "1688_title": 10680,
+      "1688_description": 10738,
+      "tiki_title": 7853,
+      "tiki_description": 7852
+    }
+  },
+  "cum_cap960_flt1": {
+    "natural": {
+      "1688_title": 0.056120991766704216,
+      "1688_description": 0.7660068725995378,
+      "tiki_title": 0.022337643077739004,
+      "tiki_description": 0.15553449255601895
+    },
+    "group_counts": {
+      "1688_title": 9324,
+      "1688_description": 10738,
+      "tiki_title": 4042,
+      "tiki_description": 7852
+    }
+  },
+  "cum_cap2048_flt0": {
+    "natural": {
+      "1688_title": 0.05892736061859912,
+      "1688_description": 0.7559060471124104,
+      "tiki_title": 0.04193116702657537,
+      "tiki_description": 0.14323542524241517
+    },
+    "group_counts": {
+      "1688_title": 10680,
+      "1688_description": 10738,
+      "tiki_title": 7853,
+      "tiki_description": 7852
+    }
+  },
+  "cum_cap2048_flt1": {
+    "natural": {
+      "1688_title": 0.05271540083340046,
+      "1688_description": 0.7787402330607908,
+      "tiki_title": 0.02098212756844153,
+      "tiki_description": 0.14756223853736725
+    },
+    "group_counts": {
+      "1688_title": 9324,
+      "1688_description": 10738,
+      "tiki_title": 4042,
+      "tiki_description": 7852
+    }
+  },
+  "cum_eval_n": 1200,
+  "pair_cap960_flt0": {
+    "natural": {
+      "1688_title": 0.06601545453019571,
+      "1688_attribute": 0.7417204127362449,
+      "tiki_title": 0.0469748690791903,
+      "tiki_attribute": 0.14528926365436906
+    },
+    "group_counts": {
+      "1688_title": 10680,
+      "1688_attribute": 260343,
+      "tiki_title": 7853,
+      "tiki_attribute": 53548
+    }
+  },
+  "pair_cap960_flt1": {
+    "natural": {
+      "1688_title": 0.05927165348352183,
+      "1688_attribute": 0.7669126927413956,
+      "tiki_title": 0.023591689998034567,
+      "tiki_attribute": 0.150223963777048
+    },
+    "group_counts": {
+      "1688_title": 9324,
+      "1688_attribute": 260343,
+      "tiki_title": 4042,
+      "tiki_attribute": 53548
+    }
+  },
+  "pair_cap2048_flt0": {
+    "natural": {
+      "1688_title": 0.06545287107461775,
+      "1688_attribute": 0.743502932159984,
+      "tiki_title": 0.04657454942131679,
+      "tiki_attribute": 0.1444696473440815
+    },
+    "group_counts": {
+      "1688_title": 10680,
+      "1688_attribute": 260343,
+      "tiki_title": 7853,
+      "tiki_attribute": 53548
+    }
+  },
+  "pair_cap2048_flt1": {
+    "natural": {
+      "1688_title": 0.058749535816675594,
+      "1688_attribute": 0.7685333054088673,
+      "tiki_title": 0.023383873319828385,
+      "tiki_attribute": 0.14933328545462873
+    },
+    "group_counts": {
+      "1688_title": 9324,
+      "1688_attribute": 260343,
+      "tiki_title": 4042,
+      "tiki_attribute": 53548
+    }
+  },
+  "pair_eval_n": 1200
+}

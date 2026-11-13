@@ -189,6 +189,75 @@ def test_lich_lr():
     assert all(0 <= K.lich_lr(b, 100) <= 1 for b in range(100))
 
 
+def test_chon_tran_sinh():
+    """Trần theo độ dài nguồn (07/11/2026): 3,5 lần + 64, tối đa 2048; luôn đủ cho tỉ lệ đích/nguồn lớn nhất đo trên pool (2,94 ở title zh->vi)."""
+    assert K.chon_tran_sinh(20) == 134 and K.chon_tran_sinh(1) == 68
+    assert K.chon_tran_sinh(10000) == 2048
+    for n in range(1, 2000):
+        assert K.chon_tran_sinh(n) >= min(2048, 2.94 * n) and K.chon_tran_sinh(n) <= 2048
+
+
+def test_kiem_ro_ri_test():
+    pool = [{"id": "a:title", "product_id": "a"}, {"id": "b:title", "product_id": "b"}]
+    ok = [{"id": "c:title", "product_id": "c"}, {"id": "c:mo_ta", "product_id": "c"}]
+    assert K.kiem_ro_ri_test(ok, pool) == (1, 2)
+    for xau in ([{"id": "x:title", "product_id": "a"}], [{"id": "b:title", "product_id": "z"}]):
+        try:
+            K.kiem_ro_ri_test(xau, pool)
+        except RuntimeError as e:
+            assert str(e).startswith("TEST_ROI_VAO_POOL")
+        else:
+            raise AssertionError("phai bat ro ri")
+
+
+def test_kiem_khoa_test_do():
+    import tempfile
+    cu = K.VAO
+    try:
+        with tempfile.TemporaryDirectory() as td:
+            td = Path(td)
+            K.VAO = td
+            (td / "pool").mkdir()
+            (td / "pool" / "pool_cum.jsonl.gz").write_bytes(b"x")
+            for cam in ("test_cum.jsonl", "split.parquet", "ds_test.txt"):
+                (td / "pool" / cam).write_bytes(b"x")
+                try:
+                    K.kiem_khoa_test_do()
+                except RuntimeError as e:
+                    assert "CO_FILE_TEST_LA" in str(e) or "THIEU_DO_KHOA" in str(e), (cam, e)
+                else:
+                    raise AssertionError(f"phai bat {cam}")
+                (td / "pool" / cam).unlink()
+            try:
+                K.kiem_khoa_test_do()
+            except RuntimeError as e:
+                assert str(e) == "THIEU_DO_KHOA"          # không có do_khoa thì không phải lần đo test
+            else:
+                raise AssertionError("thieu do_khoa phai loi")
+            (td / "do_khoa").mkdir()
+            (td / "do_khoa" / "do_khoa_cum.jsonl.gz").write_bytes(b"x")
+            K.kiem_khoa_test_do()                          # đúng tên thì qua
+            (td / "do_khoa" / "test_pair.jsonl").write_bytes(b"x")
+            try:
+                K.kiem_khoa_test_do()
+            except RuntimeError as e:
+                assert "CO_FILE_TEST_LA" in str(e)
+            else:
+                raise AssertionError("file test_ la phai bi bat du co do_khoa")
+            (td / "do_khoa" / "test_pair.jsonl").unlink()
+            # mọi chế độ KHÁC đo test: guard thường phải chặn cả file do_khoa_*, kẻo gắn nhầm Dataset test vào phiên huấn luyện
+            try:
+                K.kiem_khoa_test()
+            except RuntimeError as e:
+                assert "CO_FILE_TEST_TRONG_INPUT" in str(e) and "do_khoa_cum" in str(e)
+            else:
+                raise AssertionError("guard thuong phai chan do_khoa_")
+            (td / "do_khoa" / "do_khoa_cum.jsonl.gz").unlink()
+            K.kiem_khoa_test()                              # không còn gì thì qua
+    finally:
+        K.VAO = cu
+
+
 if __name__ == "__main__":
     for ten, ham in list(globals().items()):
         if ten.startswith("test_"):

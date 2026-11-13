@@ -1,0 +1,19 @@
+{
+ "id": "honghuynanh/nlp-onmt-cum",
+ "title": "nlp-onmt-cum",
+ "code_file": "nlp-onmt-cum.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_tpu": false,
+ "enable_internet": true,
+ "dataset_sources": [
+  "honghuynanh/ft-song-ngu"
+ ],
+ "competition_sources": [],
+ "kernel_sources": [
+  "honghuynanh/nlp-onmt"
+ ],
+ "model_sources": []
+}

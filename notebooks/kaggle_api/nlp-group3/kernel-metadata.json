@@ -1,5 +1,5 @@
 {
- "id": "trinhnhatanh/nlp-group3",
+ "id": "honghuynanh/nlp-group3",
  "title": "nlp-group3",
  "code_file": "nlp-group3.ipynb",
  "language": "python",
@@ -11,14 +11,14 @@
  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:00377cd1b3d470a605bc5b0ceca79969e369644e9b36802242a1c70e627372f9",
  "machine_shape": "NvidiaRtxPro6000",
  "dataset_sources": [
-  "trinhnhatanh/ft-qwen3-4b-pool"
+  "honghuynanh/ft-qwen3-4b-pool"
  ],
  "competition_sources": [
   "arc-prize-2026-arc-agi-3"
  ],
  "kernel_sources": [
-  "trinhnhatanh/ft-qwen3-4b-thu-vien",
-  "trinhnhatanh/ft-qwen3-4b-mo-hinh"
+  "honghuynanh/ft-qwen3-4b-thu-vien",
+  "honghuynanh/ft-qwen3-4b-mo-hinh"
  ],
  "model_sources": []
 }
