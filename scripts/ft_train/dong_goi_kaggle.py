@@ -480,7 +480,7 @@ def do_khoa():
     goi("datasets", "create", "-p", str(GOI_DO_KHOA))          # không có --public: riêng tư
 
 
-def chay_b5(cau_hinh=None, noi_phien_truoc=False, them_nguon=(), them_dataset=(), slug="nlp-group3"):
+def chay_b5(cau_hinh=None, noi_phien_truoc=False, them_nguon=(), them_dataset=(), slug="nlp-group3", mo_hinh_slug=None):
     """Ghi đè notebook nlp-group3: nhúng mã huấn luyện vào notebook, Dataset chỉ chứa dữ liệu pool.
     noi_phien_truoc: gắn đầu ra phiên trước của chính notebook để chạy tiếp (không tải checkpoint về máy rồi tải lên lại).
     them_nguon: notebook khác cần gắn thêm (kho lưu B6).
@@ -504,7 +504,7 @@ def chay_b5(cau_hinh=None, noi_phien_truoc=False, them_nguon=(), them_dataset=()
         "is_private": True, "enable_gpu": True, "enable_tpu": False, "enable_internet": False,
         "docker_image": ANH_RTX, "machine_shape": "NvidiaRtxPro6000",
         "dataset_sources": [f"{NGUOI_DUNG}/{SLUG_POOL}"] + [f"{NGUOI_DUNG}/{s}" for s in them_dataset], "competition_sources": [CUOC_THI],
-        "kernel_sources": [f"{NGUOI_DUNG}/{SLUG_THU_VIEN}", f"{NGUOI_DUNG}/{SLUG_MO_HINH}"] + [f"{NGUOI_DUNG}/{s}" for s in them_nguon] + ([f"{NGUOI_DUNG}/{slug}"] if noi_phien_truoc else []),
+        "kernel_sources": [f"{NGUOI_DUNG}/{SLUG_THU_VIEN}", f"{NGUOI_DUNG}/{mo_hinh_slug or SLUG_MO_HINH}"] + [f"{NGUOI_DUNG}/{s}" for s in them_nguon] + ([f"{NGUOI_DUNG}/{slug}"] if noi_phien_truoc else []),
         "model_sources": []}, indent=1), encoding="utf-8")
     goi("kernels", "push", "-p", str(thu), "--accelerator", "NvidiaRtxPro6000")
 

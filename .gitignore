@@ -28,3 +28,10 @@ data/processed/bo_chon/
 # Đầu ra fine-tune (phép chia, mẫu, tập test khóa, kết quả chấm): dữ liệu sinh ra, không commit
 data/processed/ft_run/
 notebooks/*.da_chay.ipynb
+
+# Demo: nhị phân llama.cpp, mã nguồn tải về, bộ đệm dịch
+demo/llama_bin/
+demo/llama_cpp_src/
+demo/**/bo_dem.sqlite
+demo/mau_trang/
+demo/mau_trang_lay.log

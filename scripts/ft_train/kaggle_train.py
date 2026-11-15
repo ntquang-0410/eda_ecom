@@ -646,6 +646,8 @@ def chay_b78(cfg, bc):
     # Chống nối nhầm trạng thái: phiên sau phải cùng cách chạy với phiên đã tạo trạng thái
     van_tay = {k: cfg.get(k) for k in ("seed", "micro_bs", "ngan_sach_token", "max_len", "so_kiem_moi_nhom", "so_sinh_moi_nhom", "rut_gon_sinh", "so_train", "so_mau_ca_fold")}
     van_tay.update(so_epoch=SO_EPOCH_B6, cau_hinh=CAU_HINH_CHOT["ten"])
+    if cfg.get("gc"):
+        van_tay["gc"] = True       # chỉ thêm khi bật, để trạng thái của các lần chạy 4B cũ vẫn khớp
     if st.get("van_tay") and st["van_tay"] != van_tay:
         raise RuntimeError(f"TRANG_THAI_KHONG_KHOP: cu {st['van_tay']} moi {van_tay}")
     st["van_tay"] = van_tay
@@ -659,6 +661,11 @@ def chay_b78(cfg, bc):
         st_b6 = json.loads(ds_b6[0].read_text(encoding="utf-8"))
         print("kho luu B6:", kho, flush=True)
     bc["moi_truong"] = {"torch": torch.__version__, "transformers": transformers.__version__, "peft": peft.__version__, "gpu": torch.cuda.get_device_name(0)}
+    if cfg.get("vram_toi_thieu_gb"):   # 13/11/2026: Kaggle từng cấp Tesla T4 thay RTX Pro 6000; dừng ngay thay vì nạp mô hình rồi tràn bộ nhớ
+        vram = torch.cuda.get_device_properties(0).total_memory / 2**30
+        bc["moi_truong"]["vram_gb"] = round(vram, 1)
+        if vram < cfg["vram_toi_thieu_gb"]:
+            raise RuntimeError(f"GPU_KHONG_DU_BO_NHO:{torch.cuda.get_device_name(0)}:{vram:.1f}GB<{cfg['vram_toi_thieu_gb']}GB")
     thu_mh = tim_mot("REVISION.txt").parent
     bc["mo_hinh"] = thu_mh.joinpath("REVISION.txt").read_text().split()
     tok = AutoTokenizer.from_pretrained(str(thu_mh))
@@ -769,6 +776,9 @@ def chay_b78(cfg, bc):
             m = PeftModel.from_pretrained(goc, str(moi_nhat), is_trainable=True)
         else:
             m = get_peft_model(goc, LoraConfig(r=c["rank"], lora_alpha=2 * c["rank"], lora_dropout=0.05, target_modules="all-linear", task_type="CAUSAL_LM"))
+        if cfg.get("gc"):       # mô hình lớn (Qwen3-8B): không bật thì lô 4096 token tràn bộ nhớ; 4B giữ nguyên (cfg không có "gc")
+            m.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
+            m.enable_input_require_grads()
         tham_so = [p for p in m.parameters() if p.requires_grad]
         opt = torch.optim.AdamW(tham_so, lr=c["lr"], weight_decay=0.0)
         if (moi_nhat / "opt.pt").exists():

@@ -1,0 +1,18 @@
+{
+ "id": "trinhnhatanh/demo-may-chu",
+ "title": "demo-may-chu",
+ "code_file": "demo-may-chu.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_tpu": false,
+ "enable_internet": true,
+ "dataset_sources": [],
+ "competition_sources": [],
+ "kernel_sources": [
+  "trinhnhatanh/ft-qwen3-4b-mo-hinh",
+  "trinhnhatanh/ft-qwen3-4b-cuoi-luu"
+ ],
+ "model_sources": []
+}

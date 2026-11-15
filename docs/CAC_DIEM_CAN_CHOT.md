@@ -29,3 +29,15 @@ Lập 12/11/2026. Mỗi điểm ghi: câu hỏi, đề xuất của em, và vì 
 13. **[CHỜ] Thu hồi token Kaggle tài khoản 2** khi xong chuỗi chạy GPU.
 14. **[CHỜ] Xác nhận tên tác giả ghi trên các notebook tài khoản 2** (Hoàng Huyền Anh).
 15. **[CHỜ] Sửa `Phan1_Mo_dau_TLCN.docx` mục 3–4 và `BAO_CAO_FT_QWEN3_4B.md`** (sao lưu trước; từ chối sửa nếu có tệp khóa `~$`).
+
+## F. Đánh giá năm mô hình bằng metric của bài báo VLSP (13/11/2026)
+
+Bài báo: arXiv 2501.08621v1 (tổng kết VLSP 2022-2023 MT) và 2308.10482v2 (PhraseTransformer), ở `D:\nam4_ky1\TLCN_NCKH`.
+
+- 19. [ĐÃ CHỐT 13/11] Mô hình: năm mô hình sau fine-tune/huấn luyện, cùng cấu hình sàng lọc của bảng năm mô hình (LLM rank 16, 4M token). Không thêm dòng 4B bản cuối trừ khi anh bảo.
+- 20. [ĐÃ CHỐT 13/11] Metric: BLEU (kiểu mteval-v13a, phân biệt hoa thường), SacreBLEU, TER, đặt cạnh chrF đã có. Không NIST, không người chấm.
+- 21. [ĐÃ CHỐT 13/11] Phạm vi: cả hai bộ (cụm, pair), cả hai chiều, tách riêng title và mô tả.
+- 22. [ĐÃ CHỐT 13/11, sau khi anh hỏi 13a là gì] Tách từ: vi→zh dùng bộ tách `zh` của sacrebleu (từng chữ Hán), zh→vi dùng `13a`. Trùng chữ ký của bài 2308.10482.
+- 23. [ĐỀ XUẤT ĐÃ LƯU, chờ lệnh lên plan] Tập đo: chạy thử bộ chấm trên eval fold 0 (không tốn GPU), rồi đo MỘT lần trên tập test khóa (2.558 sản phẩm) cho số báo cáo; khóa mô hình, cấu hình, metric trước khi xem số test.
+- 24. [MẶC ĐỊNH, chờ góp ý] Seed 42 làm chính, seed 123 để xem độ lệch.
+- 25. [GÁC LẠI cho NCKH] Fine-tune lại mô hình của bài báo trên dataset VLSP2022 rồi đo trên test của mình.

@@ -14,6 +14,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import cham_bleu as B  # noqa: E402
 import cham_co_dien as C  # noqa: E402
 import cham_diem as D  # noqa: E402
 
@@ -28,6 +29,8 @@ def doc_sinh(duong_dan):
 
 
 NHANH = "pair"          # "pair" (eval dong le) hoac "cum" (eval mau cum: ca mo ta, cac manh noi bang "; ")
+DONG6 = False           # --dong6: them dong thu sau (Qwen3-4B cong thuc cuoi hoc fold 1-4, kaggle_dong6/), chi khi da tai ban dich ve
+TEN_DONG6 = "Qwen3-4B cong thuc cuoi (hoc fold 1-4, T4 fp16)"
 
 
 def mo_hinh_llm(ten, goc):
@@ -60,6 +63,12 @@ def cac_mo_hinh():
         if len(mo) == 2:
             M.append({"ten": "Moses (SMT)", "loai": "co_dien", "lan_chay": {"1": [mo["zh-vi"][0], mo["vi-zh"][0]]},
                       "ghi_chu": {"seg_chon_theo_dev": {h: mo[h][1] for h in mo}, "dev_chrf": {h: mo[h][2] for h in mo}}})
+    if DONG6:       # dong thu sau: ban dich cua nlp-dong6 (ca hai huong trong mot tep, id = id eval); khong dung de xep hang cung nam dong chinh
+        p6 = R / "kaggle_dong6" / "dong6" / ("sinh_cum_f0_p11_cum.jsonl" if NHANH == "cum" else "sinh_pair_f0_p11_pair.jsonl")
+        if not p6.exists():
+            raise SystemExit(f"Chua co ban dich dong thu sau: {p6}")
+        M.append({"ten": TEN_DONG6, "loai": "LLM_cong_thuc_cuoi", "lan_chay": {"1": [p6]},
+                  "ghi_chu": "khuon loi dan dung_mau (khac vong sang loc); pair dich ca khoi roi tach dong; T4 fp16"})
     return M
 
 def cham_mot(duong_dan_list):
@@ -110,7 +119,7 @@ def main(n_boot=2000, seed=7):
     global RA
     RA = R / ("tong_hop_5mh" if NHANH == "pair" else "tong_hop_5mh_cum")
     RA.mkdir(parents=True, exist_ok=True)
-    ket, chung = {}, {}
+    ket, chung, dfs_seed = {}, {}, {}
     for m in cac_mo_hinh():
         cac, tb_df = {}, []
         for ten_lan, ds in m["lan_chay"].items():
@@ -118,7 +127,7 @@ def main(n_boot=2000, seed=7):
             nh = th["theo_nhom"]
             gc = {k: nh[k]["chrf_corpus"] for k in NHOM}
             chinh, macro = chinh_macro(gc)
-            cac[ten_lan] = {"chrf_corpus": gc, "chinh": chinh, "macro": macro, "thieu_hyp": th["thieu_hyp"],
+            cac[ten_lan] = {"bleu_ter": B.diem_bleu_ter(df), "chrf_corpus": gc, "chinh": chinh, "macro": macro, "thieu_hyp": th["thieu_hyp"],
                             "ti_le_sinh_lap": {k: nh[k]["ti_le_sinh_lap"] for k in NHOM}, "ti_le_giu_so_dat": {k: nh[k]["ti_le_giu_so_dat"] for k in NHOM},
                             "ti_le_dung_so_dong": {k: nh[k].get("ti_le_dung_so_dong") for k in NHOM}}
             tb_df.append(df)
@@ -128,9 +137,11 @@ def main(n_boot=2000, seed=7):
         dm = tb_df[0].copy()
         dm["chrf"] = np.mean([d["chrf"].to_numpy() for d in tb_df], axis=0)
         chung[m["ten"]] = dm
+        dfs_seed[m["ten"]] = tb_df
         ket[m["ten"]] = {"loai": m["loai"], "cac_lan": cac, "ghi_chu": m.get("ghi_chu"),
                          "tb_chinh": float(np.mean([v["chinh"] for v in cac.values()])), "tb_macro": float(np.mean([v["macro"] for v in cac.values()])),
-                         "lech_chinh_giua_lan": (max(v["chinh"] for v in cac.values()) - min(v["chinh"] for v in cac.values())) if len(cac) > 1 else None}
+                         "lech_chinh_giua_lan": (max(v["chinh"] for v in cac.values()) - min(v["chinh"] for v in cac.values())) if len(cac) > 1 else None,
+                         "bleu_ter": B.trung_binh_lan([v["bleu_ter"] for v in cac.values()])}
     # bootstrap theo san pham (cung mau boc cho moi mo hinh => so sanh cap)
     ten0 = list(chung)[0]
     S0, N0 = chuan_bi_boot(chung[ten0])
@@ -143,6 +154,18 @@ def main(n_boot=2000, seed=7):
         assert S.shape == S0.shape
         boot[t] = thong_ke(S, N, w)
     co_so = "Qwen3-4B"
+    # khoang tin cay 95% cho SacreBLEU va TER (cung trong so rut w, cung cach bootstrap theo san pham, so cap voi 4B nhu chrF)
+    pids = sorted(set(chung[ten0]["id"].str.split("_").str[0]))
+    bt = {t: B.diem_boot([B.thong_ke_df(d, pids) for d in dfs_seed[t]], w) for t in ket}
+    for t in ket:
+        ket[t]["bleu_ter_ci"] = {}
+        for k in B._BT:
+            c_k, m_k = B.chinh_macro_boot(bt[t], k)
+            c_0, m_0 = B.chinh_macro_boot(bt[co_so], k)
+            r = {"chinh": B.khoang(c_k), "macro": B.khoang(m_k)}
+            if t != co_so:
+                r["chenh_so_voi_4B"] = {"chinh": [float((c_k - c_0).mean())] + B.khoang(c_k - c_0), "macro": [float((m_k - m_0).mean())] + B.khoang(m_k - m_0)}
+            ket[t]["bleu_ter_ci"][k] = r
     for t in ket:
         c, mc = boot[t]
         ket[t]["chrf_cau_tb"] = {"chinh": float(np.mean(chung_stat(chung[t], "chinh"))), "macro": float(np.mean(chung_stat(chung[t], "macro")))}
@@ -152,7 +175,10 @@ def main(n_boot=2000, seed=7):
             dc, dm_ = c - boot[co_so][0], mc - boot[co_so][1]
             ket[t]["chenh_so_voi_4B"] = {"chinh": [float(dc.mean()), float(np.percentile(dc, 2.5)), float(np.percentile(dc, 97.5))],
                                          "macro": [float(dm_.mean()), float(np.percentile(dm_, 2.5)), float(np.percentile(dm_, 97.5))]}
+    ket["_chu_ky_bleu_ter"] = B.chu_ky()
     (RA / "ket_qua.json").write_text(json.dumps(ket, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
+    ghi_bang_metric_bai_bao(ket)
+    ket.pop("_chu_ky_bleu_ter")
     dong = ["| Mo hinh | zh->vi title (corpus) | mo ta (corpus) | chinh (corpus) | macro (corpus) | chinh (chrF cau TB) [CI95] | chenh chinh cau so voi 4B [CI95] | sinh lap | lech seed chinh (corpus) |", "|---|---|---|---|---|---|---|---|---|"]
     for t, v in ket.items():
         cl = v["cac_lan"]
@@ -166,6 +192,42 @@ def main(n_boot=2000, seed=7):
     print("\n".join(dong))
 
 
+def ghi_bang_metric_bai_bao(ket):
+    """Ba bang cung dang (SacreBLEU, BLEU mteval, TER) cho cac mo hinh trong ket; diem corpus theo nhom, TB qua cac seed. Ghi bang_metric_bai_bao.md."""
+    ten_metric = {"sacrebleu": "SacreBLEU (cao hon la tot)", "bleu_mteval": "BLEU kieu mteval-v13a, khong lam muot (cao hon la tot)", "ter": "TER (thap hon la tot)"}
+    ck = ket["_chu_ky_bleu_ter"]
+    mo_hinh = {t: v for t, v in ket.items() if not t.startswith("_")}
+    f = lambda x: "" if x is None else f"{x:.2f}"
+    out = [f"# Metric cua bai bao VLSP (BLEU, SacreBLEU, TER), ban `{NHANH}`, eval fold 0 (1.198 mau)", "",
+           "Chinh = 0,10 title + 0,90 mo ta (zh->vi); macro = trung binh deu hai huong (moi huong = trung binh deu title va mo ta). Diem corpus theo nhom, LLM la trung binh hai seed.", ""]
+    for k, ten in ten_metric.items():
+        out += [f"## {ten}", "", "| Mo hinh | zh->vi title | zh->vi mo ta | chinh | vi->zh title | vi->zh mo ta | macro |", "|---|---|---|---|---|---|---|"]
+        for t, v in mo_hinh.items():
+            tn = v["bleu_ter"]
+            ch, ma = B.chinh_macro(tn, k)
+            g = lambda n: (tn.get(n) or {}).get(k)
+            out.append(f"| {t} | {f(g('zh->vi/title'))} | {f(g('zh->vi/mo_ta'))} | {f(ch)} | {f(g('vi->zh/title'))} | {f(g('vi->zh/mo_ta'))} | {f(ma)} |")
+        out.append("")
+    out += ["# Khoang tin cay 95% (bootstrap theo san pham, 2000 lan, cung mau rut cho moi mo hinh)", "",
+            "Chenh = mo hinh tru Qwen3-4B (vong sang loc) tren cung mau rut. Khoang chua 0 thi chua ket luan duoc ai hon. BLEU kieu mteval trung SacreBLEU nen khong lap lai.", ""]
+    for k, ten in (("sacrebleu", "SacreBLEU (cao hon la tot)"), ("ter", "TER (thap hon la tot)")):
+        out += [f"## {ten}", "", "| Mo hinh | chinh [CI95] | chenh chinh so voi 4B [CI95] | macro [CI95] | chenh macro so voi 4B [CI95] |", "|---|---|---|---|---|"]
+        for t, v in mo_hinh.items():
+            ci, (ch, ma) = v["bleu_ter_ci"][k], B.chinh_macro(v["bleu_ter"], k)
+            dc, dm = ci.get("chenh_so_voi_4B", {}).get("chinh"), ci.get("chenh_so_voi_4B", {}).get("macro")
+            fd = lambda d: "" if d is None else f"{d[0]:+.2f} [{d[1]:+.2f}; {d[2]:+.2f}]"
+            out.append(f"| {t} | {ch:.2f} [{ci['chinh'][0]:.1f}; {ci['chinh'][1]:.1f}] | {fd(dc)} | {ma:.2f} [{ci['macro'][0]:.1f}; {ci['macro'][1]:.1f}] | {fd(dm)} |")
+        out.append("")
+    out += ["Chu ky sacrebleu: " + "; ".join(f"{h}/{k}: `{ck[f'{h}/{k}']}`" for h in ("zh->vi", "vi->zh") for k in ("sacrebleu", "ter")) + f" (sacrebleu {ck['sacrebleu_phien_ban']}).", "",
+            "Luu y: BLEU tren title va dong thuoc tinh rat ngan thap va bat on, TER co the vuot 100; so khong so voi so trong bai VLSP (khac du lieu, khac mien, khac phien ban sacrebleu). "
+            "Xep hang sat nhau thi xem khoang tin cay chrF trong bang.md."]
+    for t, v in mo_hinh.items():
+        if v.get("ghi_chu") and v.get("loai") == "LLM_cong_thuc_cuoi":
+            out.append(f"Dong `{t}`: {v['ghi_chu']}; khong dung de xep hang cung nam dong chinh.")
+    (RA / "bang_metric_bai_bao.md").write_text("\n".join(out) + "\n", encoding="utf-8")
+    print("\n".join(out))
+
+
 def chung_stat(df, ten):
     """Gia tri chrF cau trung binh (chinh hoac macro) tren toan mau, de doi chieu voi chrF corpus."""
     df = df.copy()
@@ -176,6 +238,8 @@ def chung_stat(df, ten):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        NHANH = sys.argv[1]
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    if args:
+        NHANH = args[0]
+    DONG6 = "--dong6" in sys.argv
     main()

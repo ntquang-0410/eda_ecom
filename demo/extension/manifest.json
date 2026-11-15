@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Dịch 1688 sang tiếng Việt (demo)",
+  "version": "0.1.0",
+  "description": "Demo: dịch tên sản phẩm và bảng thuộc tính trang chi tiết 1688 sang tiếng Việt bằng mô hình Qwen3-4B đã fine-tune.",
+  "permissions": ["storage", "cookies"],
+  "host_permissions": [
+    "https://*.1688.com/*",
+    "http://127.0.0.1/*",
+    "http://localhost/*",
+    "https://*.trycloudflare.com/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://detail.1688.com/offer/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": { "default_popup": "popup.html", "default_title": "Dịch 1688 (demo)" }
+}
