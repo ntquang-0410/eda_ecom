@@ -308,8 +308,10 @@ Trên T4 fp16, pair dịch 1.165 lượt, không có khối nào lệch dòng v�
 |---|---|---|---|---|
 | `cum_cuoi` | toàn pool | bản cuối dạng cụm | `ft-qwen3-4b-cuoi-luu` | `fc8481ad…5b131` |
 | `pair_cuoi` | toàn pool | bản cuối dạng pair, demo | `ft-qwen3-4b-cuoi-luu` | `7fd7f157…2319b` |
-| `cum_f0_p11` | fold 1–4 | đo test, thử chéo, mục 8 | `ft-qwen3-4b-tl-luu` | `ce352c70…` (đầy đủ trong `MANIFEST_TL.json`) |
-| `pair_f0_p11` | fold 1–4 | đo test, thử chéo, cổng nén | `ft-qwen3-4b-tl-luu` | `4d06b578…` |
+| `cum_f0_p11` (tài khoản 1) | fold 1–4 | đo test (mục 5), C0 | `ft-qwen3-4b-tl-luu` | `ce352c70…` (đầy đủ trong `MANIFEST_TL.json`) |
+| `pair_f0_p11` (tài khoản 1) | fold 1–4 | đo test (mục 5), C0 | `ft-qwen3-4b-tl-luu` | `4d06b578…` |
+| `cum_f0_p11` (huấn luyện lại ở tài khoản 2, cùng cấu hình) | fold 1–4 | thử chéo (mục 7), công thức cuối trên fold 0 (mục 8) | output notebook `honghuynanh/nlp-group3` | `ff28993c…` |
+| `pair_f0_p11` (huấn luyện lại ở tài khoản 2, cùng cấu hình) | fold 1–4 | thử chéo (mục 7), mục 8, cổng nén demo (mục 9.1) | output notebook `honghuynanh/nlp-group3-pair` | `56967f4a…` |
 | các lần thử fold khác | | | `ft-qwen3-4b-{b6,b78,b8f1,b8f2,tl2,tl3}-luu` | trong manifest của từng kho |
 
 - Mỗi adapter nặng 528.550.256 byte (rank 64), nền `Qwen/Qwen3-4B` revision `1cfa9a72`.
@@ -366,40 +368,52 @@ Trên T4 fp16, pair dịch 1.165 lượt, không có khối nào lệch dòng v�
 
 - Mọi phiên huấn luyện, đo và demo có kết quả đều đã tải về `data/processed/ft_run/`, mỗi phiên một thư mục `kaggle_*`.
 - Đầu ra mỗi phiên huấn luyện 4B được lưu sang kho `*-luu` trước khi đẩy phiên kế, kèm manifest sha256.
-- Hai lần chạy thử 8B bản cuối (13/11) bị cấp Tesla T4 nên dừng ở chốt chặn VRAM, không có kết quả.
+- Hai lần chạy khói 8B bản cuối (13/11) bị cấp Tesla T4: lần 1 hết bộ nhớ khi nạp mô hình, lần 2 dừng ở chốt chặn VRAM; không có kết quả (phiên F3).
 - Notebook `notebook59a0de1490` (tài khoản 1, gắn cuộc thi Gemma 4) chưa chạy gì.
 
 ---
 
 ## 15. Mục lục chi tiết từng phiên
 
-Mỗi phiên có một file riêng trong `docs/ket_qua_kaggle/`, sinh tự động từ JSON gốc (không gõ tay số). Cột "Bản Kaggle" là bản notebook trên Kaggle; "—" nghĩa là file kết quả không lưu số bản.
+Mỗi phiên có một file riêng trong `docs/ket_qua_kaggle/`, sinh bởi `scripts/ft_train/xuat_ket_qua_kaggle.py` từ file kết quả gốc (số không gõ tay). Mỗi file có: notebook, tài khoản, bản Kaggle, thời gian, GPU, mục đích, bảng số, kết luận, ghi chú/giới hạn, sha256 file gốc. Các lần chạy khói/thử ngắn gom ở cuối [`INDEX.md`](ket_qua_kaggle/INDEX.md).
 
-| # | Phiên | File | Bản Kaggle |
-|---|---|---|---|
-| 00 | Dịch dữ liệu song ngữ (song_ngu 1 → 4) | [`00_dich_du_lieu_song_ngu.md`](ket_qua_kaggle/00_dich_du_lieu_song_ngu.md) | — (16–26/10) |
-| 01 | Kiểm môi trường, đo tốc độ (B5) | [`01_moi_truong_b5.md`](ket_qua_kaggle/01_moi_truong_b5.md) | — |
-| 02 | B6 — dò siêu tham số | [`02_b6_do_sieu_tham_so.md`](ket_qua_kaggle/02_b6_do_sieu_tham_so.md) | 20, 21, 22 |
-| 03 | B7 + B8 — pair fold 0, cụm fold 1 | [`03_b78_pair_f0_cum_f1.md`](ket_qua_kaggle/03_b78_pair_f0_cum_f1.md) | 25 |
-| 04 | Thử tỉ trọng title fold 0 | [`04_tl_ti_le_fold0.md`](ket_qua_kaggle/04_tl_ti_le_fold0.md) | 29 |
-| 05 | B8 fold 1 — mốc 1:1 và cụm ~11% | [`05_b8f1_fold1.md`](ket_qua_kaggle/05_b8f1_fold1.md) | 32 |
-| 06 | B8 fold 2 — cụm ~11% | [`06_b8f2_fold2.md`](ket_qua_kaggle/06_b8f2_fold2.md) | 34 |
-| 07 | Kiểm lr 1e-4 và pair fold 1 | [`07_tl2_lr_va_pair_f1.md`](ket_qua_kaggle/07_tl2_lr_va_pair_f1.md) | 36 |
-| 08 | Pair fold 2 — mốc 1:1 và ~11% | [`08_tl3_pair_f2.md`](ket_qua_kaggle/08_tl3_pair_f2.md) | 38 |
-| 09 | Đo test khóa MỘT lần | [`09_do_test_mot_lan.md`](ket_qua_kaggle/09_do_test_mot_lan.md) | 41 |
-| 10 | Bản cuối trên toàn pool | [`10_cuoi_toan_pool.md`](ket_qua_kaggle/10_cuoi_toan_pool.md) | 43 |
-| 11 | Thử chéo dạng pair ↔ cụm | [`11_cheo_dang_pair_cum.md`](ket_qua_kaggle/11_cheo_dang_pair_cum.md) | — |
-| 12 | Đo tốc độ trên T4 fp16 | [`12_dong6_toc_do_t4.md`](ket_qua_kaggle/12_dong6_toc_do_t4.md) | — |
-| 13 | OpenNMT — học từ đầu | [`13_onmt_hoc_du.md`](ket_qua_kaggle/13_onmt_hoc_du.md) | — |
-| 14 | Moses — hai hướng | [`14_moses_hai_huong.md`](ket_qua_kaggle/14_moses_hai_huong.md) | — |
-| 15 | So sánh năm mô hình | [`15_nam_mo_hinh.md`](ket_qua_kaggle/15_nam_mo_hinh.md) | — |
-| 16 | Quota screen 960 (bản có lỗi) | [`16_quota_screen_960.md`](ket_qua_kaggle/16_quota_screen_960.md) | 46, 47, 48 |
-| 17 | Quota screen 2.048 | [`17_quota_screen_2048.md`](ket_qua_kaggle/17_quota_screen_2048.md) | 53 |
-| 18 | Quota bước 1 — 2 seed | [`18_quota_step1_2seed.md`](ket_qua_kaggle/18_quota_step1_2seed.md) | 54, 55 |
-| 19 | C0 — chấm adapter official trên dev | [`19_c0_baseline.md`](ket_qua_kaggle/19_c0_baseline.md) | 49, 50, 51 |
-| 20 | Demo — máy chủ dịch, lượng tử hoá | [`20_demo_may_chu.md`](ket_qua_kaggle/20_demo_may_chu.md) | — |
-| 21 | Dry run ngạch và chọn mẫu | [`21_dry_run_ngach.md`](ket_qua_kaggle/21_dry_run_ngach.md) | 52, 54 |
+| Mã | Phiên | Tài khoản | Bản Kaggle | Thời gian |
+|---|---|---|---|---|
+| A1 | [Bộ song ngữ 1: thuộc tính 1688 dịch theo đơn vị (Gemma, Qwen3-14B, CometKiwi)](ket_qua_kaggle/A1_bo_song_ngu_1_thuoc_tinh_1688_dich_theo_don_vi_g.md) | 1 (`trinhnhatanh`) | – | 15–22/10/2026 |
+| A2 | [Bộ song ngữ 2: thuộc tính Tiki (vi→zh) dịch theo đơn vị](ket_qua_kaggle/A2_bo_song_ngu_2_thuoc_tinh_tiki_vi_zh_dich_theo_do.md) | 1 (`trinhnhatanh`) | – | 23/10/2026 |
+| A3 | [Bộ song ngữ 3: rà soát theo cụm có ngữ cảnh (Tiki)](ket_qua_kaggle/A3_bo_song_ngu_3_ra_soat_theo_cum_co_ngu_canh_tiki.md) | 1 (`trinhnhatanh`) | – | 23–24/10/2026 |
+| A4 | [Bộ song ngữ 4: rà soát theo cụm có ngữ cảnh (1688)](ket_qua_kaggle/A4_bo_song_ngu_4_ra_soat_theo_cum_co_ngu_canh_1688.md) | 1 (`trinhnhatanh`) | – | 24–26/10/2026 |
+| A5 | [Lọc luật cho fine-tune (trên máy)](ket_qua_kaggle/A5_loc_luat_cho_fine_tune_tren_may.md) | – (chạy trên máy) | – | 30/10/2026 |
+| A6 | [Judge DeepSeek chọn bản dịch Gemma hay Qwen (cụm và pair)](ket_qua_kaggle/A6_judge_deepseek_chon_ban_dich_gemma_hay_qwen_cum.md) | – (gọi API DeepSeek qua nhà cung cấp, không chạy trên Kaggle) | – | thí điểm 29–31/10/2026; bản phát hành tải về 03/11/2026 |
+| A7 | [Chia tập theo sản phẩm, kiểm rò rỉ, gắn cờ title (trên máy)](ket_qua_kaggle/A7_chia_tap_theo_san_pham_kiem_ro_ri_gan_co_title_t.md) | – (chạy trên máy) | – | 04–05/11/2026 |
+| B0 | [Dựng mẫu huấn luyện và đóng gói Dataset Kaggle (trên máy)](ket_qua_kaggle/B0_dung_mau_huan_luyen_va_dong_goi_dataset_kaggle_t.md) | – (dựng trên máy; Dataset ở tài khoản 1 và 2) | – | 04–12/11/2026 |
+| B1 | [B6: dò siêu tham số Qwen3-4B (lr × rank)](ket_qua_kaggle/B1_b6_do_sieu_tham_so_qwen3_4b_lr_rank.md) | 1 (`trinhnhatanh`) | 20, 21, 22 (nối nhau) | 05/11/2026 |
+| B2 | [B7 + B8 phần đầu: LoRA attention, pair fold 0, cụm fold 1 (dở)](ket_qua_kaggle/B2_b7_b8_phan_dau_lora_attention_pair_fold_0_cum_fo.md) | 1 (`trinhnhatanh`) | 25 (bản 26 nối tiếp bị hủy) | 05/11/2026 |
+| B3 | [Thử tỉ trọng title fold 0 (~11% và 75%, cụm và pair)](ket_qua_kaggle/B3_thu_ti_trong_title_fold_0_11_va_75_cum_va_pair.md) | 1 (`trinhnhatanh`) | 29 | 05–06/11/2026 |
+| B4 | [B8 fold 1, 2 (mốc 1 : 1) + cụm ~11% fold 1](ket_qua_kaggle/B4_b8_fold_1_2_moc_1_1_cum_11_fold_1.md) | 1 (`trinhnhatanh`) | 32 | 06/11/2026 |
+| B5 | [Cụm ~11% fold 2 + luật 3 fold bản cụm](ket_qua_kaggle/B5_cum_11_fold_2_luat_3_fold_ban_cum.md) | 1 (`trinhnhatanh`) | 34 | 06/11/2026 |
+| B6 | [Kiểm lr 1e-4 (cụm) + pair fold 1](ket_qua_kaggle/B6_kiem_lr_1e_4_cum_pair_fold_1.md) | 1 (`trinhnhatanh`) | 36 | 06–07/11/2026 |
+| B7 | [Pair fold 2 + luật 3 fold bản pair](ket_qua_kaggle/B7_pair_fold_2_luat_3_fold_ban_pair.md) | 1 (`trinhnhatanh`) | 38 (bản 37 là khói) | 07/11/2026 |
+| B8 | [Đo test khóa MỘT lần](ket_qua_kaggle/B8_do_test_khoa_mot_lan.md) | 1 (`trinhnhatanh`) | 41 (bản 39, 40 là khói) | 07/11/2026 |
+| B9 | [Bản cuối trên toàn pool (cum_cuoi, pair_cuoi)](ket_qua_kaggle/B9_ban_cuoi_tren_toan_pool_cum_cuoi_pair_cuoi.md) | 1 (`trinhnhatanh`) | 43 (bản 42 là khói) | 07/11/2026 |
+| C1 | [Khảo sát quota vòng 1 (rank 16, max_len 960, 1.200 bước)](ket_qua_kaggle/C1_khao_sat_quota_vong_1_rank_16_max_len_960_1_200.md) | 1 (`trinhnhatanh`) | 47 (pair), 48 (cụm) | 09/11/2026 |
+| C2 | [C0: adapter chính thức chấm trên eval của vòng sàng lọc](ket_qua_kaggle/C2_c0_adapter_chinh_thuc_cham_tren_eval_cua_vong_sa.md) | 1 (`trinhnhatanh`) | 50 (cụm), 51 (pair) | 09/11/2026 |
+| C3 | [Khảo sát quota vòng 2 (ngân sách token cố định, max_len 2.048)](ket_qua_kaggle/C3_khao_sat_quota_vong_2_ngan_sach_token_co_dinh_ma.md) | 1 (`trinhnhatanh`) | 53 | 10/11/2026 |
+| C4 | [Khảo sát quota vòng 3: 3 cấu hình × 2 bộ × 2 seed (bảng đã chốt)](ket_qua_kaggle/C4_khao_sat_quota_vong_3_3_cau_hinh_2_bo_2_seed_ban.md) | 1 (`trinhnhatanh`) | 55 | 10/11/2026 |
+| C5 | [Tái lập ở tài khoản 2 (check1)](ket_qua_kaggle/C5_tai_lap_o_tai_khoan_2_check1.md) | 2 (`honghuynanh`) | – | 11/11/2026 |
+| C6 | [Qwen3-4B natural với lr 1e-4](ket_qua_kaggle/C6_qwen3_4b_natural_voi_lr_1e_4.md) | 2 (`honghuynanh`) | – | 12/11/2026 |
+| D0 | [Danh sách mẫu natural dùng chung cho các LLM (chạy khô, CPU)](ket_qua_kaggle/D0_danh_sach_mau_natural_dung_chung_cho_cac_llm_cha.md) | 2 (`honghuynanh`) | – | 12/11/2026 |
+| D1 | [Qwen3-8B, vòng sàng lọc (cụm + pair, 2 seed)](ket_qua_kaggle/D1_qwen3_8b_vong_sang_loc_cum_pair_2_seed.md) | 2 (`honghuynanh`) | – | 12/11/2026 |
+| D2 | [EcomGPT-7B, vòng sàng lọc (cụm + pair, 2 seed)](ket_qua_kaggle/D2_ecomgpt_7b_vong_sang_loc_cum_pair_2_seed.md) | 2 (`honghuynanh`) | – | 12/11/2026 |
+| D3 | [OpenNMT Transformer nhỏ, học từ đầu (pair + dịch bản cụm)](ket_qua_kaggle/D3_opennmt_transformer_nho_hoc_tu_dau_pair_dich_ban.md) | 2 (`honghuynanh`) | – | 12/11/2026 |
+| D4 | [Moses vòng 1: chọn cách tách chữ Hán (từng chữ hay jieba)](ket_qua_kaggle/D4_moses_vong_1_chon_cach_tach_chu_han_tung_chu_hay.md) | 2 (`honghuynanh`) | – | 12/11/2026 |
+| D5 | [Moses vòng 2: học đủ dữ liệu và khớp 4M token, kèm eval bản cụm](ket_qua_kaggle/D5_moses_vong_2_hoc_du_du_lieu_va_khop_4m_token_kem.md) | 2 (`honghuynanh`) | – | 12/11/2026 |
+| D6 | [Tổng hợp năm mô hình (trên máy, không GPU)](ket_qua_kaggle/D6_tong_hop_nam_mo_hinh_tren_may_khong_gpu.md) | – (Qwen3-4B lấy từ C4, tài khoản 1; các mô hình khác tài khoản 2) | – | 12–14/11/2026 |
+| E1 | [Huấn luyện lại adapter fold 0 ở tài khoản 2 (cum_f0_p11, pair_f0_p11)](ket_qua_kaggle/E1_huan_luyen_lai_adapter_fold_0_o_tai_khoan_2_cum.md) | 2 (`honghuynanh`) | – | 12/11/2026 |
+| E2 | [Thử chéo dạng pair và dạng cụm](ket_qua_kaggle/E2_thu_cheo_dang_pair_va_dang_cum.md) | 2 (`honghuynanh`) | – | 12/11/2026 |
+| E3 | [Công thức chính trên eval năm mô hình ("dòng thứ sáu", T4 fp16)](ket_qua_kaggle/E3_cong_thuc_chinh_tren_eval_nam_mo_hinh_dong_thu_s.md) | 2 (`honghuynanh`) | – | 14/11/2026 |
+| F1 | [Cổng nén để chạy demo trên laptop (không phải Kaggle)](ket_qua_kaggle/F1_cong_nen_de_chay_demo_tren_laptop_khong_phai_kag.md) | – | – | 14/11/2026 |
+| F2 | [Máy chủ dịch demo trên Kaggle + thử 13 trang 1688 thật](ket_qua_kaggle/F2_may_chu_dich_demo_tren_kaggle_thu_13_trang_1688.md) | 1 (`trinhnhatanh`) | – | 15/11/2026 |
+| F3 | [Qwen3-8B theo công thức chính: không chạy được (bị cấp T4)](ket_qua_kaggle/F3_qwen3_8b_theo_cong_thuc_chinh_khong_chay_duoc_bi.md) | 2 (`honghuynanh`) | – | 13/11/2026 |
 
-Nhật ký đầy đủ từng lần chạy (bản chụp 07/11, có bản Kaggle + giờ + GPU từng phiên): [`PHU_LUC_NHAT_KY_CHAY.md`](PHU_LUC_NHAT_KY_CHAY.md).
-
-Danh sách đầy đủ 58 thư mục Kaggle (kể cả 20 lần chạy khói/thử) nằm ở [`ket_qua_kaggle/INDEX.md`](ket_qua_kaggle/INDEX.md).
+Nhật ký đầy đủ các phiên fine-tune 4B (bản 20–43, bản chụp 07/11): [`PHU_LUC_NHAT_KY_CHAY.md`](PHU_LUC_NHAT_KY_CHAY.md).
