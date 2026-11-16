@@ -1,0 +1,240 @@
+{
+  "dataset_hashes": {
+    "A": "efb8ee202eb1d915fcc124e99a55c93b35d3fedfd08c4410ca5c17287852d242",
+    "B": "e03316f78f28f169fbc22235455cf4f002126b8d1f056bf2f0da53baf4cc74f0"
+  },
+  "eval_hashes": {
+    "v1": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+    "eval_F_v2": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+    "eval_F_v2_common": "b256d8402e0188dc1b4daa5274c328149659387a07f263bfda1bc0676fe94f0a"
+  },
+  "eval_content_hash_v1": "fa32ba3291bb76d0413b6694687a5165efd9fb85e69c6185e06b4b1035794628",
+  "samples": {
+    "A": {
+      "path": ".artifacts/matrix_out/m4b_a/out_A_m4b_natural/sample_natural_seed42.parquet",
+      "sha256": "c5720b8eaddfcd211ef7f6d09fe78cf94b29e8bcfe1ff2a18c0ffc011f6cfc28",
+      "pair_content_hash": "f8ca131e11ba3d2ecd013f2cbfff87b3d556dd1462aa292d6fdb6c949a4fa494",
+      "draws": 98826,
+      "unique": 65353
+    },
+    "B": {
+      "path": ".artifacts/matrix_out/m4b_b/out_B_m4b_balanced/sample_balanced_seed42.parquet",
+      "sha256": "fb3d045ec62b493b1e9199d61f6c62471cbdee91bc8b23ba7d432be566ba4b2a",
+      "pair_content_hash": "bd1f8751a5e768c9c8cf758fde3ff97430aec977f12cdfe6daacc657738c950b",
+      "draws": 52131,
+      "unique": 25453
+    }
+  },
+  "exposure": {
+    "A": {
+      "1688_attribute": {
+        "population_rows": 70114,
+        "population_tokens_est_M": 3.0475,
+        "population_tokens_uncapped_M": 3.6311,
+        "draws": 62491,
+        "unique_rows": 41252,
+        "coverage_pct": 58.836,
+        "epochs_token_ratio": 0.8854,
+        "draws_per_row": 1.5149,
+        "rows_per_step": 124.98,
+        "truncated_pct": 0.62,
+        "median_tokens_est": 9.93
+      },
+      "1688_title": {
+        "population_rows": 15350,
+        "population_tokens_est_M": 0.7157,
+        "population_tokens_uncapped_M": 0.7157,
+        "draws": 13582,
+        "unique_rows": 9038,
+        "coverage_pct": 58.879,
+        "epochs_token_ratio": 0.8854,
+        "draws_per_row": 1.5028,
+        "rows_per_step": 27.16,
+        "truncated_pct": 0.0,
+        "median_tokens_est": 46.53
+      },
+      "tiki_attribute": {
+        "population_rows": 14012,
+        "population_tokens_est_M": 0.3389,
+        "population_tokens_uncapped_M": 0.3392,
+        "draws": 12460,
+        "unique_rows": 8224,
+        "coverage_pct": 58.693,
+        "epochs_token_ratio": 0.8854,
+        "draws_per_row": 1.5151,
+        "rows_per_step": 24.92,
+        "truncated_pct": 0.0,
+        "median_tokens_est": 8.89
+      },
+      "tiki_title": {
+        "population_rows": 11653,
+        "population_tokens_est_M": 0.4314,
+        "population_tokens_uncapped_M": 0.4314,
+        "draws": 10293,
+        "unique_rows": 6839,
+        "coverage_pct": 58.689,
+        "epochs_token_ratio": 0.8854,
+        "draws_per_row": 1.505,
+        "rows_per_step": 20.59,
+        "truncated_pct": 0.0,
+        "median_tokens_est": 34.44
+      }
+    },
+    "B": {
+      "1688_description": {
+        "population_rows": 15986,
+        "population_tokens_est_M": 7.9445,
+        "population_tokens_uncapped_M": 7.9445,
+        "draws": 2025,
+        "unique_rows": 1894,
+        "coverage_pct": 11.848,
+        "epochs_token_ratio": 0.1277,
+        "draws_per_row": 1.0692,
+        "rows_per_step": 4.05,
+        "truncated_pct": 4.94,
+        "median_tokens_est": 478.12
+      },
+      "1688_title": {
+        "population_rows": 15350,
+        "population_tokens_est_M": 0.7157,
+        "population_tokens_uncapped_M": 0.7157,
+        "draws": 21449,
+        "unique_rows": 11558,
+        "coverage_pct": 75.296,
+        "epochs_token_ratio": 1.3972,
+        "draws_per_row": 1.8558,
+        "rows_per_step": 42.9,
+        "truncated_pct": 0.0,
+        "median_tokens_est": 46.53
+      },
+      "tiki_description": {
+        "population_rows": 11017,
+        "population_tokens_est_M": 7.0331,
+        "population_tokens_uncapped_M": 8.6148,
+        "draws": 1602,
+        "unique_rows": 1488,
+        "coverage_pct": 13.506,
+        "epochs_token_ratio": 0.1464,
+        "draws_per_row": 1.0766,
+        "rows_per_step": 3.2,
+        "truncated_pct": 30.4,
+        "median_tokens_est": 631.04
+      },
+      "tiki_title": {
+        "population_rows": 11653,
+        "population_tokens_est_M": 0.4314,
+        "population_tokens_uncapped_M": 0.4314,
+        "draws": 27055,
+        "unique_rows": 10513,
+        "coverage_pct": 90.217,
+        "epochs_token_ratio": 2.3183,
+        "draws_per_row": 2.5735,
+        "rows_per_step": 54.11,
+        "truncated_pct": 0.0,
+        "median_tokens_est": 34.44
+      }
+    }
+  },
+  "cells": [
+    {
+      "cell": "qwen_a",
+      "dataset": "A",
+      "dataset_hash": "efb8ee202eb1d915fcc124e99a55c93b35d3fedfd08c4410ca5c17287852d242",
+      "sample_hash": "c5720b8eaddfcd211ef7f6d09fe78cf94b29e8bcfe1ff2a18c0ffc011f6cfc28",
+      "eval_v1_hash": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+      "eval_v2_hash": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+      "eval_v2_common_hash": "b256d8402e0188dc1b4daa5274c328149659387a07f263bfda1bc0676fe94f0a",
+      "eval_content_hash": "fa32ba3291bb76d0413b6694687a5165efd9fb85e69c6185e06b4b1035794628"
+    },
+    {
+      "cell": "qwen_b",
+      "dataset": "B",
+      "dataset_hash": "e03316f78f28f169fbc22235455cf4f002126b8d1f056bf2f0da53baf4cc74f0",
+      "sample_hash": "fb3d045ec62b493b1e9199d61f6c62471cbdee91bc8b23ba7d432be566ba4b2a",
+      "eval_v1_hash": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+      "eval_v2_hash": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+      "eval_v2_common_hash": "b256d8402e0188dc1b4daa5274c328149659387a07f263bfda1bc0676fe94f0a",
+      "eval_content_hash": "fa32ba3291bb76d0413b6694687a5165efd9fb85e69c6185e06b4b1035794628"
+    },
+    {
+      "cell": "qwen4b_a",
+      "dataset": "A",
+      "dataset_hash": "efb8ee202eb1d915fcc124e99a55c93b35d3fedfd08c4410ca5c17287852d242",
+      "sample_hash": "c5720b8eaddfcd211ef7f6d09fe78cf94b29e8bcfe1ff2a18c0ffc011f6cfc28",
+      "eval_v1_hash": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+      "eval_v2_hash": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+      "eval_v2_common_hash": "b256d8402e0188dc1b4daa5274c328149659387a07f263bfda1bc0676fe94f0a",
+      "eval_content_hash": "fa32ba3291bb76d0413b6694687a5165efd9fb85e69c6185e06b4b1035794628"
+    },
+    {
+      "cell": "qwen4b_b",
+      "dataset": "B",
+      "dataset_hash": "e03316f78f28f169fbc22235455cf4f002126b8d1f056bf2f0da53baf4cc74f0",
+      "sample_hash": "fb3d045ec62b493b1e9199d61f6c62471cbdee91bc8b23ba7d432be566ba4b2a",
+      "eval_v1_hash": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+      "eval_v2_hash": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+      "eval_v2_common_hash": "b256d8402e0188dc1b4daa5274c328149659387a07f263bfda1bc0676fe94f0a",
+      "eval_content_hash": "fa32ba3291bb76d0413b6694687a5165efd9fb85e69c6185e06b4b1035794628"
+    },
+    {
+      "cell": "ecomgpt_a",
+      "dataset": "A",
+      "dataset_hash": "efb8ee202eb1d915fcc124e99a55c93b35d3fedfd08c4410ca5c17287852d242",
+      "sample_hash": "c5720b8eaddfcd211ef7f6d09fe78cf94b29e8bcfe1ff2a18c0ffc011f6cfc28",
+      "eval_v1_hash": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+      "eval_v2_hash": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+      "eval_v2_common_hash": "b256d8402e0188dc1b4daa5274c328149659387a07f263bfda1bc0676fe94f0a",
+      "eval_content_hash": "fa32ba3291bb76d0413b6694687a5165efd9fb85e69c6185e06b4b1035794628"
+    },
+    {
+      "cell": "ecomgpt_b",
+      "dataset": "B",
+      "dataset_hash": "e03316f78f28f169fbc22235455cf4f002126b8d1f056bf2f0da53baf4cc74f0",
+      "sample_hash": "fb3d045ec62b493b1e9199d61f6c62471cbdee91bc8b23ba7d432be566ba4b2a",
+      "eval_v1_hash": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+      "eval_v2_hash": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+      "eval_v2_common_hash": "b256d8402e0188dc1b4daa5274c328149659387a07f263bfda1bc0676fe94f0a",
+      "eval_content_hash": "fa32ba3291bb76d0413b6694687a5165efd9fb85e69c6185e06b4b1035794628"
+    },
+    {
+      "cell": "moses_a",
+      "dataset": "A",
+      "dataset_hash": "efb8ee202eb1d915fcc124e99a55c93b35d3fedfd08c4410ca5c17287852d242",
+      "sample_hash": "c5720b8eaddfcd211ef7f6d09fe78cf94b29e8bcfe1ff2a18c0ffc011f6cfc28",
+      "eval_v1_hash": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+      "eval_v2_hash": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+      "eval_v2_common_hash": "b256d8402e0188dc1b4daa5274c328149659387a07f263bfda1bc0676fe94f0a",
+      "eval_content_hash": "fa32ba3291bb76d0413b6694687a5165efd9fb85e69c6185e06b4b1035794628"
+    },
+    {
+      "cell": "moses_b",
+      "dataset": "B",
+      "dataset_hash": "e03316f78f28f169fbc22235455cf4f002126b8d1f056bf2f0da53baf4cc74f0",
+      "sample_hash": "fb3d045ec62b493b1e9199d61f6c62471cbdee91bc8b23ba7d432be566ba4b2a",
+      "eval_v1_hash": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+      "eval_v2_hash": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+      "eval_v2_common_hash": "b256d8402e0188dc1b4daa5274c328149659387a07f263bfda1bc0676fe94f0a",
+      "eval_content_hash": "fa32ba3291bb76d0413b6694687a5165efd9fb85e69c6185e06b4b1035794628"
+    },
+    {
+      "cell": "onmt_a",
+      "dataset": "A",
+      "dataset_hash": "efb8ee202eb1d915fcc124e99a55c93b35d3fedfd08c4410ca5c17287852d242",
+      "sample_hash": "c5720b8eaddfcd211ef7f6d09fe78cf94b29e8bcfe1ff2a18c0ffc011f6cfc28",
+      "eval_v1_hash": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+      "eval_v2_hash": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+      "eval_v2_common_hash": "b256d8402e0188dc1b4daa5274c328149659387a07f263bfda1bc0676fe94f0a",
+      "eval_content_hash": "fa32ba3291bb76d0413b6694687a5165efd9fb85e69c6185e06b4b1035794628"
+    },
+    {
+      "cell": "onmt_b",
+      "dataset": "B",
+      "dataset_hash": "e03316f78f28f169fbc22235455cf4f002126b8d1f056bf2f0da53baf4cc74f0",
+      "sample_hash": "fb3d045ec62b493b1e9199d61f6c62471cbdee91bc8b23ba7d432be566ba4b2a",
+      "eval_v1_hash": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+      "eval_v2_hash": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+      "eval_v2_common_hash": "b256d8402e0188dc1b4daa5274c328149659387a07f263bfda1bc0676fe94f0a",
+      "eval_content_hash": "fa32ba3291bb76d0413b6694687a5165efd9fb85e69c6185e06b4b1035794628"
+    }
+  ]
+}

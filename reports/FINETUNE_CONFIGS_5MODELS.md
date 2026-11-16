@@ -1,7 +1,9 @@
 # Cấu hình fine-tune / train — Matrix 5×2
 
-**Ngày:** 2026-11-11  
-**Mục tiêu:** 5 model × 2 bộ dữ liệu (A-natural, B-balanced), đánh giá trên cùng `eval_F` 1.500 dòng.
+> **CẬP NHẬT 2026-11-16 — sau audit 3 phản biện:** `eval_F` gốc leak 642/1.500 dòng; số liệu chính thức chuyển sang `eval_F_v2_common` (831 dòng) — xem `MATRIX_5X2_EVAL_F_V2.md`. “4M token” theo heuristic thực tế là **6,56M Qwen tokens (A)** và **5,93M (B)**. OpenNMT-B cũ là **B-natural** (đã relabel, không retrain balanced). Chi tiết: `LEAKAGE_AUDIT.md`, `QUOTA_LENGTH_AUDIT.md`, `OPENNMT_FAIRNESS.md`, `REVIEW_RESPONSE.md`.
+
+**Ngày:** 2026-11-16  
+**Mục tiêu:** 5 model × 2 bộ dữ liệu (A-natural, B-balanced), đánh giá trên `eval_F_v2_common` 831 dòng (sạch nội dung).
 
 ---
 
@@ -18,8 +20,7 @@ Nguồn: `tiki-matrix-data` (bản đã fix leakage).
 | Tiki target | BT Qwen3-4B | BT Qwen3-4B |
 | 1688 target | bản người | bản người |
 
-`eval_F`: 1.500 dòng = 300 title + 300 attribute + 150 description mỗi nguồn 1688/Tiki.
-Leakage: `eval_F ∩ units_A = 0`, `eval_F ∩ units_B = 0`.
+`eval_F`: 1.500 dòng gốc = 300 title + 300 attribute + 150 description mỗi nguồn 1688/Tiki. **Leakage thực tế:** `product_id` overlap = 0 nhưng 642/1.500 dòng trùng source/pair/near-dup; `eval_F_v2` = 858 dòng, common = 831. Chi tiết `reports/LEAKAGE_AUDIT.md`.
 
 **Budget LLM:** 4.000.000 token / 500 optimizer step, seed 42.
 
@@ -214,8 +215,8 @@ Lưu ý: dùng **eflomal thay GIZA++** do môi trường Kaggle; cùng vai trò 
 
 | | |
 |---|---|
-| eval | `eval_F` 1.500 dòng |
-| 1688 | COMET-da `Unbabel/wmt22-comet-da` + BLEU/chrF |
+| eval | `eval_F_v2_common` 831 dòng (sạch nội dung) |
+| 1688 | COMET-da `Unbabel/wmt22-comet-da` + BLEU/chrF trên cùng eval_id |
 | Tiki | COMET-QE `Unbabel/wmt20-comet-qe-da` |
 | so sánh | paired bootstrap **2.000 lần**, resample theo `product_id` |
 | bảng | 5×2 theo stratum Title / Attribute / Description |
@@ -250,4 +251,4 @@ Lưu ý: dùng **eflomal thay GIZA++** do môi trường Kaggle; cùng vai trò 
 | Moses A | **xong** | 0,7947 | -0,2401 |
 | Moses B | **xong** | 0,8103 | -0,1466 |
 | OpenNMT A (30k step) | **xong** | 0,3581 | -1,3508 |
-| OpenNMT B (10 epoch) | **xong** | 0,3424 | -1,3909 |
+| OpenNMT B-natural (10 epoch) | **xong** | 0,3424 | -1,3909 |

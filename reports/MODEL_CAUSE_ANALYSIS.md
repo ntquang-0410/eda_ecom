@@ -1,5 +1,7 @@
 # Phân tích nguyên nhân — Matrix 5 model × 2 recipe
 
+> **CẬP NHẬT 2026-11-16 — sau 3 phản biện:** số liệu trong file này là `eval_F` gốc. Bản sạch `eval_F_v2` (858 dòng, common 831) cho kết quả định tính tương đương; xem `MATRIX_5X2_EVAL_F_V2.md` và `LEAKAGE_AUDIT.md`. OpenNMT-B trong bảng cũ là **B-natural**, không phải B-balanced; đang retrain trên L4x4. Không dùng file này một mình để kết luận "NMT paradigm yếu hơn LLM".
+
 **Ngày:** 2026-11-12  
 **Eval:** `eval_F` 1.500 dòng (300 title + 300 attribute + 150 description cho mỗi nguồn 1688/Tiki).  
 **Metric:** COMET-da `Unbabel/wmt22-comet-da` (1688, có reference), COMET-QE `Unbabel/wmt20-comet-qe-da` (Tiki), BLEU/chrF (1688) là metric phụ.
@@ -67,7 +69,7 @@ Hệ quả:
 | Moses | A | 0,7947 | -0,2401 | 33,96 | 36,03 | 0,0 | 0,036 | 12,8 |
 | Moses | B | 0,8103 | -0,1466 | 67,82 | 65,86 | 0,0 | 0,037 | 12,6 |
 | OpenNMT | A | 0,3581 | -1,3508 | 0,45 | 1,79 | 0,0 | **0,519** | **96,9** |
-| OpenNMT | B | 0,3424 | -1,3909 | 2,05 | 3,08 | 0,0 | **0,389** | **100,0** |
+| OpenNMT | B-natural | 0,3424 | -1,3909 | 2,05 | 3,08 | 0,0 | **0,389** | **100,0** |
 
 ### 2.1. Theo stratum
 
@@ -82,7 +84,7 @@ Hệ quả:
 | Moses | A | 0,797 | 0,843 | 0,694 | -0,208 | 0,006 | -0,797 |
 | Moses | B | 0,790 | 0,817 | 0,836 | -0,180 | 0,020 | -0,415 |
 | OpenNMT | A | 0,269 | 0,463 | 0,328 | -1,545 | -0,892 | -1,880 |
-| OpenNMT | B | 0,283 | 0,386 | 0,374 | -1,452 | -1,237 | -1,577 |
+| OpenNMT | B-natural | 0,283 | 0,386 | 0,374 | -1,452 | -1,237 | -1,577 |
 
 **Đọc nhanh:** title dễ với mọi model neural (0,79–0,84); attribute dễ với LLM (0,84–0,88); description là nơi phân hóa mạnh nhất. Tiki QE chỉ dương ở Qwen; ngay cả Qwen cũng âm ở title.
 

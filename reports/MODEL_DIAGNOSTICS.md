@@ -1,5 +1,7 @@
 # Chẩn đoán lỗi theo model — matrix 5×2
 
+> **CẬP NHẬT 2026-11-16:** bảng này tính trên `eval_F` gốc (1.500 dòng), trong đó 642 dòng leak nội dung/near-dup. Dùng `MATRIX_5X2_EVAL_F_V2.md` cho số liệu chính thức; file này giữ để chẩn đoán lỗi bề mặt (rep4, rỗng, mất số) và ví dụ.
+
 Sinh từ `eval_F` (1.500 dòng) + hypothesis + score COMET. Các chỉ số: `rep4` = tỉ lệ 4-gram lặp trong câu (càng cao càng máy móc); `vi%` = % ký tự Latin có dấu (dấu hiệu sót tiếng Việt); `digit`/`latin` = recall số/thương hiệu từ nguồn.
 
 ## 1. Tổng quan

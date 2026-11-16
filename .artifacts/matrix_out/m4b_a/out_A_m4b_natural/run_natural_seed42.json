@@ -20,5 +20,64 @@
     "1688_title": 0.15843046787017964,
     "tiki_attribute": 0.07501861541685818,
     "tiki_title": 0.09548375900971492
+  },
+  "dataset_hash": "efb8ee202eb1d915fcc124e99a55c93b35d3fedfd08c4410ca5c17287852d242",
+  "eval_hash": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+  "eval_v2_hash": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+  "sample_hash": "c5720b8eaddfcd211ef7f6d09fe78cf94b29e8bcfe1ff2a18c0ffc011f6cfc28",
+  "content_hash": "fa32ba3291bb76d0413b6694687a5165efd9fb85e69c6185e06b4b1035794628",
+  "exposure": {
+    "1688_attribute": {
+      "population_rows": 70114,
+      "population_tokens_est_M": 3.0475,
+      "population_tokens_uncapped_M": 3.6311,
+      "draws": 62491,
+      "unique_rows": 41252,
+      "coverage_pct": 58.836,
+      "epochs_token_ratio": 0.8854,
+      "draws_per_row": 1.5149,
+      "rows_per_step": 124.98,
+      "truncated_pct": 0.62,
+      "median_tokens_est": 9.93
+    },
+    "1688_title": {
+      "population_rows": 15350,
+      "population_tokens_est_M": 0.7157,
+      "population_tokens_uncapped_M": 0.7157,
+      "draws": 13582,
+      "unique_rows": 9038,
+      "coverage_pct": 58.879,
+      "epochs_token_ratio": 0.8854,
+      "draws_per_row": 1.5028,
+      "rows_per_step": 27.16,
+      "truncated_pct": 0.0,
+      "median_tokens_est": 46.53
+    },
+    "tiki_attribute": {
+      "population_rows": 14012,
+      "population_tokens_est_M": 0.3389,
+      "population_tokens_uncapped_M": 0.3392,
+      "draws": 12460,
+      "unique_rows": 8224,
+      "coverage_pct": 58.693,
+      "epochs_token_ratio": 0.8854,
+      "draws_per_row": 1.5151,
+      "rows_per_step": 24.92,
+      "truncated_pct": 0.0,
+      "median_tokens_est": 8.89
+    },
+    "tiki_title": {
+      "population_rows": 11653,
+      "population_tokens_est_M": 0.4314,
+      "population_tokens_uncapped_M": 0.4314,
+      "draws": 10293,
+      "unique_rows": 6839,
+      "coverage_pct": 58.689,
+      "epochs_token_ratio": 0.8854,
+      "draws_per_row": 1.505,
+      "rows_per_step": 20.59,
+      "truncated_pct": 0.0,
+      "median_tokens_est": 34.44
+    }
   }
 }
