@@ -10,6 +10,8 @@ data/interim/
 
 # Secrets
 .env
+*.env
+api_deepseek_alibaba.txt
 
 # Bản chép tạm để tải lên HF (trùng data/release/desc_v1) và kết quả chạy thử bằng số giả
 data/release/desc_v1_tai_len_hf/
