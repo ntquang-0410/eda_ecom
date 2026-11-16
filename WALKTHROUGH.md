@@ -7858,3 +7858,8 @@ Chờ lệnh của Nhật Anh: có sửa lại cách tính điểm chính (trọ
 ## Prompt 1011 (16/11/2026)
 **Yêu cầu:** Nhật Anh xác nhận: Huy chạy lần Judge đầy đủ.
 **Đã làm:** sửa A6 (cột tài khoản/người chạy + ghi chú "Phân công": Nhật Anh thiết kế, viết mã, thí điểm, soạn HUONG_DAN_JUDGE + gói dữ liệu; Huy chạy lần đầy đủ và đưa lên HF, xác nhận 16/11). Sửa `TONG_HOP` mục 2.3: thêm dòng phân công; sửa câu "có tầng 2" thành "thiết kế có tầng 2 nhưng lần chạy đầy đủ không dùng" (file đánh dấu: judge tầng 2 = 0). Sinh lại bộ (36 phiên, 0 lỗi, 0 link hỏng), cập nhật mục 15. Commit + push.
+---
+
+## Prompt 1012 (16/11/2026)
+**Yêu cầu:** commit đủ và push lên `nhatanh_updating`; hỏi có phải em bỏ các file Opencode đã push rồi push của em lên không.
+**Trả lời/đã làm:** Đúng một phần: commit 1ce1d63 xóa 22 file `docs/ket_qua_kaggle/00_…21_.md` (Opencode push ở d70b9a2) và thay bằng 36 file A1–F3 + INDEX mới, đồng thời ghi đè `scripts/ft_train/xuat_ket_qua_kaggle.py` bằng bản của em; GIỮ nguyên các phần khác Opencode đã push (`docs/PHU_LUC_NHAT_KY_CHAY.md`, `.gitignore`, mục 1.1 trong `TRONG_SO_TITLE_MO_TA_DA_CHOT.md` ở b4a5322); git vẫn giữ lịch sử nên bản cũ xem lại được. Commit thêm 4 tài liệu cũ có dòng cảnh báo của Opencode (BANG_KET_QUA_CUOI, BANG_QUOTA_HOM_NAY, CAC_DIEM_CAN_CHOT, PHASE0_QUOTA; đã đọc, nội dung cảnh báo đúng) + WALKTHROUGH. Không đưa: `.vscode/settings.json` (cấu hình VS Code riêng máy, đường dẫn llama_cpp_src cục bộ) và `main.pdf` (báo cáo nhóm 51 trang có trang bìa, chờ Nhật Anh quyết vì có thông tin cá nhân).

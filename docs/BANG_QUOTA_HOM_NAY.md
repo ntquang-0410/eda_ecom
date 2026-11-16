@@ -1,3 +1,5 @@
+> **⚠️ TÀI LIỆU 09/11 — CHỈ LÀ BẢNG `s_g` CỦA LẦN CHẠY ĐẦU.** Bản 960 này có lỗi bỏ mẫu dài và chưa sửa metric; đừng dùng các cột điểm ở đây để chốt. Bảng `s_g` hiện hành và kết luận: [`QUOTA_KET_LUAN.md`](QUOTA_KET_LUAN.md).
+
 # BẢNG QUOTA (CÔNG THỨC QUANG) — KẾT QUẢ PHIÊN 09/11/2026
 
 Nguồn: `version48/quota_report.json` (cụm, ghi 09/11 11:52) và `version47/quota_report.json` (pair, ghi 09/11 08:01).

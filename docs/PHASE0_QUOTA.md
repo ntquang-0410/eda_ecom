@@ -1,3 +1,5 @@
+> **Ghi chú 16/11:** đây là báo cáo **pha 0** (09/11), trước khi phát hiện lỗi bỏ mẫu và trước khi chốt metric. Giữ để làm lịch sử; kết luận hiện hành ở [`QUOTA_KET_LUAN.md`](QUOTA_KET_LUAN.md).
+
 # Pha 0: Dry-run quota Survey A
 
 **Ngày:** 09/11/2026  

@@ -1,3 +1,5 @@
+> **Cập nhật 16/11:** một số điểm dưới đây đã có kết quả thử sau ngày 13/11 — mục 2 (định dạng extension) đã dùng **pair** trong demo; mục 4–5 (nơi chạy, người viết) đã có máy chủ + extension thử; mục 1 (8B bản cụm) và mục 3 (mô hình cổ điển dự phòng) **vẫn chờ**. Xem mục 9 và 11 của [`TONG_HOP_KET_QUA_NHAT_ANH.md`](TONG_HOP_KET_QUA_NHAT_ANH.md).
+
 # Các điểm cần Nhật Anh chốt
 
 Lập 12/11/2026. Mỗi điểm ghi: câu hỏi, đề xuất của em, và vì sao chưa tự quyết được. Chưa điểm nào được chốt. Nhãn: **[CHỜ]** chờ Nhật Anh; **[CHƯA KIỂM]** chưa kiểm trên máy thật.
