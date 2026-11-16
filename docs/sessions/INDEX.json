@@ -1,0 +1,29 @@
+{
+ "cac_file": [
+  {
+   "file": "session_5bfcc9b3_2026-10.json",
+   "session_id": "5bfcc9b3-4b69-4d8a-afbe-383eebb61802",
+   "thang": "2026-10",
+   "so_luot": 751,
+   "tu": "2026-10-01T11:33:13.288Z",
+   "den": "2026-10-31T10:53:26.797Z",
+   "byte": 4197672
+  },
+  {
+   "file": "session_5bfcc9b3_2026-11.json",
+   "session_id": "5bfcc9b3-4b69-4d8a-afbe-383eebb61802",
+   "thang": "2026-11",
+   "so_luot": 397,
+   "tu": "2026-11-03T12:56:54.570Z",
+   "den": "2026-11-16T14:38:41.365Z",
+   "byte": 2403396
+  }
+ ],
+ "so_lan_che": {
+  "[HF_TOKEN_DA_CHE]": 5,
+  "[EMAIL_DA_CHE]": 21,
+  "\\1[DA_CHE]": 7,
+  "[EVOLUS_KEY_DA_CHE]": 1,
+  "Bearer [DA_CHE]": 1
+ }
+}
