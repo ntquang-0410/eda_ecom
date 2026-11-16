@@ -1,0 +1,781 @@
+{
+  "generated_at": "2026-11-16T09:17:43Z",
+  "dataset_hashes": {
+    "eval_A": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+    "eval_B": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+    "units_A": "efb8ee202eb1d915fcc124e99a55c93b35d3fedfd08c4410ca5c17287852d242",
+    "units_B": "e03316f78f28f169fbc22235455cf4f002126b8d1f056bf2f0da53baf4cc74f0"
+  },
+  "leakage": {
+    "A": {
+      "n": 1500,
+      "criteria": {
+        "product_id": 0,
+        "source_hash": 76,
+        "source_hash_strong": 110,
+        "pair_hash": 14,
+        "near_dup_cluster_id": 499,
+        "leak": 584
+      },
+      "leaked": 584,
+      "clean": 916,
+      "by_stratum": {
+        "title": {
+          "n": 600,
+          "product_id": 0,
+          "source_hash": 1,
+          "source_hash_strong": 1,
+          "pair_hash": 0,
+          "near_dup_cluster_id": 211,
+          "leak": 211
+        },
+        "attribute": {
+          "n": 600,
+          "product_id": 0,
+          "source_hash": 75,
+          "source_hash_strong": 109,
+          "pair_hash": 14,
+          "near_dup_cluster_id": 183,
+          "leak": 268
+        },
+        "description": {
+          "n": 300,
+          "product_id": 0,
+          "source_hash": 0,
+          "source_hash_strong": 0,
+          "pair_hash": 0,
+          "near_dup_cluster_id": 105,
+          "leak": 105
+        }
+      },
+      "by_dataset_stratum": {
+        "1688/title": {
+          "n": 300,
+          "leak": 210
+        },
+        "1688/attribute": {
+          "n": 300,
+          "leak": 196
+        },
+        "1688/description": {
+          "n": 150,
+          "leak": 102
+        },
+        "tiki/title": {
+          "n": 300,
+          "leak": 1
+        },
+        "tiki/attribute": {
+          "n": 300,
+          "leak": 72
+        },
+        "tiki/description": {
+          "n": 150,
+          "leak": 3
+        }
+      }
+    },
+    "B": {
+      "n": 1500,
+      "criteria": {
+        "product_id": 0,
+        "source_hash": 11,
+        "source_hash_strong": 11,
+        "pair_hash": 0,
+        "near_dup_cluster_id": 502,
+        "leak": 511
+      },
+      "leaked": 511,
+      "clean": 989,
+      "by_stratum": {
+        "title": {
+          "n": 600,
+          "product_id": 0,
+          "source_hash": 1,
+          "source_hash_strong": 1,
+          "pair_hash": 0,
+          "near_dup_cluster_id": 212,
+          "leak": 212
+        },
+        "attribute": {
+          "n": 600,
+          "product_id": 0,
+          "source_hash": 0,
+          "source_hash_strong": 0,
+          "pair_hash": 0,
+          "near_dup_cluster_id": 183,
+          "leak": 183
+        },
+        "description": {
+          "n": 300,
+          "product_id": 0,
+          "source_hash": 10,
+          "source_hash_strong": 10,
+          "pair_hash": 0,
+          "near_dup_cluster_id": 107,
+          "leak": 116
+        }
+      },
+      "by_dataset_stratum": {
+        "1688/title": {
+          "n": 300,
+          "leak": 210
+        },
+        "1688/attribute": {
+          "n": 300,
+          "leak": 176
+        },
+        "1688/description": {
+          "n": 150,
+          "leak": 102
+        },
+        "tiki/title": {
+          "n": 300,
+          "leak": 2
+        },
+        "tiki/attribute": {
+          "n": 300,
+          "leak": 7
+        },
+        "tiki/description": {
+          "n": 150,
+          "leak": 14
+        }
+      }
+    }
+  },
+  "near_dup": {},
+  "prefix": {
+    "eval_id_prefix": {
+      "1688v1": 750,
+      "tikiv1": 600,
+      "tikiv2": 150
+    },
+    "n_prefix": 3
+  },
+  "eval_F_v2": {
+    "n": 858,
+    "by_stratum": {
+      "1688/title": 90,
+      "1688/attribute": 96,
+      "1688/description": 45,
+      "tiki/title": 291,
+      "tiki/attribute": 224,
+      "tiki/description": 112
+    },
+    "leaked_union": 642,
+    "leaked_A": 584,
+    "leaked_B": 511,
+    "near_dup_extra": 44,
+    "criteria": [
+      "product_id",
+      "source_hash",
+      "source_hash_strong",
+      "pair_hash",
+      "near_dup_cluster_id"
+    ],
+    "normalization": "NFKC + casefold + whitespace collapse; strong = bỏ punctuation/space",
+    "source": "data/cleaned/eval_F_v2.parquet"
+  },
+  "dedup_file_A": {
+    "rows": 118477,
+    "cross_split_groups": 583,
+    "duplicate_rows_beyond_first": 3191,
+    "expected_review": {
+      "groups": 583,
+      "rows": 3191
+    }
+  },
+  "quota": {
+    "A": {
+      "sample_rows": 98826,
+      "unique_rows": 65353,
+      "groups": {
+        "1688_attribute": {
+          "population_rows": 70114,
+          "population_tokens_est_M": 3.0475,
+          "population_tokens_uncapped_M": 3.6311,
+          "draws": 62491,
+          "unique_rows": 41252,
+          "coverage_pct": 58.836,
+          "epochs_token_ratio": 0.8854,
+          "draws_per_row": 1.5149,
+          "rows_per_step": 124.98,
+          "truncated_pct": 0.62,
+          "median_tokens_est": 9.93
+        },
+        "1688_title": {
+          "population_rows": 15350,
+          "population_tokens_est_M": 0.7157,
+          "population_tokens_uncapped_M": 0.7157,
+          "draws": 13582,
+          "unique_rows": 9038,
+          "coverage_pct": 58.879,
+          "epochs_token_ratio": 0.8854,
+          "draws_per_row": 1.5028,
+          "rows_per_step": 27.16,
+          "truncated_pct": 0.0,
+          "median_tokens_est": 46.53
+        },
+        "tiki_attribute": {
+          "population_rows": 14012,
+          "population_tokens_est_M": 0.3389,
+          "population_tokens_uncapped_M": 0.3392,
+          "draws": 12460,
+          "unique_rows": 8224,
+          "coverage_pct": 58.693,
+          "epochs_token_ratio": 0.8854,
+          "draws_per_row": 1.5151,
+          "rows_per_step": 24.92,
+          "truncated_pct": 0.0,
+          "median_tokens_est": 8.89
+        },
+        "tiki_title": {
+          "population_rows": 11653,
+          "population_tokens_est_M": 0.4314,
+          "population_tokens_uncapped_M": 0.4314,
+          "draws": 10293,
+          "unique_rows": 6839,
+          "coverage_pct": 58.689,
+          "epochs_token_ratio": 0.8854,
+          "draws_per_row": 1.505,
+          "rows_per_step": 20.59,
+          "truncated_pct": 0.0,
+          "median_tokens_est": 34.44
+        }
+      },
+      "total_draws": 98826,
+      "total_unique": 65353,
+      "real_qwen_tokens": {
+        "sample_total_M": 6.5598,
+        "population_total_M": 7.4079,
+        "epochs_real": 0.8855
+      }
+    },
+    "B": {
+      "sample_rows": 52131,
+      "unique_rows": 25453,
+      "groups": {
+        "1688_description": {
+          "population_rows": 15986,
+          "population_tokens_est_M": 7.9445,
+          "population_tokens_uncapped_M": 7.9445,
+          "draws": 2025,
+          "unique_rows": 1894,
+          "coverage_pct": 11.848,
+          "epochs_token_ratio": 0.1277,
+          "draws_per_row": 1.0692,
+          "rows_per_step": 4.05,
+          "truncated_pct": 4.94,
+          "median_tokens_est": 478.12
+        },
+        "1688_title": {
+          "population_rows": 15350,
+          "population_tokens_est_M": 0.7157,
+          "population_tokens_uncapped_M": 0.7157,
+          "draws": 21449,
+          "unique_rows": 11558,
+          "coverage_pct": 75.296,
+          "epochs_token_ratio": 1.3972,
+          "draws_per_row": 1.8558,
+          "rows_per_step": 42.9,
+          "truncated_pct": 0.0,
+          "median_tokens_est": 46.53
+        },
+        "tiki_description": {
+          "population_rows": 11017,
+          "population_tokens_est_M": 7.0331,
+          "population_tokens_uncapped_M": 8.6148,
+          "draws": 1602,
+          "unique_rows": 1488,
+          "coverage_pct": 13.506,
+          "epochs_token_ratio": 0.1464,
+          "draws_per_row": 1.0766,
+          "rows_per_step": 3.2,
+          "truncated_pct": 30.4,
+          "median_tokens_est": 631.04
+        },
+        "tiki_title": {
+          "population_rows": 11653,
+          "population_tokens_est_M": 0.4314,
+          "population_tokens_uncapped_M": 0.4314,
+          "draws": 27055,
+          "unique_rows": 10513,
+          "coverage_pct": 90.217,
+          "epochs_token_ratio": 2.3183,
+          "draws_per_row": 2.5735,
+          "rows_per_step": 54.11,
+          "truncated_pct": 0.0,
+          "median_tokens_est": 34.44
+        }
+      },
+      "total_draws": 52131,
+      "total_unique": 25453,
+      "real_qwen_tokens": {
+        "sample_total_M": 5.9258,
+        "population_total_M": 23.9196,
+        "epochs_real": 0.2477
+      }
+    },
+    "accounting": {
+      "tokens_est_formula": "src_chars/3.6 + tgt_chars/1.6",
+      "eff_tokens_cap": 960,
+      "note": "token ước lượng theo ký tự, không phải tokenizer thật; cap 960 làm mất khối lượng đuôi dài"
+    }
+  },
+  "score_coverage": {
+    "ecomgpt_a::1688": {
+      "n": 750,
+      "n_v2": 231,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 150
+      }
+    },
+    "ecomgpt_a::tiki": {
+      "n": 750,
+      "n_v2": 627,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 150
+      }
+    },
+    "ecomgpt_b::1688": {
+      "n": 750,
+      "n_v2": 231,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 150
+      }
+    },
+    "ecomgpt_b::tiki": {
+      "n": 729,
+      "n_v2": 609,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 279,
+        "description": 150
+      }
+    },
+    "moses_a::1688": {
+      "n": 750,
+      "n_v2": 231,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 150
+      }
+    },
+    "moses_a::tiki": {
+      "n": 750,
+      "n_v2": 627,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 150
+      }
+    },
+    "moses_b::1688": {
+      "n": 750,
+      "n_v2": 231,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 150
+      }
+    },
+    "moses_b::tiki": {
+      "n": 750,
+      "n_v2": 627,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 150
+      }
+    },
+    "onmt_a::1688": {
+      "n": 750,
+      "n_v2": 231,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 150
+      }
+    },
+    "onmt_a::tiki": {
+      "n": 750,
+      "n_v2": 627,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 150
+      }
+    },
+    "onmt_b::1688": {
+      "n": 750,
+      "n_v2": 231,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 150
+      }
+    },
+    "onmt_b::tiki": {
+      "n": 750,
+      "n_v2": 627,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 150
+      }
+    },
+    "qwen4b_a::1688": {
+      "n": 747,
+      "n_v2": 231,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 147
+      }
+    },
+    "qwen4b_a::tiki": {
+      "n": 738,
+      "n_v2": 618,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 138
+      }
+    },
+    "qwen4b_b::1688": {
+      "n": 747,
+      "n_v2": 231,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 147
+      }
+    },
+    "qwen4b_b::tiki": {
+      "n": 738,
+      "n_v2": 618,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 138
+      }
+    },
+    "qwen_a::1688": {
+      "n": 747,
+      "n_v2": 231,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 147
+      }
+    },
+    "qwen_a::tiki": {
+      "n": 738,
+      "n_v2": 618,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 138
+      }
+    },
+    "qwen_b::1688": {
+      "n": 747,
+      "n_v2": 231,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 147
+      }
+    },
+    "qwen_b::tiki": {
+      "n": 738,
+      "n_v2": 618,
+      "by_stratum": {
+        "title": 300,
+        "attribute": 300,
+        "description": 138
+      }
+    }
+  },
+  "common_eval_ids": {
+    "1688": 231,
+    "tiki": 600
+  },
+  "common_scores": {
+    "ecomgpt_a::1688": 0.825,
+    "ecomgpt_a::tiki": 0.0077,
+    "ecomgpt_b::1688": 0.7634,
+    "ecomgpt_b::tiki": -0.1366,
+    "moses_a::1688": 0.7862,
+    "moses_a::tiki": -0.2439,
+    "moses_b::1688": 0.8037,
+    "moses_b::tiki": -0.1593,
+    "onmt_a::1688": 0.3488,
+    "onmt_a::tiki": -1.4177,
+    "onmt_b::1688": 0.3387,
+    "onmt_b::tiki": -1.4074,
+    "qwen4b_a::1688": 0.8584,
+    "qwen4b_a::tiki": 0.0573,
+    "qwen4b_b::1688": 0.8471,
+    "qwen4b_b::tiki": 0.0461,
+    "qwen_a::1688": 0.8567,
+    "qwen_a::tiki": 0.0521,
+    "qwen_b::1688": 0.8572,
+    "qwen_b::tiki": 0.0509
+  },
+  "tiki_description_common_subset": {
+    "ecomgpt_a": {
+      "n_all": 150,
+      "full": -0.0417,
+      "n_common": 103,
+      "common": 0.009
+    },
+    "ecomgpt_b": {
+      "n_all": 150,
+      "full": -0.3772,
+      "n_common": 103,
+      "common": -0.3754
+    },
+    "moses_a": {
+      "n_all": 150,
+      "full": -0.797,
+      "n_common": 103,
+      "common": -0.8029
+    },
+    "moses_b": {
+      "n_all": 150,
+      "full": -0.4145,
+      "n_common": 103,
+      "common": -0.4217
+    },
+    "onmt_a": {
+      "n_all": 150,
+      "full": -1.8796,
+      "n_common": 103,
+      "common": -1.903
+    },
+    "onmt_b": {
+      "n_all": 150,
+      "full": -1.5775,
+      "n_common": 103,
+      "common": -1.6053
+    },
+    "qwen4b_a": {
+      "n_all": 138,
+      "full": 0.2297,
+      "n_common": 103,
+      "common": 0.2248
+    },
+    "qwen4b_b": {
+      "n_all": 138,
+      "full": 0.2453,
+      "n_common": 103,
+      "common": 0.2435
+    },
+    "qwen_a": {
+      "n_all": 138,
+      "full": 0.2197,
+      "n_common": 103,
+      "common": 0.2096
+    },
+    "qwen_b": {
+      "n_all": 138,
+      "full": 0.2151,
+      "n_common": 103,
+      "common": 0.1973
+    }
+  },
+  "leak_score_sensitivity": {
+    "ecomgpt_a::1688": {
+      "n_leak": 519,
+      "n_clean": 231,
+      "leak_score": 0.8198,
+      "clean_score": 0.825,
+      "delta": 0.0052
+    },
+    "ecomgpt_a::tiki": {
+      "n_leak": 123,
+      "n_clean": 627,
+      "leak_score": 0.0712,
+      "clean_score": -0.0018,
+      "delta": -0.073
+    },
+    "ecomgpt_b::1688": {
+      "n_leak": 519,
+      "n_clean": 231,
+      "leak_score": 0.7673,
+      "clean_score": 0.7634,
+      "delta": -0.004
+    },
+    "ecomgpt_b::tiki": {
+      "n_leak": 120,
+      "n_clean": 609,
+      "leak_score": -0.1594,
+      "clean_score": -0.1428,
+      "delta": 0.0166
+    },
+    "moses_a::1688": {
+      "n_leak": 519,
+      "n_clean": 231,
+      "leak_score": 0.7985,
+      "clean_score": 0.7862,
+      "delta": -0.0123
+    },
+    "moses_a::tiki": {
+      "n_leak": 123,
+      "n_clean": 627,
+      "leak_score": -0.2023,
+      "clean_score": -0.2475,
+      "delta": -0.0452
+    },
+    "moses_b::1688": {
+      "n_leak": 519,
+      "n_clean": 231,
+      "leak_score": 0.8132,
+      "clean_score": 0.8037,
+      "delta": -0.0094
+    },
+    "moses_b::tiki": {
+      "n_leak": 123,
+      "n_clean": 627,
+      "leak_score": -0.0462,
+      "clean_score": -0.1663,
+      "delta": -0.12
+    },
+    "onmt_a::1688": {
+      "n_leak": 519,
+      "n_clean": 231,
+      "leak_score": 0.3622,
+      "clean_score": 0.3488,
+      "delta": -0.0133
+    },
+    "onmt_a::tiki": {
+      "n_leak": 123,
+      "n_clean": 627,
+      "leak_score": -1.0299,
+      "clean_score": -1.4138,
+      "delta": -0.3839
+    },
+    "onmt_b::1688": {
+      "n_leak": 519,
+      "n_clean": 231,
+      "leak_score": 0.3441,
+      "clean_score": 0.3387,
+      "delta": -0.0055
+    },
+    "onmt_b::tiki": {
+      "n_leak": 123,
+      "n_clean": 627,
+      "leak_score": -1.3147,
+      "clean_score": -1.4059,
+      "delta": -0.0911
+    },
+    "qwen4b_a::1688": {
+      "n_leak": 516,
+      "n_clean": 231,
+      "leak_score": 0.8539,
+      "clean_score": 0.8584,
+      "delta": 0.0045
+    },
+    "qwen4b_a::tiki": {
+      "n_leak": 120,
+      "n_clean": 618,
+      "leak_score": 0.1211,
+      "clean_score": 0.0537,
+      "delta": -0.0674
+    },
+    "qwen4b_b::1688": {
+      "n_leak": 516,
+      "n_clean": 231,
+      "leak_score": 0.8485,
+      "clean_score": 0.8471,
+      "delta": -0.0014
+    },
+    "qwen4b_b::tiki": {
+      "n_leak": 120,
+      "n_clean": 618,
+      "leak_score": 0.1334,
+      "clean_score": 0.0422,
+      "delta": -0.0912
+    },
+    "qwen_a::1688": {
+      "n_leak": 516,
+      "n_clean": 231,
+      "leak_score": 0.8557,
+      "clean_score": 0.8567,
+      "delta": 0.0009
+    },
+    "qwen_a::tiki": {
+      "n_leak": 120,
+      "n_clean": 618,
+      "leak_score": 0.1361,
+      "clean_score": 0.0494,
+      "delta": -0.0867
+    },
+    "qwen_b::1688": {
+      "n_leak": 516,
+      "n_clean": 231,
+      "leak_score": 0.8544,
+      "clean_score": 0.8572,
+      "delta": 0.0028
+    },
+    "qwen_b::tiki": {
+      "n_leak": 120,
+      "n_clean": 618,
+      "leak_score": 0.1772,
+      "clean_score": 0.0477,
+      "delta": -0.1295
+    }
+  },
+  "opennmt": {
+    "config": {
+      "d_model": 256,
+      "layers": 4,
+      "ff": 1024,
+      "vocab": 32000,
+      "params_estimate_M": 37.0
+    },
+    "data_stats": {
+      "A": {
+        "train_rows": 103626,
+        "valid_rows": 7503,
+        "train_tokens": 5083615,
+        "eval_rows": 1500,
+        "eval_src_over_512": 49
+      },
+      "B": {
+        "train_rows": 49774,
+        "valid_rows": 4232,
+        "train_tokens": 18828937,
+        "eval_rows": 1500,
+        "eval_src_over_512": 49
+      }
+    },
+    "token_pass": {
+      "A": 245760000,
+      "B": 188334080
+    },
+    "llm_token_pass": {
+      "A": 4000038,
+      "B": 4002207
+    },
+    "ratios": {
+      "A": 61.4,
+      "B": 47.1
+    },
+    "B_label_issue": {
+      "nmt_uses": "units_B toàn bộ split train (B-natural): 49.774 dòng / 18,83M token",
+      "llm_uses": "quota balanced 4M: 52.131 draw / 25.453 unique",
+      "conclusion": "cell OpenNMT-B hiện là B-natural, không phải B-balanced"
+    },
+    "eval_src_over_512": 49
+  }
+}

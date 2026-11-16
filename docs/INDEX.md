@@ -2,6 +2,12 @@
 
 Các báo cáo đang dùng:
 
+- `reports/CLAIMS_REVISION.md` — các câu phải sửa trước khi bảo vệ
+- `reports/REVIEW_RESPONSE.md` — phản hồi 3 phản biện + plan P0–P3
+- `reports/LEAKAGE_AUDIT.md` — audit leakage nội dung + eval_F_v2
+- `reports/MATRIX_5X2_EVAL_F_V2.md` — re-score 10 cell trên eval_F_v2_common
+- `reports/OPENNMT_FAIRNESS.md` — compute/fairness OpenNMT + NLLB
+- `reports/QUOTA_LENGTH_AUDIT.md` — exposure, tokenizer thật, eval protocol
 - `reports/MATRIX_5X2_RESULTS.md` — **matrix 5 model × 2 recipe** (COMET + bootstrap)
 - `reports/MODEL_CAUSE_ANALYSIS.md` — phân tích nguyên nhân theo từng model
 - `reports/MODEL_DIAGNOSTICS.md` — chẩn đoán lỗi định lượng, ví dụ

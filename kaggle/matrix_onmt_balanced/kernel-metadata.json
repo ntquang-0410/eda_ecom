@@ -1,0 +1,22 @@
+{
+  "id": "nguynthanhquang/tiki-onmt-b-balanced",
+  "title": "Tiki Onmt B Balanced",
+  "code_file": "onmt_balanced.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "nguynthanhquang/tiki-matrix-data",
+    "nguynthanhquang/tiki-matrix-controls",
+    "metric/gemma-4-developer-agent-wheelhouse"
+  ],
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-3"
+  ],
+  "kernel_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaL4"
+}

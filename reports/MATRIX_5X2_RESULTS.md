@@ -1,5 +1,7 @@
 # Matrix 5 model × 2 data — COMET
 
+> **CẢNH BÁO LEAKAGE (2026-11-16):** `eval_F` gốc có **642/1.500 dòng (42,8%)** trùng nội dung/near-dup với train+dev (product_id: 0, source hash: 76/11, nhóm `nhom_trung`/near-dup: 584/511). Bảng dưới là **bản gốc** để đối chiếu lịch sử; số liệu chính nên trích từ [`MATRIX_5X2_EVAL_F_V2.md`](MATRIX_5X2_EVAL_F_V2.md) (858 dòng sạch, common 831). Xem [`LEAKAGE_AUDIT.md`](LEAKAGE_AUDIT.md).
+
 Eval: `eval_F` 1.500 dòng dùng chung cho cả 10 cell (cùng `eval_id`, cùng reference). 1688 = COMET-da có reference; Tiki = COMET-QE không reference. BLEU/chrF tính trên phần 1688 có reference và hypothesis không rỗng.
 
 ## 1. Điểm tổng theo cell
@@ -15,7 +17,7 @@ Eval: `eval_F` 1.500 dòng dùng chung cho cả 10 cell (cùng `eval_id`, cùng 
 | Moses | A | 0.7947 | -0.2401 | 33.96 | 36.03 | 750 | 750 |
 | Moses | B | 0.8103 | -0.1466 | 67.82 | 65.86 | 750 | 750 |
 | OpenNMT | A | 0.3581 | -1.3508 | 0.45 | 1.79 | 750 | 750 |
-| OpenNMT | B | 0.3424 | -1.3909 | 2.05 | 3.08 | 750 | 750 |
+| OpenNMT | B-natural | 0.3424 | -1.3909 | 2.05 | 3.08 | 750 | 750 |
 
 ## 2. Theo stratum
 
@@ -30,7 +32,7 @@ Eval: `eval_F` 1.500 dòng dùng chung cho cả 10 cell (cùng `eval_id`, cùng 
 | Moses | A | 0.797 | 0.843 | 0.694 | -0.208 | 0.006 | -0.797 |
 | Moses | B | 0.790 | 0.817 | 0.836 | -0.180 | 0.020 | -0.415 |
 | OpenNMT | A | 0.269 | 0.463 | 0.328 | -1.545 | -0.892 | -1.880 |
-| OpenNMT | B | 0.283 | 0.386 | 0.374 | -1.452 | -1.237 | -1.577 |
+| OpenNMT | B-natural | 0.283 | 0.386 | 0.374 | -1.452 | -1.237 | -1.577 |
 
 ## 3. So sánh model trong cùng recipe (paired bootstrap, 2.000 lần, cluster theo sản phẩm)
 
@@ -57,7 +59,10 @@ Eval: `eval_F` 1.500 dòng dùng chung cho cả 10 cell (cùng `eval_id`, cùng 
 | Qwen3-4B | -0.0072 [-0.0123; -0.0023]* | -0.0077 [-0.0223; +0.0065] | -0.0037 [-0.0080; +0.0004] | -0.0331 [-0.0436; -0.0223]* | +0.0384 [+0.0335; +0.0428]* | -0.0230 [-0.0447; -0.0027]* | -0.0031 [-0.0329; +0.0238] | +0.0156 [+0.0024; +0.0307]* |
 | EcomGPT-7B | -0.0553 [-0.0670; -0.0441]* | -0.1572 [-0.1928; -0.1229]* | +0.0094 [+0.0042; +0.0149]* | -0.0318 [-0.0442; -0.0201]* | -0.2315 [-0.2701; -0.1920]* | +0.0188 [-0.0020; +0.0409] | -0.2507 [-0.3259; -0.1775]* | -0.3355 [-0.4255; -0.2462]* |
 | Moses | +0.0156 [+0.0089; +0.0223]* | +0.0935 [+0.0681; +0.1192]* | -0.0066 [-0.0115; -0.0015]* | -0.0257 [-0.0362; -0.0151]* | +0.1424 [+0.1307; +0.1543]* | +0.0280 [+0.0061; +0.0498]* | +0.0147 [-0.0327; +0.0665] | +0.3824 [+0.3545; +0.4123]* |
-| OpenNMT | -0.0156 [-0.0236; -0.0078]* | -0.0401 [-0.0812; +0.0035] | +0.0144 [+0.0067; +0.0214]* | -0.0767 [-0.0924; -0.0614]* | +0.0463 [+0.0389; +0.0545]* | +0.0931 [+0.0521; +0.1344]* | -0.3444 [-0.4304; -0.2613]* | +0.3021 [+0.2498; +0.3552]* |
+| OpenNMT (B-natural) | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
+
+
+**Lưu ý:** OpenNMT-B là **B-natural** (49.774 dòng, 18,83M token), không phải B-balanced (52.131 draw/25.453 unique); dòng B−A của OpenNMT bị loại khỏi bảng hiệu ứng dữ liệu. Xem `reports/OPENNMT_FAIRNESS.md`.
 
 ## 5. Đọc kết quả
 
@@ -69,7 +74,7 @@ Eval: `eval_F` 1.500 dòng dùng chung cho cả 10 cell (cùng `eval_id`, cùng 
 - **BLEU vs COMET:** Qwen3-4B A có BLEU 41,7 so với 55,2 của 8B A nhưng COMET bằng nhau. 4B sinh description dài/đủ trường hơn (đôi khi 8B co về `其他`), nên bị BLEU phạt n-gram nhưng COMET-da vẫn đánh giá đúng nghĩa.
 - **EcomGPT-7B:** B kém A rõ rệt ở cả tổng (Δ −0,055 da; −0,157 QE) lẫn attribute và description.
 - **Moses:** B hơn A ở 1688 (+0,0156, CI [+0,009; +0,022]) và Tiki QE (+0,0935), chủ yếu nhờ description; nhưng cả hai vẫn có COMET-QE Tiki âm.
-- **OpenNMT from-scratch:** thất bại trên dữ liệu này (COMET 1688 ≈ 0,35; BLEU < 2,1; output lặp cụm). Bản A 30k step vẫn degenerate, không phải lỗi huấn luyện đơn thuần.
+- **OpenNMT from-scratch (B-natural):** thất bại trên dữ liệu này (COMET 1688 ≈ 0,35; BLEU < 2,1; output lặp cụm). Bản A 30k step vẫn degenerate, không phải lỗi huấn luyện đơn thuần.
 - **Tiki QE:** chỉ Qwen dương; EcomGPT/Moses/OpenNMT đều âm. Trong matrix này, chỉ LLM fine-tune là khả thi cho miền Tiki.
 
 ## 6. Caveat

@@ -108,6 +108,9 @@ def main() -> int:
         bleu = chrf = float("nan")
         if hp.exists():
             h = pd.read_parquet(hp)
+            h["eval_id"] = h.eval_id.astype(str)
+            ids = set(a.eval_id)
+            h = h[h.eval_id.isin(ids)]
             h = h[(h.dataset == "1688") & h.reference.fillna("").str.strip().ne("")
                   & h.hypothesis.fillna("").str.strip().ne("")]
             if len(h):

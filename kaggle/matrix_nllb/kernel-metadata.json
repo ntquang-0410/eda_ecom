@@ -1,0 +1,24 @@
+{
+  "id": "nguynthanhquang/tiki-nllb-control",
+  "title": "Tiki Nllb Control",
+  "code_file": "nllb.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "nguynthanhquang/tiki-matrix-data",
+    "nguynthanhquang/tiki-matrix-controls",
+    "metric/gemma-4-developer-agent-wheelhouse"
+  ],
+  "competition_sources": [
+    "gemma-4-developer-agent"
+  ],
+  "kernel_sources": [],
+  "model_sources": [
+    "amritha18/nllb-200-distilled-600m/Transformers/600m/1"
+  ],
+  "machine_shape": "NvidiaL4x4"
+}

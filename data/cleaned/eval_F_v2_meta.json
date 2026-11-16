@@ -1,0 +1,24 @@
+{
+  "n": 858,
+  "by_stratum": {
+    "1688/title": 90,
+    "1688/attribute": 96,
+    "1688/description": 45,
+    "tiki/title": 291,
+    "tiki/attribute": 224,
+    "tiki/description": 112
+  },
+  "leaked_union": 642,
+  "leaked_A": 584,
+  "leaked_B": 511,
+  "near_dup_extra": 44,
+  "criteria": [
+    "product_id",
+    "source_hash",
+    "source_hash_strong",
+    "pair_hash",
+    "near_dup_cluster_id"
+  ],
+  "normalization": "NFKC + casefold + whitespace collapse; strong = bỏ punctuation/space",
+  "source": "data/cleaned/eval_F_v2.parquet"
+}
