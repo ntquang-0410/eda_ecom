@@ -16,6 +16,15 @@ Ghi ngày 11/11/2026 theo lệnh của Nhật Anh ("lưu lại kẻo quên"). Nh
 - Cấu hình nền: Qwen3-4B + LoRA rank 64, alpha 128, lr 2e-4, 2 epoch (xem `BAN_GIAO_AI_MOI.md` mục 6). Adapter chính thức và hash: mục 6.5 cùng file.
 - Hai file chính thức trong đời thực: `data/processed/ft_run/ban_cuoi/cuoi/{cum_cuoi,pair_cuoi}/ep2/`.
 
+### 1.1. Bảng 4 nhóm của cấu hình natural (screening v55, token đích, cap 2.048) [ĐO]
+
+| Bộ | 1688_title | 1688_description / attribute | tiki_title | tiki_description / attribute | Title tổng |
+|---|---:|---:|---:|---:|---:|
+| Cụm | 7,13 | 75,83 | 3,67 | 13,38 | **10,79** |
+| Pair (line) | 6,83 | 77,49 | 3,51 | 12,17 | **10,34** |
+
+Nguồn: `data/processed/ft_run/kaggle_quota_step1/quota_report.json`; tỉ lệ thực hiện lệch ≤0,0003; 0 mẫu bị bỏ (dài nhất 2.047 cụm / 1.907 pair). Đây là bảng **tần suất lấy mẫu theo token** (dùng để dựng mẫu quota), **không phải** `w_title` của bản cuối ở mục 1; pair ở đây là dạng **line** (title + 1 dòng attribute), khác bản **block** đang giao.
+
 ## 2. Kiểm chéo bằng screening quota (Kaggle v55, 10/11/2026) [ĐO]
 
 Cấu hình screening: rank 16, một lượt, ngân sách 1,726M token đích (cụm), eval 1.200 mẫu (300 mỗi nhóm hướng x loại), 2 seed (42, 123), chrF corpus hướng zh→vi, điểm "Chính" = 0,10 x Title + 0,90 x Mô tả (hằng `W_TITLE_ZHVI` trong `scripts/ft_train/kaggle_quota.py`). Nguồn: `data/processed/ft_run/kaggle_quota_step1/quota_report.json`.
