@@ -58,7 +58,8 @@ Nguồn là `bilingual_official_context.parquet` (bản cụm, 25.956 sản ph�
 Căn hàng chắc (số đoạn khớp và số trong từng đoạn khớp): 22.706/25.575 = 88,8%.
 
 ### 2.3 Chọn bản dịch bằng Judge (`scripts/judge/`)
-- Judge là DeepSeek. Mỗi mục được hỏi mù, hai lượt có hoán đổi vị trí, theo rubric v2, gom nhiều mục mỗi lời gọi, có tầng 2 dùng thêm ngữ cảnh cho các mục không nhất quán.
+- Judge là DeepSeek. Mỗi mục được hỏi mù, hai lượt có hoán đổi vị trí, theo rubric v2, gom nhiều mục mỗi lời gọi. Thiết kế có tầng 2 (thêm ngữ cảnh cho mục không nhất quán), nhưng theo file đánh dấu, lần chạy đầy đủ không dùng tầng 2.
+- Phân công: Nhật Anh thiết kế giao thức, viết mã, chạy thí điểm trên máy và soạn hướng dẫn chạy; **Huy chạy lần Judge đầy đủ** và đưa kết quả lên HF. Chi tiết: [`ket_qua_kaggle/A6`](ket_qua_kaggle/A6_judge_deepseek_chon_ban_dich_gemma_hay_qwen_cum.md).
 - Chỉ thay bản hiện có khi hai lượt cùng chọn một mô hình; mục chưa chấm hoặc không quyết thì giữ hiện trạng.
 - Không đưa vào so cặp những mục mà một ứng viên rỗng.
 - Bộ pair: Judge chấm 5.000/34.534 đơn vị dùng nhiều nhất, phủ khoảng 84% mảnh. Bộ cụm: 4.439/4.446 mục.
@@ -384,7 +385,7 @@ Mỗi phiên có một file riêng trong `docs/ket_qua_kaggle/`, sinh bởi `scr
 | A3 | [Bộ song ngữ 3: rà soát theo cụm có ngữ cảnh (Tiki)](ket_qua_kaggle/A3_bo_song_ngu_3_ra_soat_theo_cum_co_ngu_canh_tiki.md) | 1 (`trinhnhatanh`) | – | 23–24/10/2026 |
 | A4 | [Bộ song ngữ 4: rà soát theo cụm có ngữ cảnh (1688)](ket_qua_kaggle/A4_bo_song_ngu_4_ra_soat_theo_cum_co_ngu_canh_1688.md) | 1 (`trinhnhatanh`) | – | 24–26/10/2026 |
 | A5 | [Lọc luật cho fine-tune (trên máy)](ket_qua_kaggle/A5_loc_luat_cho_fine_tune_tren_may.md) | – (chạy trên máy) | – | 30/10/2026 |
-| A6 | [Judge DeepSeek chọn bản dịch Gemma hay Qwen (cụm và pair)](ket_qua_kaggle/A6_judge_deepseek_chon_ban_dich_gemma_hay_qwen_cum.md) | – (gọi API DeepSeek qua nhà cung cấp, không chạy trên Kaggle) | – | thí điểm 29–31/10/2026; bản phát hành tải về 03/11/2026 |
+| A6 | [Judge DeepSeek chọn bản dịch Gemma hay Qwen (cụm và pair)](ket_qua_kaggle/A6_judge_deepseek_chon_ban_dich_gemma_hay_qwen_cum.md) | – (gọi API DeepSeek, không chạy trên Kaggle; thí điểm: Nhật Anh trên máy; lần chạy đầy đủ: Huy) | – | thí điểm 29–31/10/2026; bản phát hành tải về 03/11/2026 |
 | A7 | [Chia tập theo sản phẩm, kiểm rò rỉ, gắn cờ title (trên máy)](ket_qua_kaggle/A7_chia_tap_theo_san_pham_kiem_ro_ri_gan_co_title_t.md) | – (chạy trên máy) | – | 04–05/11/2026 |
 | B0 | [Dựng mẫu huấn luyện và đóng gói Dataset Kaggle (trên máy)](ket_qua_kaggle/B0_dung_mau_huan_luyen_va_dong_goi_dataset_kaggle_t.md) | – (dựng trên máy; Dataset ở tài khoản 1 và 2) | – | 04–12/11/2026 |
 | B1 | [B6: dò siêu tham số Qwen3-4B (lr × rank)](ket_qua_kaggle/B1_b6_do_sieu_tham_so_qwen3_4b_lr_rank.md) | 1 (`trinhnhatanh`) | 20, 21, 22 (nối nhau) | 05/11/2026 |

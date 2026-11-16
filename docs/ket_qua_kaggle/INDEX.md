@@ -1,6 +1,6 @@
 # Mục lục kết quả Kaggle hướng Nhật Anh
 
-Sinh tự động bởi `scripts/ft_train/xuat_ket_qua_kaggle.py` lúc 16/11/2026 19:14 (ICT). Trang tổng hợp: [`docs/TONG_HOP_KET_QUA_NHAT_ANH.md`](../TONG_HOP_KET_QUA_NHAT_ANH.md). Nhật ký đầy đủ các phiên 4B (bản 20–43): [`docs/PHU_LUC_NHAT_KY_CHAY.md`](../PHU_LUC_NHAT_KY_CHAY.md).
+Sinh tự động bởi `scripts/ft_train/xuat_ket_qua_kaggle.py` lúc 16/11/2026 19:25 (ICT). Trang tổng hợp: [`docs/TONG_HOP_KET_QUA_NHAT_ANH.md`](../TONG_HOP_KET_QUA_NHAT_ANH.md). Nhật ký đầy đủ các phiên 4B (bản 20–43): [`docs/PHU_LUC_NHAT_KY_CHAY.md`](../PHU_LUC_NHAT_KY_CHAY.md).
 
 Mỗi phiên chạy thật một file. Output gốc nằm trên máy Nhật Anh ở `data/processed/` (không có trong git); mỗi file ghi sha256 của file gốc để đối chiếu. Mỗi file có: thông tin phiên (notebook, tài khoản, bản, thời gian, GPU), mục đích, bảng số, kết luận, ghi chú/giới hạn, danh sách file gốc.
 
@@ -17,7 +17,7 @@ Hai cách huấn luyện cần phân biệt khi đọc: **công thức chính** 
 | [A3](A3_bo_song_ngu_3_ra_soat_theo_cum_co_ngu_canh_tiki.md) | [Bộ song ngữ 3: rà soát theo cụm có ngữ cảnh (Tiki)](A3_bo_song_ngu_3_ra_soat_theo_cum_co_ngu_canh_tiki.md) | 1 (`trinhnhatanh`) | – | 23–24/10/2026 |
 | [A4](A4_bo_song_ngu_4_ra_soat_theo_cum_co_ngu_canh_1688.md) | [Bộ song ngữ 4: rà soát theo cụm có ngữ cảnh (1688)](A4_bo_song_ngu_4_ra_soat_theo_cum_co_ngu_canh_1688.md) | 1 (`trinhnhatanh`) | – | 24–26/10/2026 |
 | [A5](A5_loc_luat_cho_fine_tune_tren_may.md) | [Lọc luật cho fine-tune (trên máy)](A5_loc_luat_cho_fine_tune_tren_may.md) | – (chạy trên máy) | – | 30/10/2026 |
-| [A6](A6_judge_deepseek_chon_ban_dich_gemma_hay_qwen_cum.md) | [Judge DeepSeek chọn bản dịch Gemma hay Qwen (cụm và pair)](A6_judge_deepseek_chon_ban_dich_gemma_hay_qwen_cum.md) | – (gọi API DeepSeek qua nhà cung cấp, không chạy trên Kaggle) | – | thí điểm 29–31/10/2026; bản phát hành tải về 03/11/2026 |
+| [A6](A6_judge_deepseek_chon_ban_dich_gemma_hay_qwen_cum.md) | [Judge DeepSeek chọn bản dịch Gemma hay Qwen (cụm và pair)](A6_judge_deepseek_chon_ban_dich_gemma_hay_qwen_cum.md) | – (gọi API DeepSeek, không chạy trên Kaggle; thí điểm: Nhật Anh trên máy; lần chạy đầy đủ: Huy) | – | thí điểm 29–31/10/2026; bản phát hành tải về 03/11/2026 |
 | [A7](A7_chia_tap_theo_san_pham_kiem_ro_ri_gan_co_title_t.md) | [Chia tập theo sản phẩm, kiểm rò rỉ, gắn cờ title (trên máy)](A7_chia_tap_theo_san_pham_kiem_ro_ri_gan_co_title_t.md) | – (chạy trên máy) | – | 04–05/11/2026 |
 
 ## B. Fine-tune Qwen3-4B (công thức chính)

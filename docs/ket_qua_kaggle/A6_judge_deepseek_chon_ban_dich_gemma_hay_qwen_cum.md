@@ -11,7 +11,7 @@ Sinh tự động bởi `scripts/ft_train/xuat_ket_qua_kaggle.py`. Mọi con s�
 | Mã | A6 |
 | Giai đoạn | A. Dữ liệu: dịch, lọc, Judge |
 | Notebook Kaggle | – (`scripts/judge/`: `so_cap_du_lieu.py`, `so_cap_chon.py`, `ghep_bo.py`, `chay_lon.ps1`) |
-| Tài khoản | – (gọi API DeepSeek qua nhà cung cấp, không chạy trên Kaggle) |
+| Tài khoản | – (gọi API DeepSeek, không chạy trên Kaggle; thí điểm: Nhật Anh trên máy; lần chạy đầy đủ: Huy) |
 | Bản Kaggle | không ghi trong file kết quả |
 | Thời gian | thí điểm 29–31/10/2026; bản phát hành tải về 03/11/2026 |
 | Thư mục output trên máy Nhật Anh | `data/processed/judge`, `data/processed/so_cap`, `data/processed/bo_chon_hf` |
@@ -101,7 +101,7 @@ Trạng thái Judge theo file đánh dấu (`bo_*_danh_dau.parquet`, cộng trê
 
 ## Ghi chú, giới hạn, sự cố
 
-- **Lần chạy đầy đủ không có trên máy này**: chỉ có thí điểm và bản phát hành trên HF. Hướng dẫn chạy (`HUONG_DAN_JUDGE.md`) và gói dữ liệu riêng đã được chuẩn bị để gửi Huy (WALKTHROUGH 694–697); người chạy lần đầy đủ cần nhóm xác nhận khi viết báo cáo.
+- **Phân công:** Nhật Anh thiết kế giao thức, viết mã (`scripts/judge/`), chạy các lần thí điểm (phần 1) và soạn `HUONG_DAN_JUDGE.md` + gói dữ liệu riêng; **Huy chạy lần Judge đầy đủ** theo hướng dẫn đó và đưa bản kết quả lên HF (phần 2, Nhật Anh xác nhận 16/11/2026). Output thô của lần chạy đầy đủ không nằm trên máy Nhật Anh; số ở phần 2 đọc từ bản phát hành.
 - Các file truy vết chi tiết của lần chạy đầy đủ nằm ở revision HF `126a564f` (theo README bản phát hành), chưa tải về máy.
 - Judge thiên vị vị trí 1 (khoảng 63–74% ở thí điểm) nên bắt buộc hỏi hai thứ tự; tham chiếu cuối vẫn là bản dịch máy, chưa người kiểm toàn bộ.
 - Thư mục `so_cap/` còn các bảng mục `muc_*.parquet` (đầu vào của Judge) và kết quả thô `ket_qua_*.jsonl` của thí điểm.

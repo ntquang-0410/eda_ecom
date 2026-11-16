@@ -7853,3 +7853,8 @@ Chờ lệnh của Nhật Anh: có sửa lại cách tính điểm chính (trọ
 ## Prompt 1010 (16/11/2026)
 **Yêu cầu:** hỏi sao không đưa WALKTHROUGH.md vào commit; hỏi câu "người chạy lần Judge đầy đủ cần nhóm xác nhận" là sao.
 **Trả lời:** (1) Lượt trước em làm theo danh sách push của lượt 969 (không có WALKTHROUGH) nên bỏ ra; nhưng các commit trước (f1ab8ba, b16ecbb, 86bb0d3) đều kèm WALKTHROUGH nên đây là thiếu sót. Đã quét bí mật phần thêm (0) và commit + push WALKTHROUGH (Prompt 998–1010). (2) Giải thích A6: trên máy chỉ có các lần thí điểm Judge (29–31/10) và bản kết quả cuối tải từ HF; KHÔNG có output của lần chạy đầy đủ (hàng chục nghìn lời gọi). Nhật ký ghi em đã soạn `HUONG_DAN_JUDGE.md` và gói dữ liệu để gửi Huy (Prompt 694–697), rồi lượt 698 kết quả đã nằm trên HF; nhưng không dòng nào ghi rõ ai bấm chạy. Báo cáo cần ghi đúng ai làm phần nào, nên chờ Nhật Anh xác nhận rồi sửa câu trong A6.
+---
+
+## Prompt 1011 (16/11/2026)
+**Yêu cầu:** Nhật Anh xác nhận: Huy chạy lần Judge đầy đủ.
+**Đã làm:** sửa A6 (cột tài khoản/người chạy + ghi chú "Phân công": Nhật Anh thiết kế, viết mã, thí điểm, soạn HUONG_DAN_JUDGE + gói dữ liệu; Huy chạy lần đầy đủ và đưa lên HF, xác nhận 16/11). Sửa `TONG_HOP` mục 2.3: thêm dòng phân công; sửa câu "có tầng 2" thành "thiết kế có tầng 2 nhưng lần chạy đầy đủ không dùng" (file đánh dấu: judge tầng 2 = 0). Sinh lại bộ (36 phiên, 0 lỗi, 0 link hỏng), cập nhật mục 15. Commit + push.
