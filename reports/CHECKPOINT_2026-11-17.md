@@ -92,3 +92,14 @@ uv pip install --python /content/cometgpu/bin/python 'numpy<2' pandas 'pyarrow==
 1. `pip uninstall -y torchao` trước khi import peft (torchao 0.10 không tương thích peft 0.21).
 2. `setuptools<81` cho `pkg_resources` mà torchmetrics cần.
 3. `tools/score_comet_local.py` phải là bản có regex `seed(\d+)` (đã commit trong repo) — bản cũ chỉ đọc `*_seed42.parquet`.
+
+## 6. Đã lưu ở đâu (kiểm tra 10:55 UTC)
+
+| Nơi lưu | Nội dung |
+|---|---|
+| Git `ntquang-0410/eda_ecom` | commit `56fb6bb` (checkpoint) + `2beb744` (infer_resume) — đã push `main` |
+| HF `ntquang0410/tiki-4model-eval` | 52 file: `data/weight/matrix_5x2/hyps/` (15 hyp), `reports/2026-11-17/scores/` (30 score), `reports/2026-11-17/*.md`, `reports/2026-11-17/tools/*.py` |
+| Kaggle datasets | `nguynthanhquang/tiki-matrix-data`, `.../tiki-matrix-controls`, `.../qwen4b-a-s123-adapter`, `anhtamxinhdep/...`, `nadsa091/...` |
+| Kaggle kernels | `nadsa091/tiki-m4b-abal`, `nadsa091/tiki-m4b-bnat`, `anhtamxinhdep/tiki-m4b-b-s123`, `anhtamxinhdep/tiki-m4b-a-s123` (adapter), `nguynthanhquang/tiki-nllb-b-infer` |
+
+GPU đã được giải phóng (0 MiB, 0% util), không còn tiến trình inference/scoring/watcher chạy.
