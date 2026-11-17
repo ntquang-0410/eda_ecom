@@ -1,0 +1,77 @@
+# Control cells — 2×2 quota×field, seed 123 và NLLB
+
+**Cập nhật:** 2026-11-17 10:10 UTC  
+**Eval:** `eval_F_v2_common` — 831 dòng (1688: 231, Tiki: 600)  
+**Chấm:** COMET-da `Unbabel/wmt22-comet-da` (1688), COMET-QE `Unbabel/wmt20-comet-qe-da` (Tiki), batch 8–16 trên A100 40GB.
+
+---
+
+## 1. Ma trận 2×2 Qwen3-4B (seed 42)
+
+Hai biến được tách riêng: **tập field** (A = title+attribute, B = title+description) và **cách lấy mẫu** (natural = giữ phân bố gốc, balanced = 25% token mỗi nhóm).
+
+| Cell | Field | Sampling | COMET 1688 | COMET-QE Tiki |
+|---|---|---|---:|---:|
+| `qwen4b_a` | A | natural | **0,8584** | **0,0573** |
+| `qwen4b_a_balanced` | A | balanced | 0,8477 | 0,0524 |
+| `qwen4b_b` | B | balanced | 0,8471 | 0,0461 |
+| `qwen4b_b_natural` | B | natural | 0,8436 | 0,0471 |
+
+Paired bootstrap 2.000 lần, baseline `qwen4b_a`:
+
+| Cell | Δ 1688 | Δ Tiki |
+|---|---:|---:|
+| A-balanced | −0,0107 [−0,0202; −0,0019]* | −0,0049 [−0,0200; +0,0104] |
+| B-balanced | −0,0113 [−0,0217; −0,0014]* | −0,0112 [−0,0262; +0,0046] |
+| B-natural | −0,0148 [−0,0271; −0,0027]* | −0,0102 [−0,0265; +0,0059] |
+
+### Đọc kết quả
+
+1. **A-natural tốt nhất**, hơn 3 cell còn lại 0,011–0,015 COMET trên 1688 (đều có ý nghĩa thống kê).
+2. **Quota balanced không tạo lợi thế:** trên A nó làm giảm 0,0107 (có ý nghĩa); trên B nó chỉ nhỉnh hơn natural +0,0035 (không ý nghĩa).
+3. **Hiệu ứng field nhỏ hơn hiệu ứng sampling:** B-natural (0,8436) ≈ A-balanced (0,8477) — chênh 0,004. Trước đây khi chỉ so A-natural với B-balanced, ta thấy khoảng cách 0,011 và dễ quy cho "B thiếu attribute"; thực tế phần lớn khoảng cách đến từ việc **đổi sang balanced**.
+4. Trên Tiki QE, mọi khác biệt đều **không có ý nghĩa** (CI chứa 0) — QE không phân biệt được 4 cell này.
+
+> Hệ quả cho báo cáo: không được viết "B-balanced tốt hơn/tệ hơn A-natural vì field mix" khi chưa tách quota. Với Qwen3-4B, **A-natural là cấu hình nên dùng**.
+
+## 2. NLLB-200-distilled-600M (control pretrained NMT)
+
+Cùng quota 4M token, cùng `eval_F_v2_common`, LoRA r16.
+
+| Cell | COMET 1688 | COMET-QE Tiki | n 1688 | n Tiki |
+|---|---:|---:|---:|---:|
+| NLLB A | 0,6344 | −0,5379 | 231 | 600 |
+| NLLB B | 0,5517 | −0,6753 | 230 | 597 |
+| OpenNMT A (from-scratch) | 0,3488 | −1,4177 | 231 | 600 |
+| OpenNMT B-natural | 0,3387 | −1,4074 | 231 | 600 |
+
+**Đọc:** NLLB pretrained 600M **hơn OpenNMT from-scratch 37M rất xa** (+0,29/+0,21 trên 1688), xác nhận kết luận trong `OPENNMT_FAIRNESS.md`: vấn đề của OpenNMT là **pretraining + capacity + recipe**, không phải "paradigm NMT". Tuy vậy NLLB vẫn kém Qwen3-4B ~0,22 COMET trên 1688 và QE âm trên Tiki — pretrained NMT cỡ 600M không thay thế được LLM trong thiết lập này.
+
+## 3. Seed 42 vs 123 (Qwen3-4B)
+
+| Cell | Seed 42 | Seed 123 | Δ (123−42) |
+|---|---:|---:|---:|
+| B-balanced 1688 | 0,8471 | 0,8479 | +0,0008 [−0,0030; +0,0048] |
+| B-balanced Tiki QE | 0,0461 | 0,0517 | +0,0056 [−0,0054; +0,0171] |
+| A-natural 1688 | 0,8584 | *đang inference trên A100* | — |
+| A-natural Tiki QE | 0,0573 | *đang inference* | — |
+
+**Đọc:** với B-balanced, đổi seed 42 → 123 làm điểm đổi **+0,0008** trên 1688 và +0,0056 trên Tiki, cả hai **không có ý nghĩa** (CI chứa 0). Nghĩa là dao động do seed nhỏ hơn nhiều so với khoảng cách giữa các cấu hình (0,011–0,015) và giữa các model (0,03–0,5). Kết luận xếp hạng trong ma trận không phải nhiễu seed, nhưng vẫn chỉ có 2 seed nên CI tổng hợp cần ghi rõ là "seed variance ước lượng từ 1 cặp".
+
+Ghi chú vận hành: `a-s123` train xong 500 step nhưng bị cắt ở inference do trần 12h của Kaggle; adapter đã lưu và đang được chạy inference-only trên A100 (batch 1 cho description, ~34 giây/dòng, ETA ~12:30 UTC).
+
+## 4. Trạng thái artefact
+
+| File | Nội dung |
+|---|---|
+| `.artifacts/hyp/hyp_qwen4b_a_balanced_seed42.parquet` | A-balanced, 1.500 dòng, 15 rỗng |
+| `.artifacts/hyp/hyp_qwen4b_b_natural_seed42.parquet` | B-natural, 1.500 dòng, 15 rỗng |
+| `.artifacts/hyp/hyp_qwen4b_b_balanced_seed123.parquet` | B-balanced seed 123, 1.500 dòng, 15 rỗng (đã chấm: 0,8479 / 0,0517) |
+| `.artifacts/hyp/hyp_nllb_a_seed42.parquet` / `hyp_nllb_b_seed42.parquet` | NLLB A/B, 1.500 dòng (2 / 9 rỗng) |
+| `.artifacts/comet_gpu/scores/` | Điểm COMET 5 cell mới + 10 cell cũ (v2_common) |
+
+## 5. Việc còn lại
+
+1. Inference `a-s123` xong → chấm COMET → điền bảng seed 42 vs 123.
+2. Cập nhật `MATRIX_5X2_EVAL_F_V2.md` §9 với kết luận 2×2 (A-natural là cấu hình chính).
+3. Bổ sung NLLB vào `OPENNMT_FAIRNESS.md` §6.
