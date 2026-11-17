@@ -59,6 +59,9 @@ def main() -> int:
     ap.add_argument("--max-seq", type=int, default=960)
     ap.add_argument("--batch-long", type=int, default=4)
     ap.add_argument("--batch-short", type=int, default=16)
+    ap.add_argument("--padding-side", default="right",
+                    choices=["right", "left"],
+                    help="right = giống protocol train (padding='max_length'); left = nhanh/chuẩn cho decoder-only")
     args = ap.parse_args()
 
     state = Path(args.state)
@@ -70,7 +73,7 @@ def main() -> int:
 
     tok = AutoTokenizer.from_pretrained(args.model, trust_remote_code=True)
     tok.pad_token = tok.eos_token
-    tok.padding_side = "left"
+    tok.padding_side = args.padding_side
     base = AutoModelForCausalLM.from_pretrained(args.model, dtype=torch.float16,
                                                 low_cpu_mem_usage=True, trust_remote_code=True)
     model = PeftModel.from_pretrained(base, args.adapter).to("cuda").eval()
