@@ -1,0 +1,24 @@
+{
+  "id": "nadsa091/tiki-m4b-abal",
+  "title": "Tiki M4b Abal",
+  "code_file": "tiki-m4b-abal.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "metric/gemma-4-developer-agent-wheelhouse",
+    "nadsa091/tiki-matrix-controls",
+    "nadsa091/tiki-matrix-data"
+  ],
+  "competition_sources": [
+    "gemma-4-developer-agent"
+  ],
+  "kernel_sources": [],
+  "model_sources": [
+    "qwen-lm/qwen-3/Transformers/4b/1"
+  ],
+  "machine_shape": "NvidiaL4"
+}
