@@ -140,3 +140,41 @@ Bucket: short <80 ký tự; medium 80–300; long >300.
 - **Số liệu chính thức:** `eval_F_v2_common` (831 dòng) — dùng cho mọi so sánh model/recipe.
 - **Số liệu phụ:** `eval_F` gốc (1.500) chỉ để đối chiếu với các báo cáo trước; mọi chênh lệch >0,018 phải kiểm tra lại.
 - **Không** dùng `eval_F` gốc để tuyên bố "B giúp description" mà không kèm bảng v2; mặc dù kết luận định tính vẫn giữ, mức chênh thay đổi.
+
+## 10. Control bổ sung (2×2, seed 123, NLLB)
+
+Chi tiết: [`CONTROLS_2X2.md`](CONTROLS_2X2.md).
+
+### 10.1. Qwen3-4B — tách quota khỏi field mix (seed 42, eval_F_v2_common)
+
+| Cell | Field | Sampling | 1688 da | Tiki QE |
+|---|---|---|---:|---:|
+| `qwen4b_a` | A | natural | **0,8584** | **0,0573** |
+| `qwen4b_a_balanced` | A | balanced | 0,8477 | 0,0524 |
+| `qwen4b_b` | B | balanced | 0,8471 | 0,0461 |
+| `qwen4b_b_natural` | B | natural | 0,8436 | 0,0471 |
+
+- A-natural hơn 3 cell còn lại 0,011–0,015 trên 1688 (CI 95% không chứa 0).
+- Quota balanced **giảm** A 0,0107 (có ý nghĩa), **không cải thiện** B (+0,0035, không ý nghĩa).
+- Khác biệt field (A vs B) nhỏ hơn khác biệt sampling: B-natural ≈ A-balanced.
+- Trên Tiki QE mọi khác biệt giữa 4 cell đều không ý nghĩa.
+
+### 10.2. Seed 42 vs 123
+
+| Cell | Seed 42 | Seed 123 | Δ |
+|---|---:|---:|---:|
+| B-balanced 1688 | 0,8471 | 0,8479 | +0,0008 [−0,0030; +0,0048] |
+| B-balanced Tiki QE | 0,0461 | 0,0517 | +0,0056 [−0,0054; +0,0171] |
+
+Dao động seed < 0,006 → nhỏ hơn khoảng cách giữa các cấu hình/model.
+
+### 10.3. NLLB-200-distilled-600M (pretrained NMT control)
+
+| Cell | 1688 da | Tiki QE |
+|---|---:|---:|
+| NLLB A | 0,6344 | −0,5379 |
+| NLLB B | 0,5517 | −0,6753 |
+| OpenNMT from-scratch A | 0,3488 | −1,4177 |
+| OpenNMT from-scratch B-natural | 0,3387 | −1,4074 |
+
+NLLB hơn OpenNMT from-scratch ~0,29/0,21 nhưng vẫn kém Qwen3-4B ~0,22 trên 1688 → kết luận "OpenNMT yếu do pretraining/capacity/recipe" được xác nhận, không phải "paradigm NMT".
