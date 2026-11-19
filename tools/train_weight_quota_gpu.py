@@ -51,9 +51,14 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
             local_files_only=True, low_cpu_mem_usage=True)
     base.gradient_checkpointing_enable()
     base.enable_input_require_grads()
-    model = get_peft_model(
-        base, LoraConfig(r=16, lora_alpha=32, lora_dropout=0.05, bias="none",
-                         task_type="CAUSAL_LM", target_modules="all-linear"))
+    if args.init_adapter:
+        from peft import PeftModel
+        model = PeftModel.from_pretrained(base, args.init_adapter, is_trainable=True)
+        log(f"warm-start từ {args.init_adapter}")
+    else:
+        model = get_peft_model(
+            base, LoraConfig(r=16, lora_alpha=32, lora_dropout=0.05, bias="none",
+                             task_type="CAUSAL_LM", target_modules="all-linear"))
     model.to("cuda").train()
     model.config.use_cache = False
     params = [p for p in model.parameters() if p.requires_grad]
@@ -68,6 +73,8 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
     autocast = torch.float16 if use_fp16 else torch.bfloat16
     started = time.time()
     for step, idxs in enumerate(plan):
+        if step < args.start_step:
+            continue
         optimizer.zero_grad(set_to_none=True)
         step_tokens = sum(float(train["eff_tokens"].iloc[i]) for i in idxs)
         for start in range(0, len(idxs), args.micro_batch):
@@ -149,6 +156,8 @@ def main() -> int:
     ap.add_argument("--max-seq", type=int, default=960)
     ap.add_argument("--micro-batch", type=int, default=4)
     ap.add_argument("--save-every", type=int, default=100)
+    ap.add_argument("--init-adapter", default="", help="thư mục adapter để warm-start")
+    ap.add_argument("--start-step", type=int, default=0, help="bỏ qua N step đầu của plan")
     ap.add_argument("--lr", type=float, default=1e-4)
     ap.add_argument("--dtype", choices=("bf16", "fp16"), default="bf16")
     args = ap.parse_args()
