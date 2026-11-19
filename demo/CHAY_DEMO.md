@@ -50,6 +50,7 @@ Nếu trang hiện ô ngôn ngữ "VN-English-VND" và tên sản phẩm bằng 
 - Chỉ dịch **tên sản phẩm + bảng thuộc tính** (đúng thứ mô hình đã học). Không dịch ảnh mô tả, đánh giá, tên phân loại SKU, giao diện 1688.
 - Điểm số trong báo cáo đo trên dữ liệu đã làm sạch; trang 1688 thật là dữ liệu ngoài phân phối, chất lượng chỉ là quan sát.
 - Máy chủ chạy một lượt sinh tại một thời điểm, phục vụ một người dùng.
+- Quy mô đã thử: 13 trang 1688 thật, đọc tay 8 trang, không có tham chiếu người, một người dùng, máy chủ trên Kaggle T4 hoặc laptop. Không có số về độ ổn định, tải hay nhiều người dùng.
 - Đường hầm là Cloudflare quick tunnel chạy từ notebook Kaggle: chưa kiểm điều khoản dịch vụ của Kaggle/Cloudflare cho việc này; nếu phiên bị chặn thì dùng cách B hoặc C.
 
 ## Kiểm tra nhanh trước giờ demo

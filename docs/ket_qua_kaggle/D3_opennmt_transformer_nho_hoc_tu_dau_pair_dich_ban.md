@@ -55,7 +55,7 @@ Thời gian phiên cụm: 194 giây (0.05 giờ).
 
 ## Điểm trong bảng năm mô hình (tổng hợp trên máy, `tong_hop_5mh.py`)
 
-Eval fold 0. Pair: 1.198 mẫu (từng dòng); cụm: 1.200 mẫu. chrF corpus; `Chính` = 0,10 × title + 0,90 × mô tả hướng zh→vi; `Macro` = trung bình đều hai hướng. Chênh so với Qwen3-4B (vòng sàng lọc) tính trên chrF câu trung bình, bootstrap theo sản phẩm (2.000 lần, cùng mẫu rút cho mọi mô hình). LLM là trung bình 2 seed.
+Eval fold 0 (tập đã dùng để chọn cấu hình, train = fold 1–4), cấu hình sàng lọc r16, **chưa đo trên test**. Pair: 1.198 mẫu (từng dòng); cụm: 1.200 mẫu. chrF corpus; `Chính` = 0,10 × title + 0,90 × mô tả hướng zh→vi; `Macro` = trung bình đều hai hướng. Chênh so với Qwen3-4B (vòng sàng lọc) tính trên chrF câu trung bình, bootstrap theo sản phẩm (2.000 lần, cùng mẫu rút cho mọi mô hình). LLM là trung bình 2 seed. Số trên fold 0 bị ảnh hưởng bởi việc chọn.
 
 | Bộ | Mô hình | Số lần chạy | zh→vi title | zh→vi mô tả | vi→zh title | vi→zh mô tả | Chính (corpus) | Macro (corpus) | Chính (câu TB) | Chênh chính (câu) so với 4B [95%] | Chênh macro (câu) so với 4B [95%] | Sinh lặp (TB 4 nhóm) | Lệch chính giữa 2 seed |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -75,12 +75,15 @@ SacreBLEU / TER (trung bình các lần chạy; sacrebleu 2.6.0, zh→vi `tok:13
 
 ## Kết luận của phiên
 
-- Pair: hòa với 4B theo chrF câu; cụm: kém rõ. Yếu nhất ở vi→zh (ít dữ liệu hướng này).
+- Pair: hòa Qwen3-4B theo chrF câu trung bình (+0,39 [−1,09; +1,90]) nhưng kém theo chrF corpus chính (74,38 so 79,98) và macro câu (−8,33 [−9,40; −7,26]); cụm kém −5,57 [−6,42; −4,85].
+- Trên **dòng mô tả mới** (P1, eval fold 0), OpenNMT kém Qwen3-4B −8,29 [−15,49; −0,88] (pair zh→vi) và −10,07 [−11,68; −8,30] (cụm zh→vi); trên **dòng khuôn** là +2,12 (pair) và −1,32 (cụm).
+- Kết quả cho thấy độ nhạy theo cấu hình và theo loại dòng, **không** kết luận về paradigm NMT.
 
 ## Ghi chú, giới hạn, sự cố
 
 - Chạy trên T4 vì cần Internet để cài thư viện và torch 2.2.2 không hỗ trợ GPU Blackwell.
 - Bản cụm không huấn luyện riêng: dịch từng mảnh thuộc tính rồi nối.
+- Eval fold 0 là tập đã dùng để chọn cấu hình (B6, tỉ trọng title, 5 mô hình, adapter demo); số trên fold 0 bị ảnh hưởng bởi việc chọn, chưa đo test.
 - Bảng tổng của cả năm mô hình ở phiên D6.
 
 ## File gốc trên máy (sha256, 16 ký tự đầu)

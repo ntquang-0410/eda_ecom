@@ -256,9 +256,14 @@ def tim_mot(mau_ten):
     return ds[0]
 
 
+# Thư mục dữ liệu CUỘC THI Kaggle gắn kèm notebook (không phải dữ liệu của mình). arc-prize: các phiên cũ; gemma-4-developer-agent (18/11/2026): bắt buộc gắn mới chọn được GPU L4 x4.
+# Chỉ bỏ qua đúng hai tên này; mọi tệp test của mình (test_*, do_khoa_*, split.parquet, ds_test.txt) ở nơi khác vẫn bị chặn.
+CUOC_THI_BO_QUA = ("arc-prize", "gemma-4-developer-agent")
+
+
 def kiem_khoa_test():
     la = [str(p) for p in VAO.rglob("*") if p.is_file() and ("test_" in p.name or p.name.startswith("do_khoa_") or p.name in {"split.parquet", "ds_test.txt"})
-          and "site-packages" not in str(p) and "arc-prize" not in str(p)]
+          and "site-packages" not in str(p) and not any(c in str(p) for c in CUOC_THI_BO_QUA)]
     if la:
         raise RuntimeError(f"CO_FILE_TEST_TRONG_INPUT:{la[:5]}")
 
@@ -266,7 +271,7 @@ def kiem_khoa_test():
 def kiem_khoa_test_do():
     """Chế độ đo test (Nhật Anh duyệt 07/11/2026): được phép có file do_khoa_*.jsonl*; mọi file 'test_*' khác, split.parquet, ds_test.txt vẫn là lỗi.
     Phải có ít nhất một file do_khoa_*. Việc không rò sang pool kiểm riêng bằng kiem_ro_ri_test."""
-    la = [p for p in VAO.rglob("*") if p.is_file() and "site-packages" not in str(p) and "arc-prize" not in str(p)]
+    la = [p for p in VAO.rglob("*") if p.is_file() and "site-packages" not in str(p) and not any(c in str(p) for c in CUOC_THI_BO_QUA)]
     cam = [str(p) for p in la if p.name in {"split.parquet", "ds_test.txt"} or ("test_" in p.name and not p.name.startswith("do_khoa_"))]
     if cam:
         raise RuntimeError(f"CO_FILE_TEST_LA_TRONG_INPUT:{cam[:5]}")
@@ -770,10 +775,19 @@ def chay_b78(cfg, bc):
         d, moi_nhat = thu_ra / ten, thu_ra / ten / "moi_nhat"
         d.mkdir(exist_ok=True)
         torch.manual_seed(cfg["seed"])
+        tam_ck = d / "moi_nhat_tam"
+        if not (moi_nhat / "opt.pt").exists() and (tam_ck / "opt.pt").exists():      # bảo vệ checkpoint (cfg bao_ve): chết đúng lúc đổi tên, bản tạm đã đủ tệp (opt.pt ghi sau cùng)
+            shutil.rmtree(moi_nhat, ignore_errors=True)
+            tam_ck.rename(moi_nhat)
         if v["buoc"] > 0 and not (moi_nhat / "opt.pt").exists():     # đã chạy dở mà mất checkpoint: dừng, không âm thầm tạo LoRA mới rồi chạy tiếp từ giữa
             raise RuntimeError(f"MAT_CHECKPOINT:{ten}:buoc={v['buoc']}")
         if (moi_nhat / "opt.pt").exists():
             m = PeftModel.from_pretrained(goc, str(moi_nhat), is_trainable=True)
+            td = moi_nhat / "tien_do.json"
+            if td.exists():          # tiến độ ghi CÙNG checkpoint: trạng thái có thể lệch (đã ghi sau hoặc trước) nên lấy theo checkpoint
+                t_d = json.loads(td.read_text(encoding="utf-8"))
+                v["buoc"], v["vi_tri_lo"], v["epoch_xong"] = t_d["buoc"], t_d["vi_tri_lo"], t_d["epoch_xong"]
+                print("chay tiep tu checkpoint:", ten, t_d, flush=True)
         else:
             m = get_peft_model(goc, LoraConfig(r=c["rank"], lora_alpha=2 * c["rank"], lora_dropout=0.05, target_modules="all-linear", task_type="CAUSAL_LM"))
         if cfg.get("gc"):       # mô hình lớn (Qwen3-8B): không bật thì lô 4096 token tràn bộ nhớ; 4B giữ nguyên (cfg không có "gc")
@@ -786,12 +800,25 @@ def chay_b78(cfg, bc):
         v["so_tham_so"] = sum(p.numel() for p in tham_so)
 
         def luu():
+            if cfg.get("bao_ve"):
+                # Ghi vào thư mục tạm rồi mới thay bản cũ: chết giữa chừng vẫn còn một bản đủ tệp. opt.pt ghi sau cùng (qua tệp tạm) nên có opt.pt tức là bản đủ.
+                shutil.rmtree(tam_ck, ignore_errors=True)
+                m.save_pretrained(str(tam_ck))
+                (tam_ck / "tien_do.json").write_text(json.dumps({"buoc": v["buoc"], "vi_tri_lo": v["vi_tri_lo"], "epoch_xong": v["epoch_xong"]}), encoding="utf-8")
+                torch.save(opt.state_dict(), tam_ck / "opt.pt.tmp")
+                (tam_ck / "opt.pt.tmp").replace(tam_ck / "opt.pt")
+                shutil.rmtree(moi_nhat, ignore_errors=True)
+                tam_ck.rename(moi_nhat)
+                ghi()
+                return
             if moi_nhat.exists():
                 shutil.rmtree(moi_nhat)
             m.save_pretrained(str(moi_nhat))
             torch.save(opt.state_dict(), moi_nhat / "opt.pt")
             ghi()
 
+        if cfg.get("bao_ve") and v["epoch_xong"] >= SO_EPOCH_B6 and not (d / f"ep{SO_EPOCH_B6}").exists():      # checkpoint cuối epoch 2 có mà bản ep2 chưa kịp ghi
+            m.save_pretrained(str(d / f"ep{SO_EPOCH_B6}"))
         m.train()
         for e in range(v["epoch_xong"], SO_EPOCH_B6):
             ds_buoc = buoc_theo_epoch[e]
@@ -845,8 +872,26 @@ def chay_b78(cfg, bc):
                     luu()
                     print("DUNG, da luu", ten, "epoch", e + 1, "vi tri lo", i, flush=True)
                     raise DungHetGio(ten)
+                if cfg.get("bao_ve") and cfg.get("luu_moi_buoc") and v["buoc"] % cfg["luu_moi_buoc"] == 0 and i < len(ds_buoc):
+                    t_luu = time.time()
+                    luu()
+                    print(ten, "da luu checkpoint dinh ky buoc", v["buoc"], "mat", round(time.time() - t_luu, 1), "giay", flush=True)
             v["token_moi_giay"][str(e + 1)] = round(tok_do / max(time.time() - t0, 1e-6), 1)
-            ln, dm = loss_nhom(m, tok, kiem, thiet_bi)
+            if cfg.get("bao_ve"):
+                # Lưu NGAY khi hết epoch, TRƯỚC bước đo loss: lỗi ở bước đo (từng xảy ra 18/11/2026, mất 5,6 giờ) không còn làm mất huấn luyện.
+                v["epoch_xong"], v["vi_tri_lo"] = e + 1, 0
+                luu()
+                if e + 1 == SO_EPOCH_B6:
+                    m.save_pretrained(str(d / f"ep{e + 1}"))
+                try:
+                    ln, dm = loss_nhom(m, tok, kiem, thiet_bi)
+                except Exception:       # chỉ là số đo phụ: ghi lỗi, KHÔNG bỏ huấn luyện đã xong; nhớ bỏ cache bộ nhớ
+                    v.setdefault("loi_loss_nhom", {})[str(e + 1)] = traceback.format_exc()[-1500:]
+                    print("LOI loss_nhom (bo qua, huan luyen da luu):", v["loi_loss_nhom"][str(e + 1)], flush=True)
+                    torch.cuda.empty_cache()
+                    ln, dm = {}, None
+            else:
+                ln, dm = loss_nhom(m, tok, kiem, thiet_bi)
             m.train()
             v["loss"][str(e + 1)], v["diem"][str(e + 1)] = ln, dm
             v["epoch_xong"], v["vi_tri_lo"] = e + 1, 0
@@ -856,7 +901,7 @@ def chay_b78(cfg, bc):
                 shutil.rmtree(moi_nhat, ignore_errors=True)    # xong việc thì bỏ, mỗi bản kèm opt.pt ~1,6 GB
             else:
                 luu()
-            print(ten, "XONG epoch", e + 1, "diem loss", round(dm, 5), ln, "token/giay", v["token_moi_giay"][str(e + 1)], "gio da chay", round((time.time() - t_bat_dau) / 3600, 2), flush=True)
+            print(ten, "XONG epoch", e + 1, "diem loss", None if dm is None else round(dm, 5), ln, "token/giay", v["token_moi_giay"][str(e + 1)], "gio da chay", round((time.time() - t_bat_dau) / 3600, 2), flush=True)
         goc = m.unload()
         del m, opt
         torch.cuda.empty_cache()
@@ -875,11 +920,20 @@ def chay_b78(cfg, bc):
             for x in ca_fold:
                 theo.setdefault(f"{x['huong']}|{x['loai']}|{x['category']}", []).append(x)
             t = time.time()
-            tung = {k: loss_tong(m, tok, a, 32, thiet_bi) for k, a in sorted(theo.items())}
-            nhom, dm = gop_loss(tung)
-            v["loss_ca_fold"] = {"so_mau": len(ca_fold), "diem_macro": dm, "theo_nhom": nhom, "theo_category": {k: {"loss": a / max(n, 1), "so_token": n} for k, (a, n) in tung.items()}}
-            ghi()
-            print(ten, "loss ca fold", round(dm, 5), nhom, "so mau", len(ca_fold), "giay", round(time.time() - t), flush=True)
+            try:
+                tung = {k: loss_tong(m, tok, a, 32, thiet_bi) for k, a in sorted(theo.items())}
+                nhom, dm = gop_loss(tung)
+                v["loss_ca_fold"] = {"so_mau": len(ca_fold), "diem_macro": dm, "theo_nhom": nhom, "theo_category": {k: {"loss": a / max(n, 1), "so_token": n} for k, (a, n) in tung.items()}}
+                ghi()
+                print(ten, "loss ca fold", round(dm, 5), nhom, "so mau", len(ca_fold), "giay", round(time.time() - t), flush=True)
+            except Exception:
+                if not cfg.get("bao_ve"):
+                    raise
+                # số đo phụ: lỗi thì ghi lại và đi tiếp sang sinh và chấm chrF (kết quả chính), không dừng cả việc
+                v["loss_ca_fold"] = {"so_mau": len(ca_fold), "loi": traceback.format_exc()[-1500:]}
+                ghi()
+                print("LOI loss ca fold (bo qua):", v["loss_ca_fold"]["loi"], flush=True)
+                torch.cuda.empty_cache()
         if not v.get("cham"):
             kiem_gio(ten)
             mau, thieu = lay_mau_sinh(nhanh, fold)

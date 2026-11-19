@@ -22,7 +22,7 @@ Chấm chung bản dịch của C4 (Qwen3-4B) và D1–D5 bằng một bộ ch�
 
 ## Bảng năm mô hình
 
-Eval fold 0. Pair: 1.198 mẫu (từng dòng); cụm: 1.200 mẫu. chrF corpus; `Chính` = 0,10 × title + 0,90 × mô tả hướng zh→vi; `Macro` = trung bình đều hai hướng. Chênh so với Qwen3-4B (vòng sàng lọc) tính trên chrF câu trung bình, bootstrap theo sản phẩm (2.000 lần, cùng mẫu rút cho mọi mô hình). LLM là trung bình 2 seed.
+Eval fold 0 (tập đã dùng để chọn cấu hình, train = fold 1–4), cấu hình sàng lọc r16, **chưa đo trên test**. Pair: 1.198 mẫu (từng dòng); cụm: 1.200 mẫu. chrF corpus; `Chính` = 0,10 × title + 0,90 × mô tả hướng zh→vi; `Macro` = trung bình đều hai hướng. Chênh so với Qwen3-4B (vòng sàng lọc) tính trên chrF câu trung bình, bootstrap theo sản phẩm (2.000 lần, cùng mẫu rút cho mọi mô hình). LLM là trung bình 2 seed. Số trên fold 0 bị ảnh hưởng bởi việc chọn.
 
 | Bộ | Mô hình | Số lần chạy | zh→vi title | zh→vi mô tả | vi→zh title | vi→zh mô tả | Chính (corpus) | Macro (corpus) | Chính (câu TB) | Chênh chính (câu) so với 4B [95%] | Chênh macro (câu) so với 4B [95%] | Sinh lặp (TB 4 nhóm) | Lệch chính giữa 2 seed |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -64,12 +64,13 @@ SacreBLEU / TER (trung bình các lần chạy; sacrebleu 2.6.0, zh→vi `tok:13
 
 - Cụm: Qwen3-8B hơn 4B rõ; 4B hơn Moses; EcomGPT và OpenNMT kém xa.
 - Pair: 4B, 8B, OpenNMT, Moses khớp 4M token nằm trong khoảng nhiễu; Moses học đủ nhỉnh hơn.
+- Trên **dòng mô tả mới** (P1): 8B hơn 4B ở cụm +1,83 zh→vi và +2,54 vi→zh, hòa ở pair; OpenNMT kém −8,29 (pair zh→vi) / −10,07 (cụm zh→vi); Moses học đủ −2,50 / −3,68.
 - Nhận xét đầy đủ: `docs/KE_HOACH_VA_KET_QUA_NAM_MO_HINH.md`; khoảng tin cậy SacreBLEU/TER: `tong_hop_5mh*/bang_metric_bai_bao.md` (số chép ở `docs/TONG_HOP_KET_QUA_NHAT_ANH.md` mục 6).
 
 ## Ghi chú, giới hạn, sự cố
 
 - Dòng `Qwen3-4B cong thuc cuoi` đến từ phiên E3: khác lời dẫn và cách dịch nên không xếp hạng chung với năm dòng còn lại.
-- Năm mô hình chưa đo trên tập test khóa.
+- Năm mô hình chưa đo trên tập test khóa; eval fold 0 là tập đã dùng để chọn cấu hình.
 
 ## File gốc trên máy (sha256, 16 ký tự đầu)
 

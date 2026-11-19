@@ -272,7 +272,7 @@ def r_cuoi():
 
 def dong_quota(v):
     rl = v.get("realized") or {}
-    # bản cũ (v47/v48) ghi mỗi nhóm dạng {"e_share", "t_share", "n"}; dùng e_share như bảng docs/BANG_KET_QUA_CUOI.md
+    # bản cũ (v47/v48) ghi mỗi nhóm dạng {"e_share", "t_share", "n"}; dùng e_share như bảng docs/archive/BANG_KET_QUA_CUOI_09-11_DA_THAY.md
     ty = lambda k: (rl.get(k) or {}).get("e_share") if isinstance(rl.get(k), dict) else (rl.get(k) or 0)  # noqa: E731
     p_title = (ty("1688_title") or 0) + (ty("tiki_title") or 0) if rl else None
     nh = lambda k: lay(v, "theo_nhom", k, "chrf_corpus")  # noqa: E731
@@ -347,8 +347,8 @@ def r_c0():
 
 def r_5mh(ten_mh, tieu_de="## Điểm trong bảng năm mô hình (tổng hợp trên máy, `tong_hop_5mh.py`)"):
     ra = [tieu_de, "",
-          "Eval fold 0. Pair: 1.198 mẫu (từng dòng); cụm: 1.200 mẫu. chrF corpus; `Chính` = 0,10 × title + 0,90 × mô tả hướng zh→vi; `Macro` = trung bình đều hai hướng. "
-          "Chênh so với Qwen3-4B (vòng sàng lọc) tính trên chrF câu trung bình, bootstrap theo sản phẩm (2.000 lần, cùng mẫu rút cho mọi mô hình). LLM là trung bình 2 seed.", ""]
+          "Eval fold 0 (tập đã dùng để chọn cấu hình, train = fold 1–4), cấu hình sàng lọc r16, **chưa đo trên test**. Pair: 1.198 mẫu (từng dòng); cụm: 1.200 mẫu. chrF corpus; `Chính` = 0,10 × title + 0,90 × mô tả hướng zh→vi; `Macro` = trung bình đều hai hướng. "
+          "Chênh so với Qwen3-4B (vòng sàng lọc) tính trên chrF câu trung bình, bootstrap theo sản phẩm (2.000 lần, cùng mẫu rút cho mọi mô hình). LLM là trung bình 2 seed. Số trên fold 0 bị ảnh hưởng bởi việc chọn.", ""]
     dong, dong_b = [], []
     for tap in ("pair", "cum"):
         kq = doc("ft_run/tong_hop_5mh/ket_qua.json" if tap == "pair" else "ft_run/tong_hop_5mh_cum/ket_qua.json") or {}
@@ -591,7 +591,8 @@ def r_chia_tap():
     ra += ["Phân tầng theo hướng × nhóm hàng:", ""] + bang(["Hướng", "Nhóm hàng", "Tổng", "Test", "Tỉ lệ test", "Fold 0", "Fold 1", "Fold 2", "Fold 3", "Fold 4"],
                                                            [(b["huong"], b["category"], f(b["tong"]), f(b["test"]), pt(b["ti_le_test"], 1), *(f(b[f"fold{i}"]) for i in range(5))) for b in c.get("bang_tang", [])]) + [""]
     r = doc("ft_run/bao_cao_ro_ri.json") or {}
-    ra += ["## 3. Kiểm rò rỉ (`ft_run/bao_cao_ro_ri.json`)", "", f"Kết luận trong file: **{r.get('ket_luan')}**. Title trùng chính xác giữa test và pool: {jtxt(r.get('trung_title_chinh_xac'))}.", ""]
+    ra += ["## 3. Kiểm rò rỉ (`ft_run/bao_cao_ro_ri.json`)", "", f"Kết luận trong file: **{r.get('ket_luan')}**. Title trùng chính xác giữa test và pool: {jtxt(r.get('trung_title_chinh_xac'))}.", "",
+           f"Ở **cấp sản phẩm**, không có sản phẩm gần-trùng giữa test và pool theo ngưỡng Jaccard. Nhưng ở **cấp dòng**, {pt(r.get('thong_tin_dong_mo_ta_test_da_co_trong_pool'), 1).replace('.', ',')} dòng mô tả của test đã có nguyên văn trong pool. Vì vậy test là held-out theo sản phẩm, **không** phải held-out cho từng dòng mô tả; điểm mô tả toàn phần chủ yếu đo khả năng tái tạo thuộc tính khuôn mẫu.", ""]
     ra += bang(["So", "Góc nhìn", "Ngưỡng", "Số truy vấn", "Số vi phạm"], [("test với pool", x.get("goc_nhin"), f(x.get("nguong")), f(x.get("so_truy_van")), f(x.get("so_vi_pham"))) for x in r.get("test_vs_pool", [])])
     fv = r.get("fold_vs_cac_fold_khac", [])
     ra += ["", f"Fold với các fold khác: {len(fv)} phép so, tổng số vi phạm {sum(x.get('so_vi_pham', 0) for x in fv)}.",
@@ -698,7 +699,9 @@ PHIEN = [
          thu_muc=["ft_run"], tep_chinh=["ft_run/DU_LIEU_DONG_BANG.json", "ft_run/bao_cao_chia_tap.json", "ft_run/bao_cao_ro_ri.json", "ft_run/loc_title/bao_cao.json"],
          muc_dich="Đóng băng bản dữ liệu sau Judge, chia một phép chia dùng chung cho cả hai bộ: gom sản phẩm gần-trùng (title, mô tả) vào cùng nhóm để không rơi vào hai phía, khóa 10% làm test, pool còn lại chia 5 fold phân tầng theo hướng × nhóm hàng; kiểm rò rỉ; gắn cờ title nghi lỗi bằng luật.",
          render=r_chia_tap,
-         ket_luan=["Không rò rỉ theo ngưỡng đã đặt (0 vi phạm test với pool và giữa các fold).", "Cờ title bắt được phần lớn title lỗi trên mẫu chấm tay nhưng cũng gắn cờ nhiều title không lỗi; Nhật Anh chọn loại mẫu title bị cờ ở bản cuối (B9), giữ mẫu mô tả."],
+         ket_luan=["Không rò rỉ ở **cấp sản phẩm** theo ngưỡng Jaccard đã đặt (0 vi phạm test với pool và giữa các fold).",
+                   "Ở **cấp dòng**, 85,0% dòng mô tả của test đã có nguyên văn trong pool; test là held-out theo sản phẩm, **không** phải held-out cho từng dòng mô tả. Điểm mô tả toàn phần chủ yếu đo tái tạo thuộc tính khuôn mẫu.",
+                   "Cờ title bắt được phần lớn title lỗi trên mẫu chấm tay nhưng cũng gắn cờ nhiều title không lỗi; Nhật Anh chọn loại mẫu title bị cờ ở bản cuối (B9), giữ mẫu mô tả."],
          ghi_chu=["Tên script ghi theo chức năng; mã nằm trong `scripts/ft_train/`.", "Dòng mô tả của test phần lớn đã có nguyên văn trong pool vì thuộc tính lặp theo khuôn; vì vậy điểm mô tả cao không đồng nghĩa mô hình dịch tốt câu mới, các phiên B có chỉ số \"dòng mới\" riêng.",
                   "Thư mục `ft_run/test_khoa/` chứa tập test; không mở khi viết tài liệu này."]),
     # ---- B. fine-tune 4B
@@ -740,7 +743,7 @@ PHIEN = [
          thu_muc=["ft_run/kaggle_do_test"], bao_cao=["ft_run/kaggle_do_test/phien_1_20261107_080604/bao_cao_do_test.json"],
          muc_dich="Đo một lần duy nhất adapter fold 0 (`cum_f0_p11`, `pair_f0_p11` của tài khoản 1, kho `ft-qwen3-4b-tl-luu`) so với zero-shot trên toàn bộ tập test khóa; luật thắng đặt trước khi đo.",
          render=r_do_test, ket_luan=["Fine-tune thắng zero-shot ở **mọi nhánh, mọi hướng** (cận dưới xa 0)."],
-         ghi_chu=["Không đổi tỉ lệ, lr hay adapter sau khi thấy số test. Bản cuối (B9) **không** đo lại trên test.", "Chênh lớn một phần vì tham chiếu là bản dịch máy cùng kiểu với dữ liệu huấn luyện."]),
+         ghi_chu=["Không đổi tỉ lệ, lr hay adapter sau khi thấy số test. Bản cuối (B9) **không** đo lại trên test.", "Chênh lớn một phần vì tham chiếu là bản dịch máy cùng kiểu với dữ liệu huấn luyện.", "Bổ sung 18/11 (Bước 0, chỉ đọc tệp tổng hợp của chính lần đo này, không chấm lại): 86 đến 87% dòng mô tả zh→vi (73% vi→zh) của test đã có trong train; trên dòng mô tả **mới** fine-tune vẫn hơn zero-shot khoảng 30 điểm chrF corpus (cụm zh→vi +30,1; pair zh→vi +30,6; pair vi→zh +29,7), chất lượng dòng mới khoảng 76 (không phải 92–94); chưa có khoảng tin cậy. Chi tiết `docs/phan_bien_vong2/KET_QUA_B8_DONG_MOI.md`."]),
     dict(ma="B9", ten="Bản cuối trên toàn pool (cum_cuoi, pair_cuoi)", giai_doan="B. Fine-tune Qwen3-4B (công thức chính)", tai_khoan=TK1, notebook="`trinhnhatanh/nlp-group3` → kho `trinhnhatanh/ft-qwen3-4b-cuoi-luu`", ban="43 (bản 42 là khói)", thoi_gian="07/11/2026",
          thu_muc=["ft_run/kaggle_cuoi", "ft_run/ban_cuoi"], muc_dich="Huấn luyện hai adapter cuối trên toàn pool 23.017 sản phẩm với cấu hình đã chốt; loại mẫu title của 6.386 sản phẩm bị `loc_title.py` gắn cờ, giữ mẫu mô tả.",
          render=r_cuoi, ket_luan=["Hai adapter cuối đã lưu và kiểm hash. Demo dùng `pair_cuoi`."],
@@ -751,7 +754,7 @@ PHIEN = [
          muc_dich="Thử 5 bảng tỉ trọng (title/mô tả × 1688/Tiki) cho mỗi bộ bằng cách điều khiển tần suất lấy mẫu, cùng số bước.",
          render=lambda: r_quota(["ft_run/kaggle_quota_screen/version47/quota_report.json", "ft_run/kaggle_quota_screen/version48/quota_report.json"], GHI_SANG_LOC),
          ket_luan=["**Không dùng để chốt**, đã thay bằng C3, C4: `max_len` 960 làm bỏ nhiều mẫu dài (cột `Mẫu bị bỏ vì dài`), nên % title thực lệch xa % đặt, và mỗi cấu hình thấy số token khác nhau."],
-         ghi_chu=["Bản 47 lỗi ở phần cụm (dòng LỖI ở bảng); phần cụm chạy lại ở bản 48.", "Bảng tổng hợp cũ của vòng này: `docs/BANG_KET_QUA_CUOI.md` (đã bị thay)."]),
+         ghi_chu=["Bản 47 lỗi ở phần cụm (dòng LỖI ở bảng); phần cụm chạy lại ở bản 48.", "Bảng tổng hợp cũ của vòng này: `docs/archive/BANG_KET_QUA_CUOI_09-11_DA_THAY.md` (đã bị thay)."]),
     dict(ma="C2", ten="C0: adapter chính thức chấm trên eval của vòng sàng lọc", giai_doan="C. Khảo sát tỉ trọng bằng lấy mẫu quota (vòng sàng lọc)", tai_khoan=TK1, notebook="`trinhnhatanh/nlp-group3`", ban="50 (cụm), 51 (pair)", thoi_gian="09/11/2026",
          thu_muc=["ft_run/kaggle_c0"], bao_cao=["ft_run/kaggle_c0/c0_report_v50_cum.json", "ft_run/kaggle_c0/c0_report_v51_pair.json"],
          muc_dich="Chấm `cum_f0_p11`, `pair_f0_p11` (tài khoản 1, công thức chính: rank 64, 2 epoch) trên đúng eval fold 0 của khảo sát quota để đặt hai cách cạnh nhau.",
@@ -766,7 +769,7 @@ PHIEN = [
          thu_muc=["ft_run/kaggle_quota_step1"], bao_cao=["ft_run/kaggle_quota_step1/quota_report.json"],
          muc_dich="Chốt bảng tỉ trọng: natural, balanced, title_heavy (cụm) và natural, balanced, attr_heavy (pair), seed 42 và 123, cùng ngân sách token.",
          render=lambda: r_quota(["ft_run/kaggle_quota_step1/quota_report.json"], GHI_SANG_LOC),
-         ket_luan=["**natural** (title ~11%) cao nhất ở điểm Chính cho cả hai bộ, cả hai seed; balanced chỉ hơn ở macro 50/50 bản cụm.",
+         ket_luan=["**natural** (title ~11%) cao nhất ở điểm Chính cho cả hai bộ **theo trung bình 2 seed**; ở pair, attr_heavy seed 123 nhỉnh +0,38 nhưng trung bình vẫn thấp hơn natural. Balanced chỉ hơn ở macro 50/50 bản cụm.",
                    "Diễn giải và w hòa vốn: `docs/QUOTA_KET_LUAN.md`, `docs/TRONG_SO_TITLE_MO_TA_DA_CHOT.md`. Dòng natural của bảng này là dòng Qwen3-4B trong bảng năm mô hình (D6)."]),
     dict(ma="C5", ten="Tái lập ở tài khoản 2 (check1)", giai_doan="C. Khảo sát tỉ trọng bằng lấy mẫu quota (vòng sàng lọc)", tai_khoan=TK2, notebook="`honghuynanh/nlp-group3`", thoi_gian="11/11/2026",
          thu_muc=["ft_run/kaggle_quota_check1_acc2"], bao_cao=["ft_run/kaggle_quota_check1_acc2/quota_report.json"],
@@ -798,8 +801,11 @@ PHIEN = [
     dict(ma="D3", ten="OpenNMT Transformer nhỏ, học từ đầu (pair + dịch bản cụm)", giai_doan="D. So sánh năm mô hình (vòng sàng lọc)", tai_khoan=TK2, notebook="`honghuynanh/nlp-onmt`, `honghuynanh/nlp-onmt-cum` (T4, có Internet)", thoi_gian="12/11/2026",
          thu_muc=["ft_run/kaggle_onmt_that", "ft_run/kaggle_onmt_cum"], bao_cao=["ft_run/kaggle_onmt_that/onmt_report.json", "ft_run/kaggle_onmt_cum/onmt_cum_report.json"],
          muc_dich="Mốc NMT cổ điển: Transformer d_model 256, 4 lớp, 8 đầu, ff 1024, SentencePiece unigram 16k mỗi ngôn ngữ, Noam lr đỉnh 2e-3, tối đa 20 epoch + dừng sớm, trung bình 5 checkpoint, beam 5; học trên dòng của bản pair.",
-         render=lambda: r_onmt() + r_5mh(["Qwen3-4B", "OpenNMT (tu dau, train day du)"]), ket_luan=["Pair: hòa với 4B theo chrF câu; cụm: kém rõ. Yếu nhất ở vi→zh (ít dữ liệu hướng này)."],
-         ghi_chu=["Chạy trên T4 vì cần Internet để cài thư viện và torch 2.2.2 không hỗ trợ GPU Blackwell.", "Bản cụm không huấn luyện riêng: dịch từng mảnh thuộc tính rồi nối.", LUU_5MH]),
+         render=lambda: r_onmt() + r_5mh(["Qwen3-4B", "OpenNMT (tu dau, train day du)"]), ket_luan=["Pair: hòa Qwen3-4B theo chrF câu trung bình (+0,39 [−1,09; +1,90]) nhưng kém theo chrF corpus chính (74,38 so 79,98) và macro câu (−8,33 [−9,40; −7,26]); cụm kém −5,57 [−6,42; −4,85].",
+                   "Trên **dòng mô tả mới** (P1, eval fold 0), OpenNMT kém Qwen3-4B −8,29 [−15,49; −0,88] (pair zh→vi) và −10,07 [−11,68; −8,30] (cụm zh→vi); trên **dòng khuôn** là +2,12 (pair) và −1,32 (cụm).",
+                   "Kết quả cho thấy độ nhạy theo cấu hình và theo loại dòng, **không** kết luận về paradigm NMT."],
+         ghi_chu=["Chạy trên T4 vì cần Internet để cài thư viện và torch 2.2.2 không hỗ trợ GPU Blackwell.", "Bản cụm không huấn luyện riêng: dịch từng mảnh thuộc tính rồi nối.",
+                   "Eval fold 0 là tập đã dùng để chọn cấu hình (B6, tỉ trọng title, 5 mô hình, adapter demo); số trên fold 0 bị ảnh hưởng bởi việc chọn, chưa đo test.", LUU_5MH]),
     dict(ma="D4", ten="Moses vòng 1: chọn cách tách chữ Hán (từng chữ hay jieba)", giai_doan="D. So sánh năm mô hình (vòng sàng lọc)", tai_khoan=TK2, notebook="`honghuynanh/nlp-moses-zhvi`, `honghuynanh/nlp-moses-vizh` (CPU)", thoi_gian="12/11/2026",
          thu_muc=["ft_run/kaggle_moses_zhvi", "ft_run/kaggle_moses_vizh"], bao_cao=["ft_run/kaggle_moses_zhvi/moses_report.json", "ft_run/kaggle_moses_vizh/moses_report.json"],
          muc_dich="Phrase-based SMT: eflomal + grow-diag-final-and, KenLM 5-gram, cụm tối đa 7, msd-bidirectional-fe, MERT trên dev 1.000 dòng; thử tách chữ Hán từng chữ và bằng jieba, chọn theo chrF dev.",
@@ -815,8 +821,9 @@ PHIEN = [
          thu_muc=["ft_run/tong_hop_5mh", "ft_run/tong_hop_5mh_cum"], muc_dich="Chấm chung bản dịch của C4 (Qwen3-4B) và D1–D5 bằng một bộ chấm (`cham_diem.py`, `cham_bleu.py`), bootstrap theo sản phẩm, thêm BLEU/SacreBLEU/TER theo cách đo của bài VLSP.",
          render=lambda: r_5mh(["Qwen3-4B", "Qwen3-8B", "EcomGPT-7B", "OpenNMT (tu dau, train day du)", "Moses (train day du)", "Moses (khop 4M token)", "Qwen3-4B cong thuc cuoi (hoc fold 1-4, T4 fp16)"], "## Bảng năm mô hình"),
          ket_luan=["Cụm: Qwen3-8B hơn 4B rõ; 4B hơn Moses; EcomGPT và OpenNMT kém xa.", "Pair: 4B, 8B, OpenNMT, Moses khớp 4M token nằm trong khoảng nhiễu; Moses học đủ nhỉnh hơn.",
+                   "Trên **dòng mô tả mới** (P1): 8B hơn 4B ở cụm +1,83 zh→vi và +2,54 vi→zh, hòa ở pair; OpenNMT kém −8,29 (pair zh→vi) / −10,07 (cụm zh→vi); Moses học đủ −2,50 / −3,68.",
                    "Nhận xét đầy đủ: `docs/KE_HOACH_VA_KET_QUA_NAM_MO_HINH.md`; khoảng tin cậy SacreBLEU/TER: `tong_hop_5mh*/bang_metric_bai_bao.md` (số chép ở `docs/TONG_HOP_KET_QUA_NHAT_ANH.md` mục 6)."],
-         ghi_chu=["Dòng `Qwen3-4B cong thuc cuoi` đến từ phiên E3: khác lời dẫn và cách dịch nên không xếp hạng chung với năm dòng còn lại.", "Năm mô hình chưa đo trên tập test khóa."]),
+         ghi_chu=["Dòng `Qwen3-4B cong thuc cuoi` đến từ phiên E3: khác lời dẫn và cách dịch nên không xếp hạng chung với năm dòng còn lại.", "Năm mô hình chưa đo trên tập test khóa; eval fold 0 là tập đã dùng để chọn cấu hình."]),
     # ---- E. thử chéo, công thức cuối trên fold 0
     dict(ma="E1", ten="Huấn luyện lại adapter fold 0 ở tài khoản 2 (cum_f0_p11, pair_f0_p11)", giai_doan="E. Thử chéo và công thức chính trên eval năm mô hình", tai_khoan=TK2, notebook="`honghuynanh/nlp-group3` (cụm), `honghuynanh/nlp-group3-pair` (pair)", thoi_gian="12/11/2026",
          thu_muc=["ft_run/kaggle_cheo_cum", "ft_run/kaggle_cheo_pair"], bao_cao=["ft_run/kaggle_cheo_cum/bao_cao_cheo_cum.json", "ft_run/kaggle_cheo_pair/bao_cao_cheo_pair.json"],

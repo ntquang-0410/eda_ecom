@@ -27,6 +27,8 @@ Nguồn: `data/processed/ft_run/kaggle_quota_step1/quota_report.json`; tỉ lệ
 
 ## 2. Kiểm chéo bằng screening quota (Kaggle v55, 10/11/2026) [ĐO]
 
+**Bằng chứng chính không phải mục này.** Bằng chứng chính cho `w_title` của bản cuối là thí nghiệm **trọng số loss** (B/TL: 3 mức 1:1 khoảng 50%, khoảng 11%, 75%; 3 fold; có khoảng tin cậy; luật khóa trước). Trong cơ chế đó mọi title được thấy đúng 2 epoch như nhau, chỉ đổi hệ số nhân loss từng mẫu; dữ liệu **không** bị lấy mẫu lại theo tỉ lệ (đã kiểm trong `scripts/ft_train/kaggle_train.py`). Khảo sát quota dưới đây chỉ là **kiểm chéo**, có confound tần suất (natural khoảng 0,31 lượt/epoch, balanced khoảng 1,4), rank 16, một lượt, 300 mẫu/nhóm, không có khoảng tin cậy chính thức; không dùng làm căn cứ chính.
+
 Cấu hình screening: rank 16, một lượt, ngân sách 1,726M token đích (cụm), eval 1.200 mẫu (300 mỗi nhóm hướng x loại), 2 seed (42, 123), chrF corpus hướng zh→vi, điểm "Chính" = 0,10 x Title + 0,90 x Mô tả (hằng `W_TITLE_ZHVI` trong `scripts/ft_train/kaggle_quota.py`). Nguồn: `data/processed/ft_run/kaggle_quota_step1/quota_report.json`.
 
 **Cụm**
@@ -54,7 +56,9 @@ Zero-shot macro: cụm 43,95; pair 41,97.
 ## 3. Giới hạn bắt buộc ghi kèm
 - Mỗi nhóm chỉ 300 mẫu, chưa có khoảng tin cậy; mô tả pair zh→vi lệch 1,4 đến 1,9 điểm giữa hai seed.
 - Screening khác bản cuối (rank 16, một lượt, lấy mẫu theo token): chỉ dùng so cấu hình với nhau. Screening không tách được "% title" khỏi "số lần mô hình thấy title" (natural thấy khoảng 0,31 lượt kho title, balanced khoảng 1,4 lượt [ƯỚC]), nên không dùng nó để kết luận 11% làm title kém đi.
-- Chưa thử mức title nằm giữa 11% và 50%; 11% là "tốt hơn 50% ở dòng mô tả mới", chưa chứng minh tối ưu.
+- **Cập nhật 18/11:** đã chạy thêm mức 25% và 35% (bản cụm, fold 0, 1 seed, Kaggle L4x4) và tính khoảng tin cậy ghép cặp (`docs/phan_bien_vong2/KET_QUA_P2.md` mục B). Dưới thước chính 10/90: 25% − 11% = −0,19 [−0,41; +0,03] (không phân biệt được); 35% − 11% = −0,39 [−0,68; −0,09] (title zh→vi +1,19, mô tả zh→vi −0,56: đánh đổi). Dưới thước macro (title và mô tả ngang nhau) ba mức không phân biệt được. Vì vậy **không nói "11% tối ưu"**; câu được phép: "dưới thước 10/90, 11% không kém 25% và hơn 35% một chút (0,4 điểm); tăng tỉ trọng title cải thiện title zh→vi nhưng đổi bằng mô tả". Các mức 12–24% và 26–34% chưa thử; chỉ bản cụm, một seed; chưa chạy bản pair.
+- (Câu cũ trước 18/11, giữ để truy vết) "Chưa thử mức title nằm giữa 11% và 50%; 11% là 'tốt hơn 50% ở dòng mô tả mới'… mức 25% và 35% chưa chạy." Câu này đã lỗi thời.
+- Khoảng tin cậy trong các bảng chỉ phủ dao động do chọn mẫu eval, không phủ dao động khởi tạo. Số seed: bảng sàng lọc 2 seed (42, 123); công thức chính 1 seed.
 - Pair attr_heavy seed 42 lệch 1,18 giữa v53 và v55, chưa rõ nguyên nhân (khởi tạo hoặc không tất định GPU).
 - Tham chiếu là bản dịch máy, nên chrF title thấp (khoảng 50 đến 59) một phần do tham chiếu title có lỗi lõi 5 đến 14%.
 - Bản dịch title mô hình sinh ra không lệch hình thức sang kiểu mô tả (độ dài bằng tham chiếu, không có ";" hay xuống dòng thừa) [ĐO].

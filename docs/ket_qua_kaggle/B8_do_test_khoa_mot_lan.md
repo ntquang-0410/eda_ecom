@@ -85,6 +85,7 @@ Cảnh báo theo luật: không có.
 
 - Không đổi tỉ lệ, lr hay adapter sau khi thấy số test. Bản cuối (B9) **không** đo lại trên test.
 - Chênh lớn một phần vì tham chiếu là bản dịch máy cùng kiểu với dữ liệu huấn luyện.
+- Bổ sung 18/11 (Bước 0, chỉ đọc tệp tổng hợp của chính lần đo này, không chấm lại): 86 đến 87% dòng mô tả zh→vi (73% vi→zh) của test đã có trong train; trên dòng mô tả **mới** fine-tune vẫn hơn zero-shot khoảng 30 điểm chrF corpus (cụm zh→vi +30,1; pair zh→vi +30,6; pair vi→zh +29,7), chất lượng dòng mới khoảng 76 (không phải 92–94); chưa có khoảng tin cậy. Chi tiết `docs/phan_bien_vong2/KET_QUA_B8_DONG_MOI.md`.
 
 ## File gốc trên máy (sha256, 16 ký tự đầu)
 

@@ -1,6 +1,6 @@
 # Mục lục kết quả Kaggle hướng Nhật Anh
 
-Sinh tự động bởi `scripts/ft_train/xuat_ket_qua_kaggle.py` lúc 16/11/2026 19:25 (ICT). Trang tổng hợp: [`docs/TONG_HOP_KET_QUA_NHAT_ANH.md`](../TONG_HOP_KET_QUA_NHAT_ANH.md). Nhật ký đầy đủ các phiên 4B (bản 20–43): [`docs/PHU_LUC_NHAT_KY_CHAY.md`](../PHU_LUC_NHAT_KY_CHAY.md).
+Sinh tự động bởi `scripts/ft_train/xuat_ket_qua_kaggle.py` lúc 18/11/2026 00:05 (ICT). Trang tổng hợp: [`docs/TONG_HOP_KET_QUA_NHAT_ANH.md`](../TONG_HOP_KET_QUA_NHAT_ANH.md). Nhật ký đầy đủ các phiên 4B (bản 20–43): [`docs/PHU_LUC_NHAT_KY_CHAY.md`](../PHU_LUC_NHAT_KY_CHAY.md).
 
 Mỗi phiên chạy thật một file. Output gốc nằm trên máy Nhật Anh ở `data/processed/` (không có trong git); mỗi file ghi sha256 của file gốc để đối chiếu. Mỗi file có: thông tin phiên (notebook, tài khoản, bản, thời gian, GPU), mục đích, bảng số, kết luận, ghi chú/giới hạn, danh sách file gốc.
 

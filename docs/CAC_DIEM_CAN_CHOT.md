@@ -24,7 +24,7 @@ Lập 12/11/2026. Mỗi điểm ghi: câu hỏi, đề xuất của em, và vì 
 ## E. Hướng đi sau bảng kết quả năm mô hình
 16. **[CHỜ] Dừng huấn luyện thêm để demo và báo cáo, hay tiếp tục tinh chỉnh?** Đề xuất của em: dừng huấn luyện siêu tham số. Lý do: ba mô hình đầu bảng ở pair chênh nhau trong khoảng nhiễu, chrF chạm trần vì tham chiếu là bản dịch máy, và điểm nghẽn thật là chất lượng title, kiểm bằng người/LLM và dựng extension. Chi tiết trong câu trả lời ngày 12/11.
 17. **[CHỜ] Bộ thước đo dùng để kết luận:** giữ chrF làm thước chọn nhanh, thêm kiểm số/đơn vị/thương hiệu (đã có) và B9 (LLM chấm so cặp). COMET là tùy chọn phụ. Không dùng BLEU làm thước chính.
-18. **[CHỜ] Nếu muốn cải thiện chất lượng, ưu tiên sửa dữ liệu title (cách 2, bản v2) trước khi huấn luyện thêm.** Title chrF chỉ ~50–57 so với mô tả ~83–91.
+18. **[CHỜ] Nếu muốn cải thiện chất lượng, ưu tiên sửa dữ liệu title (cách 2, bản v2) trước khi huấn luyện thêm.** Title chrF chỉ ~50–57 so với mô tả ~83–91 trên toàn bộ mô tả; tính riêng dòng mô tả mới, Qwen3-4B còn 63,41 ở pair và 72,70 ở cụm (P1, eval fold 0).
 
 ## D. Việc dọn
 12. **[CHỜ] Commit mã** (`scripts/ft_train/`, `docs/`; chưa commit gì).

@@ -68,6 +68,8 @@ Phân tầng theo hướng × nhóm hàng:
 
 Kết luận trong file: **KHÔNG RÒ RỈ**. Title trùng chính xác giữa test và pool: `{"title_zh": 0, "title_vi": 0}`.
 
+Ở **cấp sản phẩm**, không có sản phẩm gần-trùng giữa test và pool theo ngưỡng Jaccard. Nhưng ở **cấp dòng**, 85,0% dòng mô tả của test đã có nguyên văn trong pool. Vì vậy test là held-out theo sản phẩm, **không** phải held-out cho từng dòng mô tả; điểm mô tả toàn phần chủ yếu đo khả năng tái tạo thuộc tính khuôn mẫu.
+
 | So | Góc nhìn | Ngưỡng | Số truy vấn | Số vi phạm |
 |---|---|---|---|---|
 | test với pool | title_zh | 0.50 | 2.558 | 0 |
@@ -95,7 +97,8 @@ Cờ luật trên title của bộ sau Judge (toàn bộ 25.575 sản phẩm): `
 
 ## Kết luận của phiên
 
-- Không rò rỉ theo ngưỡng đã đặt (0 vi phạm test với pool và giữa các fold).
+- Không rò rỉ ở **cấp sản phẩm** theo ngưỡng Jaccard đã đặt (0 vi phạm test với pool và giữa các fold).
+- Ở **cấp dòng**, 85,0% dòng mô tả của test đã có nguyên văn trong pool; test là held-out theo sản phẩm, **không** phải held-out cho từng dòng mô tả. Điểm mô tả toàn phần chủ yếu đo tái tạo thuộc tính khuôn mẫu.
 - Cờ title bắt được phần lớn title lỗi trên mẫu chấm tay nhưng cũng gắn cờ nhiều title không lỗi; Nhật Anh chọn loại mẫu title bị cờ ở bản cuối (B9), giữ mẫu mô tả.
 
 ## Ghi chú, giới hạn, sự cố

@@ -14,12 +14,12 @@ Nhãn: **[ĐO]** đo trên dữ liệu thật; **[ƯỚC]** ước tính; **[CH�
 2. **Mô hình chính:** Qwen3-4B + LoRA rank 64, alpha 128, lr 2e-4, 2 epoch, `max_len` 2.048, tất cả lớp tuyến tính.
 3. **Trọng số đóng góp title : mô tả (đã chốt):** title chiếm **10,74%** (cụm) / **10,86%** (pair) loss theo token đích; `w_title` bản cuối **0,17247** (cụm) / **0,16915** (pair).
 4. **Test khóa, đo MỘT lần (07/11):** fine-tune thắng zero-shot ở cả 4 nhánh × hướng, chênh chrF +30 đến +34 (cận dưới 95% xa 0). chrF fine-tune: cụm vi→zh 75,63, zh→vi 77,36; pair vi→zh 75,41, zh→vi 77,65.
-5. **Năm mô hình (fold 0, cấu hình sàng lọc rank 16, 4M token):**
+5. **Năm mô hình (fold 0, tập dùng để chọn cấu hình, cấu hình sàng lọc rank 16, 4M token, chưa đo test):**
    - Cụm: Qwen3-8B hơn 4B **+1,03 [+0,71; +1,36]**.
    - Pair: 8B so với 4B **+0,44 [−0,24; +1,14]**, tức hòa. Moses học đủ dữ liệu hơn 4B +1,86, nhưng khi khớp ngân sách 4M token thì hòa (+0,05).
-   - EcomGPT-7B kém rõ ở cả hai dạng; OpenNMT kém rõ ở dạng cụm.
+   - EcomGPT-7B kém rõ ở cả hai dạng; OpenNMT kém rõ ở dạng cụm. Trên **dòng mô tả mới** (P1): OpenNMT −8,29 (pair zh→vi) và −10,07 (cụm zh→vi); EcomGPT −12,70 và −8,17.
 6. **Bản cuối đã huấn luyện:** `cum_cuoi`, `pair_cuoi` trên toàn pool, đã loại 6.386 title bị gắn cờ. **Chưa đo trên test** (không còn dữ liệu giữ lại để đo).
-7. **Demo:** extension Chrome + máy chủ dịch. Trên laptop (RTX 3050 4 GB) bản nén **Q5_K_M + LoRA đạt cổng**, Q4_K_M bị loại. Thử 13 trang 1688 thật: 13/13 đạt kiểm cấu trúc.
+7. **Demo:** extension Chrome + máy chủ dịch. Trên laptop (RTX 3050 4 GB) bản nén **Q5_K_M + LoRA đạt cổng**, Q4_K_M bị loại. Thử 13 trang 1688 thật: 13/13 đạt kiểm cấu trúc, đọc tay 8 trang, không có tham chiếu.
 8. **Chưa làm:** 8B theo công thức cuối (mất GPU RTX Pro 6000), đo test cho năm mô hình, B9 (LLM chấm so cặp), người chấm.
 
 ---
@@ -33,7 +33,7 @@ Nhãn: **[ĐO]** đo trên dữ liệu thật; **[ƯỚC]** ước tính; **[CH�
 | Kết quả, bản dịch sinh ra, log | máy Nhật Anh `data/processed/ft_run/` (không vào git) |
 | Nhật ký đầy đủ từng lần chạy 4B | `data/processed/ft_run/NHAT_KY_CHAY.md` (sinh tự động từ file kết quả) |
 | Kết quả chi tiết từng phiên Kaggle | `docs/ket_qua_kaggle/INDEX.md` — mỗi phiên một file, số lấy từ JSON gốc |
-| Tài liệu đã có trong git | `docs/TRONG_SO_TITLE_MO_TA_DA_CHOT.md`, `docs/QUOTA_KET_LUAN.md`, `docs/KE_HOACH_VA_KET_QUA_NAM_MO_HINH.md`, `docs/CAC_DIEM_CAN_CHOT.md`, `docs/BANG_KET_QUA_CUOI.md` (bản 09/11, đã bị `QUOTA_KET_LUAN.md` thay) |
+| Tài liệu đã có trong git | `docs/TRONG_SO_TITLE_MO_TA_DA_CHOT.md`, `docs/QUOTA_KET_LUAN.md`, `docs/KE_HOACH_VA_KET_QUA_NAM_MO_HINH.md`, `docs/CAC_DIEM_CAN_CHOT.md`, `docs/archive/BANG_KET_QUA_CUOI_09-11_DA_THAY.md` (bản 09/11, đã bị `QUOTA_KET_LUAN.md` thay) |
 | Adapter (trọng số LoRA) | Kaggle tài khoản `trinhnhatanh`, notebook kho `ft-qwen3-4b-*-luu` (riêng tư), xem mục 10 |
 
 ---
@@ -159,6 +159,8 @@ Mốc cũ là 1 : 1 theo mẫu, khiến title chiếm khoảng 50% loss dù ch�
 
 "Trọng số" ở đây là hệ số trong loss, không phải trọng số mô hình.
 
+**Bằng chứng chính là thí nghiệm trọng số loss**, không phải khảo sát quota: 3 mức (1:1 khoảng 50%, khoảng 11%, 75%), 3 fold, có khoảng tin cậy, luật khóa trước. Trong cơ chế này mọi title được thấy đúng 2 epoch như nhau, chỉ đổi hệ số nhân loss, nên không dính confound "tỉ trọng so với số lần thấy". Khảo sát quota dưới đây chỉ là **kiểm chéo**, có confound tần suất (natural khoảng 0,31 lượt/epoch, balanced khoảng 1,4), rank 16, 300 mẫu/nhóm, không có khoảng tin cậy chính thức.
+
 **Kiểm chéo bằng khảo sát lấy mẫu theo hạn ngạch** (quota; rank 16, một lượt, 2 seed, eval 1.200 mẫu; điểm "Chính" = 0,10 × title + 0,90 × mô tả hướng zh→vi) [ĐO, `docs/QUOTA_KET_LUAN.md`]:
 
 | Bộ | Cấu hình | % title | Chính | Macro 50/50 | Title zh→vi | Mô tả zh→vi |
@@ -172,7 +174,7 @@ Mốc cũ là 1 : 1 theo mẫu, khiến title chiếm khoảng 50% loss dù ch�
 
 - Tăng tỉ trọng title thì title tăng và mô tả giảm, cùng chiều ở cả hai seed.
 - **w hòa vốn** là trọng số title tối thiểu để cấu hình kia thắng natural: cụm balanced 0,39; cụm title_heavy 0,55; pair balanced 0,58; pair attr_heavy 0,50. Nếu nhóm coi title nặng hơn khoảng 40% thì kết luận ở cụm đổi.
-- Chưa thử các mức nằm giữa 11% và 50%.
+- Bảng trên là vòng sàng lọc (mức 11% và 50%). **Cập nhật 18/11:** đã chạy thêm 25% và 35% (bản cụm, fold 0, 1 seed, công thức cuối): 25% − 11% = −0,19 [−0,41; +0,03] (không phân biệt được); 35% − 11% = −0,39 [−0,68; −0,09] (title zh→vi +1,19, mô tả zh→vi −0,56, đánh đổi); macro không phân biệt được ba mức (`docs/phan_bien_vong2/KET_QUA_P2.md` mục B). Không dùng chữ "tối ưu". Các mức 12–24%, 26–34% chưa thử; chưa chạy bản pair. Khoảng tin cậy chỉ phủ dao động chọn mẫu eval, không phủ dao động khởi tạo; khảo sát quota là kiểm chéo, không phải bằng chứng chính cho `w_title`.
 
 ---
 
@@ -189,7 +191,7 @@ Mốc cũ là 1 : 1 theo mẫu, khiến title chiếm khoảng 50% loss dù ch�
 | pair | zh→vi | 46.34 | 77.65 | +31.31 [+30.81; +31.83] |
 
 - Kiểm riêng hướng zh→vi của cụm: tỉ lệ sai chữ Việt giảm từ 0,308 (zero-shot) xuống 0,058 (mốc tham chiếu 0,049); rò lời dẫn từ 0,326 xuống 0.
-- Chênh lớn một phần vì tham chiếu là bản dịch máy cùng kiểu với dữ liệu huấn luyện.
+- Chênh lớn một phần vì tham chiếu là bản dịch máy cùng kiểu với dữ liệu huấn luyện. Đã tách dòng khuôn/dòng mới trên test (19/11, đọc từ tổng hợp B8, `docs/phan_bien_vong2/KET_QUA_B8_DONG_MOI.md`): trên dòng mô tả mới fine-tune hơn zero-shot khoảng 30 điểm chrF corpus, chất lượng dòng mới khoảng 76; chưa có khoảng tin cậy.
 
 ---
 
@@ -205,32 +207,34 @@ Mốc cũ là 1 : 1 theo mẫu, khiến title chiếm khoảng 50% loss dù ch�
 
 **Pair (1.198 mẫu)**
 
-| Mô hình | Title | Mô tả | Chính | Macro | Chênh chính (câu) so với 4B |
-|---|---|---|---|---|---|
-| Qwen3-4B | 49.98 | 83.31 | 79.98 | 68.52 | mốc |
-| Qwen3-8B | 52.03 | 79.86 | 77.08 | 66.61 | +0.44 [−0.24; +1.14] |
-| EcomGPT-7B | 38.45 | 71.45 | 68.15 | 56.78 | −4.81 [−5.95; −3.79] |
-| OpenNMT (học đủ) | 48.27 | 77.28 | 74.38 | 54.89 | +0.39 [−1.09; +1.90] |
-| Moses (học đủ 270k dòng) | 54.93 | 83.65 | 80.78 | 68.08 | +1.86 [+0.67; +3.04] |
-| Moses (khớp 4M token) | 51.97 | 82.34 | 79.30 | 65.36 | +0.05 [−1.14; +1.23] |
+| Mô hình | Title | Mô tả | Chính | Macro | Chênh chính (câu) so với 4B | Mô tả mới (P1) |
+|---|---|---|---|---|---|---|
+| Qwen3-4B | 49.98 | 83.31 | 79.98 | 68.52 | mốc | 63.41 |
+| Qwen3-8B | 52.03 | 79.86 | 77.08 | 66.61 | +0.44 [−0.24; +1.14] | 54.38 |
+| EcomGPT-7B | 38.45 | 71.45 | 68.15 | 56.78 | −4.81 [−5.95; −3.79] | 40.19 |
+| OpenNMT (học đủ) | 48.27 | 77.28 | 74.38 | 54.89 | +0.39 [−1.09; +1.90] | 44.88 |
+| Moses (học đủ 270k dòng) | 54.93 | 83.65 | 80.78 | 68.08 | +1.86 [+0.67; +3.04] | 61.53 |
+| Moses (khớp 4M token) | 51.97 | 82.34 | 79.30 | 65.36 | +0.05 [−1.14; +1.23] | 60.18 |
 
 **Cụm (1.200 mẫu)**
 
-| Mô hình | Title | Mô tả | Chính | Macro | Chênh chính (câu) so với 4B |
-|---|---|---|---|---|---|
-| Qwen3-4B | 54.19 | 90.44 | 86.81 | 71.87 | mốc |
-| Qwen3-8B | 56.52 | 91.34 | 87.86 | 73.92 | **+1.03 [+0.71; +1.36]** |
-| EcomGPT-7B | 45.85 | 82.49 | 78.83 | 64.44 | −6.42 [−7.36; −5.55] |
-| OpenNMT (học đủ) | 47.01 | 84.34 | 80.61 | 58.72 | −5.57 [−6.42; −4.85] |
-| Moses (học đủ) | 54.93 | 88.48 | 85.12 | 69.77 | −1.51 [−2.06; −1.02] |
-| Moses (khớp 4M token) | 51.97 | 85.71 | 82.33 | 66.48 | −4.17 [−4.79; −3.60] |
+| Mô hình | Title | Mô tả | Chính | Macro | Chênh chính (câu) so với 4B | Mô tả mới (P1) |
+|---|---|---|---|---|---|---|
+| Qwen3-4B | 54.19 | 90.44 | 86.81 | 71.87 | mốc | 72.70 |
+| Qwen3-8B | 56.52 | 91.34 | 87.86 | 73.92 | **+1.03 [+0.71; +1.36]** | 74.75 |
+| EcomGPT-7B | 45.85 | 82.49 | 78.83 | 64.44 | −6.42 [−7.36; −5.55] | 61.22 |
+| OpenNMT (học đủ) | 47.01 | 84.34 | 80.61 | 58.72 | −5.57 [−6.42; −4.85] | 56.98 |
+| Moses (học đủ) | 54.93 | 88.48 | 85.12 | 69.77 | −1.51 [−2.06; −1.02] | 67.71 |
+| Moses (khớp 4M token) | 51.97 | 85.71 | 82.33 | 66.48 | −4.17 [−4.79; −3.60] | 61.34 |
 
 Zero-shot macro (pair / cụm): 4B 41,97 / 43,95; 8B 45,19 / 51,65; EcomGPT 13,69 / 12,78.
 
 **Cách đọc hai bảng:**
+- **Đây là eval fold 0**, tập đã dùng để chọn cấu hình (B6, tỉ trọng title, 5 mô hình, adapter demo), train = fold 1–4; **chưa đo test** cho 5 mô hình. Số trên fold 0 bị ảnh hưởng bởi việc chọn. Tỉ trọng title có thêm kiểm độc lập ở fold 1 và 2.
 - Ở pair, chrF corpus và chrF câu trung bình xếp 8B với 4B khác nhau. Corpus của 8B thấp hơn chủ yếu vì vài dòng dài, ví dụ danh sách thành phần mà tham chiếu giữ nguyên tên Latin còn 8B dịch sang chữ Hán.
-- Khoảng 87% dòng thuộc tính trong eval pair đã có nguyên văn trong dữ liệu train, nên Moses mạnh ở pair. Lợi thế đó mất khi phải dịch cả khối mô tả.
-- OpenNMT yếu ở vi→zh (title 29,6) vì chỉ có khoảng 61 nghìn dòng theo hướng này.
+- **85,91% dòng mô tả của eval pair zh→vi đã có nguyên văn trong train** (P1 3.2, [ĐO]; A7 ghi 85,0% trên test). Vì vậy điểm mô tả toàn phần nghiêng về tái tạo khuôn mẫu, và cột "Mô tả mới (P1)" mới là phần dịch câu chưa từng thấy. Trên dòng mới, OpenNMT kém Qwen3-4B −8,29 [−15,49; −0,88] (pair zh→vi) và −10,07 [−11,68; −8,30] (cụm zh→vi); Moses học đủ −2,50 và −3,68. Chiều ngược lại, trên dòng khuôn OpenNMT lại hơn 4B +2,12 (pair zh→vi).
+- Với cấu hình Transformer nhỏ học từ đầu (D3), OpenNMT hòa Qwen3-4B ở pair **chỉ theo chrF câu trung bình chính (0,1/0,9, zh→vi)** trên eval fold 0, nơi phần lớn dòng đã có trong train (+0,30 [−1,07; +1,71], trung bình 3 seed 42/43/44, cả ba seed chứa 0); ở macro kém −8,65, ở cụm kém −5,52, ở chrF corpus kém 5,3 (pair) và 6,2 (cụm) điểm, và kém rõ ở vi→zh (`docs/phan_bien_vong2/KET_QUA_P2.md` mục A). Kết quả cho thấy độ nhạy theo cấu hình và theo loại dòng, không kết luận về paradigm NMT.
+- OpenNMT kém nhất ở vi→zh (title 29,6) vì chỉ có khoảng 61 nghìn dòng train theo hướng này; cùng hướng, khoảng cách trên dòng mô tả mới còn lớn hơn (−17,76 ở pair, P1).
 
 ### 6.2 BLEU / SacreBLEU / TER theo cách đo của bài VLSP
 - Chữ ký sacrebleu 2.6.0: zh→vi `tok:13a`, vi→zh `tok:zh`, TER `tercom`.
@@ -248,6 +252,14 @@ Zero-shot macro (pair / cụm): 4B 41,97 / 43,95; 8B 45,19 / 51,65; EcomGPT 13,6
 - Cụm: 8B hơn 4B cả ở SacreBLEU (+1,11 [+0,67; +1,58]) và TER (−1,51 [−2,04; −0,97]).
 - Pair: các chênh giữa 4B, 8B, OpenNMT và Moses đều có khoảng chứa 0 ở điểm chính.
 - BLEU trên title và dòng thuộc tính rất ngắn thì bất ổn. Các số này không so với số trong bài VLSP vì khác dữ liệu và miền.
+
+### 6.3 Vòng lặp tham chiếu (bổ sung 17/11, P1 3.3) [ĐO]
+
+Tham chiếu title và mô tả do **Gemma 4 hoặc Qwen** sinh (Qwen3-14B; một phần title có thể là Qwen3.5-9B **[CHƯA KIỂM]**), Judge DeepSeek chọn bản; dữ liệu huấn luyện lấy cùng nguồn đó. Vì vậy Qwen3-4B/8B **cùng họ** với một mô hình sinh tham chiếu, còn EcomGPT (BLOOM) thì không.
+
+- **Title, eval fold 0 zh→vi:** 300 sản phẩm, trong đó 55 có tham chiếu Qwen và 245 có tham chiếu Gemma. Chênh lệch kép (lợi thế của mô hình Qwen ở nhóm Qwen trừ nhóm Gemma): so EcomGPT −7,68 [−10,36; −5,18]; so OpenNMT +5,17 [+2,11; +8,19]; so Moses học đủ +3,11 [+0,43; +5,99] (thứ tự mã sản phẩm xác định). **Không nhất quán theo họ baseline** với mô hình đã fine-tune, nên không kết luận self-preference từ phần này. Bổ sung 18/11 với **zero-shot** Qwen3-4B (bản cụm): lợi thế sẵn có ở nhóm tham chiếu Qwen (kép +10,20 / +16,17 / +14,41 so EcomGPT / OpenNMT / Moses, khoảng 95% không chứa 0); fine-tune xóa phần lớn lợi thế đó. Chi tiết `docs/phan_bien_vong2/KET_QUA_P2.md` mục C.
+- **Mô tả, eval fold 0 zh→vi:** 285 sản phẩm pair đều Gemma chủ đạo (cụm: 297 Gemma, 1 không xác định), **không có nhóm Qwen chủ đạo** để tính chênh lệch kép theo kế hoạch. Phân tích thêm sau khi xem số, nhóm "có mảnh Qwen" (170) so "không có" (115), cả 6 khoảng 95% đều chứa 0.
+- Giới hạn: Judge chọn Qwen khi bản Gemma kém, nên hai nhóm khác độ khó; chênh lệch kép chỉ khử phần độ khó chung cho mọi mô hình. Còn mở: tham chiếu độc lập do người chấm 100–300 mẫu.
 
 ---
 
@@ -300,6 +312,7 @@ Trên T4 fp16, pair dịch 1.165 lượt, không có khối nào lệch dòng v�
   - Chữ "外贸" rụng khỏi title.
   - Tên thương hiệu bị phiên âm sang chữ Latin.
 - Bộ đệm đã dịch sẵn 13 trang, có chế độ chỉ dùng bộ đệm (không cần GPU). Đã chọn 5 trang để demo. Chưa thử đầy đủ trong Chrome thật.
+- **Đây là thử nghiệm quy mô nhỏ**: 13 trang 1688 thật, đọc tay 8 trang, không có tham chiếu người, một người dùng, máy chủ trên Kaggle T4 hoặc laptop. Không có số về độ ổn định, tải, nhiều người dùng hay trang ngoài 1688.
 
 ---
 

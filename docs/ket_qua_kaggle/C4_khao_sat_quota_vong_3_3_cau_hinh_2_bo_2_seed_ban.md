@@ -59,7 +59,7 @@ Kiểm dữ liệu từng bộ trước khi lấy mẫu:
 
 ## Kết luận của phiên
 
-- **natural** (title ~11%) cao nhất ở điểm Chính cho cả hai bộ, cả hai seed; balanced chỉ hơn ở macro 50/50 bản cụm.
+- **natural** (title ~11%) cao nhất ở điểm Chính cho cả hai bộ **theo trung bình 2 seed**; ở pair, attr_heavy seed 123 nhỉnh +0,38 nhưng trung bình vẫn thấp hơn natural. Balanced chỉ hơn ở macro 50/50 bản cụm.
 - Diễn giải và w hòa vốn: `docs/QUOTA_KET_LUAN.md`, `docs/TRONG_SO_TITLE_MO_TA_DA_CHOT.md`. Dòng natural của bảng này là dòng Qwen3-4B trong bảng năm mô hình (D6).
 
 ## File gốc trên máy (sha256, 16 ký tự đầu)

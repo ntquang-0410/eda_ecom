@@ -1,4 +1,4 @@
-> **⚠️ TÀI LIỆU 09/11 — ĐÃ BỊ THAY.** Bảng dưới đây lập trước khi sửa 3 lỗi sampling và trước khi chốt lại metric; các số 74,06 / 71,51 là của bản 960 **có lỗi bỏ mẫu**, không dùng để trích. Kết luận hiện hành: [`QUOTA_KET_LUAN.md`](QUOTA_KET_LUAN.md); bảng chốt: mục 4 của [`TONG_HOP_KET_QUA_NHAT_ANH.md`](TONG_HOP_KET_QUA_NHAT_ANH.md).
+> **⚠️ TÀI LIỆU 09/11 — ĐÃ BỊ THAY.** Bảng dưới đây lập trước khi sửa 3 lỗi sampling và trước khi chốt lại metric; các số 74,06 / 71,51 là của bản 960 **có lỗi bỏ mẫu**, không dùng để trích. Kết luận hiện hành: [`QUOTA_KET_LUAN.md`](../QUOTA_KET_LUAN.md); bảng chốt: mục 4 của [`TONG_HOP_KET_QUA_NHAT_ANH.md`](../TONG_HOP_KET_QUA_NHAT_ANH.md).
 
 # BẢNG KẾT QUẢ CUỐI — QUOTA SAMPLING (cụm + pair)
 

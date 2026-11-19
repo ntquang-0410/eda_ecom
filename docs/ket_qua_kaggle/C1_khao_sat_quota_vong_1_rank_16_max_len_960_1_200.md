@@ -67,7 +67,7 @@ chrF corpus trên eval fold 0 (cụm 1.200 mẫu, pair 1.198 mẫu). `Chính` = 
 ## Ghi chú, giới hạn, sự cố
 
 - Bản 47 lỗi ở phần cụm (dòng LỖI ở bảng); phần cụm chạy lại ở bản 48.
-- Bảng tổng hợp cũ của vòng này: `docs/BANG_KET_QUA_CUOI.md` (đã bị thay).
+- Bảng tổng hợp cũ của vòng này: `docs/archive/BANG_KET_QUA_CUOI_09-11_DA_THAY.md` (đã bị thay).
 
 ## File gốc trên máy (sha256, 16 ký tự đầu)
 

@@ -27,35 +27,38 @@ Chạy trên Kaggle: LLM ở RTX Pro 6000 (qua cuộc thi ARC Prize, nhóm đã 
 
 ## 5. Kết quả [ĐO]
 ### Bản pair (eval từng dòng, 1.198 mẫu)
-| Mô hình | Title | Mô tả | Chính | Macro | Chênh chính (câu) so với 4B [95%] |
-|---|---|---|---|---|---|
-| Qwen3-4B | 49.98 | 83.31 | 79.98 | 68.52 | mốc |
-| Qwen3-8B | 52.03 | 79.86 | 77.08 | 66.61 | +0.44 [−0.24; +1.14] |
-| EcomGPT-7B | 38.45 | 71.45 | 68.15 | 56.78 | −4.81 [−5.95; −3.79] |
-| OpenNMT | 48.27 | 77.28 | 74.38 | 54.89 | +0.39 [−1.09; +1.90] |
-| Moses (train đủ 270k dòng) | 54.93 | 83.65 | 80.78 | 68.08 | +1.86 [+0.67; +3.04] |
-| Moses (khớp 4M token) | 51.97 | 82.34 | 79.30 | 65.36 | +0.05 [−1.14; +1.23] |
+| Mô hình | Title | Mô tả | Chính | Macro | Chênh chính (câu) so với 4B [95%] | Mô tả mới (P1) |
+|---|---|---|---|---|---|---|
+| Qwen3-4B | 49.98 | 83.31 | 79.98 | 68.52 | mốc | 63.41 |
+| Qwen3-8B | 52.03 | 79.86 | 77.08 | 66.61 | +0.44 [−0.24; +1.14] | 54.38 |
+| EcomGPT-7B | 38.45 | 71.45 | 68.15 | 56.78 | −4.81 [−5.95; −3.79] | 40.19 |
+| OpenNMT | 48.27 | 77.28 | 74.38 | 54.89 | +0.39 [−1.09; +1.90] | 44.88 |
+| Moses (train đủ 270k dòng) | 54.93 | 83.65 | 80.78 | 68.08 | +1.86 [+0.67; +3.04] | 61.53 |
+| Moses (khớp 4M token) | 51.97 | 82.34 | 79.30 | 65.36 | +0.05 [−1.14; +1.23] | 60.18 |
 
 ### Bản cụm (eval mẫu đầy đủ, 1.200 mẫu)
-| Mô hình | Title | Mô tả | Chính | Macro | Chênh chính (câu) so với 4B [95%] |
-|---|---|---|---|---|---|
-| Qwen3-4B | 54.19 | 90.44 | 86.81 | 71.87 | mốc |
-| **Qwen3-8B** | 56.52 | 91.34 | 87.86 | 73.92 | **+1.03 [+0.71; +1.36]** |
-| EcomGPT-7B | 45.85 | 82.49 | 78.83 | 64.44 | −6.42 [−7.36; −5.55] |
-| OpenNMT | 47.01 | 84.34 | 80.61 | 58.72 | −5.57 [−6.42; −4.85] |
-| Moses (train đủ) | 54.93 | 88.48 | 85.12 | 69.77 | −1.51 [−2.06; −1.02] |
-| Moses (khớp 4M token) | 51.97 | 85.71 | 82.33 | 66.48 | −4.17 [−4.79; −3.60] |
+| Mô hình | Title | Mô tả | Chính | Macro | Chênh chính (câu) so với 4B [95%] | Mô tả mới (P1) |
+|---|---|---|---|---|---|---|
+| Qwen3-4B | 54.19 | 90.44 | 86.81 | 71.87 | mốc | 72.70 |
+| **Qwen3-8B** | 56.52 | 91.34 | 87.86 | 73.92 | **+1.03 [+0.71; +1.36]** | 74.75 |
+| EcomGPT-7B | 45.85 | 82.49 | 78.83 | 64.44 | −6.42 [−7.36; −5.55] | 61.22 |
+| OpenNMT | 47.01 | 84.34 | 80.61 | 58.72 | −5.57 [−6.42; −4.85] | 56.98 |
+| Moses (train đủ) | 54.93 | 88.48 | 85.12 | 69.77 | −1.51 [−2.06; −1.02] | 67.71 |
+| Moses (khớp 4M token) | 51.97 | 85.71 | 82.33 | 66.48 | −4.17 [−4.79; −3.60] | 61.34 |
+
+**Đây là eval fold 0** (tập đã dùng để chọn cấu hình, train = fold 1–4), cấu hình sàng lọc r16, **chưa đo trên test** cho năm mô hình. Cột "Mô tả mới (P1)" là chrF corpus trên các dòng mô tả chưa từng có nguyên văn trong train (P1 3.2, [ĐO]).
+
 
 Zero-shot macro (pair / cụm): 4B 41.97 / 43.95; 8B 45.19 / 51.65; EcomGPT 13.69 / 12.78.
 
 ## 6. Nhận xét
-1. **Cụm (mẫu đầy đủ):** Qwen3-8B tốt nhất, hơn 4B rõ (khoảng tin cậy xa 0), 4B hơn Moses, EcomGPT và OpenNMT kém xa.
+1. **Cụm (mẫu đầy đủ):** trong 3 cấu hình LLM đã thử, Qwen3-8B hơn 4B rõ (khoảng tin cậy xa 0); 4B hơn Moses; EcomGPT và OpenNMT kém xa. Trên dòng mô tả mới, 8B vẫn hơn 4B (+1,83 zh→vi, +2,54 vi→zh), OpenNMT kém −10,07, Moses học đủ kém −3,68 (P1, [ĐO]).
 2. **Pair (từng dòng):** Moses train đủ nhỉnh hơn 4B, nhưng khi khớp ngân sách 4M token thì ngang 4B; 8B ngang 4B (chrF corpus của 8B thấp hơn vì vài dòng dài, ví dụ danh sách thành phần mà tham chiếu giữ nguyên tên Latin còn 8B dịch sang tiếng Trung).
-3. Moses mạnh ở dòng ngắn lặp nhiều (khoảng 87% dòng thuộc tính eval đã có nguyên văn trong train) nhưng mất lợi thế khi dịch cả mô tả có ngữ cảnh.
-4. OpenNMT yếu ở vi→zh (title 29.6) vì chỉ có 61 nghìn dòng; EcomGPT yếu cả hai hướng và sinh lặp 2–5% (chưa tách được lỗi do mô hình hay do ít bước và khuôn Alpaca).
+3. **85,91% dòng mô tả của eval pair zh→vi đã có nguyên văn trong train** (P1 3.2, [ĐO]; A7 ghi 85,0% trên test), nên điểm mô tả toàn phần nghiêng về tái tạo khuôn mẫu. Trên dòng mới, Moses học đủ gần 4B ở pair (−2,50 [−8,11; +3,02]) nhưng kém ở cụm (−3,68 [−5,05; −2,22]); OpenNMT kém −8,29 ở pair zh→vi và −10,07 ở cụm zh→vi.
+4. Với cấu hình Transformer nhỏ học từ đầu (D3), OpenNMT kém nhất ở vi→zh (title 29.6) vì chỉ có 61 nghìn dòng train; trên dòng mô tả mới mức kém còn lớn hơn (−17,76 ở pair, −22,06 ở cụm zh→vi). EcomGPT kém cả hai hướng và sinh lặp 2–5% (chưa tách được lỗi do mô hình hay do ít bước và khuôn Alpaca). Kết quả cho thấy độ nhạy theo cấu hình và theo loại dòng, không kết luận về paradigm NMT.
 
 ## 7. Giới hạn
-Tham chiếu là bản dịch máy; eval 1.200 mẫu cố định, một fold; hai mô hình cổ điển chỉ một lần chạy và học trên dòng của bản pair (bản cụm khác pair khoảng 1% mảnh); MERT không tất định (hai lần chạy Moses train đủ lệch 0.25 điểm chính); khoảng tin cậy chỉ bao gồm dao động chọn mẫu, không gồm dao động huấn luyện lại; EcomGPT chạy ít bước hơn do token BLOOM ít hơn (cụm 191, pair 81 bước so với 241 và 107); chưa đánh giá bằng người hay LLM-judge (B9); tập test chưa dùng cho năm mô hình này.
+Tham chiếu là bản dịch máy; eval 1.200 mẫu cố định, **eval fold 0 là tập đã dùng để chọn cấu hình** (B6, tỉ trọng title, 5 mô hình, adapter demo), train = fold 1–4, **chưa đo test cho năm mô hình**; số trên fold 0 bị ảnh hưởng bởi việc chọn, tỉ trọng title có thêm kiểm độc lập ở fold 1 và 2. Hai mô hình cổ điển chỉ một lần chạy và học trên dòng của bản pair (bản cụm khác pair khoảng 1% mảnh); MERT không tất định (hai lần chạy Moses train đủ lệch 0.25 điểm chính); khoảng tin cậy chỉ bao gồm dao động chọn mẫu, không gồm dao động huấn luyện lại; EcomGPT chạy ít bước hơn do token BLOOM ít hơn (cụm 191, pair 81 bước so với 241 và 107); chưa đánh giá bằng người hay LLM-judge (B9); tập test chưa dùng cho năm mô hình này. Điểm mô tả toàn phần còn bị chi phối bởi dòng khuôn (85,91% ở pair zh→vi, P1), nên cột "Mô tả mới (P1)" mới phản ánh phần dịch câu chưa thấy.
 
 ## 8. Việc tiếp theo
 - **[CHỜ]** Chạy công thức cuối (rank 64, 2 epoch, `w_title`) cho Qwen3-8B bản cụm. Đề xuất: bản cụm dùng 8B, bản pair giữ 4B (đã có adapter cuối 07/11/2026). Ước ~5–6 giờ RTX Pro 6000 cho 8B [ƯỚC].

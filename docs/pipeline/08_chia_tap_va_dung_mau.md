@@ -26,8 +26,8 @@ Thời gian: 31/10 – 12/11/2026, trên máy. Nguồn:
 - **Test khóa 10% = 2.558 sản phẩm** (zh→vi 1.485, vi→zh 1.073), lấy theo nhóm.
 - **Pool 23.017 sản phẩm** (zh→vi 13.352, vi→zh 9.665), chia **5 fold** theo nhóm, phân tầng hướng × ngành. Cỡ fold: 4.484 / 5.084 / 4.483 / 4.483 / 4.483.
 - Cụm và pair dùng **chung một cách chia** (cùng sản phẩm, cùng fold).
-- **Kiểm rò rỉ độc lập** (`kiem_ro_ri.py`): KHÔNG RÒ RỈ, 0 vi phạm.
-  - Riêng ở mức dòng thuộc tính: 85,0% dòng mô tả của test đã có nguyên văn trong pool. Đây là đặc điểm của dữ liệu thuộc tính (nhiều dòng lặp như "Xuất xứ: Trung Quốc"), không phải lỗi chia. Chính đặc điểm này làm Moses mạnh ở bản pair (file 09).
+- **Kiểm rò rỉ độc lập** (`kiem_ro_ri.py`): 0 vi phạm **ở cấp sản phẩm**. Không có sản phẩm gần-trùng giữa test và pool theo ngưỡng Jaccard; đây là held-out theo sản phẩm, **không** phải held-out cho từng dòng mô tả.
+  - Riêng ở mức dòng thuộc tính: 85,0% dòng mô tả của test đã có nguyên văn trong pool. Đây là đặc điểm của dữ liệu thuộc tính (nhiều dòng lặp như "Xuất xứ: Trung Quốc"), không phải lỗi chia. Chính đặc điểm này làm Moses mạnh ở bản pair trên toàn bộ mô tả; trên dòng mô tả mới, Moses học đủ gần Qwen3-4B ở pair (−2,50) nhưng kém ở cụm (−3,68) (P1, eval fold 0).
 
 Hash để kiểm:
 

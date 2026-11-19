@@ -39,16 +39,16 @@ Chỉ thắng khi `Δtitle / |Δmô tả| > (1-w)/w`. Suy ra w hòa vốn:
 
 Đọc: với w=0,10 (title 10% trọng số), cả 4 cấu hình đều thua natural vì tỉ lệ đánh đổi 1,0-1,6 << 9. Nhưng nếu hội đồng cho title nặng ≥ 0,39 (cụm) hoặc ≥ 0,50 (pair), kết luận đổi. Con số w hòa vốn không phụ thuộc w hiện tại, chỉ phụ thuộc Δtitle và Δmô tả.
 
-## 4. Đã chứng minh / chưa chứng minh
+## 4. Đã đo được / chưa đo được
 
-**Đã chứng minh [ĐO]:**
+**Đã đo được [ĐO]:**
 
 - Pipeline quota chạy đúng: 0 mẫu bị bỏ ở cap 2.048 (dài nhất 2.047), ngạch thực hiện lệch ≤0,0003, loss chuẩn hoá theo token đích, mỗi bước ~8.000 token đích, không cycle.
 - Với metric chính (zh->vi, 10/90) và 2 seed: natural > balanced > title_heavy (cụm); natural > attr_heavy > balanced (pair); cả 4 ứng viên đều âm hoặc đổi dấu.
 - Đánh đổi title↔mô tả là thật và nhất quán: tăng title luôn làm mô tả giảm; tỉ lệ đánh đổi 0,31-1,58, giảm dần khi title tăng.
 - Trên macro 50/50, cụm balanced hơn natural; tức kết luận phụ thuộc trọng số w.
 
-**Chưa chứng minh:**
+**Chưa đo được:**
 
 - Chưa khảo sát mức title 11-50%: tỉ lệ đánh đổi đo được là trung bình trên khoảng rộng, không phải đạo hàm tại 11%, nên không loại trừ được một điểm gấp khúc.
 - Chưa tách được nguyên nhân lệch 1,18 điểm của pair attr_heavy giữa v53 và v55 (nghi init/RNG hoặc phi tất định GPU; 5/6 cấu hình còn lại lặp trong 0,20).
@@ -57,12 +57,16 @@ Chỉ thắng khi `Δtitle / |Δmô tả| > (1-w)/w`. Suy ra w hòa vốn:
 
 ## 5. Câu viết cho báo cáo
 
-> Khảo sát quota trên 2 bộ (3 cấu hình/bộ, 2 seed, cap 2.048, loss chuẩn hoá theo token đích) cho thấy bảng natural — title khoảng 10,8% (cụm) và 10,3% (pair) tính trên token đích — là tốt nhất trên metric triển khai (zh->vi, title 10% / mô tả 90%). Tăng tỉ lệ title làm title tăng chậm dần nhưng mô tả giảm đều, với tỉ lệ đánh đổi 0,31-1,58, thấp hơn xa ngưỡng hòa vốn 9 của metric này. Trên macro 50/50 thì cụm balanced nhỉnh hơn, cho thấy kết luận phụ thuộc trọng số title; ngưỡng để cấu hình khác thắng natural là w≈0,39 (cụm) và w≈0,50 (pair). Khảo sát chỉ dùng để chọn bảng, chưa phải kết quả test.
+> **Bằng chứng chính cho `w_title` của bản cuối là thí nghiệm trọng số loss** (B/TL: 3 mức 1:1 khoảng 50%, khoảng 11%, 75%; 3 fold; có khoảng tin cậy; luật khóa trước), nơi mọi title được thấy đúng 2 epoch như nhau, chỉ đổi hệ số nhân loss và dữ liệu không bị lấy mẫu lại theo tỉ lệ. Khảo sát quota dưới đây chỉ là **kiểm chéo**, có confound tần suất: natural thấy khoảng 0,31 lượt title/epoch còn balanced khoảng 1,4.
 
-> Lưu ý cơ chế: screening điều khiển tần suất lấy mẫu theo token; bản giao dùng trọng số loss `w_title` để đạt cùng mức ~11% token title. Hai cách khác nhau, cùng nhắm một đại lượng.
+> Khảo sát quota trên 2 bộ (3 cấu hình/bộ, 2 seed, cap 2.048, loss chuẩn hoá theo token đích) cho thấy bảng natural, title khoảng 10,8% (cụm) và 10,3% (pair) tính trên token đích, cho kết quả cao nhất **trong 3 bảng đã thử** trên metric chính 10/90 (zh->vi). Tăng tỉ lệ title làm title tăng chậm dần nhưng mô tả giảm đều, với tỉ lệ đánh đổi 0,31-1,58, thấp hơn xa ngưỡng hòa vốn 9 của metric này. Trên macro 50/50 thì cụm balanced nhỉnh hơn, cho thấy kết luận phụ thuộc trọng số title; ngưỡng để cấu hình khác thắng natural là w≈0,39 (cụm) và w≈0,50 (pair). Đây là kiểm chéo để chọn bảng, chưa phải kết quả test; chưa thử mức 11–50% (mức 25% và 35% chưa chạy).
+
+> Lưu ý cơ chế: screening điều khiển tần suất lấy mẫu theo token; bản giao dùng trọng số loss `w_title` để đạt cùng mức ~11% token title. Hai cách khác nhau, cùng nhắm một đại lượng; chỉ cách thứ hai là bằng chứng chính.
+
+> Khoảng tin cậy của các bảng chỉ phủ dao động do chọn mẫu eval, không phủ dao động khởi tạo. Số seed: khảo sát quota 2 seed (42, 123); công thức chính 1 seed.
 
 ## 6. Việc tiếp
 
 - Không chạy thêm GPU để đổi bảng: natural là bảng đang dùng.
-- Nếu hội đồng yêu cầu đường cong đầy đủ: chạy thêm mức title 25% trên cụm, chấm 1.000 mẫu/nhóm 1688 (~2-3h).
+- ~~Nếu hội đồng yêu cầu đường cong đầy đủ: chạy thêm mức title 25% trên cụm~~ **Đã làm 18/11** (25% và 35%, công thức cuối, Kaggle L4x4, 1 seed) và đã có khoảng tin cậy: 35% − 11% = −0,39 [−0,68; −0,09] ở thước chính 10/90, 25% − 11% không phân biệt được: `docs/phan_bien_vong2/KET_QUA_P2.md` mục B. Câu "cao nhất trong 3 bảng đã thử" ở trên chỉ áp cho khảo sát quota; không dùng chữ "tối ưu".
 - Viết báo cáo với các mục 4 và 5 ở trên.

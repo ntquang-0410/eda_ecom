@@ -1,0 +1,24 @@
+{
+ "id": "trinhnhatanh/nlp-tlc-song-song",
+ "title": "nlp-tlc-song-song",
+ "code_file": "nlp-tlc-song-song.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_tpu": false,
+ "enable_internet": false,
+ "machine_shape": "NvidiaL4",
+ "dataset_sources": [
+  "trinhnhatanh/ft-qwen3-4b-pool",
+  "trinhnhatanh/ft-qwen3-4b-quota"
+ ],
+ "competition_sources": [
+  "gemma-4-developer-agent"
+ ],
+ "kernel_sources": [
+  "trinhnhatanh/ft-qwen3-4b-thu-vien",
+  "trinhnhatanh/ft-qwen3-4b-mo-hinh"
+ ],
+ "model_sources": []
+}

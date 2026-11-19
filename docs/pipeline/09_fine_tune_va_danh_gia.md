@@ -64,7 +64,13 @@ Kiểm trên 3 fold (mức mới trừ mốc 1 : 1):
 - Cụm đạt luật khóa trước. Pair đạt luật 3 fold riêng của pair (khóa ở Prompt 804). Lợi chủ yếu nằm ở dòng mới zh→vi.
 - Mức 75% title thua ở pair (−0,58 [−0,99; −0,19]) và hòa ở cụm, nên bỏ.
 - Kiểm lại lr 1e-4 ở mức 11%: không đạt, giữ 2e-4.
-- **Giới hạn:** chỉ thử 3 mức (50%, 11%, 75%). Vì vậy 11% là "tốt hơn 50%", chưa chứng minh là tối ưu.
+- **Giới hạn:** chỉ thử 3 mức (50%, 11%, 75%). Vì vậy 11% là "tốt hơn 50%", chưa phải mức cao nhất trong mọi mức có thể; chưa thử 11–50%.
+
+**Tách hai cơ chế (bổ sung 17/11).** Bằng chứng chính cho `w_title` là thí nghiệm **trọng số loss** ở trên: 3 mức, 3 fold, có khoảng tin cậy, luật khóa trước. Trong cơ chế này mọi title được thấy đúng 2 epoch như nhau, chỉ đổi hệ số nhân loss, nên **không dính** confound "tỉ trọng so với số lần thấy". Khảo sát quota (C1–C4, rank 16, một lượt, 2 seed, 300 mẫu/nhóm) chỉ là **kiểm chéo**, có confound tần suất (natural khoảng 0,31 lượt/epoch, balanced khoảng 1,4), không dùng làm căn cứ chính.
+
+~~Câu được phép (cũ, lỗi thời từ 18/11): "Trong 3 mức đã thử, khoảng 11% title cho kết quả cao nhất dưới thước 10/90 (zh→vi). Kết luận đổi nếu trọng số title của thước đo từ khoảng 0,39 (cụm) và 0,50 (pair) trở lên. Chưa thử mức 11–50%; mức 25% và 35% đang chạy."~~ Dùng câu ở đoạn "Cập nhật 18/11" bên dưới. Khoảng tin cậy của các bảng chỉ phủ dao động chọn mẫu eval, không phủ dao động khởi tạo; số seed: sàng lọc 2 seed, công thức chính 1 seed.
+
+**Cập nhật 18/11 (thay câu "đang chạy" ở trên):** mức 25% và 35% đã chạy (bản cụm, fold 0, 1 seed) và có khoảng tin cậy ghép cặp (`docs/phan_bien_vong2/KET_QUA_P2.md` mục B). Dưới thước chính 10/90: 25% − 11% = −0,19 [−0,41; +0,03]; 35% − 11% = −0,39 [−0,68; −0,09] (title zh→vi +1,19, mô tả zh→vi −0,56). Macro: ba mức không phân biệt được. Câu được phép mới: "dưới thước 10/90, 11% không kém 25% và hơn 35% một chút (0,4 điểm); tăng tỉ trọng title cải thiện title zh→vi nhưng đổi bằng mô tả". Không dùng chữ "tối ưu"; chỉ bản cụm, một seed, chưa chạy bản pair.
 
 **Kiểm chéo bằng khảo sát lấy mẫu theo hạn ngạch** (quota, phiên C1–C4: rank 16, một lượt, 2 seed, eval 1.200 mẫu fold 0):
 
@@ -83,7 +89,7 @@ Kiểm trên 3 fold (mức mới trừ mốc 1 : 1):
 
 ## 4. Đo test khóa MỘT lần (07/11, Kaggle bản 41) [ĐO, phiên B8]
 
-- So adapter fold 0 (`cum_f0_p11`, `pair_f0_p11`, học fold 1–4) với zero-shot, trên 5.116 mục / 2.558 sản phẩm mỗi nhánh.
+- Đây là **số test duy nhất** của nhánh: adapter fold 0 (`cum_f0_p11`, `pair_f0_p11`, học fold 1–4) so với zero-shot, trên 5.116 mục / 2.558 sản phẩm mỗi nhánh.
 - Luật khóa trước khi đo: thắng khi cận dưới 95% của chênh lớn hơn 0.
 
 | Nhánh | Hướng | Zero-shot | Fine-tune | Chênh [95%] |
@@ -94,7 +100,7 @@ Kiểm trên 3 fold (mức mới trừ mốc 1 : 1):
 | pair | zh→vi | 46.34 | 77.65 | +31.31 [+30.81; +31.83] |
 
 - Kiểm riêng zh→vi của bản cụm: tỉ lệ sai chữ Việt giảm từ 0,308 xuống 0,058; rò lời dẫn giảm từ 0,326 xuống 0.
-- Chênh khoảng 30 điểm **bị phóng đại một phần**, vì tham chiếu là bản dịch máy cùng kiểu với dữ liệu huấn luyện. Không nói "dịch tốt 77%".
+- Chênh khoảng 30 điểm **bị phóng đại một phần**, vì tham chiếu là bản dịch máy cùng kiểu với dữ liệu huấn luyện. Không nói "dịch tốt 77%". Bảng trên gồm cả dòng mô tả đã có nguyên văn trong train. Đã tách dòng khuôn/dòng mới trên test (19/11, đọc từ tổng hợp B8, xem `docs/phan_bien_vong2/KET_QUA_B8_DONG_MOI.md`): 86 đến 87% dòng mô tả zh→vi (73% vi→zh) đã thấy; trên dòng mô tả mới fine-tune hơn zero-shot khoảng 30 điểm chrF corpus (cụm zh→vi +30,1; pair zh→vi +30,6; pair vi→zh +29,7) so với +44 đến +60 trên dòng khuôn; chất lượng dòng mới khoảng 76, không phải 92 đến 94. Chưa có khoảng tin cậy cho phần tách.
 
 ## 5. Bản cuối (07/11, Kaggle bản 43) [ĐO, phiên B9]
 
@@ -121,29 +127,31 @@ Cách đo:
 
 **Pair (1.198 mẫu)**
 
-| Mô hình | Title | Mô tả | Chính | Macro | Chênh chính (câu) so với 4B |
-|---|---|---|---|---|---|
-| Qwen3-4B | 49.98 | 83.31 | 79.98 | 68.52 | mốc |
-| Qwen3-8B | 52.03 | 79.86 | 77.08 | 66.61 | +0.44 [−0.24; +1.14] |
-| EcomGPT-7B | 38.45 | 71.45 | 68.15 | 56.78 | −4.81 [−5.95; −3.79] |
-| OpenNMT (học đủ) | 48.27 | 77.28 | 74.38 | 54.89 | +0.39 [−1.09; +1.90] |
-| Moses (học đủ) | 54.93 | 83.65 | 80.78 | 68.08 | +1.86 [+0.67; +3.04] |
-| Moses (khớp 4M token) | 51.97 | 82.34 | 79.30 | 65.36 | +0.05 [−1.14; +1.23] |
+| Mô hình | Title | Mô tả | Chính | Macro | Chênh chính (câu) so với 4B | Mô tả mới (P1) |
+|---|---|---|---|---|---|---|
+| Qwen3-4B | 49.98 | 83.31 | 79.98 | 68.52 | mốc | 63.41 |
+| Qwen3-8B | 52.03 | 79.86 | 77.08 | 66.61 | +0.44 [−0.24; +1.14] | 54.38 |
+| EcomGPT-7B | 38.45 | 71.45 | 68.15 | 56.78 | −4.81 [−5.95; −3.79] | 40.19 |
+| OpenNMT (học đủ) | 48.27 | 77.28 | 74.38 | 54.89 | +0.39 [−1.09; +1.90] | 44.88 |
+| Moses (học đủ) | 54.93 | 83.65 | 80.78 | 68.08 | +1.86 [+0.67; +3.04] | 61.53 |
+| Moses (khớp 4M token) | 51.97 | 82.34 | 79.30 | 65.36 | +0.05 [−1.14; +1.23] | 60.18 |
 
 **Cụm (1.200 mẫu)**
 
-| Mô hình | Title | Mô tả | Chính | Macro | Chênh chính (câu) so với 4B |
-|---|---|---|---|---|---|
-| Qwen3-4B | 54.19 | 90.44 | 86.81 | 71.87 | mốc |
-| Qwen3-8B | 56.52 | 91.34 | 87.86 | 73.92 | **+1.03 [+0.71; +1.36]** |
-| EcomGPT-7B | 45.85 | 82.49 | 78.83 | 64.44 | −6.42 [−7.36; −5.55] |
-| OpenNMT (học đủ) | 47.01 | 84.34 | 80.61 | 58.72 | −5.57 [−6.42; −4.85] |
-| Moses (học đủ) | 54.93 | 88.48 | 85.12 | 69.77 | −1.51 [−2.06; −1.02] |
-| Moses (khớp 4M token) | 51.97 | 85.71 | 82.33 | 66.48 | −4.17 [−4.79; −3.60] |
+| Mô hình | Title | Mô tả | Chính | Macro | Chênh chính (câu) so với 4B | Mô tả mới (P1) |
+|---|---|---|---|---|---|---|
+| Qwen3-4B | 54.19 | 90.44 | 86.81 | 71.87 | mốc | 72.70 |
+| Qwen3-8B | 56.52 | 91.34 | 87.86 | 73.92 | **+1.03 [+0.71; +1.36]** | 74.75 |
+| EcomGPT-7B | 45.85 | 82.49 | 78.83 | 64.44 | −6.42 [−7.36; −5.55] | 61.22 |
+| OpenNMT (học đủ) | 47.01 | 84.34 | 80.61 | 58.72 | −5.57 [−6.42; −4.85] | 56.98 |
+| Moses (học đủ) | 54.93 | 88.48 | 85.12 | 69.77 | −1.51 [−2.06; −1.02] | 67.71 |
+| Moses (khớp 4M token) | 51.97 | 85.71 | 82.33 | 66.48 | −4.17 [−4.79; −3.60] | 61.34 |
 
-- **Cụm:** 8B hơn 4B rõ; 4B hơn Moses; EcomGPT và OpenNMT kém xa.
-- **Pair:** 4B, 8B, OpenNMT và Moses khớp 4M token nằm trong khoảng nhiễu; Moses học đủ dữ liệu nhỉnh hơn.
-  - Khoảng 87% dòng thuộc tính trong eval pair đã có nguyên văn trong train. Vì vậy Moses mạnh ở pair, và mất lợi thế khi phải dịch cả khối (cụm).
+- **Đây là eval fold 0**, tập đã dùng để chọn cấu hình (B6, tỉ trọng title, 5 mô hình, adapter demo), train = fold 1–4; **chưa đo test** cho 5 mô hình. Số trên fold 0 bị ảnh hưởng bởi việc chọn; tỉ trọng title có thêm kiểm độc lập ở fold 1 và 2.
+- **Cụm:** 8B hơn 4B rõ; 4B hơn Moses; EcomGPT và OpenNMT kém xa. Trên **dòng mô tả mới** (P1), 8B vẫn hơn 4B (+1,83 zh→vi; +2,54 vi→zh), OpenNMT kém −10,07, Moses học đủ kém −3,68.
+- **Pair:** 4B, 8B, OpenNMT và Moses khớp 4M token nằm trong khoảng nhiễu trên toàn bộ mô tả; Moses học đủ dữ liệu nhỉnh hơn. Nhưng trên **dòng mô tả mới**, OpenNMT kém 4B −8,29 (zh→vi) và −17,76 (vi→zh); Moses học đủ −2,50 và −2,78. Cột "Mô tả mới (P1)" là chrF corpus gộp trên dòng chưa từng có nguyên văn trong train (OpenNMT 44,88 so 4B 63,41, tức −18,5); các số "−8,29" và "−17,76" là chênh chrF tính theo từng sản phẩm rồi lấy trung bình (bootstrap theo sản phẩm), nên độ lớn nhỏ hơn nhưng cùng chiều.
+  - **OpenNMT 3 seed (18/11, Colab T4; seed 42, 43, 44):** "hòa" với 4B ở pair chỉ còn đúng cho chrF câu trung bình chính (0,1 title + 0,9 mô tả, zh→vi): +0,30 [−1,07; +1,71] (trung bình 3 seed theo mẫu, cả ba seed đều chứa 0). Ở macro OpenNMT kém −8,65 [−9,66; −7,64]; ở cụm kém −5,52 [−6,39; −4,77] (chính) và −12,75 (macro); ở chrF corpus kém 5,3 (pair) và 6,2 (cụm) điểm. Giới hạn: vẫn là cấu hình 4 lớp/256, chưa phải recipe chuẩn 6 lớp/512; 4B chỉ 2 seed (`KET_QUA_P2.md` mục A).
+  - 85,91% dòng mô tả eval pair zh→vi đã có nguyên văn trong train (P1; A7 ghi 85,0% trên test). Vì vậy điểm mô tả toàn phần nghiêng về tái tạo khuôn; cột dòng mới mới là phần dịch câu mới.
 - Có thêm BLEU/SacreBLEU/TER theo cách đo của bài VLSP: `TONG_HOP` mục 6.2.
 
 ## 7. Thử chéo dạng dữ liệu và công thức chính trên eval fold 0 [ĐO, phiên E1–E3]

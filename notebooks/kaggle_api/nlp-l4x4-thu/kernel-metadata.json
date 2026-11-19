@@ -1,0 +1,23 @@
+{
+ "id": "trinhnhatanh/nlp-l4x4-thu",
+ "title": "nlp-l4x4-thu",
+ "code_file": "nlp-l4x4-thu.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_tpu": false,
+ "enable_internet": false,
+ "machine_shape": "NvidiaL4",
+ "dataset_sources": [
+  "trinhnhatanh/ft-qwen3-4b-pool"
+ ],
+ "competition_sources": [
+  "gemma-4-developer-agent"
+ ],
+ "kernel_sources": [
+  "trinhnhatanh/ft-qwen3-4b-thu-vien",
+  "trinhnhatanh/ft-qwen3-4b-mo-hinh"
+ ],
+ "model_sources": []
+}
