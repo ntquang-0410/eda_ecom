@@ -96,6 +96,10 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
         else:
             optimizer.step()
         scheduler.step()
+        if args.save_every and (step + 1) % args.save_every == 0:
+            ck = out_dir / f"adapter_{config_name}_seed{seed}_ckpt"
+            model.save_pretrained(ck)
+            log(f"checkpoint {ck.name} step {step+1}")
         if step % 25 == 0:
             log(f"{config_name} step {step}/{args.steps} min={(time.time()-started)/60:.1f}")
 
@@ -110,10 +114,20 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
     part["config"] = config_name
     part["seed"] = seed
     part.to_parquet(out_dir / f"hyp_{config_name}_seed{seed}.parquet", index=False)
+    drawn = [i for s in plan for i in s]
+    groups = train["group"].to_numpy()
+    exposure = {}
+    for g in sorted(set(groups.tolist())):
+        pop = int((groups == g).sum())
+        d = [i for i in drawn if groups[i] == g]
+        exposure[str(g)] = {"population_rows": pop, "draws": int(len(d)),
+                            "unique_rows": int(len(set(d))),
+                            "coverage_pct": round(100 * len(set(d)) / max(1, pop), 2),
+                            "draws_per_row": round(len(d) / max(1, len(set(d))), 3)}
     info = {"config": config_name, "seed": seed, "steps": len(plan),
             "tokens": round(sum(float(train["eff_tokens"].iloc[i]) for s in plan for i in s)),
             "minutes": round((time.time()-started)/60, 1),
-            "actual_share": actual}
+            "actual_share": actual, "exposure": exposure}
     (out_dir / f"run_{config_name}_seed{seed}.json").write_text(
         json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
     log(f"done {info}")
@@ -134,6 +148,7 @@ def main() -> int:
     ap.add_argument("--steps", type=int, default=500)
     ap.add_argument("--max-seq", type=int, default=960)
     ap.add_argument("--micro-batch", type=int, default=4)
+    ap.add_argument("--save-every", type=int, default=100)
     ap.add_argument("--lr", type=float, default=1e-4)
     ap.add_argument("--dtype", choices=("bf16", "fp16"), default="bf16")
     args = ap.parse_args()

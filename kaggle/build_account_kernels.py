@@ -13,7 +13,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TEMPLATE = Path("/tmp/nad_m4b/tiki-m4b-abal.ipynb")
+TEMPLATE = ROOT / "kaggle/nadsa091/tiki-m4b-abal/tiki-m4b-abal.ipynb"
 MODEL = "qwen-lm/qwen-3/Transformers/4b/1"
 
 JOBS = {
@@ -26,6 +26,34 @@ JOBS = {
     "b-s123": dict(name="tiki-m4b-b-s123", title="Tiki M4b B S123", dataset="B",
                    config="balanced", seed=123, label="qwen4b"),
 }
+
+
+PREFLIGHT = r'''
+import hashlib, re, unicodedata
+from pathlib import Path
+import pandas as pd
+def _n(x):
+    x = unicodedata.normalize("NFKC", str(x or "")).casefold()
+    return re.sub(r"\\s+", " ", x).strip()
+def _h(x):
+    return hashlib.sha256(x.encode("utf-8")).hexdigest()
+_hits = sorted(Path("/kaggle/input").rglob("eval_F_v2_common.parquet"))
+assert _hits, "không thấy eval_F_v2_common.parquet"
+v2 = pd.read_parquet(_hits[0])
+ev_ids = set(pd.read_parquet(DATA_SRC / "eval_A.parquet").eval_id.astype(str))
+assert set(v2.eval_id.astype(str)) <= ev_ids, "eval_F_v2_common không phải tập con của eval dùng để chấm"
+for ds in ("A", "B"):
+    U = pd.read_parquet(DATA_SRC / f"units_{ds}.parquet")
+    tr = U[U.split.isin(["train", "dev"])]
+    assert not (set(v2.product_id.astype(str)) & set(tr.product_id.astype(str))), f"LEAK product_id {ds}"
+    ev_src = {_h(_n(x)) for x in v2.source_text}
+    tr_src = {_h(_n(x)) for x in tr.source_text}
+    assert not (ev_src & tr_src), f"LEAK source_hash {ds}: {len(ev_src & tr_src)}"
+    ev_pair = {_h(_n(s) + "\\x1f" + _n(t)) for s, t in zip(v2.source_text, v2.target_text)}
+    tr_pair = {_h(_n(s) + "\\x1f" + _n(t)) for s, t in zip(tr.source_text, tr.target_text)}
+    assert not (ev_pair & tr_pair), f"LEAK pair_hash {ds}: {len(ev_pair & tr_pair)}"
+print("PREFLIGHT 4-KEY LEAK CHECK OK", len(v2))
+'''
 
 
 def build(owner: str, job: dict, max_seq: int = 960) -> Path:
@@ -55,6 +83,10 @@ def build(owner: str, job: dict, max_seq: int = 960) -> Path:
                             f"OUT / f'hyp_{{MODEL_LABEL}}_{{DATASET.lower()}}_{{CONFIG}}_seed{job['seed']}.parquet'")
         cell["source"] = text.splitlines(keepends=True)
 
+    cells = nb["cells"]
+    if not any("PREFLIGHT 4-KEY" in "".join(c.get("source", [])) for c in cells):
+        cells.insert(3, {"cell_type": "code", "execution_count": None, "metadata": {},
+                         "outputs": [], "source": PREFLIGHT.splitlines(keepends=True)})
     folder = ROOT / "kaggle" / owner / job["name"]
     folder.mkdir(parents=True, exist_ok=True)
     (folder / f"{job['name']}.ipynb").write_text(
