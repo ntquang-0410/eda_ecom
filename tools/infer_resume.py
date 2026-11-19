@@ -59,7 +59,7 @@ def main() -> int:
     ap.add_argument("--max-seq", type=int, default=960)
     ap.add_argument("--batch-long", type=int, default=4)
     ap.add_argument("--batch-short", type=int, default=16)
-    ap.add_argument("--padding-side", default="right",
+    ap.add_argument("--padding-side", default="left",
                     choices=["right", "left"],
                     help="right = giống protocol train (padding='max_length'); left = nhanh/chuẩn cho decoder-only")
     args = ap.parse_args()
