@@ -112,6 +112,9 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
             ck = out_dir / f"adapter_{config_name}_seed{seed}_ckpt"
             model.save_pretrained(ck)
             log(f"checkpoint {ck.name} step {step+1}")
+            if args.upload_script:
+                import subprocess
+                subprocess.run(["bash", args.upload_script, str(ck), str(step + 1)], check=False)
         if step % 25 == 0:
             log(f"{config_name} step {step}/{args.steps} min={(time.time()-started)/60:.1f}")
 
@@ -163,6 +166,7 @@ def main() -> int:
     ap.add_argument("--save-every", type=int, default=100)
     ap.add_argument("--init-adapter", default="", help="thư mục adapter để warm-start")
     ap.add_argument("--start-step", type=int, default=0, help="bỏ qua N step đầu của plan")
+    ap.add_argument("--upload-script", default="", help="script nhận đường dẫn ckpt để backup")
     ap.add_argument("--lr", type=float, default=1e-4)
     ap.add_argument("--dtype", choices=("bf16", "fp16"), default="bf16")
     args = ap.parse_args()
