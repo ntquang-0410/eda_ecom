@@ -18,9 +18,9 @@ Mục đích: lưu đủ artefact để có thể ngắt máy A100/Colab bất c
 | Báo cáo 2×2 / seed / NLLB | xong | `reports/CONTROLS_2X2.md` |
 | Báo cáo matrix v2 + §10 control | xong | `reports/MATRIX_5X2_EVAL_F_V2.md` |
 
-## 2. Việc DUY NHẤT còn thiếu
+## 2. Việc từng thiếu — ĐÃ XONG 2026-11-19
 
-**Inference Qwen3-4B A seed 123** (`hyp_qwen4b_a_seed123.parquet`).
+**Inference Qwen3-4B A seed 123** — đã chạy xong 2026-11-19: 1.500 dòng, 15 rỗng, 50,7 phút (left padding). Điểm: **0,8511 / 0,0637**.
 
 - Train đã xong 500 step; adapter đã lưu: `/content/dl/a123/out_A_qwen4b_natural/adapter_natural_seed123` (127 MB)
 - Bản backup adapter trên Kaggle: dataset `nguynthanhquang/qwen4b-a-s123-adapter`
@@ -103,3 +103,11 @@ uv pip install --python /content/cometgpu/bin/python 'numpy<2' pandas 'pyarrow==
 | Kaggle kernels | `nadsa091/tiki-m4b-abal`, `nadsa091/tiki-m4b-bnat`, `anhtamxinhdep/tiki-m4b-b-s123`, `anhtamxinhdep/tiki-m4b-a-s123` (adapter), `nguynthanhquang/tiki-nllb-b-infer` |
 
 GPU đã được giải phóng (0 MiB, 0% util), không còn tiến trình inference/scoring/watcher chạy.
+
+## 7. Cập nhật 2026-11-19 — hoàn tất checkpoint
+
+- `a-s123` inference xong bằng `tools/infer_resume.py` với **left padding** (right padding cho 640/1.500 dòng rỗng — đã loại, xem `.artifacts/hyp/_bad_rightpad/`).
+- Seed 42 vs 123: A-natural **−0,0072** [−0,0144; −0,0009]; B-balanced +0,0008 [−0,0030; +0,0048].
+- Seed noise ước lượng **0,005–0,007 COMET (1688)** → khoảng cách A-natural vs A-balanced (0,0107) chỉ ~1,5 lần seed noise.
+- Backup artefact: Kaggle dataset **`nguynthanhquang/tiki-matrix-artifacts`** (16 hyp, 32 score, 3 report, 4 tool).
+- Git commit local `4a081d9` nhưng **push thất bại** (VM mới không có credential GitHub); HF upload cũng không làm được vì `.env` mất `HF_TOKEN`. Muốn đẩy lại cần token.

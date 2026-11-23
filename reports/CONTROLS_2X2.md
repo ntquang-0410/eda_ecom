@@ -49,16 +49,19 @@ Cùng quota 4M token, cùng `eval_F_v2_common`, LoRA r16.
 
 ## 3. Seed 42 vs 123 (Qwen3-4B)
 
-| Cell | Seed 42 | Seed 123 | Δ (123−42) |
-|---|---:|---:|---:|
-| B-balanced 1688 | 0,8471 | 0,8479 | +0,0008 [−0,0030; +0,0048] |
-| B-balanced Tiki QE | 0,0461 | 0,0517 | +0,0056 [−0,0054; +0,0171] |
-| A-natural 1688 | 0,8584 | *đang inference trên A100* | — |
-| A-natural Tiki QE | 0,0573 | *đang inference* | — |
+| Cell | Seed 42 | Seed 123 | Δ (123−42) | CI 95% |
+|---|---:|---:|---:|---|
+| A-natural 1688 | 0,8584 | 0,8511 | **−0,0072** | [−0,0144; −0,0009]* |
+| A-natural Tiki QE | 0,0573 | 0,0637 | +0,0064 | [−0,0040; +0,0174] |
+| B-balanced 1688 | 0,8471 | 0,8479 | +0,0008 | [−0,0030; +0,0048] |
+| B-balanced Tiki QE | 0,0461 | 0,0517 | +0,0056 | [−0,0054; +0,0171] |
 
-**Đọc:** với B-balanced, đổi seed 42 → 123 làm điểm đổi **+0,0008** trên 1688 và +0,0056 trên Tiki, cả hai **không có ý nghĩa** (CI chứa 0). Nghĩa là dao động do seed nhỏ hơn nhiều so với khoảng cách giữa các cấu hình (0,011–0,015) và giữa các model (0,03–0,5). Kết luận xếp hạng trong ma trận không phải nhiễu seed, nhưng vẫn chỉ có 2 seed nên CI tổng hợp cần ghi rõ là "seed variance ước lượng từ 1 cặp".
+**Đọc kết quả — quan trọng cho mọi kết luận so sánh:**
 
-Ghi chú vận hành: `a-s123` train xong 500 step nhưng bị cắt ở inference do trần 12h của Kaggle; adapter đã lưu và đang được chạy inference-only trên A100 (batch 1 cho description, ~34 giây/dòng, ETA ~12:30 UTC).
+1. Seed variance **không nhỏ như ước lượng ban đầu từ B-balanced**. Với A-natural, đổi seed làm điểm đổi **−0,0072** trên 1688 (CI không chứa 0). Với B-balanced chỉ +0,0008. Vậy seed noise phụ thuộc cấu hình, ước lượng tốt nhất hiện có là **0,005–0,007 COMET trên 1688**.
+2. Khoảng cách A-natural (0,8584) so với A-balanced (0,8477) là **0,0107**, tức chỉ ~1,5 lần seed noise. Điểm của A-balanced thấp hơn **cả hai** seed của A-natural (0,8584 và 0,8511), nên hiệu ứng "balanced làm giảm A" vẫn có khả năng thật, nhưng **không đủ mạnh để tuyên bố chắc chắn** khi chỉ có 1 seed cho A-balanced.
+3. Hệ quả: câu "A-natural tốt nhất" phải viết là **"A-natural có điểm cao nhất, nhưng mức hơn 0,011 nằm trong khoảng 1–1,5 lần dao động seed; cần ≥3 seed để kết luận"**. Không dùng paired bootstrap (chỉ phủ variance của eval) làm CI cho so sánh giữa cấu hình.
+4. Trên Tiki QE, mọi Δ seed đều không có ý nghĩa.
 
 ## 4. Trạng thái artefact
 
@@ -67,11 +70,13 @@ Ghi chú vận hành: `a-s123` train xong 500 step nhưng bị cắt ở inferen
 | `.artifacts/hyp/hyp_qwen4b_a_balanced_seed42.parquet` | A-balanced, 1.500 dòng, 15 rỗng |
 | `.artifacts/hyp/hyp_qwen4b_b_natural_seed42.parquet` | B-natural, 1.500 dòng, 15 rỗng |
 | `.artifacts/hyp/hyp_qwen4b_b_balanced_seed123.parquet` | B-balanced seed 123, 1.500 dòng, 15 rỗng (đã chấm: 0,8479 / 0,0517) |
+| `.artifacts/hyp/hyp_qwen4b_a_seed123.parquet` | A-natural seed 123, 1.500 dòng, 15 rỗng (đã chấm: 0,8511 / 0,0637) |
 | `.artifacts/hyp/hyp_nllb_a_seed42.parquet` / `hyp_nllb_b_seed42.parquet` | NLLB A/B, 1.500 dòng (2 / 9 rỗng) |
 | `.artifacts/comet_gpu/scores/` | Điểm COMET 5 cell mới + 10 cell cũ (v2_common) |
 
 ## 5. Việc còn lại
 
-1. Inference `a-s123` xong → chấm COMET → điền bảng seed 42 vs 123.
+- (đã xong) inference + chấm COMET `a-s123`.
+
 2. Cập nhật `MATRIX_5X2_EVAL_F_V2.md` §9 với kết luận 2×2 (A-natural là cấu hình chính).
 3. Bổ sung NLLB vào `OPENNMT_FAIRNESS.md` §6.

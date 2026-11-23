@@ -161,12 +161,17 @@ Chi tiết: [`CONTROLS_2X2.md`](CONTROLS_2X2.md).
 
 ### 10.2. Seed 42 vs 123
 
-| Cell | Seed 42 | Seed 123 | Δ |
+| Cell | Seed 42 | Seed 123 | Δ (123−42) |
 |---|---:|---:|---:|
+| A-natural 1688 | 0,8584 | 0,8511 | **−0,0072** [−0,0144; −0,0009]* |
+| A-natural Tiki QE | 0,0573 | 0,0637 | +0,0064 [−0,0040; +0,0174] |
 | B-balanced 1688 | 0,8471 | 0,8479 | +0,0008 [−0,0030; +0,0048] |
 | B-balanced Tiki QE | 0,0461 | 0,0517 | +0,0056 [−0,0054; +0,0171] |
 
-Dao động seed < 0,006 → nhỏ hơn khoảng cách giữa các cấu hình/model.
+Dao động seed ước lượng **0,005–0,007 COMET trên 1688** (A-natural −0,0072; B-balanced +0,0008). Vì vậy:
+- Khoảng cách A-natural vs A-balanced (0,0107) chỉ ~1,5 lần seed noise → **chưa đủ mạnh để kết luận chắc chắn**; A-balanced thấp hơn cả hai seed của A-natural nên hiệu ứng có khả năng thật, nhưng cần ≥3 seed.
+- Khoảng cách giữa model (Qwen vs EcomGPT 0,03; vs Moses 0,07; vs NLLB 0,22; vs OpenNMT 0,51) đều lớn hơn seed noise nhiều lần.
+- CI của paired bootstrap chỉ phủ variance eval, **không** phủ seed; phải ghi rõ khi trích dẫn.
 
 ### 10.3. NLLB-200-distilled-600M (pretrained NMT control)
 

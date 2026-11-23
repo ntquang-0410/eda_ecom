@@ -1,0 +1,54 @@
+{
+  "cell": "qwen4b_b_natural",
+  "dataset": "B",
+  "config": "natural",
+  "seed": 42,
+  "dataset_hash": "e03316f78f28f169fbc22235455cf4f002126b8d1f056bf2f0da53baf4cc74f0",
+  "eval_hashes": {
+    "eval_F": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+    "eval_F_v2": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+    "eval_F_v2_common": "b256d8402e0188dc1b4daa5274c328149659387a07f263bfda1bc0676fe94f0a"
+  },
+  "exposure": {
+    "steps": 500,
+    "draws": 13615,
+    "unique_rows": 12076,
+    "actual_share": {
+      "1688_description": 0.495658,
+      "1688_title": 0.045228,
+      "tiki_description": 0.431855,
+      "tiki_title": 0.027259
+    },
+    "groups": {
+      "1688_description": {
+        "population_rows": 15986,
+        "draws": 4031,
+        "unique_rows": 3559,
+        "coverage_pct": 22.26,
+        "draws_per_row": 1.133
+      },
+      "1688_title": {
+        "population_rows": 15350,
+        "draws": 3884,
+        "unique_rows": 3449,
+        "coverage_pct": 22.47,
+        "draws_per_row": 1.126
+      },
+      "tiki_description": {
+        "population_rows": 11017,
+        "draws": 2806,
+        "unique_rows": 2482,
+        "coverage_pct": 22.53,
+        "draws_per_row": 1.131
+      },
+      "tiki_title": {
+        "population_rows": 11653,
+        "draws": 2894,
+        "unique_rows": 2586,
+        "coverage_pct": 22.19,
+        "draws_per_row": 1.119
+      }
+    }
+  },
+  "note": ""
+}

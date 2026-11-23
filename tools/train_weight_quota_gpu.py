@@ -71,8 +71,14 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
     use_fp16 = args.dtype == "fp16"
     scaler = torch.amp.GradScaler("cuda", enabled=use_fp16)
     autocast = torch.float16 if use_fp16 else torch.bfloat16
+    # pre-advance scheduler
     if args.start_step:
-        # pre-advance scheduler để LR khớp vị trí khi warm-start
+        # pre-advance scheduler để LR đúng vị trí khi warm-start
+        for _ in range(args.start_step):
+            scheduler.step()
+    # pre-advance scheduler
+    if args.start_step:
+        # pre-advance scheduler để LR đúng vị trí khi warm-start
         for _ in range(args.start_step):
             scheduler.step()
     started = time.time()
@@ -110,7 +116,6 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
         if args.save_every and (step + 1) % args.save_every == 0:
             ck = out_dir / f"adapter_{config_name}_seed{seed}_ckpt"
             model.save_pretrained(ck)
-            (ck / "STEP.txt").write_text(str(step + 1), encoding="utf-8")
             log(f"checkpoint {ck.name} step {step+1}")
             if args.upload_script:
                 import subprocess
@@ -142,8 +147,7 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
     info = {"config": config_name, "seed": seed, "steps": len(plan),
             "tokens": round(sum(float(train["eff_tokens"].iloc[i]) for s in plan for i in s)),
             "minutes": round((time.time()-started)/60, 1),
-            "actual_share": actual, "exposure": exposure,
-            "started_step": args.start_step, "resumed_from": args.init_adapter or None}
+            "actual_share": actual, "exposure": exposure}
     (out_dir / f"run_{config_name}_seed{seed}.json").write_text(
         json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
     log(f"done {info}")
@@ -164,12 +168,12 @@ def main() -> int:
     ap.add_argument("--steps", type=int, default=500)
     ap.add_argument("--max-seq", type=int, default=960)
     ap.add_argument("--micro-batch", type=int, default=4)
+    ap.add_argument("--save-every", type=int, default=100)
+    ap.add_argument("--init-adapter", default="", help="thư mục adapter để warm-start")
+    ap.add_argument("--start-step", type=int, default=0, help="bỏ qua N step đầu của plan")
+    ap.add_argument("--upload-script", default="", help="script nhận đường dẫn ckpt để backup")
     ap.add_argument("--lr", type=float, default=1e-4)
     ap.add_argument("--dtype", choices=("bf16", "fp16"), default="bf16")
-    ap.add_argument("--save-every", type=int, default=100)
-    ap.add_argument("--init-adapter", default="", help="adapter để warm-start")
-    ap.add_argument("--start-step", type=int, default=0, help="bỏ qua N step đầu của plan")
-    ap.add_argument("--upload-script", default="", help="script backup nhận (ckpt_dir, step)")
     args = ap.parse_args()
 
     data = Path(args.data_root)
