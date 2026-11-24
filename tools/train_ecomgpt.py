@@ -86,6 +86,7 @@ def main() -> int:
     ap.add_argument("--start-step", type=int, default=0)
     ap.add_argument("--upload-script", default=None)
     ap.add_argument("--skip-infer", action="store_true")
+    ap.add_argument("--log-every", type=int, default=5)
     args = ap.parse_args()
 
     out = Path(args.out)
@@ -122,6 +123,7 @@ def main() -> int:
                                                 bias="none", task_type="CAUSAL_LM",
                                                 target_modules="all-linear"))
     model.to("cuda")
+    log(f"param dtype={next(model.parameters()).dtype}")
     model.train()
     model.config.use_cache = False
 
@@ -167,7 +169,7 @@ def main() -> int:
         torch.nn.utils.clip_grad_norm_(params, 1.0)
         opt.step()
         sched.step()
-        if (step + 1) % 25 == 0 or step == start:
+        if (step + 1) % max(1, args.log_every) == 0 or step == start:
             log(f"{args.configs} step {step+1}/{args.steps} loss={last_loss:.4f} "
                 f"min={(time.time()-started)/60:.1f} lr={sched.get_last_lr()[0]:.2e}")
         if args.save_every and (step + 1) % args.save_every == 0 and (step + 1) < args.steps:
