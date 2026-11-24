@@ -84,7 +84,18 @@ def build_plan(rows: pd.DataFrame, tokenizer, steps: int, tokens_per_step: float
             continue
         mid = len(last) // 2
         plan.extend([last[:mid], last[mid:]])
-    return plan[:steps]
+    plan = plan[:steps]
+    # chunk cuối có thể chứa toàn bộ phần dư (hàng chục nghìn dòng) → cắt về đúng
+    # ngân sách token/step để không tạo một mega-batch (LR ở bước cuối ~1e-9).
+    if len(plan[-1]) > 1:
+        keep, tok = [], 0
+        for item in plan[-1]:
+            keep.append(item)
+            tok += len(item[0])
+            if tok >= tokens_per_step:
+                break
+        plan[-1] = keep
+    return plan
 
 
 def main() -> int:
