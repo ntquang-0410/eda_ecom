@@ -32,6 +32,22 @@ TEMPLATE = ("Below is an instruction that describes a task, paired with an input
             "### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n")
 
 
+def chunked_ce(logits, labels, chunk: int = 256):
+    """Cross-entropy theo từng khúc sequence: cùng giá trị toán học với CE đầy đủ
+    nhưng tránh cấp phát logits.float() toàn bộ (vocab BLOOM 250k)."""
+    import torch.nn.functional as F
+    n = int((labels != -100).sum().item())
+    if n == 0:
+        return logits.sum() * 0.0
+    total = None
+    for s in range(0, logits.shape[1], chunk):
+        lg = logits[:, s:s + chunk].float()
+        lb = labels[:, s:s + chunk]
+        part = F.cross_entropy(lg.reshape(-1, lg.shape[-1]), lb.reshape(-1),
+                               ignore_index=-100, reduction="sum")
+        total = part if total is None else total + part
+    return total / n
+
 def log(msg: str) -> None:
     print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
 
@@ -164,10 +180,11 @@ def main() -> int:
             ids = torch.tensor([x[0] + [tokenizer.pad_token_id] * (L - len(x[0])) for x in chunk]).cuda()
             lab = torch.tensor([x[1] + [-100] * (L - len(x[1])) for x in chunk]).cuda()
             mask = torch.tensor([[1] * len(x[0]) + [0] * (L - len(x[0])) for x in chunk]).cuda()
-            o = model(input_ids=ids, labels=lab, attention_mask=mask)
+            o = model(input_ids=ids, attention_mask=mask)
             n_tok = int((lab != -100).sum().item())
-            (o.loss * (n_tok / max(1.0, step_tokens))).backward()
-            last_loss = float(o.loss)
+            loss = chunked_ce(o.logits, lab) * (n_tok / max(1.0, step_tokens))
+            loss.backward()
+            last_loss = float(loss.detach()) * (step_tokens / max(1.0, n_tok))
         torch.nn.utils.clip_grad_norm_(params, 1.0)
         opt.step()
         sched.step()
