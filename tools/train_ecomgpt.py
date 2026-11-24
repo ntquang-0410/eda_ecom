@@ -174,6 +174,9 @@ def main() -> int:
         items = plan[step]
         opt.zero_grad(set_to_none=True)
         step_tokens = sum(len(x[0]) for x in items)
+        if step >= args.steps - 12:
+            log(f"DBG step {step} rows={len(items)} maxtok={max(len(x[0]) for x in items)} "
+                f"tokens={int(step_tokens)}")
         for s0 in range(0, len(items), args.micro_batch):
             chunk = items[s0:s0 + args.micro_batch]
             L = max(len(x[0]) for x in chunk)
