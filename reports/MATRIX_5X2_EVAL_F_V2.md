@@ -183,3 +183,31 @@ Dao động seed ước lượng **0,005–0,007 COMET trên 1688** (A-natural �
 | OpenNMT from-scratch B-natural | 0,3387 | −1,4074 |
 
 NLLB hơn OpenNMT from-scratch ~0,29/0,21 nhưng vẫn kém Qwen3-4B ~0,22 trên 1688 → kết luận "OpenNMT yếu do pretraining/capacity/recipe" được xác nhận, không phải "paradigm NMT".
+
+## 11. Tái lập & seed bổ sung (2026-11-24)
+
+### 11.1. 8B B-natural — artefact tái lập
+
+Bản chạy 23/11 bị mất hyp cùng VM A100. Đã inference lại từ `nguynthanhquang/qwen8b-b-ckpt` step 500:
+
+| Cell | 1688 da | Tiki QE | BLEU 1688 | n |
+|---|---:|---:|---:|---|
+| Qwen3-8B B-natural (tái lập) | 0,8514 | 0,0624 | 69,87 | 231 / 600 |
+
+Trùng khớp tuyệt đối với điểm đã ghi hôm 23/11 ⇒ cell 8B B giờ **có artefact đầy đủ** (hyp 1.500 dòng + score từng dòng).
+
+### 11.2. Seed 7 — Qwen3-4B và NLLB
+
+| Cell | 1688 da | Tiki QE | Artefact |
+|---|---:|---:|---|
+| Qwen3-4B A-natural seed 7 | ⏳ chờ inference | ⏳ | adapter step 500 đã có (`qwen4b-a-s7-ckpt`) |
+| Qwen3-4B B-balanced seed 7 | ⏳ chạy lại (hyp cũ sai adapter) | ⏳ | adapter thật step 500 |
+| NLLB A seed 7 | 0,6304 | −0,5427 | ✅ |
+| NLLB B seed 7 | 0,6382 | −0,5192 | ✅ |
+| EcomGPT A-balanced (tái lập) | 0,8156 | 0,0020 | ✅ adapter step 500 trên Kaggle |
+
+**Đọc kết quả:** với Qwen3-4B, khoảng cách A-natural − A-balanced seed 42 là 0,0107; NLLB cho thấy chênh lệch A/B đảo dấu giữa seed 42 và seed 7 (0,6344 vs 0,6304 cho A; 0,5517 vs 0,6382 cho B) ⇒ dao động seed của control NMT lớn hơn hiệu ứng dữ liệu. Vì vậy mọi so sánh A/B giữa các cấu hình phải kèm seed noise, không chỉ CI bootstrap.
+
+### 11.3. Hạn chế công bằng của cell EcomGPT
+
+Recipe EcomGPT chia 8.000 token/step theo **độ dài chuỗi đã encode** (prompt + source + target), trong khi Qwen/NLLB chia theo **`eff_tokens`** (source + target). Đo trên A-balanced: 4,0 M token encoded ≈ **1,42 M token hiệu dụng** ⇒ EcomGPT chỉ thấy ~35% ngân sách 4 M token của các model khác. Đây là hạn chế của recipe, cần nêu khi so sánh EcomGPT với Qwen/NLLB.
