@@ -101,3 +101,16 @@ Chấm bằng `venv_comet` trên Colab A100, lọc đúng 831 `eval_id` của `d
 3. **Bài học kiểm tra artefact:** kernel infer dùng `rglob('adapter_config.json')` trên `/kaggle/input` có thể bắt nhầm adapter mẫu của competition. Đã vá builder resume; mọi cell cần assert đường dẫn adapter chứa tên dataset đã train.
 
 Bảng NLLB ở §2 chỉ nên trích cho seed 42; khi trích seed 7 phải ghi rõ là cell bổ sung chưa có CI.
+
+## 7. EcomGPT-7B — hai cell control bổ sung (2026-11-24)
+
+| Cell | 1688 da | Tiki QE | Kết luận |
+|---|---:|---:|---|
+| EcomGPT A-balanced seed 42 | 0,8156 | 0,0020 | ✅ hợp lệ (adapter step 500 trên Kaggle) |
+| EcomGPT B-natural seed 42 | — | — | ❌ **FAILED** — generation thoái hoá |
+
+**B-natural thoái hoá:** train đủ 500 step nhưng loss về ~1e-4 rất sớm; khi inference, **1.471/1.500 hyp rỗng**, 29 dòng còn lại là chuỗi lặp `"......"` / `"* * * *"`. Không chấm COMET cell này (điểm sẽ vô nghĩa). Artefact giữ để điều tra: `.artifacts/hyp/hyp_ecomgpt_b_natural_seed42_FAILED.parquet`.
+
+**Giả thuyết:** B-natural rút 13.601 dòng (trung bình 294 token/dòng) → mỗi step chỉ ~20 dòng; target là description dài, nhiều boilerplate lặp giữa các sản phẩm → model học thuộc rồi suy biến khi sinh tự do. Recipe A2 vốn chọn `balanced` cho dataset B, không phải `natural`. Muốn có cell B-natural hợp lệ cần hạ LR (≤5e-5) hoặc dừng sớm (~200 step) — chưa làm.
+
+**Hệ quả cho báo cáo:** không dùng cell EcomGPT B-natural để so sánh; EcomGPT A-balanced là control hợp lệ duy nhất bổ sung hôm nay.
