@@ -19,6 +19,8 @@ import sys
 import time
 from pathlib import Path
 
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
+
 import numpy as np
 import pandas as pd
 import torch
