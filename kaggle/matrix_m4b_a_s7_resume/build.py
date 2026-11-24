@@ -67,6 +67,9 @@ assert MODEL, 'không thấy model 4B'
 
 ADAPTER = None
 for cand in sorted(Path('/kaggle/input').rglob('adapter_config.json')):
+    # bỏ qua adapter mẫu của competition (main_lora) — chỉ lấy dataset adapter đã train
+    if 'competitions' in cand.parts or 'sample_submission' in cand.parts:
+        continue
     ADAPTER = cand.parent; break
 assert ADAPTER, 'không thấy adapter checkpoint'
 STEP = 0
