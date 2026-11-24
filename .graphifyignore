@@ -1,0 +1,17 @@
+# graphify scan scope for eda_ecom
+# Generated copies of source inside artifacts would duplicate every symbol.
+.artifacts/
+# Legacy/archived snapshots, not current source.
+archive/
+reports_v3/
+reports_v5/
+# Graphify output itself.
+graphify-out/
+# Data blobs and caches.
+data/
+csv/
+eda/
+dictionary/
+hf_dataset/
+__pycache__/
+*.pyc
