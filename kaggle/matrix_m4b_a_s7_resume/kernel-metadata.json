@@ -1,0 +1,27 @@
+{
+  "id": "anhtamxinhdep/tiki-m4b-a-s7-resume",
+  "title": "Tiki M4b A S7 Resume",
+  "code_file": "tiki-m4b-a-s7-resume.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "metric/gemma-4-developer-agent-wheelhouse",
+    "anhtamxinhdep/tiki-matrix-data",
+    "anhtamxinhdep/tiki-matrix-tools",
+    "anhtamxinhdep/qwen4b-a-s7-ckpt"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "gemma-4-developer-agent"
+  ],
+  "model_sources": [
+    "qwen-lm/qwen-3/Transformers/4b/1"
+  ],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:fc720c15545eb096a510e1f085b17fc118387a007599424d953a4f327b71cacf",
+  "machine_shape": "NvidiaL4"
+}
