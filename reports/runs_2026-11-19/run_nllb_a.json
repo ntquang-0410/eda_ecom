@@ -1,0 +1,54 @@
+{
+  "cell": "nllb_a",
+  "dataset": "A",
+  "config": "natural",
+  "seed": 42,
+  "dataset_hash": "efb8ee202eb1d915fcc124e99a55c93b35d3fedfd08c4410ca5c17287852d242",
+  "eval_hashes": {
+    "eval_F": "94867959b0fdff5384a4f9582a73d40870bc15d1b81fe9fd360d4406ef9cf1ca",
+    "eval_F_v2": "594dfd2fded3e928fb06da8f6aca13b74f9a49c4c952b66150f73347b1c72ed6",
+    "eval_F_v2_common": "b256d8402e0188dc1b4daa5274c328149659387a07f263bfda1bc0676fe94f0a"
+  },
+  "exposure": {
+    "steps": 500,
+    "draws": 98826,
+    "unique_rows": 65353,
+    "actual_share": {
+      "1688_attribute": 0.671067,
+      "1688_title": 0.15843,
+      "tiki_attribute": 0.075019,
+      "tiki_title": 0.095484
+    },
+    "groups": {
+      "1688_attribute": {
+        "population_rows": 70114,
+        "draws": 62491,
+        "unique_rows": 41252,
+        "coverage_pct": 58.84,
+        "draws_per_row": 1.515
+      },
+      "1688_title": {
+        "population_rows": 15350,
+        "draws": 13582,
+        "unique_rows": 9038,
+        "coverage_pct": 58.88,
+        "draws_per_row": 1.503
+      },
+      "tiki_attribute": {
+        "population_rows": 14012,
+        "draws": 12460,
+        "unique_rows": 8224,
+        "coverage_pct": 58.69,
+        "draws_per_row": 1.515
+      },
+      "tiki_title": {
+        "population_rows": 11653,
+        "draws": 10293,
+        "unique_rows": 6839,
+        "coverage_pct": 58.69,
+        "draws_per_row": 1.505
+      }
+    }
+  },
+  "note": "inference-only tren T4; 482.5 phut/1500 dong (run goc bi cat)"
+}

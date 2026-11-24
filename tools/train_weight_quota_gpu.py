@@ -51,9 +51,14 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
             local_files_only=True, low_cpu_mem_usage=True)
     base.gradient_checkpointing_enable()
     base.enable_input_require_grads()
-    model = get_peft_model(
-        base, LoraConfig(r=16, lora_alpha=32, lora_dropout=0.05, bias="none",
-                         task_type="CAUSAL_LM", target_modules="all-linear"))
+    if args.init_adapter:
+        from peft import PeftModel
+        model = PeftModel.from_pretrained(base, args.init_adapter, is_trainable=True)
+        log(f"warm-start từ {args.init_adapter}")
+    else:
+        model = get_peft_model(
+            base, LoraConfig(r=16, lora_alpha=32, lora_dropout=0.05, bias="none",
+                             task_type="CAUSAL_LM", target_modules="all-linear"))
     model.to("cuda").train()
     model.config.use_cache = False
     params = [p for p in model.parameters() if p.requires_grad]
@@ -66,8 +71,20 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
     use_fp16 = args.dtype == "fp16"
     scaler = torch.amp.GradScaler("cuda", enabled=use_fp16)
     autocast = torch.float16 if use_fp16 else torch.bfloat16
+    # pre-advance scheduler
+    if args.start_step:
+        # pre-advance scheduler để LR đúng vị trí khi warm-start
+        for _ in range(args.start_step):
+            scheduler.step()
+    # pre-advance scheduler
+    if args.start_step:
+        # pre-advance scheduler để LR đúng vị trí khi warm-start
+        for _ in range(args.start_step):
+            scheduler.step()
     started = time.time()
     for step, idxs in enumerate(plan):
+        if step < args.start_step:
+            continue
         optimizer.zero_grad(set_to_none=True)
         step_tokens = sum(float(train["eff_tokens"].iloc[i]) for i in idxs)
         for start in range(0, len(idxs), args.micro_batch):
@@ -96,6 +113,13 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
         else:
             optimizer.step()
         scheduler.step()
+        if args.save_every and (step + 1) % args.save_every == 0:
+            ck = out_dir / f"adapter_{config_name}_seed{seed}_ckpt"
+            model.save_pretrained(ck)
+            log(f"checkpoint {ck.name} step {step+1}")
+            if args.upload_script:
+                import subprocess
+                subprocess.run(["bash", args.upload_script, str(ck), str(step + 1)], check=False)
         if step % 25 == 0:
             log(f"{config_name} step {step}/{args.steps} min={(time.time()-started)/60:.1f}")
 
@@ -110,10 +134,20 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
     part["config"] = config_name
     part["seed"] = seed
     part.to_parquet(out_dir / f"hyp_{config_name}_seed{seed}.parquet", index=False)
+    drawn = [i for s in plan for i in s]
+    groups = train["group"].to_numpy()
+    exposure = {}
+    for g in sorted(set(groups.tolist())):
+        pop = int((groups == g).sum())
+        d = [i for i in drawn if groups[i] == g]
+        exposure[str(g)] = {"population_rows": pop, "draws": int(len(d)),
+                            "unique_rows": int(len(set(d))),
+                            "coverage_pct": round(100 * len(set(d)) / max(1, pop), 2),
+                            "draws_per_row": round(len(d) / max(1, len(set(d))), 3)}
     info = {"config": config_name, "seed": seed, "steps": len(plan),
             "tokens": round(sum(float(train["eff_tokens"].iloc[i]) for s in plan for i in s)),
             "minutes": round((time.time()-started)/60, 1),
-            "actual_share": actual}
+            "actual_share": actual, "exposure": exposure}
     (out_dir / f"run_{config_name}_seed{seed}.json").write_text(
         json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
     log(f"done {info}")
@@ -134,6 +168,10 @@ def main() -> int:
     ap.add_argument("--steps", type=int, default=500)
     ap.add_argument("--max-seq", type=int, default=960)
     ap.add_argument("--micro-batch", type=int, default=4)
+    ap.add_argument("--save-every", type=int, default=100)
+    ap.add_argument("--init-adapter", default="", help="thư mục adapter để warm-start")
+    ap.add_argument("--start-step", type=int, default=0, help="bỏ qua N step đầu của plan")
+    ap.add_argument("--upload-script", default="", help="script nhận đường dẫn ckpt để backup")
     ap.add_argument("--lr", type=float, default=1e-4)
     ap.add_argument("--dtype", choices=("bf16", "fp16"), default="bf16")
     args = ap.parse_args()

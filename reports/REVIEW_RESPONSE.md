@@ -11,8 +11,8 @@
 | Phản biện | Mức | Trạng thái | Kết luận ngắn |
 |---|---|---|---|
 | 1 — Data leakage | BLOCKER | **FIXED** | `eval_F` gốc leak 642/1.500 (42,8%); `eval_F_v2` 858 dòng sạch; re-score 10 cell xong; xếp hạng không đổi, max Δ 0,018 |
-| 2 — OpenNMT fairness | MAJOR | **PARTIAL + đang chạy** | Đã relabel B-natural, lập bảng compute; NLLB control đang chạy L4x4 |
-| 3 — Quota/length bias | MAJOR | **PARTIAL + đang chạy** | Đã audit exposure/tokenizer thật/eval cố định; 2×2 + ≥3 seed chưa xong |
+| 2 — OpenNMT fairness | MAJOR | **PARTIAL (3/4)** | Đã relabel B-natural, bảng compute, NLLB control xong (0,6344 / 0,5517); thiếu seed 2–3 và recipe chuẩn |
+| 3 — Quota/length bias | MAJOR | **PARTIAL (3/4)** | Audit exposure/tokenizer/eval xong; 2×2 đủ cho Qwen3-4B, seed 42/123; thiếu 2×2 cho 4 model còn lại và seed thứ 3 |
 
 ---
 
@@ -21,9 +21,9 @@
 | # | Yêu cầu | Trạng thái | Bằng chứng |
 |---:|---|---|---|
 | 1 | Chuẩn hoá hash + near-dup + nhóm trùng | **DONE** | `tools/verify_review.py`; `review_audit.json` |
-| 2 | `eval_F_v2` disjoint 5 khoá + assertion fail cứng | **DONE** | `data/cleaned/eval_F_v2.parquet` (858); meta; `verify_review.py` raise nếu overlap |
+| 2 | `eval_F_v2` disjoint 5 khoá + assertion fail cứng | **PARTIAL** | `eval_F_v2` 858 dòng + `verify_review.py` assert 5 khoá; **preflight của kernel vẫn chỉ assert `product_id`** |
 | 3 | Bảng overlap theo stratum + re-score 10 cell / sensitivity | **DONE** | `reports/LEAKAGE_AUDIT.md` §2, §4; `reports/MATRIX_5X2_EVAL_F_V2.md` |
-| 4 | Báo cáo leakage gốc + audit script + hash trong run JSON | **DONE** | `LEAKAGE_AUDIT.md`; `RUN_HASH_MANIFEST.json`; 3 run JSON matrix đã backfill; kernel mới ghi hash |
+| 4 | Báo cáo leakage gốc + audit script + hash trong run JSON | **PARTIAL** | `LEAKAGE_AUDIT.md`; `RUN_HASH_MANIFEST.json`; 3 run JSON đã backfill; **5 run mới chưa có hash** |
 | 5 | Nếu giữ eval cũ: bảng leaked rows + điểm loại trừ | **DONE** | `LEAKAGE_AUDIT.md` §4.1; `EVAL_F_V2_SENSITIVITY.csv` |
 
 **Kết quả định lượng:**
@@ -41,7 +41,7 @@
 | # | Yêu cầu | Trạng thái | Bằng chứng |
 |---:|---|---|---|
 | 1 | Sửa nhãn/recipe: retrain B-balanced 30k hoặc đổi tên B-natural | **DONE (relabel)** | Đã đổi cell thành **B-natural** trong mọi bảng; retrain B-balanced bị chặn bởi offline env |
-| 2 | Thêm baseline NMT pretrained (mBART/NLLB) cùng protocol | **RUNNING** | `nguynthanhquang/tiki-nllb-control` NLLB-600M A/B, L4x4, 4M quota (bản 2) |
+| 2 | Thêm baseline NMT pretrained (mBART/NLLB) cùng protocol | **DONE** | NLLB-600M A 0,6344 / −0,5379; B 0,5517 / −0,6753 (`CONTROLS_2X2.md`) |
 | 3 | Hoặc recipe NMT chuẩn + ≥3 seed + benchmark | **PLANNED (P2)** | chưa chạy; cần 6 layer/512, BPE 16k, 50–100M token |
 | 4 | Bảng compute công bằng, sửa "compute-matched" | **DONE** | `reports/OPENNMT_FAIRNESS.md` §2 |
 | 5 | Xử lý độ dài giống nhau, báo cáo stratum dài | **PARTIAL** | length buckets trong `MATRIX_5X2_EVAL_F_V2.md` §8; OpenNMT vẫn cắt 49 dòng >512 |
@@ -55,8 +55,8 @@
 | 1 | Per-group epoch, coverage, draws/row trong run JSON + bảng | **DONE** | `review_audit.json` `quota`; `QUOTA_LENGTH_AUDIT.md` §2.1 |
 | 2 | Tokenizer thật, bỏ cap 960, báo cáo truncation | **DONE (Qwen)** | A 6,560M / B 5,926M Qwen tokens; epoch 0,8855 / 0,2477; truncation 0,1% / 0,6% (uncapped 30,4% tiki desc) |
 | 3 | Eval cố định + sensitivity + bucket + macro-average | **DONE** | `eval_F_v2_common` 831; `MATRIX_5X2_EVAL_F_V2.md` §7–8 |
-| 4 | 2×2 field × quota, hoặc B-natural + A-balanced cho 5 model | **PARTIAL (P1)** | Qwen3-4B A-balanced đang chạy L4x4; B-natural chờ slot; các model khác P2 |
-| 5 | ≥3 seed + CI theo seed + sampling seed 123 | **PLANNED (P1)** | chưa chạy; plan Qwen3-4B seed 123 trước |
+| 4 | 2×2 field × quota, hoặc B-natural + A-balanced cho 5 model | **PARTIAL (Qwen3-4B xong)** | 2×2 đủ cho Qwen3-4B; 4 model còn lại chưa có (`DEBATE_GAP_AUDIT.md` §3) |
+| 5 | ≥3 seed + CI theo seed + sampling seed 123 | **PARTIAL** | 2 seed cho Qwen3-4B: A-natural 0,8584/0,8511; B-balanced 0,8471/0,8479; seed variance 0,005–0,007; thiếu seed thứ 3 |
 
 **Đã sửa đúng:** quota trong nội bộ nhóm (manifest median/P90 khớp population).  
 **Chưa sửa end-to-end:** exposure lệch 18×, 87% description không học, target dài bị cắt, eval cũ khác n theo cell.
@@ -106,6 +106,7 @@
 | Sensitivity | `reports/EVAL_F_V2_SENSITIVITY.csv` |
 | Quota | `reports/QUOTA_LENGTH_AUDIT.md` |
 | OpenNMT | `reports/OPENNMT_FAIRNESS.md` |
+| Gap audit 3 phản biện | `reports/DEBATE_GAP_AUDIT.md` |
 | Hash manifest | `reports/RUN_HASH_MANIFEST.json/.csv` |
 
 **Lưu ý GPU:** các kernel mới dùng `machine_shape: NvidiaL4x4`, `competition_sources: ["gemma-4-developer-agent"]` và dataset `metric/gemma-4-developer-agent-wheelhouse`; internet off.
