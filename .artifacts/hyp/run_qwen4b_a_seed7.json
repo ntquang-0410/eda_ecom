@@ -1,0 +1,43 @@
+{
+  "config": "natural",
+  "seed": 7,
+  "steps": 500,
+  "tokens": 4000153,
+  "minutes": 61.6,
+  "actual_share": {
+    "1688_attribute": 0.6710457283686586,
+    "1688_title": 0.15842871253983312,
+    "tiki_attribute": 0.07504590471093846,
+    "tiki_title": 0.09547965438056978
+  },
+  "exposure": {
+    "1688_attribute": {
+      "population_rows": 70114,
+      "draws": 61978,
+      "unique_rows": 41343,
+      "coverage_pct": 58.97,
+      "draws_per_row": 1.499
+    },
+    "1688_title": {
+      "population_rows": 15350,
+      "draws": 13605,
+      "unique_rows": 9014,
+      "coverage_pct": 58.72,
+      "draws_per_row": 1.509
+    },
+    "tiki_attribute": {
+      "population_rows": 14012,
+      "draws": 12371,
+      "unique_rows": 8165,
+      "coverage_pct": 58.27,
+      "draws_per_row": 1.515
+    },
+    "tiki_title": {
+      "population_rows": 11653,
+      "draws": 10309,
+      "unique_rows": 6839,
+      "coverage_pct": 58.69,
+      "draws_per_row": 1.507
+    }
+  }
+}
