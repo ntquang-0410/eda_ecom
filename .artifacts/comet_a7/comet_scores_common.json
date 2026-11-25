@@ -1,0 +1,12 @@
+{
+  "natural::7::1688": {
+    "system_score": 0.853,
+    "n": 231,
+    "bleu": 38.802,
+    "chrf": 39.0823
+  },
+  "natural::7::tiki": {
+    "system_score": 0.0614,
+    "n": 600
+  }
+}

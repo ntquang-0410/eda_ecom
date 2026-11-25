@@ -89,6 +89,7 @@ Chấm bằng `venv_comet` trên Colab A100, lọc đúng 831 `eval_id` của `d
 |---|---:|---:|---|---|
 | Qwen3-8B A-balanced seed 42 | 0,8553 | 0,0562 | 231/600 | ✅ `hyp_qwen8b_a_balanced_seed42.parquet` (điểm cũ, chưa score lại từng dòng) |
 | Qwen3-8B B-natural seed 42 | 0,8514 | 0,0624 | 231/600 | ⚠️ **PARTIAL** — hyp thất lạc; chờ re-infer từ `qwen8b-b-ckpt` step 500 |
+| Qwen3-4B A-natural seed 7 | 0,8530 | 0,0614 | 231/600 | ✅ `hyp_qwen4b_a_natural_seed7.parquet` (1.500 dòng, 15 rỗng), adapter step 500 |
 | Qwen3-4B B-balanced seed 7 | ~~0,8010~~ | ~~0,0774~~ | 231/600 | ❌ **KHÔNG DÙNG** — kernel infer chọn nhầm adapter `sample_submission/adapters/main_lora` của competition; đang chạy lại từ adapter thật (475 → 500 step) |
 | NLLB A-natural seed 7 | 0,6304 | −0,5427 | 231/600 | ✅ `hyp_nllb_a_seed7.parquet` (1.500 dòng, 2 rỗng) |
 | NLLB B-balanced seed 7 | 0,6382 | −0,5192 | 231/600 | ✅ `hyp_nllb_b_seed7.parquet` (1.500 dòng, 0 rỗng) |

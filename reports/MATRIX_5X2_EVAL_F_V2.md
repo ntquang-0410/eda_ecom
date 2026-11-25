@@ -200,13 +200,13 @@ Trùng khớp tuyệt đối với điểm đã ghi hôm 23/11 ⇒ cell 8B B gi�
 
 | Cell | 1688 da | Tiki QE | Artefact |
 |---|---:|---:|---|
-| Qwen3-4B A-natural seed 7 | ⏳ chờ inference | ⏳ | adapter step 500 đã có (`qwen4b-a-s7-ckpt`) |
-| Qwen3-4B B-balanced seed 7 | ⏳ chạy lại (hyp cũ sai adapter) | ⏳ | adapter thật step 500 |
+| Qwen3-4B A-natural seed 7 | **0,8530** | **0,0614** | ✅ hyp 1.500 dòng (15 rỗng); adapter step 500 `qwen4b-a-s7-ckpt` |
+| Qwen3-4B B-balanced seed 7 | ⏳ chờ inference lại (hyp cũ sai adapter) | ⏳ | adapter thật step 500 đã backup: `nguynthanhquang/qwen4b-b-balanced-s7-adapter` |
 | NLLB A seed 7 | 0,6304 | −0,5427 | ✅ |
 | NLLB B seed 7 | 0,6382 | −0,5192 | ✅ |
 | EcomGPT A-balanced (tái lập) | 0,8156 | 0,0020 | ✅ adapter step 500 trên Kaggle |
 
-**Đọc kết quả:** với Qwen3-4B, khoảng cách A-natural − A-balanced seed 42 là 0,0107; NLLB cho thấy chênh lệch A/B đảo dấu giữa seed 42 và seed 7 (0,6344 vs 0,6304 cho A; 0,5517 vs 0,6382 cho B) ⇒ dao động seed của control NMT lớn hơn hiệu ứng dữ liệu. Vì vậy mọi so sánh A/B giữa các cấu hình phải kèm seed noise, không chỉ CI bootstrap.
+**Đọc kết quả:** A-natural seed 7 = 0,8530 so với seed 42 = 0,8584 (Δ −0,0054), Tiki 0,0614 so với 0,0573 (Δ +0,0041) — đúng bằng bậc seed noise ước lượng 0,005–0,007. Với Qwen3-4B, khoảng cách A-natural − A-balanced seed 42 là 0,0107; NLLB cho thấy chênh lệch A/B đảo dấu giữa seed 42 và seed 7 (0,6344 vs 0,6304 cho A; 0,5517 vs 0,6382 cho B) ⇒ dao động seed của control NMT lớn hơn hiệu ứng dữ liệu. Vì vậy mọi so sánh A/B giữa các cấu hình phải kèm seed noise, không chỉ CI bootstrap.
 
 ### 11.3. Hạn chế công bằng của cell EcomGPT
 
