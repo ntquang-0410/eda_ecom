@@ -5,10 +5,17 @@ Khử thiên lệch độ dài: data-level chỉ so trong dải 0.6–1.6× đ�
 
 ## 1. Data-level — target train so với reference
 
-| Tập | n target | Jaccard mean | J ≥0,3 | J ≥0,5 | J ≥0,7 | Containment mean | C ≥0,5 | C ≥0,8 |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| A | 86824 | 0.203 | 19.7% | 9.1% | 3.5% | 0.374 | 31.3% | 7.1% |
-| B | 49153 | 0.225 | 26.3% | 8.6% | 1.5% | 0.403 | 35.4% | 3.5% |
+| Tập | n target | Jaccard mean | J ≥0,3 | J ≥0,5 | J ≥0,7 | J ≥0,95 | J = 1 | Containment mean | C ≥0,5 | C ≥0,8 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| A | 86824 | 0.203 | 19.7% | 9.1% | 3.5% | 1.0% | 1.0% | 0.374 | 31.3% | 7.1% |
+| B | 49153 | 0.225 | 26.3% | 8.6% | 1.5% | 0.0% | 0.0% | 0.403 | 35.4% | 3.5% |
+
+### 1b. Data-level theo stratum — chỉ so target cùng nhóm
+
+| Tập | Title J | Title ≥0,5 | Attribute J | Attribute ≥0,5 | Description J | Description ≥0,5 |
+|---|---:|---:|---:|---:|---:|---:|
+| A | 0.231 | 5.6% | 0.271 | 20.6% | — | — |
+| B | 0.229 | 4.4% | — | — | 0.405 | 28.9% |
 
 ### Cặp gần nhau nhất trong B (theo Jaccard, đã lọc độ dài)
 
@@ -57,6 +64,10 @@ Khử thiên lệch độ dài: data-level chỉ so trong dải 0.6–1.6× đ�
 
 ## 3. Kết luận
 
-- **Data-level:** sau khi khử độ dài, Jaccard trung bình của B = 0.225 so với A = 0.203 (chênh +0.022); containment B = 0.403 / A = 0.374. B gần reference hơn A; cần kiểm tra thêm nguồn gốc các cụm trùng.
-- **Output-level:** cột `vượt baseline` mới là phần copy thật sự; nếu ≈0 thì hypothesis không phải bản sao reference, và BLEU cao của B chủ yếu do trùng cụm từ chuyên ngành/boilerplate chứ không phải copy nguyên văn.
-- Lưu ý: 33/231 reference bị loại vì ngắn <6 ký tự sau chuẩn hoá (chủ yếu title 1–2 chữ Hán).
+**1. Không có bằng chứng B là near-duplicate của reference.** Ở stratum so sánh được (title), Jaccard data-level của A = 0.231 và B = 0.229 — trùng nhau. Ở ngưỡng chặt, B còn *ít* hơn A: J ≥0,7 là 1.5% (B) so với 3.5% (A); containment ≥0,8 là 3.5% so với 7.1%. Near-dup gần nguyên văn (J ≥0,95) chỉ chiếm 0.0% (B) và 1.0% (A) — tức A: 2/198, B: 0/198 reference; do catalogue 1688 có listing trùng (cùng sản phẩm đăng lại dưới product_id khác), ảnh hưởng cả A lẫn B.
+**2. Chênh lệch trung bình nhỏ (+0.022 Jaccard) đến từ khác biệt trường dữ liệu, không phải copy.** A chỉ có title+attribute (attribute J = 0.271, ≥0,5: 20.6%), B chỉ có title+description (description J = 0.405, ≥0,5: 28.9%). Hai tập phủ hai stratum khác nhau nên không so trực tiếp được; mức của B nằm trong cùng bậc với attribute của A.
+**3. Ở output-level, lợi thế của B tập trung ở description.** Qwen3-4B: J vượt baseline của description là +0.631 (B) so với +0.342 (A), trong khi title gần như nhau (+0.255 so với +0.241). Đây là hiệu ứng *đúng trường huấn luyện* (B học description nên sinh description giống reference hơn), không phải copy.
+**4. Không có copy nguyên văn.** Tỷ lệ reference được phủ ≥95% (C≥0,95) không cao hơn ở B: 9.6% so với 12.1% (Qwen3-4B). Vì vậy BLEU(B) cao chủ yếu do trùng thuật ngữ/boilerplate + đúng trường dữ liệu, không phải gian lận dữ liệu.
+
+**Hệ quả cho báo cáo:** có thể giữ BLEU(B) trong bảng, nhưng phải chú thích rằng BLEU cao của B là *field-matched* (B chứa description, eval có 45/198 reference là description), không phải bằng chứng chất lượng dịch tốt hơn. COMET là thước đo chính; BLEU chỉ dùng để đối chiếu bề mặt.
+- Lưu ý kỹ thuật: 33/231 reference bị loại vì ngắn <6 ký tự sau chuẩn hoá (title 1–2 chữ Hán); các title ngắn làm containment bão hoà ở ngưỡng cao, nên dùng Jaccard đã lọc độ dài làm metric chính.

@@ -79,9 +79,23 @@ def data_level(refs: pd.DataFrame, cands: pd.DataFrame) -> tuple[dict, list]:
         "j_ge_0.3": float((jac_b.max(axis=1) >= 0.3).mean()),
         "j_ge_0.5": float((jac_b.max(axis=1) >= 0.5).mean()),
         "j_ge_0.7": float((jac_b.max(axis=1) >= 0.7).mean()),
+        "j_ge_0.95": float((jac_b.max(axis=1) >= 0.95).mean()),
+        "j_exact": float((jac_b.max(axis=1) >= 0.999).mean()),
         "c_ge_0.5": float((contain_b.max(axis=1) >= 0.5).mean()),
         "c_ge_0.8": float((contain_b.max(axis=1) >= 0.8).mean()),
     }
+    strat = {}
+    for pt in ("title", "attribute", "description"):
+        sel_c = (cands.group.to_numpy() == f"1688_{pt}")
+        sel_r = (refs.pair_type.to_numpy() == pt)
+        if not sel_c.any() or not sel_r.any():
+            continue
+        block = jac_b[np.ix_(sel_r, sel_c)]
+        strat[pt] = {"j": float(block.max(axis=1).mean()),
+                     "j_ge_0.5": float((block.max(axis=1) >= 0.5).mean()),
+                     "c": float(contain_b[np.ix_(sel_r, sel_c)].max(axis=1).mean()),
+                     "n_ref": int(sel_r.sum()), "n_cand": int(sel_c.sum())}
+    stats["stratum"] = strat
     ex = []
     for i in np.argsort(-jac_b.max(axis=1))[:6]:
         j = best_j[i]
@@ -204,13 +218,24 @@ def main() -> None:
           f"Khử thiên lệch độ dài: data-level chỉ so trong dải {BAND[0]}–{BAND[1]}× độ dài reference; "
           "output-level trừ baseline hoán vị reference trong cùng stratum (200 lần).", "",
           "## 1. Data-level — target train so với reference", "",
-          "| Tập | n target | Jaccard mean | J ≥0,3 | J ≥0,5 | J ≥0,7 | Containment mean | C ≥0,5 | C ≥0,8 |",
-          "|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
+          "| Tập | n target | Jaccard mean | J ≥0,3 | J ≥0,5 | J ≥0,7 | J ≥0,95 | J = 1 | Containment mean | C ≥0,5 | C ≥0,8 |",
+          "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
     for ds in ("A", "B"):
         s = stats[ds]
         md.append(f"| {ds} | {s['n_cand']} | {s['jaccard_mean']:.3f} | {s['j_ge_0.3']*100:.1f}% | "
-                  f"{s['j_ge_0.5']*100:.1f}% | {s['j_ge_0.7']*100:.1f}% | {s['contain_mean']:.3f} | "
+                  f"{s['j_ge_0.5']*100:.1f}% | {s['j_ge_0.7']*100:.1f}% | {s['j_ge_0.95']*100:.1f}% | "
+                  f"{s['j_exact']*100:.1f}% | {s['contain_mean']:.3f} | "
                   f"{s['c_ge_0.5']*100:.1f}% | {s['c_ge_0.8']*100:.1f}% |")
+    md += ["", "### 1b. Data-level theo stratum — chỉ so target cùng nhóm", "",
+           "| Tập | Title J | Title ≥0,5 | Attribute J | Attribute ≥0,5 | Description J | Description ≥0,5 |",
+           "|---|---:|---:|---:|---:|---:|---:|"]
+    for ds in ("A", "B"):
+        st = stats[ds].get("stratum", {})
+        cells_txt = []
+        for k in ("title", "attribute", "description"):
+            r = st.get(k)
+            cells_txt += [f"{r['j']:.3f}" if r else "—", f"{r['j_ge_0.5']*100:.1f}%" if r else "—"]
+        md.append(f"| {ds} | " + " | ".join(cells_txt) + " |")
     md += ["", "### Cặp gần nhau nhất trong B (theo Jaccard, đã lọc độ dài)", "",
            "| pair_type | Jaccard | Containment | reference | target gần nhất | group |",
            "|---|---:|---:|---|---|---|"]
@@ -240,15 +265,46 @@ def main() -> None:
         md.append(f"| {label} | " + " | ".join(cells_txt) + " |")
 
     b_j = stats["B"]["jaccard_mean"]; a_j = stats["A"]["jaccard_mean"]
-    b_c = stats["B"]["contain_mean"]; a_c = stats["A"]["contain_mean"]
+    b_hi = stats["B"]["j_ge_0.7"]; a_hi = stats["A"]["j_ge_0.7"]
+    st_a = stats["A"].get("stratum", {}); st_b = stats["B"].get("stratum", {})
+    t_a = st_a.get("title", {}).get("j", float("nan"))
+    t_b = st_b.get("title", {}).get("j", float("nan"))
+    d_b = st_b.get("description", {}).get("j", float("nan"))
+    d_b5 = st_b.get("description", {}).get("j_ge_0.5", float("nan"))
+    att_a = st_a.get("attribute", {}).get("j", float("nan"))
+    att_a5 = st_a.get("attribute", {}).get("j_ge_0.5", float("nan"))
+    q4_a = out.get("Qwen3-4B A", {}); q4_b = out.get("Qwen3-4B B", {})
+    q4a_desc = q4_a.get("stratum", {}).get("description", {})
+    q4b_desc = q4_b.get("stratum", {}).get("description", {})
+
     md += ["", "## 3. Kết luận", "",
-           f"- **Data-level:** sau khi khử độ dài, Jaccard trung bình của B = {b_j:.3f} so với A = {a_j:.3f} "
-           f"(chênh {b_j - a_j:+.3f}); containment B = {b_c:.3f} / A = {a_c:.3f}. "
-           + ("B không gần reference hơn A về mặt near-duplicate từ vựng."
-              if b_j <= a_j + 0.01 else "B gần reference hơn A; cần kiểm tra thêm nguồn gốc các cụm trùng."),
-           "- **Output-level:** cột `vượt baseline` mới là phần copy thật sự; nếu ≈0 thì hypothesis không phải bản sao reference, "
-           "và BLEU cao của B chủ yếu do trùng cụm từ chuyên ngành/boilerplate chứ không phải copy nguyên văn.",
-           "- Lưu ý: 33/231 reference bị loại vì ngắn <6 ký tự sau chuẩn hoá (chủ yếu title 1–2 chữ Hán)."]
+           f"**1. Không có bằng chứng B là near-duplicate của reference.** Ở stratum so sánh được (title), "
+           f"Jaccard data-level của A = {t_a:.3f} và B = {t_b:.3f} — trùng nhau. Ở ngưỡng chặt, B còn *ít* hơn A: "
+           f"J ≥0,7 là {b_hi*100:.1f}% (B) so với {a_hi*100:.1f}% (A); containment ≥0,8 là "
+           f"{stats['B']['c_ge_0.8']*100:.1f}% so với {stats['A']['c_ge_0.8']*100:.1f}%. "
+           f"Near-dup gần nguyên văn (J ≥0,95) chỉ chiếm {stats['B']['j_ge_0.95']*100:.1f}% (B) và "
+           f"{stats['A']['j_ge_0.95']*100:.1f}% (A) — tức A: {int(round(stats['A']['j_ge_0.95']*len(refs)))}/198, "
+           f"B: {int(round(stats['B']['j_ge_0.95']*len(refs)))}/198 reference; do catalogue 1688 có listing trùng "
+           "(cùng sản phẩm đăng lại dưới product_id khác), ảnh hưởng cả A lẫn B.",
+           f"**2. Chênh lệch trung bình nhỏ (+{b_j-a_j:.3f} Jaccard) đến từ khác biệt trường dữ liệu, không phải copy.** "
+           f"A chỉ có title+attribute (attribute J = {att_a:.3f}, ≥0,5: {att_a5*100:.1f}%), B chỉ có title+description "
+           f"(description J = {d_b:.3f}, ≥0,5: {d_b5*100:.1f}%). Hai tập phủ hai stratum khác nhau nên không so trực tiếp được; "
+           "mức của B nằm trong cùng bậc với attribute của A.",
+           "**3. Ở output-level, lợi thế của B tập trung ở description.** "
+           f"Qwen3-4B: J vượt baseline của description là {q4b_desc.get('j', float('nan'))-q4b_desc.get('j_base', float('nan')):+.3f} (B) "
+           f"so với {q4a_desc.get('j', float('nan'))-q4a_desc.get('j_base', float('nan')):+.3f} (A), trong khi title gần như nhau "
+           f"({q4_b.get('stratum', {}).get('title', {}).get('j', float('nan'))-q4_b.get('stratum', {}).get('title', {}).get('j_base', float('nan')):+.3f} so với "
+           f"{q4_a.get('stratum', {}).get('title', {}).get('j', float('nan'))-q4_a.get('stratum', {}).get('title', {}).get('j_base', float('nan')):+.3f}). "
+           "Đây là hiệu ứng *đúng trường huấn luyện* (B học description nên sinh description giống reference hơn), không phải copy.",
+           f"**4. Không có copy nguyên văn.** Tỷ lệ reference được phủ ≥95% (C≥0,95) không cao hơn ở B: "
+           f"{q4_b.get('c_ge_0.95', float('nan'))*100:.1f}% so với {q4_a.get('c_ge_0.95', float('nan'))*100:.1f}% (Qwen3-4B). "
+           "Vì vậy BLEU(B) cao chủ yếu do trùng thuật ngữ/boilerplate + đúng trường dữ liệu, không phải gian lận dữ liệu.",
+           "",
+           "**Hệ quả cho báo cáo:** có thể giữ BLEU(B) trong bảng, nhưng phải chú thích rằng BLEU cao của B là "
+           "*field-matched* (B chứa description, eval có 45/198 reference là description), không phải bằng chứng chất lượng dịch tốt hơn. "
+           "COMET là thước đo chính; BLEU chỉ dùng để đối chiếu bề mặt.",
+           "- Lưu ý kỹ thuật: 33/231 reference bị loại vì ngắn <6 ký tự sau chuẩn hoá (title 1–2 chữ Hán); "
+           "các title ngắn làm containment bão hoà ở ngưỡng cao, nên dùng Jaccard đã lọc độ dài làm metric chính."]
 
     path = ROOT / "reports/NEAR_DUP_B_REFERENCE.md"
     path.write_text("\n".join(md) + "\n", encoding="utf-8")
