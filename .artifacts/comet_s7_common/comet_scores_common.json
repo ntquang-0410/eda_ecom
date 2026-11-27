@@ -1,0 +1,42 @@
+{
+  "ecomgpt_a_balanced::42::1688": {
+    "system_score": 0.8156,
+    "n": 231,
+    "bleu": 19.3433,
+    "chrf": 24.2859
+  },
+  "ecomgpt_a_balanced::42::tiki": {
+    "system_score": 0.002,
+    "n": 600
+  },
+  "nllb_a::7::1688": {
+    "system_score": 0.6304,
+    "n": 231,
+    "bleu": 7.6835,
+    "chrf": 13.6354
+  },
+  "nllb_a::7::tiki": {
+    "system_score": -0.5427,
+    "n": 600
+  },
+  "nllb_b::7::1688": {
+    "system_score": 0.6382,
+    "n": 231,
+    "bleu": 9.5938,
+    "chrf": 16.0667
+  },
+  "nllb_b::7::tiki": {
+    "system_score": -0.5192,
+    "n": 600
+  },
+  "qwen4b_b_balanced::7::1688": {
+    "system_score": 0.801,
+    "n": 231,
+    "bleu": 20.7547,
+    "chrf": 25.3944
+  },
+  "qwen4b_b_balanced::7::tiki": {
+    "system_score": 0.0774,
+    "n": 600
+  }
+}

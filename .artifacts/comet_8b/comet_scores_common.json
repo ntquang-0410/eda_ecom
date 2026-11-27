@@ -1,0 +1,12 @@
+{
+  "m8b_b_natural::42::1688": {
+    "system_score": 0.8514,
+    "n": 231,
+    "bleu": 69.8666,
+    "chrf": 68.2905
+  },
+  "m8b_b_natural::42::tiki": {
+    "system_score": 0.0624,
+    "n": 600
+  }
+}

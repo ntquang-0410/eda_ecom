@@ -182,7 +182,10 @@ def generate_rows(model, tokenizer, frame: pd.DataFrame, rank: int, world: int,
     out_map: dict[str, str] = {}
     for (max_new, bucket), group in part.groupby(["max_new", "bucket"]):
         records = group.sort_values("prompt_tokens").to_dict("records")
-        batch_size = 1 if int(max_new) > 300 else 4
+        # batch 4 cho mọi nhóm: KV cache không đáng kể trên A100 40GB, nhanh hơn ~4x
+        # so với batch 1 ở nhóm max_new lớn (greedy decode không đổi kết quả).
+        batch_size = 4
+        log(f"generate max_new={max_new} bucket={bucket} rows={len(records)}")
         for start in range(0, len(records), batch_size):
             chunk = records[start:start + batch_size]
             enc = tokenizer([r["prompt"] for r in chunk], return_tensors="pt",

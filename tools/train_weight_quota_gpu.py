@@ -71,14 +71,8 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
     use_fp16 = args.dtype == "fp16"
     scaler = torch.amp.GradScaler("cuda", enabled=use_fp16)
     autocast = torch.float16 if use_fp16 else torch.bfloat16
-    # pre-advance scheduler
+    # pre-advance scheduler để LR đúng vị trí khi warm-start
     if args.start_step:
-        # pre-advance scheduler để LR đúng vị trí khi warm-start
-        for _ in range(args.start_step):
-            scheduler.step()
-    # pre-advance scheduler
-    if args.start_step:
-        # pre-advance scheduler để LR đúng vị trí khi warm-start
         for _ in range(args.start_step):
             scheduler.step()
     started = time.time()

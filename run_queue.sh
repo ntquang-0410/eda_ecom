@@ -10,6 +10,7 @@ mkdir -p "$LOGD"
 export HF_HUB_OFFLINE=0 TRANSFORMERS_OFFLINE=0 TOKENIZERS_PARALLELISM=false
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export HF_HOME=/content/hf
+python -m pip uninstall -y torchao >/dev/null 2>&1 || true
 
 python - <<'PY'
 from huggingface_hub import snapshot_download

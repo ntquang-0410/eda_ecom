@@ -80,3 +80,38 @@ Cùng quota 4M token, cùng `eval_F_v2_common`, LoRA r16.
 
 2. Cập nhật `MATRIX_5X2_EVAL_F_V2.md` §9 với kết luận 2×2 (A-natural là cấu hình chính).
 3. Bổ sung NLLB vào `OPENNMT_FAIRNESS.md` §6.
+
+## 6. Cell bổ sung — chấm lại trên `eval_F_v2_common` (2026-11-24 17:10 UTC)
+
+Chấm bằng `venv_comet` trên Colab A100, lọc đúng 831 `eval_id` của `data/cleaned/eval_F_v2_common.parquet` (1688 = 231, Tiki = 600). **Đã có score từng dòng** trong `.artifacts/comet_s7_common/` (chưa chạy paired bootstrap cho các cell này).
+
+| Cell | 1688 da | Tiki QE | n (1688/Tiki) | Trạng thái artefact |
+|---|---:|---:|---|---|
+| Qwen3-8B A-balanced seed 42 | 0,8553 | 0,0562 | 231/600 | ✅ `hyp_qwen8b_a_balanced_seed42.parquet` (điểm cũ, chưa score lại từng dòng) |
+| Qwen3-8B B-natural seed 42 | 0,8514 | 0,0624 | 231/600 | ⚠️ **PARTIAL** — hyp thất lạc; chờ re-infer từ `qwen8b-b-ckpt` step 500 |
+| Qwen3-4B A-natural seed 7 | 0,8530 | 0,0614 | 231/600 | ✅ `hyp_qwen4b_a_natural_seed7.parquet` (1.500 dòng, 15 rỗng), adapter step 500 |
+| Qwen3-4B B-balanced seed 7 | ~~0,8010~~ | ~~0,0774~~ | 231/600 | ❌ **KHÔNG DÙNG** — kernel infer chọn nhầm adapter `sample_submission/adapters/main_lora` của competition; đang chạy lại từ adapter thật (475 → 500 step) |
+| NLLB A-natural seed 7 | 0,6304 | −0,5427 | 231/600 | ✅ `hyp_nllb_a_seed7.parquet` (1.500 dòng, 2 rỗng) |
+| NLLB B-balanced seed 7 | 0,6382 | −0,5192 | 231/600 | ✅ `hyp_nllb_b_seed7.parquet` (1.500 dòng, 0 rỗng) |
+| EcomGPT-7B A-balanced seed 42 (tái lập) | 0,8156 | 0,0020 | 231/600 | ✅ `hyp_ecomgpt_a_balanced_seed42.parquet`; adapter step 500 ở `nguynthanhquang/ecomgpt-ckpt` |
+
+**Đọc kết quả:**
+
+1. **NLLB B seed 7 (0,6382) cao hơn NLLB B seed 42 (0,5517) rất nhiều**, trong khi seed 42 cho B < A. Vì vậy kết luận cũ "NLLB B kém A" là **nhiễu seed**, không phải hiệu ứng dữ liệu — với control pretrained NMT, chênh lệch A/B nằm trong dao động seed.
+2. **EcomGPT A tái lập 0,8156 vs điểm cũ 0,8250** (Δ 0,0094): cùng bậc, khác biệt do lần chạy mới bỏ mega-batch ở step 500 và cắt ngắn chunk cuối (xem `CHECKPOINT_2026-11-24_1640.md` §3). Bản tái lập là bản có artefact đầy đủ (adapter step 500), nên dùng bản này.
+3. **Bài học kiểm tra artefact:** kernel infer dùng `rglob('adapter_config.json')` trên `/kaggle/input` có thể bắt nhầm adapter mẫu của competition. Đã vá builder resume; mọi cell cần assert đường dẫn adapter chứa tên dataset đã train.
+
+Bảng NLLB ở §2 chỉ nên trích cho seed 42; khi trích seed 7 phải ghi rõ là cell bổ sung chưa có CI.
+
+## 7. EcomGPT-7B — hai cell control bổ sung (2026-11-24)
+
+| Cell | 1688 da | Tiki QE | Kết luận |
+|---|---:|---:|---|
+| EcomGPT A-balanced seed 42 | 0,8156 | 0,0020 | ✅ hợp lệ (adapter step 500 trên Kaggle) |
+| EcomGPT B-natural seed 42 | — | — | ❌ **FAILED** — generation thoái hoá |
+
+**B-natural thoái hoá:** train đủ 500 step nhưng loss về ~1e-4 rất sớm; khi inference, **1.471/1.500 hyp rỗng**, 29 dòng còn lại là chuỗi lặp `"......"` / `"* * * *"`. Không chấm COMET cell này (điểm sẽ vô nghĩa). Artefact giữ để điều tra: `.artifacts/hyp/hyp_ecomgpt_b_natural_seed42_FAILED.parquet`.
+
+**Giả thuyết:** B-natural rút 13.601 dòng (trung bình 294 token/dòng) → mỗi step chỉ ~20 dòng; target là description dài, nhiều boilerplate lặp giữa các sản phẩm → model học thuộc rồi suy biến khi sinh tự do. Recipe A2 vốn chọn `balanced` cho dataset B, không phải `natural`. Muốn có cell B-natural hợp lệ cần hạ LR (≤5e-5) hoặc dừng sớm (~200 step) — chưa làm.
+
+**Hệ quả cho báo cáo:** không dùng cell EcomGPT B-natural để so sánh; EcomGPT A-balanced là control hợp lệ duy nhất bổ sung hôm nay.
