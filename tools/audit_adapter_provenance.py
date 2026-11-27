@@ -98,7 +98,7 @@ def main() -> None:
         md.append(f"| {cell} | {n} | {'✅' if ok else '❌'} | {'có' if ok else '**ẩn**'} |")
     md += ["", f"**Tổng:** {int(df['pass'].sum())}/{len(df)} run pass; "
            f"{int(cells.sum())}/{len(cells)} cell pass.", "",
-           "Cell fail bị **ẩn cột COMET-QE** trong `CANONICAL_EVAL.md` (QE là chẩn đoán); "
+           "Cell fail bị **ẩn cột COMET-QE** trong `LEGACY_CANONICAL_EVAL.md` (QE là chẩn đoán); "
            "COMET-da và xếp hạng chính thức giữ nguyên."]
 
     (ROOT / "reports/ADAPTER_PROVENANCE_AUDIT.md").write_text("\n".join(md) + "\n", encoding="utf-8")

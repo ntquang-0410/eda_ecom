@@ -138,7 +138,11 @@ def main() -> None:
             pass
         return f"{v:.{nd}f}"
 
-    md = ["# Canonical eval — 858 dòng cố định, zero-fill + coverage", "",
+    md = ["# LEGACY canonical eval — 858 dòng (baseline lịch sử)", "",
+          "> ⚠️ **LEGACY BASELINE — chỉ để đối chiếu lịch sử, KHÔNG dùng xếp hạng chính thức.**",
+          "> Sinh từ các run **đơn seed** tại `max_seq=960` (mất 3,2% token A / 6,8% B), index 858, "
+          "QE bị ẩn cho 12 cell chưa pass provenance. Bảng chính thức sẽ là campaign **≥5 seed, "
+          "`max_seq=1792`** (xem `EVAL_PROTOCOL.md`, `TRAIN_GUARD_960.md`).", "",
           "Index: `data/cleaned/eval_paired_858.parquet` (1688 = 231, Tiki = 627, hash trong `.json`).",
           "Quy ước: join theo `eval_id`; hyp rỗng ⇒ 0 điểm, **không lọc dòng**; coverage = % hyp không rỗng.",
           "Metric xếp hạng: **COMET-da (1688)**. COMET-QE (Tiki), BLEU, chrF chỉ là chẩn đoán.",
@@ -204,7 +208,7 @@ def main() -> None:
     md.append("- **Training guard 960:** các run hiện tại mất 3,2% (A) và 6,8% (B) token do bỏ dòng "
               "prompt >952 — xem `reports/TRAIN_GUARD_960.md`; campaign 5-seed mới dùng `--max-seq 1792`.")
 
-    path = ROOT / "reports/CANONICAL_EVAL.md"
+    path = ROOT / "reports/LEGACY_CANONICAL_EVAL.md"
     path.write_text("\n".join(md) + "\n", encoding="utf-8")
     print("\n".join(md[:24]))
     print("...")

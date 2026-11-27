@@ -53,4 +53,4 @@
 
 **Tổng:** 10/22 run pass; 5/17 cell pass.
 
-Cell fail bị **ẩn cột COMET-QE** trong `CANONICAL_EVAL.md` (QE là chẩn đoán); COMET-da và xếp hạng chính thức giữ nguyên.
+Cell fail bị **ẩn cột COMET-QE** trong `LEGACY_CANONICAL_EVAL.md` (QE là chẩn đoán); COMET-da và xếp hạng chính thức giữ nguyên.

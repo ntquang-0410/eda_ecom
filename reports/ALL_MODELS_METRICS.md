@@ -38,6 +38,7 @@
 
 ## Ghi chú
 
+- **Baseline lịch sử** (đơn seed, `max_seq=960`): không dùng để xếp hạng chính thức; bảng chính thức sẽ là campaign ≥5 seed với `max_seq=1792`.
 - Bảng sinh từ `.artifacts/canonical/*/seed*.parquet` — index 858 dòng cố định, hyp rỗng = 0, **không lọc dòng**. Quy ước đầy đủ: `reports/EVAL_PROTOCOL.md`.
 - **Xếp hạng chỉ dùng COMET-da 1688.** COMET-QE, BLEU, chrF là chẩn đoán.
 - `COMET-da`/`COMET-QE` là mean ± std qua seed (chỉ có std khi ≥2 seed).

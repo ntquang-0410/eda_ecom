@@ -1,8 +1,9 @@
 # Matrix 5 model × 2 data — COMET
 
-> **Chuẩn mới từ 2026-11-27:** bảng này giữ để tham chiếu lịch sử. Số liệu chính thức
-> dùng index 831 cố định, zero-fill + coverage, xem `reports/CANONICAL_EVAL.md`
-> và `reports/ALL_MODELS_METRICS.md`. Quy ước: `reports/EVAL_PROTOCOL.md`.
+> **Chuẩn mới từ 2026-11-27:** bảng này giữ để tham chiếu lịch sử. Baseline canonical
+> (index 858, zero-fill + coverage) ở `reports/LEGACY_CANONICAL_EVAL.md` — **cũng là legacy,
+> không dùng xếp hạng chính thức**; bảng chính thức sẽ là campaign ≥5 seed, `max_seq=1792`.
+> Quy ước: `reports/EVAL_PROTOCOL.md`.
 
 Eval: `eval_F_v2` — 858 dòng sạch nội dung; tập common cho mọi cell = 831 dòng (1688: 231, Tiki: 600). 1688 = COMET-da có reference; Tiki = COMET-QE không reference. BLEU/chrF tính trên phần 1688 có reference và hypothesis không rỗng.
 

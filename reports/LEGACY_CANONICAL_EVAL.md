@@ -1,4 +1,7 @@
-# Canonical eval — 858 dòng cố định, zero-fill + coverage
+# LEGACY canonical eval — 858 dòng (baseline lịch sử)
+
+> ⚠️ **LEGACY BASELINE — chỉ để đối chiếu lịch sử, KHÔNG dùng xếp hạng chính thức.**
+> Sinh từ các run **đơn seed** tại `max_seq=960` (mất 3,2% token A / 6,8% B), index 858, QE bị ẩn cho 12 cell chưa pass provenance. Bảng chính thức sẽ là campaign **≥5 seed, `max_seq=1792`** (xem `EVAL_PROTOCOL.md`, `TRAIN_GUARD_960.md`).
 
 Index: `data/cleaned/eval_paired_858.parquet` (1688 = 231, Tiki = 627, hash trong `.json`).
 Quy ước: join theo `eval_id`; hyp rỗng ⇒ 0 điểm, **không lọc dòng**; coverage = % hyp không rỗng.

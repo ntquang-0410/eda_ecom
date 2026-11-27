@@ -138,9 +138,9 @@ Sheet mẫu đã sinh (chưa có điểm): `data/cleaned/human_eval/tiki_sheet_q
 | Artefact per-row cho mọi run | ✅ 21/21 run (Qwen3-8B A-balanced đã chấm đủ 858: DA 0,8553, QE 0,0518); EcomGPT B-natural FAILED (loại) |
 | Audit 858 (zero-fill 27 dòng) | ✅ `reports/AUDIT_858.md`; 858 giờ là index chính |
 | Seed ≥5 | ❌ 37 run cell chính còn thiếu (~107 giờ GPU); xem `SEED_MATRIX.md` |
-| COMET-da là metric xếp hạng | ✅ `CANONICAL_EVAL.md` |
+| COMET-da là metric xếp hạng (nguyên tắc) | ✅ quy định trong protocol; bảng hiện có là baseline lịch sử |
 | Eval không lọc dòng dài | ✅ harness đã sửa; qwen4b_a đã sinh lại 9 dòng (coverage 100%); các cell Qwen khác còn 9 zero-fill, QE thấp hơn ~0,003 |
-| Macro `macro_w` / `macro_unw` / stratum | ✅ bảng 1b `CANONICAL_EVAL.md` + §2 `ALL_MODELS_METRICS.md` |
+| Macro `macro_w` / `macro_unw` / stratum | ✅ bảng 1b `LEGACY_CANONICAL_EVAL.md` (baseline) + §2 `ALL_MODELS_METRICS.md` |
 | Human eval Tiki | ❌ MISSING |
 | Manifest + leak assert | ✅ từ 27/11 (retrofit: commit/config hash có, hyperparams một số run để trống) |
 
