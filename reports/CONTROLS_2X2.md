@@ -1,5 +1,9 @@
 # Control cells — 2×2 quota×field, seed 123 và NLLB
 
+> **Chuẩn mới từ 2026-11-27:** bảng này giữ để tham chiếu lịch sử. Số liệu chính thức
+> dùng index 831 cố định, zero-fill + coverage, xem `reports/CANONICAL_EVAL.md`
+> và `reports/ALL_MODELS_METRICS.md`. Quy ước: `reports/EVAL_PROTOCOL.md`.
+
 **Cập nhật:** 2026-11-17 10:10 UTC  
 **Eval:** `eval_F_v2_common` — 831 dòng (1688: 231, Tiki: 600)  
 **Chấm:** COMET-da `Unbabel/wmt22-comet-da` (1688), COMET-QE `Unbabel/wmt20-comet-qe-da` (Tiki), batch 8–16 trên A100 40GB.

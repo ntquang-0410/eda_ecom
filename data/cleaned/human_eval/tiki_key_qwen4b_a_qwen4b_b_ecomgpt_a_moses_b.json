@@ -1,0 +1,2402 @@
+[
+  {
+    "item_id": "tiki:0000",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0000",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0000",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0000",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0001",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0001",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0001",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0001",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0002",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0002",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0002",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0002",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0003",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0003",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0003",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0003",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0004",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0004",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0004",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0004",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0005",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0005",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0005",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0005",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0006",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0006",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0006",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0006",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0007",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0007",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0007",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0007",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0008",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0008",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0008",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0008",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0009",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0009",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0009",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0009",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0010",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0010",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0010",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0010",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0011",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0011",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0011",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0011",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0012",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0012",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0012",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0012",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0013",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0013",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0013",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0013",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0014",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0014",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0014",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0014",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0015",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0015",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0015",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0015",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0016",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0016",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0016",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0016",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0017",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0017",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0017",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0017",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0018",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0018",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0018",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0018",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0019",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0019",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0019",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0019",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0020",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0020",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0020",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0020",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0021",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0021",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0021",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0021",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0022",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0022",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0022",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0022",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0023",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0023",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0023",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0023",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0024",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0024",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0024",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0024",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0025",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0025",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0025",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0025",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0026",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0026",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0026",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0026",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0027",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0027",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0027",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0027",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0028",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0028",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0028",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0028",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0029",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0029",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0029",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0029",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0030",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0030",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0030",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0030",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0031",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0031",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0031",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0031",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0032",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0032",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0032",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0032",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0033",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0033",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0033",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0033",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0034",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0034",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0034",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0034",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0035",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0035",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0035",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0035",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0036",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0036",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0036",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0036",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0037",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0037",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0037",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0037",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0038",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0038",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0038",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0038",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0039",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0039",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0039",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0039",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0040",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0040",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0040",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0040",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0041",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0041",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0041",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0041",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0042",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0042",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0042",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0042",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0043",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0043",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0043",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0043",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0044",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0044",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0044",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0044",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0045",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0045",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0045",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0045",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0046",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0046",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0046",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0046",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0047",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0047",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0047",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0047",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0048",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0048",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0048",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0048",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0049",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0049",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0049",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0049",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0050",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0050",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0050",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0050",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0051",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0051",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0051",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0051",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0052",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0052",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0052",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0052",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0053",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0053",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0053",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0053",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0054",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0054",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0054",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0054",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0055",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0055",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0055",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0055",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0056",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0056",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0056",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0056",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0057",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0057",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0057",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0057",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0058",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0058",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0058",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0058",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0059",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0059",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0059",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0059",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0060",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0060",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0060",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0060",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0061",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0061",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0061",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0061",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0062",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0062",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0062",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0062",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0063",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0063",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0063",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0063",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0064",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0064",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0064",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0064",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0065",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0065",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0065",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0065",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0066",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0066",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0066",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0066",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0067",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0067",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0067",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0067",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0068",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0068",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0068",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0068",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0069",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0069",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0069",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0069",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0070",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0070",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0070",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0070",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0071",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0071",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0071",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0071",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0072",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0072",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0072",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0072",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0073",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0073",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0073",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0073",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0074",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0074",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0074",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0074",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0075",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0075",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0075",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0075",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0076",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0076",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0076",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0076",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0077",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0077",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0077",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0077",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0078",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0078",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0078",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0078",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0079",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0079",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0079",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0079",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0080",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0080",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0080",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0080",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0081",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0081",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0081",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0081",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0082",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0082",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0082",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0082",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0083",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0083",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0083",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0083",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0084",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0084",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0084",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0084",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0085",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0085",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0085",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0085",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0086",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0086",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0086",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0086",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0087",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0087",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0087",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0087",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0088",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0088",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0088",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0088",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0089",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0089",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0089",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0089",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0090",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0090",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0090",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0090",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0091",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0091",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0091",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0091",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0092",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0092",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0092",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0092",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0093",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0093",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0093",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0093",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0094",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0094",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0094",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0094",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0095",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0095",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0095",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0095",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0096",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0096",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0096",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0096",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0097",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0097",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0097",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0097",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0098",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0098",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0098",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0098",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0099",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0099",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0099",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0099",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0100",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0100",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0100",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0100",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0101",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0101",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0101",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0101",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0102",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0102",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0102",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0102",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0103",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0103",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0103",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0103",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0104",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0104",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0104",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0104",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0105",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0105",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0105",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0105",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0106",
+    "system_slot": "S1",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0106",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0106",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0106",
+    "system_slot": "S4",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0107",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0107",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0107",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0107",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0108",
+    "system_slot": "S1",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0108",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0108",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0108",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0109",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0109",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0109",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0109",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0110",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0110",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0110",
+    "system_slot": "S3",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0110",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0111",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0111",
+    "system_slot": "S2",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0111",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0111",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0112",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0112",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0112",
+    "system_slot": "S3",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0112",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0113",
+    "system_slot": "S1",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0113",
+    "system_slot": "S2",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0113",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0113",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0114",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0114",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0114",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0114",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0115",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0115",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0115",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0115",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0116",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0116",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0116",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0116",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0117",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0117",
+    "system_slot": "S2",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0117",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0117",
+    "system_slot": "S4",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0118",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0118",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0118",
+    "system_slot": "S3",
+    "cell": "ecomgpt_a"
+  },
+  {
+    "item_id": "tiki:0118",
+    "system_slot": "S4",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0119",
+    "system_slot": "S1",
+    "cell": "moses_b"
+  },
+  {
+    "item_id": "tiki:0119",
+    "system_slot": "S2",
+    "cell": "qwen4b_b"
+  },
+  {
+    "item_id": "tiki:0119",
+    "system_slot": "S3",
+    "cell": "qwen4b_a"
+  },
+  {
+    "item_id": "tiki:0119",
+    "system_slot": "S4",
+    "cell": "ecomgpt_a"
+  }
+]

@@ -1,171 +1,128 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Bảng tổng hợp MỌI metric cho mọi cell (model × data × recipe × seed).
-
-Nguồn: score từng dòng (COMET-da 1688 / COMET-QE Tiki) + hyp parquet để tính
-BLEU/chrF trên đúng tập common 831 eval_id.
+"""Bảng tổng hợp mọi metric — sinh từ artefact canonical (zero-fill + coverage).
 
 Chạy: python tools/all_models_table.py
 """
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import sacrebleu
 
 ROOT = Path(__file__).resolve().parents[1]
-HYP = ROOT / ".artifacts/hyp"
-COMMON = pd.read_parquet(ROOT / "data/cleaned/eval_F_v2_common.parquet")
-IDS = set(COMMON.eval_id.astype(str))
-
-OFF = ROOT / ".artifacts/matrix_out/comet5_v2_common/scores"
-GPU = ROOT / ".artifacts/comet_gpu/scores"
-S7 = ROOT / ".artifacts/comet_s7_common"
-A7 = ROOT / ".artifacts/comet_a7"
-B8 = ROOT / ".artifacts/comet_8b"
-
-# (model, data, recipe, seed, hyp stem, score dir, score stem, note)
-CELLS = [
-    ("Qwen3-8B", "A", "natural", 42, "hyp_qwen_a_seed42", OFF, "qwen_a_seed42", ""),
-    ("Qwen3-8B", "B", "balanced", 42, "hyp_qwen_b_seed42", OFF, "qwen_b_seed42", ""),
-    ("Qwen3-8B", "A", "balanced", 42, "hyp_qwen8b_a_balanced_seed42", None, "qwen8b_a_balanced_seed42",
-     "chỉ có điểm tổng, chưa có score từng dòng"),
-    ("Qwen3-8B", "B", "natural", 42, "hyp_m8b_b_natural_seed42", B8, "m8b_b_natural_seed42", "tái lập 24/11"),
-    ("Qwen3-4B", "A", "natural", 42, "hyp_qwen4b_a_seed42", OFF, "qwen4b_a_seed42", ""),
-    ("Qwen3-4B", "B", "balanced", 42, "hyp_qwen4b_b_seed42", OFF, "qwen4b_b_seed42", ""),
-    ("Qwen3-4B", "A", "balanced", 42, "hyp_qwen4b_a_balanced_seed42", GPU, "qwen4b_a_balanced_seed42", ""),
-    ("Qwen3-4B", "B", "natural", 42, "hyp_qwen4b_b_natural_seed42", GPU, "qwen4b_b_natural_seed42", ""),
-    ("Qwen3-4B", "A", "natural", 123, "hyp_qwen4b_a_seed123", GPU, "qwen4b_a_seed123", ""),
-    ("Qwen3-4B", "B", "balanced", 123, "hyp_qwen4b_b_balanced_seed123", GPU, "qwen4b_b_balanced_seed123", ""),
-    ("Qwen3-4B", "A", "natural", 7, "hyp_qwen4b_a_natural_seed7", A7, "natural_seed7", ""),
-    ("EcomGPT-7B", "A", "natural", 42, "hyp_ecomgpt_a_seed42", OFF, "ecomgpt_a_seed42", ""),
-    ("EcomGPT-7B", "B", "balanced", 42, "hyp_ecomgpt_b_seed42", OFF, "ecomgpt_b_seed42", ""),
-    ("EcomGPT-7B", "A", "balanced", 42, "hyp_ecomgpt_a_balanced_seed42", S7, "ecomgpt_a_balanced_seed42", "tái lập 24/11"),
-    ("Moses", "A", "natural", 42, "hyp_moses_a_seed42", OFF, "moses_a_seed42", ""),
-    ("Moses", "B", "balanced", 42, "hyp_moses_b_seed42", OFF, "moses_b_seed42", ""),
-    ("OpenNMT", "A", "natural", 42, "hyp_onmt_a_seed42", OFF, "onmt_a_seed42", ""),
-    ("OpenNMT", "B", "natural", 42, "hyp_onmt_b_seed42", OFF, "onmt_b_seed42", ""),
-    ("NLLB-600M", "A", "natural", 42, "hyp_nllb_a_seed42", GPU, "nllb_a_seed42", ""),
-    ("NLLB-600M", "B", "balanced", 42, "hyp_nllb_b_seed42", GPU, "nllb_b_seed42", ""),
-    ("NLLB-600M", "A", "natural", 7, "hyp_nllb_a_seed7", S7, "nllb_a_seed7", ""),
-    ("NLLB-600M", "B", "balanced", 7, "hyp_nllb_b_seed7", S7, "nllb_b_seed7", ""),
-]
-
-AGG_ONLY = {  # điểm tổng đã công bố khi không có score từng dòng
-    ("Qwen3-8B", "A", "balanced", 42): (0.8553, 0.0562),
-}
-
-STRATA = ["title", "attribute", "description"]
+CANON = ROOT / ".artifacts/canonical"
+ORDER = ["Qwen3-8B", "Qwen3-4B", "EcomGPT-7B", "Moses", "OpenNMT", "NLLB-600M"]
 COLS = ["1688_title", "1688_attribute", "1688_description", "macro_1688",
         "tiki_title", "tiki_attribute", "tiki_description", "macro_tiki"]
 
 
-def load_pair(stem: str, sdir: Path | None):
-    if sdir is None:
-        return None
-    out = {}
-    for ds in ("1688", "tiki"):
-        p = sdir / f"scores_{stem}_{ds}.parquet"
-        if not p.exists():
-            return None
-        d = pd.read_parquet(p)
-        d["eval_id"] = d["eval_id"].astype(str)
-        out[ds] = d[d.eval_id.isin(IDS)].drop_duplicates("eval_id")
-    return out["1688"], out["tiki"]
+def safe_mean(x):
+    x = np.asarray(x, dtype=float)
+    return float(x.mean()) if np.isfinite(x).any() else float("nan")
 
 
-def fmt(v) -> str:
+def safe_std(x):
+    x = np.asarray(x, dtype=float)
+    x = x[np.isfinite(x)]
+    return float(x.std(ddof=1)) if len(x) > 1 else float("nan")
+
+
+def f(v, nd=4) -> str:
     if v is None or (isinstance(v, float) and np.isnan(v)):
         return "—"
-    return f"{v:.4f}".replace(".", ",")
+    return f"{v:.{nd}f}"
 
 
 def main() -> None:
-    rows, strat_rows = [], []
-    for model, data, recipe, seed, hyp_stem, sdir, stem, note in CELLS:
-        hyp = pd.read_parquet(HYP / f"{hyp_stem}.parquet")
-        hyp["eval_id"] = hyp["eval_id"].astype(str)
-        hyp = hyp[hyp.eval_id.isin(IDS)].drop_duplicates("eval_id")
+    rows, strata = [], []
+    for cell_dir in sorted(CANON.glob("*")):
+        files = sorted(cell_dir.glob("seed*.parquet"))
+        if not files:
+            continue
+        mans = []
+        for p in files:
+            mp = cell_dir / f"{p.stem}.manifest.json"
+            mans.append(json.loads(mp.read_text(encoding="utf-8")) if mp.exists() else {})
+        model = next((m.get("model") for m in mans if m.get("model")), cell_dir.name)
+        data = next((m.get("data") for m in mans if m.get("data")), "")
+        recipe = next((m.get("recipe") for m in mans if m.get("recipe")), "")
+        seeds = sorted(int(p.stem.replace("seed", "")) for p in files)
 
-        pair = load_pair(stem, sdir)
-        key = (model, data, recipe, seed)
-        if pair is None:
-            da, qe = AGG_ONLY[key]
-            s1688 = s_tiki = None
-            n1688 = int(((hyp.dataset == "1688") & hyp.hypothesis.astype(str).str.strip().ne("")).sum())
-            n_tiki = int(((hyp.dataset == "tiki") & hyp.hypothesis.astype(str).str.strip().ne("")).sum())
-        else:
-            s1688, s_tiki = pair
-            if "hypothesis" in s1688:
-                s1688 = s1688[s1688.hypothesis.astype(str).str.strip().ne("")]
-                s_tiki = s_tiki[s_tiki.hypothesis.astype(str).str.strip().ne("")]
-            da, qe = float(s1688.score.mean()), float(s_tiki.score.mean())
-            n1688, n_tiki = len(s1688), len(s_tiki)
-
-        h1688 = hyp[(hyp.dataset == "1688") & hyp.hypothesis.astype(str).str.strip().ne("")]
-        h1688 = h1688[h1688.reference.astype(str).str.strip().ne("")]
-        if s1688 is not None:
-            h1688 = h1688[h1688.eval_id.isin(set(s1688.eval_id))]
-        bleu = sacrebleu.corpus_bleu(h1688.hypothesis.tolist(), [h1688.reference.tolist()], tokenize="zh").score
-        chrf = sacrebleu.corpus_chrf(h1688.hypothesis.tolist(), [h1688.reference.tolist()]).score
-
-        rows.append({"model": model, "data": data, "recipe": recipe, "seed": seed,
-                     "comet_da": da, "comet_qe": qe, "bleu": float(bleu), "chrf": float(chrf),
-                     "n1688": n1688, "n_tiki": n_tiki, "note": note})
-
-        if pair is not None:
-            rec = {"model": model, "data": data, "recipe": recipe, "seed": seed}
-            for ds, df in (("1688", s1688), ("tiki", s_tiki)):
-                for st in STRATA:
-                    sub = df[df.pair_type == st]
-                    rec[f"{ds}_{st}"] = float(sub.score.mean()) if len(sub) else np.nan
-            rec["macro_1688"] = float(np.nanmean([rec[f"1688_{s}"] for s in STRATA]))
-            rec["macro_tiki"] = float(np.nanmean([rec[f"tiki_{s}"] for s in STRATA]))
-            strat_rows.append(rec)
+        da, qe, cov1, covt, bleu, chrf = [], [], [], [], [], []
+        st = {c: [] for c in COLS}
+        for p in files:
+            d = pd.read_parquet(p)
+            a = d[d.dataset == "1688"]
+            t = d[d.dataset == "tiki"]
+            da.append(a.comet_da.mean()); qe.append(t.comet_qe.mean())
+            cov1.append(a.nonempty.mean()); covt.append(t.nonempty.mean())
+            bleu.append(a.bleu.mean()); chrf.append(a.chrf.mean())
+            for ds, part in (("1688", a), ("tiki", t)):
+                for s in ("title", "attribute", "description"):
+                    st[f"{ds}_{s}"].append(part[part.stratum == s].comet_da.mean()
+                                           if ds == "1688" else part[part.stratum == s].comet_qe.mean())
+        rec = {
+            "model": model, "data": data, "recipe": recipe,
+            "seeds": ",".join(map(str, seeds)), "n_seeds": len(seeds),
+            "da": safe_mean(da), "da_std": safe_std(da),
+            "qe": safe_mean(qe), "qe_std": safe_std(qe),
+            "cov1": float(np.nanmean(cov1)), "covt": float(np.nanmean(covt)),
+            "bleu": float(np.nanmean(bleu)), "chrf": float(np.nanmean(chrf)),
+        }
+        rows.append(rec)
+        if not np.isnan(rec["da"]) and not np.isnan(rec["qe"]):
+            sr = {"model": model, "data": data, "recipe": recipe, "seeds": rec["seeds"]}
+            for c in COLS:
+                sr[c] = safe_mean(st[c])
+            strata.append(sr)
 
     df = pd.DataFrame(rows)
-    st = pd.DataFrame(strat_rows)
-    if len(st):
-        df = df.merge(st[["model", "data", "recipe", "seed", "macro_1688", "macro_tiki"]],
-                      on=["model", "data", "recipe", "seed"], how="left")
+    missing = df[df.da.isna()]
+    df = df[df.da.notna()].copy()
+    df["morder"] = df.model.map({m: i for i, m in enumerate(ORDER)}).fillna(99)
+    df = df.sort_values(["morder", "data", "recipe"]).drop(columns="morder")
+    st = pd.DataFrame(strata)
 
-    t1 = ["| Model | Data | Recipe | Seed | COMET-da 1688 | COMET-QE Tiki | Macro 1688 | Macro Tiki | BLEU | chrF | n 1688 | n Tiki | Ghi chú |",
-          "|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|"]
-    for rec in df.to_dict("records"):
-        t1.append(f"| {rec['model']} | {rec['data']} | {rec['recipe']} | {rec['seed']} | {fmt(rec['comet_da'])} | "
-                  f"{fmt(rec['comet_qe'])} | {fmt(rec.get('macro_1688', float('nan')))} | {fmt(rec.get('macro_tiki', float('nan')))} | "
-                  f"{rec['bleu']:.2f} | {rec['chrf']:.2f} | {rec['n1688']} | {rec['n_tiki']} | {rec['note']} |")
+    t1 = ["| Model | Data | Recipe | Seeds | COMET-da 1688 | Cov 1688 | COMET-QE Tiki (chẩn đoán) | Cov Tiki | BLEU sent | chrF sent |",
+          "|---|---|---|---:|---:|---:|---:|---:|---:|---:|"]
+    for r in df.itertuples():
+        ds = "" if np.isnan(r.da_std) else f" ± {r.da_std:.4f}"
+        qs = "" if np.isnan(r.qe_std) else f" ± {r.qe_std:.4f}"
+        t1.append(f"| {r.model} | {r.data} | {r.recipe} | {r.seeds} | {f(r.da)}{ds} | {r.cov1*100:.1f}% | "
+                  f"{f(r.qe)}{qs} | {r.covt*100:.1f}% | {r.bleu:.2f} | {r.chrf:.2f} |")
 
-    t2 = ["| Model | Data | Recipe | Seed | " + " | ".join(COLS) + " |",
-          "|---|---|---|---:|" + "---:|" * len(COLS)]
+    t2 = ["| Model | Data | Recipe | " + " | ".join(COLS) + " |",
+          "|---|---|---|" + "---:|" * len(COLS)]
     for rec in st.to_dict("records"):
-        t2.append(f"| {rec['model']} | {rec['data']} | {rec['recipe']} | {rec['seed']} | " +
-                  " | ".join(fmt(rec[c]) for c in COLS) + " |")
+        t2.append(f"| {rec['model']} | {rec['data']} | {rec['recipe']} | " +
+                  " | ".join(f(rec[c]) for c in COLS) + " |")
 
-    footer = """
-## Ghi chú
+    notes = ["", "## Ghi chú", "",
+             "- Bảng sinh từ `.artifacts/canonical/*/seed*.parquet` — index 831 dòng cố định, "
+             "hyp rỗng = 0, **không lọc dòng**. Quy ước đầy đủ: `reports/EVAL_PROTOCOL.md`.",
+             "- **Xếp hạng chỉ dùng COMET-da 1688.** COMET-QE, BLEU, chrF là chẩn đoán.",
+             "- `COMET-da`/`COMET-QE` là mean ± std qua seed (chỉ có std khi ≥2 seed).",
+             "- `BLEU sent`/`chrF sent` = trung bình điểm câu (không phải corpus BLEU).",
+             f"- Cell không có score từng dòng (loại khỏi bảng): "
+             + (", ".join(missing.model + " " + missing.data) if len(missing) else "không") + ".",
+             "- Human eval Tiki: **MISSING** (sheet đã sinh, chưa có người chấm)."]
+    if (df.cov1 < 1).any() or (df.covt < 1).any():
+        notes.append("- Coverage <100%: " + ", ".join(
+            f"{r.model} {r.data} ({r.cov1*100:.1f}%/{r.covt*100:.1f}%)"
+            for r in df.itertuples() if r.cov1 < 1 or r.covt < 1) + " — đã zero-fill.")
 
-- Đơn vị: COMET-da/QE là điểm hệ thống (trung bình per-row); BLEU/chrF thang 0–100.
-- `n` = số dòng thực sự được chấm sau khi lọc common + hyp không rỗng; NLLB B seed 42 thiếu 1 dòng 1688 và 3 dòng Tiki (hyp rỗng).
-- Seed noise ước lượng 0,005–0,007 COMET (1688) ⇒ chênh lệch <0,01 giữa hai cell cùng cấu hình không nên đọc là hiệu ứng.
-- **Loại khỏi bảng:** Qwen3-4B B-balanced seed 7 (hyp cũ sinh bằng adapter mẫu competition, đang chờ inference lại) và EcomGPT-7B B-natural (generation thoái hoá: 1.471/1.500 hyp rỗng).
-- Qwen3-8B A-balanced chỉ có điểm tổng từ `CHECKPOINT_2026-11-24.md`; BLEU/chrF trong bảng tính từ hyp cùng adapter, COMET chưa có score từng dòng nên không bootstrap được.
-- EcomGPT dùng ngân sách ~1,42 M token hiệu dụng (recipe chia theo token đã encode), không phải 4 M như Qwen/NLLB — xem `MATRIX_5X2_EVAL_F_V2.md` §11.3.
-"""
-    body = ("# Bảng tổng hợp mọi metric — toàn bộ cell\n\n"
-            "Sinh bởi `tools/all_models_table.py`. Eval `eval_F_v2_common` (831 eval_id: 1688 = 231, Tiki = 600).\n"
-            "COMET-da = `Unbabel/wmt22-comet-da` (1688, có reference); COMET-QE = `Unbabel/wmt20-comet-qe-da` (Tiki, không reference).\n"
-            "BLEU/chrF: 1688, hyp không rỗng, tokenize `zh` (sacrebleu).\n\n"
-            "## 1. Tổng hợp\n\n" + "\n".join(t1) +
-            "\n\n## 2. COMET theo stratum + macro-average\n\n" + "\n".join(t2) + "\n" + footer)
+    md = ["# Bảng tổng hợp mọi metric (canonical)", "",
+          "> Sinh bởi `tools/all_models_table.py` từ artefact canonical. "
+          "Số liệu thay thế bảng cũ khi có khác biệt (zero-fill + coverage).",
+          "", "## 1. Tổng hợp", "", "\n".join(t1),
+          "", "## 2. COMET theo stratum + macro", "", "\n".join(t2)] + notes
     out = ROOT / "reports/ALL_MODELS_METRICS.md"
-    out.write_text(body, encoding="utf-8")
+    out.write_text("\n".join(md) + "\n", encoding="utf-8")
     print("\n".join(t1))
-    print()
-    print("\n".join(t2))
-    print("\nwrote", out)
+    print("wrote", out)
 
 
 if __name__ == "__main__":
