@@ -170,15 +170,29 @@ def collate(items, pad_id: int):
 
 
 def generate_rows(model, tokenizer, frame: pd.DataFrame, rank: int, world: int,
-                  device, max_seq: int):
+                  device, max_seq: int, truncate: bool = False):
+    """Sinh hypothesis cho eval frame.
+
+    truncate=True: giữ mọi dòng (prompt dài được xử lý tới max_seq), KHÔNG lọc —
+    dùng cho eval để coverage luôn đủ. truncate=False giữ hành vi cũ (bỏ dòng dài)
+    nhưng log rõ số dòng bị bỏ để không âm thầm mất dữ liệu.
+    """
     part = frame.iloc[rank::world].copy().reset_index(drop=True)
     part["prompt"] = [build_prompt(tokenizer, s) for s in part["source"]]
     part["prompt_tokens"] = part["prompt"].map(
         lambda x: len(tokenizer(x, add_special_tokens=False).input_ids))
-    part = part[part["prompt_tokens"] < max_seq - 8]
-    # gom theo bucket cố định để XLA chỉ compile vài shape, không compile mỗi batch
+    too_long = part[part["prompt_tokens"] >= max_seq - 8]
+    if len(too_long):
+        ids = ",".join(too_long.eval_id.astype(str).tolist()[:6])
+        log(f"WARN {len(too_long)} dòng prompt >= {max_seq - 8} token "
+            f"(max={int(too_long.prompt_tokens.max())}): {ids}"
+            + ("..." if len(too_long) > 6 else ""))
+    if not truncate:
+        part = part[part["prompt_tokens"] < max_seq - 8]
+    # bucket: mở rộng tới max_seq để prompt dài không bị cắt
+    buckets = tuple(sorted(set(BUCKETS) | {int(max_seq)}))
     part["bucket"] = part["prompt_tokens"].map(
-        lambda n: min([b for b in BUCKETS if b >= max(16, int(n))] or [BUCKETS[-1]]))
+        lambda n: min([b for b in buckets if b >= max(16, int(n))] or [buckets[-1]]))
     out_map: dict[str, str] = {}
     for (max_new, bucket), group in part.groupby(["max_new", "bucket"]):
         records = group.sort_values("prompt_tokens").to_dict("records")

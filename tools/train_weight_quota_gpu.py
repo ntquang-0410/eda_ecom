@@ -153,7 +153,8 @@ def train_one(args, config_name: str, config: dict | None, seed: int,
     model.save_pretrained(adapter)
 
     model.eval(); model.gradient_checkpointing_disable(); model.config.use_cache = True
-    records = generate_rows(model, tokenizer, eval_frame, 0, 1, "cuda", args.max_seq)
+    eval_max = args.eval_max_seq or args.max_seq
+    records = generate_rows(model, tokenizer, eval_frame, 0, 1, "cuda", eval_max, truncate=True)
     part = eval_frame[["eval_id", "dataset", "pair_type", "source", "reference"]].merge(
         pd.DataFrame(records), on="eval_id", how="left")
     part["hypothesis"] = part["hypothesis"].fillna("")
@@ -193,6 +194,8 @@ def main() -> int:
     ap.add_argument("--tokens", type=int, default=4_000_000)
     ap.add_argument("--steps", type=int, default=500)
     ap.add_argument("--max-seq", type=int, default=960)
+    ap.add_argument("--eval-max-seq", type=int, default=0,
+                    help="max_seq riêng cho eval (0 = dùng --max-seq); eval không lọc dòng dài")
     ap.add_argument("--micro-batch", type=int, default=4)
     ap.add_argument("--save-every", type=int, default=100)
     ap.add_argument("--init-adapter", default="", help="thư mục adapter để warm-start")
