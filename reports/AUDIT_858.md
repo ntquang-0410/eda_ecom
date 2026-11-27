@@ -60,3 +60,16 @@ Index: `data/cleaned/eval_paired_858.parquet` (1688 = 231, Tiki = 627). 27 dòng
 - Vì 1688 không đổi, kết luận xếp hạng theo COMET-da giữ nguyên; nhưng coverage Tiki phải báo cáo trên 858 kể từ nay.
 - Qwen3-8B A-balanced bị loại khỏi bảng QE 858 vì artefact 831 không có score từng dòng (chỉ 27 dòng mới được chấm) — cần chấm lại toàn bộ 600 dòng Tiki trước khi so sánh.
 - Khuyến nghị: chuyển index chính thức sang 858 (thuần nội dung) nếu chấp nhận đổi số QE; nếu giữ 831 để liên tục, luôn kèm phụ lục 858 này.
+
+---
+
+## 4. Bổ sung 27/11 — Qwen3-8B A-balanced đã chấm đủ 858
+
+Trước đó artefact 831 không có score từng dòng nên bảng §1 để `nan`. Đã chấm lại toàn bộ trên Colab T4
+(COMET-da 231 dòng + COMET-QE 618 dòng không rỗng):
+
+| Cell | 1688 da | Tiki QE (858, zero-fill) | Coverage Tiki |
+|---|---:|---:|---:|
+| Qwen3-8B A-balanced seed 42 | **0,8553** | **0,0518** | 98,6% |
+
+DA trùng khớp điểm tổng cũ 0,8553 ⇒ hyp + adapter hợp lệ. Không còn cell nào thiếu score trong canonical 858.

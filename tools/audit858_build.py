@@ -40,6 +40,9 @@ def main() -> None:
             continue
         base = pd.read_parquet(base_p)
         base["eval_id"] = base.eval_id.astype(str)
+        if extra_ids.issubset(set(base.eval_id)):
+            print(f"SKIP {cell} s{seed}: base đã là 858")
+            continue
         b = base.set_index("eval_id")
 
         hyp_extra = pd.read_parquet(STAGE / "hyps" / m["file"])

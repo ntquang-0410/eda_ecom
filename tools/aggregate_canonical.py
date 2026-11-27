@@ -154,11 +154,12 @@ def main() -> None:
         md.append("- **Không có score từng dòng (loại khỏi bảng xếp hạng):** " + ", ".join(missing_cells) + ".")
     md.append(f"- **Seed:** {len(few)}/{len(agg)} cell có <5 seed. Các cell đã có ≥2 seed: "
               + ", ".join(f"{r.label} ({r.n_seeds})" for r in agg.itertuples() if r.n_seeds >= 2) + ".")
-    md.append("- **Thiếu score từng dòng:** Qwen3-8B A-balanced (chỉ có điểm tổng) → không vào bootstrap.")
+    md.append("- **Thiếu score từng dòng:** " +
+              (", ".join(missing_cells) if missing_cells else "không còn cell nào") + ".")
     if (agg.cov1688 < 1).any() or (agg.covtiki < 1).any():
-        md.append("- **Coverage <100%:** " + ", ".join(
-            f"{r.label} ({r.cov1688*100:.1f}%/{r.covtiki*100:.1f}%)"
-            for r in agg.itertuples() if r.cov1688 < 1 or r.covtiki < 1) + " — đã zero-fill.")
+        low = [r for r in agg.itertuples() if r.cov1688 < 1 or r.covtiki < 1]
+        md.append(f"- **Coverage <100%:** {len(low)} cell (Qwen 98,6% do 9 description dài; "
+                  "EcomGPT B 97,1%; NLLB B 99,8%) — đã zero-fill, chi tiết trong artefact.")
     md.append("- **Human eval Tiki:** chưa có; bảng xếp hạng hiện chỉ dựa COMET-da 1688.")
     md.append("- **9 dòng description dài (3,0–3,7k ký tự) bị Qwen bỏ vì prompt >952 token** "
               "(guard `max_seq=960`), không phải model fail — xem `reports/AUDIT_EMPTY_QWEN4B.md`.")

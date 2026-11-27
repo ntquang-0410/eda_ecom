@@ -128,10 +128,11 @@ Sheet mẫu đã sinh (chưa có điểm): `data/cleaned/human_eval/tiki_sheet_q
 |---|---|
 | Index 858 cố định + hash | ✅ (thay 831 từ 27/11) |
 | Zero-fill + coverage | ✅ (NLLB B seed 42: 0,5517 → **0,5494**, coverage 99,8%) |
-| Artefact per-row cho mọi run | ✅ 20/21 run; ❌ Qwen3-8B A-balanced thiếu score từng dòng; EcomGPT B-natural FAILED (loại) |
+| Artefact per-row cho mọi run | ✅ 21/21 run (Qwen3-8B A-balanced đã chấm đủ 858: DA 0,8553, QE 0,0518); EcomGPT B-natural FAILED (loại) |
 | Audit 858 (zero-fill 27 dòng) | ✅ `reports/AUDIT_858.md`; 858 giờ là index chính |
 | Seed ≥5 | ❌ 37 run cell chính còn thiếu (~107 giờ GPU); xem `SEED_MATRIX.md` |
 | COMET-da là metric xếp hạng | ✅ `CANONICAL_EVAL.md` |
+| Macro `macro_w` / `macro_unw` / stratum | ✅ bảng 1b `CANONICAL_EVAL.md` + §2 `ALL_MODELS_METRICS.md` |
 | Human eval Tiki | ❌ MISSING |
 | Manifest + leak assert | ✅ từ 27/11 (retrofit: commit/config hash có, hyperparams một số run để trống) |
 

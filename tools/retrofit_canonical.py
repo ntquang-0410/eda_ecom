@@ -64,8 +64,8 @@ def load_scores(sdir: Path | None, stem: str, ds: str):
 
 EXTRA_QE = ROOT / ".artifacts/audit858/qe_extra.parquet"
 OVERRIDES = {  # (cell, seed) -> (da_path, qe_path) khi chấm lại toàn bộ
-    # ("qwen8b_a_balanced", 42): (ROOT / ".artifacts/comet_8b_bal/da.parquet",
-    #                            ROOT / ".artifacts/comet_8b_bal/qe.parquet"),
+    ("qwen8b_a_balanced", 42): (ROOT / ".artifacts/comet_8b_bal/da.parquet",
+                                ROOT / ".artifacts/comet_8b_bal/qe.parquet"),
 }
 
 

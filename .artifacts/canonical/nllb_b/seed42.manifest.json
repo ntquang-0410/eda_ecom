@@ -2,7 +2,7 @@
   "model": "NLLB-600M",
   "data": "B",
   "recipe": "balanced",
-  "commit_hash": "d0b0a02af9cd8b3f172c2bb6c0a9b3a913134864",
+  "commit_hash": "74234d855b44726058e2f0901a5a1716eefed758",
   "config_hash": "bc45f0c136ebb2e1",
   "token_budget": 4000000,
   "adapter_path": null,
@@ -21,5 +21,5 @@
     "1688": 0,
     "tiki": 0
   },
-  "created_at": "2026-11-27T10:20:46Z"
+  "created_at": "2026-11-27T10:39:32Z"
 }
