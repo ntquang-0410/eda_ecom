@@ -12,7 +12,7 @@ Human eval Tiki: **MISSING** (chưa có file annotation).
 | Qwen3-8B B-balanced | 42 | 1 | 0.8572 | 100.0% | 0.0470 | 98.6% | 53.81 | 54.56 |
 | Qwen3-8B A-natural | 42 | 1 | 0.8567 | 100.0% | 0.0487 | 98.6% | 51.77 | 51.37 |
 | Qwen3-8B A-balanced | 42 | 1 | 0.8553 | 100.0% | 0.0518 | 98.6% | 48.25 | 48.03 |
-| Qwen3-4B A-natural | 7,42,123 | 3 | 0.8542 ± 0.0037 | 100.0% | 0.0563 ± 0.0030 | 98.6% | 46.76 | 47.25 |
+| Qwen3-4B A-natural | 7,42,123 | 3 | 0.8542 ± 0.0037 | 100.0% | 0.0597 ± 0.0030 | 100.0% | 46.76 | 47.25 |
 | Qwen3-8B B-natural | 42 | 1 | 0.8514 | 100.0% | 0.0576 | 98.6% | 51.67 | 52.26 |
 | Qwen3-4B A-balanced | 42 | 1 | 0.8477 | 100.0% | 0.0483 | 98.6% | 46.27 | 46.79 |
 | Qwen3-4B B-balanced | 42,123 | 2 | 0.8475 ± 0.0006 | 100.0% | 0.0438 ± 0.0031 | 98.6% | 50.66 | 51.83 |
@@ -36,7 +36,7 @@ Human eval Tiki: **MISSING** (chưa có file annotation).
 | Qwen3-8B B-balanced | 0.8656 | 0.8572 | 0.0785 | 0.0470 |
 | Qwen3-8B A-natural | 0.8542 | 0.8567 | 0.0805 | 0.0487 |
 | Qwen3-8B A-balanced | 0.8549 | 0.8553 | 0.0861 | 0.0518 |
-| Qwen3-4B A-natural | 0.8548 | 0.8542 | 0.0900 | 0.0563 |
+| Qwen3-4B A-natural | 0.8548 | 0.8542 | 0.0964 | 0.0597 |
 | Qwen3-8B B-natural | 0.8615 | 0.8514 | 0.0917 | 0.0576 |
 | Qwen3-4B A-balanced | 0.8470 | 0.8477 | 0.0846 | 0.0483 |
 | Qwen3-4B B-balanced | 0.8569 | 0.8475 | 0.0822 | 0.0438 |
@@ -74,7 +74,7 @@ Human eval Tiki: **MISSING** (chưa có file annotation).
 
 - **Seed:** 17/17 cell có <5 seed. Các cell đã có ≥2 seed: Qwen3-4B A-natural (3), Qwen3-4B B-balanced (2), NLLB-600M A (2), NLLB-600M B (2).
 - **Thiếu score từng dòng:** không còn cell nào.
-- **Coverage <100%:** 10 cell (Qwen 98,6% do 9 description dài; EcomGPT B 97,1%; NLLB B 99,8%) — đã zero-fill, chi tiết trong artefact.
+- **Coverage <100%:** 9 cell (Qwen 98,6% do 9 description dài; EcomGPT B 97,1%; NLLB B 99,8%) — đã zero-fill, chi tiết trong artefact.
 - **Human eval Tiki:** chưa có; bảng xếp hạng hiện chỉ dựa COMET-da 1688.
 - **9 dòng description dài (3,0–3,7k ký tự) bị Qwen bỏ vì prompt >952 token** (guard `max_seq=960`), không phải model fail — xem `reports/AUDIT_EMPTY_QWEN4B.md`.
 - **NLLB B:** seed 42 = 0,5494 vs seed 7 = 0,6382 (Δ −0,0888 [−0,1076; −0,0698]); run hợp lệ, đây là run-variance thật — xem `reports/AUDIT_NLLB_B_SEED.md`.
