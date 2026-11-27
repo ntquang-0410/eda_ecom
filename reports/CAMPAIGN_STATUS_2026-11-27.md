@@ -47,3 +47,17 @@ Không thể hoàn tất trong một phiên; registry + runner cho phép chạy 
 - Đang chạy song song: **EcomGPT B-natural retry** (bootstrap 28 GB) và **NLLB B s42** (train từ 14:47).
 - Chain: khi EcomGPT xong → tự chạy **Qwen3-4B A-natural seed 2024 @1792** (~6 h, có checkpoint upload).
 - T4 bị Colab thu hồi khi tạo A100 (giới hạn 2 GPU session) — NLLB mất ~45 phút train trên T4, đã restart trên A100.
+
+## 6. Cập nhật 17:55 UTC — A100 bị preempt, đã chuẩn bị resume
+
+- A100 `gpu-a100-s-ass1c0-maczc7fy7k95` **bị thu hồi** sau ~3 h (không phải hết 12 h). Toàn bộ
+  process trên máy đó dừng theo.
+- **EcomGPT retry**: đã kịp upload checkpoint **step 75** → `nguynthanhquang/ecomgpt-b-natural-lr5e5-ckpt`.
+  Runner đã sửa để tự tải ckpt và resume `--init-adapter --start-step 75`.
+- **NLLB B s42**: lần chạy trên A100 **mất trắng** vì chưa có upload (bài học: phải upload ngay).
+  Đã thêm `--upload-script` vào `train_nllb.py` + dataset `nllb-b-sub4842-ckpt`; runner mới
+  `run_nllb_b_sub4842.sh` tự resume.
+- **4B 1792 seed 2024**: chưa từng chạy (chain chờ EcomGPT).
+- Đang chạy lại vòng xin A100 (`a100_campaign2.log`); khi vào sẽ chạy `chain_all.sh`:
+  NLLB + EcomGPT song song, rồi 4B 1792 khi EcomGPT xong.
+- Tất cả 54 job trở về `pending` trong registry; không có kết quả nào bị tính sai.

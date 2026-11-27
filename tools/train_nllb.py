@@ -42,6 +42,7 @@ def main() -> None:
     ap.add_argument("--start-step", type=int, default=0)
     ap.add_argument("--max-new", type=int, default=0, help=">0: giới hạn max_new khi infer (chẩn đoán)")
     ap.add_argument("--skip-infer", action="store_true")
+    ap.add_argument("--upload-script", default="", help="bash script nhận (ckpt_dir, step)")
     args = ap.parse_args()
 
     from peft import LoraConfig, PeftModel, get_peft_model
@@ -103,6 +104,9 @@ def main() -> None:
         tok.save_pretrained(dst)
         (dst / "STEP.txt").write_text(str(step), encoding="utf-8")
         log(f"save {dst.name} step {step}")
+        if args.upload_script and not final:
+            import subprocess
+            subprocess.run(["bash", args.upload_script, str(dst), str(step)], check=False)
 
     steps = sorted(s.step.unique().tolist())
     started = time.time()
