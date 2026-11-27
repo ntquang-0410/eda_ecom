@@ -37,3 +37,6 @@ Seed đích: cell chính [7, 42, 123, 2024, 2025]; control [7, 42, 123]. Nguồn
 - Kaggle: 2 account × 30 h GPU/tuần (reset thứ Bảy). Colab A100: phiên 12 h, hay bị thu hồi.
 - Với 5 seed, báo cáo mean ± std qua seed; paired bootstrap CI chỉ phủ variance eval, phải ghi rõ khi so sánh giữa cell.
 - Cell Qwen3-8B A-balanced hiện **không có score từng dòng** → phải chấm lại trước khi tính seed mean.
+
+- **Bắt buộc cho campaign 5-seed:** dùng `--max-seq 1792 --eval-max-seq 1792` để không mất 3–7% token
+  do guard 960 (xem `reports/TRAIN_GUARD_960.md`). Các run 960 hiện có là legacy/ablation.

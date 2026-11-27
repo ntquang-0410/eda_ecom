@@ -71,6 +71,14 @@ def _write_manifest(out: Path, args, config_name: str, info: dict) -> None:
         "token_budget_note": "recipe chia theo token đã encode (≈0,35× token hiệu dụng)",
         "adapter_path": args.init_adapter or None, "base_model": args.model,
         "finished_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "adapter_provenance": {
+            "source": "trained_in_run",
+            "init_adapter": args.init_adapter or None,
+            "final_adapter": str(out / f"adapter_{config_name}_seed{args.seed}"),
+            "step": args.steps,
+            "md5": None,
+            "base_model": args.model,
+        },
         "result": info,
     }
     (out / f"run_manifest_{config_name}_seed{args.seed}.json").write_text(

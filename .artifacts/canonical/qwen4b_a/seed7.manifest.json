@@ -20,5 +20,14 @@
     "1688": 0,
     "tiki": 0
   },
-  "created_at": "2026-11-27T12:05:39Z"
+  "created_at": "2026-11-27T12:05:39Z",
+  "adapter_provenance": {
+    "source": "dataset",
+    "dataset_ref": "nguynthanhquang/qwen4b-a-s7-ckpt",
+    "adapter_name": "adapter_natural_seed7_ckpt",
+    "step": 500,
+    "base_model": "Qwen/Qwen3-4B",
+    "md5": "679b938f4c10d49091c53fde5480b437",
+    "recorded": true
+  }
 }

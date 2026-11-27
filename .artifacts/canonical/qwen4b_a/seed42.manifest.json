@@ -20,5 +20,14 @@
     "1688": 0,
     "tiki": 0
   },
-  "created_at": "2026-11-27T12:05:37Z"
+  "created_at": "2026-11-27T12:05:37Z",
+  "adapter_provenance": {
+    "source": "kernel_output",
+    "dataset_ref": "nguynthanhquang/tiki-matrix-m4b-a",
+    "adapter_name": "adapter_natural_seed42",
+    "step": 500,
+    "base_model": "Qwen/Qwen3-4B",
+    "md5": "052800733e9edd157b05a38f38d865e6",
+    "recorded": true
+  }
 }

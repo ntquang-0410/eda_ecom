@@ -105,6 +105,11 @@ Trainer (`train_weight_quota_gpu.py`, `train_ecomgpt.py`) ghi `run_manifest_<con
 - `commit_hash` = `git rev-parse HEAD` tại thời điểm train.
 - `config_hash` = sha256 16 ký tự của dict cấu hình (dataset, config, seed, token, steps, lr, micro-batch, max-seq, dtype, adapter).
 - **Leak-check assertion** giữ nguyên trong trainer: `assert not (train.product_id ∩ eval.product_id)`, log số sản phẩm trùng.
+- **Adapter provenance** (`adapter_provenance`): nguồn (train trong run / kernel output / dataset),
+  `init_adapter`, `final_adapter`, `step`, `md5`, `base_model`. Retrofit ghi `recorded=false` nếu run cũ
+  không lưu adapter.
+- **Training guard:** `encode_row` bỏ dòng có prompt ≥ `max_seq-8`. Đo trên mẫu thật: A mất 3,2% token,
+  B mất 6,8% (xem `reports/TRAIN_GUARD_960.md`). Campaign 5-seed mới dùng `--max-seq 1792`.
 
 ## 7. Human eval Tiki (chính thức)
 

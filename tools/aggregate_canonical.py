@@ -143,11 +143,14 @@ def main() -> None:
 
     md += ["", "## 2. Paired cluster bootstrap (COMET-da 1688, 2.000 lần, cluster = product_id)", "",
            "| A | B | Δ (A−B) | 95% CI | n |", "|---|---|---:|---|---:|"]
+    NO_STAR = {("NLLB-600M A", "NLLB-600M B")}
     for c in contrasts:
-        sig = "*" if (c["lo"] > 0 or c["hi"] < 0) else ""
+        sig = "" if (c["a"], c["b"]) in NO_STAR else ("*" if (c["lo"] > 0 or c["hi"] < 0) else "")
         md.append(f"| {c['a']} | {c['b']} | {c['mean']:+.4f}{sig} | "
                   f"[{c['lo']:+.4f}; {c['hi']:+.4f}] | {c['n']} |")
 
+    md += ["", "`*` = CI (chỉ phủ variance eval) không chứa 0. **NLLB A vs B không đánh dấu** vì "
+           "chênh lệch đổi dấu giữa seed 42 và seed 7 — xem ghi chú §3.", ""]
     md += ["", "## 3. Vi phạm / khoảng trống so với policy", ""]
     few = agg[agg.n_seeds < 5]
     if missing_cells:
@@ -163,8 +166,11 @@ def main() -> None:
     md.append("- **Human eval Tiki:** chưa có; bảng xếp hạng hiện chỉ dựa COMET-da 1688.")
     md.append("- **9 dòng description dài (3,0–3,7k ký tự) bị Qwen bỏ vì prompt >952 token** "
               "(guard `max_seq=960`), không phải model fail — xem `reports/AUDIT_EMPTY_QWEN4B.md`.")
-    md.append("- **NLLB B:** seed 42 = 0,5494 vs seed 7 = 0,6382 (Δ −0,0888 [−0,1076; −0,0698]); "
-              "run hợp lệ, đây là run-variance thật — xem `reports/AUDIT_NLLB_B_SEED.md`.")
+    md.append("- **NLLB A vs B là seed-dependent:** seed 42 cho A 0,6344 > B 0,5494; seed 7 cho "
+              "A 0,6304 < B 0,6382 → không kết luận A/B từ control này. Epochs@4M: "
+              "A = 0,83 (tập 4,84 M token), B = 0,26 (tập 15,71 M token); mỗi seed B chỉ thấy ~1/4 dữ liệu "
+              "nên run-variance lớn (Δ seed42−seed7 = −0,0888 [−0,1076; −0,0698]).")
+    md.append("- **NLLB B:** seed 42 = 0,5494 vs seed 7 = 0,6382; run hợp lệ — xem `reports/AUDIT_NLLB_B_SEED.md`.")
     md.append("- **Nguồn gốc:** các artefact này là retrofit từ score cũ; run mới phải dùng "
               "`tools/score_canonical.py` để log manifest đầy đủ.")
 

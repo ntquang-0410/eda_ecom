@@ -101,7 +101,7 @@ Chấm bằng `venv_comet` trên Colab A100, lọc đúng 831 `eval_id` của `d
 
 **Đọc kết quả:**
 
-1. **NLLB B seed 7 (0,6382) cao hơn NLLB B seed 42 (0,5517) rất nhiều**, trong khi seed 42 cho B < A. Vì vậy kết luận cũ "NLLB B kém A" là **nhiễu seed**, không phải hiệu ứng dữ liệu — với control pretrained NMT, chênh lệch A/B nằm trong dao động seed.
+1. **NLLB B seed 7 (0,6382) cao hơn NLLB B seed 42 (0,5494, đã zero-fill 858) rất nhiều**, trong khi seed 42 cho A > B (0,6344 vs 0,5494) còn seed 7 cho A < B (0,6304 vs 0,6382). Vì vậy kết luận "NLLB B kém A" là **seed-dependent**, không phải hiệu ứng dữ liệu; **không đánh dấu * ** cho cặp A vs B. Epochs@4M: **A = 0,83** (tập 4,84 M token), **B = 0,26** (tập 15,71 M token) — mỗi seed B chỉ thấy ~1/4 dữ liệu nên run-variance lớn.
 2. **EcomGPT A tái lập 0,8156 vs điểm cũ 0,8250** (Δ 0,0094): cùng bậc, khác biệt do lần chạy mới bỏ mega-batch ở step 500 và cắt ngắn chunk cuối (xem `CHECKPOINT_2026-11-24_1640.md` §3). Bản tái lập là bản có artefact đầy đủ (adapter step 500), nên dùng bản này.
 3. **Bài học kiểm tra artefact:** kernel infer dùng `rglob('adapter_config.json')` trên `/kaggle/input` có thể bắt nhầm adapter mẫu của competition. Đã vá builder resume; mọi cell cần assert đường dẫn adapter chứa tên dataset đã train.
 

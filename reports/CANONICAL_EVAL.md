@@ -65,10 +65,13 @@ Human eval Tiki: **MISSING** (chưa có file annotation).
 | Qwen3-4B B-balanced | Qwen3-8B B-balanced | -0.0097* | [-0.0174; -0.0027] | 231 |
 | Qwen3-4B A-natural | EcomGPT-7B A-natural | +0.0292* | [+0.0171; +0.0409] | 231 |
 | Qwen3-4B B-balanced | EcomGPT-7B B-balanced | +0.0841* | [+0.0639; +0.1055] | 231 |
-| NLLB-600M A | NLLB-600M B | +0.0387* | [+0.0229; +0.0533] | 231 |
+| NLLB-600M A | NLLB-600M B | +0.0387 | [+0.0229; +0.0533] | 231 |
 | OpenNMT A | OpenNMT B-natural | +0.0102 | [-0.0027; +0.0236] | 231 |
 | Qwen3-4B A-natural | NLLB-600M A | +0.2217* | [+0.1951; +0.2501] | 231 |
 | Qwen3-4B B-balanced | NLLB-600M B | +0.2537* | [+0.2313; +0.2768] | 231 |
+
+`*` = CI (chỉ phủ variance eval) không chứa 0. **NLLB A vs B không đánh dấu** vì chênh lệch đổi dấu giữa seed 42 và seed 7 — xem ghi chú §3.
+
 
 ## 3. Vi phạm / khoảng trống so với policy
 
@@ -77,5 +80,6 @@ Human eval Tiki: **MISSING** (chưa có file annotation).
 - **Coverage <100%:** 9 cell (Qwen 98,6% do 9 description dài; EcomGPT B 97,1%; NLLB B 99,8%) — đã zero-fill, chi tiết trong artefact.
 - **Human eval Tiki:** chưa có; bảng xếp hạng hiện chỉ dựa COMET-da 1688.
 - **9 dòng description dài (3,0–3,7k ký tự) bị Qwen bỏ vì prompt >952 token** (guard `max_seq=960`), không phải model fail — xem `reports/AUDIT_EMPTY_QWEN4B.md`.
-- **NLLB B:** seed 42 = 0,5494 vs seed 7 = 0,6382 (Δ −0,0888 [−0,1076; −0,0698]); run hợp lệ, đây là run-variance thật — xem `reports/AUDIT_NLLB_B_SEED.md`.
+- **NLLB A vs B là seed-dependent:** seed 42 cho A 0,6344 > B 0,5494; seed 7 cho A 0,6304 < B 0,6382 → không kết luận A/B từ control này. Epochs@4M: A = 0,83 (tập 4,84 M token), B = 0,26 (tập 15,71 M token); mỗi seed B chỉ thấy ~1/4 dữ liệu nên run-variance lớn (Δ seed42−seed7 = −0,0888 [−0,1076; −0,0698]).
+- **NLLB B:** seed 42 = 0,5494 vs seed 7 = 0,6382; run hợp lệ — xem `reports/AUDIT_NLLB_B_SEED.md`.
 - **Nguồn gốc:** các artefact này là retrofit từ score cũ; run mới phải dùng `tools/score_canonical.py` để log manifest đầy đủ.

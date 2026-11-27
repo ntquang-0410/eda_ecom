@@ -55,11 +55,29 @@ def _write_manifest(out_dir: Path, args, name: str, info: dict) -> None:
                "micro_batch": args.micro_batch, "max_seq": args.max_seq,
                "dtype": args.dtype, "init_adapter": args.init_adapter or None,
                "start_step": args.start_step, "base_model": args.model}
+    import hashlib
+    final_adapter = out_dir / f"adapter_{name}_seed{args.seed}"
+    final_file = final_adapter / "adapter_model.safetensors"
+    md5 = None
+    if final_file.exists():
+        h = hashlib.md5()
+        with final_file.open("rb") as f:
+            for chunk in iter(lambda: f.read(1 << 20), b""):
+                h.update(chunk)
+        md5 = h.hexdigest()
     man = {
         "cell_config": payload, "config_hash": _config_hash(payload),
         "commit_hash": _commit_hash(), "seed": args.seed,
         "token_budget": args.tokens, "adapter_path": args.init_adapter or None,
         "base_model": args.model, "finished_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "adapter_provenance": {
+            "source": "trained_in_run",
+            "init_adapter": args.init_adapter or None,
+            "final_adapter": str(final_adapter),
+            "step": args.steps,
+            "md5": md5,
+            "base_model": args.model,
+        },
         "result": info,
     }
     (out_dir / f"run_manifest_{name}_seed{args.seed}.json").write_text(

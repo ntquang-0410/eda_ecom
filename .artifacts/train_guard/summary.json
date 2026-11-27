@@ -1,0 +1,112 @@
+{
+  "A_natural_42": {
+    "seed": 42,
+    "draws": 97923,
+    "dropped_draws": 148,
+    "dropped_pct": 0.15113916036069158,
+    "dropped_token_pct": 3.3638784059874527,
+    "unique_dropped": 96
+  },
+  "A_natural_123": {
+    "seed": 123,
+    "draws": 98320,
+    "dropped_draws": 148,
+    "dropped_pct": 0.15052888527257935,
+    "dropped_token_pct": 3.3371249575054653,
+    "unique_dropped": 108
+  },
+  "A_natural_7": {
+    "seed": 7,
+    "draws": 99283,
+    "dropped_draws": 120,
+    "dropped_pct": 0.12086661361965291,
+    "dropped_token_pct": 2.755074224781257,
+    "unique_dropped": 95
+  },
+  "A_balanced_42": {
+    "seed": 42,
+    "draws": 110723,
+    "dropped_draws": 58,
+    "dropped_pct": 0.052382973727229214,
+    "dropped_token_pct": 1.2940829157066214,
+    "unique_dropped": 50
+  },
+  "A_balanced_123": {
+    "seed": 123,
+    "draws": 109750,
+    "dropped_draws": 58,
+    "dropped_pct": 0.05284738041002278,
+    "dropped_token_pct": 1.2971468733507887,
+    "unique_dropped": 48
+  },
+  "A_balanced_7": {
+    "seed": 7,
+    "draws": 111148,
+    "dropped_draws": 57,
+    "dropped_pct": 0.05128297405261453,
+    "dropped_token_pct": 1.286920564332449,
+    "unique_dropped": 52
+  },
+  "A": {
+    "rows": 118732,
+    "drop_rows": 172,
+    "drop_pct": 0.14486406360543072,
+    "drop_tokens_pct": 3.2167890690589918,
+    "max_prompt": 1439
+  },
+  "B_natural_42": {
+    "seed": 42,
+    "draws": 14586,
+    "dropped_draws": 265,
+    "dropped_pct": 1.8168106403400521,
+    "dropped_token_pct": 6.233079297195205,
+    "unique_dropped": 232
+  },
+  "B_natural_123": {
+    "seed": 123,
+    "draws": 14643,
+    "dropped_draws": 285,
+    "dropped_pct": 1.9463224749026837,
+    "dropped_token_pct": 6.7428913736129665,
+    "unique_dropped": 245
+  },
+  "B_natural_7": {
+    "seed": 7,
+    "draws": 14600,
+    "dropped_draws": 300,
+    "dropped_pct": 2.054794520547945,
+    "dropped_token_pct": 7.083602062632384,
+    "unique_dropped": 264
+  },
+  "B_balanced_42": {
+    "seed": 42,
+    "draws": 52085,
+    "dropped_draws": 131,
+    "dropped_pct": 0.25151195161754825,
+    "dropped_token_pct": 3.079691155121187,
+    "unique_dropped": 123
+  },
+  "B_balanced_123": {
+    "seed": 123,
+    "draws": 52139,
+    "dropped_draws": 146,
+    "dropped_pct": 0.28002071386102534,
+    "dropped_token_pct": 3.4659635800937125,
+    "unique_dropped": 138
+  },
+  "B_balanced_7": {
+    "seed": 7,
+    "draws": 52240,
+    "dropped_draws": 161,
+    "dropped_pct": 0.30819295558958654,
+    "dropped_token_pct": 3.8337595914393425,
+    "unique_dropped": 150
+  },
+  "B": {
+    "rows": 57406,
+    "drop_rows": 1134,
+    "drop_pct": 1.9754032679510851,
+    "drop_tokens_pct": 6.812670314891732,
+    "max_prompt": 1625
+  }
+}
