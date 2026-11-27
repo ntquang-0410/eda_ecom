@@ -60,6 +60,7 @@ def _write_manifest(out: Path, args, config_name: str, info: dict) -> None:
     import hashlib, time
     payload = {"dataset": args.dataset, "config": config_name, "seed": args.seed,
                "tokens": args.tokens, "steps": args.steps, "micro_batch": args.micro_batch,
+               "lr": args.lr,
                "max_seq": args.max_seq, "init_adapter": args.init_adapter or None,
                "start_step": args.start_step, "base_model": args.model}
     man = {
@@ -145,6 +146,7 @@ def main() -> int:
     ap.add_argument("--steps", type=int, default=500)
     ap.add_argument("--configs", default="natural")
     ap.add_argument("--micro-batch", type=int, default=2)
+    ap.add_argument("--lr", type=float, default=1e-4)
     ap.add_argument("--max-seq", type=int, default=960)
     ap.add_argument("--save-every", type=int, default=25)
     ap.add_argument("--init-adapter", default=None)
@@ -197,7 +199,7 @@ def main() -> int:
     model.config.use_cache = False
 
     params = [p for p in model.parameters() if p.requires_grad]
-    opt = torch.optim.AdamW(params, lr=1e-4)
+    opt = torch.optim.AdamW(params, lr=args.lr)
     sched = torch.optim.lr_scheduler.LambdaLR(
         opt, lambda s: min(1.0, (s + 1) / 20) * max(0.0, 0.5 * (1 + math.cos(math.pi * min(1.0, s / args.steps)))))
 
