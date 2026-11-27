@@ -3,7 +3,7 @@
 """Chuẩn đánh giá canonical: index cố định 831 dòng + artefact per-row + manifest.
 
 Quy ước:
-- Test set paired cố định: 1688 = 231, Tiki = 600 (data/cleaned/eval_paired_831.parquet).
+- Test set paired cố định: 1688 = 231, Tiki = 627 (data/cleaned/eval_paired_858.parquet).
 - Mọi run join theo eval_id; hyp rỗng ⇒ điểm 0 (không lọc dòng).
 - Artefact per-row: eval_id, dataset, stratum, hyp, ref, comet_da, comet_qe, bleu, chrf, nonempty.
 - Manifest mỗi run: commit_hash, config_hash, seed, token_budget, adapter_path...
@@ -21,8 +21,8 @@ import pandas as pd
 import sacrebleu
 
 ROOT = Path(__file__).resolve().parents[1]
-INDEX_PATH = ROOT / "data/cleaned/eval_paired_831.parquet"
-INDEX_META = ROOT / "data/cleaned/eval_paired_831.json"
+INDEX_PATH = ROOT / "data/cleaned/eval_paired_858.parquet"
+INDEX_META = ROOT / "data/cleaned/eval_paired_858.json"
 CANON = ROOT / ".artifacts/canonical"
 SCHEMA = ["eval_id", "dataset", "stratum", "hyp", "ref",
           "comet_da", "comet_qe", "bleu", "chrf", "nonempty"]
@@ -37,17 +37,17 @@ def load_index(create: bool = True) -> pd.DataFrame:
     if not INDEX_PATH.exists():
         if not create:
             raise FileNotFoundError(INDEX_PATH)
-        src = pd.read_parquet(ROOT / "data/cleaned/eval_F_v2_common.parquet")
+        src = pd.read_parquet(ROOT / "data/cleaned/eval_F_v2.parquet")
         ev = src[["eval_id", "dataset", "pair_type", "product_id", "source",
                   "reference", "max_new"]].copy()
         ev = ev.rename(columns={"pair_type": "stratum"})
         ev["eval_id"] = ev.eval_id.astype(str)
-        assert len(ev) == 831, len(ev)
-        assert ev.dataset.value_counts().to_dict() == {"tiki": 600, "1688": 231}
+        assert len(ev) == 858, len(ev)
+        assert ev.dataset.value_counts().to_dict() == {"tiki": 627, "1688": 231}
         ev = ev.sort_values(["dataset", "eval_id"]).reset_index(drop=True)
         ev.to_parquet(INDEX_PATH, index=False)
         INDEX_META.write_text(json.dumps({
-            "n": 831, "by_dataset": {"1688": 231, "tiki": 600},
+            "n": 858, "by_dataset": {"1688": 231, "tiki": 627},
             "by_stratum": {f"{d}/{t}": int(n) for (d, t), n in
                            ev.groupby(["dataset", "stratum"]).size().items()},
             "eval_ids_sha256": index_hash(ev),

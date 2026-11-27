@@ -9,22 +9,45 @@ Human eval Tiki: **MISSING** (chưa có file annotation).
 
 | Cell | Seeds | #seed | COMET-da 1688 | Coverage 1688 | COMET-QE Tiki | Coverage Tiki | BLEU (sent) | chrF (sent) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
-| Qwen3-8B B-balanced | 42 | 1 | 0.8572 | 100.0% | 0.0509 | 100.0% | 53.81 | 54.56 |
-| Qwen3-8B A-natural | 42 | 1 | 0.8567 | 100.0% | 0.0521 | 100.0% | 51.77 | 51.37 |
-| Qwen3-4B A-natural | 7,42,123 | 3 | 0.8542 ± 0.0037 | 100.0% | 0.0608 ± 0.0032 | 100.0% | 46.76 | 47.25 |
-| Qwen3-8B B-natural | 42 | 1 | 0.8514 | 100.0% | 0.0624 | 100.0% | 51.67 | 52.26 |
-| Qwen3-4B A-balanced | 42 | 1 | 0.8477 | 100.0% | 0.0524 | 100.0% | 46.27 | 46.79 |
-| Qwen3-4B B-balanced | 42,123 | 2 | 0.8475 ± 0.0006 | 100.0% | 0.0489 ± 0.0040 | 100.0% | 50.66 | 51.83 |
-| Qwen3-4B B-natural | 42 | 1 | 0.8436 | 100.0% | 0.0471 | 100.0% | 49.32 | 50.80 |
-| EcomGPT-7B A-natural | 42 | 1 | 0.8250 | 100.0% | 0.0077 | 100.0% | 39.33 | 41.00 |
-| EcomGPT-7B A-balanced | 42 | 1 | 0.8156 | 100.0% | 0.0020 | 100.0% | 37.03 | 39.24 |
-| Moses B | 42 | 1 | 0.8037 | 100.0% | -0.1593 | 100.0% | 49.06 | 50.90 |
-| Moses A | 42 | 1 | 0.7862 | 100.0% | -0.2439 | 100.0% | 42.48 | 44.82 |
-| EcomGPT-7B B-balanced | 42 | 1 | 0.7634 | 100.0% | -0.1366 | 100.0% | 31.10 | 33.86 |
-| NLLB-600M A | 7,42 | 2 | 0.6324 ± 0.0029 | 100.0% | -0.5403 ± 0.0034 | 100.0% | 18.43 | 24.31 |
-| NLLB-600M B | 7,42 | 2 | 0.5938 ± 0.0628 | 99.8% | -0.5956 ± 0.1080 | 99.8% | 15.41 | 22.94 |
-| OpenNMT A | 42 | 1 | 0.3488 | 100.0% | -1.4177 | 100.0% | 1.26 | 1.86 |
-| OpenNMT B-natural | 42 | 1 | 0.3387 | 100.0% | -1.4074 | 100.0% | 0.95 | 1.30 |
+| Qwen3-8B B-balanced | 42 | 1 | 0.8572 | 100.0% | 0.0470 | 98.6% | 53.81 | 54.56 |
+| Qwen3-8B A-natural | 42 | 1 | 0.8567 | 100.0% | 0.0487 | 98.6% | 51.77 | 51.37 |
+| Qwen3-4B A-natural | 7,42,123 | 3 | 0.8542 ± 0.0037 | 100.0% | 0.0563 ± 0.0030 | 98.6% | 46.76 | 47.25 |
+| Qwen3-8B B-natural | 42 | 1 | 0.8514 | 100.0% | 0.0576 | 98.6% | 51.67 | 52.26 |
+| Qwen3-4B A-balanced | 42 | 1 | 0.8477 | 100.0% | 0.0483 | 98.6% | 46.27 | 46.79 |
+| Qwen3-4B B-balanced | 42,123 | 2 | 0.8475 ± 0.0006 | 100.0% | 0.0438 ± 0.0031 | 98.6% | 50.66 | 51.83 |
+| Qwen3-4B B-natural | 42 | 1 | 0.8436 | 100.0% | 0.0432 | 98.6% | 49.32 | 50.80 |
+| EcomGPT-7B A-natural | 42 | 1 | 0.8250 | 100.0% | -0.0018 | 100.0% | 39.33 | 41.00 |
+| EcomGPT-7B A-balanced | 42 | 1 | 0.8156 | 100.0% | -0.0041 | 100.0% | 37.03 | 39.24 |
+| Moses B | 42 | 1 | 0.8037 | 100.0% | -0.1663 | 100.0% | 49.06 | 50.90 |
+| Moses A | 42 | 1 | 0.7862 | 100.0% | -0.2475 | 100.0% | 42.48 | 44.82 |
+| EcomGPT-7B B-balanced | 42 | 1 | 0.7634 | 100.0% | -0.1387 | 97.1% | 31.10 | 33.86 |
+| NLLB-600M A | 7,42 | 2 | 0.6324 ± 0.0029 | 100.0% | -0.5502 ± 0.0030 | 100.0% | 18.43 | 24.31 |
+| NLLB-600M B | 7,42 | 2 | 0.5938 ± 0.0628 | 99.8% | -0.6036 ± 0.1042 | 99.8% | 15.41 | 22.94 |
+| OpenNMT A | 42 | 1 | 0.3488 | 100.0% | -1.4138 | 100.0% | 1.26 | 1.86 |
+| OpenNMT B-natural | 42 | 1 | 0.3387 | 100.0% | -1.4059 | 100.0% | 0.95 | 1.30 |
+
+### 1b. Macro theo stratum
+
+`macro_unw` = trung bình 3 stratum (mỗi stratum trọng số bằng nhau); `macro_w` = trọng số theo số dòng (bằng mean tổng).
+
+| Cell | macro_unw 1688 | macro_w 1688 | macro_unw Tiki | macro_w Tiki |
+|---|---:|---:|---:|---:|
+| Qwen3-8B B-balanced | 0.8656 | 0.8572 | 0.0785 | 0.0470 |
+| Qwen3-8B A-natural | 0.8542 | 0.8567 | 0.0805 | 0.0487 |
+| Qwen3-4B A-natural | 0.8548 | 0.8542 | 0.0900 | 0.0563 |
+| Qwen3-8B B-natural | 0.8615 | 0.8514 | 0.0917 | 0.0576 |
+| Qwen3-4B A-balanced | 0.8470 | 0.8477 | 0.0846 | 0.0483 |
+| Qwen3-4B B-balanced | 0.8569 | 0.8475 | 0.0822 | 0.0438 |
+| Qwen3-4B B-natural | 0.8539 | 0.8436 | 0.0826 | 0.0432 |
+| EcomGPT-7B A-natural | 0.8151 | 0.8250 | -0.0011 | -0.0018 |
+| EcomGPT-7B A-balanced | 0.8078 | 0.8156 | -0.0072 | -0.0041 |
+| Moses B | 0.8081 | 0.8037 | -0.2068 | -0.1663 |
+| Moses A | 0.7694 | 0.7862 | -0.3418 | -0.2475 |
+| EcomGPT-7B B-balanced | 0.7261 | 0.7634 | -0.1897 | -0.1387 |
+| NLLB-600M A | 0.5960 | 0.6324 | -0.6659 | -0.5502 |
+| NLLB-600M B | 0.5710 | 0.5938 | -0.7149 | -0.6036 |
+| OpenNMT A | 0.3421 | 0.3488 | -1.4814 | -1.4138 |
+| OpenNMT B-natural | 0.3433 | 0.3387 | -1.4326 | -1.4059 |
 
 ## 2. Paired cluster bootstrap (COMET-da 1688, 2.000 lần, cluster = product_id)
 
@@ -49,6 +72,6 @@ Human eval Tiki: **MISSING** (chưa có file annotation).
 - **Không có score từng dòng (loại khỏi bảng xếp hạng):** Qwen3-8B A-balanced.
 - **Seed:** 16/16 cell có <5 seed. Các cell đã có ≥2 seed: Qwen3-4B A-natural (3), Qwen3-4B B-balanced (2), NLLB-600M A (2), NLLB-600M B (2).
 - **Thiếu score từng dòng:** Qwen3-8B A-balanced (chỉ có điểm tổng) → không vào bootstrap.
-- **Coverage <100%:** NLLB-600M B (99.8%/99.8%) — đã zero-fill.
+- **Coverage <100%:** Qwen3-8B B-balanced (100.0%/98.6%), Qwen3-8B A-natural (100.0%/98.6%), Qwen3-4B A-natural (100.0%/98.6%), Qwen3-8B B-natural (100.0%/98.6%), Qwen3-4B A-balanced (100.0%/98.6%), Qwen3-4B B-balanced (100.0%/98.6%), Qwen3-4B B-natural (100.0%/98.6%), EcomGPT-7B B-balanced (100.0%/97.1%), NLLB-600M B (99.8%/99.8%) — đã zero-fill.
 - **Human eval Tiki:** chưa có; bảng xếp hạng hiện chỉ dựa COMET-da 1688.
 - **Nguồn gốc:** các artefact này là retrofit từ score cũ; run mới phải dùng `tools/score_canonical.py` để log manifest đầy đủ.

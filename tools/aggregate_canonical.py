@@ -67,12 +67,19 @@ def main() -> None:
     rows = []
     for cell, seeds in sorted(per_seed.items()):
         da, qe, cov1, covt, bleu, chrf = [], [], [], [], [], []
+        mac = {"1688_unw": [], "1688_w": [], "tiki_unw": [], "tiki_w": []}
         for s, df in seeds.items():
             a = df[df.dataset == "1688"]
             t = df[df.dataset == "tiki"]
             da.append(a.comet_da.mean()); qe.append(t.comet_qe.mean())
             cov1.append(a.nonempty.mean()); covt.append(t.nonempty.mean())
             bleu.append(a.bleu.mean()); chrf.append(a.chrf.mean())
+            for ds, part, col in (("1688", a, "comet_da"), ("tiki", t, "comet_qe")):
+                means = {st: part[part.stratum == st][col].mean()
+                         for st in ("title", "attribute", "description")}
+                cnt = part.stratum.value_counts()
+                mac[f"{ds}_unw"].append(float(np.nanmean(list(means.values()))))
+                mac[f"{ds}_w"].append(float(sum(means[k] * cnt.get(k, 0) for k in means) / max(1, cnt.sum())))
         rows.append({
             "cell": cell, "label": PRETTY.get(cell, cell), "seeds": ",".join(map(str, sorted(seeds))),
             "n_seeds": len(seeds),
@@ -80,6 +87,10 @@ def main() -> None:
             "qe_mean": float(np.nanmean(qe)), "qe_std": float(np.nanstd(qe, ddof=1)) if len(qe) > 1 else float("nan"),
             "cov1688": float(np.mean(cov1)), "covtiki": float(np.mean(covt)),
             "bleu": float(np.nanmean(bleu)), "chrf": float(np.nanmean(chrf)),
+            "macro_unw_1688": float(np.nanmean(mac["1688_unw"])),
+            "macro_w_1688": float(np.nanmean(mac["1688_w"])),
+            "macro_unw_tiki": float(np.nanmean(mac["tiki_unw"])),
+            "macro_w_tiki": float(np.nanmean(mac["tiki_w"])),
         })
     agg = pd.DataFrame(rows)
     missing_cells = agg[agg.da_mean.isna()].label.tolist()
@@ -107,8 +118,8 @@ def main() -> None:
     def f(v, nd=4):
         return "—" if v is None or (isinstance(v, float) and np.isnan(v)) else f"{v:.{nd}f}"
 
-    md = ["# Canonical eval — 831 dòng cố định, zero-fill + coverage", "",
-          "Index: `data/cleaned/eval_paired_831.parquet` (1688 = 231, Tiki = 600, hash trong `.json`).",
+    md = ["# Canonical eval — 858 dòng cố định, zero-fill + coverage", "",
+          "Index: `data/cleaned/eval_paired_858.parquet` (1688 = 231, Tiki = 627, hash trong `.json`).",
           "Quy ước: join theo `eval_id`; hyp rỗng ⇒ 0 điểm, **không lọc dòng**; coverage = % hyp không rỗng.",
           "Metric xếp hạng: **COMET-da (1688)**. COMET-QE (Tiki), BLEU, chrF chỉ là chẩn đoán.",
           "Human eval Tiki: **MISSING** (chưa có file annotation).", "",
@@ -120,6 +131,15 @@ def main() -> None:
         qstd = "" if np.isnan(r.qe_std) else f" ± {r.qe_std:.4f}"
         md.append(f"| {r.label} | {r.seeds} | {r.n_seeds} | {r.da_mean:.4f}{std} | {r.cov1688*100:.1f}% | "
                   f"{r.qe_mean:.4f}{qstd} | {r.covtiki*100:.1f}% | {r.bleu:.2f} | {r.chrf:.2f} |")
+
+    md += ["", "### 1b. Macro theo stratum", "",
+           "`macro_unw` = trung bình 3 stratum (mỗi stratum trọng số bằng nhau); "
+           "`macro_w` = trọng số theo số dòng (bằng mean tổng).", "",
+           "| Cell | macro_unw 1688 | macro_w 1688 | macro_unw Tiki | macro_w Tiki |",
+           "|---|---:|---:|---:|---:|"]
+    for r in agg.itertuples():
+        md.append(f"| {r.label} | {r.macro_unw_1688:.4f} | {r.macro_w_1688:.4f} | "
+                  f"{r.macro_unw_tiki:.4f} | {r.macro_w_tiki:.4f} |")
 
     md += ["", "## 2. Paired cluster bootstrap (COMET-da 1688, 2.000 lần, cluster = product_id)", "",
            "| A | B | Δ (A−B) | 95% CI | n |", "|---|---|---:|---|---:|"]
@@ -140,6 +160,10 @@ def main() -> None:
             f"{r.label} ({r.cov1688*100:.1f}%/{r.covtiki*100:.1f}%)"
             for r in agg.itertuples() if r.cov1688 < 1 or r.covtiki < 1) + " — đã zero-fill.")
     md.append("- **Human eval Tiki:** chưa có; bảng xếp hạng hiện chỉ dựa COMET-da 1688.")
+    md.append("- **9 dòng description dài (3,0–3,7k ký tự) bị Qwen bỏ vì prompt >952 token** "
+              "(guard `max_seq=960`), không phải model fail — xem `reports/AUDIT_EMPTY_QWEN4B.md`.")
+    md.append("- **NLLB B:** seed 42 = 0,5494 vs seed 7 = 0,6382 (Δ −0,0888 [−0,1076; −0,0698]); "
+              "run hợp lệ, đây là run-variance thật — xem `reports/AUDIT_NLLB_B_SEED.md`.")
     md.append("- **Nguồn gốc:** các artefact này là retrofit từ score cũ; run mới phải dùng "
               "`tools/score_canonical.py` để log manifest đầy đủ.")
 

@@ -62,7 +62,23 @@ def load_scores(sdir: Path | None, stem: str, ds: str):
     return d[["eval_id", "score"]].drop_duplicates("eval_id")
 
 
+EXTRA_QE = ROOT / ".artifacts/audit858/qe_extra.parquet"
+OVERRIDES = {  # (cell, seed) -> (da_path, qe_path) khi chấm lại toàn bộ
+    # ("qwen8b_a_balanced", 42): (ROOT / ".artifacts/comet_8b_bal/da.parquet",
+    #                            ROOT / ".artifacts/comet_8b_bal/qe.parquet"),
+}
+
+
+def extra_qe_map() -> dict:
+    if not EXTRA_QE.exists():
+        return {}
+    d = pd.read_parquet(EXTRA_QE)
+    d["eval_id"] = d.eval_id.astype(str)
+    return {(c, int(s)): g[["eval_id", "score"]] for (c, s), g in d.groupby(["cell", "seed"])}
+
+
 def main() -> None:
+    extra = extra_qe_map()
     rows = []
     for cell, model, data, recipe, seed, stem, sdir, sstem, budget, adapter, note in RUNS:
         hp = HYP / f"{stem}.parquet"
@@ -78,9 +94,19 @@ def main() -> None:
             "token_budget": budget, "adapter_path": adapter,
             "source": "retrofit", "note": note,
         }
-        df, m = ce.build_artefact(cell, seed, hyp,
-                                  load_scores(sdir, sstem, "1688"),
-                                  load_scores(sdir, sstem, "tiki"), man)
+        da = load_scores(sdir, sstem, "1688")
+        qe = load_scores(sdir, sstem, "tiki")
+        if (cell, seed) in OVERRIDES:
+            da_p, qe_p = OVERRIDES[(cell, seed)]
+            da = pd.read_parquet(da_p)[["eval_id", "score"]] if da_p.exists() else None
+            qe = pd.read_parquet(qe_p)[["eval_id", "score"]] if qe_p.exists() else None
+            if da is not None:
+                da["eval_id"] = da.eval_id.astype(str)
+            if qe is not None:
+                qe["eval_id"] = qe.eval_id.astype(str)
+        elif qe is not None and (cell, seed) in extra:
+            qe = pd.concat([qe, extra[(cell, seed)]]).drop_duplicates("eval_id")
+        df, m = ce.build_artefact(cell, seed, hyp, da, qe, man)
         s1688 = ce.summarise(df, "1688")
         s_tiki = ce.summarise(df, "tiki")
         rows.append({"cell": cell, "seed": seed, "model": model, "data": data,

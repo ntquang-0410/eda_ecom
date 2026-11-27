@@ -1,3 +1,5 @@
+> **Cập nhật 27/11:** 858 đã trở thành index chính thức; 831 chỉ còn để tham chiếu lịch sử.
+
 # Audit 858 dòng — zero-fill 27 dòng Tiki bị loại khỏi 831
 
 Index: `data/cleaned/eval_paired_858.parquet` (1688 = 231, Tiki = 627). 27 dòng bổ sung đều là Tiki (18 attribute + 9 description), chấm COMET-QE; 1688 giữ nguyên nên **COMET-da và xếp hạng chính thức không đổi**.

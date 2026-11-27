@@ -15,8 +15,8 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 CANON = ROOT / ".artifacts/canonical"
 ORDER = ["Qwen3-8B", "Qwen3-4B", "EcomGPT-7B", "Moses", "OpenNMT", "NLLB-600M"]
-COLS = ["1688_title", "1688_attribute", "1688_description", "macro_1688",
-        "tiki_title", "tiki_attribute", "tiki_description", "macro_tiki"]
+COLS = ["1688_title", "1688_attribute", "1688_description", "macro_unw_1688", "macro_w_1688",
+        "tiki_title", "tiki_attribute", "tiki_description", "macro_unw_tiki", "macro_w_tiki"]
 
 
 def safe_mean(x):
@@ -60,10 +60,14 @@ def main() -> None:
             da.append(a.comet_da.mean()); qe.append(t.comet_qe.mean())
             cov1.append(a.nonempty.mean()); covt.append(t.nonempty.mean())
             bleu.append(a.bleu.mean()); chrf.append(a.chrf.mean())
-            for ds, part in (("1688", a), ("tiki", t)):
+            for ds, part, col in (("1688", a, "comet_da"), ("tiki", t, "comet_qe")):
+                vals, cnt = {}, part.stratum.value_counts()
                 for s in ("title", "attribute", "description"):
-                    st[f"{ds}_{s}"].append(part[part.stratum == s].comet_da.mean()
-                                           if ds == "1688" else part[part.stratum == s].comet_qe.mean())
+                    m = part[part.stratum == s][col].mean()
+                    st[f"{ds}_{s}"].append(m)
+                    vals[s] = m
+                st[f"macro_unw_{ds}"].append(float(np.mean(list(vals.values()))))
+                st[f"macro_w_{ds}"].append(float(sum(vals[k] * cnt.get(k, 0) for k in vals) / max(1, cnt.sum())))
         rec = {
             "model": model, "data": data, "recipe": recipe,
             "seeds": ",".join(map(str, seeds)), "n_seeds": len(seeds),
@@ -101,7 +105,7 @@ def main() -> None:
                   " | ".join(f(rec[c]) for c in COLS) + " |")
 
     notes = ["", "## Ghi chú", "",
-             "- Bảng sinh từ `.artifacts/canonical/*/seed*.parquet` — index 831 dòng cố định, "
+             "- Bảng sinh từ `.artifacts/canonical/*/seed*.parquet` — index 858 dòng cố định, "
              "hyp rỗng = 0, **không lọc dòng**. Quy ước đầy đủ: `reports/EVAL_PROTOCOL.md`.",
              "- **Xếp hạng chỉ dùng COMET-da 1688.** COMET-QE, BLEU, chrF là chẩn đoán.",
              "- `COMET-da`/`COMET-QE` là mean ± std qua seed (chỉ có std khi ≥2 seed).",
@@ -118,7 +122,9 @@ def main() -> None:
           "> Sinh bởi `tools/all_models_table.py` từ artefact canonical. "
           "Số liệu thay thế bảng cũ khi có khác biệt (zero-fill + coverage).",
           "", "## 1. Tổng hợp", "", "\n".join(t1),
-          "", "## 2. COMET theo stratum + macro", "", "\n".join(t2)] + notes
+          "", "## 2. COMET theo stratum + macro", "",
+          "`macro_unw` = trung bình 3 stratum; `macro_w` = trọng số theo số dòng (bằng mean tổng).",
+          "", "\n".join(t2)] + notes
     out = ROOT / "reports/ALL_MODELS_METRICS.md"
     out.write_text("\n".join(md) + "\n", encoding="utf-8")
     print("\n".join(t1))

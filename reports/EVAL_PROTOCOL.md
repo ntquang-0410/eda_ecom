@@ -9,24 +9,22 @@
 
 | Mục | Giá trị |
 |---|---|
-| File index | `data/cleaned/eval_paired_831.parquet` |
-| Số dòng | **831** = 1688: 231 + Tiki: 600 |
+| File index | `data/cleaned/eval_paired_858.parquet` |
+| Số dòng | **858** = 1688: 231 + Tiki: 627 |
 | Khoá join | `eval_id` (string), không đổi thứ tự |
-| Hash | `data/cleaned/eval_paired_831.json` → `eval_ids_sha256` |
+| Hash | `data/cleaned/eval_paired_858.json` → `eval_ids_sha256` |
 | Nguồn | `data/cleaned/eval_F_v2_common.parquet` (đã qua leakage audit: 0 product_id trùng train) |
 
 Mọi so sánh **bắt buộc** dùng đúng index này. Không thêm/bớt dòng theo từng model.
 
-### ⚠️ Caveat kỹ thuật của 831
+### Lịch sử 831 → 858
 
-27 dòng Tiki (18 attribute + 9 description) bị loại khỏi 858 dòng sạch nội dung vì **có cell cho hyp rỗng** (ví dụ Qwen3-4B A-natural rỗng 9/27). Như vậy 831 là tập *phụ thuộc model*, không thuần nội dung — trái với tinh thần "không lọc".
+Bản 831 (1688: 231 + Tiki: 600) là tập *phụ thuộc model*: 27 dòng Tiki (18 attribute + 9 description)
+bị loại vì có cell cho hyp rỗng. Từ 2026-11-27 chuyển chính thức sang **858** (thuần nội dung).
+So sánh 831 ↔ 858 và lý do: `reports/AUDIT_858.md`; audit rỗng của Qwen4B: `reports/AUDIT_EMPTY_QWEN4B.md`.
 
-- Giữ 831 theo yêu cầu để bảo toàn chuỗi so sánh.
-- Audit 858 đã chạy (27 dòng Tiki × 22 run, COMET-QE, zero-fill): xem `reports/AUDIT_858.md`.
-  Kết quả: QE Tiki giảm 0,002–0,010; coverage của các LLM còn 98,6% (Qwen), 97,1% (EcomGPT B).
-  COMET-da 1688 không đổi nên xếp hạng chính thức giữ nguyên.
-- Quyết định: vẫn dùng 831 làm index chính (theo yêu cầu), nhưng **mọi bảng phải kèm cột coverage
-  và phụ lục 858**; nếu chuyển sang 858 cần chấm lại toàn bộ QE 600 dòng cũ cho Qwen3-8B A-balanced.
+- 27 dòng thêm đều là Tiki, đã chấm COMET-QE cho 22 run, zero-fill.
+- COMET-da 1688 không đổi; QE Tiki giảm 0,002–0,010; coverage LLM còn 97,1–98,6%.
 
 ## 2. Quy ước điểm
 
@@ -34,6 +32,8 @@ Mọi so sánh **bắt buộc** dùng đúng index này. Không thêm/bớt dòn
 2. `coverage` = % hyp không rỗng, báo cáo riêng cho 1688 và Tiki.
 3. Không bao giờ lọc theo độ dài, theo stratum, hay theo việc model khác có hyp hay không.
 4. Điểm hệ thống = trung bình per-row trên đúng index.
+5. **Macro:** `macro_w` = trung bình theo trọng số số dòng mỗi stratum (bằng mean tổng);
+   `macro_unw` = trung bình 3 stratum với trọng số bằng nhau. Báo cáo cả hai cho 1688 và Tiki.
 
 ## 3. Artefact per-row (bắt buộc cho mọi run)
 
@@ -126,10 +126,10 @@ Sheet mẫu đã sinh (chưa có điểm): `data/cleaned/human_eval/tiki_sheet_q
 
 | Yêu cầu | Trạng thái |
 |---|---|
-| Index 831 cố định + hash | ✅ |
+| Index 858 cố định + hash | ✅ (thay 831 từ 27/11) |
 | Zero-fill + coverage | ✅ (NLLB B seed 42: 0,5517 → **0,5494**, coverage 99,8%) |
 | Artefact per-row cho mọi run | ✅ 20/21 run; ❌ Qwen3-8B A-balanced thiếu score từng dòng; EcomGPT B-natural FAILED (loại) |
-| Audit 858 (zero-fill 27 dòng) | ✅ `reports/AUDIT_858.md`, artefact `.artifacts/canonical858/` |
+| Audit 858 (zero-fill 27 dòng) | ✅ `reports/AUDIT_858.md`; 858 giờ là index chính |
 | Seed ≥5 | ❌ 37 run cell chính còn thiếu (~107 giờ GPU); xem `SEED_MATRIX.md` |
 | COMET-da là metric xếp hạng | ✅ `CANONICAL_EVAL.md` |
 | Human eval Tiki | ❌ MISSING |
