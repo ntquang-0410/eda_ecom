@@ -42,3 +42,10 @@ Thành phần split của subsample: train 15.130, dev 1.340, test 1.225 (giữ 
 ```bash
 python tools/make_nllb_b_subsample.py
 ```
+
+## 5. Lưu ý về split
+
+Pipeline NLLB hiện sample từ **toàn bộ** `units_B` (không lọc `split`), nên subsample lấy từ toàn bộ pool
+để thay thế trực tiếp và giữ đúng phân bố. Nếu muốn huấn luyện **train-only**, phải cắt lại từ
+`split=='train'` và xử lý A tương ứng — khi đó kích thước pool A cũng đổi, không còn so sánh 0,83 epoch
+như hiện tại.
