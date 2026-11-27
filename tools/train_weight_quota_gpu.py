@@ -33,6 +33,38 @@ def log(msg: str) -> None:
     print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
 
 
+def _commit_hash() -> str:
+    try:
+        import subprocess
+        return subprocess.check_output(["git", "-C", str(Path(__file__).resolve().parents[1]),
+                                        "rev-parse", "HEAD"], text=True).strip()
+    except Exception:
+        return "unknown"
+
+
+def _config_hash(payload: dict) -> str:
+    import hashlib
+    return hashlib.sha256(json.dumps(payload, sort_keys=True, default=str)
+                          .encode("utf-8")).hexdigest()[:16]
+
+
+def _write_manifest(out_dir: Path, args, name: str, info: dict) -> None:
+    import time
+    payload = {"dataset": args.dataset, "config": name, "seed": args.seed,
+               "tokens": args.tokens, "steps": args.steps, "lr": args.lr,
+               "micro_batch": args.micro_batch, "max_seq": args.max_seq,
+               "dtype": args.dtype, "init_adapter": args.init_adapter or None,
+               "start_step": args.start_step, "base_model": args.model}
+    man = {
+        "cell_config": payload, "config_hash": _config_hash(payload),
+        "commit_hash": _commit_hash(), "seed": args.seed,
+        "token_budget": args.tokens, "adapter_path": args.init_adapter or None,
+        "base_model": args.model, "finished_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "result": info,
+    }
+    (out_dir / f"run_manifest_{name}_seed{args.seed}.json").write_text(
+        json.dumps(man, ensure_ascii=False, indent=2), encoding="utf-8")
+
 def train_one(args, config_name: str, config: dict | None, seed: int,
               train: pd.DataFrame, tokenizer, eval_frame: pd.DataFrame,
               out_dir: Path) -> dict:
@@ -173,6 +205,10 @@ def main() -> int:
     data = Path(args.data_root)
     train = pd.read_parquet(data / f"processed_{args.dataset}/units.parquet")
     eval_frame = pd.read_parquet(data / f"eval_{args.dataset}.parquet")
+    if "product_id" in train.columns and "product_id" in eval_frame.columns:
+        leaked = set(train.product_id.astype(str)) & set(eval_frame.product_id.astype(str))
+        log(f"leak-check product_id: {len(leaked)} sản phẩm trùng train/eval")
+        assert not leaked, f"LEAK: {len(leaked)} product_id xuất hiện cả train và eval"
     meta = json.loads((data / f"meta_{args.dataset}.json").read_text(encoding="utf-8"))
     configs = meta["configs"]
     if args.configs:
@@ -189,7 +225,9 @@ def main() -> int:
     out = Path(args.out); out.mkdir(parents=True, exist_ok=True)
     results = []
     for name, cfg in configs.items():
-        results.append(train_one(args, name, cfg, args.seed, train, tokenizer, eval_frame, out))
+        info = train_one(args, name, cfg, args.seed, train, tokenizer, eval_frame, out)
+        results.append(info)
+        _write_manifest(out, args, name, info)
         (out / "summary.json").write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
     log(json.dumps(results, ensure_ascii=False, indent=2))
     return 0

@@ -1,0 +1,16 @@
+{
+  "n": 831,
+  "by_dataset": {
+    "1688": 231,
+    "tiki": 600
+  },
+  "by_stratum": {
+    "1688/attribute": 96,
+    "1688/description": 45,
+    "1688/title": 90,
+    "tiki/attribute": 206,
+    "tiki/description": 103,
+    "tiki/title": 291
+  },
+  "eval_ids_sha256": "d9fb6516505711dd452f257e1ad7ec59a5390ec6340a2854d8871e245ab15db8"
+}

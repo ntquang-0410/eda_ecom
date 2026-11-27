@@ -48,6 +48,34 @@ def chunked_ce(logits, labels, chunk: int = 256):
         total = part if total is None else total + part
     return total / n
 
+def _commit_hash() -> str:
+    try:
+        return subprocess.check_output(["git", "-C", str(Path(__file__).resolve().parents[1]),
+                                        "rev-parse", "HEAD"], text=True).strip()
+    except Exception:
+        return "unknown"
+
+
+def _write_manifest(out: Path, args, config_name: str, info: dict) -> None:
+    import hashlib, time
+    payload = {"dataset": args.dataset, "config": config_name, "seed": args.seed,
+               "tokens": args.tokens, "steps": args.steps, "micro_batch": args.micro_batch,
+               "max_seq": args.max_seq, "init_adapter": args.init_adapter or None,
+               "start_step": args.start_step, "base_model": args.model}
+    man = {
+        "cell_config": payload,
+        "config_hash": hashlib.sha256(json.dumps(payload, sort_keys=True, default=str)
+                                      .encode("utf-8")).hexdigest()[:16],
+        "commit_hash": _commit_hash(), "seed": args.seed,
+        "token_budget": args.tokens,
+        "token_budget_note": "recipe chia theo token đã encode (≈0,35× token hiệu dụng)",
+        "adapter_path": args.init_adapter or None, "base_model": args.model,
+        "finished_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "result": info,
+    }
+    (out / f"run_manifest_{config_name}_seed{args.seed}.json").write_text(
+        json.dumps(man, ensure_ascii=False, indent=2), encoding="utf-8")
+
 def log(msg: str) -> None:
     print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
 
@@ -124,6 +152,10 @@ def main() -> int:
     units = pd.read_parquet(data_root / f"processed_{args.dataset}" / "units.parquet")
     meta = json.loads((data_root / f"meta_{args.dataset}.json").read_text(encoding="utf-8"))
     eval_frame = pd.read_parquet(data_root / f"eval_{args.dataset}.parquet")
+    if "product_id" in units.columns and "product_id" in eval_frame.columns:
+        leaked = set(units.product_id.astype(str)) & set(eval_frame.product_id.astype(str))
+        log(f"leak-check product_id: {len(leaked)} sản phẩm trùng train/eval")
+        assert not leaked, f"LEAK: {len(leaked)} product_id xuất hiện cả train và eval"
 
     sys.path.insert(0, "/content/work/eda_ecom/tools")
     from quota_sampling import quota_indices
@@ -255,6 +287,7 @@ def main() -> int:
             "minutes": round((time.time() - started) / 60, 1), "steps": args.steps,
             "start_step": start, "config": label}
     (out / f"run_{args.configs}_seed{args.seed}.json").write_text(json.dumps(info, indent=2))
+    _write_manifest(out, args, args.configs, info)
     log(f"WROTE {dst} {info}")
     return 0
 

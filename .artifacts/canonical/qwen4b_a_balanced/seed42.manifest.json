@@ -1,0 +1,25 @@
+{
+  "model": "Qwen3-4B",
+  "data": "A",
+  "recipe": "balanced",
+  "commit_hash": "89ca9557e836615ccafbea2be834bfe1e3661c38",
+  "config_hash": "f9bcb7767ab5886b",
+  "token_budget": 4000000,
+  "adapter_path": null,
+  "source": "retrofit",
+  "note": "",
+  "cell": "qwen4b_a_balanced",
+  "seed": 42,
+  "eval_index": "data/cleaned/eval_paired_831.parquet",
+  "eval_index_hash": "d9fb6516505711dd452f257e1ad7ec59a5390ec6340a2854d8871e245ab15db8",
+  "n_rows": 831,
+  "coverage": {
+    "1688": 1.0,
+    "tiki": 1.0
+  },
+  "missing_scores": {
+    "1688": 0,
+    "tiki": 0
+  },
+  "created_at": "2026-11-27T09:12:53Z"
+}
