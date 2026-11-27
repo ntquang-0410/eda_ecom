@@ -193,7 +193,7 @@
     "steps": 500,
     "token_budget": 4000000,
     "hours_est": 6.0,
-    "status": "pending"
+    "status": "running"
   },
   {
     "id": "qwen4b_a_s2025",
@@ -759,7 +759,7 @@
     "steps": 500,
     "token_budget": 4000000,
     "hours_est": 2.7,
-    "status": "pending",
+    "status": "running",
     "lr": 5e-05
   }
 ]
