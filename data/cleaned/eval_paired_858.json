@@ -1,0 +1,17 @@
+{
+  "n": 858,
+  "by_dataset": {
+    "1688": 231,
+    "tiki": 627
+  },
+  "by_stratum": {
+    "1688/attribute": 96,
+    "1688/description": 45,
+    "1688/title": 90,
+    "tiki/attribute": 224,
+    "tiki/description": 112,
+    "tiki/title": 291
+  },
+  "eval_ids_sha256": "9bb7df86899a93156ed6aad56313f764b11ec48abc425c04e2a3e6edc3a62fd6",
+  "note": "858 dòng sạch nội dung; 27 dòng Tiki bị loại khỏi 831 vì có cell hyp rỗng"
+}
