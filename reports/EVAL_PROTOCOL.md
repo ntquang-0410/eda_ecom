@@ -22,8 +22,11 @@ Mọi so sánh **bắt buộc** dùng đúng index này. Không thêm/bớt dòn
 27 dòng Tiki (18 attribute + 9 description) bị loại khỏi 858 dòng sạch nội dung vì **có cell cho hyp rỗng** (ví dụ Qwen3-4B A-natural rỗng 9/27). Như vậy 831 là tập *phụ thuộc model*, không thuần nội dung — trái với tinh thần "không lọc".
 
 - Giữ 831 theo yêu cầu để bảo toàn chuỗi so sánh.
-- Audit bắt buộc: chấm thêm trên **858 dòng** (`231 + 627`) với zero-fill, báo cáo như phụ lục. Việc này cần GPU để chấm 27 dòng × mỗi cell.
-- Cho đến khi có phụ lục 858, mọi bảng phải ghi rõ "831 (model-dependent subset)".
+- Audit 858 đã chạy (27 dòng Tiki × 22 run, COMET-QE, zero-fill): xem `reports/AUDIT_858.md`.
+  Kết quả: QE Tiki giảm 0,002–0,010; coverage của các LLM còn 98,6% (Qwen), 97,1% (EcomGPT B).
+  COMET-da 1688 không đổi nên xếp hạng chính thức giữ nguyên.
+- Quyết định: vẫn dùng 831 làm index chính (theo yêu cầu), nhưng **mọi bảng phải kèm cột coverage
+  và phụ lục 858**; nếu chuyển sang 858 cần chấm lại toàn bộ QE 600 dòng cũ cho Qwen3-8B A-balanced.
 
 ## 2. Quy ước điểm
 
@@ -126,6 +129,7 @@ Sheet mẫu đã sinh (chưa có điểm): `data/cleaned/human_eval/tiki_sheet_q
 | Index 831 cố định + hash | ✅ |
 | Zero-fill + coverage | ✅ (NLLB B seed 42: 0,5517 → **0,5494**, coverage 99,8%) |
 | Artefact per-row cho mọi run | ✅ 20/21 run; ❌ Qwen3-8B A-balanced thiếu score từng dòng; EcomGPT B-natural FAILED (loại) |
+| Audit 858 (zero-fill 27 dòng) | ✅ `reports/AUDIT_858.md`, artefact `.artifacts/canonical858/` |
 | Seed ≥5 | ❌ 37 run cell chính còn thiếu (~107 giờ GPU); xem `SEED_MATRIX.md` |
 | COMET-da là metric xếp hạng | ✅ `CANONICAL_EVAL.md` |
 | Human eval Tiki | ❌ MISSING |

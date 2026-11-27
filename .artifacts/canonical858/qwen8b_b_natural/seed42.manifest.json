@@ -1,0 +1,27 @@
+{
+  "model": "Qwen3-8B",
+  "data": "B",
+  "recipe": "natural",
+  "commit_hash": "89ca9557e836615ccafbea2be834bfe1e3661c38",
+  "config_hash": "17b97b2dc7e8aca6",
+  "token_budget": 4000000,
+  "adapter_path": "nguynthanhquang/qwen8b-b-ckpt@500",
+  "source": "retrofit",
+  "note": "tái lập 24/11",
+  "cell": "qwen8b_b_natural",
+  "seed": 42,
+  "eval_index": "data/cleaned/eval_paired_831.parquet",
+  "eval_index_hash": "d9fb6516505711dd452f257e1ad7ec59a5390ec6340a2854d8871e245ab15db8",
+  "n_rows": 831,
+  "coverage": {
+    "1688": 1.0,
+    "tiki": 0.9856459330143541
+  },
+  "missing_scores": {
+    "1688": 0,
+    "tiki": 0
+  },
+  "created_at": "2026-11-27T09:56:24Z",
+  "audit": "858",
+  "extra_rows": 27
+}

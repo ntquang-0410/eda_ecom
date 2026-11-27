@@ -1,0 +1,178 @@
+[
+  {
+    "cell": "qwen8b_a",
+    "seed": 42,
+    "file": "qwen8b_a__seed42.parquet",
+    "rows": 27,
+    "empty": 9,
+    "source_hyp": ".artifacts/hyp/hyp_qwen_a_seed42.parquet"
+  },
+  {
+    "cell": "qwen8b_b",
+    "seed": 42,
+    "file": "qwen8b_b__seed42.parquet",
+    "rows": 27,
+    "empty": 9,
+    "source_hyp": ".artifacts/hyp/hyp_qwen_b_seed42.parquet"
+  },
+  {
+    "cell": "qwen8b_a_balanced",
+    "seed": 42,
+    "file": "qwen8b_a_balanced__seed42.parquet",
+    "rows": 27,
+    "empty": 9,
+    "source_hyp": ".artifacts/hyp/hyp_qwen8b_a_balanced_seed42.parquet"
+  },
+  {
+    "cell": "qwen8b_b_natural",
+    "seed": 42,
+    "file": "qwen8b_b_natural__seed42.parquet",
+    "rows": 27,
+    "empty": 9,
+    "source_hyp": ".artifacts/hyp/hyp_m8b_b_natural_seed42.parquet"
+  },
+  {
+    "cell": "qwen4b_a",
+    "seed": 42,
+    "file": "qwen4b_a__seed42.parquet",
+    "rows": 27,
+    "empty": 9,
+    "source_hyp": ".artifacts/hyp/hyp_qwen4b_a_seed42.parquet"
+  },
+  {
+    "cell": "qwen4b_a",
+    "seed": 123,
+    "file": "qwen4b_a__seed123.parquet",
+    "rows": 27,
+    "empty": 9,
+    "source_hyp": ".artifacts/hyp/hyp_qwen4b_a_seed123.parquet"
+  },
+  {
+    "cell": "qwen4b_a",
+    "seed": 7,
+    "file": "qwen4b_a__seed7.parquet",
+    "rows": 27,
+    "empty": 9,
+    "source_hyp": ".artifacts/hyp/hyp_qwen4b_a_natural_seed7.parquet"
+  },
+  {
+    "cell": "qwen4b_b",
+    "seed": 42,
+    "file": "qwen4b_b__seed42.parquet",
+    "rows": 27,
+    "empty": 9,
+    "source_hyp": ".artifacts/hyp/hyp_qwen4b_b_seed42.parquet"
+  },
+  {
+    "cell": "qwen4b_b",
+    "seed": 123,
+    "file": "qwen4b_b__seed123.parquet",
+    "rows": 27,
+    "empty": 9,
+    "source_hyp": ".artifacts/hyp/hyp_qwen4b_b_balanced_seed123.parquet"
+  },
+  {
+    "cell": "qwen4b_a_balanced",
+    "seed": 42,
+    "file": "qwen4b_a_balanced__seed42.parquet",
+    "rows": 27,
+    "empty": 9,
+    "source_hyp": ".artifacts/hyp/hyp_qwen4b_a_balanced_seed42.parquet"
+  },
+  {
+    "cell": "qwen4b_b_natural",
+    "seed": 42,
+    "file": "qwen4b_b_natural__seed42.parquet",
+    "rows": 27,
+    "empty": 9,
+    "source_hyp": ".artifacts/hyp/hyp_qwen4b_b_natural_seed42.parquet"
+  },
+  {
+    "cell": "ecomgpt_a",
+    "seed": 42,
+    "file": "ecomgpt_a__seed42.parquet",
+    "rows": 27,
+    "empty": 0,
+    "source_hyp": ".artifacts/hyp/hyp_ecomgpt_a_seed42.parquet"
+  },
+  {
+    "cell": "ecomgpt_b",
+    "seed": 42,
+    "file": "ecomgpt_b__seed42.parquet",
+    "rows": 27,
+    "empty": 18,
+    "source_hyp": ".artifacts/hyp/hyp_ecomgpt_b_seed42.parquet"
+  },
+  {
+    "cell": "ecomgpt_a_balanced",
+    "seed": 42,
+    "file": "ecomgpt_a_balanced__seed42.parquet",
+    "rows": 27,
+    "empty": 0,
+    "source_hyp": ".artifacts/hyp/hyp_ecomgpt_a_balanced_seed42.parquet"
+  },
+  {
+    "cell": "moses_a",
+    "seed": 42,
+    "file": "moses_a__seed42.parquet",
+    "rows": 27,
+    "empty": 0,
+    "source_hyp": ".artifacts/hyp/hyp_moses_a_seed42.parquet"
+  },
+  {
+    "cell": "moses_b",
+    "seed": 42,
+    "file": "moses_b__seed42.parquet",
+    "rows": 27,
+    "empty": 0,
+    "source_hyp": ".artifacts/hyp/hyp_moses_b_seed42.parquet"
+  },
+  {
+    "cell": "onmt_a",
+    "seed": 42,
+    "file": "onmt_a__seed42.parquet",
+    "rows": 27,
+    "empty": 0,
+    "source_hyp": ".artifacts/hyp/hyp_onmt_a_seed42.parquet"
+  },
+  {
+    "cell": "onmt_b",
+    "seed": 42,
+    "file": "onmt_b__seed42.parquet",
+    "rows": 27,
+    "empty": 0,
+    "source_hyp": ".artifacts/hyp/hyp_onmt_b_seed42.parquet"
+  },
+  {
+    "cell": "nllb_a",
+    "seed": 42,
+    "file": "nllb_a__seed42.parquet",
+    "rows": 27,
+    "empty": 0,
+    "source_hyp": ".artifacts/hyp/hyp_nllb_a_seed42.parquet"
+  },
+  {
+    "cell": "nllb_a",
+    "seed": 7,
+    "file": "nllb_a__seed7.parquet",
+    "rows": 27,
+    "empty": 0,
+    "source_hyp": ".artifacts/hyp/hyp_nllb_a_seed7.parquet"
+  },
+  {
+    "cell": "nllb_b",
+    "seed": 42,
+    "file": "nllb_b__seed42.parquet",
+    "rows": 27,
+    "empty": 0,
+    "source_hyp": ".artifacts/hyp/hyp_nllb_b_seed42.parquet"
+  },
+  {
+    "cell": "nllb_b",
+    "seed": 7,
+    "file": "nllb_b__seed7.parquet",
+    "rows": 27,
+    "empty": 0,
+    "source_hyp": ".artifacts/hyp/hyp_nllb_b_seed7.parquet"
+  }
+]

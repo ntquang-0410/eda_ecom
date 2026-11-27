@@ -74,16 +74,20 @@ def main() -> None:
             man_out = json.loads(mp.read_text(encoding="utf-8"))
         man_out.update({"audit": "858", "extra_rows": len(extra_ids),
                         "created_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-                        "coverage": {ds: float(df[(df.dataset == ds) & df.nonempty].mean())
+                        "coverage": {ds: float(df[df.dataset == ds].nonempty.mean())
                                      for ds in ("1688", "tiki")}})
         (dst / f"seed{seed}.manifest.json").write_text(
             json.dumps(man_out, ensure_ascii=False, indent=2), encoding="utf-8")
 
         a831 = base[base.dataset == "tiki"]
         a858 = df[df.dataset == "tiki"]
+        partial = bool(a831.comet_qe.isna().all())
         rows.append({"cell": cell, "seed": seed,
-                     "qe831": a831.comet_qe.mean(), "cov831": a831.nonempty.mean(),
-                     "qe858": a858.comet_qe.mean(), "cov858": a858.nonempty.mean(),
+                     "qe831": float("nan") if partial else a831.comet_qe.mean(),
+                     "cov831": a831.nonempty.mean(),
+                     "qe858": float("nan") if partial else a858.comet_qe.mean(),
+                     "cov858": a858.nonempty.mean(),
+                     "partial": partial,
                      "empty_extra": int((~a858[a858.eval_id.isin(extra_ids)].nonempty).sum())})
         print(f"{cell:22s} s{seed:<4d} QE 831={a831.comet_qe.mean():.4f} → 858={a858.comet_qe.mean():.4f} "
               f"(cov {a831.nonempty.mean()*100:.1f}% → {a858.nonempty.mean()*100:.1f}%, "
@@ -96,6 +100,7 @@ def main() -> None:
                   empty_extra=("empty_extra", "sum"))
              .reset_index())
     agg["delta_qe"] = agg.qe858 - agg.qe831
+    agg["partial"] = df.groupby("cell").partial.any().reindex(agg.cell).fillna(False).to_numpy()
     agg = agg.sort_values("delta_qe")
 
     md = ["# Audit 858 dòng — zero-fill 27 dòng Tiki bị loại khỏi 831", "",
@@ -124,6 +129,8 @@ def main() -> None:
            "EcomGPT B-balanced rỗng 18/27 ⇒ ~97,1%. Đây chính là phần bị 831 che mất.",
            "- Vì 1688 không đổi, kết luận xếp hạng theo COMET-da giữ nguyên; "
            "nhưng coverage Tiki phải báo cáo trên 858 kể từ nay.",
+           "- Qwen3-8B A-balanced bị loại khỏi bảng QE 858 vì artefact 831 không có score từng dòng "
+           "(chỉ 27 dòng mới được chấm) — cần chấm lại toàn bộ 600 dòng Tiki trước khi so sánh.",
            "- Khuyến nghị: chuyển index chính thức sang 858 (thuần nội dung) nếu chấp nhận "
            "đổi số QE; nếu giữ 831 để liên tục, luôn kèm phụ lục 858 này."]
 
