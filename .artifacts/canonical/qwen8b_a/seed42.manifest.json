@@ -23,12 +23,13 @@
   },
   "created_at": "2026-11-27T10:39:26Z",
   "adapter_provenance": {
-    "source": "unknown",
-    "dataset_ref": null,
-    "adapter_name": null,
-    "step": null,
-    "base_model": null,
-    "md5": null,
-    "recorded": false
+    "source": "kernel_output",
+    "dataset_ref": "nguynthanhquang/tiki-matrix-m8b-a",
+    "adapter_name": "adapter_natural_seed42",
+    "step": 500,
+    "local_file": "/tmp/k_m8b-a/out_A_m8b/adapter_natural_seed42/adapter_model.safetensors",
+    "base_model": "Qwen/Qwen3-8B",
+    "md5": "294b977b10afd5e32ec3a4abcf453711",
+    "recorded": true
   }
 }

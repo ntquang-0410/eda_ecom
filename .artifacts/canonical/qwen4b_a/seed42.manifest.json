@@ -26,6 +26,7 @@
     "dataset_ref": "nguynthanhquang/tiki-matrix-m4b-a",
     "adapter_name": "adapter_natural_seed42",
     "step": 500,
+    "local_file": "/tmp/k42/out_A_m4b/adapter_natural_seed42/adapter_model.safetensors",
     "base_model": "Qwen/Qwen3-4B",
     "md5": "052800733e9edd157b05a38f38d865e6",
     "recorded": true

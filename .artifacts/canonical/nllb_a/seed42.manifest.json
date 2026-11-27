@@ -27,6 +27,7 @@
     "dataset_ref": null,
     "adapter_name": null,
     "step": null,
+    "local_file": null,
     "base_model": null,
     "md5": null,
     "recorded": false

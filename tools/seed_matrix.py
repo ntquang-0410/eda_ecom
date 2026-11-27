@@ -51,7 +51,9 @@ def main() -> None:
         rows.append({"cell": cell, "label": label, "role": "control" if cell in CONTROL else "main",
                      "seeds_have": ",".join(map(str, seeds)) or "—", "n_have": len(seeds),
                      "seeds_missing": ",".join(map(str, miss)) or "—", "n_missing": len(miss),
-                     "hours_missing": round(len(miss) * hours, 1), "note": note})
+                     "hours_missing": round(len(miss) * hours, 1),
+                     "h1792_lo": round(len(miss) * hours * 1.15, 1),
+                     "h1792_hi": round(len(miss) * hours * 1.25, 1), "note": note})
     df = pd.DataFrame(rows).sort_values(["role", "cell"])
 
     total = float(df.hours_missing.sum())
@@ -59,13 +61,15 @@ def main() -> None:
     md = ["# Seed matrix — policy ≥5 seed/cell", "",
           f"Seed đích: cell chính {TARGET_MAIN}; control {TARGET_CONTROL}. "
           "Nguồn: `.artifacts/canonical/*/seed*.parquet`.",
-          f"Ước tính còn thiếu: **{df.n_missing.sum()} run ≈ {total:.0f} giờ GPU**, "
+          f"Ước tính còn thiếu: **{df.n_missing.sum()} run ≈ {total:.0f} giờ GPU** ở `max_seq=960`; "
+          f"nếu chạy `--max-seq 1792` (khuyến nghị, xem `TRAIN_GUARD_960.md`): "
+          f"**≈ {total*1.15:.0f}–{total*1.25:.0f} giờ** (+15–25%), "
           f"trong đó {main_miss} run thuộc cell chính (chưa tính thời gian chờ/quota).", "",
-          "| Cell | Vai trò | Seed đã có | # | Seed thiếu | # | Giờ GPU còn thiếu | Ghi chú |",
-          "|---|---|---|---:|---|---:|---:|---|"]
+          "| Cell | Vai trò | Seed đã có | # | Seed thiếu | # | Giờ GPU 960 | Giờ GPU 1792 (+15–25%) | Ghi chú |",
+          "|---|---|---|---:|---|---:|---:|---:|---|"]
     for r in df.itertuples():
         md.append(f"| {r.label} | {r.role} | {r.seeds_have} | {r.n_have} | {r.seeds_missing} | "
-                  f"{r.n_missing} | {r.hours_missing:.1f} | {r.note} |")
+                  f"{r.n_missing} | {r.hours_missing:.1f} | {r.h1792_lo:.1f}–{r.h1792_hi:.1f} | {r.note} |")
     md += ["", "## Thứ tự đề xuất", "",
            "1. **4 cell Qwen 4B** (A-natural, B-balanced) lên 5 seed — đây là nơi có tuyên bố so sánh A/B. "
            "Cần thêm 5 run ≈ 24 h.",
@@ -76,6 +80,8 @@ def main() -> None:
            "",
            "## Lưu ý", "",
            "- Chi phí trên là giờ GPU thuần; thực tế cần thêm ~30% cho preemption, tải model, inference.",
+           "- Cột 1792 = chi phí khi dùng `--max-seq 1792` để giữ 100% token (960 làm mất 3,2% A / 6,8% B); "
+           "ước tính +15–25% thời gian/step do padding dài, số token/step không đổi.",
            "- Kaggle: 2 account × 30 h GPU/tuần (reset thứ Bảy). Colab A100: phiên 12 h, hay bị thu hồi.",
            "- Với 5 seed, báo cáo mean ± std qua seed; paired bootstrap CI chỉ phủ variance eval, "
            "phải ghi rõ khi so sánh giữa cell.",

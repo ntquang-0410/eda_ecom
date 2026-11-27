@@ -28,20 +28,33 @@ KNOWN = {
                        "adapter_name": "adapter_natural_seed7_ckpt", "step": 500,
                        "local_file": "/tmp/s7ad/adapter_model.safetensors",
                        "base_model": "Qwen/Qwen3-4B"},
+    ("qwen8b_a", 42): {"source": "kernel_output", "dataset_ref": "nguynthanhquang/tiki-matrix-m8b-a",
+                        "adapter_name": "adapter_natural_seed42", "step": 500,
+                        "local_file": "/tmp/k_m8b-a/out_A_m8b/adapter_natural_seed42/adapter_model.safetensors",
+                        "base_model": "Qwen/Qwen3-8B"},
+    ("qwen8b_b", 42): {"source": "kernel_output", "dataset_ref": "nguynthanhquang/tiki-matrix-m8b-b",
+                        "adapter_name": "adapter_balanced_seed42", "step": 500,
+                        "local_file": "/tmp/k_m8b-b/out_B_m8b_balanced/adapter_balanced_seed42/adapter_model.safetensors",
+                        "base_model": "Qwen/Qwen3-8B"},
     ("qwen8b_b_natural", 42): {"source": "dataset", "dataset_ref": "nguynthanhquang/qwen8b-b-ckpt",
-                                "adapter_name": "adapter", "step": 500, "local_file": None,
+                                "adapter_name": "adapter", "step": 500,
+                                "local_file": "/tmp/dlq/qwen8b-b-ckpt/adapter_model.safetensors",
                                 "base_model": "Qwen/Qwen3-8B"},
     ("ecomgpt_a_balanced", 42): {"source": "dataset", "dataset_ref": "nguynthanhquang/ecomgpt-ckpt",
-                                  "adapter_name": "adapter_balanced_seed42", "step": 500, "local_file": None,
+                                  "adapter_name": "adapter_balanced_seed42", "step": 500,
+                                  "local_file": "/tmp/dlq/ecomgpt-ckpt/adapter_model.safetensors",
                                   "base_model": "damo/nlp_ecomgpt_multilingual-7B-ecom"},
     ("qwen4b_b", 123): {"source": "kernel_output", "dataset_ref": "anhtamxinhdep/tiki-m4b-b-s123",
-                         "adapter_name": "adapter_balanced_seed123", "step": 500, "local_file": None,
+                         "adapter_name": "adapter_balanced_seed123", "step": 500,
+                         "local_file": "/tmp/dlq/out_B_qwen4b_balanced/adapter_balanced_seed123/adapter_model.safetensors",
                          "base_model": "Qwen/Qwen3-4B"},
     ("nllb_a", 7): {"source": "dataset", "dataset_ref": "nguynthanhquang/tiki-matrix-checkpoints",
-                     "adapter_name": "adapters/nllb_a_s7_adapter", "step": 500, "local_file": None,
+                     "adapter_name": "adapters/nllb_a_s7_adapter", "step": 500,
+                     "local_file": "/tmp/dlq/tiki-matrix-checkpoints/adapters/nllb_a_s7_adapter/adapter_model.safetensors",
                      "base_model": "facebook/nllb-200-distilled-600M"},
     ("nllb_b", 7): {"source": "dataset", "dataset_ref": "nguynthanhquang/tiki-matrix-checkpoints",
-                     "adapter_name": "adapters/nllb_b_s7_adapter", "step": 500, "local_file": None,
+                     "adapter_name": "adapters/nllb_b_s7_adapter", "step": 500,
+                     "local_file": "/tmp/dlq/tiki-matrix-checkpoints/adapters/nllb_b_s7_adapter/adapter_model.safetensors",
                      "base_model": "facebook/nllb-200-distilled-600M"},
 }
 
@@ -70,7 +83,7 @@ def main() -> None:
             "step": None, "local_file": None, "base_model": man.get("base_model"),
         })
         prov = dict(prov)
-        prov["md5"] = md5(prov.pop("local_file"))
+        prov["md5"] = md5(prov.get("local_file"))
         prov["recorded"] = prov["source"] != "unknown"
         man["adapter_provenance"] = prov
         mp.write_text(json.dumps(man, ensure_ascii=False, indent=2), encoding="utf-8")

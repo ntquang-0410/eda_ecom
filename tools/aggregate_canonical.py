@@ -16,6 +16,16 @@ import canonical_eval as ce
 
 ROOT = Path(__file__).resolve().parents[1]
 CANON = ROOT / ".artifacts/canonical"
+PROV = CANON / "_provenance.csv"
+
+
+def provenance_ok() -> set[str]:
+    if not PROV.exists():
+        return set()
+    d = pd.read_csv(PROV)
+    return set(d.groupby("cell")["pass"].all().loc[lambda s: s].index)
+
+
 INDEX = ce.load_index()
 CLUSTERS1688 = INDEX[INDEX.dataset == "1688"].set_index("eval_id").product_id.to_dict()
 
@@ -64,6 +74,7 @@ def main() -> None:
         seed = int(f.stem.replace("seed", ""))
         per_seed.setdefault(cell, {})[seed] = pd.read_parquet(f)
 
+    ok_cells = provenance_ok()
     rows = []
     for cell, seeds in sorted(per_seed.items()):
         da, qe, cov1, covt, bleu, chrf = [], [], [], [], [], []
@@ -74,6 +85,8 @@ def main() -> None:
             da.append(a.comet_da.mean()); qe.append(t.comet_qe.mean())
             cov1.append(a.nonempty.mean()); covt.append(t.nonempty.mean())
             bleu.append(a.bleu.mean()); chrf.append(a.chrf.mean())
+            if cell not in ok_cells:
+                qe[-1] = float("nan")
             for ds, part, col in (("1688", a, "comet_da"), ("tiki", t, "comet_qe")):
                 means = {st: part[part.stratum == st][col].mean()
                          for st in ("title", "attribute", "description")}
@@ -116,7 +129,14 @@ def main() -> None:
         contrasts.append({"a": PRETTY.get(a, a), "b": PRETTY.get(b, b), **r})
 
     def f(v, nd=4):
-        return "—" if v is None or (isinstance(v, float) and np.isnan(v)) else f"{v:.{nd}f}"
+        if v is None:
+            return "—"
+        try:
+            if np.isnan(v):
+                return "—"
+        except TypeError:
+            pass
+        return f"{v:.{nd}f}"
 
     md = ["# Canonical eval — 858 dòng cố định, zero-fill + coverage", "",
           "Index: `data/cleaned/eval_paired_858.parquet` (1688 = 231, Tiki = 627, hash trong `.json`).",
@@ -129,8 +149,8 @@ def main() -> None:
     for r in agg.itertuples():
         std = "" if np.isnan(r.da_std) else f" ± {r.da_std:.4f}"
         qstd = "" if np.isnan(r.qe_std) else f" ± {r.qe_std:.4f}"
-        md.append(f"| {r.label} | {r.seeds} | {r.n_seeds} | {r.da_mean:.4f}{std} | {r.cov1688*100:.1f}% | "
-                  f"{r.qe_mean:.4f}{qstd} | {r.covtiki*100:.1f}% | {r.bleu:.2f} | {r.chrf:.2f} |")
+        md.append(f"| {r.label} | {r.seeds} | {r.n_seeds} | {f(r.da_mean)}{std} | {r.cov1688*100:.1f}% | "
+                  f"{f(r.qe_mean)}{qstd} | {r.covtiki*100:.1f}% | {r.bleu:.2f} | {r.chrf:.2f} |")
 
     md += ["", "### 1b. Macro theo stratum", "",
            "`macro_unw` = trung bình 3 stratum (mỗi stratum trọng số bằng nhau); "
@@ -140,6 +160,14 @@ def main() -> None:
     for r in agg.itertuples():
         md.append(f"| {r.label} | {r.macro_unw_1688:.4f} | {r.macro_w_1688:.4f} | "
                   f"{r.macro_unw_tiki:.4f} | {r.macro_w_tiki:.4f} |")
+
+    hidden = [c for c in sorted(per_seed) if c not in ok_cells]
+    md += ["", f"**QE 858 bị ẩn cho {len(hidden)} cell chưa pass adapter provenance (4.4):** "
+           + ", ".join(PRETTY.get(c, c) for c in hidden)
+           + " — xem `reports/ADAPTER_PROVENANCE_AUDIT.md`. COMET-da vẫn hiển thị đầy đủ.", ""]
+    md += ["", "**EcomGPT-7B B (4.6):** attribute rỗng **21/224 (9,4%)**, title 0/291, description 0/112 — "
+           "B không có group attribute trong train (OOD), nên đọc QE/macro theo stratum, không so tổng; "
+           "xem `reports/AUDIT_ECOMGPT_B_EMPTY.md`.", ""]
 
     md += ["", "## 2. Paired cluster bootstrap (COMET-da 1688, 2.000 lần, cluster = product_id)", "",
            "| A | B | Δ (A−B) | 95% CI | n |", "|---|---|---:|---|---:|"]

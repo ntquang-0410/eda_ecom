@@ -27,8 +27,9 @@
     "dataset_ref": "nguynthanhquang/ecomgpt-ckpt",
     "adapter_name": "adapter_balanced_seed42",
     "step": 500,
+    "local_file": "/tmp/dlq/ecomgpt-ckpt/adapter_model.safetensors",
     "base_model": "damo/nlp_ecomgpt_multilingual-7B-ecom",
-    "md5": null,
+    "md5": "428e6efb0baa7d3e7f07810fa6dcfff2",
     "recorded": true
   }
 }

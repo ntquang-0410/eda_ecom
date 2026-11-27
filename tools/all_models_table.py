@@ -14,6 +14,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 CANON = ROOT / ".artifacts/canonical"
+PROV = CANON / "_provenance.csv"
 ORDER = ["Qwen3-8B", "Qwen3-4B", "EcomGPT-7B", "Moses", "OpenNMT", "NLLB-600M"]
 COLS = ["1688_title", "1688_attribute", "1688_description", "macro_unw_1688", "macro_w_1688",
         "tiki_title", "tiki_attribute", "tiki_description", "macro_unw_tiki", "macro_w_tiki"]
@@ -31,12 +32,25 @@ def safe_std(x):
 
 
 def f(v, nd=4) -> str:
-    if v is None or (isinstance(v, float) and np.isnan(v)):
+    if v is None:
         return "—"
+    try:
+        if np.isnan(v):
+            return "—"
+    except TypeError:
+        pass
     return f"{v:.{nd}f}"
 
 
+def provenance_ok() -> set[str]:
+    if not PROV.exists():
+        return set()
+    d = pd.read_csv(PROV)
+    return set(d.groupby("cell")["pass"].all().loc[lambda s: s].index)
+
+
 def main() -> None:
+    ok_cells = provenance_ok()
     rows, strata = [], []
     for cell_dir in sorted(CANON.glob("*")):
         files = sorted(cell_dir.glob("seed*.parquet"))
@@ -68,6 +82,8 @@ def main() -> None:
                     vals[s] = m
                 st[f"macro_unw_{ds}"].append(float(np.mean(list(vals.values()))))
                 st[f"macro_w_{ds}"].append(float(sum(vals[k] * cnt.get(k, 0) for k in vals) / max(1, cnt.sum())))
+        if cell_dir.name not in ok_cells:
+            qe = [float("nan")] * len(qe)
         rec = {
             "model": model, "data": data, "recipe": recipe,
             "seeds": ",".join(map(str, seeds)), "n_seeds": len(seeds),
@@ -112,7 +128,9 @@ def main() -> None:
              "- `BLEU sent`/`chrF sent` = trung bình điểm câu (không phải corpus BLEU).",
              f"- Cell không có score từng dòng (loại khỏi bảng): "
              + (", ".join(missing.model + " " + missing.data) if len(missing) else "không") + ".",
-             "- Human eval Tiki: **MISSING** (sheet đã sinh, chưa có người chấm)."]
+             "- Human eval Tiki: **MISSING** (sheet đã sinh, chưa có người chấm).",
+             "- **QE ẩn cho cell chưa pass adapter provenance (4.4)** — xem "
+             "`reports/ADAPTER_PROVENANCE_AUDIT.md`; COMET-da vẫn đầy đủ."]
     if (df.cov1 < 1).any() or (df.covt < 1).any():
         notes.append("- Coverage <100%: " + ", ".join(
             f"{r.model} {r.data} ({r.cov1*100:.1f}%/{r.covt*100:.1f}%)"

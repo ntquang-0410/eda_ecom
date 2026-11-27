@@ -1,0 +1,23 @@
+cell,seed,source,dataset_ref,adapter_name,path_ok,md5_ok,recorded,pass,reason
+ecomgpt_a,42,unknown,,,False,False,False,False,chưa ghi provenance
+ecomgpt_a_balanced,42,dataset,nguynthanhquang/ecomgpt-ckpt,adapter_balanced_seed42,True,True,True,True,
+ecomgpt_b,42,unknown,,,False,False,False,False,chưa ghi provenance
+moses_a,42,unknown,,,False,False,False,False,chưa ghi provenance
+moses_b,42,unknown,,,False,False,False,False,chưa ghi provenance
+nllb_a,42,unknown,,,False,False,False,False,chưa ghi provenance
+nllb_a,7,dataset,nguynthanhquang/tiki-matrix-checkpoints,adapters/nllb_a_s7_adapter,True,True,True,True,
+nllb_b,42,unknown,,,False,False,False,False,chưa ghi provenance
+nllb_b,7,dataset,nguynthanhquang/tiki-matrix-checkpoints,adapters/nllb_b_s7_adapter,True,True,True,True,
+onmt_a,42,unknown,,,False,False,False,False,chưa ghi provenance
+onmt_b,42,unknown,,,False,False,False,False,chưa ghi provenance
+qwen4b_a,123,kernel_output,anhtamxinhdep/tiki-m4b-a-s123,adapter_natural_seed123,True,True,True,True,
+qwen4b_a,42,kernel_output,nguynthanhquang/tiki-matrix-m4b-a,adapter_natural_seed42,True,True,True,True,
+qwen4b_a,7,dataset,nguynthanhquang/qwen4b-a-s7-ckpt,adapter_natural_seed7_ckpt,True,True,True,True,
+qwen4b_a_balanced,42,unknown,,,False,False,False,False,chưa ghi provenance
+qwen4b_b,123,kernel_output,anhtamxinhdep/tiki-m4b-b-s123,adapter_balanced_seed123,True,True,True,True,
+qwen4b_b,42,unknown,,,False,False,False,False,chưa ghi provenance
+qwen4b_b_natural,42,unknown,,,False,False,False,False,chưa ghi provenance
+qwen8b_a,42,kernel_output,nguynthanhquang/tiki-matrix-m8b-a,adapter_natural_seed42,True,True,True,True,
+qwen8b_a_balanced,42,unknown,,,False,False,False,False,chưa ghi provenance
+qwen8b_b,42,kernel_output,nguynthanhquang/tiki-matrix-m8b-b,adapter_balanced_seed42,True,True,True,True,
+qwen8b_b_natural,42,dataset,nguynthanhquang/qwen8b-b-ckpt,adapter,True,True,True,True,

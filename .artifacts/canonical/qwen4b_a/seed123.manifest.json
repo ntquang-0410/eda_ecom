@@ -26,6 +26,7 @@
     "dataset_ref": "anhtamxinhdep/tiki-m4b-a-s123",
     "adapter_name": "adapter_natural_seed123",
     "step": 500,
+    "local_file": "/tmp/k123/out_A_qwen4b_natural/adapter_natural_seed123/adapter_model.safetensors",
     "base_model": "Qwen/Qwen3-4B",
     "md5": "ca9272ec7a6410593ad9a1b02e9ef41c",
     "recorded": true

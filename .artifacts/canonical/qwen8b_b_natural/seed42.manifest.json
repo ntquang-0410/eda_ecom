@@ -27,8 +27,9 @@
     "dataset_ref": "nguynthanhquang/qwen8b-b-ckpt",
     "adapter_name": "adapter",
     "step": 500,
+    "local_file": "/tmp/dlq/qwen8b-b-ckpt/adapter_model.safetensors",
     "base_model": "Qwen/Qwen3-8B",
-    "md5": null,
+    "md5": "b5546fddfbdff078eaca0657b7f952f0",
     "recorded": true
   }
 }

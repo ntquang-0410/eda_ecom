@@ -26,6 +26,7 @@
     "dataset_ref": "nguynthanhquang/qwen4b-a-s7-ckpt",
     "adapter_name": "adapter_natural_seed7_ckpt",
     "step": 500,
+    "local_file": "/tmp/s7ad/adapter_model.safetensors",
     "base_model": "Qwen/Qwen3-4B",
     "md5": "679b938f4c10d49091c53fde5480b437",
     "recorded": true

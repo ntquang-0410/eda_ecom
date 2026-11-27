@@ -27,8 +27,9 @@
     "dataset_ref": "nguynthanhquang/tiki-matrix-checkpoints",
     "adapter_name": "adapters/nllb_b_s7_adapter",
     "step": 500,
+    "local_file": "/tmp/dlq/tiki-matrix-checkpoints/adapters/nllb_b_s7_adapter/adapter_model.safetensors",
     "base_model": "facebook/nllb-200-distilled-600M",
-    "md5": null,
+    "md5": "5c2a1b4af098a373d2eed0db8ecede72",
     "recorded": true
   }
 }

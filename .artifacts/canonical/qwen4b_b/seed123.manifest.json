@@ -27,8 +27,9 @@
     "dataset_ref": "anhtamxinhdep/tiki-m4b-b-s123",
     "adapter_name": "adapter_balanced_seed123",
     "step": 500,
+    "local_file": "/tmp/dlq/out_B_qwen4b_balanced/adapter_balanced_seed123/adapter_model.safetensors",
     "base_model": "Qwen/Qwen3-4B",
-    "md5": null,
+    "md5": "abbb57047f1c9bb6e418300878581b51",
     "recorded": true
   }
 }
