@@ -4,10 +4,10 @@
 
 | Việc | Trạng thái | Ghi chú |
 |---|---|---|
-| Train lại với `max_seq=1792` | 🔄 **đã khởi động, chưa xong** | Registry `campaign/jobs.json`: 30 run LLM (6 cell × 5 seed) ở 1792; 0 run xong. A100 đang 503, Kaggle hết quota tuần (reset ~28/11). |
+| Train lại với `max_seq=1792` | 🔄 **đã có A100, job đầu đang chờ chạy** | Qwen3-4B A-natural seed 2024 @1792 xếp hàng sau EcomGPT retry (`chain_4b_1792.sh`); 30 run LLM trong registry. |
 | Campaign ≥5 seed | 🔄 **đã khởi động, chưa xong** | 54 job / ~216,7 giờ GPU còn lại; NLLB B seed 42 đang chạy, 53 job pending. |
-| NLLB B với tập subsample 4,84 M | 🔄 **đang chạy seed 42** | Đã build `sample_B_sub4842_balanced_seed{7,42,123,2024,2025}.parquet` (500 step, 4,00 M token). Train seed 42 trên T4 từ 13:57 UTC, ETA ~8–9 h. |
-| EcomGPT B-natural retry (LR thấp hơn) | ⏳ **sẵn sàng, chờ GPU** | `tools/train_ecomgpt.py` đã có `--lr`; runner `auto_resume_ecomgpt_b_retry.sh` (lr 5e-5, 500 step); A100 auto-acquire đang chạy. |
+| NLLB B với tập subsample 4,84 M | 🔄 **đang chạy seed 42 trên A100** | Sample 5 seed đã build. T4 bị thu hồi khi A100 vào; restart trên A100 14:47 UTC (nhanh hơn ~2×), checkpoint 25 step. |
+| EcomGPT B-natural retry (LR thấp hơn) | 🔄 **đang chạy** | A100 14:44 UTC: tải model 28 GB → train lr 5e-5, 500 step, upload checkpoint 25 step. |
 | Sửa harness eval (truncate + `--eval-max-seq`) | ✅ **xong** | Đã dùng cho các run mới; qwen4b_a đã sinh lại 9 dòng. |
 
 ## 1. Chi tiết campaign (item 1–2)
@@ -40,3 +40,10 @@
 | Kaggle 2 account (60 h/tuần) + Colab | ~12–15 h/ngày | ~2–3 tuần |
 
 Không thể hoàn tất trong một phiên; registry + runner cho phép chạy tiếp qua nhiều phiên mà không lặp lại việc đã xong.
+
+## 5. Cập nhật 15:00 UTC — A100 đã vào
+
+- A100 `gpu-a100-s-ass1c0-maczc7fy7k95` (14:40 UTC), hạn phiên ~02:40 UTC.
+- Đang chạy song song: **EcomGPT B-natural retry** (bootstrap 28 GB) và **NLLB B s42** (train từ 14:47).
+- Chain: khi EcomGPT xong → tự chạy **Qwen3-4B A-natural seed 2024 @1792** (~6 h, có checkpoint upload).
+- T4 bị Colab thu hồi khi tạo A100 (giới hạn 2 GPU session) — NLLB mất ~45 phút train trên T4, đã restart trên A100.
