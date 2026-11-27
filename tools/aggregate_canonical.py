@@ -173,6 +173,8 @@ def main() -> None:
     md.append("- **NLLB B:** seed 42 = 0,5494 vs seed 7 = 0,6382; run hợp lệ — xem `reports/AUDIT_NLLB_B_SEED.md`.")
     md.append("- **Nguồn gốc:** các artefact này là retrofit từ score cũ; run mới phải dùng "
               "`tools/score_canonical.py` để log manifest đầy đủ.")
+    md.append("- **Training guard 960:** các run hiện tại mất 3,2% (A) và 6,8% (B) token do bỏ dòng "
+              "prompt >952 — xem `reports/TRAIN_GUARD_960.md`; campaign 5-seed mới dùng `--max-seq 1792`.")
 
     path = ROOT / "reports/CANONICAL_EVAL.md"
     path.write_text("\n".join(md) + "\n", encoding="utf-8")

@@ -83,3 +83,4 @@ Human eval Tiki: **MISSING** (chưa có file annotation).
 - **NLLB A vs B là seed-dependent:** seed 42 cho A 0,6344 > B 0,5494; seed 7 cho A 0,6304 < B 0,6382 → không kết luận A/B từ control này. Epochs@4M: A = 0,83 (tập 4,84 M token), B = 0,26 (tập 15,71 M token); mỗi seed B chỉ thấy ~1/4 dữ liệu nên run-variance lớn (Δ seed42−seed7 = −0,0888 [−0,1076; −0,0698]).
 - **NLLB B:** seed 42 = 0,5494 vs seed 7 = 0,6382; run hợp lệ — xem `reports/AUDIT_NLLB_B_SEED.md`.
 - **Nguồn gốc:** các artefact này là retrofit từ score cũ; run mới phải dùng `tools/score_canonical.py` để log manifest đầy đủ.
+- **Training guard 960:** các run hiện tại mất 3,2% (A) và 6,8% (B) token do bỏ dòng prompt >952 — xem `reports/TRAIN_GUARD_960.md`; campaign 5-seed mới dùng `--max-seq 1792`.
