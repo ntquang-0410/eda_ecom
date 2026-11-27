@@ -61,3 +61,13 @@ Không thể hoàn tất trong một phiên; registry + runner cho phép chạy 
 - Đang chạy lại vòng xin A100 (`a100_campaign2.log`); khi vào sẽ chạy `chain_all.sh`:
   NLLB + EcomGPT song song, rồi 4B 1792 khi EcomGPT xong.
 - Tất cả 54 job trở về `pending` trong registry; không có kết quả nào bị tính sai.
+
+## 7. Cập nhật 18:35 UTC — A100 mới đã vào, resume chạy
+
+- A100 mới `gpu-a100-s-ass1c0-3s6xzguhic3uu` (18:13 UTC). Đã sync lại repo + scripts + NLLB stage.
+- **NLLB B s42**: chạy từ 18:16; step 25 lúc 18:25 (~24 s/step khi tải model song song), **đã upload ckpt step 25**
+  (`nllb-b-sub4842-ckpt`, xác minh STEP=25). ETA train ~21:45, inference ~23:45.
+- **EcomGPT retry**: đang tải model 17,8/28 GB (18:31), resume từ step 75; ETA xong ~22:10.
+- **4B 1792 seed 2024**: chain cũ fire sớm (chỉ kiểm tra `train_ecomgpt`, không thấy bootstrap) nên đã
+  kill job 4B vừa khởi động; đã thay bằng waiter kiểm tra cả bootstrap/download/train, sẽ chạy sau EcomGPT.
+- Cả 3 job đều upload checkpoint 25 step ⇒ preempt không mất quá 25 step.
