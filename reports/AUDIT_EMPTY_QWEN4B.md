@@ -1,63 +1,91 @@
-# Audit empty hypothesis — Qwen3-4B A-natural trên 27 dòng bổ sung của 858
+# Audit empty hypothesis — Qwen3-4B A-natural trên 858 (đã xác minh + sửa + chạy lại)
 
-**Câu hỏi đặt ra:** "qwen4b_a 27/27 rỗng" — có đúng cell này rỗng toàn bộ 27 dòng không?
+**Ngày:** 2026-11-27  
+**Trạng thái:** ✅ đã xác minh nguyên nhân, ✅ đã sửa harness, ✅ đã sinh lại 9 dòng × 3 seed.
 
-**Kết luận: KHÔNG.** Chỉ **9/27 rỗng**, và 9 dòng đó là **toàn bộ 9 dòng description** của nhóm bổ sung; 18/18 dòng attribute đều có hyp.
+---
 
-## 1. Số liệu
+## 1. Xác minh tiền đề "27/27 rỗng"
 
-| Nhóm | Số dòng | Rỗng | Tỉ lệ |
+**Sai.** Chỉ **9/27 rỗng**, và đúng bằng **9/9 dòng description**; 18/18 attribute có hyp.
+
+| Nhóm | Số dòng | Rỗng | Prompt tokens |
+|---|---:|---:|---|
+| Attribute | 18 | **0** | 57–532 |
+| Description | 9 | **9** | 971–1.196 |
+| Tổng | 27 | 9 | — |
+
+Kiểm tra trên cả 3 seed (42, 123, 7):
+
+| Seed | Rỗng/27 | Trùng tập bị guard loại | Rỗng ngoài guard |
 |---|---:|---:|---:|
-| Attribute | 18 | 0 | 0% |
-| Description | 9 | **9** | **100%** |
-| Tổng | 27 | 9 | 33,3% |
+| 42 | 9 | 9 | 0 |
+| 123 | 9 | 9 | 0 |
+| 7 | 9 | 9 | 0 |
 
-Cùng pattern ở cả 3 seed của `qwen4b_a` (42, 123, 7) và ở `qwen4b_a_balanced`; các cell Qwen khác cũng rỗng đúng 9 dòng description này.
+⇒ Không phải lỗi decoding: các dòng này **không bao giờ được đưa vào `generate`**.
 
-## 2. Nguyên nhân: prompt vượt `max_seq`, bị harness loại trước khi generate
+## 2. Nguyên nhân — bug config của harness (không phải model)
 
-`generate_rows()` trong `tools/tpu_weight_train.py` có guard:
+`generate_rows()` dùng **cùng `max_seq = 960` cho train và eval**, rồi lọc:
 
 ```python
-part = part[part["prompt_tokens"] < max_seq - 8]   # max_seq = 960 → ngưỡng 952
+part = part[part["prompt_tokens"] < max_seq - 8]   # ngưỡng 952
 ```
 
-9 dòng description có prompt (chat template Qwen + source) dài **971–1.196 token**, vượt ngưỡng 952 nên bị loại **trước khi gọi model** — không phải model sinh hỏng.
+9 dòng description có prompt 971–1.196 token (chat template Qwen + source 3,0–3,7k ký tự) → bị **bỏ âm thầm**, không log, không đưa vào generate. Đây là **config bug**: eval không được lấy giới hạn của train để loại dòng test; đúng ra phải truncate hoặc nâng `max_seq` cho eval.
 
-| eval_id | stratum | src chars | prompt tokens | Kết quả |
-|---|---|---:|---:|---|
-| tikiv2:00023 | description | 3.262 | 1.059 | bị loại |
-| tikiv2:00025 | description | 3.090 | 971 | bị loại |
-| tikiv2:00029 | description | 3.331 | 1.067 | bị loại |
-| tikiv2:00057 | description | 3.168 | 1.034 | bị loại |
-| tikiv2:00069 | description | 3.663 | 1.103 | bị loại |
-| tikiv2:00072 | description | 3.320 | 1.064 | bị loại |
-| tikiv2:00101 | description | 3.553 | 1.196 | bị loại |
-| tikiv2:00125 | description | 3.013 | 1.078 | bị loại |
-| tikiv2:00129 | description | 3.109 | 1.108 | bị loại |
+Ba giả thuyết được loại trừ:
 
-Đối chứng: 18 dòng attribute có prompt 57–532 token → tất cả đều có hyp.
+| Giả thuyết | Kết luận |
+|---|---|
+| `max-seq-len` | ✅ đúng là nguyên nhân (guard 952) |
+| decoding config (max_new, greedy, EOS) | ❌ không liên quan — dòng bị loại trước generate; 0 rỗng ngoài guard |
+| prompt template | ❌ template giống hệt 618 dòng còn lại; chỉ độ dài khác |
 
-## 3. Hệ quả
+## 3. Sửa harness
 
-1. Zero-fill 9 dòng này là **đúng policy** (không lọc), nhưng phải hiểu đây là **giới hạn của harness**
-   (`max_seq = 960`), không phải "Qwen không dịch được description dài".
-2. Khi báo cáo coverage Tiki của Qwen: 618/627 = 98,6%; trong đó 9 dòng thiếu đều là description dài.
-3. EcomGPT/Moses/NLLB **không** bị lọc ở các dòng này (pipeline khác, không dùng guard theo token) nên
-   chúng có hyp — và bị điểm rất thấp (QE −0,21…−0,77). Vì vậy so sánh zero-fill giữa Qwen và các model
-   khác trên 9 dòng này là **không công bằng cho Qwen**, cần ghi chú khi diễn giải.
-4. Nếu muốn đo đúng năng lực dịch description dài: chạy inference riêng với `max_seq = 1280` cho 9 dòng
-   (Qwen3 hỗ trợ 32k) rồi báo cáo như một **phụ lục độ dài**, không trộn vào bảng chính.
+`tools/tpu_weight_train.py` — `generate_rows(..., truncate=False)`:
+- `truncate=True` (dùng cho eval): **không lọc**, mọi dòng đều được sinh; bucket mở rộng tới `max_seq` để không cắt prompt.
+- `truncate=False` (train/TPU cũ): giữ hành vi cũ nhưng **log rõ số dòng bị bỏ + eval_id + max token**.
 
-## 4. Tái lập
+`tools/train_weight_quota_gpu.py`:
+- thêm `--eval-max-seq` (0 = dùng `--max-seq`);
+- eval gọi `generate_rows(..., eval_max, truncate=True)`.
 
-```bash
-python - <<'PY'
-import pandas as pd
-from transformers import AutoTokenizer
-tok = AutoTokenizer.from_pretrained("Qwen/Qwen3-4B", trust_remote_code=True)
-# tokenize source theo đúng chat template của tools/tpu_weight_train.py
-PY
-```
+Khuyến nghị cho run mới: `--eval-max-seq 1280` (bao trùm prompt dài nhất 1.196 token).
 
-Artefact liên quan: `.artifacts/canonical/qwen4b_a/seed42.parquet` (cột `nonempty`), `reports/AUDIT_858.md`.
+## 4. Chạy lại qwen4b_a
+
+Thiết bị: Colab T4. Adapter lấy lại từ output kernel cũ (seed 42, 123) và `qwen4b-a-s7-ckpt` (seed 7). Sinh đúng 9 dòng bị thiếu với `eval_max_seq=1280`, rồi chấm lại COMET-QE.
+
+| Seed | Trước: QE 858 (zero-fill) | Sau: QE 858 | Δ | Coverage trước → sau |
+|---:|---:|---:|---:|---|
+| 42 | 0,0530 | **0,0563** | +0,0033 | 98,6% → **100%** |
+| 123 | 0,0587 | **0,0621** | +0,0034 | 98,6% → **100%** |
+| 7 | 0,0573 | **0,0608** | +0,0035 | 98,6% → **100%** |
+| **Trung bình** | 0,0563 | **0,0597 ± 0,0030** | +0,0034 | 98,6% → **100%** |
+
+- 9/9 dòng sinh được hyp (0 rỗng) ở cả 3 seed.
+- **COMET-da 1688 không đổi**: 0,8584 / 0,8511 / 0,8530 (231 dòng vốn đã đủ, không nằm trong guard).
+
+## 5. Kết luận về ảnh hưởng điểm 858
+
+1. **Metric xếp hạng (COMET-da 1688) KHÔNG bị ảnh hưởng** — các dòng bị lỗi đều là Tiki.
+2. **COMET-QE Tiki bị lệch −0,0034** do zero-fill 9 dòng; đã sửa bằng cách sinh lại.
+3. **Coverage Tiki 98,6% → 100%** sau khi sửa.
+4. Đây là bug config thật, nên **qwen4b_a đã được chạy lại trước khi dùng so sánh**; artefact canonical đã cập nhật (`.artifacts/canonical/qwen4b_a/seed{42,123,7}.parquet`), log sinh lại ở `.artifacts/reinfer_long/`.
+
+## 6. Phạm vi còn lại
+
+Cùng bug này ảnh hưởng **mọi cell Qwen** (9 dòng description dài bị bỏ):
+
+| Cell | Rỗng/27 | Adapter sẵn có? | Ghi chú |
+|---|---:|---|---|
+| qwen4b_a | 9 → **0** | ✅ | đã sửa hôm nay |
+| qwen4b_a_balanced | 9 | cần lấy từ kernel output | sửa được trên T4 |
+| qwen4b_b (42, 123) | 9 | kernel output | sửa được trên T4 |
+| qwen4b_b_natural | 9 | kernel output | sửa được trên T4 |
+| qwen8b_a / qwen8b_a_balanced / qwen8b_b_natural | 9 | qwen8b*-ckpt | cần ≥24 GB (L4/A100), T4 16 GB không đủ |
+
+Cho đến khi sửa hết, bảng QE phải ghi chú: *"các cell Qwen còn lại bị zero-fill 9 dòng description dài, QE thấp hơn ~0,003 so với khi sửa"*. COMET-da không bị ảnh hưởng nên so sánh chính thức vẫn hợp lệ.

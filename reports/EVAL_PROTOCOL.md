@@ -32,6 +32,8 @@ So sánh 831 ↔ 858 và lý do: `reports/AUDIT_858.md`; audit rỗng của Qwen
 2. `coverage` = % hyp không rỗng, báo cáo riêng cho 1688 và Tiki.
 3. Không bao giờ lọc theo độ dài, theo stratum, hay theo việc model khác có hyp hay không.
 4. Điểm hệ thống = trung bình per-row trên đúng index.
+   **Eval không được lọc dòng:** `generate_rows(..., truncate=True)` + `--eval-max-seq 1280`
+   (bug 9 dòng description dài bị bỏ âm thầm đã sửa — xem `reports/AUDIT_EMPTY_QWEN4B.md`).
 5. **Macro:** `macro_w` = trung bình theo trọng số số dòng mỗi stratum (bằng mean tổng);
    `macro_unw` = trung bình 3 stratum với trọng số bằng nhau. Báo cáo cả hai cho 1688 và Tiki.
 
@@ -132,6 +134,7 @@ Sheet mẫu đã sinh (chưa có điểm): `data/cleaned/human_eval/tiki_sheet_q
 | Audit 858 (zero-fill 27 dòng) | ✅ `reports/AUDIT_858.md`; 858 giờ là index chính |
 | Seed ≥5 | ❌ 37 run cell chính còn thiếu (~107 giờ GPU); xem `SEED_MATRIX.md` |
 | COMET-da là metric xếp hạng | ✅ `CANONICAL_EVAL.md` |
+| Eval không lọc dòng dài | ✅ harness đã sửa; qwen4b_a đã sinh lại 9 dòng (coverage 100%); các cell Qwen khác còn 9 zero-fill, QE thấp hơn ~0,003 |
 | Macro `macro_w` / `macro_unw` / stratum | ✅ bảng 1b `CANONICAL_EVAL.md` + §2 `ALL_MODELS_METRICS.md` |
 | Human eval Tiki | ❌ MISSING |
 | Manifest + leak assert | ✅ từ 27/11 (retrofit: commit/config hash có, hyperparams một số run để trống) |
