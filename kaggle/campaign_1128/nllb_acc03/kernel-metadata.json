@@ -1,0 +1,21 @@
+{
+  "id": "nadsa091/tiki-nllb-b-sub4842-s42",
+  "title": "Tiki Nllb B Sub4842 S42",
+  "code_file": "nllb.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "nadsa091/nllb-b-sub4842-data",
+    "nadsa091/nllb-b-sub4842-ckpt",
+    "nadsa091/tiki-matrix-tools-v2"
+  ],
+  "kernel_sources": [],
+  "model_sources": [
+    "amritha18/nllb-200-distilled-600m/Transformers/600m/1"
+  ],
+  "competition_sources": []
+}
