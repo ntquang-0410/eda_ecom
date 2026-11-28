@@ -17,5 +17,5 @@
     "qwen-lm/qwen-3/Transformers/4b/1"
   ],
   "competition_sources": [],
-  "machine_shape": "NvidiaRtxPro6000"
+  "machine_shape": "NvidiaL4"
 }
