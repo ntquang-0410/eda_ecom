@@ -84,3 +84,19 @@ Không thể hoàn tất trong một phiên; registry + runner cho phép chạy 
 - Dữ liệu cho Kaggle: `nllb-b-sub4842-data` (units 4,84M + sample seed 42/7 + eval_B) và
   `tiki-matrix-tools-v2` (trainer có `--eval-max-seq`).
 - Không còn phụ thuộc Colab cho các job này; kernel Kaggle chạy tới 12 h, có output để tải.
+
+## 9. Cập nhật 01:40 UTC 28/11 — dùng account thứ 2 (anhtamxinhdep)
+
+- Đã đưa **Qwen3-4B A seed 2024 @1792** lên account `anhtamxinhdep` (Kaggle), shape **NvidiaRtxPro6000**.
+- Dataset riêng cho acc02: `anhtamxinhdep/tiki-matrix-data` (đã có) + `anhtamxinhdep/tiki-matrix-tools-v2` (mới upload).
+- **Bug phát hiện & sửa:** `BUCKETS` dừng ở 1024 → tại `max_seq=1792` collate lỗi
+  `expected sequence of length 1246 at dim 1 (got 1024)`. Đã mở rộng
+  `BUCKETS = (…, 1024, 1280, 1536, 1792, 2048)` trong `tpu_weight_train.py`, version lại
+  tools-v2 cho cả 2 account; kernel 4B đã chạy lại (v3) và qua điểm crash cũ.
+- Hiện có **3 kernel GPU chạy song song**:
+  | Account | Kernel | Nội dung |
+  |---|---|---|
+  | nguynthanhquang | `tiki-nllb-b-sub4842-s42` | NLLB resume step 100 |
+  | nguynthanhquang | `tiki-ecomgpt-b-natural-lr5e5-resume` | EcomGPT lr 5e-5 resume 125 |
+  | anhtamxinhdep | `tiki-m4b-a-s2024-1792` | Qwen3-4B A seed 2024, max_seq 1792 |
+- Acc02 còn 1 slot GPU (Kaggle cho 2/account) nếu muốn chạy thêm cell.
