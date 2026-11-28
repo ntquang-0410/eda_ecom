@@ -41,7 +41,7 @@ CONFIGS = {
 SYSTEM = ("You are a professional Vietnamese-to-Simplified Chinese e-commerce translator. "
           "Translate the user text into Simplified Chinese. Preserve numbers, units and brand names. "
           "Return only the translation, no explanation.")
-BUCKETS = (64, 128, 256, 512, 1024)
+BUCKETS = (64, 128, 256, 512, 1024, 1280, 1536, 1792, 2048)
 MODEL_PATH = ""
 TRAIN = None
 EVAL_1688 = None
