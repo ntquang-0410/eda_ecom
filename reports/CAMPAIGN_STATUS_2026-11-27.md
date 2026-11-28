@@ -108,3 +108,19 @@ Không thể hoàn tất trong một phiên; registry + runner cho phép chạy 
   ngay khi EcomGPT xong — vòng lặp nền `after_ecom_loop.sh`.
 - **acc02 (`anhtamxinhdep`)** chỉ có `tiki-m4b-a-s2024-1792` (RTX Pro 6000, max_seq 1792).
 - Hệ quả: NLLB mất ~35 phút train trên Kaggle (từ 100), nhưng ckpt 100 vẫn còn nên resume sạch.
+
+## 11. Cập nhật 01:55 UTC 28/11 — dùng account thứ 3 (nadsa091)
+
+- Phát hiện token thứ 3 `/root/.kaggle_03` → account **nadsa091** (chưa dùng).
+- Đã upload cho acc03: `nadsa091/tiki-matrix-tools-v2`, `nadsa091/nllb-b-sub4842-data`,
+  `nadsa091/nllb-b-sub4842-ckpt` (step 100).
+- Push `nadsa091/tiki-nllb-b-sub4842-s42` (NLLB B subsample, resume 100) → RUNNING.
+- **acc02 4B v3 OOM** vì Kaggle cấp **T4 14,56 GB** dù metadata ghi `NvidiaRtxPro6000`;
+  đã push lại v4 với `NvidiaL4` (24 GB) → RUNNING, qua điểm OOM cũ.
+- Đã kill vòng lặp `after_ecom_loop` (sẽ push NLLB lên acc01) để tránh chạy trùng NLLB.
+- Hiện **đúng 1 kernel/account**:
+  | Account | Kernel | Nội dung | ETA |
+  |---|---|---|---|
+  | nguynthanhquang | tiki-ecomgpt-b-natural-lr5e5-resume | EcomGPT resume 125 | ~03:30 |
+  | anhtamxinhdep | tiki-m4b-a-s2024-1792 | 4B A seed2024 @1792 (L4) | ~12 h (có thể chỉ ~350 step, resume sau) |
+  | nadsa091 | tiki-nllb-b-sub4842-s42 | NLLB B resume 100 | ~05:30 |
