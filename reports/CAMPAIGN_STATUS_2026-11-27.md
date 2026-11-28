@@ -71,3 +71,16 @@ Không thể hoàn tất trong một phiên; registry + runner cho phép chạy 
 - **4B 1792 seed 2024**: chain cũ fire sớm (chỉ kiểm tra `train_ecomgpt`, không thấy bootstrap) nên đã
   kill job 4B vừa khởi động; đã thay bằng waiter kiểm tra cả bootstrap/download/train, sẽ chạy sau EcomGPT.
 - Cả 3 job đều upload checkpoint 25 step ⇒ preempt không mất quá 25 step.
+
+## 8. Cập nhật 01:20 UTC 28/11 — chuyển sang Kaggle (quota đã reset)
+
+- A100 lại bị thu hồi (~sau 20:00 27/11). Cứu được: **NLLB ckpt step 100**, **EcomGPT ckpt step 125**;
+  4B chưa từng chạy.
+- Kaggle quota reset 00:00 28/11 → đã đẩy 2 kernel GPU (song song):
+  - `nguynthanhquang/tiki-nllb-b-sub4842-s42` — resume step 100, L4, model NLLB mount sẵn.
+  - `nguynthanhquang/tiki-ecomgpt-b-natural-lr5e5-resume` — resume step 125, lr 5e-5, RTX Pro 6000.
+- `nguynthanhquang/tiki-m4b-a-s2024-1792` đã build xong, **chờ slot** (Kaggle giới hạn 2 GPU session);
+  vòng lặp nền tự push khi một kernel kết thúc.
+- Dữ liệu cho Kaggle: `nllb-b-sub4842-data` (units 4,84M + sample seed 42/7 + eval_B) và
+  `tiki-matrix-tools-v2` (trainer có `--eval-max-seq`).
+- Không còn phụ thuộc Colab cho các job này; kernel Kaggle chạy tới 12 h, có output để tải.
