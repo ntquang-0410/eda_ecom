@@ -100,3 +100,11 @@ Không thể hoàn tất trong một phiên; registry + runner cho phép chạy 
   | nguynthanhquang | `tiki-ecomgpt-b-natural-lr5e5-resume` | EcomGPT lr 5e-5 resume 125 |
   | anhtamxinhdep | `tiki-m4b-a-s2024-1792` | Qwen3-4B A seed 2024, max_seq 1792 |
 - Acc02 còn 1 slot GPU (Kaggle cho 2/account) nếu muốn chạy thêm cell.
+
+## 10. Cập nhật 01:42 UTC — chính sách 1 kernel/account
+
+- **acc01 (`nguynthanhquang`)** chỉ còn `tiki-ecomgpt-b-natural-lr5e5-resume` (resume 125).
+  Kernel NLLB đã **xoá** để tuân thủ 1 kernel/account; sẽ **tự push lại** (resume từ ckpt step 100)
+  ngay khi EcomGPT xong — vòng lặp nền `after_ecom_loop.sh`.
+- **acc02 (`anhtamxinhdep`)** chỉ có `tiki-m4b-a-s2024-1792` (RTX Pro 6000, max_seq 1792).
+- Hệ quả: NLLB mất ~35 phút train trên Kaggle (từ 100), nhưng ckpt 100 vẫn còn nên resume sạch.
